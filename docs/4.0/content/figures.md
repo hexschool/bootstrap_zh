@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: Figures
-description: Documentation and examples for displaying related images and text with the figure component in Bootstrap.
+title: 圖片區
+description: 使用 Bootstrap 顯示相關圖檔以及圖片說明的文件和範例。
 group: content
 ---
 
-Anytime you need to display a piece of content—like an image with an optional caption, consider using a `<figure>`.
+需要顯示一段內容，如可選標題的圖檔時，可使用 `<figure>` 標籤。
 
-Use the included `.figure` , `.figure-img` and `.figure-caption` classes to provide some baseline styles for the HTML5 `<figure>` and `<figcaption>` elements. Images in figures have no explicit size, so be sure to add the `.img-fluid` class to your `<img>` to make it responsive.
+使用內建的 `.figure`、 `figure-img` 和 `.figure-caption` 類別，設定 HTML5 `<figure>`和 `<figcaption>` 的底線樣式。 圖檔沒有明確指定尺寸，因此請務必在 `<img>` 標籤加入 `.img-fluid` 設定圖片為響應式。
 
 {% example html %}
 <figure class="figure">
@@ -16,7 +16,8 @@ Use the included `.figure` , `.figure-img` and `.figure-caption` classes to prov
 </figure>
 {% endexample %}
 
-Aligning the figure's caption is easy with our [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/#text-alignment).
+使用我們的 [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/#text-alignment) 可以很容易地對齊圖形的標題。
+
 
 {% example html %}
 <figure class="figure">

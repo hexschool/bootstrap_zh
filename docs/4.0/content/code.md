@@ -1,22 +1,22 @@
 ---
 layout: docs
 title: Code
-description: Documentation and examples for displaying inline and multiline blocks of code with Bootstrap.
+description: 使用 `Bootstrap` 顯示行內程式碼與多行程式碼的文件和範例。
 group: content
 toc: true
 ---
 
-## Inline code
+## 行內程式碼
 
-Wrap inline snippets of code with `<code>`. Be sure to escape HTML angle brackets.
+用 `<code>` 包覆之行內程式碼片段，須注意避開 HTML 括號。
 
 {% example html %}
 For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {% endexample %}
 
-## Code blocks
+## 多行程式碼
 
-Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. You may optionally add the `.pre-scrollable` class, which will set a max-height of 350px and provide a y-axis scrollbar.
+對於多行程式碼可使用 `<pre>` 進行包覆。 再次提醒請注意避開任何括號，以正確設定區塊影響範圍。 可選擇性添加 `.pre-scrollable` 類別，將設定最大高度為 350px 且提供 y 軸滾動條。
 
 {% example html %}
 <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
@@ -24,26 +24,26 @@ Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle
 </code></pre>
 {% endexample %}
 
-## Variables
+## 變數
 
-For indicating variables use the `<var>` tag.
+變數可使用 `<var>` 標籤來指定。
 
 {% example html %}
 <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
 {% endexample %}
 
-## User input
+## 使用者輸入
 
-Use the `<kbd>` to indicate input that is typically entered via keyboard.
+`<kbd>` 標籤用來設定此欄位為經由鍵盤進行輸入資料。
 
 {% example html %}
 To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
 To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 {% endexample %}
 
-## Sample output
+## 輸出結果
 
-For indicating sample output from a program use the `<samp>` tag.
+使用 `<samp>` 標籤來設定程式的輸出結果。
 
 {% example html %}
 <samp>This text is meant to be treated as sample output from a computer program.</samp>
