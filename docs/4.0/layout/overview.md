@@ -1,17 +1,17 @@
 ---
 layout: docs
-title: Overview
-description: Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.
+title: 概要
+description: 介紹 Bootstrap 專案佈局的元件和選項，包括容器、強大的網格系統、靈活的媒體物件和響應式小工具。
 group: layout
 redirect_from: "/layout/"
 toc: true
 ---
 
-## Containers
+## 容器
 
-Containers are the most basic layout element in Bootstrap and are **required when using our default grid system**. Choose from a responsive, fixed-width container (meaning its `max-width` changes at each breakpoint) or fluid-width (meaning it's `100%` wide all the time).
+容器是 Bootstrap 最基本的排版元素，且 **當使用我們的網格系統時** 是必須的。從響應式、固定寬度容器（表示其最大寬度限制在每一個中斷點）或可變寬度（顯示為 100% 寬）中選擇。
 
-While containers *can* be nested, most layouts do not require a nested container.
+儘管容器 *可以* 巢狀，但大部分排版不需要巢狀。
 
 <div class="bd-example">
   <div class="bd-example-container">
@@ -27,7 +27,7 @@ While containers *can* be nested, most layouts do not require a nested container
 </div>
 {% endhighlight %}
 
-Use `.container-fluid` for a full width container, spanning the entire width of the viewport.
+對於完全寬度容器（包含所有視圖的寬度）使用`.container-fluid`。
 
 <div class="bd-example">
   <div class="bd-example-container bd-example-container-fluid">
@@ -44,11 +44,12 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 {% endhighlight %}
 
 
-## Responsive breakpoints
+## 響應式斷點
 
-Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
+由於 Bootstrap 是被開發來作行動優先，我們使用許多 [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) 建立靈敏的中斷點用於我們的排版和介面。這些中斷點大部分基於最小 viewport，並且允許我們隨著 viewport 的變化放大組件。
 
-Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
+Bootstrap 主要使用以下 media queries 或中斷點針對我們的佈局、網格系統、和元件在的我們的 Sass 檔中。
+
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
@@ -67,7 +68,7 @@ Bootstrap primarily uses the following media query ranges—or breakpoints—in 
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
 
-Since we write our source CSS in Sass, all our media queries are available via Sass mixins:
+由於我們將我們的 CSS 寫入 Sass，通過 Sass mixins 可以使用所有我們的 media queries。
 
 {% highlight scss %}
 @include media-breakpoint-up(xs) { ... }
@@ -84,7 +85,7 @@ Since we write our source CSS in Sass, all our media queries are available via S
 }
 {% endhighlight %}
 
-We occasionally use media queries that go in the other direction (the given screen size *or smaller*):
+我們有時候使用 media queries 作為它的指引（給定的螢幕尺寸或更小）。
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
@@ -103,7 +104,7 @@ We occasionally use media queries that go in the other direction (the given scre
 // No media query since the extra-large breakpoint has no upper bound on its width
 {% endhighlight %}
 
-Once again, these media queries are also available via Sass mixins:
+重聲一次，通過 Sass mixins 也可以使用這些 media queries：
 
 {% highlight scss %}
 @include media-breakpoint-down(xs) { ... }
@@ -112,7 +113,7 @@ Once again, these media queries are also available via Sass mixins:
 @include media-breakpoint-down(lg) { ... }
 {% endhighlight %}
 
-There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.
+使用最小和最大中斷點寬度，也有一些 media queries 和 mixins 用於特定螢幕尺寸的其中一段。
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
@@ -131,7 +132,7 @@ There are also media queries and mixins for targeting a single segment of screen
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
 
-These media queries are also available via Sass mixins:
+通過Sass mixins，也可以使用這 media querie：
 
 {% highlight scss %}
 @include media-breakpoint-only(xs) { ... }
@@ -141,7 +142,7 @@ These media queries are also available via Sass mixins:
 @include media-breakpoint-only(xl) { ... }
 {% endhighlight %}
 
-Similarly, media queries may span multiple breakpoint widths:
+類似的 media queries 也跨過多個中斷點寬度：
 
 {% highlight scss %}
 // Example
@@ -149,7 +150,7 @@ Similarly, media queries may span multiple breakpoint widths:
 @media (min-width: 768px) and (max-width: 1199px) { ... }
 {% endhighlight %}
 
-The Sass mixin for targeting the same screen size range would be:
+用於特定螢幕尺寸範圍的 Sass mixins 是：
 
 {% highlight scss %}
 @include media-breakpoint-between(md, xl) { ... }
@@ -157,9 +158,9 @@ The Sass mixin for targeting the same screen size range would be:
 
 ## Z-index
 
-Several Bootstrap components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
+一些 Bootstrap 元件使用 `z-index`，它是提供排版內容第三個軸的 CSS 屬性。我們使用 Bootstrap 中的預設 z-index ，其目的是正確圖層導引、工具提示和 popover、modals 等等。
 
-We don't encourage customization of these values; should you change one, you likely need to change them all.
+我們並不鼓勵自定義這些值；如果你改變了一個，你可能需要全部改變。
 
 ```scss
 $zindex-dropdown-backdrop:  990 !default;
@@ -172,4 +173,4 @@ $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 ```
 
-Background elements—like the backdrops that allow click-dismissing—tend to reside on a lower `z-index`s, while navigation and popovers utilize higher `z-index`s to ensure they overlay surrounding content.
+背景元素（例如允許按一下解除的背景）傾向於停留在較低的 `z-index`，而導航元件和 popovers 使用更高的 `z-index` 確保它們的內容覆蓋。

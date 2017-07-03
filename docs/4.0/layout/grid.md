@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Grid system
-description: Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
+title: Grid system 網格系統
+description: 透過強大的行動優先 flexbox 網格來建立符合各種尺寸的網頁排版，包含十二欄系統、五個預設的響應式斷點、Sass 變數和 mixins、以及很多預定義的 class。
 group: layout
 toc: true
 ---
 
-## How it works
+## 如何運作
 
-Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
+Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內容。它用 flexbox 建立，並且完全符合響應式。下面是網格系統如何整合的例子及深入瞭解。
 
 <div class="bd-example bd-example-row">
 <div class="container">
@@ -26,30 +26,32 @@ Bootstrap's grid system uses a series of containers, rows, and columns to layout
 </div>
 </div>
 
-The above example creates three equal-width columns on small, medium, large, and extra large devices using our predefined grid classes. Those columns are centered in the page with the parent `.container`.
 
-Breaking it down, here's how it works:
+上面的例子使用我們的預定義網格類在小型、中型、大型、和超大型設備上建立了三個等寬度欄。通過父類 `.container` 使這些欄位於頁面中心。
 
-- Containers provide a means to center your site's contents. Use `.container` for fixed width or `.container-fluid` for full width.
-- Rows are horizontal groups of columns that ensure your columns are lined up properly. We use the negative margin method on `.row` to ensure all your content is aligned properly down the left side.
-- Content should be placed within columns, and only columns may be immediate children of rows.
-- Thanks to flexbox, grid columns without a set width will automatically layout with equal widths. For example, four instances of `.col-sm` will each automatically be 25% wide for small breakpoints.
-- Column classes indicate the number of columns you'd like to use out of the possible 12 per row. So, if you want three equal-width columns, you can use `.col-sm-4`.
-- Column `width`s are set in percentages, so they're always fluid and sized relative to their parent element.
-- Columns have horizontal `padding` to create the gutters between individual columns, however, you can remove the `margin` from rows and `padding` from columns with `.no-gutters` on the `.row`.
-- There are five grid tiers, one for each [responsive breakpoint]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/#responsive-breakpoints): all breakpoints (extra small), small, medium, large, and extra large.
-- Grid tiers are based on minimum widths, meaning they apply to that one tier and all those above it (e.g., `.col-sm-4` applies to small, medium, large, and extra large devices).
-- You can use predefined grid classes or Sass mixins for more semantic markup.
 
-Be aware of the limitations and [bugs around flexbox](https://github.com/philipwalton/flexbugs), like the [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
+步驟說明它如何工作：
 
-Sounds good? Great, let's move on to seeing all that in an example.
+- Containers: 容器提供對你的網站內容定新的方式。對於固定寬度使用 `.container`，對於滿版寬度使用 `.container-fluid`。
+- Rows: 行是欄的水平群組，它確保你的欄正確的排成一行。我們在 `.row` 上使用負值 margin 方法確保你的內容在左側之下正確對齊。
+- Content: 內容只能位於欄內，欄只能是行的直接子類。
+- 感謝讚嘆 flexbox，在沒有設置寬度的網格欄位將自動以相同寬度佈局。例如，四個 `.col-sm` 將自動設為小中斷點的 25% 寬度。
+- 欄的 Class 表示你希望使用的欄的數量（可能每行12欄）。所以如果你希望三個等寬度欄，你可以使用`.col-sm-4`。
+- 欄寬度 `width` 以百分比設置，所以它們總是不固定的，並且大小與它們的母元素相關。
+- 欄包含水平的 `padding`，以產生單個欄之間的溝槽，但是你可以通過 `.row` 上的 `.no-gutters` 從行中移除邊緣 `margin`，從欄中移除填充 `padding`。
+- 共有五個網格等級，每個一個[responsive breakpoint]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/#responsive-breakpoints): 所有中斷點（極小）、小、中、大、和極大。
+- 網格等級基於最小寬度，意味著它們適用於一個等級和所有高於它的等級（例如，`.col-sm-4` 適用於小型、中型、大型、和超大型設備）。
+- 你可以對更多的語義標記使用預定義網格 class 或 Sass mixins。
+- 瞭解限制和（flexbox 的 Bug）[bugs around flexbox](https://github.com/philipwalton/flexbugs)，像是（不能使用某些 HTML 元素作為 flex 容器）[inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
 
-## Grid options
+覺得如何呢？很好，我們繼續在範例中全面瞭解。
 
-While Bootstrap uses `em`s or `rem`s for defining most sizes, `px`s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the [font size](https://drafts.csswg.org/mediaqueries-3/#units).
 
-See how aspects of the Bootstrap grid system work across multiple devices with a handy table.
+## 網格選項
+
+當 Bootstrap 使用`em` 或 `rem` 定義更多尺寸時，`px`用於網格中斷點和容器寬度。這是因為 viewport 寬度按 pixel 計算，並且不會隨（字體大小）[font size](https://drafts.csswg.org/mediaqueries-3/#units) 改變。
+
+透過以下表格看 Bootstrap 如何在不同的裝置上運作。
 
 <table class="table table-bordered table-striped table-responsive">
   <thead>
@@ -122,13 +124,14 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
   </tbody>
 </table>
 
-## Auto-layout columns
+## 自動佈局的欄
 
-Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like `.col-sm-6`.
+使用特定中斷點欄類方便的確定欄的大小，而不是明確的寬度 class，例如`.col-sm-6`。
 
-### Equal-width
+### 等寬
 
-For example, here are two grid layouts that apply to every device and viewport, from `xs` to `xl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
+例如，有兩個網格佈局適用於每個裝置和 viewport，從 `xs` 到 `xl`。對每一個你需要的中斷點增加無單位的 class，每一欄將具有相同的寬度。
+
 
 <div class="bd-example-row">
 {% example html %}
@@ -156,9 +159,9 @@ For example, here are two grid layouts that apply to every device and viewport, 
 {% endexample %}
 </div>
 
-Equal-width columns can be broken into multiple lines, but there is a [Safari flexbox bug](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items) that prevents this from working without an explicit `flex-basis` or `border`. Our example works thanks to the `border` being set; you can do the same with `.col { border: 1px solid transparent; }`. Alternatively, you can set the flex-basis to the width of the column (e.g., `.col { flex: 1 0 50%; }`).
+等寬度欄可以分為多個行，但是有一個[Safari flexbox bug](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items) 它在沒有明確的`flex-basis` 或 `border`的情況下運行。由於設置了`border` 我們的例子才能運行；你可以通過`.col { border: 1px solid transparent; }`完成相同的工作。不過，你也可以將 flex-basis 設置為欄的寬度(e.g., `.col { flex: 1 0 50%; }`).
 
-Both these fixes have been documented in a [reduced test case outside Bootstrap](https://output.jsbin.com/micohor).
+這些修復已經記錄在[reduced test case outside Bootstrap](https://output.jsbin.com/micohor)中.
 
 <div class="bd-example-row">
 {% example html %}
@@ -174,9 +177,9 @@ Both these fixes have been documented in a [reduced test case outside Bootstrap]
 {% endexample %}
 </div>
 
-### Setting one column width
+### 設置一欄寬度
 
-Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+flexbox 網格欄的自動佈局中你可以設置欄的寬度，並且其左右欄將在其周圍自動調整大小。你也可以使用預定義的網格 Class (如下所示)、Grid mixins、或行內寬度。請注意，無論中間欄的寬度，其它欄都將重新調整大小。
 
 <div class="bd-example-row">
 {% example html %}
@@ -207,9 +210,9 @@ Auto-layout for flexbox grid columns also means you can set the width of one col
 {% endexample %}
 </div>
 
-### Variable width content
+### 可變寬度內容
 
-Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content.
+基於欄內容的自然寬度，可使用 `col-{breakpoint}-auto` 調整欄的大小
 
 <div class="bd-example-row">
 {% example html %}
@@ -240,9 +243,10 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 {% endexample %}
 </div>
 
-### Equal-width multi-row
+### 等寬度多行
 
-Create equal-width columns that span multiple rows by inserting a `.w-100` where you want the columns to break to a new line. Make the breaks responsive by mixing the `.w-100` with some [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display-property/).
+如果你希望欄另外分隔另一行，可在中間加入`.w-100` 建立等寬度欄。通過將`.w-100` 與一些（響應式顯示工具）[responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display-property/) 進行分隔。
+
 
 <div class="bd-example-row">
 {% example html %}
@@ -256,13 +260,13 @@ Create equal-width columns that span multiple rows by inserting a `.w-100` where
 {% endexample %}
 </div>
 
-## Responsive classes
+## 響應式 classes
 
-Bootstrap's grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
+Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極小、小、中、大、或極大設備上定制欄的大小來建立符合你需求的尺寸。
 
-### All breakpoints
+### 所有中斷點
 
-For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to `.col`.
+對於從最小的設備到最大的設備都相同的網格，使用`.col` 和 `.col-*`。當你需要特定尺寸的欄時就需要指定特定規格；不然 `.col` 是可以隨意使用的。
 
 <div class="bd-example-row">
 {% example html %}
@@ -279,9 +283,9 @@ For grids that are the same from the smallest of devices to the largest, use the
 {% endexample %}
 </div>
 
-### Stacked to horizontal
+### 水平堆疊
 
-Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked on extra small devices before becoming horizontal on desktop (medium) devices.
+通過使用 `.col-sm-*`，你可以在桌面（中型）設備上變得水平排版之前，建立堆疊在極小裝置上的網格排版。
 
 <div class="bd-example-row">
 {% example html %}
@@ -297,9 +301,9 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-### Mix and match
+### 混合和匹配
 
-Don't want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.
+不想讓你的欄堆疊在某些網格階層上？依需求使用每一層不同的 class 組合。對於它如何運作，請見下面的例子。
 
 <div class="bd-example-row">
 {% example html %}
@@ -324,11 +328,11 @@ Don't want your columns to simply stack in some grid tiers? Use a combination of
 {% endexample %}
 </div>
 
-## Alignment
+## 對齊
 
-Use flexbox alignment utilities to vertically and horizontally align columns.
+使用 flexbox 對齊垂直和水平。
 
-### Vertical alignment
+### 垂直對齊
 
 <div class="bd-example-row bd-example-row-flex-cols">
 {% example html %}
@@ -388,7 +392,7 @@ Use flexbox alignment utilities to vertically and horizontally align columns.
 {% endexample %}
 </div>
 
-### Horizontal alignment
+### 水平對齊
 
 <div class="bd-example-row">
 {% example html %}
@@ -439,9 +443,9 @@ Use flexbox alignment utilities to vertically and horizontally align columns.
 
 ### No gutters
 
-The gutters between columns in our predefined grid classes can be removed with `.no-gutters`. This removes the negative `margin`s from `.row` and the horizontal `padding` from all immediate children columns.
+通過`.no-gutters`，可以移除我們的預設網格 class 中欄位之間的 gutter。這將 `.row` 移除了負 `margin`，從所有子欄中移除了水平 `padding`。
 
-Here's the source code for creating these styles. Note that column overrides are scoped to only the first children columns and are targeted via [attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors). While this generates a more specific selector, column padding can still be further customized with [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/).
+這是建立這些樣式的原始程式碼。請注意，欄覆蓋僅限於第一層子欄，並且通過（屬性選擇器）[attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) 確定目標。雖然這產生了更具體的選擇器，通過（調整間隔工具）[spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)可以進一步定制欄的 padding。
 
 {% highlight sass %}
 .no-gutters {
@@ -456,7 +460,8 @@ Here's the source code for creating these styles. Note that column overrides are
 }
 {% endhighlight %}
 
-In practice, here's how it looks. Note you can continue to use this with all other predefined grid classes (including column widths, responsive tiers, reorders, and more).
+實際中它看上去是這樣的。請注意，你可以通過所有其它網格 class 繼續使用（包括欄寬度
+、響應式階層、重新排序、還有其他）。
 
 <div class="bd-example-row">
 {% example html %}
@@ -467,9 +472,10 @@ In practice, here's how it looks. Note you can continue to use this with all oth
 {% endexample %}
 </div>
 
-### Column wrapping
+### 欄的外圍
 
-If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
+如果 12 個以上的欄位於單獨一行內，每一組額外欄（作為一個單元）將換新的一行。
+
 
 <div class="bd-example-row">
 {% example html %}
@@ -481,9 +487,10 @@ If more than 12 columns are placed within a single row, each group of extra colu
 {% endexample %}
 </div>
 
-### Column resets
+### 欄重置
 
-With the handful of grid tiers available, you're bound to run into issues where, at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a `.clearfix` and our [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/).
+通過一些可用的網格層，你將會遇到一些問題，在某些中斷點，你的欄與比它高的欄明顯有差異。為了修復這一問題，使用 `.clearfix` 和 [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) 的組合。
+
 
 <div class="bd-example-row">
 {% example html %}
@@ -500,7 +507,8 @@ With the handful of grid tiers available, you're bound to run into issues where,
 {% endexample %}
 </div>
 
-In addition to column clearing at responsive breakpoints, you may need to **reset offsets, pushes, or pulls**. See this in action in [the grid example]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/grid/).
+除了在控制中斷點清除的欄，你可以 **重置 offsets、pushes 或 pulls**。請在（網格範例）[the grid example]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/grid/) 中參看此範例。
+
 
 <div class="bd-example-row">
 {% example html %}
@@ -516,11 +524,12 @@ In addition to column clearing at responsive breakpoints, you may need to **rese
 {% endexample %}
 </div>
 
-## Reordering
+## 排序
 
-### Flex order
+### Flex 排序
 
-Use flexbox utilities for controlling the **visual order** of your content.
+使用 flexbox 工具控制你的內容的 **可見順序**。
+
 
 <div class="bd-example-row">
 {% example html %}
@@ -542,7 +551,7 @@ Use flexbox utilities for controlling the **visual order** of your content.
 
 ### Offsetting columns
 
-Move columns to the right using `.offset-md-*` classes. These classes increase the left margin of a column by `*` columns. For example, `.offset-md-4` moves `.col-md-4` over four columns.
+使用 `.offset-md-*` 將欄移動到右側。這些 `*` 欄增加了欄的左側的 margin。例如，`.offset-md-4` 將 `.col-md-4` 移動四個欄。
 
 <div class="bd-example-row">
 {% example html %}
@@ -560,9 +569,9 @@ Move columns to the right using `.offset-md-*` classes. These classes increase t
 {% endexample %}
 </div>
 
-### Push and pull
+### Push 及 pull
 
-Easily change the order of our built-in grid columns with `.push-md-*` and `.pull-md-*` modifier classes.
+通過`.push-md-*` 和 `.pull-md-*`，方便的改變內置網格欄的順序。
 
 <div class="bd-example-row">
 {% example html %}
@@ -573,9 +582,9 @@ Easily change the order of our built-in grid columns with `.push-md-*` and `.pul
 {% endexample %}
 </div>
 
-## Nesting
+## 巢狀
 
-To nest your content with the default grid, add a new `.row` and set of `.col-sm-*` columns within an existing `.col-sm-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
+為了將你的內容加入巢狀網格，在現有的 `.col-sm-*` 內增加新的 `.row` 和 `.col-sm-*`欄。巢狀列包括增加到 12 或更少的欄位（你不一定要使用所有 12 個可用的欄）。
 
 <div class="bd-example-row">
 {% example html %}
@@ -597,11 +606,12 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
 
 ## Sass mixins
 
-When using Bootstrap's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
+當使用 Bootstrap Sass 檔時，你可以選擇使用 Sass 變數和 mixins 客製化、語義、和控制頁面配置。我們的預定義網格類使用這些相同的變數和 mixins 提供整套隨時可用的 class 用於響應式排版。
 
-### Variables
 
-Variables and maps determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.
+### 變數
+
+變數和 sass map 決定了欄的數量、gutter 的寬度、和開始浮動欄的中斷點。我們使用它們產生上文記錄的定義網格 class ，以及用於下列的客製 mixins 類型。
 
 {% highlight scss %}
 $grid-columns:      12;
@@ -638,7 +648,7 @@ $container-max-widths: (
 
 ### Mixins
 
-Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.
+Mixins 與網格變數結合使用，可以對單個網格欄產生語意的 CSS。
 
 {% highlight scss %}
 // Creates a wrapper for a series of columns
@@ -654,9 +664,9 @@ Mixins are used in conjunction with the grid variables to generate semantic CSS 
 @include make-col-pull($size, $columns: $grid-columns);
 {% endhighlight %}
 
-### Example usage
+### 範例使用
 
-You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between.
+你可以將變數修改你自己的自訂值，或者僅用預設值使用混合類型。下面是使用預設設置創建兩欄佈局的例子。
 
 {% highlight scss %}
 .example-container {
@@ -700,13 +710,14 @@ You can modify the variables to your own custom values, or just use the mixins w
 </div>
 {% endexample %}
 
-## Customizing the grid
+## 客製化網格
 
-Using our built-in grid Sass variables and maps, it's possible to completely customize the predefined grid classes. Change the number of tiers, the media query dimensions, and the container widths—then recompile.
+使用我們的內置網格 Sass 變數和 sass maps，可以完全的客製網格的 class。改變層的數量，media query 的參數，和容器寬度然後重新編譯。
 
-### Columns and gutters
 
-The number of grid columns and their horizontal padding (aka, gutters) can be modified via Sass variables. `$grid-columns` is used to generate the widths (in percent) of each individual column while `$grid-gutter-widths` allows breakpoint-specific widths that are divided evenly across `padding-left` and `padding-right` for the column gutters.
+### 欄與 gutters
+
+通過 Sass 變數可以修改欄和它們的水平 padding 的數量（又稱為 gutters）。`$grid-columns` 用於產生每一個單獨欄的寬度（百分比），而 `$grid-gutter-widths` 允許在該欄 gutterr 的 `padding-left`和`padding-right`上均勻分開的特定中斷點寬度。
 
 {% highlight scss %}
 $grid-columns:               12 !default;
@@ -720,9 +731,10 @@ $grid-gutter-widths: (
 ) !default;
 {% endhighlight %}
 
-### Grid tiers
+### Grid 階層
 
-Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four grid tiers, you'd update the `$grid-breakpoints` and `$container-max-widths` to something like this:
+欄本身之外，你也可以自定義網格層的數量。如果你只想要四個網格層，你應當按照下文更新`$grid-breakpoints` 和 `$container-max-widths`。
+
 
 {% highlight scss %}
 $grid-breakpoints: (
@@ -739,4 +751,4 @@ $container-max-widths: (
 );
 {% endhighlight %}
 
-When making any changes to the Sass variables or maps, you'll need to save your changes and recompile. Doing so will out a brand new set of predefined grid classes for column widths, offsets, pushes, and pulls. Responsive visibility utilities will also be updated to use the custom breakpoints.
+當對 Sass 變數或 sass map 做出任何改動時，你必須保存你的改動並重新編譯。這樣做將對欄寬度、offsets、pushes 和 pulls 輸出新的一組網格 class。還將更新響應式元件及中斷點。

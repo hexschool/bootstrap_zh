@@ -1,25 +1,26 @@
 ---
 layout: docs
-title: Utilities for layout
-description: For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.
+title: 排版小工具
+description: 為了行動優先及響應式開發，Bootstrap 包括了許多小工具 class，用於顯示、隱藏、對齊、和調整內容。
 group: layout
 toc: true
 ---
 
-## Changing `display`
+## 改變顯示`display`
 
-Use our `display` utilities for responsively toggling common values of the `display` property. Mix it with our grid system, content, or components to show or hide them across specific viewports.
+使用我們的 `display` 工具可控的觸發 `display` 特性的一般值。將它與我們的網格系統、內容、或元件混合，以顯示或隱藏它們（透過特定的 viewport）。
 
-## Flexbox options
+## Flexbox 選項
 
-Bootstrap 4 is built with flexbox, but not every element's `display` has been changed to `display: flex` as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of [our components](/components/) are built with flexbox enabled.
+Bootstrap 4 通過 flexbox 建立，但並不是每一個元素的 `display` 都已經改變為 `display: flex`，因為這可能增加很多不必要的覆蓋。我們的元件[our components](/components/)的大部分都是用 flexbox 建立。
 
-Should you need to add `display: flex` to an element, do so with `.d-flex` or one of the responsive variants (e.g., `.d-sm-flex`). You'll need this class or `display` value to allow the use of our extra [flexbox utilities](/utilities/flexbox/) for sizing, alignment, spacing, and more.
+如果你需要對一個元素增加 `display: flex`，通過 `.d-flex` 或響應式變數完成（例如，`.d-sm-flex`）。你需要此 class 或 `display` 值可使用我們的額外（flexbox 工具）[flexbox utilities](/utilities/flexbox/) 確定大小，對齊，調整間隔等等。
 
-## Margin and padding
 
-Use the `margin` and `padding` [spacing utilities](/utilities/spacing/) to control how elements and components are spaced and sized. Bootstrap 4 includes a five-level scale for spacing utilities, based on a `1rem` value default `$spacer` variable. Choose values for all viewports (e.g., `.mr-3` for `margin-right: 1rem`), or pick responsive variants to target specific viewports (e.g., `.mr-md-3` for `margin-right: 1rem` starting at the `md` breakpoint).
+## Margin 及 padding
 
-## Toggle `visibility`
+使用 `margin` 和 `padding`（調整間隔小工具）[spacing utilities](/utilities/spacing/) 控制元素和元件的間隔和尺寸。基於 `1rem` 預設 `$spacer` 變數，Bootstrap 4 包括五級比例尺用於間隔調整工具。選擇的值會套用所有的 viewport（例如，對 `margin-right: 1rem` 選擇 `.mr-3` ），或者選擇響應式變數命中特定viewport（例如，對於從 `md` 中斷點開始的 `margin-right: 1rem`，選擇 `.mr-md-3` ）。
 
-When toggling `display` isn't needed, you can toggle the `visibility` of an element with our [visibility utilities](/utilities/visibility/). Invisible elements will still affect the layout of the page, but are visually hidden from visitors.
+## 切換 `visibility`
+
+當不需要切換 `display` 時，你可以通過我們的（可見性小工具）[visibility utilities](/utilities/visibility/) 切換元素的可見性 `visibility`。不可見元素仍將影響頁面的佈局，但是用戶無法看到該元素。
