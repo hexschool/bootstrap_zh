@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Borders
-description: Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.
+description: 使用 Border 小工具迅速設計一個元素的 border 和邊框 border-radius。可用於圖像、按鈕、或任何其它元素。
 group: utilities
 redirect_from: "/utilities/"
 toc: true
@@ -9,7 +9,7 @@ toc: true
 
 ## Border
 
-Add classes to an element to remove all borders or some borders.
+對一個元素增加 class，以移除所有 border 或部分 border。
 
 <div class="bd-example-border-utils">
 {% example html %}
@@ -23,7 +23,7 @@ Add classes to an element to remove all borders or some borders.
 
 ## Border-radius
 
-Add classes to an element to easily round its corners.
+對一個元素增加 class 以方便的使其角部變圓。
 
 <div class="bd-example bd-example-images">
   <img data-src="holder.js/75x75" class="rounded" alt="Example rounded image">

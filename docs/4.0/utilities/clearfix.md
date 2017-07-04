@@ -1,12 +1,13 @@
 ---
 layout: docs
 title: Clearfix
-description: Quickly and easily clear floated content within a container by adding a clearfix utility.
+description: 通過增加一個清除浮動小工具，快速和方便的清除容器內的浮動內容。
 group: utilities
 toc: true
 ---
 
-Easily clear `float`s by adding `.clearfix` **to the parent element**. Utilizes [the micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) as popularized by Nicolas Gallagher. Can also be used as a mixin.
+通過對 **父元素** 增加`.clearfix`（清除浮動）以方便的清除`float`（浮動）。在 Nicolas Gallagher 的推廣下使用[the micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack/)。也可以做為 Sass mixin 使用。
+
 
 {% highlight html %}
 <div class="clearfix">...</div>
@@ -28,7 +29,7 @@ Easily clear `float`s by adding `.clearfix` **to the parent element**. Utilizes 
 }
 {% endhighlight %}
 
-The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.
+下面的例子顯示了如何使用清除浮動。不使用清除浮動，外層 div 將不會包覆按鈕而導致跑版。
 
 {% example html %}
 <div class="bg-info clearfix">

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Colors
-description: Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.
+description: 借助一些顏色小工具讓顏色的表達具有意義。這也包括支援有 hover 狀態的樣式連結。
 group: utilities
 toc: true
 ---
@@ -17,7 +17,8 @@ toc: true
 <p class="text-white">Etiam porta sem malesuada ultricies vehicula.</p>
 {% endexample %}
 
-Contextual text classes also work well on anchors with the provided hover and focus states. **Note that the `.text-white` class has no link styling.**
+文字類型也提供 hover 和 focus 狀態，對於連結類型也同時能順利運行。**注意，`.text-white` 沒有連結樣式。**
+
 
 {% example html %}
 <a href="#" class="text-muted">Muted link</a>
@@ -28,7 +29,7 @@ Contextual text classes also work well on anchors with the provided hover and fo
 <a href="#" class="text-danger">Danger link</a>
 {% endexample %}
 
-Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities **do not set `color`**, so in some cases you'll want to use `.text-*` utilities.
+類似於文字顏色 class，可輕易將元素加上背景色彩。連結元素將會在 hover 上變暗，就像文字類型一樣。背景色 **不要設置`color`** 樣式，盡可能使用 `.text-*` 小工具。
 
 {% example html %}
 <div class="bg-primary text-white">Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
@@ -41,9 +42,11 @@ Similar to the contextual text color classes, easily set the background of an el
 {% endexample %}
 
 {% callout info %}
-#### Dealing with specificity
 
-Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` with the class.
+#### 處理特殊性
+
+有些情境下文字 Class 不能直接運用在特定情境下的 `<a>` 連結下，這樣的特殊情境下可透過增加 `<div>` 包覆元素並增加 class。
+
 {% endcallout %}
 
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}

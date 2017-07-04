@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: Sizing
-description: Easily make an element as wide or as tall (relative to its parent) with our width and height utilities.
+title: 改變尺寸
+description: 使用寬度和高度小工具，可將一個元素加寬或增高（相對於其母元素）。
 group: utilities
 toc: true
 ---
 
-Width and height utilities are generated from the `$sizes` Sass map in `_variables.scss`. Includes support for `25%`, `50%`, `75%`, and `100%` by default. Modify those values as you need to generate different utilities here.
+寬度和高度從 `_variables.scss` 中 `$sizes` 的 Sass map 產生。預設包含 `25%`、 `50%`、 `75%` 和 `100%`。按你的需求調整這些值，可產生不同的屬性。
 
 {% example html %}
 <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
@@ -24,7 +24,7 @@ Width and height utilities are generated from the `$sizes` Sass map in `_variabl
 </div>
 {% endexample %}
 
-You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
+你也可以使用 `max-width: 100%;` 和 `max-height: 100%;` 這些小工具。
 
 {% example html %}
 <img class="mw-100" data-src="holder.js/1000px100?text=Max-width%20%3D%20100%25" alt="Max-width 100%">

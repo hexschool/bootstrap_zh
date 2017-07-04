@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: Image replacement
-description: Swap text for background images with the image replacement class.
+title: 圖像替換
+description: 使用圖像替換 class 將文字與背景圖像替換。
 group: utilities
 toc: true
 ---
 
-Utilize the `.text-hide` class or mixin to help replace an element's text content with a background image.
+使用 `.text-hide` 或 Sass mixin 隱藏一個元素的文字內容並替換成背景圖片。
 
 {% highlight html %}
 <h1 class="text-hide">Custom heading</h1>

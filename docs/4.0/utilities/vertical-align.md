@@ -1,15 +1,15 @@
 ---
 layout: docs
-title: Vertical alignment
-description: Easily change the vertical alignment of inlie, inline-block, inline-table, and table cell elements.
+title: 垂直對齊
+description: 改變 inline、inline-block、inline-table、和 table 元素的垂直對齊。
 group: utilities
 ---
 
-Change the alignment of elements with the [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.
+使用 [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) 小工具改變元素的對齊。請注意，垂直對齊僅影響 inline、inline-block、inline-table、和 table 元素。
 
-Choose from  `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, and `.align-text-top` as needed.
+依需求從 `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, 和 `.align-text-top` 中選擇。
 
-With inline elements:
+搭配 inline 元素：
 
 {% example html %}
 <span class="align-baseline">baseline</span>
@@ -20,7 +20,7 @@ With inline elements:
 <span class="align-text-bottom">text-bottom</span>
 {% endexample %}
 
-With table cells:
+搭配 table cell 元素：
 
 {% example html %}
 <table style="height: 100px;">

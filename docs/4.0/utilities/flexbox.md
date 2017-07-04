@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Flexbox
-description: Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
+description: flexbox 小工具的套件包管理網格欄的排版、對齊和特定尺寸。對於更複雜的表現則需要自訂 CSS。
 group: utilities
 toc: true
 ---
 
-## Enable flex behaviors
+## 啟用 flex
 
-Apply `display` utilities to create a flexbox container and transform **direct children elements** into flex items. Flex containers and items are able to be modified further with additional flex properties.
+使用 `display` 小工具來創建一個 flexbox 容器，並將 **直屬內元素** 轉換為 flex 屬性。增加額外的 flex 屬性，也能夠進一步修改 flex 容器和屬性。
 
 {% example html %}
 <div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
@@ -18,17 +18,18 @@ Apply `display` utilities to create a flexbox container and transform **direct c
 <div class="d-inline-flex p-2 bd-highlight">I'm an inline flexbox container!</div>
 {% endexample %}
 
-Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
+`.d-flex` 和 `.d-inline-flex` 也包含響應式的屬性。
 
 {% for bp in site.data.breakpoints %}
 - `.d{{ bp.abbr }}-flex`
 - `.d{{ bp.abbr }}-inline-flex`{% endfor %}
 
-## Direction
+## 方向性
 
-Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the horizontal class here as the browser default is `row`. However, you may encounter situations where you needed to explicitly set this value (like responsive layouts).
+透過小工具來設定 flex 容器與內層 flex 的方向，在大多的情況下你可以忽略水平的 class，因為瀏覽器預設值是 `row`，不過有些特定情境下需要設定這個值(像是響應式情境)。
 
-Use `.flex-row` to set a horizontal direction (the browser default), or `.flex-row-reverse` to start the horizontal direction from the opposite side.
+使用 `.flex-row` 來設定水平的方向(瀏覽器預設值喔)，或者使用 `.flex-row-reverse`來作水平方向的反轉。
+
 
 {% example html %}
 <div class="d-flex flex-row bd-highlight mb-3">
@@ -43,7 +44,7 @@ Use `.flex-row` to set a horizontal direction (the browser default), or `.flex-r
 </div>
 {% endexample %}
 
-Use `.flex-column` to set a vertical direction, or `.flex-column-reverse`  to start the vertical direction from the opposite side.
+使用 `.flex-column` 設置垂直方向，或使用`.flex-column-reverse` 作垂直方向的反轉。
 
 {% example html %}
 <div class="d-flex flex-column bd-highlight mb-3">
@@ -58,7 +59,7 @@ Use `.flex-column` to set a vertical direction, or `.flex-column-reverse`  to st
 </div>
 {% endexample %}
 
-Responsive variations also exist for `flex-direction`.
+`flex-direction` 的響應式屬性。
 
 {% for bp in site.data.breakpoints %}
 - `.flex{{ bp.abbr }}-row`
@@ -66,9 +67,9 @@ Responsive variations also exist for `flex-direction`.
 - `.flex{{ bp.abbr }}-column`
 - `.flex{{ bp.abbr }}-column-reverse`{% endfor %}
 
-## Justify content
+## 調整內容
 
-Use `justify-content` utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if `flex-direction: column`). Choose from `start` (browser default), `end`, `center`, `between`, or `around`.
+使用 flexbox 容器上的 `justify-content` 小工具改變 flex 物件在主軸上的對齊（x軸開始，如果 `flex-direction: column`，則為 y 軸）。從 `start`（瀏覽器預設）、 `end`、`center`、`between`、或 `around` 中選擇。
 
 <div class="bd-example">
   <div class="d-flex justify-content-start bd-highlight mb-3">
@@ -106,7 +107,7 @@ Use `justify-content` utilities on flexbox containers to change the alignment of
 <div class="d-flex justify-content-around">...</div>
 {% endhighlight %}
 
-Responsive variations also exist for `justify-content`.
+`justify-content` 的響應式屬性。
 
 {% for bp in site.data.breakpoints %}
 - `.justify-content{{ bp.abbr }}-start`
@@ -115,9 +116,10 @@ Responsive variations also exist for `justify-content`.
 - `.justify-content{{ bp.abbr }}-between`
 - `.justify-content{{ bp.abbr }}-around`{% endfor %}
 
-## Align items
+## 對齊物件
 
-Use `align-items` utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
+在 flexbox 容器上使用 `align-items` 工具改變橫軸上 flex 物件的對齊（y 軸開始，如果 `flex-direction: column`，則為 x 軸）。從`start`、 `end`、 `center`、 `baseline`、 或 `stretch` (瀏覽器預設) 中選擇。
+
 
 <div class="bd-example">
   <div class="d-flex align-items-start bd-highlight mb-3" style="height: 100px">
@@ -155,7 +157,7 @@ Use `align-items` utilities on flexbox containers to change the alignment of fle
 <div class="d-flex align-items-stretch">...</div>
 {% endhighlight %}
 
-Responsive variations also exist for `align-items`.
+`align-items` 包含的響應式屬性
 
 {% for bp in site.data.breakpoints %}
 - `.align-items{{ bp.abbr }}-start`
@@ -164,9 +166,10 @@ Responsive variations also exist for `align-items`.
 - `.align-items{{ bp.abbr }}-baseline`
 - `.align-items{{ bp.abbr }}-stretch`{% endfor %}
 
-## Align self
+## 自身對齊
 
-Use `align-self` utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from the same options as `align-items`: `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
+使用 flexbox 物件上的 `align-self` 小工具單獨改變在橫軸上的對齊（y 軸開始，如果 `flex-direction: column`，則為 x 軸）。與 `align-items` 相同的選項中選擇：`start`、 `end`、 `center`、 `baseline`、 或 `stretch` (瀏覽器預設)。
+
 
 <div class="bd-example">
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
@@ -204,7 +207,7 @@ Use `align-self` utilities on flexbox items to individually change their alignme
 <div class="align-self-stretch">Aligned flex item</div>
 {% endhighlight %}
 
-Responsive variations also exist for `align-self`.
+`align-self` 的響應式屬性。
 
 {% for bp in site.data.breakpoints %}
 - `.align-self{{ bp.abbr }}-start`
@@ -213,13 +216,14 @@ Responsive variations also exist for `align-self`.
 - `.align-self{{ bp.abbr }}-baseline`
 - `.align-self{{ bp.abbr }}-stretch`{% endfor %}
 
-## Auto margins
+## 自動的 margins
 
-Flexbox can do some pretty awesome things when you mix flex alignments with auto margins.
+當你將 flex 對齊與 auto margin 混在一起的時候，flexbox 也能正常的運行。
 
-### With justify-content
 
-Easily move all flex items to one side, but keep another on the opposite end by mixing `justify-content` with `margin-right: auto` or `margin-left: auto`.
+### 搭配 justify-content
+
+方便的將所有 flex 項移動到一側，但是搭配 `justify-content` 與 `margin-right: auto` 或 `margin-left: auto` 混合，物件會將另一個推到另一端。
 
 {% example html %}
 <div class="d-flex justify-content-end bd-highlight mb-3">
@@ -235,9 +239,9 @@ Easily move all flex items to one side, but keep another on the opposite end by 
 </div>
 {% endexample %}
 
-### With align-items
+### 搭配 align-items
 
-Similarly, move one flex item to the top or bottom of a container by mixing `align-items`, `flex-direction: column`, and `margin-top: auto` or `margin-bottom: auto`.
+相同的道理，混合以下屬性 `align-items`, `flex-direction: column`, 和 `margin-top: auto` 或 `margin-bottom: auto`，會將一個 flex 物件移動到容器的頂部或底部。
 
 {% example html %}
 <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
@@ -253,9 +257,9 @@ Similarly, move one flex item to the top or bottom of a container by mixing `ali
 </div>
 {% endexample %}
 
-## Wrap
+## Wrap (Flex 的 Wrap 屬性)
 
-Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with `.flex-nowrap`, wrapping with `.flex-wrap`, or reverse wrapping with `.flex-wrap-reverse`.
+改變 flex 物件在 flex 容器中的 Wrap。可設置 `.flex-nowrap`、`.flex-wrap`、`.flex-wrap-reverse` 這些屬性。
 
 <div class="bd-example">
   <div class="d-flex flex-nowrap bd-highlight">
@@ -336,16 +340,17 @@ Change how flex items wrap in a flex container. Choose from no wrapping at all (
 {% example html %}
 {% endexample %}
 
-Responsive variations also exist for `flex-wrap`.
+`flex-wrap` 也包含響應式屬性。
 
 {% for bp in site.data.breakpoints %}
 - `.flex{{ bp.abbr }}-nowrap`
 - `.flex{{ bp.abbr }}-wrap`
 - `.flex{{ bp.abbr }}-wrap-reverse`{% endfor %}
 
-## Order
+## 排序
 
-Change the _visual_ order of specific flex items with a handful of `order` utilities. We only provide options for making an item first or last, as well as a reset to use the DOM order. As `order` takes any integer value (e.g., `5`), add custom CSS for any additional values needed.
+使用 `order` 小工具改變特定 flex 物件的 _顯示_ 排序。我們僅提供將一個物件排在第一個或最後一個，以及重置使用 DOM 次序。由於 `order` 只能使用整數值（例如，5），對需要的任何額外值需要自定義 CSS。
+
 
 {% example html %}
 <div class="d-flex flex-nowrap bd-highlight">
@@ -355,18 +360,19 @@ Change the _visual_ order of specific flex items with a handful of `order` utili
 </div>
 {% endexample %}
 
-Responsive variations also exist for `order`.
+`order` 也包含的響應式屬性。
 
 {% for bp in site.data.breakpoints %}
 - `.order{{ bp.abbr }}-first`
 - `.order{{ bp.abbr }}-last`
 - `.order{{ bp.abbr }}-0`{% endfor %}
 
-## Align content
+## 對齊內容
 
-Use `align-content` utilities on flexbox containers to align flex items *together* on the cross axis. Choose from `start` (browser default), `end`, `center`, `between`, `around`, or `stretch`. To demonstrate these utilities, we've enforced `flex-wrap: wrap` and increased the number of flex items.
+使用 flexbox 容器上的 `align-content` 工具將 flex 物件於橫軸上 *一起* 對齊。從`start` (瀏覽器預設), `end`, `center`, `between`, `around`, 或 `stretch`中選擇。為了呈現這小工具的效果，我們加入了 `flex-wrap: wrap`，及增加了flex項的數量。
 
-**Heads up!** This property has no affect on single rows of flex items.
+**注意！** 此特性對於單行的 flex 無作用。
+
 
 <div class="bd-example">
   <div class="d-flex align-content-start flex-wrap bd-highlight mb-3" style="height: 200px">
@@ -508,7 +514,7 @@ Use `align-content` utilities on flexbox containers to align flex items *togethe
 <div class="d-flex align-content-stretch flex-wrap">...</div>
 {% endhighlight %}
 
-Responsive variations also exist for `align-content`.
+`align-content` 也包含響應式屬性。
 
 {% for bp in site.data.breakpoints %}
 - `.align-content{{ bp.abbr }}-start`

@@ -1,16 +1,16 @@
 ---
 layout: docs
 title: Responsive helpers
-description: Create responsive video or slideshow embeds based on the width of the parent by creating an intrinsic ratio that scales on any device.
+description: 在任何比例的裝置上建立內嵌的響應式影片或簡報，使其有固定的縮放比例。
 group: utilities
 toc: true
 ---
 
-## Responsive embeds
+## 響應式的內嵌
 
-Rules are directly applied to `<iframe>`, `<embed>`, `<video>`, and `<object>` elements; optionally use an explicit descendant class `.embed-responsive-item` when you want to match the styling for other attributes.
+將這些規則直接應用到 `<iframe>`, `<embed>`, `<video>`, 和 `<object>`元素；當需要這些樣式對應屬性時可加入 `.embed-responsive-item`。
 
-**Pro-Tip!** You don't need to include `frameborder="0"` in your `<iframe>`s as we override that for you.
+**小技巧** 你不需要將 `frameborder="0"` 加在你的`<iframe>`中，因為我們已經為你覆蓋了該屬性。
 
 {% example html %}
 <div class="embed-responsive embed-responsive-16by9">
@@ -18,7 +18,7 @@ Rules are directly applied to `<iframe>`, `<embed>`, `<video>`, and `<object>` e
 </div>
 {% endexample %}
 
-Aspect ratios can be customized with modifier classes.
+通過修改 Class 可以自訂高寬比。
 
 {% highlight html %}
 <!-- 21:9 aspect ratio -->
@@ -42,11 +42,11 @@ Aspect ratios can be customized with modifier classes.
 </div>
 {% endhighlight %}
 
-## Responsive floats
+## 響應式浮動
 
-These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` is included to avoid specificity issues. These use the same viewport width breakpoints as the grid system.
+這些 Class 將一個元素浮動於左側或右側、或者禁用浮動，是基於目前可視區使用[CSS `float` 屬性](https://developer.mozilla.org/en-US/docs/Web/CSS/float)。為了避免特殊性問題加入了 `!important`。這些使用與網格系統中一樣的 viewport。
 
-Two similar non-responsive Sass mixins (`float-left` and `float-right`) are also available.
+也可以使用兩個非響應式的 Sass mixins (`float-left` 和 `float-right`)。
 
 {% example html %}
 <div class="float-left">Float left on all viewport sizes</div><br>

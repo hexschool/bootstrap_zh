@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Display property
-description: Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
+title: Display 屬性
+description: Display 小工具可快速且包含響應式的切換元件的顯示與否，我們的 Display 小工具包含許多常用的值，另外在列印時也能使用。
 group: utilities
 toc: true
 ---
 
-## Common `display` values
+## 常用的 `display` 值
 
-The [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) accepts a handful of values and we support many of them with utility classes. We purposefully don't provide every value as a utility, so here's what we support:
+[`display` 屬性](https://developer.mozilla.org/en-US/docs/Web/CSS/display) 有很多值，而小工具支援其中的許多值。但沒有提供所有值在這個小工具內，以下是我們支援的。
 
 - `.d-none`
 - `.d-inline`
@@ -19,7 +19,7 @@ The [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/displa
 - `.d-flex`
 - `.d-inline-flex`
 
-Put them to use by applying any of the classes to an element of your choice. For example, here's how you could use the inline, block, or inline-block utilities (the same applies to the other classes).
+將這些 class 直接運用在任何你想套用的元素上。舉例來說，這邊介紹如何使用在行內、塊狀或是行內塊狀(inline-block) 的元素上 (這也能運用在其他相同的類型上)。
 
 {% example html %}
 <div class="d-inline bg-success">d-inline</div>
@@ -35,7 +35,7 @@ Put them to use by applying any of the classes to an element of your choice. For
 <div class="d-inline-block bg-warning">d-inline-block</div>
 {% endexample %}
 
-Responsive variations also exist for every single utility mentioned above.
+以上所介紹的，也同樣也可以使用響應式的類型變化。
 
 {% for bp in site.data.breakpoints %}
 - `.d{{ bp.abbr }}-none`
@@ -47,9 +47,9 @@ Responsive variations also exist for every single utility mentioned above.
 - `.d{{ bp.abbr }}-flex`
 - `.d{{ bp.abbr }}-inline-flex`{% endfor %}
 
-## Display in print
+## Display 運用在列印
 
-Change the `display` value of elements when printing with our print display utilities.
+可以在列印時透過 display 小工具改變 `display` 的值。
 
 | Class | Print style |
 | --- | --- |

@@ -1,50 +1,54 @@
 ---
 layout: docs
-title: Spacing
-description: Bootstrap includes a wide range of shorthand responsive margin and padding utility classes to modify an element's appearance.
+title: 改變間隔
+description: Bootstrap 包括各種簡寫響應式 margin、padding 的小工具，可用來修改一個元素的外觀。
 group: utilities
 toc: true
 ---
 
-## How it works
+## 如何運作
 
-Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `.25rem` to `3rem`.
+賦予一個縮寫 class 使 `margin` 或 `padding` 值在一個元素上或其中一個邊緣上 (包含響應式)。包含支援單一個邊緣屬性或全部邊緣、垂直邊緣、水平邊緣上。Class 來自於 Sass map，範圍從`.25rem` 到 `3rem`。
 
-## Notation
+## 符號
 
 Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
 
-The classes are named using the format `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, and `xl`.
+用於所有中斷點（從`xs`到`xl`）時，不需加入中斷點縮寫。這些 Class 將從 `min-width: 0` 及以上引用，不受 media query 的約束。但是其餘的就包含中斷點縮寫。
 
-Where *property* is one of:
+對於 `xs`，使用固定格式 `{property}{sides}-{size}` 命名這些 Class，對於 `sm`、 `md`、`lg` 和 `xl`，使用格式 `{property}{sides}-{breakpoint}-{size}`。
 
-* `m` - for classes that set `margin`
-* `p` - for classes that set `padding`
 
-Where *sides* is one of:
+*屬性* 設定:
 
-* `t` - for classes that set `margin-top` or `padding-top`
-* `b` - for classes that set `margin-bottom` or `padding-bottom`
-* `l` - for classes that set `margin-left` or `padding-left`
-* `r` - for classes that set `margin-right` or `padding-right`
-* `x` - for classes that set both `*-left` and `*-right`
-* `y` - for classes that set both `*-top` and `*-bottom`
-* blank - for classes that set a `margin` or `padding` on all 4 sides of the element
+* `m` - 這個 class 會設定 `margin`
+* `p` - 這個 class 會設定 `padding`
 
-Where *size* is one of:
+*邊緣* 設定:
 
-* `0` - for classes that eliminate the `margin` or `padding` by setting it to `0`
-* `1` - (by default) for classes that set the `margin` or `padding` to `$spacer * .25`
-* `2` - (by default) for classes that set the `margin` or `padding` to `$spacer * .5`
-* `3` - (by default) for classes that set the `margin` or `padding` to `$spacer`
-* `4` - (by default) for classes that set the `margin` or `padding` to `$spacer * 1.5`
-* `5` - (by default) for classes that set the `margin` or `padding` to `$spacer * 3`
+* `t` - 這個 class 會設定 `margin-top` 或 `padding-top`
+* `b` - 這個 class 會設定 `margin-bottom` 或 `padding-bottom`
+* `l` - 這個 class 會設定 `margin-left` 或 `padding-left`
+* `r` - 這個 class 會設定 `margin-right` 或 `padding-right`
+* `x` - 這個 class 會設定 `*-left` 和 `*-right`
+* `y` - 這個 class 會設定 `*-top` 和 `*-bottom`
+* 空白 - 如果邊緣 class 未加入則會設定 `margin` 或 `padding` 在元素的四個邊緣
 
-(You can add more sizes by adding entries to the `$spacers` Sass map variable.)
+*尺寸* 設定:
 
-## Examples
+* `0` - 這個 class 會設定 `margin` 或 `padding` 的樣式值為 `0`
+* `1` - (預設時) 這個 class 會設定 `margin` 或 `padding` 於 `$spacer * .25`
+* `2` - (預設時) 這個 class 會設定 `margin` 或 `padding` 於 `$spacer * .5`
+* `3` - (預設時) 這個 class 會設定 `margin` 或 `padding` 於 `$spacer`
+* `4` - (預設時) 這個 class 會設定 `margin` 或 `padding` 於 `$spacer * 1.5`
+* `5` - (預設時) 這個 class 會設定 `margin` 或 `padding` 於 `$spacer * 3`
 
-Here are some representative examples of these classes:
+（你也可以對 `$spacers` Sass map 調整變數。）
+
+
+## 範例
+
+以下是這些 class 的一些代表性範例：
 
 {% highlight scss %}
 .mt-0 {
@@ -65,8 +69,9 @@ Here are some representative examples of these classes:
 }
 {% endhighlight %}
 
-### Horizontal centering
-Additionally, Bootstrap also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
+### 水平中心
+
+此外，Bootstrap 也包括一個 `.mx-auto`，用於固定寬度盒模型的水平置中，是具有 `display: block` 和 `width` 集合的內容，並將水平 margin 設置為`auto`。
 
 <div class="bd-example">
   <div class="mx-auto" style="width: 200px; background-color: rgba(86,61,124,.15);">

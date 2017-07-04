@@ -1,32 +1,32 @@
 ---
 layout: docs
-title: Position
-description: Use these shorthand utilities for quickly configuring the position of an element.
+title: Position 位置
+description: 使用速記小工具配置元素的位置。
 group: utilities
 toc: true
 ---
 
-## Fixed top
+## 固定在頂部
 
-Position an element at the top of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add aditional CSS.
+將一個元素置於可視區的頂部，從邊到邊。請確認固定在頂部是你理解的方法，必要時你需要增加額外的 CSS。
 
 {% highlight html %}
 <div class="fixed-top">...</div>
 {% endhighlight %}
 
-## Fixed bottom
+## 固定在底部
 
-Position an element at the bottom of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add aditional CSS.
+Po將一個元素置於可視區的底部，從邊到邊。請確認固定在底部是你理解的方法，必要時你需要增加額外的 CSS。
 
 {% highlight html %}
 <div class="fixed-bottom">...</div>
 {% endhighlight %}
 
-## Sticky top
+## 貼齊於頂端 (Sticky top)
 
-Position an element at the top of the viewport, from edge to edge, but only after you scroll past it. The `.sticky-top` utility uses CSS's `position: sticky`, which isn't fully supported in all browsers.
+將一個元素置於可視區的頂部，從邊緣到邊緣，但僅在你滾動視窗經過它之後。`.sticky-top` 小工具使用 CSS 的 `position: sticky`，它並沒有支援所有的瀏覽器。
 
-**Microsoft Edge and IE11 will render `position: sticky` as `position: relative`.** As such, we wrap the styles in a `@supports` query, limiting the stickiness to only browsers that properly can render it.
+**Microsoft Edge 與 IE11 呈現 `position: sticky` 是使用 `position: relative`**。我們在這個樣式上增加 `@supports`，限制這個屬性只能在能夠執行的瀏覽器上運行。
 
 {% highlight html %}
 <div class="sticky-top">...</div>
