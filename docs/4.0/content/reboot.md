@@ -1,35 +1,35 @@
 ---
 layout: docs
-title: Reboot
-description: Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
+title: 重置
+description: 針對單一檔案內 CSS 的特定元素重置樣式，重置以便 Bootstrap 準確且一致的建立樣式。
 group: content
 redirect_from: "/content/"
 toc: true
 ---
 
-## Approach
+## 方式
 
-Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some `<table>` styles for a simpler baseline and later provide `.table`, `.table-bordered`, and more.
+僅針對 HTML 語法與元素語法重置並建立規範。附加樣式僅能利用 class 建立。例如，我們利用重置部分 `<table>` 基礎樣式以利套用後續的 `.table`、`.table-bordered` 及其他選項。
 
-Here are our guidelines and reasons for choosing what to override in Reboot:
+以下是我們重置元件的規範和原因：
 
-- Update some browser default values to use `rem`s instead of `em`s for scalable component spacing.
-- Avoid `margin-top`. Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of `margin` is a simpler mental model.
-- For easier scaling across device sizes, block elements should use `rem`s for `margin`s.
-- Keep declarations of `font`-related properties to a minimum, using `inherit` whenever possible.
+- 更新部分瀏覽器的預設值，在可變動的文字間距上使用 `rem`s 替代 `em`s。
+- 避免 `margin-top`。垂直邊緣可能會發生重疊，產生無法預料的錯誤。更重要的是 `margin` 應該是單向、簡單的思維。
+- 為了在設備之間之間輕鬆縮放，方塊元素應當在 `margin` 上採用 `rem`。
+- 盡可能使用 `inherit` 將字體的屬性宣告保持在最小化。
 
-## Page defaults
+## 頁面預設
 
-The `<html>` and `<body>` elements are updated to provide better page-wide defaults. More specifically:
+為了提供最佳的頁面預設值而更新`<html>` 和 `<body>` 元素。具體而言：
 
-- The `box-sizing` is globally set on every element—including `*:before` and `*:after`, to `border-box`. This ensures that the declared width of element is never exceeded due to padding or border.
-  - No base `font-size` is declared on the `<html>`, but `16px` is assumed (the browser default). `font-size: 1rem` is applied on the `<body>` for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach.
-- The `<body>` also sets a global `font-family` and `line-height`. This is inherited later by some form elements to prevent font inconsistencies.
-- For safety, the `<body>` has a declared `background-color`, defaulting to `#fff`.
+- 在每個元素上設定全域性的 `box-sizing`，包括 `*:before` 和 `*:after` 以及 `border-box`。這確保元素物件 padding 或 border 不會超過宣告的寬度數值。
+  - 不在 `<html>` 上宣告基礎 `font-size`，但假設字體尺寸為 16px (瀏覽器預設)。`font-size:` 在 `<body>` 上應用 1rem 以便於透過 media queries 時採用使用者的喜好與設定輕易設定響應式縮放。
+- `<body>` 同時設定一個全域的 `font-family` 和 `line-height`。隨後某些元素形式會繼承這個設定以防止字體不一致。
+- 安全起見在 `<body>` 宣告 `background-color` 預設值為 `#fff`。
 
-## Native font stack
+## 原生字體堆疊
 
-The default web fonts (Helvetica Neue, Helvetica, and Arial) have been dropped in Bootstrap 4 and replaced with a "native font stack" for optimum text rendering on every device and OS. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
+Bootstrap 4.0 已經放棄了預設網頁字體（Helvetica Neue, Helvetica, 和 Arial）並用 "native font stack" 取代了預設字體以在每個設備和作業系統上獲得最佳的閱讀呈現。閱讀更多的資訊 [原生字體堆疊 *Smashing Magazine* 文章中](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/)。
 
 {% highlight sass %}
 $font-family-sans-serif:
@@ -47,11 +47,11 @@ $font-family-sans-serif:
   "Helvetica Neue", Arial, sans-serif !default;
 {% endhighlight %}
 
-This `font-family` is applied to the `<body>` and automatically inherited globally throughout Bootstrap. To switch the global `font-family`, update `$font-family-base` and recompile Bootstrap.
+`<body>` 應用 `font-family` 並在整個 Bootstrap 內自動繼承這個全域設定。要切換全域的 `font-family`，更新 `$font-family-base` 並重新編譯 Bootstrap。
 
-## Headings and paragraphs
+## 標題和段落
 
-All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-top` removed. Headings have `margin-bottom: .5rem` added and paragraphs `margin-bottom: 1rem` for easy spacing.
+所有標題元素像是 `<h1>` 及 `<p>` 已經刪除它們的 `margin-top`。標題元素具有 `margin-bottom: .5rem`，段落元素則是 `margin-bottom: 1rem` 使其具有更單純的間隔。
 
 <table>
   <thead>
@@ -100,9 +100,9 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
   </tbody>
 </table>
 
-## Lists
+## 列表
 
-All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`.
+刪除全部列表 `<ul>`、`<ol>` 和 `<dl>` 中的 `margin-top`，並設定為 `margin-bottom: 1rem`。巢狀列表沒有 `margin-bottom`。
 
 <div class="bd-example">
 {% markdown %}
@@ -130,7 +130,7 @@ All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `
 {% endmarkdown %}
 </div>
 
-For simpler styling, clear hierarchy, and better spacing, description lists have updated `margin`s. `<dd>`s reset `margin-left` to `0` and add `margin-bottom: .5rem`. `<dt>`s are **bolded**.
+為了更簡單的樣式、明確和更好的間隔，說明清單具有更新後的 `margin`、`<dd>` 重設 `margin-left` 為 `0` 並增加 `margin-bottom: .5rem`。`<dt>` 為 **粗體**。
 
 <div class="bd-example">
 {% markdown %}
@@ -146,9 +146,9 @@ For simpler styling, clear hierarchy, and better spacing, description lists have
 {% endmarkdown %}
 </div>
 
-## Preformatted text
+## 程式碼文字
 
-The `<pre>` element is reset to remove its `margin-top` and use `rem` units for its `margin-bottom`.
+`<pre>` 元素被重設以刪除其 `margin-top` 並在 `margin-bottom` 上使用 `rem`。
 
 <div class="bd-example">
 {% markdown %}
@@ -160,9 +160,9 @@ The `<pre>` element is reset to remove its `margin-top` and use `rem` units for 
 {% endmarkdown %}
 </div>
 
-## Tables
+## 表格
 
-Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout. Additional changes for borders, padding, and more come with [the `.table` class]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/tables/).
+表格經過輕微調整以將並 `<caption>` 風格化、合併邊框並確保整體的 `text-align`。在[the `.table` class]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/tables/) 中有針對 borders、padding 和更多的額外變化。
 
 <div class="bd-example">
   <table>
@@ -200,17 +200,17 @@ Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure
   </table>
 </div>
 
-## Forms
+## 表單
 
-Various form elements have been rebooted for simpler base styles. Here are some of the most notable changes:
+已經將若干形式元素重置，以獲得更簡單的基礎樣式。如下是部分最顯著的變化：
 
-- `<fieldset>`s have no borders, padding, or margin so they can be easily used as wrappers for individual inputs or groups of inputs.
-- `<legend>`s, like fieldsets, have also been restyled to be displayed as a heading of sorts.
-- `<label>`s are set to `display: inline-block` to allow `margin` to be applied.
-- `<input>`s, `<select>`s, `<textarea>`s, and `<button>`s are mostly addressed by Normalize, but Reboot removes their `margin` and sets `line-height: inherit`, too.
-- `<textarea>`s are modified to only be resizable vertically as horizontal resizing often "breaks" page layout.
+- `<fieldset>`s 沒有 borders、padding 或 margin 以便包覆獨立 input 和成組 inputs。
+- `<legend>` 和 fieldsets 一樣，`<legend>` 已經被重新定義樣式以便顯示為類型的標題。
+- `<label>` 被設定為`display: inline-block` 以便讓 `margin` 應用。
+- 透過 Normalize 於 `<input>`s、`<select>`s、`<textarea>`s、 和 `<button>`s，重置刪除了他們的 `margin` 並同樣設定 `line-height: inherit`。
+- 將 `<textarea>`s 修改為僅可調整垂直尺寸，因為調整水平寬度通常 "破壞" 了頁面配置。
 
-These changes, and more, are demonstrated below.
+上述變化如下範例。
 
 <form class="bd-example">
   <fieldset>
@@ -289,11 +289,11 @@ These changes, and more, are demonstrated below.
   </fieldset>
 </form>
 
-## Misc elements
+## 其他元素
 
-### Address
+### 地址
 
-The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and `margin-bottom: 1rem` has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br>`.
+更新了 `<address>` 元素以便將瀏覽器的預設 `font-style` 由` italic` 重置為 `normal`。同時現在繼承了 `line-height` 並添加了 `margin-bottom: 1rem`。`<address>` 用於提供聯繫資訊。透過 `<br>` 來換一行。
 
 <div class="bd-example">
   <address>
@@ -311,7 +311,7 @@ The `<address>` element is updated to reset the browser default `font-style` fro
 
 ### Blockquote
 
-The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 1rem` for something more consistent with other elements.
+Blockquotes 的預設 `margin` 為 `1em 40px`，因此我們將其重新設定為 `0 0 1rem` 以便更符合其他元素的設定。
 
 <div class="bd-example">
   <blockquote class="blockquote">
@@ -320,40 +320,40 @@ The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 1rem
   </blockquote>
 </div>
 
-### Inline elements
+### 行內元素
 
-The `<abbr>` element receives basic styling to make it stand out amongst paragraph text.
+`<abbr>` 元素接受基本樣式以便在段落文字之間突出顯示。
 
 <div class="bd-example">
   Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue.
 </div>
 
-## HTML5 `[hidden]` attribute
+## HTML5 `[hidden]` 屬性
 
-HTML5 adds [a new global attribute named `[hidden]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden), which is styled as `display: none` by default. Borrowing an idea from [PureCSS](https://purecss.io), we improve upon this default by making `[hidden] { display: none !important; }` to help prevent its `display` from getting accidentally overridden. While `[hidden]` isn't natively supported by IE10, the explicit declaration in our CSS gets around that problem.
+HTML 添加了 [一個名為 `[hidden]` 的新全域屬性](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden)，這是屬性的預設格式是 `display: none`。借鑒了 [PureCSS](https://purecss.io) 的一個想法，我們加入 `[hidden] { display: none !important; }` 改善了預設設定，以防止該屬性的 `display` 被意外覆蓋。雖然 IE10 不支援原生 `[hidden]`，我們在 CSS 中解決了這個問題。
 
 {% highlight html %}
 <input type="text" hidden>
 {% endhighlight %}
 
 {% callout warning %}
-#### jQuery incompatibility
+#### jQuery 的不相容性
 
-`[hidden]` is not compatible with jQuery's `$(...).hide()` and `$(...).show()` methods. This could potentially change in jQuery 3, but we're not holding our breath. Therefore, we don't currently especially endorse `[hidden]` over other techniques for managing the `display` of elements.
+`[hidden]` 不相容 jQuery's `$(...).hide()` 和 `$(...).show()` 的方式。這可能會在 jQuery 3 中修改，但我們不能坐視不理。因此，當前並不是特別將 `[hidden]` 優先於 `display` 的其他方法。
 {% endcallout %}
 
-To merely toggle the visibility of an element, meaning its `display` is not modified and the element can still affect the flow of the document, use [the `.invisible` class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/invisible-content/) instead.
+若僅僅要切換某個元素的可視度，切換可視度的含義是不修改 `display`，且元素仍可影響文件排版，可使用[the `.invisible` class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/invisible-content/) 來取代。
 
-## Click delay optimization for touch
+## 為優化觸擊的點擊延遲
 
-Traditionally, browsers on touchscreen devices have a delay of approximately 300ms between the end of a "tap" – the moment when a finger/stylus is lifted from screen – and the [`click` event](https://developer.mozilla.org/en-US/docs/Web/Events/click) being fired. This delay is necessary for these browsers to correctly handle "double-tap to zoom" gestures without prematurely triggering actions or links after the first "tap", but it can make your site feel slightly sluggish and unresponsive.
+傳統觸控式螢幕設備上的瀏覽器在 "輕擊" 結束之間的延遲約300ms。延遲是 手指/手寫筆 從螢幕上提起和 [點擊事件](https://developer.mozilla.org/en-US/docs/Web/Events/click) 被觸發之間的時間。延遲是瀏覽器在在第一次 "輕擊" 後不提前觸發事件或連結為前提下正確處理，這是 "按兩下縮放" 手勢所必需，但延遲可能讓你的網站有遲緩和回應不迅速的感覺。
 
-Most mobile browsers automatically optimize away this 300ms delay for sites that use the `width=device-width` property as part of their [responsive meta tag]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/#responsive-meta-tag) (as well as for sites that disable zooming, for instance with `user-scalable=no`, though this practice is strongly discouraged for accessibility and usability reasons). The biggest exceptions here are IE11 on Windows Phone 8.1, and iOS Safari (and any other iOS WebView-based browser) [prior to iOS 9.3](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/).
+大部分行動瀏覽器自動為使用 `width=device-width` 屬性作為[responsive meta tag]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/#responsive-meta-tag) 組成部分的網站優化 300ms 的延遲時間（同時也會為通過 `user-scalable=no` 等方式禁用縮放的網站優化延遲，雖然由於可訪問性和易用性等原因強烈不推薦這種做法）。最顯著的例外是 Windows Phone 8.1 上的 IE11 以及 [iOS 9.3之前的](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/) iOS Safari（以及任何其他基於 iOS 網頁的瀏覽器）。
 
-On touch-enabled laptop/desktop devices, IE11 and Microsoft Edge are currently the only browsers with "double-tap to zoom" functionality. As the [responsive meta tag]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/#responsive-meta-tag) is ignored by all desktop browsers, using `width=device-width` will have no effect on the 300ms delay here.
+在啟動觸擊的 筆記本/桌面 設備上，IE11 和 Microsoft Edge 是當前唯一具有 "按兩下縮放" 功能的瀏覽器。由於全部的桌面瀏覽器忽略 [responsive meta tag](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)，因此使用 `width=device-width` 不會對 300 秒的延遲產生任何影響。
 
-To address this problem in IE11 and Microsoft Edge on desktop, as well as IE11 on Windows Phone 8.1, Bootstrap explicitly uses the [`touch-action:manipulation` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action) on all interactive elements (such as buttons and links). This property essentially disables double-tap functionality on those elements, eliminating the 300ms delay.
+為了在桌面的 IE11 和 Microsoft Edge 以及在 Windows Phone 8.1 上解決這個問題，Bootstrap 在各種互動元素上（比如按鍵和連結上）使用了 [`touch-action:manipulation` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action) 。此屬性基本在上述元素上禁用了按兩下功能，因此消除了 300ms 的延遲。
 
-In the case of old iOS versions (prior to 9.3), the suggested approach is to use additional scripts such as [FastClick](https://github.com/ftlabs/fastclick) to explicitly work around the delay.
+對於舊版的 iOS 版本(9.3以前版本)，建議的方式是使用[FastClick](https://github.com/ftlabs/fastclick) 等追加的語法消除延遲。
 
-For further details, see the compatibility table for [suppressing 300ms delay for touchscreen interactions](https://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay).
+欲知進一步的明細，參見相容性表瞭解 [為觸控式螢幕而減少 300ms 的延遲時間](https://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay)。

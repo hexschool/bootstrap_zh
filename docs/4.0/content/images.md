@@ -41,7 +41,7 @@ toc: true
 <img src="..." alt="..." class="img-thumbnail">
 {% endhighlight %}
 
-## Aligning images
+## 對齊圖片
 
 用 [helper float classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/responsive-helpers/#responsive-floats) 或 [text alignment classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/#text-alignment) 讓圖片對齊。
  `block`-level 的圖片可以使用 [the `.mx-auto` margin utility class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/#horizontal-centering) 置中。

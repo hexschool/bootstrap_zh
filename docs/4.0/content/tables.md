@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Tables
-description: Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.
+title: 表格
+description: Bootstrap 設置選擇性加入樣式的表格文件和範例 (鑒於表格在 JavaScript 外掛程式中的廣泛用途)
 group: content
 toc: true
 ---
 
-## Examples
+## 範例
 
-Due to the widespread use of tables across third-party widgets like calendars and date pickers, we've designed our tables to be **opt-in**. Just add the base class `.table` to any `<table>`, then extend with custom styles or our various included modifier classes.
+由於在日曆和日期選擇器等外掛程式中表格使用相當廣泛，已經將表格設計為 **選擇性加入**。只要添加 `.table` 到任何 `<table>` 中，然後透過自定義樣式或是我們提供的 class 作套用。
 
-Using the most basic table markup, here's how `.table`-based tables look in Bootstrap. **All table styles are inherited in Bootstrap 4**, meaning any nested tables will be styled in the same manner as the parent.
+使用最基本的表格標記，以下是 Bootstrap 中 `.table` 的表格的樣式。**Bootstrap 4.0 中繼承了全部的表格樣式**，這就意味至為任何巢狀表格添加樣式的方式和外層表格相同。
 
 {% example html %}
 <table class="table">
@@ -45,7 +45,7 @@ Using the most basic table markup, here's how `.table`-based tables look in Boot
 </table>
 {% endexample %}
 
-You can also invert the colors—with light text on dark backgrounds—with `.table-inverse`.
+也可以作反轉色彩，使用 `.table-inverse` 在深色背景下放上淺色文本。
 
 {% example html %}
 <table class="table table-inverse">
@@ -80,9 +80,9 @@ You can also invert the colors—with light text on dark backgrounds—with `.ta
 </table>
 {% endexample %}
 
-## Table head options
+## 表格 head 選項
 
-Similar to default and inverse tables, use one of two modifier classes to make `<thead>`s appear light or dark gray.
+與預設和反轉樣式相似，使用如下兩個 class 中的一個將 `<thead>` 顯示淺灰或深灰。
 
 {% example html %}
 <table class="table">
@@ -148,9 +148,9 @@ Similar to default and inverse tables, use one of two modifier classes to make `
 </table>
 {% endexample %}
 
-## Striped rows
+## 條紋行
 
-Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
+使用 `.table-striped` 在 `<tbody>`中的任何表格行添加斑馬紋
 
 {% example html %}
 <table class="table table-striped">
@@ -218,9 +218,9 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
 </table>
 {% endexample %}
 
-## Bordered table
+## 帶框的表格
 
-Add `.table-bordered` for borders on all sides of the table and cells.
+加入 `.table-bordered` 在表格和儲存格的四邊上添加邊框。
 
 {% example html %}
 <table class="table table-bordered">
@@ -298,9 +298,9 @@ Add `.table-bordered` for borders on all sides of the table and cells.
 </table>
 {% endexample %}
 
-## Hoverable rows
+## 可滑入行
 
-Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
+添加 `.table-hover` 以便在一個 `<tbody>` 中的表格行上啟用一個 hover 狀態。
 
 {% example html %}
 <table class="table table-hover">
@@ -366,9 +366,9 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 </table>
 {% endexample %}
 
-## Small table
+## 小表格
 
-Add `.table-sm` to make tables more compact by cutting cell padding in half.
+添加 `.table-sm` 將儲存格 padding 縮減一半的方式讓表格更加精簡。
 
 {% example html %}
 <table class="table table-sm">
@@ -434,17 +434,17 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 </table>
 {% endexample %}
 
-## Contextual classes
+## 語意化 class
 
-Use contextual classes to color table rows or individual cells.
+使用語意化 class 給表格列或單獨的儲存格上色。
 
 | Class | Description |
 | --- | --- |
-| `.table-active` | Applies the hover color to a particular row or cell |
-| `.table-success` | Indicates a successful or positive action |
-| `.table-info` | Indicates a neutral informative change or action |
-| `.table-warning` | Indicates a warning that might need attention |
-| `.table-danger` | Indicates a dangerous or potentially negative action |
+| `.table-active` | 向一個特定的行或儲存格使用 hover 色彩 |
+| `.table-success` | 提示一個成功或肯定的行動 |
+| `.table-info` | 提示一個中性的資訊變更或行動 |
+| `.table-warning` | 提示一個可能需要注意的警告 |
+| `.table-danger` | 提示一個危險或潛在的否定行動 |
 
 <div class="bd-example">
   <table class="table">
@@ -533,7 +533,7 @@ Use contextual classes to color table rows or individual cells.
 </tr>
 {% endhighlight %}
 
-Regular table background variants are not available with the inverse table, however, you may use [text or background utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) to achieve similar styles.
+反轉樣式的表格上沒有固定的背景變數，然而，你可以使用 [文本或背景工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) 獲得類似的樣式。
 
 <div class="bd-example">
   <table class="table table-inverse">
@@ -625,14 +625,15 @@ Regular table background variants are not available with the inverse table, howe
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-## Responsive tables
+## 響應式表格
 
-Create responsive tables by adding `.table-responsive` to any `.table` to make them scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.
+任何 `.table` 中添加 `.table-responsive` 創建響應式的表格，讓表格在（小於768px）小設備上水平滾動。當在寬度大於 768px 的任何設備上觀看時，不會看見任何差異。
 
 {% callout warning %}
-#### Vertical clipping/truncation
+#### 垂直剪裁/縮減
 
-Responsive tables make use of `overflow-y: hidden`, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
+響應式表格將超過表格底部或頂部邊緣透過 `overflow-y: hidden` 將內容剪裁掉。具體而言，這會裁掉下拉式功能表和其他第三方的外掛程式。
+
 {% endcallout %}
 
 <div class="bd-example">
