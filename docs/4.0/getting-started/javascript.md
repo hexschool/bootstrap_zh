@@ -1,40 +1,40 @@
 ---
 layout: docs
 title: JavaScript
-description: Bring Bootstrap to life with our JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.
+description: 用我們在 jQuery 上建置 JavaScript 插件將 Bootstrap 生動起來。瞭解每個外掛程式、資料和 API 的選項。
 group: getting-started
 toc: true
 ---
 
-## Individual or compiled
+## 單獨或編譯
 
-Plugins can be included individually (using Bootstrap's individual `*.js` files), or all at once using `bootstrap.js` or the minified `bootstrap.min.js` (don't include both).
+可以（使用 Bootstrap 的獨立 `*.js` 檔案）使用 `bootstrap.js` 或壓縮的 `bootstrap.min.js`（切勿同時插入這兩個檔案）將所有外掛程式一次性全部加入。
 
-## Dependencies
+## 相依外掛程式
 
-Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to check for these dependencies in the docs. Also note that all plugins depend on jQuery (this means jQuery must be included **before** the plugin files). [Consult our `bower.json`]({{ site.repo }}/blob/v{{ site.current_version }}/bower.json) to see which versions of jQuery are supported.
+某些外掛程式和 CSS 元件依賴於其他的插件。若你將外掛程式獨立加入，確保檢查文件中是否有上述的相依關係。同時請注意，所有的外掛程式都依賴 jQuery（這意味著 jQuery 必須在插件檔案 **之前**）。[查詢我們的 `bower.json`]({{ site.repo }}/blob/v{{ site.current_version }}/bower.json) ，以查看支援的 jQuery 版本。
 
-## Data attributes
+## 資料屬性 (HTML data attributes)
 
-Nearly all Bootstrap plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and modal from the same button.)
+幾乎可單獨透過 HTML 採用資料屬性（我們偏好於用此方式使用 JavaScript 函式）啟用和配置所有的 Bootstrap 插件。務必 **在一個獨立的元素僅使用一套資料屬性**（比如，你無法從同一個按鍵同時觸發一個工具提示和互動視窗）。
 
-However, in some situations it may be desirable to disable this functionality. To disable the data attribute API, unbind all events on the document namespaced with `data-api` like so:
+然而，在某些情形中，可能需要禁用此功能。要禁用資料屬性 API，如下在文件中的 `data-api` 上移除相關的事件：
 
 {% highlight js %}
 $(document).off('.data-api')
 {% endhighlight %}
 
-Alternatively, to target a specific plugin, just include the plugin's name as a namespace along with the data-api namespace like this:
+或者，只為了一個特定的插件，只需將插件的名稱作為命名空間以及 data-api 榜定，如下所示：
 
 {% highlight js %}
 $(document).off('.alert.data-api')
 {% endhighlight %}
 
-## Events
+## 事件
 
-Bootstrap provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. `show`) is triggered at the start of an event, and its past participle form (ex. `shown`) is triggered on the completion of an action.
+Bootstrap 為大多數插件行為提供了自定義的事件。一般而言，事件都具有不定式和過去分詞的形式 - 其中不定式（比如 `Show`）在事件開始時被觸發，其過去分詞形式（比如 `shown`）在某一動作完成時被觸發。
 
-All infinitive events provide [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) functionality. This provides the ability to stop the execution of an action before it starts.
+所有的不定式事件提供了 [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) 的功能。這個功能讓某個動作開始前停止執行預設行為。
 
 {% highlight js %}
 $('#myModal').on('show.bs.modal', function (e) {
@@ -42,15 +42,15 @@ $('#myModal').on('show.bs.modal', function (e) {
 })
 {% endhighlight %}
 
-## Programmatic API
+## 程式化 API
 
-We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.
+我們相信你會需要透過 JavaScript API 使用其它插件。所有的公開 APIs 均為單一、可串接的的方法，並且有回傳的行為。
 
 {% highlight js %}
 $('.btn.danger').button('toggle').addClass('fat')
 {% endhighlight %}
 
-All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):
+全部方法接受一個可選則性的物件，如指定特定的方法，或沒有任何內容 (採用預設行為)：
 
 {% highlight js %}
 $('#myModal').modal()                      // initialized with defaults
@@ -58,20 +58,23 @@ $('#myModal').modal({ keyboard: false })   // initialized with no keyboard
 $('#myModal').modal('show')                // initializes and invokes show immediately
 {% endhighlight %}
 
-Each plugin also exposes its raw constructor on a `Constructor` property: `$.fn.popover.Constructor`. If you'd like to get a particular plugin instance, retrieve it directly from an element: `$('[rel="popover"]').data('popover')`.
 
-### Asynchronous functions and transitions
+每個插件同時使用 `Constructor` 屬性上的建構式屬性：`$.fn.popover.Constructor`。若你想獲得一個特定的插件，直接從一個元素取用：`$('[rel="popover"]').data('popover')`。
 
-All programmatic API methods are **asynchronous** and returns to the caller once the transition is started but **before it ends**.
+### 非同步函式及轉換
 
-In order to execute an action once the transition is complete, you can listen to the corresponding event.
+所有程式的 API 行為都是 **非同步** 的，且在一開始調換並在 **結束之前** 回傳。
+
+為了在執行一個動作時，您可監聽該事件。
+
 {% highlight js %}
 $('#myCollapse').on('shown.bs.collapse', function (e) {
   // Action to execute once the collapsible area is expanded
 })
 {% endhighlight %}
 
-In addition a method call on a **transitioning component will be ignored**.
+另一個 **轉換組件的方法調用將被忽略**。
+
 {% highlight js %}
 $('#myCarousel').on('slid.bs.carousel', function (e) {
   $('#myCarousel').carousel('2') // Will slide to the slide 2 as soon as the transition to slide 1 is finished
@@ -81,42 +84,43 @@ $('#myCarousel').carousel('1') // Will start sliding to the slide 1 and returns 
 $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the slide 1 is not finished !!
 {% endhighlight %}
 
-### Default settings
-You can change the default settings for a plugin by modifying the plugin's `Constructor.Default` object:
+### 預設設定
+
+你可以通過修改插件 `Constructor.Default` 物件，更改插件的預設設置。
 
 {% highlight js %}
 $.fn.modal.Constructor.Default.keyboard = false // changes default for the modal plugin's `keyboard` option to false
 {% endhighlight %}
 
-## No conflict
+## 無衝突
 
-Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
+有時必須和其他 UI 框架一起使用 Bootstrap 插件。在此情形中，有時會出現命名空間的衝突。若出現此情況，你可以在意圖恢復其數值的插件上調用 `.noConflict`。
 
 {% highlight js %}
 var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
 $.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
 {% endhighlight %}
 
-## Version numbers
+## 版本號
 
-The version of each of Bootstrap's jQuery plugins can be accessed via the `VERSION` property of the plugin's constructor. For example, for the tooltip plugin:
+可以通過插件建構函式的 `VERSION` 屬性訪問每個 Bootstrap 的 jQuery 插件版本。比如，對工具提示插件：
 
 {% highlight js %}
 $.fn.tooltip.Constructor.VERSION // => "{{ site.current_version }}"
 {% endhighlight %}
 
-## No special fallbacks when JavaScript is disabled
+## 當 JavaScript 禁用時無特殊回饋
 
-Bootstrap's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.
+當禁用 JavaScript 時，Bootstrap 的插件不會有特別回饋。若你擔心此等情況中的使用者體驗，使用 [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) 以向你的用戶解釋此情形（以及重啟JavaScript的方式）和/或添加你自己定義的回饋。
 
 {% callout warning %}
-#### Third-party libraries
+#### 第三方函式庫
 
-**Bootstrap does not officially support third-party JavaScript libraries** like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
+** Bootstrap 不支持第三方 JavaScript 函式庫，如 Prototype 或 jQuery UI。 儘管有 `.noConflict` 和命名空間的事件，還是可能會出現兼容性的問題，您需要自己修復。
 {% endcallout %}
 
 ## Util
 
-All Bootstrap Javascript depend on `util.js` and it has to be included alongside the other JS files. If you're using the compiled (or minified) `bootstrap.js`, there is no need to include this—it's already there.
+全部的 Bootstrap Javascript 相依於 `util.js` 並必須和其他 JS 檔案一同加入。若你使用編譯（或壓縮的）`bootstrap.js`，無需添加這個檔案，因為他已經包含在內＼。
 
-`util.js` includes utility functions and a basic helper for `transitionEnd` events as well as a CSS transition emulator. It's used by the other plugins to check for CSS transition support and to catch hanging transitions.
+`util.js` 包括了若許多實用函式和一個適用於 `transitionEnd` 的事件，幫助文件以及一個 CSS 轉換工具。其他插件使用這個去確認 CSS 轉換是否支持，並且去擷取轉換的狀態。

@@ -1,34 +1,35 @@
 ---
 layout: docs
-title: Accessibility
-description: A brief overview of Bootstrap's features and limitations for the creation of accessible content.
+title: 網頁親和性
+description: 簡要概述 Bootstrap 創建親和性內容的特性和限制
 group: getting-started
 toc: true
 ---
 
-Bootstrap provides an easy-to-use framework of ready-made styles, layout tools, and interactive components, allowing developers to create websites and applications that are visually appealing, functionally rich, and accessible out of the box.
+Bootstrap提 供了一個由現成風格、佈局工具和互動元件構成的易用框架，允許開發者創建具有視覺吸引力、功能豐富且具網頁親和性的網站和應用。
 
-## Overview and Limitations
+## 概述和限制
 
-The overall accessibility of any project built with Bootstrap depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with Bootstrap that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0](https://www.w3.org/TR/WCAG20/) (A/AA/AAA), [Section 508](https://www.section508.gov/) and similar accessibility standards and requirements.
+用 Bootstrap 創建任何項目的整體親和性很大部分上取決於作者的標記、額外的樣式及所包含的腳本。然而，用 Bootstrap 創建執行 [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0](https://www.w3.org/TR/WCAG20/) (A/AA/AAA), [Section 508](https://www.section508.gov/) 以及類似親和性標準網站和應用是完全可以的。
 
-### Structural markup
 
-Bootstrap's styling and layout can be applied to a wide range of markup structures. This documentation aims to provide developers with best practice examples to demonstrate the use of Bootstrap itself and illustrate appropriate semantic markup, including ways in which potential accessibility concerns can be addressed.
+### 結構性標記
 
-### Interactive components
+Bootstrap 的樣式和佈局可以應用於大量的標記結構上。本文主旨在向開發者提供最佳的示範演示 Bootstrap 本身以及展示適當的語義標記，包括處理潛在親和性之方式。
 
-Bootstrap's interactive components—such as modal dialogs, dropdown menus and custom tooltips—are designed to work for touch, mouse and keyboard users. Through the use of relevant [<abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/intro/aria) roles and attributes, these components should also be understandable and operable using assistive technologies (such as screen readers).
+### 互動組件
 
-Because Bootstrap's components are purposely designed to be fairly generic, authors may need to include further <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes, as well as JavaScript behavior, to more accurately convey the precise nature and functionality of their component. This is usually noted in the documentation.
+Bootstrap 的互動元件 - 比如 modal dialogs、下拉式功能表和自訂工具提示，其設計目的是方便觸控式及滑鼠用戶。通過使用 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/intro/aria) 角色和屬性，使用輔助性技術（比如螢幕閱讀器）這些元件應同時具有可理解性和操作性。
 
-### Color contrast
+由於 Bootstrap 的元件有意被設計為具有相當的通用性，因此作者可能需要加入進一步的 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 角色和屬性以及 JavaScript 行為，以便更加準確地傳達其元件的精確性質和功能。在文件中通常會加以註明。
 
-Most colors that currently make up Bootstrap's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—lead to *insufficient* color contrast (below the recommended [WCAG 2.0 color contrast ratio of 4.5:1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)) when used against a light background. Authors will need to manually modify/extend these default colors to ensure adequate color contrast ratios.
+### 顏色對比
 
-### Visually hidden content
+當前構成 Boostrap 預設的大部分顏色-在整個框架內用於按鈕變化、警告變化、形式認證指示等事項的顏色 - 在淺色背景是 *不足夠* 的顏色對比（如下為建議的 [WCAG2.0顏色對比比例4.5:1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html))。作者需要手動修改/增加上述預設顏色以確保顏色的對比比例。
 
-Content which should be visually hidden, but remain accessible to assistive technologies such as screen readers, can be styled using the `.sr-only` class. This can be useful in situations where additional visual information or cues (such as meaning denoted through the use of color) need to also be conveyed to non-visual users.
+### 視覺上被隱藏的內容
+
+應當在視覺上被影藏，但應保持對螢幕閱讀器等輔助性的親和性內容，可以使用 `.sr-only` 的樣式隱藏。在需要同時向非視覺使用者傳遞額外的視覺資訊或提示（比如通過使用顏色表示含義）的情形中，這是非常有用的。
 
 {% highlight html %}
 <p class="text-danger">
@@ -37,13 +38,13 @@ Content which should be visually hidden, but remain accessible to assistive tech
 </p>
 {% endhighlight %}
 
-For visually hidden interactive controls, such as traditional "skip" links, `.sr-only` can be combined with the `.sr-only-focusable` class. This will ensure that the control becomes visible once focused (for sighted keyboard users).
+對於視覺上被隱藏的互動控制，比如傳統的 "略過" 連結，可以將 `.sr-only` 與 `.sr-only-focusable` 類型相結合。這樣會確保一旦被 focused（適用於鍵盤操作用戶）時成為可見。
 
 {% highlight html %}
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 {% endhighlight %}
 
-## Additional resources
+## 額外的資源
 
 - [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/)
 - [The A11Y Project](http://a11yproject.com/)

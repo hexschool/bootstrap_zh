@@ -1,71 +1,73 @@
 ---
 layout: docs
-title: Download
-description: Download Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, Bower, RubyGems, and more.
+title: 下載
+description: 下載 Boostrap 以獲得編譯好的 CSS 和 JavaScript、原始程式碼或將其加入到您喜好的 npm、bower、RubyGems 軟體套件管理系統中。
 group: getting-started
 toc: true
 ---
 
-## Bootstrap CSS and JS
+## Bootstrap CSS 和 JS
 
-**Download Bootstrap's ready-to-use code to easily drop into your project.** Includes compiled and minified versions of all our CSS bundles (default, grid only, or Reboot only) and JavaScript plugins. Doesn't include documentation or source files.
+**下載 Boostrap 現成的程式碼以輕易加入到你的專案中。** 包括各種 CSS 套件編譯好且壓縮的版本（預設、僅有網格或僅有重置）以及 JavaScript 插件。不含文件或原始程式碼。
 
-**Current version:** v{{ site.current_version}}
+**當前版本:** v{{ site.current_version}}
 
-<a href="{{ site.download.dist }}" class="btn btn-bd-purple" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Download Bootstrap</a>
+<a href="{{ site.download.dist }}" class="btn btn-bd-purple" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">下載 Bootstrap</a>
 
-## Source files
-**Want to compile Bootstrap with your project's asset pipeline?** Choose this option to download our source Sass, JavaScript, and documentation files. Requires a Sass compiler, [Autoprefixer](https://github.com/postcss/autoprefixer), and [some setup]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup).
+## 原始檔案
 
-<a href="{{ site.download.source }}" class="btn btn-bd-purple" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
+**想用你的專案編譯 Bootstrap？** 選擇此選項下載我們的 Sass、JavaScript 以及文檔。需要一個 Sass 編譯器、[Autoprefixer](https://github.com/postcss/autoprefixer)、 [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes) 以及 [some setup]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup)。
+
+<a href="{{ site.download.source }}" class="btn btn-bd-purple" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download 原始碼</a>
 
 ## Bootstrap CDN
 
-Skip the download and use the Bootstrap CDN to deliver Bootstrap's compiled CSS and JS to your project.
+跳過下載並使用 Bootstrap CDN 將 Boostrap 的 CSS 和 JS 加到你的專案中。
+
 
 {% highlight html %}
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-## Package managers
+## 套件管理工具
 
-Pull in Bootstrap's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Bootstrap will **require a Sass compiler and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
+用受歡迎的套件管理工具將 Bootstrap 的 **原始檔** 拉入幾乎任何專案中。不論用的套件管理工具為何，Bootstrap 將需要一個 Sass 編譯器[Autoprefixer](https://github.com/postcss/autoprefixer)、以及[postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes) **以便獲得與我們的官方編譯版本一致的設置**。
 
 ### npm
 
-Install Bootstrap in your Node powered apps with [the npm package](https://www.npmjs.com/package/bootstrap):
+用 [npm](https://www.npmjs.com/package/bootstrap) 將 Bootstrap 安裝到基於 Node.js 的應用程式中
 
 {% highlight bash %}
 npm install bootstrap@{{ site.current_version }}
 {% endhighlight %}
 
-`require('bootstrap')` will load all of Bootstrap's jQuery plugins onto the jQuery object. The `bootstrap` module itself does not export anything. You can manually load Bootstrap's jQuery plugins individually by loading the `/js/*.js` files under the package's top-level directory.
+`require('bootstrap')` 會將全部的 Bootstrap jQuery 外掛程式載入到 jQuery 物件。Bootstrap 模組本身匯出任何資訊。你可以透過頂層目錄下的 `/js/*.js` 檔案，手動將 Boostrap 的 jQuery 外掛程式獨立載入。
 
-Bootstrap's `package.json` contains some additional metadata under the following keys:
+Bootstrap 的 `package.json` 包含了如下追加的中繼資料：
 
-- `sass` - path to Bootstrap's main [Sass](http://sass-lang.com/) source file
-- `style` - path to Bootstrap's non-minified CSS that's been precompiled using the default settings (no customization)
+- `sass` - 前往 Bootstrap [Sass](http://sass-lang.com/) 原始檔案的路徑。
+- `style` - 前往使用預設設置預先編譯的 Bootstrap 未壓縮 CSS 的路徑。
 
 ### RubyGems
 
-Install Bootstrap in your Ruby apps using [Bundler](https://bundler.io/) (**recommended**) and [RubyGems](https://rubygems.org/) by adding the following line to your [`Gemfile`](https://bundler.io/gemfile.html):
+通過向你的 [`Gemfile`](https://bundler.io/gemfile.html) 增加如下的命令列，使用 [Bundler](https://bundler.io/) （**推薦**）和 [RubyGems](https://rubygems.org/) 將 Bootstrap 安裝到你的 Ruby 應用程式中：
 
 {% highlight ruby %}
 gem 'bootstrap', '~> 4.0.0.alpha6'
 {% endhighlight %}
 
-Alternatively, if you're not using Bundler, you can install the gem by running this command:
+另外，若您沒有使用 Bundler，你可以通過如下的命令：
 
 {% highlight bash %}
 gem install bootstrap -v 4.0.0.alpha6
 {% endhighlight %}
 
-[See the gem's README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md) for further details.
+[參見 gem 的 README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md)，以瞭解進一步的細節。
 
 ### Composer
 
-You can also install and manage Bootstrap's Sass and JavaScript using [Composer](https://getcomposer.org):
+你還可以使用 [Composer](https://getcomposer.org) 安裝和管理 Bootstrap 的 Sass 和 JavaScript：
 
 {% highlight bash %}
 composer require twbs/bootstrap:{{ site.current_version }}
@@ -73,7 +75,7 @@ composer require twbs/bootstrap:{{ site.current_version }}
 
 ### Bower
 
-Install and manage Bootstrap's Sass and JavaScript using [Bower](https://bower.io).
+使用 [Bower](https://bower.io) 安裝和管理 Bootstrap 的 Sass 和 JavaScrpit。
 
 {% highlight bash %}
 bower install bootstrap#v{{ site.current_version }}
@@ -81,7 +83,8 @@ bower install bootstrap#v{{ site.current_version }}
 
 ### NuGet
 
-If you develop in .NET, you can also install and manage Bootstrap's [CSS](https://www.nuget.org/packages/bootstrap/) or [Sass](https://www.nuget.org/packages/bootstrap.sass/) and JavaScript using [NuGet](https://www.nuget.org):
+若你在 .NET 中進行開發，你還可以使用 [NuGet](https://www.nuget.org) 安裝和管理 Bootstrap 的
+[CSS](https://www.nuget.org/packages/bootstrap/) 或 [Sass](https://www.nuget.org/packages/bootstrap.sass/) 和 JavaScript：
 
 {% highlight powershell %}
 Install-Package bootstrap -Pre
@@ -91,4 +94,4 @@ Install-Package bootstrap -Pre
 Install-Package bootstrap.sass -Pre
 {% endhighlight %}
 
-The `-Pre` is required until Bootstrap v4 has a stable release.
+在 Bootstrap V4 有一個穩定版本前，需要 `-Pre`。

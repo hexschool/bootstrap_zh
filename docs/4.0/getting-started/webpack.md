@@ -1,24 +1,25 @@
 ---
 layout: docs
 title: Webpack
-description: Learn how to include Bootstrap in your project using Webpack 2.
+description: 瞭解如何使用 Webpack 2 將 Bootstrap 加入到你的專案中。
 group: getting-started
 toc: true
 ---
 
-## Installing Bootstrap
+## 安裝 Bootstrap
 
-[Install bootstrap](/getting-started/download/#npm) as a node module using npm.
+使用 Node.js npm [安裝 bootstrap](/getting-started/download/#npm) 。
 
-## Importing JavaScript
+## 匯入 JavaScript
 
-Import [Bootstrap's JavaScript](/getting-started/javascript/) by adding this line to your app's entry point (usually `index.js` or `app.js`):
+匯入 [Bootstrap's JavaScript](/getting-started/javascript/)
+加入下面這行在你的 entry point (通常是 `index.js` 或 `app.js`)：
 
 {% highlight js %}
 import 'bootstrap';
 {% endhighlight %}
 
-Alternatively, you may **import plugins individually** as needed:
+另外，你可以在需要時 **獨立匯入插件** 。
 
 {% highlight js %}
 import 'bootstrap/js/dist/util';
@@ -26,7 +27,7 @@ import 'bootstrap/js/dist/dropdown';
 ...
 {% endhighlight %}
 
-Bootstrap is dependent on [jQuery](https://jquery.com/) and [Popper](https://popper.js.org/), so npm will install them for you if needed. But they must be explicitly provided by webpack. Add the following code to the `plugins` section in your webpack config file:
+Bootstrap 取決於[jQuery](https://jquery.com/) 和 [Popper](https://popper.js.org/)，因此 npm 會在必要時為你安裝這些檔案。但這些檔案必須由 webpack 提供。將如下的程式碼加到你的 webpack 配置檔案中的 `plugins` 部分中：
 
 {% highlight js %}
   plugins: [
@@ -46,22 +47,25 @@ Bootstrap is dependent on [jQuery](https://jquery.com/) and [Popper](https://pop
 {% endhighlight %}
 
 {% callout warning %}
-Notice that if you chose to **import plugins individually**, you must also install [exports-loader](https://github.com/webpack-contrib/exports-loader)
+
+請注意，如果您是 **單獨匯入插件**，還必須安裝  [exports-loader](https://github.com/webpack-contrib/exports-loader)
 {% endcallout %}
 
-## Importing Styles
+## 匯入樣式
 
-### Importing Precompiled SASS
+### 匯入未編譯的 SASS
 
-To enjoy the full potential of Bootstrap and customize it to your needs, use the source files as a part of your project's bundling process.
+啟用 Bootstrap 的全部潛力並按你的需求客製化 Bootstrap，使用原始檔案作為你編譯的部分內容。
 
-First, create your own `_custom.scss` and use it to override the [built-in custom variables](/getting-started/options/). Then, use your main sass file to import your custom variables, followed by Bootstrap:
+首先，新增你自己的 `_custom.scss` 並將其用於覆蓋 [內建的自訂變數](/getting-started/options/)。然後使用你主要的 sass 檔案以導入你的自訂變數，然後在導入 Bootstrap:
+
 {% highlight scss %}
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 {% endhighlight %}
 
-For Bootstrap to compile, make sure you install and use the required loaders: [sass-loader](https://github.com/webpack-contrib/sass-loader), [postcss-loader](https://github.com/postcss/postcss-loader) with [Autoprefixer](https://github.com/postcss/autoprefixer#webpack). With minimal setup, your webpack config should include this rule or similar:
+要讓 Bootstrap 進行編譯，先確認你安裝並使用了必要的 loader：
+[sass-loader](https://github.com/webpack-contrib/sass-loader)、 [postcss-loader](https://github.com/postcss/postcss-loader) 搭配 [Autoprefixer](https://github.com/postcss/autoprefixer#webpack) 及 [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes)。以最精簡的配置來說，你的 webpack 配置檔應包括此規則或類似的設置：
 
 {% highlight js %}
   ...
@@ -88,12 +92,12 @@ For Bootstrap to compile, make sure you install and use the required loaders: [s
   ...
 {% endhighlight %}
 
-### Importing Compiled CSS
+### 導入編譯好的 CSS
 
-Alternatively, you may use Bootstrap's ready-to-use css by simply adding this line to your project's entry point:
+另外，你可以將此程式碼加到你專案的 entry point，以使用 Bootstrap 現成的 CSS：
 
 {% highlight js %}
 import 'bootstrap/dist/css/bootstrap.min.css';
 {% endhighlight %}
 
-In this case you may use your existing rule for `css` without any special modifications to webpack config.
+在此情形中，你可以使用 `css` 現有的規則而無需對 webpack 配置做任何的修改。
