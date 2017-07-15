@@ -1,19 +1,21 @@
 ---
 layout: docs
-title: Navs
-description: Documentation and examples for how to use Bootstrap's included navigation components.
+title: 導覽
+description: 如何使用 Bootstrap 包含導覽元件的文件和範例。
 group: components
 toc: true
 ---
 
-## Base nav
+## 基礎導覽
 
-Navigation available in Bootstrap share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
+Bootstrap 中提供的導覽共用通用標記和樣式，從基礎 `.nav` 到啟用與禁用的狀態。 交換 class 在每種樣式之間切換。
 
-The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
+基礎的 `.nav` 元件使用 flexbox 構建，並為構建所有類型的導覽元件為此提供了堅實的基礎。 它包括一些風格覆蓋（列表也包含在內）、一些更大 padding 製作的點擊連結，及基本的禁用樣式。
+
 
 {% callout info %}
-The base `.nav` component does not include any `.active` state. The following examples include the class, mainly to demonstrate that this particular class does not trigger any special styling.
+基礎的 `.nav` 組件不包含任何 `.active` 狀態。 以下範例包括該類別，主要是為了說明這個 class 不會觸發任何特殊的樣式。
+
 {% endcallout %}
 
 {% example html %}
@@ -35,6 +37,9 @@ The base `.nav` component does not include any `.active` state. The following ex
 
 Classes are used throughout, so your markup can be super flexible. Use `<ul>`s like above, or roll your own with say a `<nav>` element. Because the `.nav` uses `display: flex`, the nav links behave the same as nav items would, but without the extra markup.
 
+class 可以使用在很多地方，因此您的標記可以超級靈活。 使用與上面類似的 `<ul>`，或者用的 `<nav>` 元素自己滾動。 因為 `.nav` 使用 `display: flex`，導覽連結與導覽元件一樣，不需要有額外的標記。
+
+
 {% example html %}
 <nav class="nav">
   <a class="nav-link active" href="#">Active</a>
@@ -44,15 +49,16 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 </nav>
 {% endexample %}
 
-## Available styles
+## 可用樣式
 
-Change the style of `.nav`s component with modifiers and utilities. Mix and match as needed, or build your own.
+使用小工具更改 `.nav` 元件的樣式。依據需要混合搭配或自行建立。
 
-### Horizontal alignment
+### 水平對齊
 
-Change the horizontal alignment of your nav with [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/#horizontal-alignment). By default, navs are left-aligned, but you can easily change them to center or right aligned.
+使用 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/#horizontal-alignment) 更改導覽的水平對齊方式。預設情況下導覽左對齊，但您可以輕鬆地將其更改為中心或右對齊。
 
-Centered with `.justify-content-center`:
+用 `.justify-content-center` 置中：
+
 
 {% example html %}
 <ul class="nav justify-content-center">
@@ -71,7 +77,7 @@ Centered with `.justify-content-center`:
 </ul>
 {% endexample %}
 
-Right-aligned with `.justify-content-end`:
+使用 `.justify-content-end` 靠右對齊：
 
 {% example html %}
 <ul class="nav justify-content-end">
@@ -90,9 +96,10 @@ Right-aligned with `.justify-content-end`:
 </ul>
 {% endexample %}
 
-### Vertical
+### 垂直
 
-Stack your navigation by changing the flex item direction with the `.flex-column` utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., `.flex-sm-column`).
+通過使用 `.flex-column` 小工具更改 flex 項目的軸項。如果在特定 viewports 需要堆疊，可使用響應式版本（例如 `.flex-sm-column`）。
+
 
 {% example html %}
 <ul class="nav flex-column">
@@ -113,6 +120,9 @@ Stack your navigation by changing the flex item direction with the `.flex-column
 
 As always, vertical navigation is possible without `<ul>`s, too.
 
+和往常一樣，垂直導覽也是可以沒有 `<ul>`。
+
+
 {% example html %}
 <nav class="nav flex-column">
   <a class="nav-link active" href="#">Active</a>
@@ -122,9 +132,10 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </nav>
 {% endexample %}
 
-### Tabs
+### 分頁標籤
 
-Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabbed interface. Use them to create tabbable regions with our [tab JavaScript plugin](#javascript-behavior).
+從上面了解基本導覽，並加入 `.nav-tabs` 以生成具有分頁標籤的介面。 使用我們的 [分頁 JavaScript 插件](#javascript-behavior)。
+
 
 {% example html %}
 <ul class="nav nav-tabs">
@@ -143,9 +154,9 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 </ul>
 {% endexample %}
 
-### Pills
+### 片狀
 
-Take that same HTML, but use `.nav-pills` instead:
+使用相同的 HTML，但使用 `.nav-pills` 取代：
 
 {% example html %}
 <ul class="nav nav-pills">
@@ -164,9 +175,10 @@ Take that same HTML, but use `.nav-pills` instead:
 </ul>
 {% endexample %}
 
-### Fill and justify
+### 填充和對齊
 
-Force your `.nav`'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
+`.nav` 內容有兩種寬度擴展用的 Class，使用 `.nav-fill` 會將 `.nav-item` 內容按照比例分配空間。注意，這會佔用所有的水平空間，但並不是每個導覽項目都具有相同寬度。
+
 
 {% example html %}
 <ul class="nav nav-pills nav-fill">
@@ -185,7 +197,8 @@ Force your `.nav`'s contents to extend the full available width one of two modif
 </ul>
 {% endexample %}
 
-When using a `<nav>`-based navigation, be sure to include `.nav-item` on the anchors.
+當使用 `<nav>` 的導覽時，請確保在連結上包含 `.nav-item`。
+
 
 {% example html %}
 <nav class="nav nav-pills nav-fill">
@@ -196,7 +209,9 @@ When using a `<nav>`-based navigation, be sure to include `.nav-item` on the anc
 </nav>
 {% endexample %}
 
-For equal-width elements, use `.nav-justified`. All horizontal space will be occupied by nav links, but unlike the `.nav-fill` above, every nav item will be the same width.
+
+對於等寬元素使用 `.nav-justified`。 所有的水平空間將被導覽連結佔據，但與上面的 `.nav-fill` 不同，每個導覽項都將是相同的寬度。
+
 
 {% example html %}
 <nav class="nav nav-pills nav-justified">
@@ -207,7 +222,8 @@ For equal-width elements, use `.nav-justified`. All horizontal space will be occ
 </nav>
 {% endexample %}
 
-Similar to the `.nav-fill` example using a `<nav>`-based navigation, be sure to include `.nav-item` on the anchors.
+與 `.nav-fill` 的例子類似，使用基於 `<nav>` 的導覽，請確保在連結上包含 `.nav-item`。
+
 
 {% example html %}
 <nav class="nav nav-pills nav-justified">
@@ -218,9 +234,10 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation, be sure to 
 </nav>
 
 {% endexample %}
-## Working with flex utilities
+## 使用 flex 小工具
 
-If you need responsive nav variations, consider using a series of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
+如果需要響應式的導覽變化，請使用一系列 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/)。 這些小工具在中斷點之間提供更多的設定。 在下面的範例中，我們的導覽將堆疊在最小的中斷點上，從小中斷點開始填充完整寬度的水平佈局。
+
 
 {% example html %}
 <nav class="nav nav-pills flex-column flex-sm-row">
@@ -231,17 +248,16 @@ If you need responsive nav variations, consider using a series of [flexbox utili
 </nav>
 {% endexample %}
 
-## Regarding accessibility
+## 關於親和性
 
-If you're using navs to provide a navigation bar, be sure to add a `role="navigation"` to the most logical parent container of the `<ul>`, or wrap a `<nav>` element around the whole navigation. Do not add the role to the `<ul>` itself, as this would prevent it from being announced as an actual list by assistive technologies.
+請注意，導覽列即使視覺樣式為 `.nav-tabs` 的分頁標籤，應該 **不會** 被賦予 `role="tablist"`，`role="tab"` 或 `role="tabpanel"` 屬性。 這些僅適用於動態分頁標籤介面，如 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 中描述。 有關範例，請參閱本節中的 [為動態分頁操作的 JavaScript](#javascript-behavior-for-dynamic-tabbed-interfaces)。
 
-Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` class, should **not** be given `role="tablist"`, `role="tab"` or `role="tabpanel"` attributes. These are only appropriate for dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel). See [JavaScript behavior for dynamic tabbed interfaces](#javascript-behavior-for-dynamic-tabbed-interfaces) in this section for an example.
+## 使用下拉選單
 
-## Using dropdowns
+加入額外的 HTML 和[下拉選單 JavaScript 插件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/dropdowns/#usage).
 
-Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/dropdowns/#usage).
 
-### Tabs with dropdowns
+### 帶下拉選單的分頁標籤
 
 {% example html %}
 <ul class="nav nav-tabs">
@@ -267,7 +283,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 </ul>
 {% endexample %}
 
-### Pills with dropdowns
+### 片狀的下拉選單
 
 {% example html %}
 <ul class="nav nav-pills">
@@ -293,11 +309,12 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 </ul>
 {% endexample %}
 
-## JavaScript behavior
+## JavaScript 行為
 
-Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our navigational tabs and pills to create tabbable panes of local content, even via dropdown menus.
+使用 JavaScript 分頁標籤插件 - 單獨或透過編譯的 `bootstrap.js` 檔 - 擴展我們的導覽分頁標籤和片狀的，以創建可選的分頁標籤、甚至是下拉選單。
 
-Dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel), require `role="tablist"`, `role="tab"`, `role="tabpanel"`, and additional `aria-` attributes in order to convey their structure, functionality and current state to users of assistive technologies (such as screen readers).
+動態分頁標籤介面，如 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 中所描述，需要 `role="tablist"`、`role="tab"`、`role="tabpanel"` 和額外的 `aria-` 屬性向輔助技術（如螢幕閱讀器）的使用者提供他們的結構、功能和當前狀態。
+
 
 <div class="bd-example bd-example-tabs">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -359,7 +376,7 @@ Dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility I
 </div>
 {% endhighlight %}
 
-To help fit your needs, this works with `<ul>`-based markup, as shown above, as well as `<nav>`-based markup shown below.
+如上所示，這不僅可以使用於 `<ul>` 的標記。也可以於 `<nav>` 的標記如下所示。
 
 <div class="bd-example bd-example-tabs">
   <nav class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -413,7 +430,7 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, as 
 </div>
 {% endhighlight %}
 
-The tabs plugin also works with pills.
+標籤分頁插件也能使用於片狀。
 
 <div class="bd-example bd-example-tabs">
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -471,7 +488,7 @@ The tabs plugin also works with pills.
 </div>
 {% endhighlight %}
 
-And with vertical pills.
+還有搭配垂直片狀。
 
 <div class="bd-example bd-example-tabs">
   <div class="row">
@@ -517,9 +534,10 @@ And with vertical pills.
 </div>
 {% endhighlight %}
 
-### Using data attributes
+### 使用資料屬性
 
-You can activate a tab or pill navigation without writing any JavaScript by simply specifying `data-toggle="tab"` or `data-toggle="pill"` on an element. Use these data attributes on `.nav-tabs` or `.nav-pills`.
+只需在元素上指定 `data-toggle="tab"` 或 `data-toggle="pill"` 即可啟動標籤或片狀導覽，而無需編寫任何 JavaScript。可在 `.nav-tabs` 或 `.nav-pills` 上使用這些資料屬性
+
 
 {% highlight html %}
 <!-- Nav tabs -->
@@ -547,9 +565,9 @@ You can activate a tab or pill navigation without writing any JavaScript by simp
 </div>
 {% endhighlight %}
 
-### Via JavaScript
+### 透過 JavaScript
 
-Enable tabbable tabs via JavaScript (each tab needs to be activated individually):
+透過 JavaScript 啟用分頁標籤(每一個分頁標籤需要分別啟動)：
 
 {% highlight js %}
 $('#myTab a').click(function (e) {
@@ -558,7 +576,7 @@ $('#myTab a').click(function (e) {
 })
 {% endhighlight %}
 
-You can activate individual tabs in several ways:
+啟用分頁標籤有以下數種方法：
 
 {% highlight js %}
 $('#myTab a[href="#profile"]').tab('show') // Select tab by name
@@ -567,9 +585,10 @@ $('#myTab a:last').tab('show') // Select last tab
 $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
 {% endhighlight %}
 
-### Fade effect
+### 淡入淡出
 
-To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible.
+要使分頁標籤淡入淡出，請將  `.fade` 加到每個 `.tab-pane` 中。 第一個分頁內容還必須具有 `.show` 以使初始內容可見。
+
 
 {% highlight html %}
 <div class="tab-content">
@@ -580,14 +599,15 @@ To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must a
 </div>
 {% endhighlight %}
 
-### Methods
+### 方法
 
 {% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
 #### $().tab
 
-Activates a tab element and content container. Tab should have either a `data-target` or an `href` targeting a container node in the DOM.
+
+啟動分頁標籤元素和內容容器。 標籤應該有一個 `data-target`或 `href` 定位在 DOM 中的一個容器節點。
 
 {% highlight html %}
 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -621,46 +641,48 @@ Activates a tab element and content container. Tab should have either a `data-ta
 
 #### .tab('show')
 
-Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (i.e. before the `shown.bs.tab` event occurs).
+選擇給定的分頁標籤並顯示其關聯的分頁內容。 之前選擇的任何其他分頁標籤將被取消，並且其關聯的內容被隱藏。 **在 Tab 內容實際顯示之前返回到調用者**（即在 `shown.bs.tab` 事件發生之前）。
 
 {% highlight js %}
 $('#someTab').tab('show')
 {% endhighlight %}
 
-### Events
+### 事件
 
-When showing a new tab, the events fire in the following order:
+當顯示新分頁標籤時，事件按以下順序觸發：
 
-1. `hide.bs.tab` (on the current active tab)
-2. `show.bs.tab` (on the to-be-shown tab)
-3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
-4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
+1. `hide.bs.tab` (當前活動的分頁標籤上)
+2. `show.bs.tab` (待顯示的分頁標籤上)
+3. `hidden.bs.tab` (在上一個啟動的分頁標籤上，與 `hide.bs.tab` 事件相同)
+4. `shown.bs.tab` (在剛剛顯示的新分頁標籤上，與 `show.bs.tab` 事件相同)
 
-If no tab was already active, then the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
+如果沒有分頁標籤已經被啟動，那麼 `hide.bs.tab`和  `hidden.bs.tab` 事件不會被觸發。
+
 
 <table class="table table-bordered table-striped table-responsive">
   <thead>
     <tr>
-      <th style="width: 150px;">Event Type</th>
-      <th>Description</th>
+      <th style="width: 150px;">事件類型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>show.bs.tab</td>
-      <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+      <td>
+      這個事件在分頁內容顯示上觸發，但在分頁標籤顯示之前。 使用 <code>event.target</code> 和 <code>event.relatedTarget</code> 來分別定位啟用的分頁標籤和上一個分頁標籤（如果可用）。</td>
     </tr>
     <tr>
       <td>shown.bs.tab</td>
-      <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+      <td>這個事件在一個分頁標籤顯示之後在分頁標籤顯示上觸發。 使用 <code>event.target</code> 和 <code>event.relatedTarget</code> 來分別定位啟用分頁標籤和上一個啟用分頁標籤（如果可用）。</td>
     </tr>
     <tr>
       <td>hide.bs.tab</td>
-      <td>This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the current active tab and the new soon-to-be-active tab, respectively.</td>
+      <td>在顯示新分頁標籤之後觸發此事件（因此以前啟用的分頁標籤會被隱藏）。 使用 <code>event.target</code> 和 <code>event.relatedTarget</code> 來分別定位當前啟用分頁標籤和新的即將啟用的分頁標籤（如果有）。</td>
     </tr>
     <tr>
       <td>hidden.bs.tab</td>
-      <td>This event fires after a new tab is shown (and thus the previous active tab is hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the previous active tab and the new active tab, respectively.</td>
+      <td>在顯示新分頁標籤之後觸發此事件（因此以前的活動分頁標籤被隱藏）。 使用 <code>event.target</code> 和 <code>event.relatedTarget</code> 來分別定位前一個起用分頁標籤和新的啟用分頁標籤。</td>
     </tr>
   </tbody>
 </table>

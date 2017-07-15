@@ -1,15 +1,15 @@
 ---
 layout: docs
-title: Buttons
-description: Use Bootstrap's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+title: 按鈕
+description: 使用 Bootstrap 自訂按鈕樣式到表單、對話方塊等操作，並支援多種大小、狀態等。
 group: components
 redirect_from: "/components/"
 toc: true
 ---
 
-## Examples
+## 範例
 
-Bootstrap includes six predefined button styles, each serving its own semantic purpose.
+Bootstrap 包括六個預先定義的按鈕樣式，每個都有自己的語義目的。
 
 {% example html %}
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
@@ -37,11 +37,11 @@ Bootstrap includes six predefined button styles, each serving its own semantic p
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-## Button tags
+## 按鈕標籤
 
-The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+`.btn` 是設計為 `<button>` 元素一起使用。 但是，您也可以在 `<a>` 或 `<input>` 元素上使用這些 Class（儘管有些瀏覽器可能會使用稍微不同的渲染）。
 
-When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
+當在用於觸發頁面內功能（例如折疊內容）的 `<a>` 元素上使用按鈕時，而不是連結到新頁面或當前頁面中的部分，這些連結應該被賦予 `role="button"` 適當地傳達他們的目的到螢幕閱讀器等輔助性技術。
 
 {% example html %}
 <a class="btn btn-primary" href="#" role="button">Link</a>
@@ -51,9 +51,9 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 <input class="btn btn-primary" type="reset" value="Reset">
 {% endexample %}
 
-## Outline buttons
+## 外框按鈕
 
-In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
+需要一個按鈕，但不是用填滿的背景顏色？用 `.btn-outline-*` 替換預設修飾用的 Class，以移除任何按鈕上的所有背景色及背景圖。
 
 {% example html %}
 <button type="button" class="btn btn-outline-primary">Primary</button>
@@ -65,9 +65,9 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {% endexample %}
 
 
-## Sizes
+## 大小
 
-Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
+想要較大或較小的按鈕？加入 `.btn-lg` 或 `.btn-sm` 來套用尺寸。
 
 {% example html %}
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
@@ -79,36 +79,37 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
 {% endexample %}
 
-Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
+增加 `.btn-block` 創建塊級別的按鈕（等同於外元素的寬）。
 
 {% example html %}
 <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
 <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
 {% endexample %}
 
-## Active state
+## 啟用狀態
 
-Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
+當啟用時，按鈕將出現按壓（背景較暗、邊框較暗、內陰影）。 **沒有必要在 `<button>` 添加一個 Class，因為它們使用偽類**。但是，如果您需要以動態方式改變狀態，則可以使用 `.active`（並包括 <code>aria-pressed="true"</code> 屬性）套用相同的啟用外觀。
 
 {% example html %}
 <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
 <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
 {% endexample %}
 
-## Disabled state
+## 停用狀態
 
-Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element.
+透過將 `disabled` 布林屬性添加到任何 `<button>` 元素，使按鈕看起來處於停用狀態。
 
 {% example html %}
 <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
 <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
 {% endexample %}
 
-Disabled buttons using the `<a>` element behave a bit different:
 
-- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear disabled.
-- Some future-friendly styles are included to disable all `pointer-events` on anchor buttons. In browsers which support that property, you won't see the disabled cursor at all.
-- Disabled buttons should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
+使用 `<a>` 元素的停用略有不同：
+
+- `<a>` 不支援 `disabled` 屬性，所以你必須添加 `.disabled ` 使它在視覺上看起來被禁用。
+- 包括友善的樣式行為設計，以禁用 `<a>` 按鈕上的所有 `pointer-events`。在支援該屬性的瀏覽器中，會看不到禁用的游標。
+- 禁用按鈕應包含 `aria-disabled="true"` 屬性來向輔助性技術指示元素的狀態。
 
 {% example html %}
 <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
@@ -116,18 +117,18 @@ Disabled buttons using the `<a>` element behave a bit different:
 {% endexample %}
 
 {% callout warning %}
-#### Link functionality caveat
+#### 連結功能警告
 
-The `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s, but that CSS property is not yet standardized. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a `tabindex="-1"` attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
+`.disabled` 使用 `pointer-events: none` 來禁用 `<a>` 的連結功能，但該 CSS 屬性尚未標準化。此外，即使在支持 `pointer-events: none` 的瀏覽器中，鍵盤導覽仍然不受影響，這意味著鍵盤使用者和輔助性技術的使用者仍然可以啟動這些連結。為了安全起見，在這些連結上添加一個 `tabindex="-1"` 屬性防止他們套用 focus，並使用自訂的 JavaScript 來禁用它們的功能。
 {% endcallout %}
 
-## Button plugin
+## 按鈕插件
 
-Do more with buttons. Control button states or create groups of buttons for more components like toolbars.
+讓按鈕可以做更多，控制按鈕狀態或群組按鈕等相關的元件。
 
-### Toggle states
+### 切換狀態
 
-Add `data-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to the `<button>`.
+增加 `data-toggle="button"` 來切換按鈕 `active` 狀態。 如果您預先需要切換按鈕，則必須手動將 `.active` class **和** `aria-pressed="true"` 添加到 `<button>` 中。
 
 {% example html %}
 <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
@@ -135,13 +136,11 @@ Add `data-toggle="button"` to toggle a button's `active` state. If you're pre-to
 </button>
 {% endexample %}
 
-### Checkbox and radio buttons
+### 核取方塊和選項按鈕
 
-Bootstrap's `.button` styles can be applied to other elements, such as `<label>`s, to provide checkbox or radio style button toggling. Add `data-toggle="buttons"` to a `.btn-group` containing those modified buttons to enable toggling in their respective styles.
+Bootstrap的 `.button` 樣式可以應用於其他元素，例如 `<label>` 以提供核取方塊或選項按鈕樣式進行按鈕切換。 將 `data-toggle="buttons"` 添加到包含這些按鈕的 `.btn-group` 中，來啟用他們各自樣式的切換。
 
-The checked state for these buttons is **only updated via `click` event** on the button. If you use another method to update the input—e.g., with `<input type="reset">` or by manually applying the input's `checked` property—you'll need to toggle `.active` on the `<label>` manually.
-
-Note that pre-checked buttons require you to manually add the `.active` class to the input's `<label>`.
+這些按鈕的檢查狀態 **只能透過按鈕上的 `click` 事件** 進行更新。如果您使用其他方法來更新輸入 - 例如，使用 `<input type="reset">` 或手動應用輸入的 `checked` 屬性，您需要手動在 `<label>` 上切換 `.active`。
 
 {% example html %}
 <div class="btn-group" data-toggle="buttons">
@@ -173,6 +172,6 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 
 ### Methods
 
-| Method | Description |
+| 方法 | 描述 |
 | --- | --- |
-| `$().button('toggle')` |Toggles push state. Gives the button the appearance that it has been activated.  |
+| `$().button('toggle')` |切換狀態，給予按鈕已經啟用的外觀。 |

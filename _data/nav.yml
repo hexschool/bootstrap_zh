@@ -1,78 +1,140 @@
-- title: Getting started
+- title: 快速開始
+  url: Getting started
   pages:
-    - title: Introduction
-    - title: Download
-    - title: Contents
-    - title: Browsers & devices
+    - title: 簡介
+      url: introduction
+    - title: 下載
+      url: Download
+    - title: 內容
+      url: Contents
+    - title: 瀏覽器及裝置
+      url: Browsers & devices
     - title: JavaScript
-    - title: Options
-    - title: Build tools
-    # - title: Best practices # TODO: Write this content
+      url: JavaScript
+    - title: 自定義選項
+      url: Options
+    - title: 構建工具
+      url: Build Tools
+    # - title: Best practices
+    #   url: Best practices
     - title: Webpack
-    - title: Accessibility
+      url: Webpack
+    - title: 網頁親和性
+      url: Accessibility
 
-- title: Layout
+- title: 排版
+  url: Layout
   pages:
-    - title: Overview
-    - title: Grid
-    - title: Media object
-    - title: Utilities for layout
+    - title: 概觀
+      url: Overview
+    - title: 網格
+      url: Grid
+    - title: 媒體物件
+      url: Media object
+    - title: 排版小工具
+      url: Utilities for layout
 
-- title: Content
+- title: 內容
+  url: Content
   pages:
-    - title: Reboot
-    - title: Typography
-    - title: Code
-    - title: Images
-    - title: Tables
-    - title: Figures
+    - title: 重置
+      url: Reboot
+    - title: 文字排版
+      url: Typography
+    - title: 程式碼
+      url: Code
+    - title: 圖片
+      url: Images
+    - title: 表格
+      url: Tables
+    - title: 圖片區
+      url: Figures
 
-- title: Components
+- title: 元件
+  url: Components
   pages:
-    - title: Alerts
-    - title: Badge
-    - title: Breadcrumb
-    - title: Buttons
-    - title: Button group
-    - title: Card
-    - title: Carousel
-    - title: Collapse
-    - title: Dropdowns
-    - title: Forms
-    - title: Input group
-    - title: Jumbotron
-    - title: List group
-    - title: Modal
-    - title: Navs
-    - title: Navbar
-    - title: Pagination
-    - title: Popovers
-    - title: Progress
-    - title: Scrollspy
-    - title: Tooltips
+    - title: 警報
+      url: Alerts
+    - title: 標籤
+      url: Badge
+    - title: 麵包屑
+      url: Breadcrumb
+    - title: 按鈕
+      url: Buttons
+    - title: 按鈕群組
+      url: Button group
+    - title: 卡片
+      url: Card
+    - title: 輪播
+      url: Carousel
+    - title: 折疊
+      url: Collapse
+    - title: 下拉選單
+      url: Dropdowns
+    - title: 表單
+      url: Forms
+    - title: input 群組
+      url: Input group
+    - title: 廣告大屏幕
+      url: Jumbotron
+    - title: 列表群組
+      url: List group
+    - title: 互動視窗
+      url: Modal
+    - title: 導覽
+      url: Navs
+    - title: 導覽列
+      url: Navbar
+    - title: 分頁
+      url: Pagination
+    - title: 彈出提示框
+      url: Popovers
+    - title: 進度條
+      url: Progress
+    - title: 滑動監控
+      url: Scrollspy
+    - title: 工具提示
+      url: Tooltips
 
-- title: Utilities
+- title: 小工具
+  url: Utilities
   pages:
-    - title: Borders
-    - title: Clearfix
-    - title: Close icon
-    - title: Colors
+    - title: 邊框
+      url: Borders
+    - title: 清除浮動
+      url: Clearfix
+    - title: 關閉圖示
+      url: Close icon
+    - title: 顏色
+      url: Colors
     - title: Display
+      url: Display
     - title: Flexbox
-    - title: Image replacement
-    - title: Position
-    - title: Responsive helpers
-    - title: Screenreaders
-    - title: Sizing
-    - title: Spacing
-    - title: Typography
-    - title: Vertical align
-    - title: Visibility
+      url: Flexbox
+    - title: 圖片取代
+      url: Image replacement
+    - title: 位置
+      url: Position
+    - title: 響應式 helpers
+      url: Responsive helpers
+    - title: 螢幕閱讀器
+      url: Screenreaders
+    - title: 尺寸
+      url: Sizing
+    - title: 間隔
+      url: Spacing
+    - title: 文字排版
+      url: Typography
+    - title: 垂直對齊
+      url: Vertical align
+    - title: 可視性
+      url: Visibility
 
-- title: Extend
+- title: 擴增
+  url: Extend
   pages:
-    # - title: Approach
-    - title: Icons
+    - title: 圖示
+      url: Icons
 
 # - title: About
 #   pages:
@@ -82,4 +144,5 @@
 #     - title: License
 #     - title: Translations
 
-- title: Migration
+- title: 更版紀錄
+  url: Migration

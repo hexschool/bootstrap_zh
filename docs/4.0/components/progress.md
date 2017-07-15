@@ -1,21 +1,21 @@
 ---
 layout: docs
-title: Progress
-description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+title: 進度條
+description: Bootstrap 的進度條支援堆疊、動態背景、文字標籤，以下是文件與範例。
 group: components
 toc: true
 ---
 
-## How it works
+## 如何運作
 
-Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don't use [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), ensuring you can stack progress bars, animate them, and place text labels over them.
+進度元件使用兩個 HTML 元素構建、一些CSS設置寬度、以及一些屬性。我們不使用 [HTML5 `<progress>` 元素](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress) 確保您可以堆疊進度條、加上動態效果，並在其上放置文本標籤。
 
-- We use the `.progress` as a wrapper to indicate the max value of the progress bar.
-- We use the inner `.progress-bar` to indicate the progress so far.
-- The `.progress-bar` requires an inline style, utility class, or custom CSS to set their width.
-- The `.progress-bar` also requires some `role` and `aria` attributes to make it accessible.
+- 使用 `.progress` 作為包裝器來指示進度條的最大值。
+- 內部的 `.progress-bar` 來表示到目前為止的進度。
+- `.progress-bar` 需要行內樣式，小工具的 Class 或自訂 CSS 來設置它們的寬度。
+- `.progress-bar` 還需要一些 `role` 和 `aria` 屬性來使其具親和性。
 
-Put that all together, and you have the following examples.
+把它們放在一起，你得到以下例子。
 
 {% example html %}
 <div class="progress">
@@ -35,7 +35,8 @@ Put that all together, and you have the following examples.
 </div>
 {% endexample %}
 
-Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/). Depending on your needs, these may help with quickly configuring progress.
+Bootstrap 提供了一些 [寬度設定小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/)。 根據您的需要，這些可能有助於快速配置進度條。
+
 
 {% example html %}
 <div class="progress">
@@ -43,9 +44,10 @@ Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}
 </div>
 {% endexample %}
 
-## Labels
+## 標籤
 
-Add labels to your progress bars by placing text within the `.progress-bar`.
+在 `.progress-bar` 中放置文字內容，將標籤添加到進度條。
+
 
 {% example html %}
 <div class="progress">
@@ -53,9 +55,9 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 </div>
 {% endexample %}
 
-## Height
+## 高度
 
-We only set a `height` value on the `.progress-bar`, so if you change that value the outer `.progress` will automatically resize accordingly.
+我們在 `height` 上設置一個 `height` 值，如果改變這個值，那麼外部的 `.progress` 就會自動調整大小。
 
 {% example html %}
 <div class="progress">
@@ -66,9 +68,10 @@ We only set a `height` value on the `.progress-bar`, so if you change that value
 </div>
 {% endexample %}
 
-## Backgrounds
+## 背景
 
-Use background utility classes to change the appearance of individual progress bars.
+使用背景小工具 Class 更改各個進度條的外觀。
+
 
 {% example html %}
 <div class="progress">
@@ -85,9 +88,9 @@ Use background utility classes to change the appearance of individual progress b
 </div>
 {% endexample %}
 
-## Multiple bars
+## 多進度條
 
-Include multiple progress bars in a progress component if you need.
+如果需要，在進度元件中包含多個進度條。
 
 {% example html %}
 <div class="progress">
@@ -97,9 +100,9 @@ Include multiple progress bars in a progress component if you need.
 </div>
 {% endexample %}
 
-## Striped
+##  帶條紋的
 
-Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
+將 `.progress-bar-striped` 加到任何 `.progress-bar` 中，透過 CSS 漸變對進度條的背景顏色加上條紋。
 
 {% example html %}
 <div class="progress">
@@ -119,11 +122,11 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 </div>
 {% endexample %}
 
-## Animated stripes
+## 動態條紋
 
-The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
+條紋漸變也可以製成動畫。 將 `.progress-bar-animated` 加到 `.progress-bar` 中，透過 CSS3 繪製從右到左的動態效果。
 
-**Animated progress bars don't work in Opera 12**—as they don't support CSS3 animations.
+**動畫進度條不適用於 Opera 12** 因為它們不支持 CSS3 動畫。
 
 <div class="bd-example">
   <div class="progress">

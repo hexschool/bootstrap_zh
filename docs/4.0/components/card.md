@@ -1,22 +1,22 @@
 ---
 layout: docs
-title: Cards
-description: Bootstrap's cards provide a flexible and extensible content container with multiple variants and options.
+title: 卡片
+description: Bootstrap's 卡片提供了一個具有多種變體和具有選擇性的擴展容器。
 group: components
 toc: true
 ---
 
-## About
+## 關於
 
-A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.
+**卡片** 是一個靈活可擴展的內容容器。包含頁眉和頁腳的選項、各種彈性內容、情境顏色和強大的顯示選項。
 
-If you're familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
+如果你熟悉 Bootstrap 3，卡片取代了舊的 panels、wells、thumbnails(以上為原文名稱)，類似的功能已經都整合到卡片內了。
 
-## Example
+## 範例
 
-Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components.
+卡片構建時盡可能少一些標記和樣式，但仍然可以提供許多的控制項和自定義。使用 flexbox 構建，它們可以使對齊更方便並且與其它 Bootstrap 元件良好混合。
 
-Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they'll naturally fill the full width of its parent element. This is easily customized with our various [sizing options](#sizing).
+以下是具有混合內容和固定寬度的基本卡的範例。卡片如果沒有固定的寬度，那麼他們將自然填充其父元素的全部寬度。 這可以透過我們的各種[尺寸選項](#sizing) 輕鬆調整。
 
 {% example html %}
 <div class="card" style="width: 20rem;">
@@ -29,13 +29,13 @@ Below is an example of a basic card with mixed content and a fixed width. Cards 
 </div>
 {% endexample %}
 
-## Content types
+## 內容設計
 
-Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what's supported.
+卡支援各種內容，包括圖像、文本、清單組、連結等。以下是支援的範例。
 
-### Blocks
+### 塊狀
 
-The building block of a card is the `.card-body`. Use it whenever you need a padded section within a card.
+卡的塊狀構建是 `.card-block`。當你需要在一個卡片內含 padding 部分就可以使用它。
 
 {% example html %}
 <div class="card">
@@ -45,11 +45,11 @@ The building block of a card is the `.card-body`. Use it whenever you need a pad
 </div>
 {% endexample %}
 
-### Titles, text, and links
+### 標題 文本 連結
 
-Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, links are added and placed next to each other by adding `.card-link` to  a `<a>` tag.
+卡片標題的使用時在 `<h*>` 標籤中添加 `.card-title`。 同樣，將 `.card-link` 添加到 `<a>` 標籤中實現連結的添加。
 
-Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-title` and the `.card-subtitle` items are placed in a `.card-body` item, the card title and subtitle are aligned nicely.
+透過在 `<h*>` 標籤中添加一個 `.card-subtitle` 來使用次標題。 如果 `.card-title` 和 `.card-subtitle` 放在 `.card-block` 中，那麼卡片標題和次標題就很好地對齊了。
 
 {% example html %}
 <div class="card">
@@ -63,9 +63,10 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 </div>
 {% endexample %}
 
-### Images
+### 圖片
 
-`.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags.
+`.card-img-top` 將圖像放在卡片頂部。 使用 `.card-text` 可以將文字內容可以添加到卡片中。 `.card-text` 中的文本也可以用標準的 HTML 標籤設計樣式。
+
 
 {% example html %}
 <div class="card">
@@ -76,9 +77,9 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 </div>
 {% endexample %}
 
-### List groups
+### 列表群組
 
-Create lists of content in a card with a flush list group.
+建立一個包含內容的清單卡片。
 
 {% example html %}
 <div class="card">
@@ -90,9 +91,9 @@ Create lists of content in a card with a flush list group.
 </div>
 {% endexample %}
 
-### Kitchen sink
+### 控制項
 
-Mix and match multiple content types to create the card you need, or throw everything in there. Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width card.
+混合並搭配多個內容形式，用來創建你所需要的卡片。以下來說是圖像風格、塊狀、文字風格以及清單在一個固定寬度的卡片中。
 
 {% example html %}
 <div class="card" style="width: 20rem;">
@@ -113,9 +114,9 @@ Mix and match multiple content types to create the card you need, or throw every
 </div>
 {% endexample %}
 
-### Header and footer
+### 頁眉和頁腳
 
-Add an optional header and/or footer within a card.
+在卡片內加入選擇性的頁眉或頁腳。
 
 {% example html %}
 <div class="card">
@@ -130,7 +131,7 @@ Add an optional header and/or footer within a card.
 </div>
 {% endexample %}
 
-Card headers can be styled by adding `.card-header` to `<h*>` elements.
+可透過在 `<h*>` 元素中添加 `.card-header ` 加入卡片頭的樣式。
 
 {% example html %}
 <div class="card">
@@ -173,13 +174,13 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 </div>
 {% endexample %}
 
-## Sizing
+## 縮放
 
-Cards assume no specific `width` to start, so they'll be 100% wide unless otherwise stated. You can change this as needed with custom CSS, grid classes, grid Sass mixins, or utilities.
+卡片假設沒有特定的 `width`，那麼除非另有聲明，否則它們的寬度將是100％。您可以根據需求自訂 CSS、網格系統、Sass mixins grid 或小工具來調整。
 
-### Using grid markup
+### 使用網格標記
 
-Using the grid, wrap cards in columns and rows as needed.
+使用網格，根據需求按行與列包裝卡片。
 
 {% example html %}
 <div class="row">
@@ -204,9 +205,9 @@ Using the grid, wrap cards in columns and rows as needed.
 </div>
 {% endexample %}
 
-### Using utilities
+### 使用小工具
 
-Use our handful of [available sizing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) to quickly set a card's width.
+使用我們的幾個 [可調整大小的小工具][available sizing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) 來設置卡片的寬度。
 
 {% example html %}
 <div class="card w-75">
@@ -226,9 +227,9 @@ Use our handful of [available sizing utilities]({{ site.baseurl }}/docs/{{ site.
 </div>
 {% endexample %}
 
-### Using custom CSS
+### 使用客製化 CSS
 
-Use custom CSS in your stylesheets or as inline styles to set a width.
+在樣式表中使用自訂 CSS 或使用行內樣式設置寬度。
 
 {% example html %}
 <div class="card" style="width: 20rem;">
@@ -240,9 +241,9 @@ Use custom CSS in your stylesheets or as inline styles to set a width.
 </div>
 {% endexample %}
 
-## Text alignment
+## 文字對齊
 
-You can quickly change the text alignment of any card—in its entirety or specific parts—with our [text align classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/#text-alignment).
+您可以透過我們的 [文本對齊 Class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/#text-alignment)。更改任何卡片的整體或特定部分的文本對齊方式）。
 
 {% example html %}
 <div class="card" style="width: 20rem;">
@@ -270,9 +271,9 @@ You can quickly change the text alignment of any card—in its entirety or speci
 </div>
 {% endexample %}
 
-## Navigation
+## 導覽
 
-Add some navigation to a card's header (or block) with Bootstrap's [nav components]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/).
+使用 Bootstrap [導覽元件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/) 向卡片的標題（或塊）添加一些導覽。
 
 {% example html %}
 <div class="card text-center">
@@ -320,13 +321,13 @@ Add some navigation to a card's header (or block) with Bootstrap's [nav componen
 </div>
 {% endexample %}
 
-## Images
+## 圖像
 
-Cards include a few options for working with images. Choose from appending "image caps" at either end of a card, overlaying images with card content, or simply embedding the image in a card.
+卡片包含一些選項用來搭配圖像。選擇在卡片的任一端附加 "image caps"，用卡片內容覆蓋圖像 (像是背景)，或者只是將圖像嵌入到卡中。
 
 ### Image caps
 
-Similar to headers and footers, cards can include top and bottom "image caps"—images at the top or bottom of a card.
+像是頁眉或是頁腳，卡片可以使用 Image caps 在卡片頂部或是底部。
 
 {% example html %}
 <div class="card mb-3">
@@ -347,9 +348,9 @@ Similar to headers and footers, cards can include top and bottom "image caps"—
 </div>
 {% endexample %}
 
-### Image overlays
+### 圖像覆蓋
 
-Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need `.card-inverse` (see below).
+將圖像轉換為卡片背景，並疊加卡片的文字。 根據圖像，您可能需要或不需要 `.card-inverse`（見下文）。
 
 {% example html %}
 <div class="card card-inverse">
@@ -362,15 +363,15 @@ Turn an image into a card background and overlay your card's text. Depending on 
 </div>
 {% endexample %}
 
-## Card styles
+## 卡片樣式
 
-Cards include various options for customizing their backgrounds, borders, and color.
+包括用於客制其背景、邊框和顏色的各種選項。
 
-### Inverted text
+### 反轉文本樣式
 
-By default, cards use dark text and assume a light background. You can reverse that by toggling the `color` of text within, as well as that of the card's subcomponents, with `.card-inverse`. Then, specify a dark `background-color` and `border-color` to go with it.
+預設情況下，卡片使用深色文字，並採用淺色背景。 您可以用 `.card-inverse` 切換文本內部的文本顏色以及卡片的子元件的 `color`。然後，指定一個與之相配的黑色 `background-color` 和 `border-color`。
 
-You can also use `.card-inverse` with the [contextual backgrounds variants](#background-variants).
+你可以使用 `.card-inverse` 搭配 [情境變化色](#情境變化色)
 
 {% example html %}
 <div class="card card-inverse" style="background-color: #333; border-color: #333;">
@@ -384,9 +385,9 @@ You can also use `.card-inverse` with the [contextual backgrounds variants](#bac
 </div>
 {% endexample %}
 
-### Background variants
+### 情境變化色
 
-Cards include their own variant classes for quickly changing the `background-color` and `border-color` of a card. **Darker colors require the use of `.card-inverse`.**
+卡片包括自己的變化，用於快速更改卡片的 `background-color` 和 `border-color`。 **較深的顏色需要使用 `.card-inverse`。**
 
 {% example html %}
 <div class="card card-inverse card-primary mb-3 text-center">
@@ -434,9 +435,10 @@ Cards include their own variant classes for quickly changing the `background-col
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-### Outline cards
+### 卡片邊框
 
-In need of a colored card, but not the hefty background colors they bring? Replace the default modifier classes with the `.card-outline-*` ones to style just the `border-color` of a card.
+需要一張彩色卡片，但不是充滿底色的？ 用 `.card-outline-*` 替換預設的 Class，以便只對卡片的 `border-color` 加入樣式。
+
 
 {% example html %}
 <div class="card card-outline-primary mb-3 text-center">
@@ -489,13 +491,14 @@ In need of a colored card, but not the hefty background colors they bring? Repla
 </div>
 {% endexample %}
 
-## Card layout
+## 卡片排版
 
-In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, **these layout options are not yet responsive**.
+Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈置的選項。目前 **這些排版還沒包含響應式**。
 
-### Card groups
+### 卡片群組
 
-Use card groups to render cards as a single, attached element with equal width and height columns. Card groups use `display: flex;` to achieve their uniform sizing.
+將多個卡片和成為一個群組，他們具有相同寬度和高度的列。卡片群組使用 `display: flex;` 來實現他們一致的尺寸。
+
 
 {% example html %}
 <div class="card-group">
@@ -526,7 +529,7 @@ Use card groups to render cards as a single, attached element with equal width a
 </div>
 {% endexample %}
 
-When using card groups with footers, their content will automatically line up.
+當使用帶頁腳的卡片群組時，他們的內容會自動對在同一線上。
 
 {% example html %}
 <div class="card-group">
@@ -563,9 +566,10 @@ When using card groups with footers, their content will automatically line up.
 </div>
 {% endexample %}
 
-### Card decks
+### 卡片疊
 
-Need a set of equal width and height cards that aren't attached to one another? Use card decks.
+需要一套互不相連但寬度和高度相同的卡片？使用卡片疊。
+
 
 {% example html %}
 <div class="card-deck">
@@ -596,7 +600,8 @@ Need a set of equal width and height cards that aren't attached to one another? 
 </div>
 {% endexample %}
 
-Just like with card groups, card footers in decks will automatically line up.
+就像卡片群組一樣，卡片疊上的卡片頁腳會自動對在同一條線上。
+
 
 {% example html %}
 <div class="card-deck">
@@ -633,11 +638,11 @@ Just like with card groups, card footers in decks will automatically line up.
 </div>
 {% endexample %}
 
-### Card columns
+### 卡片欄
 
-Cards can be organized into [Masonry](http://masonry.desandro.com)-like columns with just CSS by wrapping them in `.card-columns`. Cards are built with CSS `column` properties instead of flexbox for easier alignment. Cards are ordered from top to bottom and left to right.
+將它們包在 `.card-columns` 中，可以將卡片像 [Masonry](http://masonry.desandro.com) 那樣的瀑布式排列。卡片是使用 CSS `column` 屬性而不是 flexbox 來構建，更便於對齊。排列是從上到下、從左到右。
 
-**Heads up!** Your mileage with card columns may vary. To prevent cards breaking across columns, we must set them to `display: inline-block` as `column-break-inside: avoid` isn't a bulletproof solution yet.
+**當心** 您的卡列的用處可能會有所不同。為了防止卡突破欄，我們必須將它們設置為 `display: inline-block` 當 `column-break-inside: avoid` 這個解決方案未生效時。
 
 {% example html %}
 <div class="card-columns">
@@ -706,7 +711,8 @@ Cards can be organized into [Masonry](http://masonry.desandro.com)-like columns 
 </div>
 {% endexample %}
 
-Card columns can also be extended and customized with some additional code. Shown below is an extension of the `.card-columns` class using the same CSS we use—CSS columns— to generate a set of responsive tiers for changing the number of columns.
+卡欄也可以通過一些附加程式碼進行擴展和客制。 下面的是 `.card-columns` 的擴展，與我們使用的 CSS 欄使用相同的 CSS，這樣可以調整生成的欄位數。
+
 
 {% highlight scss %}
 .card-columns {

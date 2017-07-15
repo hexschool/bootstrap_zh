@@ -1,35 +1,35 @@
 ---
 layout: docs
-title: Navbar
-description: Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
+title: 導覽列
+description: Bootstrap 導覽列的文件與範例，包含產品標記、導覽以及包含折疊插件。
 group: components
 toc: true
 ---
 
-## How it works
+## 如何運作
 
-Here's what you need to know before getting started with the navbar:
+在開始使用導覽列需要知道的事。
 
-- Navbars require a wrapping `.navbar` with `.navbar-expand{-sm|-md|-lg|-xl}` for responsive collapsing and [color scheme](#color-schemes) classes.
-- Navbars and their contents are fluid by default. Use [optional containers](#containers) to limit their horizontal width.
-- Navbars and their contents are built with flexbox, providing easy alignment options via utility classes.
-- Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.
-- Ensure accessibility by using a `<nav>` element or, if using a more generic element such as a `<div>`, add a `role="navigation"` to every navbar to explicitly identify it as a landmark region for users of assistive technologies.
+- 導覽列需要在外方使用 `.navbar`，並透過 `.navbar-expand{-sm|-md|-lg|-xl}` 給予響應式的折疊以及使用 [color scheme](#color-schemes) class。
+- 導覽列預設的內容寬度是浮動的，使用 [optional containers](#containers) 來限制水平寬度。
+- 導覽列與內容是使用 flexbox 設定的，可透過小工具來對齊。
+- 導覽列預設是響應式的，在修改上也很容易。響應式行為會使用折疊的 JavaScript 插件。
+- 使用 `<nav>` 元素確保親和性，或者如果使用更通用的元素，如 `<div>`，在導覽列中添加一個 `role="navigation"` ，為使用者的輔助技術明確標識為導覽區域。
 
-Read on for an example and list of supported sub-components.
+請閱讀範例和一些支援的子組件清單。
 
-## Supported content
+## 支援內容
 
-Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:
+導覽列支援一些組件，可從下列作選擇。
 
-- `.navbar-brand` for your company, product, or project name.
-- `.navbar-nav` for a full-height and lightweight navigation (including support for dropdowns).
-- `.navbar-toggler` for use with our collapse plugin and other [navigation toggling](#responsive-behaviors) behaviors.
-- `.form-inline` for any form controls and actions.
-- `.navbar-text` for adding vertically centered strings of text.
-- `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
+- `.navbar-brand` 為您的公司，產品或專案名稱。
+- `.navbar-nav` 提供完整的高和輕便的導航（包括對下拉清單的支持）。
+- `.navbar-toggler` 用於我們的折疊插件和其他 [navigation toggling](#responsive-behaviors) 行為。
+- `.form-inline` 用於任何表單控制元件和操作。
+- `.navbar-text` 用於垂直居中的文本字串。
+- `.collapse.navbar-collapse` 用於外層中斷點群組和隱藏導覽列內容。
 
-Here's an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the `lg` (large) breakpoint.
+以下是一個包含子元件的範例，包括在一個自動折疊在 `lg`（大）中斷點處的響應式導覽列。
 
 {% example html %}
 <nav class="navbar navbar-expand-lg navbar-light bg-faded">
@@ -58,9 +58,10 @@ Here's an example of all the sub-components included in a responsive light-theme
 </nav>
 {% endexample %}
 
-### Brand
+### 品牌
 
-The `.navbar-brand` can be applied to most elements, but an anchor works best as some elements might require utility classes or custom styles.
+`.navbar-brand` 可以應用於大多數元素，但對錨最有效，因為某些元素可能需要小工具 Class 或自訂樣式。
+
 
 {% example html %}
 <!-- As a link -->
@@ -74,7 +75,9 @@ The `.navbar-brand` can be applied to most elements, but an anchor works best as
 </nav>
 {% endexample %}
 
-Adding images to the `.navbar-brand` will likely always require custom styles or utilities to properly size. Here are some examples to demonstrate.
+
+圖像增加 `.navbar-brand`，可能的話需要加入一些自訂樣式或小工具 Class 來調整適當的尺寸，以下是一些範例。
+
 
 {% example html %}
 <!-- Just an image -->
@@ -95,11 +98,11 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 </nav>
 {% endexample %}
 
-### Nav
+### 導覽
 
-Navbar navigation links build on our `.nav` options with their own modifier class and require the use of [toggler classes](#toggler) for proper responsive styling. **Navigation in navbars will also grow to occupy as much horizontal space as possible** to keep your navbar contents securely aligned.
+導覽的連結建立在我們的 `.nav` 選項上，並使用專屬的 Class 並且需要使用 [toggler classes](#toggler) 在響應示中作切換。 **在導覽列中的導覽元件，也將佔用更多的水平空間**，以保持您的導覽列內容安全對齊。
 
-Active states—with `.active`—to indicate the current page can be applied directly to `.nav-link`s or their immediate parent `.nav-item`s.
+活動狀態 - 用 `.active` - 表示當前頁面。可以用於 `.nav-link` 或 `.nav-item`。
 
 {% example html %}
 <nav class="navbar navbar-expand-lg navbar-light bg-faded">
@@ -126,7 +129,8 @@ Active states—with `.active`—to indicate the current page can be applied dir
 </nav>
 {% endexample %}
 
-And because we use classes for our navs, you can avoid the list-based approach entirely if you like.
+如果你喜歡，你可以完全避免使用列表的方法。
+
 
 {% example html %}
 <nav class="navbar navbar-expand-lg navbar-light bg-faded">
@@ -145,7 +149,8 @@ And because we use classes for our navs, you can avoid the list-based approach e
 </nav>
 {% endexample %}
 
-You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrapping element for positioning, so be sure to use separate and nested elements for `.nav-item` and `.nav-link` as shown below.
+您還可以在導覽列的導覽元件使用下拉式選單。 下拉式選單需要一個包裝元素進行定位，請確保為 `.nav-item` 和 `.nav-link` 使用單獨及巢狀的元素，如下所示。
+
 
 {% example html %}
 <nav class="navbar navbar-expand-lg navbar-light bg-faded">
@@ -179,9 +184,9 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
 </nav>
 {% endexample %}
 
-### Forms
+### 表單
 
-Place various form controls and components within a navbar with `.form-inline`.
+在導覽列中放置各種表單控制元件，這是透過 `.form-inline` 水平放置的表單。
 
 {% example html %}
 <nav class="navbar navbar-light bg-faded">
@@ -192,7 +197,8 @@ Place various form controls and components within a navbar with `.form-inline`.
 </nav>
 {% endexample %}
 
-Align the contents of your inline forms with utilities as needed.
+根據需要將行內表單的內容透過小工具對齊。
+
 
 {% example html %}
 <nav class="navbar navbar-light bg-faded justify-content-between">
@@ -204,7 +210,7 @@ Align the contents of your inline forms with utilities as needed.
 </nav>
 {% endexample %}
 
-Input groups work, too:
+input 群組也可以：
 
 {% example html %}
 <nav class="navbar navbar-light bg-faded">
@@ -217,7 +223,8 @@ Input groups work, too:
 </nav>
 {% endexample %}
 
-Various buttons are supported as part of these navbar forms, too. This is also a great reminder that vertical alignment utilities can be used to align different sized elements.
+部分導覽列表單需要各種按鈕。可以使用小工具 Class 來作垂直對齊各種元素。
+
 
 {% example html %}
 <nav class="navbar navbar-light bg-faded">
@@ -228,9 +235,9 @@ Various buttons are supported as part of these navbar forms, too. This is also a
 </nav>
 {% endexample %}
 
-### Text
+### 文字
 
-Navbars may contain bits of text with the help of `.navbar-text`. This class adjusts vertical alignment and horizontal spacing for strings of text.
+導覽列可以在 `.navbar-text` 包含一些文本。 該 class 調整著文本字串的垂直對齊和水平間距。
 
 {% example html %}
 <nav class="navbar navbar-light bg-faded">
@@ -240,7 +247,7 @@ Navbars may contain bits of text with the help of `.navbar-text`. This class adj
 </nav>
 {% endexample %}
 
-Mix and match with other components and utilities as needed.
+根據需要與其他元件和小工具混合使用。
 
 {% example html %}
 <nav class="navbar navbar-expand-lg navbar-light bg-faded">
@@ -267,9 +274,9 @@ Mix and match with other components and utilities as needed.
 </nav>
 {% endexample %}
 
-## Color schemes
+## 顏色方案
 
-Theming the navbar has never been easier thanks to the combination of theming classes and `background-color` utilities. Choose from `.navbar-light` for use with light background colors, or `.navbar-inverse` for dark background colors. Then, customize with `.bg-*` utilities.
+由於主題 class 和 `background-color` 小工具 class 的結合，主題化導覽列從未如此簡單。 從 `.navbar-light` 選用淺色背景顏色，或者 `.navbar-inverse` 用於深色背景顏色。 然後，使用 `.bg-*` 小工具自訂。
 
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg navbar-inverse bg-inverse">
@@ -373,7 +380,8 @@ Theming the navbar has never been easier thanks to the combination of theming cl
 
 ## Containers
 
-Although it's not required, you can wrap a navbar in a `.container` to center it on a page or add one within to only center the contents of a [fixed or static top navbar](#placement).
+雖然不是必需的，但您可以將導覽列包裹在 `.container` 中，將其放置在頁面中央或內容的中間 [固定或靜態於頂的導覽列](#定位) 位置。
+
 
 {% example html %}
 <div class="container">
@@ -383,7 +391,7 @@ Although it's not required, you can wrap a navbar in a `.container` to center it
 </div>
 {% endexample %}
 
-When the container is within your navbar, its horizontal padding is removed at breakpoints lower than your specified `.navbar-expand{-sm|-md|-lg|-xl}` class. This ensures we're not doubling up on padding unnecessarily on lower viewports when your navbar is collapsed.
+當 `.container` 在您的導覽列中時，其水平 padding 在低於指定的 `.navbar-expand{-sm|-md|-lg|-xl}` 中斷點處被移除。這確保了當您的導覽列折疊時，不會產生多餘的 padding。
 
 {% example html %}
 <nav class="navbar navbar-expand-lg navbar-light bg-faded">
@@ -393,9 +401,10 @@ When the container is within your navbar, its horizontal padding is removed at b
 </nav>
 {% endexample %}
 
-## Placement
+## 定位
 
-Use our position utilities to place navbars in non-static positions. Choose from fixed to the top, fixed to the bottom, or stickied to the top. **Note that `position: sticky`, used for `.sticky-top`, [isn't fully supported in every browser](http://caniuse.com/#feat=css-sticky).**
+使用定位小工具將導覽列放置在非靜態位置。從固定在頂部、固定在底部或 黏(stickied) 在頂部中選擇。 **請注意，`position: sticky`用於`.sticky-top` [這並非在每個流覽器都完全支持](http://caniuse.com/#feat=css-sticky)**
+
 
 {% example html %}
 <nav class="navbar navbar-light bg-faded">
@@ -421,17 +430,22 @@ Use our position utilities to place navbars in non-static positions. Choose from
 </nav>
 {% endexample %}
 
-## Responsive behaviors
+## 響應式行為
 
 Navbars can utilize `.navbar-toggler`, `.navbar-collapse`, and `.navbar-expand{-sm|-md|-lg|-xl}` classes to change when their content collapses behind a button. In combination with other utilities, you can easily choose when to show or hide particular elements.
 
 For navbars that never collapse, add the `.navbar-expand` class on the navbar. For navbars that always collapse, don't add any `.navbar-expand` class.
 
-### Toggler
+按鈕後面的內容折疊時，導覽列可以使用 `.navbar-toggler`、`.navbar-collapse` 和 `.navbar-expand{-sm|-md|-lg|-xl}` 的 class 來改變。 結合其他小工具，您可以選擇顯示或隱藏特定元素。
 
-Navbar togglers are left-aligned by default, but should they follow a sibling element like a `.navbar-brand`, they'll automatically be aligned to the far right. Reversing your markup will reverse the placement of the toggler. Below are examples of different toggle styles.
+對於不需要折疊的導覽列，在導覽列中加入 `.navbar-expand`。對於總是折疊的導覽列，不要加任何 `.navbar-expand` class。
 
-With no `.navbar-brand` shown in lowest breakpoint:
+### 切換元素
+
+導覽列切換元素預設情況下對齊左邊，但如果它們遵循像導覽列 `.navbar-brand` 這樣的同層級元素，它們將自動和最右邊對齊。 反轉您的品牌標記將對調切換元素的位置。以下是不同切換元素樣式的範例。
+
+在最小中斷點沒有 `.navbar-brand` 的顯示：
+
 
 {% example html %}
 <nav class="navbar navbar-expand-lg navbar-light bg-faded">
@@ -459,7 +473,7 @@ With no `.navbar-brand` shown in lowest breakpoint:
 </nav>
 {% endexample %}
 
-With a brand name shown on the left and toggler on the right:
+左側有一個品牌名稱，右邊是切換元素。
 
 {% example html %}
 <nav class="navbar navbar-expand-lg navbar-light bg-faded">
@@ -488,7 +502,7 @@ With a brand name shown on the left and toggler on the right:
 </nav>
 {% endexample %}
 
-With a toggler on the left and brand name on the right:
+左側有一個切換元素，右邊是品牌名稱：
 
 {% example html %}
 <nav class="navbar navbar-expand-lg navbar-light bg-faded">
@@ -517,9 +531,10 @@ With a toggler on the left and brand name on the right:
 </nav>
 {% endexample %}
 
-### External content
+### 外部內容
 
-Sometimes you want to use the collapse plugin to trigger hidden content elsewhere on the page. Because our plugin works on the `id` and `data-target` matching, that's easily done!
+想使用折疊插件來觸發頁面上某個地方的隱藏內容。 因為插件當 `id` 和 `data-target` 匹配時有效，這將很容易完成！
+
 
 {% example html %}
 <div class="pos-f-t">

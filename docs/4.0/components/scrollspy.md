@@ -1,25 +1,26 @@
 ---
 layout: docs
-title: Scrollspy
-description: Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
+title: 滾動監控
+description: 根據滾動位置自動更新 Bootstrap 導覽或列表元件，以指示當前處於啟用狀態的連結。
 group: components
 toc: true
 ---
 
-## How it works
+## 如何運作
 
-Scrollspy has a few requirements to function properly:
+滾動監控正常運行的幾個要求：
 
-- It must to be used on a Bootstrap [nav component]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/) or [list group]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/list-group/).
-- Scrollspy requires `position: relative;` on the element you're spying on, usually the `<body>`.
-- When spying on elements other than the `<body>`, be sure to have a `height` set and `overflow-y: scroll;` applied.
-- Anchors (`<a>`) are required and must point to an element with that `id`.
+- 必須用在 Bootstrap [導覽元件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/) 或 [列表群組]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/list-group/)。
+- 滾動監控需要在你所監控的元素上使用 `position: relative;`，通常是 `<body>`。
+- 當對 `<body>` 以外的元素進行監控時，請確保具有 `height` 和 `overflow-y: scroll;` 的套用。
+- 錨（`<a>`）是必需的，並且必須指向具有那個 `id` 的元素。
 
-When successfully implemented, your nav or list group will update accordingly, moving the `.active` class from one item to the next based on their associated targets.
+成功後，您的導覽或列表群組將相應更新，根據相關目標將 `.active`從一個項目移動到下一個項目。
 
-## Example in navbar
+## 導覽列範例
 
-Scroll the area below the navbar and watch the active class change. The dropdown items will be highlighted as well.
+滾動導覽列下方的區域，並觀察活動變化。下拉式選單項目也將被突出顯示。
+
 
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar navbar-light bg-faded">
@@ -93,9 +94,10 @@ Scroll the area below the navbar and watch the active class change. The dropdown
 </div>
 {% endhighlight %}
 
-## Example with nested nav
+## 巢狀導覽的範例
 
-Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its parents will also be `.active`. Scroll the area next to the navbar and watch the active class change.
+滾動監控也適用於巢狀的 `.nav`。 如果一個巢狀的 `.nav`是 `.active`，它的父級也會是 `.active`。 滾動導覽列旁邊的區域，並觀察活動變化。
+
 
 <div class="bd-example">
   <div class="row">
@@ -174,9 +176,9 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 </div>
 {% endhighlight %}
 
-## Example with list-group
+## 列表組範例
 
-Scrollspy also works with `.list-group`s. Scroll the area next to the list group and watch the active class change.
+滾動監控對 `.list-group` 有效。滾動列表群組旁邊的區域，並觀察活動變化
 
 <div class="bd-example">
   <div class="row">
@@ -223,11 +225,11 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
 {% endhighlight %}
 
 
-## Usage
+## 用法
 
-### Via data attributes
+### 透過資料屬性
 
-To easily add scrollspy behavior to your topbar navigation, add `data-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-target` attribute with the ID or class of the parent element of any Bootstrap `.nav` component.
+將滾動監控行為加到您的導覽中，將 `data-spy="scroll"` 加到要偵聽的元素（通常這將是 `<body>`）。 然後將 `data-target` 屬性加到任何 Bootstrap `.nav` 元件的父元素的 ID 或 Class。
 
 {% highlight css %}
 body {
@@ -247,31 +249,34 @@ body {
 </body>
 {% endhighlight %}
 
-### Via JavaScript
+### 透過 JavaScript
 
-After adding `position: relative;` in your CSS, call the scrollspy via JavaScript:
+在你的 CSS 中加 `position: relative;` 後，透過 JavaScript 調用滾動監控。
 
 {% highlight js %}
 $('body').scrollspy({ target: '#navbar-example' })
 {% endhighlight %}
 
 {% callout danger %}
-#### Resolvable ID targets required
+#### 需要解析的 ID 目標
 
-Navbar links must have resolvable id targets. For example, a `<a href="#home">home</a>` must correspond to something in the DOM like `<div id="home"></div>`.
+導覽列連結必須具有可解析的目標。 例如 `<a href="#home">home</a>` 必須與 DOM 中的某些內容相符，如 `<div id="home"></div>`。
+
+
 {% endcallout %}
 
 {% callout info %}
-#### Non-`:visible` target elements ignored
+#### 忽略非 `:visible` 目標元素
 
-Target elements that are not [`:visible` according to jQuery](https://api.jquery.com/visible-selector/) will be ignored and their corresponding nav items will never be highlighted.
+目標元素如果是 [非 `:visible` 在 jQuery](https://api.jquery.com/visible-selector/) 將被忽略，其他相對應的導覽元件將永遠不會被 highlight。
 {% endcallout %}
 
-### Methods
+### 方法
 
 #### `.scrollspy('refresh')`
 
-When using scrollspy in conjunction with adding or removing of elements from the DOM, you'll need to call the refresh method like so:
+當從 DOM 加入或刪除元素使用滾動監控時，您需要調用刷新方式，如下所示：
+
 
 {% highlight js %}
 $('[data-spy="scroll"]').each(function () {
@@ -280,17 +285,17 @@ $('[data-spy="scroll"]').each(function () {
 {% endhighlight %}
 
 
-### Options
+### 選項
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-offset=""`.
+可以透過資料屬性或 JavaScript 傳遞選項。對於資料屬性，將選項名稱附加到 `data-`，如 `data-offset=""`。
 
 <table class="table table-bordered table-striped table-responsive">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 100px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">名稱</th>
+      <th style="width: 100px;">類型</th>
+      <th style="width: 50px;">預設值</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -298,24 +303,26 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>offset</td>
       <td>number</td>
       <td>10</td>
-      <td>Pixels to offset from top when calculating position of scroll.</td>
+      <td>
+      當計算位置時，從頂部開始的計算的像素偏移距離。</td>
     </tr>
   </tbody>
 </table>
 
-### Events
+### 事件
 
 <table class="table table-bordered table-striped table-responsive">
   <thead>
     <tr>
-      <th style="width: 150px;">Event Type</th>
-      <th>Description</th>
+      <th style="width: 150px;">事件類型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>activate.bs.scrollspy</td>
-      <td>This event fires whenever a new item becomes activated by the scrollspy.</td>
+      <td>
+      每當一個項目被啟用時，這個事件就會觸發。</td>
     </tr>
   </tbody>
 </table>

@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Pagination
-description: Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.
+title: 分頁
+description: 分頁的文件和範例，分頁功能將顯示於一系列有相關性的頁面中。
 group: components
 toc: true
 ---
 
-## Overview
+## 概述
 
-We use a large block of connected links for our pagination, making links hard to miss and easily scalable—all while providing large hit areas. Pagination is built with list HTML elements so screen readers can announce the number of available links. Use a wrapping `<nav>` element to identify it as a navigation section to screen readers and other assistive technologies.
+我們使用大塊連接的連結進行分頁，使連結不易遺漏、輕鬆擴展、同時提供更大的點擊區域。分頁是使用列表 HTML 元素構建的，因此螢幕閱讀器可以列出可用連結的數量。使用包裝 `<nav>` 元素將其標識導覽給予螢幕閱讀器和其他輔助技術。
 
-In addition, as pages likely have more than one such navigation section, it's advisable to provide a descriptive `aria-label` for the `<nav>` to reflect its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be `aria-label="Search results pages"`.
+另外，由於頁面可能有多個這樣的導覽部分，建議為 `<nav>` 提供一個描述性的 `aria-label` 來反映其功能。 例如，如果分頁元件用於在一組搜索結果之間導航，則標籤可以是 `aria-label="Search results pages"`。
 
 {% example html %}
 <nav aria-label="Page navigation example">
@@ -24,9 +24,10 @@ In addition, as pages likely have more than one such navigation section, it's ad
 </nav>
 {% endexample %}
 
-## Working with icons
+## 使用圖示
 
-Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with `aria` attributes and the `.sr-only` utility.
+想要使用圖示或符號代替某些分頁連結的文字？使用 `aria` 屬性和 `.sr-only` 小工具提供螢幕閱讀器的支援。
+
 
 {% example html %}
 <nav aria-label="Page navigation example">
@@ -50,11 +51,11 @@ Looking to use an icon or symbol in place of text for some pagination links? Be 
 </nav>
 {% endexample %}
 
-## Disabled and active states
+## 禁用和活動狀態
 
-Pagination links are customizable for different circumstances. Use `.disabled` for links that appear un-clickable and `.active` to indicate the current page.
+分頁連結可根據不同情況進行客製。對於顯示為不可點擊的連結，使用 `.disabled` 和使用 `.active` 來指示當前頁面。
 
-While the `.disabled` class uses `pointer-events: none` to _try_ to disable the link functionality of `<a>`s, that CSS property is not yet standardized and doesn't account for keyboard navigation. As such, you should always add `tabindex="-1"` on disabled links and use custom JavaScript to fully disable their functionality.
+`.disabled` 使用 `pointer-events: none` 來禁用 `<a>` 的連結功能，但該 CSS 屬性尚未標準化。此外，即使在支持 `pointer-events: none` 的瀏覽器中，鍵盤導覽仍然不受影響，這意味著鍵盤使用者和輔助性技術的使用者仍然可以啟動這些連結。為了安全起見，在這些連結上添加一個 `tabindex="-1"` 屬性防止他們套用 focus，並使用自訂的 JavaScript 來禁用它們的功能。
 
 {% example html %}
 <nav aria-label="...">
@@ -74,7 +75,7 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
 </nav>
 {% endexample %}
 
-You can optionally swap out active or disabled anchors for `<span>`, or omit the anchor in the case of the prev/next arrows, to remove click functionality and prevent keyboard focus while retaining intended styles.
+您可以用 `<span>` 替換的活動或禁用的連結，或者在上一個/下一個箭頭的情況下省略連結以刪除點擊功能，並在保留預期樣式的同時防止鍵盤 focus。
 
 {% example html %}
 <nav aria-label="...">
@@ -97,9 +98,10 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
 </nav>
 {% endexample %}
 
-## Sizing
+## 尺寸
 
-Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for additional sizes.
+加入 `.pagination-lg` 或 `.pagination-sm` 套用其他尺寸。
+
 
 {% example html %}
 <nav aria-label="...">
@@ -133,9 +135,10 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 </nav>
 {% endexample %}
 
-## Alignment
+## 對齊
 
-Change the alignment of pagination components with [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/).
+使用 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/) 更改分頁元件的對齊方式。
+
 
 {% example html %}
 <nav aria-label="Page navigation example">

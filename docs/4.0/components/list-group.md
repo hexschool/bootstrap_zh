@@ -1,14 +1,15 @@
 ---
 layout: docs
-title: List group
-description: List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
+title: 列表群組
+description: 列表群組具有彈性的顯示一系列內容組件。可以修改擴增已支援更多的內容。
 group: components
 toc: true
 ---
 
-## Basic example
+## 基礎範例
 
-The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+最基本的列表群組是具有列表項目和適當 Class 的無序列表。根據以下的選項或根據您自己需要調整 CSS。
+
 
 {% example html %}
 <ul class="list-group">
@@ -20,9 +21,9 @@ The most basic list group is an unordered list with list items and the proper cl
 </ul>
 {% endexample %}
 
-## Active items
+## 啟用物件
 
-Add `.active` to a `.list-group-item` to indicate the current active selection.
+將 `.active` 加到 `.list-group-item` 指示當前的活動狀態。
 
 {% example html %}
 <ul class="list-group">
@@ -34,9 +35,10 @@ Add `.active` to a `.list-group-item` to indicate the current active selection.
 </ul>
 {% endexample %}
 
-## Disabled items
+## 禁用選項
 
-Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that some elements with `.disabled` will also require custom JavaScript to fully disable their click events (e.g., links).
+將 `.disabled` 加到 `.list-group-item` 使其呈現禁用。請注意，一些帶有 `.disabled` 的元素還需要自訂 JavaScript 才能完全禁用其點擊事件（例如連結）。
+
 
 {% example html %}
 <ul class="list-group">
@@ -48,11 +50,11 @@ Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that 
 </ul>
 {% endexample %}
 
-## Links and buttons
+## 連結和按鈕
 
-Use `<a>`s or `<button>`s to create _actionable_ list group items with hover, disabled, and active states by adding `.list-group-item-action`. We separate these pseudo-classes to ensure list groups made of non-interactive elements (like `<li>`s or `<div>`s) don't provide a click or tap affordance.
+使用 `<a>` 或 `<button>` 加入 `.list-group-item-action` 來創建具有 hover、禁用和活動狀態的動態清單項目。我們分離這些 Class，以確保由非交互元素組成的列表群組（如 `<li>` 或 `<div>` ）不提供可點點擊或觸擊。
 
-Be sure to **not use the standard `.btn` classes here**.
+一定 **不要在這裡使用標準的 `.btn`**。
 
 {% example html %}
 <div class="list-group">
@@ -66,7 +68,8 @@ Be sure to **not use the standard `.btn` classes here**.
 </div>
 {% endexample %}
 
-With `<button>`s, you can also make use of the `disabled` attribute instead of the `.disabled` class. Sadly, `<a>`s don't support the disabled attribute.
+使用 `<button>`，你也可以使用 `disabled` 屬性而不是 `.disabled` class。 不幸的是，`<a>` 不支援 disabled 屬性。
+
 
 {% example html %}
 <div class="list-group">
@@ -80,9 +83,9 @@ With `<button>`s, you can also make use of the `disabled` attribute instead of t
 </div>
 {% endexample %}
 
-## Contextual classes
+## 情境 Class
 
-Use contextual classes to style list items with a stateful background and color.
+使用情境式 Class 來設計具有狀態被境和顏色的列表項目。
 
 {% example html %}
 <ul class="list-group">
@@ -94,7 +97,10 @@ Use contextual classes to style list items with a stateful background and color.
 </ul>
 {% endexample %}
 
-Contextual classes also work with `.list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
+
+情境式 Class 也可以使用 `.list-group-item-action`。請注意，在上述範例中，不存在 hover 樣式。另外還支持 `.active` 狀態
+；應用它來指示在情境列表組合項目上的啟用狀態。
+
 
 {% example html %}
 <div class="list-group">
@@ -109,9 +115,10 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-## With badges
+## 帶標籤
 
-Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/).
+在某些 [小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/) 的幫助下，向任何列表項目添加標籤以顯示未讀計數、活動等。
+
 
 {% example html %}
 <ul class="list-group">
@@ -130,9 +137,10 @@ Add badges to any list group item to show unread counts, activity, and more with
 </ul>
 {% endexample %}
 
-## Custom content
+## 自定義內容
 
-Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/).
+在 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/) 的幫助下，添加幾乎任何的 HTML 或內容、連結等，都能加入到一個項目內。
+
 
 {% example html %}
 <div class="list-group">
@@ -163,9 +171,10 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 </div>
 {% endexample %}
 
-## JavaScript behavior
+## JavaScript 行為
 
-Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our list group to create tabbable panes of local content.
+使用列表群組的 JavaScript 插件 - 單獨或通過編譯的 `bootstrap.js` 檔擴展我們的列表群組，以創建可選擇的內容表單。
+
 
 <div class="bd-example" role="tabpanel">
   <div class="row">
@@ -217,9 +226,10 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 </div>
 {% endhighlight %}
 
-### Using data attributes
+### 使用資料屬性
 
-You can activate a list group navigation without writing any JavaScript by simply specifying `data-toggle="list"` or  on an element. Use these data attributes on `.list-group-item`.
+在 `.list-group-item` 上使用這些資料屬性，可以指定 `data-toggle="list"` 或元素來啟動列表群組的導航，而無需編寫任何 JavaScript。
+
 
 <div role="tabpanel">
 {% highlight html %}
@@ -241,9 +251,9 @@ You can activate a list group navigation without writing any JavaScript by simpl
 {% endhighlight %}
 </div>
 
-### Via JavaScript
+### 透過 JavaScript
 
-Enable tabbable list item via JavaScript (each list item needs to be activated individually):
+通過 JavaScript 啟用可選個列表項目（每個列表項目需要單獨啟動）：
 
 {% highlight js %}
 $('#myList a').click(function (e) {
@@ -252,7 +262,7 @@ $('#myList a').click(function (e) {
 })
 {% endhighlight %}
 
-You can activate individual list item in several ways:
+您可以透過以下幾種方式啟動個別列表項目：
 
 {% highlight js %}
 $('#myList a[href="#profile"]').tab('show') // Select tab by name
@@ -261,9 +271,10 @@ $('#myList a:last').tab('show') // Select last tab
 $('#myList li:eq(2) a').tab('show') // Select third tab (0-indexed)
 {% endhighlight %}
 
-### Fade effect
+### 淡出效果
 
-To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible.
+要使定位字元淡入淡出，請將 `.fade` 添加到每個 `.tab-pane` 中。 第一個列表項目還必須具有 `.show` 使初始內容可見。
+
 
 {% highlight html %}
 <div class="tab-content">
@@ -274,11 +285,12 @@ To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane 
 </div>
 {% endhighlight %}
 
-### Methods
+### 方法
 
 #### $().tab
 
-Activates a list item element and content container. Tab should have either a `data-target` or an `href` targeting a container node in the DOM.
+啟動列表項目元素和內容容器。選項卡應該有一個 `data-target` 或 `href` 定位在 DOM 中的一個容器節點。
+
 
 {% highlight html %}
 <div class="list-group" id="myList" role="tablist">
@@ -304,46 +316,51 @@ Activates a list item element and content container. Tab should have either a `d
 
 #### .tab('show')
 
-Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (for example, before the `shown.bs.tab` event occurs).
+選擇給定的列表項目顯示其關聯的分頁。而先前選擇的任何其他列表項目將被取消，並使其關聯的表單隱藏。 **在 Tab 顯示之前回傳給調用者**（例如，在 `shown.bs.tab` 事件發生之前）。
 
 {% highlight js %}
 $('#someListItem').tab('show')
 {% endhighlight %}
 
-### Events
+### 事件
 
-When showing a new tab, the events fire in the following order:
+當顯示新分頁時，事件按以下順序觸發：
 
-1. `hide.bs.tab` (on the current active tab)
-2. `show.bs.tab` (on the to-be-shown tab)
-3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
-4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
 
-If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
+1. `hide.bs.tab` (在當前啟用的選項上)
+2. `show.bs.tab` (在準備啟用的選項上)
+3. `hidden.bs.tab` (在先前啟用的選項上，與 `hide.bs.tab` 事件相同)
+4. `shown.bs.tab` (在剛剛顯示的選項上，與 `show.bs.tab` 事件相同)
+
+如果沒有選項啟用，則 `hide.bs.tab` 和 `hidden.bs.tab` 事件將不被觸發。
+
 
 <table class="table table-bordered table-striped table-responsive">
   <thead>
     <tr>
-      <th style="width: 150px;">Event type</th>
-      <th>Description</th>
+      <th style="width: 150px;">事件類型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>show.bs.tab</td>
-      <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+      <td>
+      這個事件因選項顯示而觸發，但是在新選項被顯示之前。 使用 <code>event.target</code> 和 <code>event.relatedTarget</code> 將目前與先前啟用(如果可用) 的作為目標。</td>
     </tr>
     <tr>
       <td>shown.bs.tab</td>
-      <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+      <td>
+      這個事件在選項顯示後觸發，但是在新選項被顯示之前。 使用 <code>event.target</code> 和 <code>event.relatedTarget</code> 來分別定位啟用中和剛剛啟用的選項。</td>
     </tr>
     <tr>
       <td>hide.bs.tab</td>
-      <td>This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the current active tab and the new soon-to-be-active tab, respectively.</td>
+      <td>
+      新的選項要顯示（先前的啟用選項將被隱藏）時，此事將觸發。 使用 <code>event.target</code> 和 <code>event.relatedTarget</code> 分別定位先前啟用和即將啟用的選項。</td>
     </tr>
     <tr>
       <td>hidden.bs.tab</td>
-      <td>This event fires after a new tab is shown (and thus the previous active tab is hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the previous active tab and the new active tab, respectively.</td>
+      <td>新的選項顯示後（因此先前啟用的選項將隱藏），此事件將觸發。 使用 <code>event.target</code> 和 <code>event.relatedTarget</code> 分別定位先前啟用選項和新啟用的選項。</td>
     </tr>
   </tbody>
 </table>

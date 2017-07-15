@@ -1,11 +1,14 @@
 ---
 layout: docs
-title: Breadcrumb
-description: Indicate the current page's location within a navigational hierarchy that automatically adds separators via CSS.
+title: 麵包屑
+description: 在導航結構中透過 CSS 自動添加分隔符號指示當前頁面的位置。
 group: components
 ---
 
-Separators are automatically added in CSS through [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) and [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content).
+分隔符號在CSS中是透過以下方法自動添加的，
+ [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) 和
+ [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content)。
+
 
 {% example html %}
 <ol class="breadcrumb">
@@ -22,7 +25,7 @@ Separators are automatically added in CSS through [`::before`](https://developer
 </ol>
 {% endexample %}
 
-Similar to our navigation components, breadcrumbs work fine with or without the usage of list markup.
+類似導覽元件，麵包屑呈現不需要透過 `<li>` 也能運作。
 
 {% example html %}
 <nav class="breadcrumb">

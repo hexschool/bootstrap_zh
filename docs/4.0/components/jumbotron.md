@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Jumbotron
-description: Lightweight, flexible component for showcasing hero unit style content.
+title: 廣告大屏幕
+description: 輕巧，靈活的組件，用於展示醒目風格的內容。
 group: components
 ---
 
-A lightweight, flexible component that can optionally extend the entire viewport to showcase key marketing messages on your site.
+一款輕量極的、靈活的元件，可視情況擴張到整個區域以顯示您網站的關鍵行銷資訊。
 
 {% example html %}
 <div class="jumbotron">
@@ -19,7 +19,7 @@ A lightweight, flexible component that can optionally extend the entire viewport
 </div>
 {% endexample %}
 
-To make the jumbotron full width, and without rounded corners, add the `.jumbotron-fluid` modifier class and add a `.container` or `.container-fluid` within.
+要想讓廣告屏占滿螢幕寬度、不帶有圓角，請加 `.jumbotron-fluid`，並在裡面添加一個 `.container` 或 `.container-fluid`。
 
 {% example html %}
 <div class="jumbotron jumbotron-fluid">

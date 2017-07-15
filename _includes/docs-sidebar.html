@@ -9,30 +9,31 @@
   {% assign page_slug = page.url | split: '/' | last %}
   {% for group in site.data.nav %}
   {% assign link = group.pages | first %}
-  {% assign link_slug = link.title | slugify %}
+  {% assign link_slug = link.url | slugify %}
   {% assign group_slug = group.title | slugify %}
+  {% assign group_url = group.url | slugify %}
   {% assign active = nil %}
 
-  {% if page.group == group_slug %}
+  {% if page.group == group_url %}
     {% assign active = 'active' %}
   {% endif %}
 
   <div class="bd-toc-item {{ active }}">
-      <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ group_slug }}/{{ link_slug }}{% if link_slug %}/{% endif %}">
+      <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ group_url }}/{{ link_slug }}{% if link_slug %}/{% endif %}">
         {{ group.title }}
       </a>
 
       <ul class="nav bd-sidenav">
         {% for doc in group.pages %}
-          {% assign doc_slug = doc.title | slugify %}
+          {% assign doc_slug = doc.url | slugify %}
           {% assign active = nil %}
 
-          {% if page.group == group_slug and page_slug == doc_slug %}
+          {% if page.group == group_url && page_slug == doc_slug %}
             {% assign active = 'active bd-sidenav-active' %}
           {% endif %}
 
           <li class="{{ active }}">
-            <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ group_slug }}/{{ doc_slug }}/">
+            <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ group_url }}/{{ doc_slug }}/">
               {{ doc.title }}
             </a>
 

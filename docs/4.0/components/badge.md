@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Badges
-description: Documentation and examples for badges, our small count and labeling component.
+title: 標籤
+description: 標籤的文檔與範例，包含小號及元件。
 group: components
 toc: true
 ---
 
-## Example
+## 範例
 
-Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units.
+套用相應的字體大小和 `em` 單位使標籤繼承父元素的尺寸。
 
 <div class="bd-example">
 <div class="h1">Example heading <span class="badge badge-default">New</span></div>
@@ -28,9 +28,9 @@ Badges scale to match the size of the immediate parent element by using relative
 <h6>Example heading <span class="badge badge-default">New</span></h6>
 {% endhighlight %}
 
-## Contextual variations
+## 情境變化
 
-Add any of the below mentioned modifier classes to change the appearance of a badge.
+加入以下的 Class 來修改標籤的外觀。
 
 {% example html %}
 <span class="badge badge-default">Default</span>
@@ -44,9 +44,9 @@ Add any of the below mentioned modifier classes to change the appearance of a ba
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-## Pill badges
+## 膠囊標籤
 
-Use the `.badge-pill` modifier class to make badges more rounded (with a larger `border-radius` and additional horizontal `padding`). Useful if you miss the badges from v3.
+使用 `.badge-pill` 可以使標籤更圓潤（具有較大的邊框半徑和附加的水平 padding）。 如果你錯過了 v3 的標籤，這是有用的。
 
 {% example html %}
 <span class="badge badge-pill badge-default">Default</span>
@@ -57,9 +57,9 @@ Use the `.badge-pill` modifier class to make badges more rounded (with a larger 
 <span class="badge badge-pill badge-danger">Danger</span>
 {% endexample %}
 
-## Links
+## 連結
 
-Using the `.badge` classes with the `<a>` element quickly provide _actionable_ badges with hover and focus states.
+使用 `.badge` 與 `<a>` 元素提供可操作的標籤 hover 和 focus 狀態。
 
 {% example html %}
 <a href="#" class="badge badge-default">Default</a>

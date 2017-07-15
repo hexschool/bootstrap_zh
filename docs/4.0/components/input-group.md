@@ -1,14 +1,15 @@
 ---
 layout: docs
-title: Input group
-description: Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs.
+title: Input 群組
+description: 輕鬆擴展表單控制元件加入文字內容、按鈕、按鈕群組或是其他周圍的文字。
 group: components
 toc: true
 ---
 
-## Basic example
+## 基礎範例
 
-Place one add-on or button on either side of an input. You may also place one on both sides of an input. **We do not support multiple form-controls in a single input group** and `<label>`s must come outside the input group.
+在 input 的任一側放置一個附加元件或按鈕。 您也可以在 input 的兩面都放置一個。 **我們不支持單個輸入組中多個表單控制項。**，另外 `<label>` 必須於表單群組之外。
+
 
 {% example html %}
 <div class="input-group">
@@ -40,9 +41,10 @@ Place one add-on or button on either side of an input. You may also place one on
 </div>
 {% endexample %}
 
-## Sizing
+## 尺寸
 
-Add the relative form sizing classes to the `.input-group` itself and contents within will automatically resize—no need for repeating the form control size classes on each element.
+將相對表單大小 Class 加到 `.input-group` 中，其中的內容將自動調整大小 - 不需要在每個元素上重複表單控制元件大小 Class。
+
 
 {% example html %}
 <div class="input-group input-group-lg">
@@ -56,9 +58,10 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 </div>
 {% endexample %}
 
-## Checkboxes and radio addons
+## 核取方塊和選項按鈕附加組件
 
-Place any checkbox or radio option within an input group's addon instead of text.
+放置核取方塊或單選按鈕在 input 群組內取代文字。
+
 
 {% example html %}
 <div class="row">
@@ -81,9 +84,9 @@ Place any checkbox or radio option within an input group's addon instead of text
 </div>
 {% endexample %}
 
-## Multiple addons
+## 多附加組件
 
-Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
+支援多個附加元件，可以與核取方塊和單選按鈕 input 混合使用。
 
 {% example html %}
 <div class="row">
@@ -107,9 +110,10 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 {% endexample %}
 
 
-## Button addons
+## 按鈕附加元件
 
-Buttons in input groups must wrapped in a `.input-group-btn` for proper alignment and sizing. This is required due to default browser styles that cannot be overridden.
+input 群組中的按鈕必須包裝在 `.input-group-btn`中，以便正確對齊和調整大小。這是必需的，因為預設的流覽器樣式不能被覆蓋。
+
 
 {% example html %}
 <div class="row">
@@ -146,7 +150,7 @@ Buttons in input groups must wrapped in a `.input-group-btn` for proper alignmen
 </div>
 {% endexample %}
 
-## Buttons with dropdowns
+## 帶下拉式選單的按鈕
 
 {% example html %}
 <div class="row">
@@ -187,7 +191,7 @@ Buttons in input groups must wrapped in a `.input-group-btn` for proper alignmen
 </div>
 {% endexample %}
 
-## Segmented buttons
+## 分段按鈕
 
 {% example html %}
 <div class="row">
@@ -230,8 +234,8 @@ Buttons in input groups must wrapped in a `.input-group-btn` for proper alignmen
 </div>
 {% endexample %}
 
-## Accessibility
+## 親和性
 
-Screen readers will have trouble with your forms if you don't include a label for every input. For these input groups, ensure that any additional label or functionality is conveyed to assistive technologies.
+如果您沒有為每個 input 添加 label，螢幕閱讀器會無法正確接收你表單訊息。對於這些 input 群組，請確保有任何 label 或功能傳達到輔助技術。
 
-The exact technique to be used (`<label>` elements hidden using the `.sr-only` class, or use of the `aria-label` and `aria-labelledby` attributes, possibly in combination with `aria-describedby`) and what additional information will need to be conveyed will vary depending on the exact type of interface widget you're implementing. The examples in this section provide a few suggested, case-specific approaches.
+要使用的確切技術（使用 `.sr-only` 隱藏 `<label>` 元素，或者使用 `aria-label` 和 `aria-labelledby` 屬性，可與 `aria-describedby` 結合使用 ）以及需要傳達的其他資訊，將根據您正在實現的元件的具體類型而有所不同。 本節中的範例提供了一些建議，基於具體案例的方法。

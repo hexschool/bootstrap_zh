@@ -1,32 +1,32 @@
 ---
 layout: docs
-title: Dropdowns
-description: Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
+title: 下拉選單
+description: 使用 Bootstrap 下拉選單插件透過連結來切換內文框顯示。
 group: components
 toc: true
 ---
 
-## Overview
+## 概述
 
-Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They're made interactive with the included Bootstrap dropdown JavaScript plugin. They're toggled by clicking, not by hovering; this is [an intentional design decision.](http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/)
+下拉選單是可切換的，內文框用於顯示連結列表或其他。這些交互功能於 Bootstrap JavaScript 下拉選單插件提供。透過點擊切換，而不是滑入的方式，這是一個策劃好了的 [設計決定](http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/)。
 
-Dropdowns are built on a third party library, [Popper.js](https://popper.js.org), which provides dynamic positioning and viewport detection. Be sure to include [popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.1/umd/popper.min.js) before Bootstrap's JavaScript.
+下拉選單是透過第三方插件 [Popper.js](https://popper.js.org) 所建構的，這提供了動態位置及 viewport 的監控。使用前請確認 [popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.1/umd/popper.min.js) 在 Bootstrap's JavaScript 之前。
 
-## Accessibility
+## 親和性
 
-The [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) standard defines an actual [`role="menu"` widget](https://www.w3.org/TR/wai-aria/roles#menu), but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.
+[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) 該標準定義了 [`role="menu"` widget](https://www.w3.org/TR/wai-aria/roles#menu)，但這是專門用於應用程式的功能表，它們觸發動作或功能。 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 選單只能包含功能表項目，核取方塊功能表項目，選項按鈕功能表項目，選項按鈕組和子功能表。
 
-Bootstrap's dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Bootstrap does not expect (nor automatically add) any of the `role` and `aria-` attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.
+Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記結構。 例如，可以創建包含其他輸入和表單控制項（如搜索欄位或登錄表單）的下拉選單。 因此，Bootstrap 不希望（也不能自動添加）true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 功能表所需的任何 `role` 和 `aria-` 屬性。 作者必須自己加入這些具體屬性。
 
-However, Bootstrap does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual `.dropdown-item` elements using the cursor keys and close the menu with the <kbd>ESC</kbd> key.
+然而，Bootstrap 為大多數標準鍵盤功能表操作加入內置支援，例如使用游標鍵移動單個 `.dropdown-item` 元素並使用 <kbd>ESC</kbd> 鍵關閉功能表的功能。
 
-## Examples
+## 範例
 
-Wrap the dropdown's toggle (your button or link) and the dropdown menu within `.dropdown`, or another element that declares `position: relative;`. Dropdowns can be triggered from `<a>` or `<button>` elements to better fit your potential needs.
+在 `.dropdown` 中包含下拉選單的切換（你的按鈕或連結）和下拉式功能表，或者另外一個聲明 `position：relative;` 的元素。 可以從 `<a>` 或 `<button>` 元素裡觸發下拉選單，以適應您的潛在需求。
 
-### Single button dropdowns
+### 單一按鈕的下拉選單
 
-Any single `.btn` can be turned into a dropdown toggle with some markup changes. Here's how you can put them to work with either `<button>` elements:
+任何單個 `.btn` 可以變成帶有一些標記的下拉式切換。以下是您如何使用 `<button>` 元素：
 
 {% example html %}
 <div class="dropdown">
@@ -41,7 +41,7 @@ Any single `.btn` can be turned into a dropdown toggle with some markup changes.
 </div>
 {% endexample %}
 
-And with `<a>` elements:
+透過 `<a>` 元素:
 
 {% example html %}
 <div class="dropdown show">
@@ -57,7 +57,7 @@ And with `<a>` elements:
 </div>
 {% endexample %}
 
-The best part is you can do this with any button variant, too:
+最好的部分是您可以使用任何按鈕變化做到這一點：
 
 <div class="bd-example">
   <div class="btn-group">
@@ -138,11 +138,11 @@ The best part is you can do this with any button variant, too:
 </div>
 {% endhighlight %}
 
-### Split button dropdowns
+### 分離按鈕的下拉選單
 
-Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of `.dropdown-toggle-split` for proper spacing around the dropdown caret.
+同樣的，用與單個按鈕下拉選單幾乎相同的標記創建分割按鈕下拉選單，但是添加了 `.dropdown-toggle-split` 以在下拉插入符號做適當間隔。
 
-We use this extra class to reduce the horizontal `padding` on either side of the caret by 25% and remove the `margin-left` that's added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.
+我們使用這個額外的 class 將插入符號的兩邊水平 `padding` 減少了 25%，並移除了為常規按鈕下拉選單添加的 `margin-left`。 這些額外的變化使插入符號集中在分割按鈕中，並在主按鈕旁邊提供適當的空間。
 
 <div class="bd-example">
   <div class="btn-group">
@@ -242,9 +242,9 @@ We use this extra class to reduce the horizontal `padding` on either side of the
 </div>
 {% endhighlight %}
 
-## Sizing
+## 尺寸
 
-Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.
+按鈕下拉選單可以使用所有尺寸的按鈕，包括預設及分割下拉按鈕。
 
 <div class="bd-example">
   <div class="btn-toolbar" role="toolbar">
@@ -347,9 +347,10 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 {% endhighlight %}
 
-## Dropup variation
+## 下拉變化型
 
-Trigger dropdown menus above elements by adding `.dropup` to the parent element.
+透過向父元素添加 `.dropup`，使下拉選單在觸發元素的上方。
+
 
 <div class="bd-example">
   <div class="btn-group dropup">
@@ -408,9 +409,9 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 </div>
 {% endhighlight %}
 
-## Menu items
+## 選單物件
 
-Historically dropdown menu contents *had* to be links, but that's no longer the case with v4. Now you can optionally use `<button>` elements in your dropdowns instead of just `<a>`s.
+在過去下拉選單內容必須是個連接，但 v4 不再是這樣。現在您可以選擇在下拉選單中使用 `<button>` 元素，而不是僅使用 `<a>`。
 
 {% example html %}
 <div class="dropdown">
@@ -425,12 +426,12 @@ Historically dropdown menu contents *had* to be links, but that's no longer the 
 </div>
 {% endexample %}
 
-## Menu alignment
+## 選單對齊
 
-By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add `.dropdown-menu-right` to a `.dropdown-menu` to right align the dropdown menu.
+預設情況下，下拉選單自動位於其父級的上方的 100% 及貼齊左邊緣。將 `.dropdown-menu-right` 加到 `.dropdown-menu` 中可對齊右方邊緣。
 
 {% callout info %}
-**Heads up!** Dropdowns are positioned only with CSS and may need some additional styles for exact alignment.
+**小心！** 下拉列表僅定位在 CSS 中，可能需要一些額外的樣式才能精確對齊。
 {% endcallout %}
 
 {% example html %}
@@ -446,9 +447,9 @@ By default, a dropdown menu is automatically positioned 100% from the top and al
 </div>
 {% endexample %}
 
-## Menu headers
+## 選單標題
 
-Add a header to label sections of actions in any dropdown menu.
+添加標題來標記下拉選單中的操作部分。
 
 {% example html %}
 <div class="dropdown-menu">
@@ -458,9 +459,9 @@ Add a header to label sections of actions in any dropdown menu.
 </div>
 {% endexample %}
 
-## Menu dividers
+## 選單分隔線
 
-Separate groups of related menu items with a divider.
+使用分隔符號來分隔選單中的群組。
 
 {% example html %}
 <div class="dropdown-menu">
@@ -472,9 +473,9 @@ Separate groups of related menu items with a divider.
 </div>
 {% endexample %}
 
-## Disabled menu items
+## 選單中的禁用選項
 
-Add `.disabled` to items in the dropdown to **style them as disabled**.
+將 `.disabled` 加到下拉選單中的項目，將其設為禁用。
 
 {% example html %}
 <div class="dropdown-menu">
@@ -484,17 +485,17 @@ Add `.disabled` to items in the dropdown to **style them as disabled**.
 </div>
 {% endexample %}
 
-## Usage
+## 用法
 
-Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the `.show` class on the parent list item. The `data-toggle="dropdown"` attribute is relied on for closing dropdown menus at an application level, so it's a good idea to always use it.
+通過資料屬性或 JavaScript，下拉選單插件透過切換父級按鈕上 `.show` 來切換隱藏內容（下拉選單）。 `data-toggle="dropdown"` 屬性相依於應用程式級別關閉下拉式功能表，因此始終使用它是一個好方法。
 
 {% callout info %}
-On touch-enabled devices, opening a dropdown adds empty (`$.noop`) `mouseover` handlers to the immediate children of the `<body>` element. This admittedly ugly hack is necessary to work around a [quirk in iOS' event delegation](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html), which would otherwise prevent a tap anywhere outside of the dropdown from triggering the code that closes the dropdown. Once the dropdown is closed, these additional empty `mouseover` handlers are removed.
+在觸控功能的裝置上，打開一個下拉選單會加入 (`$.noop`) `mouseover`）給 `<body>` 元素的直接子元素。這肯定是怪異的手法來 [快速解決 iOS ](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html) 的問題，否則在下拉選單之外的任何地方點擊會無法觸發關閉下拉選單的事件。一旦下拉關閉，這些額外的事件就會被移除。
 {% endcallout %}
 
-### Via data attributes
+### 透過資料屬性
 
-Add `data-toggle="dropdown"` to a link or button to toggle a dropdown.
+加入 `data-toggle="drown"` 至連結或按鈕來啟用切換下拉選單。
 
 {% highlight html %}
 <div class="dropdown">
@@ -507,31 +508,31 @@ Add `data-toggle="dropdown"` to a link or button to toggle a dropdown.
 </div>
 {% endhighlight %}
 
-### Via JavaScript
+### 透過 JavaScript
 
-Call the dropdowns via JavaScript:
+透過 JavaScript 來調用下拉選單：
 
 {% highlight js %}
 $('.dropdown-toggle').dropdown()
 {% endhighlight %}
 
 {% callout info %}
-##### `data-toggle="dropdown"` still required
+##### `data-toggle="dropdown"` 仍然是必要的
 
-Regardless of whether you call your dropdown via JavaScript or instead use the data-api, `data-toggle="dropdown"` is always required to be present on the dropdown's trigger element.
+無論是透過 JavaScript 調用您的下拉清單或使用 data-api， `data-toggle="dropdown"` 都需要在下拉選單的觸發器元素中顯示。
 {% endcallout %}
 
-### Options
+### 選項
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-placement=""`.
+可以透過資料屬性或 JavaScript 插件傳遞選項。對於資料屬性，將選項名稱加到 `data-` 上，如 `data-placement=""`。
 
 <table class="table table-bordered table-striped table-responsive">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 100px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">名稱</th>
+      <th style="width: 100px;">類型</th>
+      <th style="width: 50px;">預設值</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -540,41 +541,44 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>string</td>
       <td>'bottom'</td>
       <td>
-        <p>How to position the popover - top | bottom.</p>
+        <p>改變彈出的定位置在上方或下方。</p>
       </td>
     </tr>
     <tr>
       <td>offset</td>
       <td>number | string</td>
       <td>0</td>
-      <td>Offset of the dropdown relative to its target. For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">offset docs</a>.</td>
+      <td>
+      下拉選單相對於其目標的偏移參考 Popper.js 的<a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">位移文件</a>。</td>
     </tr>
     <tr>
       <td>flip</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Allow Dropdown to flip in case of an overlapping on the reference element. For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.enabled">flip docs</a>.</td>
+      <td>
+      允許下拉選單重疊到其相關的元素上，更多資訊可參考 Popper.js 的<a href="https://popper.js.org/popper-documentation.html#modifiers..flip.enabled">觸發文件</a>.</td>
     </tr>
   </tbody>
 </table>
 
-### Methods
+### 方法
 
-| Method | Description |
+| 方法 | 描述 |
 | --- | --- |
-| `$().dropdown('toggle')` | Toggles the dropdown menu of a given navbar or tabbed navigation. |
-| `$().dropdown('update')` | Updates the position of an element's dropdown. |
+| `$().dropdown('toggle')` | 給予導覽列或分頁導覽使用切換下拉選單功能。 |
+| `$().dropdown('update')` | 更新下拉選單元素的定位。 |
 
-### Events
+### 事件
 
-All dropdown events are fired at the `.dropdown-menu`'s parent element and have a `relatedTarget` property, whose value is the toggling anchor element.
+所有下拉選單事件在 `.dropdown-menu` 的父元素下觸發，並具有一個 `relatedTarget` 屬性，其值是切換的錨元素。
 
-| Event | Description |
+
+| 事件 | 描述 |
 | --- | --- |
-| `show.bs.dropdown` | This event fires immediately when the show instance method is called. |
-| `shown.bs.dropdown` | This event is fired when the dropdown has been made visible to the user (will wait for CSS transitions, to complete). |
-| `hide.bs.dropdown` | This event is fired immediately when the hide instance method has been called. |
-| `hidden.bs.dropdown`| This event is fired when the dropdown has finished being hidden from the user (will wait for CSS transitions, to complete). |
+| `show.bs.dropdown` | 這個事件在調用顯示時被立即觸發。|
+| `shown.bs.dropdown` | 當這個物件可被看見時會觸發此事件(當完成 CSS 轉換後)。 |
+| `hide.bs.dropdown` | 這個事件在調用隱藏時被立即觸發。 |
+| `hidden.bs.dropdown`| 當這個物件隱藏後會觸發此事件(當完成 CSS 轉換後)。  |
 
 {% highlight js %}
 $('#myDropdown').on('show.bs.dropdown', function () {

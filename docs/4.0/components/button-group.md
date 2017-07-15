@@ -1,14 +1,16 @@
 ---
 layout: docs
-title: Button group
-description: Group a series of buttons together on a single line with the button group, and super-power them with JavaScript.
+title: 按鈕群組
+description: 使用按鈕群組將一系列按鈕組合在一起，並且透過 JavaScript 增加它們。
 group: components
 toc: true
 ---
 
 ## Basic example
 
-Wrap a series of buttons with `.btn` in `.btn-group`. Add on optional JavaScript radio and checkbox style behavior with [our buttons plugin]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#button-plugin).
+
+將一系列的 `.btn` 包裝在 `.btn-group` 內。可使用 [按鈕插件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#button-plugin) 增加 JavaScript 選項按鈕和核取方塊的行為。
+
 
 {% example html %}
 <div class="btn-group" role="group" aria-label="Basic example">
@@ -19,15 +21,16 @@ Wrap a series of buttons with `.btn` in `.btn-group`. Add on optional JavaScript
 {% endexample %}
 
 {% callout warning %}
-#### Ensure correct `role` and provide a label
+#### 確保正確的 role 並提供標籤
 
-In order for assistive technologies (such as screen readers) to convey that a series of buttons is grouped, an appropriate `role` attribute needs to be provided. For button groups, this would be `role="group"`, while toolbars should have a `role="toolbar"`.
+為了輔助性技術（如螢幕閱讀器）傳達一系列按鈕的分組訊息，需要提供一個適當的 role 屬性。對於按鈕群組，這將是 `role="group"`，而工具欄應該有一個 `role="toolbar"`。
 
-In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use `aria-label`, but alternatives such as `aria-labelledby` can also be used.
+此外，群組和工具欄應該給予明確的標籤，因為儘管存在正確的 role 屬性，大多數輔助性技術不會明確呈現他們。 在這裡提供的例子中，我們使用 `aria-label`，但也可以使用如 `aria-labelledby` 等。
 {% endcallout %}
-## Button toolbar
 
-Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
+## 按鈕工具列
+
+將整組的按鈕組加入到按鈕工具列中，用於更複雜的組件。依據需要的工具類別將群組、按鈕等間隔開來。
 
 {% example html %}
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -48,7 +51,7 @@ Combine sets of button groups into button toolbars for more complex components. 
 </div>
 {% endexample %}
 
-Feel free to mix input groups with button groups in your toolbars. Similar to the example above, you'll likely need some utilities though to space things properly.
+隨意將 input 組合與工具列中的按鈕群組進行混合。與上面的範例類似，您需要一些小工具來將這些的內容間隔開。
 
 {% example html %}
 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
@@ -78,9 +81,9 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 </div>
 {% endexample %}
 
-## Sizing
+## 縮放
 
-Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
+不是將按鈕大小 Class 應用於群組中的每個按鈕，只需在每個 `.btn-group` 中增加 `.btn-group-*`，就能套用在多個群組中的每一個。
 
 <div class="bd-example">
   <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
@@ -108,9 +111,9 @@ Instead of applying button sizing classes to every button in a group, just add `
 <div class="btn-group btn-group-sm" role="group" aria-label="...">...</div>
 {% endhighlight %}
 
-## Nesting
+## 巢狀
 
-Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
+當您想要下拉式功能表與群組按鈕混合時，只需要將 `.btn-group` 放在另一個 `.btn-group` 中。
 
 {% example html %}
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -129,9 +132,10 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
 </div>
 {% endexample %}
 
-## Vertical variation
+## 垂直變化
 
-Make a set of buttons appear vertically stacked rather than horizontally. **Split button dropdowns are not supported here.**
+將一組按鈕垂直堆疊而不是水平呈現。 **此處不支援分割下拉式功能表。**
+
 
 <div class="bd-example">
   <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
@@ -196,6 +200,6 @@ Make a set of buttons appear vertically stacked rather than horizontally. **Spli
 </div>
 {% endhighlight %}
 
-## Tooltips and popovers
+## 工具提示框和彈出框
 
-Due to the specific implementation (and some other components), a bit of special casing is required for tooltips and popovers within button groups. **You'll have to specify the option `container: 'body'`** to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered).
+具體的執行上（以及其他元件），按鈕群組內的工具提示框和彈出框需要一些特殊的容器。 **你必須指定 `container：'body`**，以避免不必要的副作用（如工具提示框或彈出框觸發時導致元素越來越寬或失去圓角）。

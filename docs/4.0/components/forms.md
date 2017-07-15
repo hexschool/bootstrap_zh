@@ -1,18 +1,18 @@
 ---
 layout: docs
-title: Forms
-description: Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
+title: 表單
+description: 用於創建各種表單控制項樣式、佈局選項和自訂群組件的範例和使用指南。
 group: components
 toc: true
 ---
 
-## Overview
+## 概觀
 
-Bootstrap's form controls expand on [our Rebooted form styles]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#forms) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.
+Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#forms) 上作延伸。使用這些 Class 來選擇自訂顯示，以便在瀏覽器和設備之間進行更一致的呈現。
 
-Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for email address or `number` for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
+確保在輸入框上使用正確的 `type` 屬性（例如，`email` 用於電子郵件地址或 `number` 用於數字信息），以利用較新的輸入控制，如電子郵件驗證、號碼選擇等。
 
-Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more.
+以下是 Bootstrap 表單樣式的一個簡單範例。 繼續閱讀有關的 Class 、表單佈局等的文檔。
 
 {% example html %}
 <form>
@@ -35,11 +35,11 @@ Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for 
 </form>
 {% endexample %}
 
-## Form controls
+## 表單控制
 
-Textual form controls—like `<input>`s, `<select>`s, and `<textarea>`s—are styled with the `.form-control` class. Included are styles for general appearance, focus state, sizing, and more.
+文本形式控制元件（如 `<input>`、`<select>` 和 `<textarea>`）使用 `.form-control` 進行樣式化。包括一般外觀、focus 狀態、尺寸等等的樣式。
 
-Be sure to explore our [custom forms](#custom-forms) to further style `<select>`s.
+請務必瀏覽我們的 [自定義表單](#自定義表單) 以進一步了解 `<select>` 設計風格。
 
 {% example html %}
 <form>
@@ -74,7 +74,7 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
 </form>
 {% endexample %}
 
-For file inputs, swap the `.form-control` for `.form-control-file`.
+對於檔案類型的 input，改用 `.form-control-file` 取代 `.form-control`。
 
 {% example html %}
 <form>
@@ -85,9 +85,9 @@ For file inputs, swap the `.form-control` for `.form-control-file`.
 </form>
 {% endexample %}
 
-### Sizing
+### 尺寸
 
-Set heights using classes like `.form-control-lg` and `.form-control-sm`.
+使用 `.form-control-lg` 和 `.form-control-sm` 設置高度。
 
 {% example html %}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
@@ -107,17 +107,17 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 </select>
 {% endexample %}
 
-### Readonly
+### 僅能閱讀
 
-Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.
+在輸入上添加 `readonly` (布林)屬性，以防止修改 input 的值。僅能閱讀的 input 顯示較淡（就像禁用的輸入），但保留標準游標。
 
 {% example html %}
 <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
 {% endexample %}
 
-### Readonly plain text
+### 僅能閱讀的文本
 
-If you want to have `<input readonly>` elements in your form styled as plain text, use the `.form-control-plaintext` class to remove the default form field styling and preserve the correct margin and padding.
+如果您希望將 `<input readonly>` 元素設置為純文本，請使用 `.form-control-plaintext` 來刪除預設表單純文字樣式，並保留適當的邊距和填充。
 
 {% example html %}
 <form>
@@ -150,15 +150,16 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 </form>
 {% endexample %}
 
-## Checkboxes and radios
+## 核取方塊和選項按鈕 (Checkboxes and radios)
 
-Default checkboxes and radios are improved upon with the help of `.form-check`, **a single class for both input types that improves the layout and behavior of their HTML elements**. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
 
-Disabled checkboxes and radios are supported, but to provide a `not-allowed` cursor on hover of the parent `<label>`, you'll need to add the `.disabled` class to the parent `.form-check`. The disabled class will also lighten the text color to help indicate the input's state.
+透過 `.form-check` 預設核取方塊和選項按鈕得到改進，這兩種輸入類型的 class 都改進了 HTML 元素的佈局和行為。核取方塊用於在列表中選擇一個或多個選項，而選項按鈕是用於從許多選項中選擇一個選項。
 
-### Default (stacked)
+支持 `not-allowed` 核取方塊和選項按鈕，並在父標籤 `<label>` 滑入時顯示不允許的游標，則需要將 `.disabled` 加到父級 `.form-check`。這也將淡化文字顏色以提示 input 的狀態。
 
-By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
+### 預設 (堆疊)
+
+預設情況下，同級任意數量的核取方塊和選項按鈕將被垂直堆疊，並與 `.form-check` 適當間隔。
 
 {% example html %}
 <div class="form-check">
@@ -196,9 +197,9 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 </div>
 {% endexample %}
 
-### Inline
+### 行內
 
-Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
+透過 `.form-check-inline` 加到任何 `.form-check` 來將核取方塊或選項按鈕組合放到同一水平行上。
 
 {% example html %}
 <div class="form-check form-check-inline">
@@ -236,9 +237,9 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 {% endexample %}
 
-### Without labels
+### 沒有標籤
 
-Should you have no text within the `<label>`, the input is positioned as you'd expect. **Currently only works on non-inline checkboxes and radios.** Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`).
+如果您在 `<label>` 中沒有任何文字，則 input 按照您的預期進行定位。 **目前只適用於非行內核取方塊和選項按鈕。** 請記住，仍然需要為輔助技術提供某種形式的標籤（例如使用 `aria-label`）。
 
 {% example html %}
 <div class="form-check">
@@ -253,13 +254,13 @@ Should you have no text within the `<label>`, the input is positioned as you'd e
 </div>
 {% endexample %}
 
-## Layout
+## 佈局
 
-Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+自從 Bootstrap 使用 `display: block` 和 `width: 100%` 在全部的 input 控制上後，表單都是採垂直堆疊排列。可以透過增加 Class 來改變表單的佈局方式。
 
-### Form groups
+### 表單群組
 
-The `.form-group` class is the easiest way to add some structure to forms. Its only purpose is to provide `margin-bottom` around a label and control pairing. As a bonus, since it's a class you can use it with `<fieldset>`s, `<div>`s, or nearly any other element.
+`.form-group` 是向表單加一些結構的方法。其唯一的目的是提供標籤的配對及  `margin-bottom`。由於它是一個 class ，您可以使用它在 `<fieldset>`、`<div>` 或任何其他元素。
 
 {% example html %}
 <form>
@@ -274,9 +275,9 @@ The `.form-group` class is the easiest way to add some structure to forms. Its o
 </form>
 {% endexample %}
 
-### Form grid
+### 表單格線
 
-More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.
+可以使用網格 Class 構建更複雜的表單。請使用這些對於需要多列、多種寬度和其他對齊選項的表單佈局。
 
 {% example html %}
 <form>
@@ -291,9 +292,9 @@ More complex forms can be built using our grid classes. Use these for form layou
 </form>
 {% endexample %}
 
-#### Form row
+#### 表單列
 
-You may also swap `.row` for `.form-row`, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.
+可以使用 `form-row` 取代 `.row`，這個變體可以相對於原本的網格 row 來說，他提供更小的 gutter 及緊湊的佈局。
 
 {% example html %}
 <form>
@@ -308,7 +309,7 @@ You may also swap `.row` for `.form-row`, a variation of our standard grid row t
 </form>
 {% endexample %}
 
-More complex layouts can also be created with the grid system.
+還可以使用網格系統創建更複雜的佈局。
 
 {% example html %}
 <form>
@@ -355,11 +356,11 @@ More complex layouts can also be created with the grid system.
 </form>
 {% endexample %}
 
-#### Horizontal form
+#### 水平表單
 
-Create horizontal forms with the grid by adding the `.row` class to form groups and using the `.col-*-*` classes to specify the width of your labels and controls.
+建立水平表單，需透過增加 `.row` 在表單群組上及使用 `.col-*-*` 來指定標籤及控制項。
 
-Be sure to add `.col-form-label` to your `<label>`s as well so they're vertically centered with their associated form controls. For `<legend>` elements, you can use `.col-form-legend` to make them appear similar to regular `<label>` elements.
+確保增加 `.col-form-label` 在你的 `<label>` 上，以便他們與相關的表單垂直居中。`<legend>` 元素可以使用 `.col-form-legend` 與常規的 `<label>` 元素相似。
 
 {% example html %}
 <div class="container">
@@ -420,9 +421,9 @@ Be sure to add `.col-form-label` to your `<label>`s as well so they're verticall
 </div>
 {% endexample %}
 
-#### Column sizing
+#### 欄位尺寸
 
-As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row` or `.form-row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-7`.
+如前面的示例所示，我們的網格系統允許您將任意數量的 `.col` 放置在 `.row` 或 `.form-row` 中。會在它們之間平均分割可用的寬度。您也可以選擇列的一部分來佔用更多或更少的空間，而剩餘的 `.col` 將分配給其他欄，例如 `.col-7`。
 
 {% example html %}
 <form>
@@ -440,9 +441,9 @@ As shown in the previous examples, our grid system allows you to place any numbe
 </form>
 {% endexample html %}
 
-#### Auto-sizing
+#### 自動尺寸
 
-The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
+下面的示例使用一個 flexbox 小工具垂直居中的內容，並將 `.col` 更改為 `.col-auto`，這樣您的欄只佔用了所需的空間。換句話說，欄的大小本身就是基於內容。
 
 {% example html %}
 <form>
@@ -472,7 +473,7 @@ The example below uses a flexbox utility to vertically center the contents and c
 </form>
 {% endexample %}
 
-You can then remix that once again with size-specific column classes.
+然後，您可以重新混合不同大小欄 Class。
 
 {% example html %}
 <form>
@@ -502,7 +503,7 @@ You can then remix that once again with size-specific column classes.
 </form>
 {% endexample %}
 
-And of course [custom form controls](#custom-forms) are supported.
+也支援 [自定義表單](#自定義表單)。
 
 {% example html %}
 <form>
@@ -530,15 +531,15 @@ And of course [custom form controls](#custom-forms) are supported.
 </form>
 {% endexample %}
 
-### Inline forms
+### 行內表單
 
-Use the `.form-inline` class to display a series of labels, form controls, and buttons on a single horizontal row. Form controls within inline forms vary slightly from their default states.
+使用 `.form-inline` 在單個水平列上顯示一系列標籤、表單控制項、按鈕，行內表單的控制元件與預設的狀態略有不同。
 
-- Controls are `display: flex`, collapsing any HTML white space and allowing you to provide alignment control with [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) and [flexbox]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/) utilities.
-- Controls and input groups receive `width: auto` to override the Bootstrap default `width: 100%`.
-- Controls **only appear inline in viewports that are at least 576px wide** to account for narrow viewports on mobile devices.
+- 控制元件是使用 `display: flex`，折疊任何 HTML 的空白區域及允許對齊的控制小工具如 [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) 和 [flexbox]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/)。
+- 控制元件和 input 群組透過 `width: auto` 複寫預設的 `width: 100%`。
+- 控制元件 **僅會在 viewport 大於 576px 時才會顯示行內** 以便在行動裝置上完全顯示。
 
-You may need to manually address the width and alignment of individual form controls with [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) (as shown below). Lastly, be sure to always include a `<label>` with each form control, even if you need to hide it from non-screenreader visitors with `.sr-only`.
+你需要手動添加寬度或對齊在單獨的控制元件上，透過 [間隔小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)。最後，一定要 `<label>` 包含在每個表單控制元件內，即使您需要使用 `.sr-only` 從非螢幕閱讀器訪問者隱藏它。
 
 {% example html %}
 <form class="form-inline">
@@ -561,7 +562,7 @@ You may need to manually address the width and alignment of individual form cont
 </form>
 {% endexample %}
 
-Custom form controls and selects are also supported.
+自訂表單控制件和 select 都是支援的。
 
 {% example html %}
 <form class="form-inline">
@@ -584,21 +585,22 @@ Custom form controls and selects are also supported.
 {% endexample %}
 
 {% callout warning %}
-#### Alternatives to hidden labels
-Assistive technologies such as screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the `.sr-only` class. There are further alternative methods of providing a label for assistive technologies, such as the `aria-label`, `aria-labelledby` or `title` attribute. If none of these are present, assistive technologies may resort to using the `placeholder` attribute, if present, but note that use of `placeholder` as a replacement for other labelling methods is not advised.
+#### 隱藏標籤的替代品
+
+如果您沒有為每個 input 添加標籤，螢幕閱讀器等輔助技術將對您的表單感到困擾。對於這些行內表單，您可以使用 `.sr-only` 來隱藏標籤。還提供了輔助技術標籤的另外的替代方法，例如 `aria` 標籤、`aria-labelledby` 或 `title` 屬性。如果這些都不存在，輔助技術可能會使用 `placeholder` 的屬性（如果存在），但請注意，不建議使用 `placeholder` 替代其他標籤方法。
 {% endcallout %}
 
-## Help text
+## 幫助文字
 
-Block-level help text in forms can be created using `.form-text` (previously known as `.help-block` in v3). Inline help text can be flexibly implemented using any inline HTML element and utility classes like `.text-muted`.
+可以使用 `.form-text`（v3 中稱為 `.help-block`）創建表單中的塊級幫助文字。可以使用任何行內 HTML 元素和小工具（如 `.text-muted`）靈活地實現行內幫助文字。
 
 {% callout warning %}
-##### Associating help text with form controls
+##### 幫助文字需要與控制元件相關聯
 
-Help text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this help text when the user focuses or enters the control.
+幫助文字應該使用 `aria-describedby` 與表單控制元件相關連，這將確保輔助技術（例如螢幕閱讀器）在用戶 focus 或輸入 input 時將了解此幫助文字。
 {% endcallout %}
 
-Help text below inputs can be styled with `.form-text`. This class includes `display: block` and adds some top margin for easy spacing from the inputs above.
+input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並添加一些 `margin-top`，以便與上面的 input 之間的間隔。
 
 {% example html %}
 <label for="inputPassword5">Password</label>
@@ -608,7 +610,7 @@ Help text below inputs can be styled with `.form-text`. This class includes `dis
 </small>
 {% endexample %}
 
-Inline text can use any typical inline HTML element (be it a `<small>`, `<span>`, or something else) with nothing more than a utility class.
+行內文本可以使用任何典型的行內 HTML 元素（無論是 `<small>`、`<span>` 還是其他）。
 
 {% example html %}
 <form class="form-inline">
@@ -622,15 +624,15 @@ Inline text can use any typical inline HTML element (be it a `<small>`, `<span>`
 </form>
 {% endexample %}
 
-## Disabled forms
+## 禁用表單
 
-Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
+加上 `disabled` 的布林屬性在 input 上，讓防止使用者操作並使它看起來更淡。
 
 {% highlight html %}
 <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
 {% endhighlight %}
 
-Add the `disabled` attribute to a `<fieldset>` to disable all the controls within.
+將 `disabled` 屬性添加到 `<fieldset>` 以禁用其中的所有控制元件。
 
 {% example html %}
 <form>
@@ -656,44 +658,44 @@ Add the `disabled` attribute to a `<fieldset>` to disable all the controls withi
 {% endexample %}
 
 {% callout warning %}
-#### Caveat with anchors
+#### 附加說明和錨
 
-By default, browsers will treat all native form controls (`<input>`, `<select>` and `<button>` elements) inside a `<fieldset disabled>` as disabled, preventing both keyboard and mouse interactions on them. However, if your form also includes `<a ... class="btn btn-*">` elements, these will only be given a style of `pointer-events: none`. As noted in the section about [disabled state for buttons]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#disabled-state) (and specifically in the sub-section for anchor elements), this CSS property is not yet standardized and isn't fully supported in Opera 18 and below, or in Internet Explorer 11, and won't prevent keyboard users from being able to focus or activate these links. So to be safe, use custom JavaScript to disable such links.
+預設情況下，瀏覽器會將 `<fieldset disabled>` 中的所有本地表單控制項（`<input>`、`<select>` 和 `<button>` 元素）視為禁用，防止鍵盤和滑鼠和他們之間的交互。但是，如果您的表單還包含 `<a ... class="btn btn-*">` 元素，則只會給出一種 `pointer-events: none` 的樣式。關於 [按鈕禁用狀態]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#disabled-state)（特別是在錨元素的子部分），此 CSS 屬性尚未標準化，Opera 18 及更低版本或 Internet Explorer 11 中不完全支援，並且不會阻止鍵盤使用者 focus 或啟動這些連結。 為了安全起見，請使用自訂 JavaScript 來禁用此類連結。
 {% endcallout %}
 
 {% callout danger %}
-#### Cross-browser compatibility
+#### 跨瀏覽器相容性
 
-While Bootstrap will apply these styles in all browsers, Internet Explorer 11 and below don't fully support the `disabled` attribute on a `<fieldset>`. Use custom JavaScript to disable the fieldset in these browsers.
+雖然 Bootstrap 將在所有瀏覽器中應用這些樣式，但 Internet Explorer 11 及更低版本不完全支援 `<fieldset>` 上的 `disabled` 屬性。 使用自訂 JavaScript 來禁用這些瀏覽器中的標籤。
 {% endcallout %}
 
-## Validation
+## 驗證
 
-Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](http://caniuse.com/#feat=form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript.
+透過 HTML5 表單驗證可在我們支持的 [瀏覽器中提供](http://caniuse.com/#feat=form-validation) 為您的用戶提供可操作的反饋。從瀏覽器中選擇預設驗證反饋，或者使用我們內置的 Class 和啟動 JavaScript 實現自定義訊息。
 
 {% callout warning %}
-We **highly recommend** custom validation styles as native browser defaults are not announced to screen readers.
+我們 **強烈推薦自定義** 驗證樣式，因為瀏覽器預設值沒辦法提供給與螢幕閱讀器使用者。
 {% endcallout %}
 
-### How it works
+### 如何運作
 
-Here's how form validation works with Bootstrap:
+這裡描述 Bootstrap 中的驗證是如何運作的。
 
-- HTML form validation is applied via CSS's two pseudo-classes, `:invalid` and `:valid`. It applies to `<input>`, `<select>`, and `<textarea>` elements.
-- Bootstrap scopes the `:invalid` and `:valid` styles to parent `.was-validated` class, usually applied to the `<form>`. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).
-- As a fallback, `.is-invalid` and `.is-valid` classes may be used instead of the pseudo-classes for [server side validation](#server-side). They do not require a `.was-validated` parent class.
-- Due to constaints in how CSS works, we cannot (at present) apply styles to a `<label>` that comes before a form control in the DOM without the help of custom JavaScript.
-- All modern browsers support the [constraint validation API](https://www.w3.org/TR/html5/forms.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
-- Feedback messages may utilize the [browser defaults](#browser-default) (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
-- You may provide custom validity messages with `setCustomValidity` in JavaScript.
+- HTML 表單驗證透過 CSS 的兩個偽類 `:invalid` 和 `:valid` 。它適用於 `<input>`、`<select>` 和 `<textarea>` 元素。
+- Bootstrap `:invalid` 和 `:valid` 樣式在 `.was-validated`，通常會運用在 `<form>`。否則，必填的內容在載入的過程中會顯示無效。這個方法你可以選擇在任何時候啟用他 (通常在嘗試提交表單後)。
+- 作為回饋，可以使用 `.is-invalid` 和 `.is-valid` 替代 [伺服器端的驗證](#server-side) 偽類，他們不需要 `.was-validated` 在父層。
+- 由於 CSS 的工作原理，我們無法（現在）將樣式應用於 DOM 中的表單控制元件之前的 `<label>`，而不透過自定義 JavaScript 的幫助。
+- 所有現代瀏覽器都支持 [約束驗證 API](https://www.w3.org/TR/html5/forms.html#the-constraint-validation-api) ，一系列用於驗證表單控制元件的 JavaScript 方法。
+- 回饋訊息會使用 [瀏覽器預設值](#browser-default)（每個瀏覽器不同，unstylable via CSS）或其他 HTML 和 CSS 的自定義反饋樣式。
+- 您可以在 JavaScript 中提供帶有 `setCustomValidity` 的自定義驗證訊息。
 
-With that in mind, consider the following demos for our custom form validation styles, optional server side classes, and browser defaults.
+請參考以下的自定義表單驗證樣式、服務器端驗證 Class 和瀏覽器預設值。
 
-### Custom styles
+### 自訂樣式
 
-For custom Bootstrap form validation messages, you'll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you.
+對於自定義 Bootstrap 表單驗證訊息，您需要將 `novalidate` 屬性添加到您的 `<form>`。這將禁用瀏覽器預設的回饋提示，但仍提供 JavaScript 中表單驗證 API 有效。嘗試提交以下表格；我們的 JavaScript 將攔截提交按鈕並向您提供回饋。
 
-When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
+嘗試提交時，您會看到 `:invalid` 和 `:valid` 的樣式應用於您的表單控制元件。
 
 {% example html %}
 <form class="container" id="needs-validation" novalidate>
@@ -751,11 +753,11 @@ When attempting to submit, you'll see the `:invalid` and `:valid` styles applied
 </script>
 {% endexample %}
 
-### Browser defaults
+### 瀏覽器預設
 
-Not interested in custom validation feedback messages or writing JavaScript to change form behaviors? All good, you can use the browser defaults. Try submitting the form below. Depending on your browser and OS, you'll see a slightly different style of feedback.
+對自定義驗證回饋或編寫 JavaScript 以更改表單行為沒興趣？您也可以使用瀏覽器的預設值。嘗試提交以下表格。根據您的瀏覽器和操作系統，您會看到一種略有不同的回饋樣式。
 
-While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.
+雖然這些反饋風格不能用 CSS 樣式，但您仍然可以透過 JavaScript自定義回饋文字內容。
 
 {% example html %}
 <form>
@@ -797,9 +799,9 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 </form>
 {% endexample %}
 
-### Server side
+### 伺服器端
 
-We recommend using client side validation, but in case you require server side, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
+我們建議使用客戶端驗證，但是如果您需要伺服器端，則可以使用 `.is-invalid`”和 `.is-valid` 表示無效且有效的表單。 請注意，這些 Class 也支持 `.invalid-feedback` 。
 
 {% example html %}
 <form>
@@ -841,9 +843,9 @@ We recommend using client side validation, but in case you require server side, 
 </form>
 {% endexample %}
 
-### Supported elements
+### 支援元素
 
-Our example forms show native textual `<input>`s above, but form validation styles are available for our custom form controls, too.
+範例表單顯示了上面的原生文本 `<input>`，但也可以為自定義表單控制元件提供表單驗證樣式。
 
 {% example html %}
 <form class="was-validated">
@@ -880,25 +882,27 @@ Our example forms show native textual `<input>`s above, but form validation styl
 </form>
 {% endexample %}
 
-## Custom forms
+## 自定義表單
 
-For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They're built on top of semantic and accessible markup, so they're solid replacements for any default form control.
+為了自訂和跨瀏覽器更為一致性，請使用自訂的表單元素來替換瀏覽器預設值。它們建立在語義和具親和力標記之上，因此它們是可以替代任何預設表單控制元件的。
 
-### Checkboxes and radios
 
-Each checkbox and radio is wrapped in a `<label>` for three reasons:
+### 核取方塊和單選
 
-- It provides a larger hit areas for checking the control.
-- It provides a helpful and semantic wrapper to help us replace the default `<input>`s.
-- It triggers the state of the `<input>` automatically, meaning no JavaScript is required.
 
-We hide the default `<input>` with `opacity` and use the `.custom-control-indicator` to build a new custom form indicator in its place. Unfortunately we can't build a custom one from just the `<input>` because CSS's `content` doesn't work on that element.
+每個核取方塊和選項按鈕被包裝在一個 `<label>` 中有三個原因
 
-We use the sibling selector (`~`) for all our `<input>` states—like `:checked`—to properly style our custom form indicator. When combined with the `.custom-control-description` class, we can also style the text for each item based on the `<input>`'s state.
+- 它提供了更大的點擊區域。
+- 它提供了一個有用的和語義的包裝器，以幫助我們替換預設的 `<input>` 。
+- 它會自動觸發 `<input>` 的狀態，這意味著不需要 JavaScript 插件。
 
-In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](https://useiconic.com/open). This provides us the best control for styling and positioning across browsers and devices.
+我們用 `opacity` 隱藏預設 `<input>` 並使用 `.custom-control-indicator` 在它的位置上構建一個新的自訂表單指示器。不幸的是，由於 CSS 的 `content` 對該元素不起作用，所以我們不能僅僅使用 `<input>` 構建一個客製的。
 
-#### Checkboxes
+我們為所有我們的 `<input>` 使用選擇器 (`~`) 確認 `：checked` 狀態？正確地設置我們的自訂表單指示器。 當與 `.custom-control-description` 結合使用時，我們也可以根據 `<input>` 的狀態對每個物件進行樣式調整。
+
+在檢查狀態下，我們使用 [Open Iconic](https://useiconic.com/open) 中的  **base64 embedded SVG icons**。 這為我們提供了跨瀏覽器和裝置樣式的定位做最佳控制。
+
+#### 核取方塊
 
 {% example html %}
 <label class="custom-control custom-checkbox">
@@ -908,7 +912,7 @@ In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](h
 </label>
 {% endexample %}
 
-Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+透過 JavaScript（當沒有可用的 HTML 屬性來指定它）手動設置時，自訂核取方塊還可以使用 `：indeterminate` 偽類。
 
 <div class="bd-example bd-example-indeterminate">
   <label class="custom-control custom-checkbox">
@@ -918,13 +922,13 @@ Custom checkboxes can also utilize the `:indeterminate` pseudo class when manual
   </label>
 </div>
 
-If you're using jQuery, something like this should suffice:
+如果你正使用 jQuery，可以用下面這些：
 
 {% highlight js %}
 $('.your-checkbox').prop('indeterminate', true)
 {% endhighlight %}
 
-#### Radios
+#### 單選
 
 {% example html %}
 <label class="custom-control custom-radio">
@@ -939,9 +943,9 @@ $('.your-checkbox').prop('indeterminate', true)
 </label>
 {% endexample %}
 
-#### Disabled
+#### 禁用
 
-Custom checkboxes and radios can also be disabled. Add the `disabled` boolean attribute to the `<input>` and the custom indicator and label description will be automatically styled.
+自訂核取方塊和選項按鈕也可以禁用。 將 `disabled` 布林屬性加到 `<input>`，自訂指示符和標籤樣式都會自動加入。
 
 {% example html %}
 <label class="custom-control custom-checkbox">
@@ -957,9 +961,9 @@ Custom checkboxes and radios can also be disabled. Add the `disabled` boolean at
 </label>
 {% endexample %}
 
-#### Validation states
+#### 驗證狀態
 
-Add other states to your custom forms with our validation classes.
+使用我們的驗證 Class 將其他狀態加到您的自訂表單中。
 
 {% example html %}
 <div class="form-group has-success">
@@ -985,9 +989,10 @@ Add other states to your custom forms with our validation classes.
 </div>
 {% endexample %}
 
-#### Stacked
+#### 堆疊
 
-Custom checkboxes and radios are inline to start. Add a parent with class `.custom-controls-stacked` to ensure each form control is on separate lines.
+自訂核取方塊和單選按鈕是平行的開始。加入一個 `.custom-controls-stacked` 的父級，以確保每個表單控制元件在不同的列上。
+
 
 {% example html %}
 <div class="custom-controls-stacked">
@@ -1004,9 +1009,10 @@ Custom checkboxes and radios are inline to start. Add a parent with class `.cust
 </div>
 {% endexample %}
 
-### Select menu
+### 選擇功能表
 
-Custom `<select>` menus need only a custom class, `.custom-select` to trigger the custom styles.
+自訂 `<select>` 只需要一個 `.custom-select` 來觸發自訂樣式。
+
 
 {% example html %}
 <select class="custom-select">
@@ -1017,9 +1023,9 @@ Custom `<select>` menus need only a custom class, `.custom-select` to trigger th
 </select>
 {% endexample %}
 
-### File browser
+### 檔案瀏覽
 
-The file input is the most gnarly of the bunch and require additional JavaScript if you'd like to hook them up with functional *Choose file...* and selected file name text.
+檔輸入是最粗糙的，需要額外的 JavaScript，如果你想將 *Choose file...* 和所選的檔案名稱連接。
 
 {% example html %}
 <label class="custom-file">
@@ -1028,19 +1034,20 @@ The file input is the most gnarly of the bunch and require additional JavaScript
 </label>
 {% endexample %}
 
-Here's how it works:
+這是它的工作原理：
 
-- We wrap the `<input>` in a `<label>` so the custom control properly triggers the file browser.
-- We hide the default file `<input>` via `opacity`.
-- We use `:after` to generate a custom background and directive (*Choose file...*).
-- We use `:before` to generate and position the *Browse* button.
-- We declare a `height` on the `<input>` for proper spacing for surrounding content.
+- 我們將 `<input>`包裝在 `<label>` 中，所以自訂控制元件正確觸發檔案瀏覽。
+- 我們透過 `opacity` 隱藏預設 `<input>`。
+- 我們使用 `:after` 生成一個自訂的背景和文字（**Choose file...**）。
+- 我們使用 `:before` 來生成和定位 *瀏覽* 按鈕。
+- 我們在 `<input>` 上使用 `height`，用於周圍內容的適當間距。
 
-In other words, it's an entirely custom element, all generated via CSS.
+換句話說，它是一個完全自定義的元素，都是透過 CSS 生成的。
 
-#### Translating or customizing the strings
+#### 翻譯或自定義字符串
 
-The [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) is used to allow for easy translation of the "Browse" and "Choose file..." text into other languages. Simply override or add entries to the `$custom-file-text` SCSS variable with the relevant [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and localized strings. The English strings can be customized the same way. For example, here's how one might add a Spanish translation (Spanish's language code is `es`):
+ [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) 用於輕鬆將 "Browse" 和 "Choose file..." 文本翻譯到其他語言。 只需用相關的 [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) 和當地語系化的字串覆蓋或加到 `$custom-file-text` SCSS 變數。英文字串可以以相同的方式進行定制。範例，如何添加西班牙語翻譯（西班牙語的語言代碼是 `es`）：
+
 
 {% highlight scss %}
 $custom-file-text: (
@@ -1055,4 +1062,4 @@ $custom-file-text: (
 );
 {% endhighlight %}
 
-You'll need to set the language of your document (or subtree thereof) correctly in order for the correct text to be shown. This can be done using [the `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) or the [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12), among other methods.
+您需要正確設置文件的語言才能顯示正確的文本。 這可以使用[`lang` 屬性](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) 或 [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12) 以及其他方法。
