@@ -3,34 +3,18 @@ layout: docs
 title: 按鈕
 description: 使用 Bootstrap 自訂按鈕樣式到表單、對話方塊等操作，並支援多種大小、狀態等。
 group: components
-redirect_from: "/components/"
+redirect_from: "/docs/4.0/components/"
 toc: true
 ---
 
 ## 範例
 
-Bootstrap 包括六個預先定義的按鈕樣式，每個都有自己的語義目的。
+Bootstrap 包括多個預先定義的按鈕樣式，每個都有自己的語義目的及更多的控制。
 
 {% example html %}
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-primary">Primary</button>
+{% for color in site.data.theme-colors %}
+<button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 
-<!-- Secondary, outline button -->
-<button type="button" class="btn btn-secondary">Secondary</button>
-
-<!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-success">Success</button>
-
-<!-- Contextual button for informational alert messages -->
-<button type="button" class="btn btn-info">Info</button>
-
-<!-- Indicates caution should be taken with this action -->
-<button type="button" class="btn btn-warning">Warning</button>
-
-<!-- Indicates a dangerous or potentially negative action -->
-<button type="button" class="btn btn-danger">Danger</button>
-
-<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
 <button type="button" class="btn btn-link">Link</button>
 {% endexample %}
 
@@ -56,14 +40,9 @@ Bootstrap 包括六個預先定義的按鈕樣式，每個都有自己的語義�
 需要一個按鈕，但不是用填滿的背景顏色？用 `.btn-outline-*` 替換預設修飾用的 Class，以移除任何按鈕上的所有背景色及背景圖。
 
 {% example html %}
-<button type="button" class="btn btn-outline-primary">Primary</button>
-<button type="button" class="btn btn-outline-secondary">Secondary</button>
-<button type="button" class="btn btn-outline-success">Success</button>
-<button type="button" class="btn btn-outline-info">Info</button>
-<button type="button" class="btn btn-outline-warning">Warning</button>
-<button type="button" class="btn btn-outline-danger">Danger</button>
+{% for color in site.data.theme-colors %}
+<button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 {% endexample %}
-
 
 ## 大小
 

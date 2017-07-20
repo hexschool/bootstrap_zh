@@ -413,7 +413,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
       </div>
     </div>
     <div class="form-group row">
-      <div class="offset-sm-2 col-sm-10">
+      <div class="col-sm-10">
         <button type="submit" class="btn btn-primary">Sign in</button>
       </div>
     </div>
@@ -535,7 +535,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 使用 `.form-inline` 在單個水平列上顯示一系列標籤、表單控制項、按鈕，行內表單的控制元件與預設的狀態略有不同。
 
-- 控制元件是使用 `display: flex`，折疊任何 HTML 的空白區域及允許對齊的控制小工具如 [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) 和 [flexbox]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/)。
+- 控制元件是使用 `display: flex`，折疊任何 HTML 的空白區域及允許對齊的控制小工具如 [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) 和 [flexbox]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/)。
 - 控制元件和 input 群組透過 `width: auto` 複寫預設的 `width: 100%`。
 - 控制元件 **僅會在 viewport 大於 576px 時才會顯示行內** 以便在行動裝置上完全顯示。
 

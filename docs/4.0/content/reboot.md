@@ -3,7 +3,7 @@ layout: docs
 title: 重置
 description: 針對單一檔案內 CSS 的特定元素重置樣式，重置以便 Bootstrap 準確且一致的建立樣式。
 group: content
-redirect_from: "/content/"
+redirect_from: "/docs/4.0/content/"
 toc: true
 ---
 
@@ -342,7 +342,7 @@ HTML 添加了 [一個名為 `[hidden]` 的新全域屬性](https://developer.mo
 `[hidden]` 不相容 jQuery's `$(...).hide()` 和 `$(...).show()` 的方式。這可能會在 jQuery 3 中修改，但我們不能坐視不理。因此，當前並不是特別將 `[hidden]` 優先於 `display` 的其他方法。
 {% endcallout %}
 
-若僅僅要切換某個元素的可視度，切換可視度的含義是不修改 `display`，且元素仍可影響文件排版，可使用[the `.invisible` class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/invisible-content/) 來取代。
+若僅僅要切換某個元素的可視度，切換可視度的含義是不修改 `display`，且元素仍可影響文件排版，可使用[the `.invisible` class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/visibility/) 來取代。
 
 ## 為優化觸擊的點擊延遲
 

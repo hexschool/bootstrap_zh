@@ -32,7 +32,7 @@ toc: true
 以下是一個包含子元件的範例，包括在一個自動折疊在 `lg`（大）中斷點處的響應式導覽列。
 
 {% example html %}
-<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -65,12 +65,12 @@ toc: true
 
 {% example html %}
 <!-- As a link -->
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
 </nav>
 
 <!-- As a heading -->
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-light bg-light">
   <span class="h1" class="navbar-brand mb-0">Navbar</span>
 </nav>
 {% endexample %}
@@ -81,7 +81,7 @@ toc: true
 
 {% example html %}
 <!-- Just an image -->
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
     <img src="{{ site.baseurl }}/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
   </a>
@@ -90,7 +90,7 @@ toc: true
 
 {% example html %}
 <!-- Image and text -->
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
     <img src="{{ site.baseurl }}/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
     Bootstrap
@@ -105,7 +105,7 @@ toc: true
 活動狀態 - 用 `.active` - 表示當前頁面。可以用於 `.nav-link` 或 `.nav-item`。
 
 {% example html %}
-<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -133,7 +133,7 @@ toc: true
 
 
 {% example html %}
-<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -153,7 +153,7 @@ toc: true
 
 
 {% example html %}
-<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -189,7 +189,7 @@ toc: true
 在導覽列中放置各種表單控制元件，這是透過 `.form-inline` 水平放置的表單。
 
 {% example html %}
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-light bg-light">
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -201,7 +201,7 @@ toc: true
 
 
 {% example html %}
-<nav class="navbar navbar-light bg-faded justify-content-between">
+<nav class="navbar navbar-light bg-light justify-content-between">
   <a class="navbar-brand">Navbar</a>
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -213,7 +213,7 @@ toc: true
 input 群組也可以：
 
 {% example html %}
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-light bg-light">
   <form class="form-inline">
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon1">@</span>
@@ -227,7 +227,7 @@ input 群組也可以：
 
 
 {% example html %}
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-light bg-light">
   <form class="form-inline">
     <button class="btn btn-outline-success" type="button">Main button</button>
     <button class="btn btn-sm align-middle btn-outline-secondary" type="button">Smaller button</button>
@@ -240,7 +240,7 @@ input 群組也可以：
 導覽列可以在 `.navbar-text` 包含一些文本。 該 class 調整著文本字串的垂直對齊和水平間距。
 
 {% example html %}
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-light bg-light">
   <span class="navbar-text">
     Navbar text with an inline element
   </span>
@@ -250,7 +250,7 @@ input 群組也可以：
 根據需要與其他元件和小工具混合使用。
 
 {% example html %}
-<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar w/ text</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -276,10 +276,10 @@ input 群組也可以：
 
 ## 顏色方案
 
-由於主題 class 和 `background-color` 小工具 class 的結合，主題化導覽列從未如此簡單。 從 `.navbar-light` 選用淺色背景顏色，或者 `.navbar-inverse` 用於深色背景顏色。 然後，使用 `.bg-*` 小工具自訂。
+由於主題 class 和 `background-color` 小工具 class 的結合，主題化導覽列從未如此簡單。 從 `.navbar-light` 選用淺色背景顏色，或者 `.navbar-dark` 用於深色背景顏色。 然後，使用 `.bg-*` 小工具自訂。
 
 <div class="bd-example">
-  <nav class="navbar navbar-expand-lg navbar-inverse bg-inverse">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -307,7 +307,7 @@ input 群組也可以：
     </div>
   </nav>
 
-  <nav class="navbar navbar-expand-lg navbar-inverse bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -365,11 +365,11 @@ input 群組也可以：
 </div>
 
 {% highlight html %}
-<nav class="navbar navbar-inverse bg-inverse">
+<nav class="navbar navbar-dark bg-dark">
   <!-- Navbar content -->
 </nav>
 
-<nav class="navbar navbar-inverse bg-primary">
+<nav class="navbar navbar-dark bg-primary">
   <!-- Navbar content -->
 </nav>
 
@@ -385,7 +385,7 @@ input 群組也可以：
 
 {% example html %}
 <div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-faded">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
   </nav>
 </div>
@@ -394,7 +394,7 @@ input 群組也可以：
 當 `.container` 在您的導覽列中時，其水平 padding 在低於指定的 `.navbar-expand{-sm|-md|-lg|-xl}` 中斷點處被移除。這確保了當您的導覽列折疊時，不會產生多餘的 padding。
 
 {% example html %}
-<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand" href="#">Navbar</a>
   </div>
@@ -407,25 +407,25 @@ input 群組也可以：
 
 
 {% example html %}
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">Full width</a>
 </nav>
 {% endexample %}
 
 {% example html %}
-<nav class="navbar fixed-top navbar-light bg-faded">
+<nav class="navbar fixed-top navbar-light bg-light">
   <a class="navbar-brand" href="#">Fixed top</a>
 </nav>
 {% endexample %}
 
 {% example html %}
-<nav class="navbar fixed-bottom navbar-light bg-faded">
+<nav class="navbar fixed-bottom navbar-light bg-light">
   <a class="navbar-brand" href="#">Fixed bottom</a>
 </nav>
 {% endexample %}
 
 {% example html %}
-<nav class="navbar sticky-top navbar-light bg-faded">
+<nav class="navbar sticky-top navbar-light bg-light">
   <a class="navbar-brand" href="#">Sticky top</a>
 </nav>
 {% endexample %}
@@ -448,7 +448,7 @@ For navbars that never collapse, add the `.navbar-expand` class on the navbar. F
 
 
 {% example html %}
-<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -476,7 +476,7 @@ For navbars that never collapse, add the `.navbar-expand` class on the navbar. F
 左側有一個品牌名稱，右邊是切換元素。
 
 {% example html %}
-<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -505,11 +505,11 @@ For navbars that never collapse, add the `.navbar-expand` class on the navbar. F
 左側有一個切換元素，右邊是品牌名稱：
 
 {% example html %}
-<nav class="navbar navbar-expand-lg navbar-light bg-faded">
-  <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <a class="navbar-brand" href="#">Navbar</a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -539,12 +539,12 @@ For navbars that never collapse, add the `.navbar-expand` class on the navbar. F
 {% example html %}
 <div class="pos-f-t">
   <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-inverse p-4">
+    <div class="bg-dark p-4">
       <h4 class="text-white">Collapsed content</h4>
       <span class="text-muted">Toggleable via the navbar brand.</span>
     </div>
   </div>
-  <nav class="navbar navbar-inverse bg-inverse">
+  <nav class="navbar navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

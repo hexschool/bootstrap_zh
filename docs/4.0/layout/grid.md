@@ -81,11 +81,6 @@ Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內�
   </thead>
   <tbody>
     <tr>
-      <th class="text-nowrap" scope="row">Grid behavior</th>
-      <td>Horizontal at all times</td>
-      <td colspan="4">Collapsed to start, horizontal above breakpoints</td>
-    </tr>
-    <tr>
       <th class="text-nowrap" scope="row">Max container width</th>
       <td>None (auto)</td>
       <td>540px</td>
@@ -111,10 +106,6 @@ Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內�
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Nestable</th>
-      <td colspan="5">Yes</td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row">Offsets</th>
       <td colspan="5">Yes</td>
     </tr>
     <tr>
@@ -245,8 +236,7 @@ flexbox 網格欄的自動佈局中你可以設置欄的寬度，並且其左右
 
 ### 等寬度多行
 
-如果你希望欄另外分隔另一行，可在中間加入`.w-100` 建立等寬度欄。通過將`.w-100` 與一些（響應式顯示工具）[responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display-property/) 進行分隔。
-
+如果你希望欄另外分隔另一行，可在中間加入`.w-100` 建立等寬度欄。通過將`.w-100` 與一些（響應式顯示工具）[responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) 進行分隔。
 
 <div class="bd-example-row">
 {% example html %}
@@ -447,6 +437,8 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 
 這是建立這些樣式的原始程式碼。請注意，欄覆蓋僅限於第一層子欄，並且通過（屬性選擇器）[attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) 確定目標。雖然這產生了更具體的選擇器，通過（調整間隔工具）[spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)可以進一步定制欄的 padding。
 
+**Need an edge-to-edge design?** Drop the parent `.container` or `.container-fluid`.
+
 {% highlight sass %}
 .no-gutters {
   margin-right: 0;
@@ -507,41 +499,23 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 {% endexample %}
 </div>
 
-除了在控制中斷點清除的欄，你可以 **重置 offsets、pushes 或 pulls**。請在（網格範例）[the grid example]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/grid/) 中參看此範例。
-
-
-<div class="bd-example-row">
-{% example html %}
-<div class="row">
-  <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
-  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
-</div>
-
-<div class="row">
-  <div class="col-sm-6 col-md-5 col-lg-6">.col.col-sm-6.col-md-5.col-lg-6</div>
-  <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
-</div>
-{% endexample %}
-</div>
-
 ## 排序
-
-### Flex 排序
 
 使用 flexbox 工具控制你的內容的 **可見順序**。
 
+使用 `.order-` class 來控制內容中 **可見的內容** 順序，這些 class 是響應式的，所以可以設定 `order` 在不同斷點上 (e.g., `.order-1.order-md-2`)，包含支援 `1` ~ `12` 及不同的中斷點。
 
 <div class="bd-example-row">
 {% example html %}
 <div class="container">
   <div class="row">
-    <div class="col order-0">
+    <div class="col">
       First, but unordered
     </div>
-    <div class="col order-last">
+    <div class="col order-12">
       Second, but last
     </div>
-    <div class="col order-first">
+    <div class="col order-1">
       Third, but first
     </div>
   </div>
@@ -549,35 +523,23 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 {% endexample %}
 </div>
 
-### Offsetting columns
+### 推移欄
 
-使用 `.offset-md-*` 將欄移動到右側。這些 `*` 欄增加了欄的左側的 margin。例如，`.offset-md-4` 將 `.col-md-4` 移動四個欄。
+透過 v4 的 flexbox，我們不在使用 v3 的推移樣式 class，取而代之的是間隔小工具，像是 `.mr-auto` 來使元件左右物件遠離。
 
 <div class="bd-example-row">
 {% example html %}
 <div class="row">
   <div class="col-md-4">.col-md-4</div>
-  <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+  <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
 </div>
 <div class="row">
-  <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
-  <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+  <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+  <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
 </div>
 <div class="row">
-  <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
-</div>
-{% endexample %}
-</div>
-
-### Push 及 pull
-
-通過`.push-md-*` 和 `.pull-md-*`，方便的改變內置網格欄的順序。
-
-<div class="bd-example-row">
-{% example html %}
-<div class="row">
-  <div class="col-md-9 push-md-3">.col-md-9 .push-md-3</div>
-  <div class="col-md-3 pull-md-9">.col-md-3 .pull-md-9</div>
+  <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+  <div class="col-auto">.col-auto</div>
 </div>
 {% endexample %}
 </div>
@@ -615,15 +577,7 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 
 {% highlight scss %}
 $grid-columns:      12;
-$grid-gutter-width-base: 30px;
-
-$grid-gutter-widths: (
-  xs: $grid-gutter-width-base, // 30px
-  sm: $grid-gutter-width-base, // 30px
-  md: $grid-gutter-width-base, // 30px
-  lg: $grid-gutter-width-base, // 30px
-  xl: $grid-gutter-width-base  // 30px
-)
+$grid-gutter-width: 30px;
 
 $grid-breakpoints: (
   // Extra small screen / phone
@@ -652,16 +606,11 @@ Mixins 與網格變數結合使用，可以對單個網格欄產生語意的 CSS
 
 {% highlight scss %}
 // Creates a wrapper for a series of columns
-@include make-row($gutters: $grid-gutter-widths);
+@include make-row();
 
 // Make the element grid-ready (applying everything but the width)
-@include make-col-ready($gutters: $grid-gutter-widths);
+@include make-col-ready();
 @include make-col($size, $columns: $grid-columns);
-
-// Get fancy by offsetting, or changing the sort order
-@include make-col-offset($size, $columns: $grid-columns);
-@include make-col-push($size, $columns: $grid-columns);
-@include make-col-pull($size, $columns: $grid-columns);
 {% endhighlight %}
 
 ### 範例使用
@@ -717,18 +666,11 @@ Mixins 與網格變數結合使用，可以對單個網格欄產生語意的 CSS
 
 ### 欄與 gutters
 
-通過 Sass 變數可以修改欄和它們的水平 padding 的數量（又稱為 gutters）。`$grid-columns` 用於產生每一個單獨欄的寬度（百分比），而 `$grid-gutter-widths` 允許在該欄 gutterr 的 `padding-left`和`padding-right`上均勻分開的特定中斷點寬度。
+通過 Sass 變數可以修改欄位數和它們的水平 padding 的數量（又稱為 gutters）。`$grid-columns` 用於產生每一個單獨欄的寬度（百分比），而 `$grid-gutter-width` 允許在該欄 gutterr 的 `padding-left`和`padding-right`上均勻分開的特定中斷點寬度。
 
 {% highlight scss %}
-$grid-columns:               12 !default;
-$grid-gutter-width-base:     30px !default;
-$grid-gutter-widths: (
-  xs: $grid-gutter-width-base,
-  sm: $grid-gutter-width-base,
-  md: $grid-gutter-width-base,
-  lg: $grid-gutter-width-base,
-  xl: $grid-gutter-width-base
-) !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
 {% endhighlight %}
 
 ### Grid 階層
@@ -751,4 +693,4 @@ $container-max-widths: (
 );
 {% endhighlight %}
 
-當對 Sass 變數或 sass map 做出任何改動時，你必須保存你的改動並重新編譯。這樣做將對欄寬度、offsets、pushes 和 pulls 輸出新的一組網格 class。還將更新響應式元件及中斷點。
+當對 Sass 變數或 sass map 做出任何改動時，你必須保存你的改動並重新編譯。這樣做將對欄寬度、排序及輸出新的一組網格 class。還將更新響應式元件及中斷點。

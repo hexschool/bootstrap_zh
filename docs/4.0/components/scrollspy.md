@@ -23,7 +23,7 @@ toc: true
 
 
 <div class="bd-example">
-  <nav id="navbar-example2" class="navbar navbar-light bg-faded">
+  <nav id="navbar-example2" class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -60,7 +60,7 @@ toc: true
 </div>
 
 {% highlight html %}
-<nav id="navbar-example2" class="navbar navbar-light bg-faded">
+<nav id="navbar-example2" class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <ul class="nav nav-pills">
     <li class="nav-item">
@@ -102,7 +102,7 @@ toc: true
 <div class="bd-example">
   <div class="row">
     <div class="col-4">
-      <nav id="navbar-example3" class="navbar navbar-light bg-faded flex-column">
+      <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column">
         <a class="navbar-brand" href="#">Navbar</a>
         <nav class="nav nav-pills flex-column">
           <a class="nav-link" href="#item-1">Item 1</a>
@@ -141,7 +141,7 @@ toc: true
 </div>
 
 {% highlight html %}
-<nav id="navbar-example3" class="navbar navbar-light bg-faded">
+<nav id="navbar-example3" class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <nav class="nav nav-pills flex-column">
     <a class="nav-link" href="#item-1">Item 1</a>

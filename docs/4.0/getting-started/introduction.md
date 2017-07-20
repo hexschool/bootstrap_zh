@@ -4,7 +4,7 @@ title: 簡介
 description: Bootstrap 世界上最受歡迎的框架用於建立響應式、行動優先的網站，透過 Bootstrap CDN 和範本初學頁面開始吧。
 group: getting-started
 redirect_from:
-  - /getting-started/
+  - /docs/4.0/getting-started/
   - /docs/4.0/
   - /docs/
 toc: true

@@ -236,8 +236,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 {% endexample %}
 ## 使用 flex 小工具
 
-如果需要響應式的導覽變化，請使用一系列 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/)。 這些小工具在中斷點之間提供更多的設定。 在下面的範例中，我們的導覽將堆疊在最小的中斷點上，從小中斷點開始填充完整寬度的水平佈局。
-
+如果需要響應式的導覽變化，請使用一系列 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/)。 這些小工具在中斷點之間提供更多的設定。 在下面的範例中，我們的導覽將堆疊在最小的中斷點上，從小中斷點開始填充完整寬度的水平佈局。
 
 {% example html %}
 <nav class="nav nav-pills flex-column flex-sm-row">

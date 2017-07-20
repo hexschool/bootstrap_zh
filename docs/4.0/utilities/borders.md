@@ -3,7 +3,7 @@ layout: docs
 title: Borders
 description: 使用 Border 小工具迅速設計一個元素的 border 和邊框 border-radius。可用於圖像、按鈕、或任何其它元素。
 group: utilities
-redirect_from: "/utilities/"
+redirect_from: "/docs/4.0/utilities/"
 toc: true
 ---
 
@@ -13,11 +13,23 @@ toc: true
 
 <div class="bd-example-border-utils">
 {% example html %}
+<span class="border"></span>
 <span class="border-0"></span>
 <span class="border-top-0"></span>
 <span class="border-right-0"></span>
 <span class="border-bottom-0"></span>
 <span class="border-left-0"></span>
+{% endexample %}
+</div>
+
+## Border color
+
+Change the border color using utilities built on our theme colors.
+
+<div class="bd-example-border-utils">
+{% example html %}
+{% for color in site.data.theme-colors %}
+<span class="border border-{{ color.name }}"></span>{% endfor %}
 {% endexample %}
 </div>
 

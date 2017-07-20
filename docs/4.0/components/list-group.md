@@ -90,10 +90,9 @@ toc: true
 {% example html %}
 <ul class="list-group">
   <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
-  <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
-  <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
-  <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+
+  {% for color in site.data.theme-colors %}
+  <li class="list-group-item list-group-item-{{ color.name }}">This is a {{ color.name }} list group item</li>{% endfor %}
 </ul>
 {% endexample %}
 
@@ -105,10 +104,9 @@ toc: true
 {% example html %}
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-  <a href="#" class="list-group-item list-group-item-action list-group-item-success">Dapibus ac facilisis in</a>
-  <a href="#" class="list-group-item list-group-item-action list-group-item-info">Cras sit amet nibh libero</a>
-  <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Porta ac consectetur ac</a>
-  <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Vestibulum at eros</a>
+
+  {% for color in site.data.theme-colors %}
+  <a href="#" class="list-group-item list-group-item-action list-group-item-{{ color.name }}">This is a {{ color.name }} list group item</a>{% endfor %}
 </div>
 {% endexample %}
 
@@ -117,8 +115,7 @@ toc: true
 
 ## 帶標籤
 
-在某些 [小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/) 的幫助下，向任何列表項目添加標籤以顯示未讀計數、活動等。
-
+在某些 [小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 的幫助下，向任何列表項目添加標籤以顯示未讀計數、活動等。
 
 {% example html %}
 <ul class="list-group">
@@ -139,8 +136,7 @@ toc: true
 
 ## 自定義內容
 
-在 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/) 的幫助下，添加幾乎任何的 HTML 或內容、連結等，都能加入到一個項目內。
-
+在 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 的幫助下，添加幾乎任何的 HTML 或內容、連結等，都能加入到一個項目內。
 
 {% example html %}
 <div class="list-group">

@@ -16,7 +16,7 @@ group: content
 </figure>
 {% endexample %}
 
-使用我們的 [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/#text-alignment) 可以很容易地對齊圖形的標題。
+使用我們的 [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment) 可以很容易地對齊圖形的標題。
 
 
 {% example html %}

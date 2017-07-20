@@ -11,18 +11,10 @@ toc: true
 警報可用於任何長度的內文，以及選擇性加入的關閉按鈕。正確的樣式，使用四個內文樣式 Class 的其中之一（例如`.alert-success`）。 對於行內的移除，請使用[警報 jQuery 插件](#dismissing)。
 
 {% example html %}
-<div class="alert alert-success" role="alert">
-  <strong>Well done!</strong> You successfully read this important alert message.
-</div>
-<div class="alert alert-info" role="alert">
-  <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-</div>
-<div class="alert alert-warning" role="alert">
-  <strong>Warning!</strong> Better check yourself, you're not looking too good.
-</div>
-<div class="alert alert-danger" role="alert">
-  <strong>Oh snap!</strong> Change a few things up and try submitting again.
-</div>
+{% for color in site.data.theme-colors %}
+<div class="alert alert-{{ color.name }}" role="alert">
+  This is a {{ color.name }} alert—check it out!
+</div>{% endfor %}
 {% endexample %}
 
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
@@ -33,18 +25,10 @@ toc: true
 使用 `.alert-link` 來快速為警報中的連結增添合適的色彩。
 
 {% example html %}
-<div class="alert alert-success" role="alert">
-  <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
-</div>
-<div class="alert alert-info" role="alert">
-  <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
-</div>
-<div class="alert alert-warning" role="alert">
-  <strong>Warning!</strong> Better check yourself, you're <a href="#" class="alert-link">not looking too good</a>.
-</div>
-<div class="alert alert-danger" role="alert">
-  <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
-</div>
+{% for color in site.data.theme-colors %}
+<div class="alert alert-{{ color.name }}" role="alert">
+  This is a {{ color.name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div>{% endfor %}
 {% endexample %}
 
 ### 額外的內容

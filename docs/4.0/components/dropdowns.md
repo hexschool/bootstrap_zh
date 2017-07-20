@@ -10,7 +10,7 @@ toc: true
 
 下拉選單是可切換的，內文框用於顯示連結列表或其他。這些交互功能於 Bootstrap JavaScript 下拉選單插件提供。透過點擊切換，而不是滑入的方式，這是一個策劃好了的 [設計決定](http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/)。
 
-下拉選單是透過第三方插件 [Popper.js](https://popper.js.org) 所建構的，這提供了動態位置及 viewport 的監控。使用前請確認 [popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.1/umd/popper.min.js) 在 Bootstrap's JavaScript 之前。
+下拉選單是透過第三方插件 [Popper.js](https://popper.js.org) 所建構的，這提供了動態位置及 viewport 的監控。使用前請確認 [popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.8/umd/popper.min.js) 在 Bootstrap's JavaScript 之前。
 
 ## 親和性
 

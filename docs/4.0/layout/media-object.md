@@ -26,7 +26,7 @@ toc: true
 
 ##### Flexbug #12: 行內元素不作為 flex 處理
 
-Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如連結或圖像（或 `::before` 和 `::after` 偽元素）。唯一的運作的是設定非行內的  `display` 值（例如，`block`, `inline-block`, 或 `flex`）。我們建議使用我們的（顯示工具）[display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display-property/)之一 `.d-flex` 簡單修復。
+Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如連結或圖像（或 `::before` 和 `::after` 偽元素）。唯一的運作的是設定非行內的  `display` 值（例如，`block`, `inline-block`, 或 `flex`）。我們建議使用我們的（顯示工具）[display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/)之一 `.d-flex` 簡單修復。
 
 **來源:** [Flexbugs on GitHub](https://github.com/philipwalton/flexbugs#12-inline-elements-are-not-treated-as-flex-items)
 {% endcallout %}

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Flexbox
+title: Flex
 description: flexbox 小工具的套件包管理網格欄的排版、對齊和特定尺寸。對於更複雜的表現則需要自訂 CSS。
 group: utilities
 toc: true

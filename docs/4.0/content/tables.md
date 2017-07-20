@@ -438,6 +438,7 @@ toc: true
 
 使用語意化 class 給表格列或單獨的儲存格上色。
 
+<<<<<<< HEAD
 | Class | Description |
 | --- | --- |
 | `.table-active` | 向一個特定的行或儲存格使用 hover 色彩 |
@@ -446,11 +447,13 @@ toc: true
 | `.table-warning` | 提示一個可能需要注意的警告 |
 | `.table-danger` | 提示一個危險或潛在的否定行動 |
 
+=======
+>>>>>>> v4-dev
 <div class="bd-example">
   <table class="table">
     <thead>
       <tr>
-        <th>#</th>
+        <th>Type</th>
         <th>Column heading</th>
         <th>Column heading</th>
         <th>Column heading</th>
@@ -458,59 +461,25 @@ toc: true
     </thead>
     <tbody>
       <tr class="table-active">
-        <th scope="row">1</th>
+        <th scope="row">Active</th>
         <td>Column content</td>
         <td>Column content</td>
         <td>Column content</td>
       </tr>
       <tr>
-        <th scope="row">2</th>
+        <th scope="row">Default</th>
         <td>Column content</td>
         <td>Column content</td>
         <td>Column content</td>
       </tr>
-      <tr class="table-success">
-        <th scope="row">3</th>
+
+      {% for color in site.data.theme-colors %}
+      <tr class="table-{{ color.name }}">
+        <th scope="row">{{ color.name | capitalize }}</th>
         <td>Column content</td>
         <td>Column content</td>
         <td>Column content</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
-      <tr class="table-info">
-        <th scope="row">5</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
-      <tr class="table-warning">
-        <th scope="row">7</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
-      <tr>
-        <th scope="row">8</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
-      <tr class="table-danger">
-        <th scope="row">9</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
+      </tr>{% endfor %}
     </tbody>
   </table>
 </div>
@@ -518,18 +487,14 @@ toc: true
 {% highlight html %}
 <!-- On rows -->
 <tr class="table-active">...</tr>
-<tr class="table-success">...</tr>
-<tr class="table-info">...</tr>
-<tr class="table-warning">...</tr>
-<tr class="table-danger">...</tr>
+{% for color in site.data.theme-colors %}
+<tr class="table-{{ color.name }}">...</tr>{% endfor %}
 
 <!-- On cells (`td` or `th`) -->
 <tr>
   <td class="table-active">...</td>
-  <td class="table-success">...</td>
-  <td class="table-info">...</td>
-  <td class="table-warning">...</td>
-  <td class="table-danger">...</td>
+  {% for color in site.data.theme-colors %}
+  <td class="table-{{ color.name }}">...</td>{% endfor %}
 </tr>
 {% endhighlight %}
 

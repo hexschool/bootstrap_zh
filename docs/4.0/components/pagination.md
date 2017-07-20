@@ -137,8 +137,7 @@ toc: true
 
 ## 對齊
 
-使用 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flexbox/) 更改分頁元件的對齊方式。
-
+使用 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 更改分頁元件的對齊方式。
 
 {% example html %}
 <nav aria-label="Page navigation example">

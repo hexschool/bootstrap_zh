@@ -110,7 +110,7 @@ toc: true
 
 ### 包含字幕
 
-在 `.carousel-item` 中使用 `.carousel-caption` 添加字幕到您的幻燈片。它們會隱藏在較小的 viewport 上，如下所示，可用的 [顯示小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display-property/)。 我們最初用 `.d-none` 隱藏它們，並將它們顯示在中型的設備上(使用 `.d-md-block`)。
+在 `.carousel-item` 中使用 `.carousel-caption` 添加字幕到您的幻燈片。它們會隱藏在較小的 viewport 上，如下所示，可用的 [顯示小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/)。 我們最初用 `.d-none` 隱藏它們，並將它們顯示在中型的設備上(使用 `.d-md-block`)。
 
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">

@@ -109,22 +109,24 @@
       url: Colors
     - title: Display
       url: Display
-    - title: Flexbox
-      url: Flexbox
+    - title: Embed
+      url: Embed
+    - title: Flex
+      url: Flex
+    - title: 浮動 (New)
+      url: Float
     - title: 圖片取代
       url: Image replacement
     - title: 位置
       url: Position
-    - title: 響應式 helpers
-      url: Responsive helpers
     - title: 螢幕閱讀器
       url: Screenreaders
     - title: 尺寸
       url: Sizing
     - title: 間隔
       url: Spacing
-    - title: 文字排版
-      url: Typography
+    - title: 文字
+      url: Text
     - title: 垂直對齊
       url: Vertical align
     - title: 可視性

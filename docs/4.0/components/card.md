@@ -52,7 +52,7 @@ toc: true
 透過在 `<h*>` 標籤中添加一個 `.card-subtitle` 來使用次標題。 如果 `.card-title` 和 `.card-subtitle` 放在 `.card-block` 中，那麼卡片標題和次標題就很好地對齊了。
 
 {% example html %}
-<div class="card">
+<div class="card" style="width: 20rem;">
   <div class="card-body">
     <h4 class="card-title">Card title</h4>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -69,7 +69,7 @@ toc: true
 
 
 {% example html %}
-<div class="card">
+<div class="card" style="width: 20rem;">
   <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Card image cap">
   <div class="card-body">
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -82,7 +82,7 @@ toc: true
 建立一個包含內容的清單卡片。
 
 {% example html %}
-<div class="card">
+<div class="card" style="width: 20rem;">
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Cras justo odio</li>
     <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -135,7 +135,7 @@ toc: true
 
 {% example html %}
 <div class="card">
-  <h3 class="card-header">Featured</h3>
+  <h4 class="card-header">Featured</h4>
   <div class="card-body">
     <h4 class="card-title">Special title treatment</h4>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -150,9 +150,9 @@ toc: true
     Quote
   </div>
   <div class="card-body">
-    <blockquote class="card-blockquote">
+    <blockquote class="blockquote mb-0">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
@@ -187,7 +187,7 @@ toc: true
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h3 class="card-title">Special title treatment</h3>
+        <h4 class="card-title">Special title treatment</h4>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
@@ -196,7 +196,7 @@ toc: true
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h3 class="card-title">Special title treatment</h3>
+        <h4 class="card-title">Special title treatment</h4>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
@@ -212,7 +212,7 @@ toc: true
 {% example html %}
 <div class="card w-75">
   <div class="card-body">
-    <h3 class="card-title">Card title</h3>
+    <h4 class="card-title">Card title</h4>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Button</a>
   </div>
@@ -220,7 +220,7 @@ toc: true
 
 <div class="card w-50">
   <div class="card-body">
-    <h3 class="card-title">Card title</h3>
+    <h4 class="card-title">Card title</h4>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Button</a>
   </div>
@@ -234,7 +234,7 @@ toc: true
 {% example html %}
 <div class="card" style="width: 20rem;">
   <div class="card-body">
-    <h3 class="card-title">Special title treatment</h3>
+    <h4 class="card-title">Special title treatment</h4>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -243,7 +243,8 @@ toc: true
 
 ## 文字對齊
 
-您可以透過我們的 [文本對齊 Class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/#text-alignment)。更改任何卡片的整體或特定部分的文本對齊方式）。
+您可以透過我們的 [文本對齊 Class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/#text-alignment) 更改任何卡片的整體或特定部分的文本對齊方式）。
+
 
 {% example html %}
 <div class="card" style="width: 20rem;">
@@ -350,10 +351,11 @@ toc: true
 
 ### 圖像覆蓋
 
-將圖像轉換為卡片背景，並疊加卡片的文字。 根據圖像，您可能需要或不需要 `.card-inverse`（見下文）。
+將圖像轉換為卡片背景，並疊加卡片的文字。 根據圖像，你可以選擇是否需要額外的樣式或小工具。
+
 
 {% example html %}
-<div class="card card-inverse">
+<div class="card bg-dark text-white">
   <img class="card-img" data-src="holder.js/100px270/#55595c:#373a3c/text:Card image" alt="Card image">
   <div class="card-img-overlay">
     <h4 class="card-title">Card title</h4>
@@ -367,127 +369,51 @@ toc: true
 
 包括用於客制其背景、邊框和顏色的各種選項。
 
-### 反轉文本樣式
+### 背景與顏色
 
-預設情況下，卡片使用深色文字，並採用淺色背景。 您可以用 `.card-inverse` 切換文本內部的文本顏色以及卡片的子元件的 `color`。然後，指定一個與之相配的黑色 `background-color` 和 `border-color`。
-
-你可以使用 `.card-inverse` 搭配 [情境變化色](#情境變化色)
+使用 [文字與背景小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/)來改變卡片的顯示顏色。
 
 {% example html %}
-<div class="card card-inverse" style="background-color: #333; border-color: #333;">
+{% for color in site.data.theme-colors %}
+<div class="card{% unless color.name == "light" %} text-white{% endunless %} bg-{{ color.name }} mb-3" style="max-width: 20rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
-    <h3 class="card-title">Special title treatment</h3>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h4 class="card-title">{{ color.name | capitalize }} card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
-  <div class="card-footer">Footer</div>
-</div>
-{% endexample %}
-
-### 情境變化色
-
-卡片包括自己的變化，用於快速更改卡片的 `background-color` 和 `border-color`。 **較深的顏色需要使用 `.card-inverse`。**
-
-{% example html %}
-<div class="card card-inverse card-primary mb-3 text-center">
-  <div class="card-body">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-inverse card-success mb-3 text-center">
-  <div class="card-body">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-inverse card-info mb-3 text-center">
-  <div class="card-body">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-inverse card-warning mb-3 text-center">
-  <div class="card-body">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-inverse card-danger text-center">
-  <div class="card-body">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
+</div>{% endfor %}
 {% endexample %}
 
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-### 卡片邊框
+### 框線
 
-需要一張彩色卡片，但不是充滿底色的？ 用 `.card-outline-*` 替換預設的 Class，以便只對卡片的 `border-color` 加入樣式。
-
+使用 [框線小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/) 來改變卡片的 `border-color`。也能設置 `.text-{color}` class 在父層的 `.card`，或者是卡片的顯示內容上。
 
 {% example html %}
-<div class="card card-outline-primary mb-3 text-center">
-  <div class="card-body">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
+{% for color in site.data.theme-colors %}
+<div class="card border-{{ color.name }} mb-3" style="max-width: 20rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body{% unless color.name == "light" %} text-{{ color.name }}{% endunless %}">
+    <h4 class="card-title">{{ color.name | capitalize }} card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
-</div>
-<div class="card card-outline-secondary mb-3 text-center">
-  <div class="card-body">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
+</div>{% endfor %}
+{% endexample %}
+
+### Mixins 小工具
+
+也能夠改卡片頁首及頁腳的框線，也能使用 `.bg-transparent` 移除背景顏色。
+
+{% example html %}
+<div class="card border-success mb-3" style="max-width: 20rem;">
+  <div class="card-header bg-transparent border-success">Header</div>
+  <div class="card-body text-success">
+    <h4 class="card-title">Success card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
-</div>
-<div class="card card-outline-success mb-3 text-center">
-  <div class="card-body">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-info mb-3 text-center">
-  <div class="card-body">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-warning mb-3 text-center">
-  <div class="card-body">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-danger text-center">
-  <div class="card-body">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
+  <div class="card-footer bg-transparent border-success">Footer</div>
 </div>
 {% endexample %}
 
@@ -654,9 +580,9 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
     </div>
   </div>
   <div class="card p-3">
-    <blockquote class="card-body card-blockquote">
+    <blockquote class="blockquote mb-0 card-body">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>
+      <footer class="blockquote-footer">
         <small class="text-muted">
           Someone famous in <cite title="Source Title">Source Title</cite>
         </small>
@@ -671,10 +597,10 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
-  <div class="card card-inverse card-primary p-3 text-center">
-    <blockquote class="card-blockquote">
+  <div class="card bg-primary p-3 text-center">
+    <blockquote class="blockquote mb-0">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-      <footer>
+      <footer class="blockquote-footer">
         <small>
           Someone famous in <cite title="Source Title">Source Title</cite>
         </small>
@@ -692,9 +618,9 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
     <img class="card-img" data-src="holder.js/100px260/" alt="Card image">
   </div>
   <div class="card p-3 text-right">
-    <blockquote class="card-blockquote">
+    <blockquote class="blockquote mb-0">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>
+      <footer class="blockquote-footer">
         <small class="text-muted">
           Someone famous in <cite title="Source Title">Source Title</cite>
         </small>

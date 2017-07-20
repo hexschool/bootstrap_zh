@@ -42,14 +42,20 @@ toc: true
 </div>
 {% endexample %}
 
-對於更長的內容，你可以增加一個 `.text-truncate`，可以截掉多餘內容改用 `...`。
+對於更長的內容，你可以增加一個 `.text-truncate`，可以截掉多餘內容改用 `...`。**需要使用 **`display: inline-block` or `display: block`**。
 
 {% example html %}
+<!-- Block level -->
 <div class="row">
   <div class="col-2 text-truncate">
     Praeterea iter est quasdam res quas ex communi.
   </div>
 </div>
+
+<!-- Inline level -->
+<span class="d-inline-block text-truncate" style="max-width: 150px;">
+  Praeterea iter est quasdam res quas ex communi.
+</span>
 {% endexample %}
 
 ## 文字變換
