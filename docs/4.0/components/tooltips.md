@@ -10,8 +10,7 @@ toc: true
 
 使用工具提示框插件時應瞭解的事情如下：
 
-<<<<<<< HEAD
-- 工具提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 工具提示框工作之前，您必須包含 [popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.8/umd/popper.min.js)
+- 工具提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 工具提示框工作之前，您必須包含 [popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js)
 - 工具提示框需要 [工具提示插件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/tooltips/) 作為依賴。
 - 工具提示框因為校能原因所以是選擇加入，所以 **您必須自己將他們初始化**。
 - 零長度 `title` 和 `content` 值將永遠不會顯示一個工具提示框。
@@ -20,16 +19,6 @@ toc: true
 - `.disabled` 或 `disabled` 元素工具提示框的觸發必須在外層元素上。
 - 當從跨越多行的超連結觸發時，工具提示框將被居中。在你的 `<a>` 上使用 `white-space: nowrap;` 來避免這種行為。
 - 必須先隱藏工具提示框，然後才能從 DOM 中刪除相應的元素。
-=======
-- Tooltips rely on the 3rd party library [Popper.js](https://popper.js.org) for positioning. You must include [popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js) before bootstrap.js in order for tooltips to work!
-- Tooltips are opt-in for performance reasons, so **you must initialize them yourself**.
-- Tooltips with zero-length titles are never displayed.
-- Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc).
-- Triggering tooltips on hidden elements will not work.
-- Tooltips for `.disabled` or `disabled` elements must be triggered on a wrapper element.
-- When triggered from hyperlinks that span multiple lines, tooltips will be centered. Use `white-space: nowrap;` on your `<a>`s to avoid this behavior.
-- Tooltips must be hidden before their corresponding elements have been removed from the DOM.
->>>>>>> v4-dev
 
 都明白了？太好了，讓我們透過一些例子看他們是如何運作的。
 
