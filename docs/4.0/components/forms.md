@@ -961,38 +961,9 @@ $('.your-checkbox').prop('indeterminate', true)
 </label>
 {% endexample %}
 
-#### 驗證狀態
-
-使用我們的驗證 Class 將其他狀態加到您的自訂表單中。
-
-{% example html %}
-<div class="form-group has-success">
-  <label class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Check this custom checkbox</span>
-  </label>
-</div>
-<div class="form-group has-warning">
-  <label class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Check this custom checkbox</span>
-  </label>
-</div>
-<div class="form-group has-danger mb-0">
-  <label class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Check this custom checkbox</span>
-  </label>
-</div>
-{% endexample %}
-
 #### 堆疊
 
 自訂核取方塊和單選按鈕是平行的開始。加入一個 `.custom-controls-stacked` 的父級，以確保每個表單控制元件在不同的列上。
-
 
 {% example html %}
 <div class="custom-controls-stacked">

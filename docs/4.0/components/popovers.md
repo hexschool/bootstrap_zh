@@ -10,7 +10,7 @@ toc: true
 
 使用彈出提示框插件時應瞭解的事情如下：
 
-- 彈出提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 彈出提示框工作之前，您必須包含 [popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.8/umd/popper.min.js)
+- 彈出提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 彈出提示框工作之前，您必須包含 [popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js)
 - 彈出提示框需要 [工具提示插件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/tooltips/) 作為依賴。
 - 彈出提示框因為校能原因所以是選擇加入，所以 **您必須自己將他們初始化**。
 - 零長度 `title` 和 `content` 值將永遠不會顯示一個彈出提示框。
@@ -21,16 +21,6 @@ toc: true
 - 必須先隱藏彈出提示框，然後才能從 DOM 中刪除相應的元素。
 
 都明白了？太好了，讓我們透過一些例子看他們是如何運作的。
-
-- 彈出提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 彈出提示框工作之前，您必須包含 [popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.10.8/umd/popper.min.js)
-- 彈出提示框需要 [工具提示插件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/tooltips/) 作為依賴。
-- 彈出提示框因為校能原因所以是選擇加入，所以 **您必須自己將他們初始化**。
-- 零長度 `title` 和 `content` 值將永遠不會顯示一個彈出提示框。
-- 指定 `container: 'body'` 以避免在更複雜的元件（如我們的輸入群組，按鈕群組等）中呈現問題。
-- 隱藏元素的彈出提示框是不會成功的。
-- `.disabled` 或 `disabled` 元素彈出提示框的觸發必須在外層元素上。
-- 當從跨越多行的超連結觸發時，彈出提示框將被居中。在你的 `<a>` 上使用 `white-space: nowrap;` 來避免這種行為。
-- 必須先隱藏彈出提示框，然後才能從 DOM 中刪除相應的元素。
 
 ## 範例：在任何地方啟用彈出提示框
 

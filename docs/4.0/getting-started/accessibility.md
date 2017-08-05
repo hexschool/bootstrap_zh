@@ -33,7 +33,7 @@ Bootstrap 的互動元件 - 比如 modal dialogs、下拉式功能表和自訂�
 
 {% highlight html %}
 <p class="text-danger">
-  <span class=".sr-only">Danger: </span>
+  <span class="sr-only">Danger: </span>
   This action is not reversible
 </p>
 {% endhighlight %}
