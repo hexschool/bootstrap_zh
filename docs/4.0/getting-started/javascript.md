@@ -14,6 +14,8 @@ toc: true
 
 某些外掛程式和 CSS 元件依賴於其他的插件。若你將外掛程式獨立加入，確保檢查文件中是否有上述的相依關係。同時請注意，所有的外掛程式都依賴 jQuery（這意味著 jQuery 必須在插件檔案 **之前**）。[查詢我們的 `bower.json`]({{ site.repo }}/blob/v{{ site.current_version }}/bower.json) ，以查看支援的 jQuery 版本。
 
+工具提示及彈出提示框也相依於 [Popper.js](https://github.com/FezVrasta/popper.js)。
+
 ## 資料屬性 (HTML data attributes)
 
 幾乎可單獨透過 HTML 採用資料屬性（我們偏好於用此方式使用 JavaScript 函式）啟用和配置所有的 Bootstrap 插件。務必 **在一個獨立的元素僅使用一套資料屬性**（比如，你無法從同一個按鍵同時觸發一個工具提示和互動視窗）。

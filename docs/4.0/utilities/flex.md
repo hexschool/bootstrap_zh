@@ -362,18 +362,14 @@ toc: true
 
 `order` 也包含的響應式屬性。
 
-{% for bp in site.data.breakpoints %}
-  {% for i in (1..12) %}
-  - `.order{{ bp.abbr }}-{{ i }}`
-  {% endfor %}
-{% endfor %}
+{% for bp in site.data.breakpoints %}{% for i in (1..12) %}
+- `.order{{ bp.abbr }}-{{ i }}`{% endfor %}{% endfor %}
 
 ## 對齊內容
 
 使用 flexbox 容器上的 `align-content` 工具將 flex 物件於橫軸上 *一起* 對齊。從`start` (瀏覽器預設), `end`, `center`, `between`, `around`, 或 `stretch`中選擇。為了呈現這小工具的效果，我們加入了 `flex-wrap: wrap`，及增加了flex項的數量。
 
 **注意！** 此特性對於單行的 flex 無作用。
-
 
 <div class="bd-example">
   <div class="d-flex align-content-start flex-wrap bd-highlight mb-3" style="height: 200px">

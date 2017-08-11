@@ -8,15 +8,24 @@ toc: true
 
 ## Bootstrap CSS 和 JS
 
-**下載 Boostrap 現成的程式碼以輕易加入到你的專案中。** 包括各種 CSS 套件編譯好且壓縮的版本（預設、僅有網格或僅有重置）以及 JavaScript 插件。不含文件或原始程式碼。
+下載編譯完成可立即運用的 **Bootstrap 4{{ site.current_version}}** 加入到你的專案，這些包含了：
 
-**當前版本:** v{{ site.current_version}}
+- 編譯好及壓縮後的 CSS 包 (預設僅有網格及重置)
+- 編譯好及壓縮的 JavaScript 套件
+
+這些不包含文件、原始檔案、或任何選用的 JavaScript 相依套件 (jQuery 及 Popper.js)
 
 <a href="{{ site.download.dist }}" class="btn btn-bd-purple" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">下載 Bootstrap</a>
 
 ## 原始檔案
 
-**想用你的專案編譯 Bootstrap？** 選擇此選項下載我們的 Sass、JavaScript 以及文檔。需要一個 Sass 編譯器、[Autoprefixer](https://github.com/postcss/autoprefixer)、 [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes) 以及 [some setup]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup)。
+透過下載我們的 Sass、JavaScript 原始碼及文檔文件，使用自訂的方式編譯 Bootstrap，這些需要一些額外的工具：
+
+- 編譯您的 CSS 的 Sass 編譯器（Libsass 或 Ruby Sass）。
+- [Autoprefixer](https://github.com/postcss/autoprefixer)，用於 CSS 的前綴
+
+如果您需要 [編譯工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup)，那麼它們被用於開發 Bootstrap 及文檔， 但可能不適合您自己的目的。
+
 
 <a href="{{ site.download.source }}" class="btn btn-bd-purple" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download 原始碼</a>
 
@@ -24,10 +33,16 @@ toc: true
 
 跳過下載並使用 Bootstrap CDN 將 Boostrap 的 CSS 和 JS 加到你的專案中。
 
-
 {% highlight html %}
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
+{% endhighlight %}
+
+如果你使用我們編譯的 JavaScript，別忘了加入 jQuery 和 Popper.js 在這之前。
+
+{% highlight html %}
+<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
+<script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
 ## 套件管理工具

@@ -10,10 +10,6 @@ redirect_from:
 toc: true
 ---
 
-<!-- Bootstrap is the world's most popular framework for building responsive, mobile-first sites and applications. Inside you'll find high quality HTML, CSS, and JavaScript to make starting any project easier than ever. -->
-
-<!-- Here's how to quickly get started with the Bootstrap CDN and a template starter page. -->
-
 ## 快速開始
 
 想要快速地將 Bootstrap 添加到你的專案中！使用 MaxCDN 公司的免費提供的 Bootstrap CDN。如需用套件管理工具或需要下載原始檔可 [前往下載頁面]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)。
@@ -52,7 +48,8 @@ toc: true
   <body>
     <h1>Hello, world!</h1>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
