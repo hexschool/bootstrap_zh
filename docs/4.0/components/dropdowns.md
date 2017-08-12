@@ -477,7 +477,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 
 ## 選單式表單
 
-在下拉式選單中加入表單，並且使用 [margin 或 padding 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) 調整所需要的空間。
+在下拉式選單中加入表單，並且使用 [margin 或 padding 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) 調整所需要的空間。
 
 {% example html %}
 <div class="dropdown-menu">

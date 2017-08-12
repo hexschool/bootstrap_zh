@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: 排版
-description: 一般文字小工具來控制對齊、圍繞、字體粗細、和其它屬性的文檔範例。
+description: 一般文字通用類別來控制對齊、圍繞、字體粗細、和其它屬性的文檔範例。
 group: utilities
 toc: true
 ---

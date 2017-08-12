@@ -12,7 +12,7 @@ toc: true
 
 - 使用 `.progress` 作為包裝器來指示進度條的最大值。
 - 內部的 `.progress-bar` 來表示到目前為止的進度。
-- `.progress-bar` 需要行內樣式，小工具的 Class 或自訂 CSS 來設置它們的寬度。
+- `.progress-bar` 需要行內樣式，通用類別的 Class 或自訂 CSS 來設置它們的寬度。
 - `.progress-bar` 還需要一些 `role` 和 `aria` 屬性來使其具親和性。
 
 把它們放在一起，你得到以下例子。
@@ -35,7 +35,7 @@ toc: true
 </div>
 {% endexample %}
 
-Bootstrap 提供了一些 [寬度設定小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/)。 根據您的需要，這些可能有助於快速配置進度條。
+Bootstrap 提供了一些 [寬度設定通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/)。 根據您的需要，這些可能有助於快速配置進度條。
 
 
 {% example html %}
@@ -70,7 +70,7 @@ Bootstrap 提供了一些 [寬度設定小工具]({{ site.baseurl }}/docs/{{ sit
 
 ## 背景
 
-使用背景小工具 Class 更改各個進度條的外觀。
+使用背景通用類別 Class 更改各個進度條的外觀。
 
 
 {% example html %}

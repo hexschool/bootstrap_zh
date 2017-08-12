@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Colors
-description: 借助一些顏色小工具讓顏色的表達具有意義。這也包括支援有 hover 狀態的樣式連結。
+description: 借助一些顏色通用類別讓顏色的表達具有意義。這也包括支援有 hover 狀態的樣式連結。
 group: utilities
 toc: true
 ---
@@ -19,7 +19,7 @@ toc: true
 <p><a href="#" class="text-{{ color.name }}{% if color.name == "light" %} bg-gray{% endif %}">{{ color.name | capitalize }} link</a></p>{% endfor %}
 {% endexample %}
 
-類似於文字顏色 class，可輕易將元素加上背景色彩。連結元素將會在 hover 上變暗，就像文字類型一樣。背景色 **不要設置`color`** 樣式，盡可能使用 `.text-*` 小工具。
+類似於文字顏色 class，可輕易將元素加上背景色彩。連結元素將會在 hover 上變暗，就像文字類型一樣。背景色 **不要設置`color`** 樣式，盡可能使用 `.text-*` 通用類別。
 
 {% example html %}
 {% for color in site.data.theme-colors %}

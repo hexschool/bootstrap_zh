@@ -525,7 +525,7 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 
 ### 推移欄
 
-透過 v4 的 flexbox，我們不在使用 v3 的推移樣式 class，取而代之的是間隔小工具，像是 `.mr-auto` 來使元件左右物件遠離。
+透過 v4 的 flexbox，我們不在使用 v3 的推移樣式 class，取而代之的是間隔通用類別，像是 `.mr-auto` 來使元件左右物件遠離。
 
 <div class="bd-example-row">
 {% example html %}

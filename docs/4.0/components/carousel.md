@@ -18,7 +18,7 @@ toc: true
 
 ## 範例
 
-輪播不會自動使幻燈片尺寸標準化。因此，您可能需要使用其它小工具或自訂樣式來調整成適當內容大小。雖然輪播支援上一個/下一個控制項和指示器，但是它們不是必備項目。可根據您的需要添加和自訂。
+輪播不會自動使幻燈片尺寸標準化。因此，您可能需要使用其它通用類別或自訂樣式來調整成適當內容大小。雖然輪播支援上一個/下一個控制項和指示器，但是它們不是必備項目。可根據您的需要添加和自訂。
 
 確保在 `.carousel` 上為可選控制項設置唯一的 ID，特別是您在單個頁面上使用多個輪播。
 
@@ -112,7 +112,7 @@ toc: true
 
 ### 包含字幕
 
-在 `.carousel-item` 中使用 `.carousel-caption` 添加字幕到您的幻燈片。它們會隱藏在較小的 viewport 上，如下所示，可用的 [顯示小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/)。 我們最初用 `.d-none` 隱藏它們，並將它們顯示在中型的設備上(使用 `.d-md-block`)。
+在 `.carousel-item` 中使用 `.carousel-caption` 添加字幕到您的幻燈片。它們會隱藏在較小的 viewport 上，如下所示，可用的 [顯示通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/)。 我們最初用 `.d-none` 隱藏它們，並將它們顯示在中型的設備上(使用 `.d-md-block`)。
 
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">

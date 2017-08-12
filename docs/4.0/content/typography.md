@@ -91,7 +91,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 
 ### 自定義標題
 
-使用隨附的小工具 Class 重現 Bootstrap 3.0 中的小二級標題文本。
+使用隨附的通用類別 Class 重現 Bootstrap 3.0 中的小二級標題文本。
 
 <div class="bd-example">
   <span class="h3">
@@ -166,7 +166,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 
 當以上未顯示時，請自行使用 HTML5 中的 `<b>` 和 `<i>`。`<b>` 旨在突出顯示單詞或短語，而不會增加重要性，而 `<i>` 主要用於語音，技術術語等。
 
-## 文本小工具
+## 文本通用類別
 
 改變文字對齊、變換、樣式、字重和顏色透過 [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/#text-alignment).
 

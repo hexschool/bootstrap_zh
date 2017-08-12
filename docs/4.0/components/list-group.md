@@ -115,7 +115,7 @@ toc: true
 
 ## 帶標籤
 
-在某些 [小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 的幫助下，向任何列表項目添加標籤以顯示未讀計數、活動等。
+在某些 [通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 的幫助下，向任何列表項目添加標籤以顯示未讀計數、活動等。
 
 {% example html %}
 <ul class="list-group">
@@ -136,7 +136,7 @@ toc: true
 
 ## 自定義內容
 
-在 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 的幫助下，添加幾乎任何的 HTML 或內容、連結等，都能加入到一個項目內。
+在 [flexbox 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 的幫助下，添加幾乎任何的 HTML 或內容、連結等，都能加入到一個項目內。
 
 {% example html %}
 <div class="list-group">

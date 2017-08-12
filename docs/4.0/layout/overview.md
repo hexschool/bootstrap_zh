@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: 概要
-description: 介紹 Bootstrap 專案佈局的元件和選項，包括容器、強大的網格系統、靈活的媒體物件和響應式小工具。
+description: 介紹 Bootstrap 專案佈局的元件和選項，包括容器、強大的網格系統、靈活的媒體物件和響應式通用類別。
 group: layout
 redirect_from: "/docs/4.0/layout/"
 toc: true

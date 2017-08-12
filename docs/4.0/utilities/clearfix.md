@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Clearfix
-description: 通過增加一個清除浮動小工具，快速和方便的清除容器內的浮動內容。
+description: 通過增加一個清除浮動通用類別，快速和方便的清除容器內的浮動內容。
 group: utilities
 toc: true
 ---

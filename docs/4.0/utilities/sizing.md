@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: 改變尺寸
-description: 使用寬度和高度小工具，可將一個元素加寬或增高（相對於其母元素）。
+description: 使用寬度和高度通用類別，可將一個元素加寬或增高（相對於其母元素）。
 group: utilities
 toc: true
 ---
@@ -24,7 +24,7 @@ toc: true
 </div>
 {% endexample %}
 
-你也可以使用 `max-width: 100%;` 和 `max-height: 100%;` 這些小工具。
+你也可以使用 `max-width: 100%;` 和 `max-height: 100%;` 這些通用類別。
 
 {% example html %}
 <img class="mw-100" data-src="holder.js/1000px100?text=Max-width%20%3D%20100%25" alt="Max-width 100%">

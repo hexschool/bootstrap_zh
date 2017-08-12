@@ -12,7 +12,7 @@ toc: true
 
 - 導覽列需要在外方使用 `.navbar`，並透過 `.navbar-expand{-sm|-md|-lg|-xl}` 給予響應式的折疊以及使用 [color scheme](#color-schemes) class。
 - 導覽列預設的內容寬度是浮動的，使用 [optional containers](#containers) 來限制水平寬度。
-- 導覽列與內容是使用 flexbox 設定的，可透過小工具來對齊。
+- 導覽列與內容是使用 flexbox 設定的，可透過通用類別來對齊。
 - 導覽列預設是響應式的，在修改上也很容易。響應式行為會使用折疊的 JavaScript 插件。
 - 使用 `<nav>` 元素確保親和性，或者如果使用更通用的元素，如 `<div>`，在導覽列中添加一個 `role="navigation"` ，為使用者的輔助技術明確標識為導覽區域。
 
@@ -60,7 +60,7 @@ toc: true
 
 ### 品牌
 
-`.navbar-brand` 可以應用於大多數元素，但對錨最有效，因為某些元素可能需要小工具 Class 或自訂樣式。
+`.navbar-brand` 可以應用於大多數元素，但對錨最有效，因為某些元素可能需要通用類別 Class 或自訂樣式。
 
 
 {% example html %}
@@ -76,7 +76,7 @@ toc: true
 {% endexample %}
 
 
-圖像增加 `.navbar-brand`，可能的話需要加入一些自訂樣式或小工具 Class 來調整適當的尺寸，以下是一些範例。
+圖像增加 `.navbar-brand`，可能的話需要加入一些自訂樣式或通用類別 Class 來調整適當的尺寸，以下是一些範例。
 
 
 {% example html %}
@@ -197,7 +197,7 @@ toc: true
 </nav>
 {% endexample %}
 
-根據需要將行內表單的內容透過小工具對齊。
+根據需要將行內表單的內容透過通用類別對齊。
 
 
 {% example html %}
@@ -223,7 +223,7 @@ input 群組也可以：
 </nav>
 {% endexample %}
 
-部分導覽列表單需要各種按鈕。可以使用小工具 Class 來作垂直對齊各種元素。
+部分導覽列表單需要各種按鈕。可以使用通用類別 Class 來作垂直對齊各種元素。
 
 
 {% example html %}
@@ -247,7 +247,7 @@ input 群組也可以：
 </nav>
 {% endexample %}
 
-根據需要與其他元件和小工具混合使用。
+根據需要與其他元件和通用類別混合使用。
 
 {% example html %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -276,7 +276,7 @@ input 群組也可以：
 
 ## 顏色方案
 
-由於主題 class 和 `background-color` 小工具 class 的結合，主題化導覽列從未如此簡單。 從 `.navbar-light` 選用淺色背景顏色，或者 `.navbar-dark` 用於深色背景顏色。 然後，使用 `.bg-*` 小工具自訂。
+由於主題 class 和 `background-color` 通用類別 class 的結合，主題化導覽列從未如此簡單。 從 `.navbar-light` 選用淺色背景顏色，或者 `.navbar-dark` 用於深色背景顏色。 然後，使用 `.bg-*` 通用類別自訂。
 
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -403,7 +403,7 @@ input 群組也可以：
 
 ## 定位
 
-使用定位小工具將導覽列放置在非靜態位置。從固定在頂部、固定在底部或 黏(stickied) 在頂部中選擇。 **請注意，`position: sticky`用於`.sticky-top` [這並非在每個流覽器都完全支持](http://caniuse.com/#feat=css-sticky)**
+使用定位通用類別將導覽列放置在非靜態位置。從固定在頂部、固定在底部或 黏(stickied) 在頂部中選擇。 **請注意，`position: sticky`用於`.sticky-top` [這並非在每個流覽器都完全支持](http://caniuse.com/#feat=css-sticky)**
 
 
 {% example html %}
@@ -436,7 +436,7 @@ Navbars can utilize `.navbar-toggler`, `.navbar-collapse`, and `.navbar-expand{-
 
 For navbars that never collapse, add the `.navbar-expand` class on the navbar. For navbars that always collapse, don't add any `.navbar-expand` class.
 
-按鈕後面的內容折疊時，導覽列可以使用 `.navbar-toggler`、`.navbar-collapse` 和 `.navbar-expand{-sm|-md|-lg|-xl}` 的 class 來改變。 結合其他小工具，您可以選擇顯示或隱藏特定元素。
+按鈕後面的內容折疊時，導覽列可以使用 `.navbar-toggler`、`.navbar-collapse` 和 `.navbar-expand{-sm|-md|-lg|-xl}` 的 class 來改變。 結合其他通用類別，您可以選擇顯示或隱藏特定元素。
 
 對於不需要折疊的導覽列，在導覽列中加入 `.navbar-expand`。對於總是折疊的導覽列，不要加任何 `.navbar-expand` class。
 

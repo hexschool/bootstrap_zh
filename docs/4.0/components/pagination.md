@@ -26,7 +26,7 @@ toc: true
 
 ## 使用圖示
 
-想要使用圖示或符號代替某些分頁連結的文字？使用 `aria` 屬性和 `.sr-only` 小工具提供螢幕閱讀器的支援。
+想要使用圖示或符號代替某些分頁連結的文字？使用 `aria` 屬性和 `.sr-only` 通用類別提供螢幕閱讀器的支援。
 
 
 {% example html %}
@@ -137,7 +137,7 @@ toc: true
 
 ## 對齊
 
-使用 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 更改分頁元件的對齊方式。
+使用 [flexbox 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 更改分頁元件的對齊方式。
 
 {% example html %}
 <nav aria-label="Page navigation example">

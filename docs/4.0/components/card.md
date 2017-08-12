@@ -176,7 +176,7 @@ toc: true
 
 ## 縮放
 
-卡片假設沒有特定的 `width`，那麼除非另有聲明，否則它們的寬度將是100％。您可以根據需求自訂 CSS、網格系統、Sass mixins grid 或小工具來調整。
+卡片假設沒有特定的 `width`，那麼除非另有聲明，否則它們的寬度將是100％。您可以根據需求自訂 CSS、網格系統、Sass mixins grid 或通用類別來調整。
 
 ### 使用網格標記
 
@@ -205,9 +205,9 @@ toc: true
 </div>
 {% endexample %}
 
-### 使用小工具
+### 使用通用類別
 
-使用我們的幾個 [可調整大小的小工具][available sizing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) 來設置卡片的寬度。
+使用我們的幾個 [可調整大小的通用類別][available sizing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) 來設置卡片的寬度。
 
 {% example html %}
 <div class="card w-75">
@@ -351,7 +351,7 @@ toc: true
 
 ### 圖像覆蓋
 
-將圖像轉換為卡片背景，並疊加卡片的文字。 根據圖像，你可以選擇是否需要額外的樣式或小工具。
+將圖像轉換為卡片背景，並疊加卡片的文字。 根據圖像，你可以選擇是否需要額外的樣式或通用類別。
 
 
 {% example html %}
@@ -371,7 +371,7 @@ toc: true
 
 ### 背景與顏色
 
-使用 [文字與背景小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/)來改變卡片的顯示顏色。
+使用 [文字與背景通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/)來改變卡片的顯示顏色。
 
 {% example html %}
 {% for color in site.data.theme-colors %}
@@ -389,7 +389,7 @@ toc: true
 
 ### 框線
 
-使用 [框線小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/) 來改變卡片的 `border-color`。也能設置 `.text-{color}` class 在父層的 `.card`，或者是卡片的顯示內容上。
+使用 [框線通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/) 來改變卡片的 `border-color`。也能設置 `.text-{color}` class 在父層的 `.card`，或者是卡片的顯示內容上。
 
 {% example html %}
 {% for color in site.data.theme-colors %}
@@ -402,7 +402,7 @@ toc: true
 </div>{% endfor %}
 {% endexample %}
 
-### Mixins 小工具
+### Mixins 通用類別
 
 也能夠改卡片頁首及頁腳的框線，也能使用 `.bg-transparent` 移除背景顏色。
 

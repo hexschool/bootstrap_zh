@@ -51,7 +51,7 @@ toc: true
 </div>
 {% endexample %}
 
-隨意將 input 組合與工具列中的按鈕群組進行混合。與上面的範例類似，您需要一些小工具來將這些的內容間隔開。
+隨意將 input 組合與工具列中的按鈕群組進行混合。與上面的範例類似，您需要一些通用類別來將這些的內容間隔開。
 
 {% example html %}
 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">

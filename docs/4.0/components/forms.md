@@ -443,7 +443,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 #### 自動尺寸
 
-下面的示例使用一個 flexbox 小工具垂直居中的內容，並將 `.col` 更改為 `.col-auto`，這樣您的欄只佔用了所需的空間。換句話說，欄的大小本身就是基於內容。
+下面的示例使用一個 flexbox 通用類別垂直居中的內容，並將 `.col` 更改為 `.col-auto`，這樣您的欄只佔用了所需的空間。換句話說，欄的大小本身就是基於內容。
 
 {% example html %}
 <form>
@@ -535,11 +535,11 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 使用 `.form-inline` 在單個水平列上顯示一系列標籤、表單控制項、按鈕，行內表單的控制元件與預設的狀態略有不同。
 
-- 控制元件是使用 `display: flex`，折疊任何 HTML 的空白區域及允許對齊的控制小工具如 [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) 和 [flexbox]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/)。
+- 控制元件是使用 `display: flex`，折疊任何 HTML 的空白區域及允許對齊的控制通用類別如 [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) 和 [flexbox]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/)。
 - 控制元件和 input 群組透過 `width: auto` 複寫預設的 `width: 100%`。
 - 控制元件 **僅會在 viewport 大於 576px 時才會顯示行內** 以便在行動裝置上完全顯示。
 
-你需要手動添加寬度或對齊在單獨的控制元件上，透過 [間隔小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)。最後，一定要 `<label>` 包含在每個表單控制元件內，即使您需要使用 `.sr-only` 從非螢幕閱讀器訪問者隱藏它。
+你需要手動添加寬度或對齊在單獨的控制元件上，透過 [間隔通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)。最後，一定要 `<label>` 包含在每個表單控制元件內，即使您需要使用 `.sr-only` 從非螢幕閱讀器訪問者隱藏它。
 
 {% example html %}
 <form class="form-inline">
@@ -592,7 +592,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 ## 幫助文字
 
-可以使用 `.form-text`（v3 中稱為 `.help-block`）創建表單中的塊級幫助文字。可以使用任何行內 HTML 元素和小工具（如 `.text-muted`）靈活地實現行內幫助文字。
+可以使用 `.form-text`（v3 中稱為 `.help-block`）創建表單中的塊級幫助文字。可以使用任何行內 HTML 元素和通用類別（如 `.text-muted`）靈活地實現行內幫助文字。
 
 {% callout warning %}
 ##### 幫助文字需要與控制元件相關聯

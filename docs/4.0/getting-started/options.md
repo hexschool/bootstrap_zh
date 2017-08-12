@@ -38,7 +38,7 @@ $body-color: $gray-600;
 
 ## 色彩
 
-Bootstrap 許多的元件和小工具都是透過這一系列在 Sass map 預定好的色彩，這些再 Sass 中可以依據規則快速產生一系列的集合。
+Bootstrap 許多的元件和通用類別都是透過這一系列在 Sass map 預定好的色彩，這些再 Sass 中可以依據規則快速產生一系列的集合。
 
 ### 全部色彩
 
@@ -65,7 +65,7 @@ Bootstrap 4中提供的所有顏色，都可以透過 `scss/_variables.scss` 的
 {% endhighlight %}
 
 
-[color 小工具 class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) 也可用於設置 `color` 和 `background-color`。
+[color 通用類別 class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) 也可用於設置 `color` 和 `background-color`。
 
 {% callout info %}
 將來，我們的目標是為每種顏色的色調提供 Sass 地圖和變數，就像下面的灰階色彩一樣。

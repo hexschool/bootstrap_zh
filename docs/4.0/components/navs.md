@@ -51,11 +51,11 @@ class 可以使用在很多地方，因此您的標記可以超級靈活。 使�
 
 ## 可用樣式
 
-使用小工具更改 `.nav` 元件的樣式。依據需要混合搭配或自行建立。
+使用通用類別更改 `.nav` 元件的樣式。依據需要混合搭配或自行建立。
 
 ### 水平對齊
 
-使用 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/#horizontal-alignment) 更改導覽的水平對齊方式。預設情況下導覽左對齊，但您可以輕鬆地將其更改為中心或右對齊。
+使用 [flexbox 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/#horizontal-alignment) 更改導覽的水平對齊方式。預設情況下導覽左對齊，但您可以輕鬆地將其更改為中心或右對齊。
 
 用 `.justify-content-center` 置中：
 
@@ -98,7 +98,7 @@ class 可以使用在很多地方，因此您的標記可以超級靈活。 使�
 
 ### 垂直
 
-通過使用 `.flex-column` 小工具更改 flex 項目的軸項。如果在特定 viewports 需要堆疊，可使用響應式版本（例如 `.flex-sm-column`）。
+通過使用 `.flex-column` 通用類別更改 flex 項目的軸項。如果在特定 viewports 需要堆疊，可使用響應式版本（例如 `.flex-sm-column`）。
 
 
 {% example html %}
@@ -234,9 +234,9 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </nav>
 
 {% endexample %}
-## 使用 flex 小工具
+## 使用 flex 通用類別
 
-如果需要響應式的導覽變化，請使用一系列 [flexbox 小工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/)。 這些小工具在中斷點之間提供更多的設定。 在下面的範例中，我們的導覽將堆疊在最小的中斷點上，從小中斷點開始填充完整寬度的水平佈局。
+如果需要響應式的導覽變化，請使用一系列 [flexbox 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/)。 這些通用類別在中斷點之間提供更多的設定。 在下面的範例中，我們的導覽將堆疊在最小的中斷點上，從小中斷點開始填充完整寬度的水平佈局。
 
 {% example html %}
 <nav class="nav nav-pills flex-column flex-sm-row">

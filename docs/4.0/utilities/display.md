@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Display 屬性
-description: Display 小工具可快速且包含響應式的切換元件的顯示與否，我們的 Display 小工具包含許多常用的值，另外在列印時也能使用。
+description: Display 通用類別可快速且包含響應式的切換元件的顯示與否，我們的 Display 通用類別包含許多常用的值，另外在列印時也能使用。
 group: utilities
 toc: true
 ---
 
 ## 常用的 `display` 值
 
-[`display` 屬性](https://developer.mozilla.org/en-US/docs/Web/CSS/display) 有很多值，而小工具支援其中的許多值。但沒有提供所有值在這個小工具內，以下是我們支援的。
+[`display` 屬性](https://developer.mozilla.org/en-US/docs/Web/CSS/display) 有很多值，而通用類別支援其中的許多值。但沒有提供所有值在這個通用類別內，以下是我們支援的。
 
 - `.d-none`
 - `.d-inline`
@@ -49,7 +49,7 @@ toc: true
 
 ## Display 運用在列印
 
-可以在列印時透過 display 小工具改變 `display` 的值。
+可以在列印時透過 display 通用類別改變 `display` 的值。
 
 | Class | Print style |
 | --- | --- |

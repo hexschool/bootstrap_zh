@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Flex
-description: flexbox 小工具的套件包管理網格欄的排版、對齊和特定尺寸。對於更複雜的表現則需要自訂 CSS。
+description: flexbox 通用類別的套件包管理網格欄的排版、對齊和特定尺寸。對於更複雜的表現則需要自訂 CSS。
 group: utilities
 toc: true
 ---
 
 ## 啟用 flex
 
-使用 `display` 小工具來創建一個 flexbox 容器，並將 **直屬內元素** 轉換為 flex 屬性。增加額外的 flex 屬性，也能夠進一步修改 flex 容器和屬性。
+使用 `display` 通用類別來創建一個 flexbox 容器，並將 **直屬內元素** 轉換為 flex 屬性。增加額外的 flex 屬性，也能夠進一步修改 flex 容器和屬性。
 
 {% example html %}
 <div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
@@ -26,7 +26,7 @@ toc: true
 
 ## 方向性
 
-透過小工具來設定 flex 容器與內層 flex 的方向，在大多的情況下你可以忽略水平的 class，因為瀏覽器預設值是 `row`，不過有些特定情境下需要設定這個值(像是響應式情境)。
+透過通用類別來設定 flex 容器與內層 flex 的方向，在大多的情況下你可以忽略水平的 class，因為瀏覽器預設值是 `row`，不過有些特定情境下需要設定這個值(像是響應式情境)。
 
 使用 `.flex-row` 來設定水平的方向(瀏覽器預設值喔)，或者使用 `.flex-row-reverse`來作水平方向的反轉。
 
@@ -69,7 +69,7 @@ toc: true
 
 ## 調整內容
 
-使用 flexbox 容器上的 `justify-content` 小工具改變 flex 物件在主軸上的對齊（x軸開始，如果 `flex-direction: column`，則為 y 軸）。從 `start`（瀏覽器預設）、 `end`、`center`、`between`、或 `around` 中選擇。
+使用 flexbox 容器上的 `justify-content` 通用類別改變 flex 物件在主軸上的對齊（x軸開始，如果 `flex-direction: column`，則為 y 軸）。從 `start`（瀏覽器預設）、 `end`、`center`、`between`、或 `around` 中選擇。
 
 <div class="bd-example">
   <div class="d-flex justify-content-start bd-highlight mb-3">
@@ -168,7 +168,7 @@ toc: true
 
 ## 自身對齊
 
-使用 flexbox 物件上的 `align-self` 小工具單獨改變在橫軸上的對齊（y 軸開始，如果 `flex-direction: column`，則為 x 軸）。與 `align-items` 相同的選項中選擇：`start`、 `end`、 `center`、 `baseline`、 或 `stretch` (瀏覽器預設)。
+使用 flexbox 物件上的 `align-self` 通用類別單獨改變在橫軸上的對齊（y 軸開始，如果 `flex-direction: column`，則為 x 軸）。與 `align-items` 相同的選項中選擇：`start`、 `end`、 `center`、 `baseline`、 或 `stretch` (瀏覽器預設)。
 
 
 <div class="bd-example">
@@ -349,7 +349,7 @@ toc: true
 
 ## 排序
 
-使用 `order` 小工具改變特定 flex 物件的 _顯示_ 排序。我們僅提供將一個物件排在第一個或最後一個，以及重置使用 DOM 次序。由於 `order` 只能使用整數值（例如，5），對需要的任何額外值需要自定義 CSS。
+使用 `order` 通用類別改變特定 flex 物件的 _顯示_ 排序。我們僅提供將一個物件排在第一個或最後一個，以及重置使用 DOM 次序。由於 `order` 只能使用整數值（例如，5），對需要的任何額外值需要自定義 CSS。
 
 
 {% example html %}
@@ -367,7 +367,7 @@ toc: true
 
 ## 對齊內容
 
-使用 flexbox 容器上的 `align-content` 工具將 flex 物件於橫軸上 *一起* 對齊。從`start` (瀏覽器預設), `end`, `center`, `between`, `around`, 或 `stretch`中選擇。為了呈現這小工具的效果，我們加入了 `flex-wrap: wrap`，及增加了flex項的數量。
+使用 flexbox 容器上的 `align-content` 工具將 flex 物件於橫軸上 *一起* 對齊。從`start` (瀏覽器預設), `end`, `center`, `between`, `around`, 或 `stretch`中選擇。為了呈現這通用類別的效果，我們加入了 `flex-wrap: wrap`，及增加了flex項的數量。
 
 **注意！** 此特性對於單行的 flex 無作用。
 
