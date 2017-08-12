@@ -36,7 +36,7 @@ $(document).off('.alert.data-api')
 
 Bootstrap 為大多數插件行為提供了自定義的事件。一般而言，事件都具有不定式和過去分詞的形式 - 其中不定式（比如 `Show`）在事件開始時被觸發，其過去分詞形式（比如 `shown`）在某一動作完成時被觸發。
 
-所有的不定式事件提供了 [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) 的功能。這個功能讓某個動作開始前停止執行預設行為。
+所有的不定式事件提供了 [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) 的功能。這個功能讓某個動作開始前停止執行預設行為，從事件控制中的返回 false 也將自動調用 `preventDefault()`。
 
 {% highlight js %}
 $('#myModal').on('show.bs.modal', function (e) {

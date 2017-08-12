@@ -28,35 +28,25 @@ toc: true
 <h6>Example heading <span class="badge badge-secondary">New</span></h6>
 {% endhighlight %}
 
-Badges can be used as part of links or buttons to provide a counter.
+標籤可以作為連結或按鈕的計數器。
 
-<div class="bd-example">
-<button class="btn">
-  Notifications <span class="badge badge-secondary">4</span>
+{% example html %}
+<button class="btn btn-primary">
+  Notifications <span class="badge badge-light">4</span>
 </button>
-</div>
+{% endexample %}
 
-{% highlight html %}
-<button class="btn">
-  Notifications <span class="badge badge-secondary">4</span>
-</button>
-{% endhighlight %}
 
-Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link or button. Unless the context is clear (as with the "Notifications" example, where it is arguably understandable that the "4" gives a count of the number of notifications), consider including additional context – for instance using a visually hidden piece of additional text.
+根據使用方式，標籤可能會讓螢幕閱讀器及相關輔助技術的用戶感到困惑，雖然標籤的樣式提供了依個視覺提示，但這些用戶只會將只會顯示標籤的內容。這些標籤會看起來像在句子、連結、按鈕中的後方隨機加入的詞或數字。
 
-<div class="bd-example">
-<button class="btn">
-  Profile <span class="badge badge-secondary">9</span>
+除非內文是清楚的 (如 "通知" 範例，使用隱藏的文字內容說明用途)，請考慮將附加的文字內容在視覺上隱藏。
+
+{% example html %}
+<button class="btn btn-primary">
+  Profile <span class="badge badge-light">9</span>
   <span class="sr-only">unread messages</span>
 </button>
-</div>
-
-{% highlight html %}
-<button class="btn">
-  Profile <span class="badge badge-secondary">9</span>
-  <span class="sr-only">unread messages</span>
-</button>
-{% endhighlight %}
+{% endexample %}
 
 ## 情境變化
 

@@ -24,6 +24,7 @@ toc: true
 {% example html %}
 {% for color in site.data.theme-colors %}
 <div class="p-3 mb-2 bg-{{ color.name }} {% if color.name == "light" %}text-gray-dark{% else %}text-white{% endif %}">.bg-{{ color.name }}</div>{% endfor %}
+<div class="p-3 mb-2 bg-white text-gray-dark">.bg-white</div>
 {% endexample %}
 
 {% callout info %}

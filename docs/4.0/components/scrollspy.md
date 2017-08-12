@@ -10,6 +10,7 @@ toc: true
 
 滾動監控正常運行的幾個要求：
 
+- 如果自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/getting-started/javascript/#util)。
 - 必須用在 Bootstrap [導覽元件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/) 或 [列表群組]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/list-group/)。
 - 滾動監控需要在你所監控的元素上使用 `position: relative;`，通常是 `<body>`。
 - 當對 `<body>` 以外的元素進行監控時，請確保具有 `height` 和 `overflow-y: scroll;` 的套用。

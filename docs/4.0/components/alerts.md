@@ -50,6 +50,7 @@ toc: true
 使用警報的 JavaScript 插件，他能夠將行內的警報移除，使用如下：
 
 - 請確認你有載入警報插件，或者是編譯後的 Bootstrap JavaScript。
+- 如果你要自行編譯 JS，編譯的版本記得將 [requires `util.js`]({{ site.baseurl }}/docs/getting-started/javascript/#util) 加入。
 - 加入解除用的按鈕並賦予 `.alert-dismissible`，如果你要將按鈕放在右上角的位置可以使用 `.close`。
 - 解除用的按鈕加上 `data-dismiss="alert"` 屬性用來觸發 JavaScript 函式。請使用 `<button>` 元素，這可以在所有裝置上正常運行。
 - 要以動態方式解除它們，可以使用 `.fade` 和 `.show`。

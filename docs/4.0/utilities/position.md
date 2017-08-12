@@ -6,6 +6,18 @@ group: utilities
 toc: true
 ---
 
+## 通用屬性
+
+快速增加定位 Class 是可以用，雖然這些不包含響應式。
+
+{% highlight html %}
+<div class="position-static">...</div>
+<div class="position-relative">...</div>
+<div class="position-absolute">...</div>
+<div class="position-fixed">...</div>
+<div class="position-sticky">...</div>
+{% endhighlight %}
+
 ## 固定在頂部
 
 將一個元素置於可視區的頂部，從邊到邊。請確認固定在頂部是你理解的方法，必要時你需要增加額外的 CSS。

@@ -18,3 +18,9 @@ toc: true
   @include text-hide;
 }
 {% endhighlight %}
+
+使用 `.text-hide` 來維持標籤的親和性及 SEO，但要使用 `background-image` 取代文字內容。
+
+{% example html %}
+<h1 class="text-hide" style="background-image: url('/assets/brand/bootstrap-solid.svg'); width: 50px; height: 50px;">Bootstrap</h1>
+{% endexample %}

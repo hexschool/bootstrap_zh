@@ -57,14 +57,14 @@ Bootstrap 提供了一些 [寬度設定小工具]({{ site.baseurl }}/docs/{{ sit
 
 ## 高度
 
-我們在 `height` 上設置一個 `height` 值，如果改變這個值，那麼外部的 `.progress` 就會自動調整大小。
+我們在 `.progress` 上設置一個 `height` 值，如果改變這個值，那麼內部的 `.progress-bar` 就會自動調整大小。
 
 {% example html %}
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 25%; height: 1px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" style="height: 1px;">
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 25%; height: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" style="height: 20px;">
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {% endexample %}
 

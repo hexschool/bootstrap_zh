@@ -239,17 +239,17 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 ### 沒有標籤
 
-如果您在 `<label>` 中沒有任何文字，則 input 按照您的預期進行定位。 **目前只適用於非行內核取方塊和選項按鈕。** 請記住，仍然需要為輔助技術提供某種形式的標籤（例如使用 `aria-label`）。
+將 `.form-check` 沒有任何文字內容的 input 加上 `.position-static`。 請記住，仍然需要為輔助技術提供某種形式的標籤（例如使用 `aria-label`）。
 
 {% example html %}
 <div class="form-check">
   <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
   </label>
 </div>
 <div class="form-check">
   <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+    <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
   </label>
 </div>
 {% endexample %}

@@ -24,7 +24,7 @@ toc: true
 
 - 在每個元素上設定全域性的 `box-sizing`，包括 `*:before` 和 `*:after` 以及 `border-box`。這確保元素物件 padding 或 border 不會超過宣告的寬度數值。
   - 不在 `<html>` 上宣告基礎 `font-size`，但假設字體尺寸為 16px (瀏覽器預設)。`font-size:` 在 `<body>` 上應用 1rem 以便於透過 media queries 時採用使用者的喜好與設定輕易設定響應式縮放。
-- `<body>` 同時設定一個全域的 `font-family` 和 `line-height`。隨後某些元素形式會繼承這個設定以防止字體不一致。
+- `<body>` 同時設定一個全域的 `font-family` 和 `line-height` 及 `text-align`，隨後某些元素形式會繼承這個設定以防止字體不一致。
 - 安全起見在 `<body>` 宣告 `background-color` 預設值為 `#fff`。
 
 ## 原生字體堆疊

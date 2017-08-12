@@ -103,31 +103,6 @@ Bootstrap 支援各大瀏覽器和平台最新和最穩定的版本。在 Window
 
 **若您需要支援 IE8-9，請使用 Bootstrap 3.** 這是我們最穩定的版本，並仍然被我們的關鍵錯誤修復團隊和更新檔所支援。然而，不會向 Bootstrap3 添加新的特性。
 
-## Internet Explorer 10 in Windows Phone 8
-
-比[Update 3 (a.k.a.GDR3)](https://blogs.windows.com/buildingapps/2013/10/14/introducing-windows-phone-preview-for-developers/) 更舊的 Windows Phone 第 8 版中的 Internet Explorer 10 在 `@-ms-viewport` at-規則中並未將 **裝置寬度** 與 **視窗寬度** 做區分，因此不會正確應用 Bootstrap CSS 中的 media queries。要應對這個問題，您 **需要加入如下的 JavaScript 以繞開這個錯誤。**
-
-{% highlight js %}
-// Copyright 2014-2017 The Bootstrap Authors
-// Copyright 2014-2017 Twitter, Inc.
-// Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-  var msViewportStyle = document.createElement('style')
-  msViewportStyle.appendChild(
-    document.createTextNode(
-      '@-ms-viewport{width:auto!important}'
-    )
-  )
-  document.head.appendChild(msViewportStyle)
-}
-{% endhighlight %}
-
-For more information and usage guidelines, read [Windows Phone 8 and Device-Width](https://timkadlec.com/2013/01/windows-phone-8-and-device-width/).
-
-欲知更多訊息和使用指南，閱讀 [Windows Phone 8 and Device-Width](https://timkadlec.com/2013/01/windows-phone-8-and-device-width/)。
-
-As a heads up, we include this in all of Bootstrap's documentation and examples as a demonstration.
-
 作為一種提示，我們將此檔作為演示加入到 Bootstrap 的各種文件和範例中。
 
 ## 行動瀏覽器上的 互動視窗 和 下拉式功能表

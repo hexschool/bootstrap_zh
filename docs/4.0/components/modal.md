@@ -15,9 +15,6 @@ toc: true
 - Bootstrap 一次只支援一個動態視窗。不支援巢狀動態視窗，因為我們認為巢狀動態視窗用戶體驗不佳。
 - 動態視窗使用 `position: fixed` 在呈現的方式有點特別。盡可能將您的動態視窗 HTML 放置在頂級位置，以避免其他元素的潛在干擾。在另一個固定元素中內加入一個 `.modal` 的時候，你可能會遇到問題。
 - 由於 `position: fixed`，在移動設備上使用動態視窗有一些附加說明。有關詳細資訊，請參閱 [我們的瀏覽器支援]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/browsers-devices/#modals-and-dropdowns-on-mobile) 。
-- 最後， `autofocus` HTML 屬性對動態視窗沒有任何作用。以下是如何透過自訂 JavaScript 實現相同的效果。
-
-繼續閱讀演示和使用指南。
 
 - 依據 HTML5 定義其語義，[`autofocus` HTML 屬性](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) 對 Bootstrap 動態視窗沒有影響。 要達到同樣的效果，請使用一些自訂 JavaScript：
 
