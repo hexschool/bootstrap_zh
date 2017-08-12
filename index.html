@@ -11,17 +11,19 @@ layout: home
       <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
         <h1 class="mb-3 bd-text-purple-bright">Bootstrap</h1>
         <p class="lead">
-          Build responsive, mobile-first projects on the web with the world's most popular front-end component library.
+          使用世界上最受歡迎的前端元件庫，建立響應式、行動優先的專案。
         </p>
         <p class="lead mb-4">
-          Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.
+          Bootstrap 是一個用於開發 HTML、CSS 和 JS 的開源工具包。
+          透過我們的 Sass 和 mixins、響應式網格系統、預先建構的組件以及基於 jQuery 開發的插件來
+          快速建構你的想法或是應用程式！
         </p>
         <div class="d-flex flex-column flex-md-row lead mb-3">
           <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/" class="btn btn-lg btn-bd-purple mb-3 mb-md-0 mr-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">Get started</a>
           <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/" class="btn btn-lg btn-outline-secondary" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download {{ site.current_version }}');">Download</a>
         </div>
         <p class="text-muted mb-0">
-          Currently v{{ site.current_version }}
+          目前版本 v{{ site.current_version }}
         </p>
       </div>
     </div>
@@ -35,8 +37,8 @@ layout: home
     <svg class="text-primary mb-2" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
       <path d="M28 22 L28 30 4 30 4 22 M16 4 L16 24 M8 16 L16 24 24 16" />
     </svg>
-    <h3>Installation</h3>
-    <p>Include Bootstrap's source Sass and JavaScript files via Bower, Composer, Meteor, or npm. Package managed installs don't include documentation, but do include our build system and readme.</p>
+    <h3>安裝</h3>
+    <p>使用 Bower、Composer、Meteor 或 npm 加入原始的 Sass 和 JavaScript 文件。套件管理安裝不會包含文檔，但包括構建系統和自述文件。</p>
 
 {% highlight sh %}
 npm install bootstrap@{{ site.current_version }}
@@ -50,7 +52,7 @@ gem install bootstrap -v 4.0.0.alpha6
 bower install bootstrap#v{{ site.current_version }}
 {% endhighlight %}
     <hr class="half-rule">
-    <a class="btn btn-outline-primary" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download">Read installation docs</a>
+    <a class="btn btn-outline-primary" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download">閱讀安裝文件</a>
   </div>
 
   <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
@@ -59,21 +61,21 @@ bower install bootstrap#v{{ site.current_version }}
       <path d="M9 22 C0 23 1 12 9 13 6 2 23 2 22 10 32 7 32 23 23 22 M11 26 L16 30 21 26 M16 16 L16 30" />
     </svg>
     <h3>Bootstrap CDN</h3>
-    <p>When you only need to include Bootstrap's compiled CSS or JS, you can use the Bootstrap CDN.</p>
+    <p>當僅需要編譯好的 CSS 或 JS，你可以直接使用 Bootstrap CDN。</p>
 
-<h5>CSS only</h5>
+<h5>僅有 CSS</h5>
 {% highlight html %}
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 {% endhighlight %}
 
-<h5>JS, Popper, and jQuery</h5>
+<h5>JS、Popper 及 jQuery</h5>
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
     <hr class="half-rule">
-    <a class="btn btn-outline-primary" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/">Explore the docs</a>
+    <a class="btn btn-outline-primary" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/">瀏覽文件</a>
   </div>
 
   <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
@@ -81,12 +83,12 @@ bower install bootstrap#v{{ site.current_version }}
     <svg class="text-primary mb-2" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
       <path d="M18 13 L26 2 8 13 14 19 6 30 24 19 Z" />
     </svg>
-    <h3>Official Themes</h3>
+    <h3>官方主題</h3>
     <p>
-      Take Bootstrap 4 to the next level with official premium themes—toolkits built on Bootstrap with new components and plugins, docs, and build tools.
+      將 Bootstrap 4 升級到具有官方優惠主題的 Bootstrap 4 - 使用 Bootstrap 構建的工具包，使用新的元件和插件、文檔和構建工具。
     </p>
     <img class="img-fluid mt-3 mx-auto" src="{{ site.baseurl }}/assets/img/bootstrap-themes.png" alt="Bootstrap Themes" width="1024" height="388">
     <hr class="half-rule">
-    <a href="{{ site.themes }}" class="btn btn-outline-primary">Browse themes</a>
+    <a href="{{ site.themes }}" class="btn btn-outline-primary">瀏覽主題</a>
   </div>
 </div>
