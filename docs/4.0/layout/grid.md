@@ -437,7 +437,7 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 
 這是建立這些樣式的原始程式碼。請注意，欄覆蓋僅限於第一層子欄，並且通過（屬性選擇器）[attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) 確定目標。雖然這產生了更具體的選擇器，通過（調整間隔工具）[spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)可以進一步定制欄的 padding。
 
-**Need an edge-to-edge design?** Drop the parent `.container` or `.container-fluid`.
+** 需要一個邊到邊的設計嗎？** 移除掉父層的 `.container` 或 `.container-fluid`。
 
 {% highlight sass %}
 .no-gutters {
@@ -499,10 +499,7 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 {% endexample %}
 </div>
 
-<<<<<<< HEAD
-## 排序
-=======
-In addition to column clearing at responsive breakpoints, you may need to reset offsets. See this in action in [the grid example]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/grid/).
+除了在響應斷點處加入斷行，您可能需要重置位移量。 在 [響應式範例]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/grid/) 中看到這一點。
 
 <div class="bd-example-row">
 {% example html %}
@@ -518,8 +515,7 @@ In addition to column clearing at responsive breakpoints, you may need to reset 
 {% endexample %}
 </div>
 
-## Reordering
->>>>>>> 9612830701211d757ff95ceccbb494fd2e7ee17e
+## 排序
 
 使用 flexbox 工具控制你的內容的 **可見順序**。
 
@@ -545,14 +541,11 @@ In addition to column clearing at responsive breakpoints, you may need to reset 
 
 ### 推移欄
 
-<<<<<<< HEAD
-透過 v4 的 flexbox，我們不在使用 v3 的推移樣式 class，取而代之的是間隔通用類別，像是 `.mr-auto` 來使元件左右物件遠離。
-=======
-You can offset grid columns in two ways: our responsive `.offset-` grid classes and our [margin utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.
+您可以通過兩種方式來位移欄 `.offset-` Class 和 [margin 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)。網格位移的空間與欄間格相符合，這種推移對於快速佈局可增加更多變化。
 
-#### Offset classes
+#### 位移類別
 
-Move columns to the right using `.offset-md-*` classes. These classes increase the left margin of a column by `*` columns. For example, `.offset-md-4` moves `.col-md-4` over four columns.
+使用 `.offset-md-*` 向右移動列。 透過 `*` 增加欄的左邊距。 例如 `.offset-md-4` 增加四欄位移 `.col-md-4`。
 
 <div class="bd-example-row">
 {% example html %}
@@ -570,10 +563,9 @@ Move columns to the right using `.offset-md-*` classes. These classes increase t
 {% endexample %}
 </div>
 
-#### Margin utilities
+#### Margin 通用類別
 
-With the move to flexbox in v4, you can use margin utilities like `.mr-auto` to force sibling columns away from one another.
->>>>>>> 9612830701211d757ff95ceccbb494fd2e7ee17e
+隨著第四版改用 flexbox，你可以透過 margin 的通用類別，像是 `.mr-auto` 將相鄰的欄位分離到另一邊。
 
 <div class="bd-example-row">
 {% example html %}
@@ -744,8 +736,4 @@ $container-max-widths: (
 );
 {% endhighlight %}
 
-<<<<<<< HEAD
-當對 Sass 變數或 sass map 做出任何改動時，你必須保存你的改動並重新編譯。這樣做將對欄寬度、排序及輸出新的一組網格 class。還將更新響應式元件及中斷點。
-=======
-When making any changes to the Sass variables or maps, you'll need to save your changes and recompile. Doing so will out a brand new set of predefined grid classes for column widths, offsets, and ordering. Responsive visibility utilities will also be updated to use the custom breakpoints.
->>>>>>> 9612830701211d757ff95ceccbb494fd2e7ee17e
+當對 Sass 變數或 sass map 做出任何改動時，你必須保存你的改動並重新編譯。這樣做將對欄寬度、排序、位移、及輸出新的一組網格 class。還將更新響應式元件及中斷點。
