@@ -6,7 +6,7 @@ group: utilities
 toc: true
 ---
 
-通過對 **父元素** 增加`.clearfix`（清除浮動）以方便的清除`float`（浮動）。在 Nicolas Gallagher 的推廣下使用[the micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack/)。也可以做為 Sass mixin 使用。
+通過對 **父元素** 增加`.clearfix`（清除浮動）以方便的清除`float`（浮動）。也可以做為 Sass mixin 使用。
 
 
 {% highlight html %}

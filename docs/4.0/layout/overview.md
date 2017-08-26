@@ -163,7 +163,6 @@ Bootstrap 主要使用以下 media queries 或中斷點針對我們的佈局、�
 我們並不鼓勵自定義這些值；如果你改變了一個，你可能需要全部改變。
 
 ```scss
-$zindex-dropdown-backdrop:  990 !default;
 $zindex-dropdown:          1000 !default;
 $zindex-fixed:             1030 !default;
 $zindex-sticky:            1030 !default;

@@ -10,9 +10,9 @@ toc: true
 
 下拉選單是可切換的，內文框用於顯示連結列表或其他。這些交互功能於 Bootstrap JavaScript 下拉選單插件提供。透過點擊切換，而不是滑入的方式，這是一個策劃好了的 [設計決定](http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/)。
 
-下拉選單是透過第三方插件 [Popper.js](https://popper.js.org) 所建構的，這提供了動態位置及 viewport 的監控。使用前請確認 [popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js) 在 Bootstrap's JavaScript 之前。
+下拉選單是透過第三方插件 [Popper.js](https://popper.js.org) 所建構的，這提供了動態位置及 viewport 的監控。使用前請確認 [popper.min.js]({{ site.cdn.popper }}) 在 Bootstrap's JavaScript 之前。
 
-如果你要自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/getting-started/javascript/#util)。
+如果你要自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)。
 
 ## 親和性
 
@@ -316,7 +316,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
   </div>
 </div>
 <div class="btn-group">
-  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-secondary btn-lg" type="button">
     Large button
   </button>
   <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -337,7 +337,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
   </div>
 </div>
 <div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-secondary btn-sm" type="button">
     Small button
   </button>
   <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -511,8 +511,8 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
     <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
   </div>
   <div class="form-group">
-    <label for="exampleDropdownFormEmail2">Password</label>
-    <input type="password" class="form-control" id="exampleDropdownFormEmail2" placeholder="Password">
+    <label for="exampleDropdownFormPassword2">Password</label>
+    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
   </div>
   <div class="form-check">
     <label class="form-check-label">

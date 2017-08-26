@@ -45,10 +45,10 @@ toc: true
 </table>
 {% endexample %}
 
-也可以作反轉色彩，使用 `.table-inverse` 在深色背景下放上淺色文本。
+也可以作反轉色彩，使用 `.table-dark` 在深色背景下放上淺色文本。
 
 {% example html %}
-<table class="table table-inverse">
+<table class="table table-dark">
   <thead>
     <tr>
       <th>#</th>
@@ -82,11 +82,11 @@ toc: true
 
 ## 表格 head 選項
 
-與預設和反轉樣式相似，使用如下兩個 class 中的一個將 `<thead>` 顯示淺灰或深灰。
+與預設和反轉樣式相似，使用如下兩個 `.thead-light` 或 `.thead-dark` 中的一個將 `<thead>` 顯示淺灰或深灰。
 
 {% example html %}
 <table class="table">
-  <thead class="thead-inverse">
+  <thead class="thead-dark">
     <tr>
       <th>#</th>
       <th>First Name</th>
@@ -117,7 +117,7 @@ toc: true
 </table>
 
 <table class="table">
-  <thead class="thead-default">
+  <thead class="thead-light">
     <tr>
       <th>#</th>
       <th>First Name</th>
@@ -186,7 +186,7 @@ toc: true
 {% endexample %}
 
 {% example html %}
-<table class="table table-striped table-inverse">
+<table class="table table-striped table-dark">
   <thead>
     <tr>
       <th>#</th>
@@ -261,7 +261,7 @@ toc: true
 {% endexample %}
 
 {% example html %}
-<table class="table table-bordered table-inverse">
+<table class="table table-bordered table-dark">
   <thead>
     <tr>
       <th>#</th>
@@ -335,7 +335,7 @@ toc: true
 {% endexample %}
 
 {% example html %}
-<table class="table table-hover table-inverse">
+<table class="table table-hover table-dark">
   <thead>
     <tr>
       <th>#</th>
@@ -403,7 +403,7 @@ toc: true
 {% endexample %}
 
 {% example html %}
-<table class="table table-sm table-inverse">
+<table class="table table-sm table-dark">
   <thead>
     <tr>
       <th>#</th>
@@ -438,7 +438,6 @@ toc: true
 
 使用語意化 class 給表格列或單獨的儲存格上色。
 
-<<<<<<< HEAD
 | Class | Description |
 | --- | --- |
 | `.table-active` | 向一個特定的行或儲存格使用 hover 色彩 |
@@ -447,8 +446,6 @@ toc: true
 | `.table-warning` | 提示一個可能需要注意的警告 |
 | `.table-danger` | 提示一個危險或潛在的否定行動 |
 
-=======
->>>>>>> v4-dev
 <div class="bd-example">
   <table class="table">
     <thead>
@@ -498,10 +495,10 @@ toc: true
 </tr>
 {% endhighlight %}
 
-反轉樣式的表格上沒有固定的背景變數，然而，你可以使用 [文本或背景工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) 獲得類似的樣式。
+深色表格上沒有固定的背景變數，然而，你可以使用 [文本或背景工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) 獲得類似的樣式。
 
 <div class="bd-example">
-  <table class="table table-inverse">
+  <table class="table table-dark">
     <thead>
       <tr>
         <th>#</th>

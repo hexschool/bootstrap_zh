@@ -69,13 +69,13 @@ Bootstrap 的 `package.json` 包含了如下追加的中繼資料：
 通過向你的 [`Gemfile`](https://bundler.io/gemfile.html) 增加如下的命令列，使用 [Bundler](https://bundler.io/) （**推薦**）和 [RubyGems](https://rubygems.org/) 將 Bootstrap 安裝到你的 Ruby 應用程式中：
 
 {% highlight ruby %}
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.0.0.beta'
 {% endhighlight %}
 
 另外，若您沒有使用 Bundler，你可以通過如下的命令：
 
 {% highlight bash %}
-gem install bootstrap -v 4.0.0.alpha6
+gem install bootstrap -v 4.0.0.beta
 {% endhighlight %}
 
 [參見 gem 的 README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md)，以瞭解進一步的細節。

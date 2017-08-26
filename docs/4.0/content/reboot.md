@@ -35,8 +35,6 @@ Bootstrap 4.0 已經放棄了預設網頁字體（Helvetica Neue, Helvetica, 和
 $font-family-sans-serif:
   // Safari for OS X and iOS (San Francisco)
   -apple-system,
-  // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
-  system-ui,
   // Chrome < 56 for OS X (San Francisco)
   BlinkMacSystemFont,
   // Windows
@@ -44,7 +42,9 @@ $font-family-sans-serif:
   // Android
   "Roboto",
   // Basic web fallback
-  "Helvetica Neue", Arial, sans-serif !default;
+  "Helvetica Neue", Arial, sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 {% endhighlight %}
 
 `<body>` 應用 `font-family` 並在整個 Bootstrap 內自動繼承這個全域設定。要切換全域的 `font-family`，更新 `$font-family-base` 並重新編譯 Bootstrap。

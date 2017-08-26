@@ -314,7 +314,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 
 動態分頁標籤介面，如 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 中所描述，需要 `role="tablist"`、`role="tab"`、`role="tabpanel"` 和額外的 `aria-` 屬性向輔助技術（如螢幕閱讀器）的使用者提供他們的結構、功能和當前狀態。
 
-如果你要自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/getting-started/javascript/#util)。
+如果你要自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)。
 
 動態頁籤介面，如 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel)，需要 `role="tablist"`、`role="tab"`，`role="tabpanel"` 和附加的 `aria-` 屬性，向用戶提供輔助技術（如螢幕閱讀器）的結構、功能和當前狀態。
 

@@ -14,7 +14,7 @@ toc: true
 
 {% example html %}
 <div class="media">
-  <img class="d-flex mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
   <div class="media-body">
     <h5 class="mt-0">Media heading</h5>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
@@ -37,13 +37,13 @@ Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如�
 
 {% example html %}
 <div class="media">
-  <img class="d-flex mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
   <div class="media-body">
     <h5 class="mt-0">Media heading</h5>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 
     <div class="media mt-3">
-      <a class="d-flex pr-3" href="#">
+      <a class="pr-3" href="#">
         <img data-src="holder.js/64x64" alt="Generic placeholder image">
       </a>
       <div class="media-body">
@@ -61,7 +61,7 @@ Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如�
 
 {% example html %}
 <div class="media">
-  <img class="d-flex align-self-start mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="align-self-start mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
   <div class="media-body">
     <h5 class="mt-0">Top-aligned media</h5>
     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
@@ -72,7 +72,7 @@ Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如�
 
 {% example html %}
 <div class="media">
-  <img class="d-flex align-self-center mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="align-self-center mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
   <div class="media-body">
     <h5 class="mt-0">Center-aligned media</h5>
     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
@@ -83,7 +83,7 @@ Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如�
 
 {% example html %}
 <div class="media">
-  <img class="d-flex align-self-end mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="align-self-end mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
   <div class="media-body">
     <h5 class="mt-0">Bottom-aligned media</h5>
     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
@@ -102,7 +102,7 @@ Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如�
     <h5 class="mt-0 mb-1">Media object</h5>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
   </div>
-  <img class="d-flex ml-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+  <img class="ml-3" data-src="holder.js/64x64" alt="Generic placeholder image">
 </div>
 {% endexample %}
 
@@ -113,21 +113,21 @@ Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如�
 {% example html %}
 <ul class="list-unstyled">
   <li class="media">
-    <img class="d-flex mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+    <img class="mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
     <div class="media-body">
       <h5 class="mt-0 mb-1">List-based media object</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
   </li>
   <li class="media my-4">
-    <img class="d-flex mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+    <img class="mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
     <div class="media-body">
       <h5 class="mt-0 mb-1">List-based media object</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
   </li>
   <li class="media">
-    <img class="d-flex mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
+    <img class="mr-3" data-src="holder.js/64x64" alt="Generic placeholder image">
     <div class="media-body">
       <h5 class="mt-0 mb-1">List-based media object</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.

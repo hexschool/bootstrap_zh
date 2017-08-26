@@ -27,7 +27,7 @@ $body-color: $gray-600;
 
 | 變數                    | 值                             | 描述                                                                            |
 | --------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------- |
-| `$spacer`                   | `1rem` (預設), 或 > 0 的任何值 | 指定預設的 Spacer 數值以產生 [spacer utilities](/utilities/spacing/). |
+| `$spacer`                   | `1rem` (預設), 或 > 0 的任何值 | 指定預設的 Spacer 數值以產生 [spacer utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/).. |
 | `$enable-rounded`           | `true` (預設) 或 `false`        | 啟用預先定義的 `border-radius` 樣式在各元件上                  |
 | `$enable-shadows`           | `true` 或 `false` (預設)        | 啟用預先定義的 `box-shadow` 樣式在各元件上                        |
 | `$enable-gradients`         | `true` 或 `false` (預設)        | 啟用預先定義的漸層透過 `background-image` 樣式在各元件上          |

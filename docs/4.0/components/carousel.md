@@ -14,7 +14,7 @@ toc: true
 
 請注意，不支援巢狀輪播，而輪播通常不符合無障礙標準。
 
-最後，如果你要自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/getting-started/javascript/#util)。
+最後，如果你要自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)。
 
 ## 範例
 

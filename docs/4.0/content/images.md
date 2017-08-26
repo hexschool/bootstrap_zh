@@ -43,7 +43,7 @@ toc: true
 
 ## 對齊圖片
 
-用 [helper float classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/utilities/float) 或 [text alignment classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment) 讓圖片對齊。
+用 [helper float classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/float) 或 [text alignment classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment) 讓圖片對齊。
  `block`-level 的圖片可以使用 [the `.mx-auto` margin utility class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/#horizontal-centering) 置中。
 
 <div class="bd-example bd-example-images">

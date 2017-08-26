@@ -8,11 +8,11 @@ toc: true
 
 ## 安裝 Bootstrap
 
-使用 Node.js npm [安裝 bootstrap](/getting-started/download/#npm) 。
+使用 Node.js npm [安裝 bootstrap]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/#npm) 。
 
 ## 匯入 JavaScript
 
-匯入 [Bootstrap's JavaScript](/getting-started/javascript/)
+匯入 [Bootstrap's JavaScript]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/)
 加入下面這行在你的 entry point (通常是 `index.js` 或 `app.js`)：
 
 {% highlight js %}
@@ -57,7 +57,7 @@ Bootstrap 取決於[jQuery](https://jquery.com/) 和 [Popper](https://popper.js.
 
 啟用 Bootstrap 的全部潛力並按你的需求客製化 Bootstrap，使用原始檔案作為你編譯的部分內容。
 
-首先，新增你自己的 `_custom.scss` 並將其用於覆蓋 [內建的自訂變數](/getting-started/options/)。然後使用你主要的 sass 檔案以導入你的自訂變數，然後在導入 Bootstrap:
+首先，新增你自己的 `_custom.scss` 並將其用於覆蓋 [內建的自訂變數]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/options/)。然後使用你主要的 sass 檔案以導入你的自訂變數，然後在導入 Bootstrap:
 
 {% highlight scss %}
 @import "custom";
