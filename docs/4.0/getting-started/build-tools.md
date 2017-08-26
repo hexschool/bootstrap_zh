@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 構建工具
+title: 構建工具 (Build Tools)
 description: 學習如何使用 Bootstrap 內建的 npm 腳本建立我們的文件、編譯原始程式碼、運行測試和更多。
 group: getting-started
 toc: true

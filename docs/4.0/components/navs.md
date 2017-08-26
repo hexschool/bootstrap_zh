@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 導覽
+title: 導覽 (Navs)
 description: 如何使用 Bootstrap 包含導覽元件的文件和範例。
 group: components
 toc: true

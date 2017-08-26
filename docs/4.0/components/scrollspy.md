@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 滾動監控
+title: 滾動監控 (Scrollspy)
 description: 根據滾動位置自動更新 Bootstrap 導覽或列表元件，以指示當前處於啟用狀態的連結。
 group: components
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 內嵌
+title: 內嵌 (Embeds)
 description: 在任何比例的裝置上建立內嵌的響應式影片或簡報，使其有固定的縮放比例。
 group: utilities
 toc: true

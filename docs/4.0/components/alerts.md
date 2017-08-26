@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 警報
+title: 警報 (Alerts)
 description: 使用靈活的警報消息為使用者操作提供上下文的內容回饋。
 group: components
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 自定義選項
+title: 自定義選項 (Options)
 description: 用我們內建的自定義變數檔案對 Bootstrap 4 進行客製，並輕鬆的將全域 CSS 切換為新的的 Sass 變數。
 group: getting-started
 toc: true

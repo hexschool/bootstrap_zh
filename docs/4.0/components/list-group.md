@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 列表群組
+title: 列表群組 (List group)
 description: 列表群組具有彈性的顯示一系列內容組件。可以修改擴增已支援更多的內容。
 group: components
 toc: true

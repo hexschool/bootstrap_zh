@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 工具提示框
+title: 工具提示框 (Tooltips)
 description: Bootstrap 的工具提示框文件與範例，工具提示框使用 CSS3 作為動畫顯示及資了屬性作為標題儲存。
 group: components
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 改變尺寸
+title: 尺寸 (Sizing)
 description: 使用寬度和高度通用類別，可將一個元素加寬或增高（相對於其母元素）。
 group: utilities
 toc: true

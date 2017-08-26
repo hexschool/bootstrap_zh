@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 進度條
+title: 進度條 (Progress)
 description: Bootstrap 的進度條支援堆疊、動態背景、文字標籤，以下是文件與範例。
 group: components
 toc: true

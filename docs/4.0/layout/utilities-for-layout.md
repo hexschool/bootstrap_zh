@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 排版通用類別
+title: 排版通用類別 (Utilities for layout)
 description: 為了行動優先及響應式開發，Bootstrap 包括了許多通用類別 class，用於顯示、隱藏、對齊、和調整內容。
 group: layout
 toc: true

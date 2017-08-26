@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 分頁
+title: 分頁 (Pagination)
 description: 分頁的文件和範例，分頁功能將顯示於一系列有相關性的頁面中。
 group: components
 toc: true

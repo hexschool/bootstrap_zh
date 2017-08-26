@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 改變間隔
+title: 間隔 (Spacing)
 description: Bootstrap 包括各種簡寫響應式 margin、padding 的通用類別，可用來修改一個元素的外觀。
 group: utilities
 toc: true

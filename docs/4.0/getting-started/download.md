@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 下載
+title: 下載 (Download)
 description: 下載 Boostrap 以獲得編譯好的 CSS 和 JavaScript、原始程式碼或將其加入到您喜好的 npm、bower、RubyGems 軟體套件管理系統中。
 group: getting-started
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 彈出提示框
+title: 彈出提示框 (Popovers)
 description: Bootstrap 彈出提示框的文件與範例，風格類似 iOS 上的，可加在網頁上的任何元素上。
 group: components
 toc: true

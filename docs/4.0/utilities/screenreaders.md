@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 螢幕閱讀器
+title: 螢幕閱讀器 (Screenreaders)
 description: 透過本元件，隱藏除了螢幕閱讀器之外的所有設備上元素。
 group: utilities
 toc: true

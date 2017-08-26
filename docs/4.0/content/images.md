@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 圖片
+title: 圖片 (Images)
 description: 全部經由類別來設定，選擇加入響應式(因而不會大於其父類別所設定的圖片尺寸)與增加輕巧樣式之文件和範例。
 group: content
 toc: true

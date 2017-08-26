@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 圖片區
+title: 圖片區 (Figures)
 description: 使用 Bootstrap 顯示相關圖檔以及圖片說明的文件和範例。
 group: content
 ---

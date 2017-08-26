@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 卡片
+title: 卡片 (Card)
 description: Bootstrap's 卡片提供了一個具有多種變體和具有選擇性的擴展容器。
 group: components
 toc: true

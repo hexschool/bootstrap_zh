@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 網頁親和性
+title: 網頁親和性 (Accessibility)
 description: 簡要概述 Bootstrap 創建親和性內容的特性和限制
 group: getting-started
 toc: true

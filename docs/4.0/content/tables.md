@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 表格
+title: 表格 (Tables)
 description: Bootstrap 設置選擇性加入樣式的表格文件和範例 (鑒於表格在 JavaScript 外掛程式中的廣泛用途)
 group: content
 toc: true

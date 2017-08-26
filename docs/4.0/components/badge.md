@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 標籤
+title: 標籤 (Badge)
 description: 標籤的文檔與範例，包含小號及元件。
 group: components
 toc: true

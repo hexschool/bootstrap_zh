@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 導覽列
+title: 導覽列 (Navbar)
 description: Bootstrap 導覽列的文件與範例，包含產品標記、導覽以及包含折疊插件。
 group: components
 toc: true

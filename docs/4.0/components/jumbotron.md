@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 廣告大屏幕
+title: 廣告大屏幕 (Jumbotron)
 description: 輕巧，靈活的組件，用於展示醒目風格的內容。
 group: components
 ---

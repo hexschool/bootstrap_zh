@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 媒體物件
+title: 媒體物件 (Media object)
 description: 建立高度可重複元件的 Bootstrap 媒體物件的文件和範例，例如部落格評論、推特等等。
 group: layout
 toc: true

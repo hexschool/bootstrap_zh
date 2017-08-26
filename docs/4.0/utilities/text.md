@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 排版
+title: 文字 (Text)
 description: 一般文字通用類別來控制對齊、圍繞、字體粗細、和其它屬性的文檔範例。
 group: utilities
 toc: true

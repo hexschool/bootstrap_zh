@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 垂直對齊
+title: 垂直對齊 (Vertical alignment)
 description: 改變 inline、inline-block、inline-table、和 table 元素的垂直對齊。
 group: utilities
 ---

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 重置
+title: 重置 (Reboot)
 description: 針對單一檔案內 CSS 的特定元素重置樣式，重置以便 Bootstrap 準確且一致的建立樣式。
 group: content
 redirect_from: "/docs/4.0/content/"

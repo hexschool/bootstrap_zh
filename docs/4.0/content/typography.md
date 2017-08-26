@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 文字排版
+title: 文字排版 (Typography)
 description: 用於 Bootstrap 文字排版的文件和範例，包括全域設定、標題、主體文本、列表和更多。
 group: content
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 下拉選單
+title: 下拉選單 (Dropdowns)
 description: 使用 Bootstrap 下拉選單插件透過連結來切換內文框顯示。
 group: components
 toc: true

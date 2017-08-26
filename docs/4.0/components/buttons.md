@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 按鈕
+title: 按鈕 (Buttons)
 description: 使用 Bootstrap 自訂按鈕樣式到表單、對話方塊等操作，並支援多種大小、狀態等。
 group: components
 redirect_from: "/docs/4.0/components/"

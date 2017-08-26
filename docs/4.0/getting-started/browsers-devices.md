@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 瀏覽器和裝置
+title: 瀏覽器和裝置 (Browsers & devices)
 description: 瞭解 Bootstrap 支援的各種現代和過去的瀏覽器和裝置，包括每個瀏覽器和裝置已知的故障和錯誤。
 group: getting-started
 toc: true

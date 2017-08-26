@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 折疊
+title: 折疊 (Collapse)
 description: 透過 Class 及 JavaScript 插件切換內容的顯示與否。
 group: components
 toc: true

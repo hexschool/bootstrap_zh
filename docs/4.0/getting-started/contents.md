@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Contents
+title: 內容 (Contents)
 description: 展示 Bootstrap 所含的內容，包括我們預先編譯的內容和原始程式碼風格。記住，Bootstrap 的 JavaScript 外掛程式需要 jQuery。
 group: getting-started
 toc: true

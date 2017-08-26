@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 最佳實踐
+title: 最佳實踐 (Best practices)
 description: 瞭解我們多年研究和使用 Bootstrap 中收集的最佳做法。
 group: getting-started
 ---

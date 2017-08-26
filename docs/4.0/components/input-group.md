@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Input 群組
+title: Input 群組 (Input group)
 description: 輕鬆擴展表單控制元件加入文字內容、按鈕、按鈕群組或是其他周圍的文字。
 group: components
 toc: true

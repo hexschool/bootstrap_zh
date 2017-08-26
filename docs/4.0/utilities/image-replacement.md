@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 圖像替換
+title: 圖像替換 (Image replacement)
 description: 使用圖像替換 class 將文字與背景圖像替換。
 group: utilities
 toc: true

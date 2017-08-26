@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 互動視窗
+title: 互動視窗 (Modal)
 description: 使用 Bootstrap JavaScript 的互動視窗插件來增加一個對話視窗、用戶提示或完整的自訂內容。
 group: components
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 可見性
+title: 可見性 (Visibility)
 description: 通過可見性通用類別控制可見性，不會影響物件的實際空間。
 group: utilities
 ---

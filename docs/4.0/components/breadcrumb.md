@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 麵包屑
+title: 麵包屑 (Breadcrumb)
 description: 在導航結構中透過 CSS 自動添加分隔符號指示當前頁面的位置。
 group: components
 ---

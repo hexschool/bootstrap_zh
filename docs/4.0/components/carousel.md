@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 輪播
+title: 輪播 (Carousel)
 description: 用於圖片元素、幻燈片或包含文本的輪播元件。
 group: components
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 按鈕群組
+title: 按鈕群組 (Button group)
 description: 使用按鈕群組將一系列按鈕組合在一起，並且透過 JavaScript 增加它們。
 group: components
 toc: true

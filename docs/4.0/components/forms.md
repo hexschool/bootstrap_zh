@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 表單
+title: 表單 (Forms)
 description: 用於創建各種表單控制項樣式、佈局選項和自訂群組件的範例和使用指南。
 group: components
 toc: true
