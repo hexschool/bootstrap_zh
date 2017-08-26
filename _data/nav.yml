@@ -138,13 +138,19 @@
     - title: 圖示
       url: Icons
 
-# - title: About
-#   pages:
-#     - title: History
-#     - title: Team
-#     - title: Brand
-#     - title: License
-#     - title: Translations
-
 - title: 更版紀錄
   url: Migration
+
+- title: 關於
+  url: About
+  pages:
+    - title: History
+      url: History
+    - title: Team
+      url: Team
+    - title: Brand
+      url: Brand
+    - title: License
+      url: License
+    - title: Translations
+      url: Translations
