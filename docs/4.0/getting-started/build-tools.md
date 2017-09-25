@@ -8,12 +8,12 @@ toc: true
 
 ## 工具設定
 
-Boostrap 的構建系統採用 [NPM 腳本](https://docs.npmjs.com/misc/scripts) 。我們的 [package.json](https://github.com/twbs/bootstrap/blob/v4-dev/package.json) 包含了方便框架工作的方法，包括編譯程式碼、運行測試和更多工作。
+Boostrap 的構建系統採用 [NPM 腳本](https://docs.npmjs.com/misc/scripts) 。我們的 [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) 包含了方便框架工作的方法，包括編譯程式碼、運行測試和更多工作。
 
 要使用我們的構建系統並在本地運行我們的文件，你需要一份 Boostrap 原始檔案的副本和 Node.js。遵循以下步驟，然後準備開始：
 
 1. [下載和安裝 Node.js](https://nodejs.org/download/)，我們採用 Node.js 管理我們的從屬附件。
-2. 進入至 `/bootstrap` 目錄然後運行 `npm install` 安裝我們在 [package.json](https://github.com/twbs/bootstrap/blob/master/package.json) 中列出的相依套件。
+2. 進入至 `/bootstrap` 目錄然後運行 `npm install` 安裝我們在 [package.json][package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) 中列出的相依套件。
 4. [安裝 Ruby][install-ruby]，用 `gem install bundler` 安裝 [Bundler][gembundler]，最後運行 `bundle install`。這回安裝全部的 Ruby 相依套件，比如 Jekyll 和外掛程式。
   -**Windows 用戶。** 閱讀 [此非官方指南](http://jekyll-windows.juthilo.com/)以讓 Jekyll 無問題的運行。
 
@@ -24,7 +24,7 @@ Boostrap 的構建系統採用 [NPM 腳本](https://docs.npmjs.com/misc/scripts)
 
 ## 使用NPM腳本
 
-我們的 [package.json](https://github.com/twbs/bootstrap/blob/master/package.json) 包含了以下的命令和任務：
+我們的 [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) 包含了以下的命令和任務：
 
 | 任務 | 描述 |
 | --- | --- |
@@ -36,7 +36,7 @@ Boostrap 的構建系統採用 [NPM 腳本](https://docs.npmjs.com/misc/scripts)
 
 Bootstrap 採用（我們的構建過程中內含的）[Autoprefixer][autoprefixer] 以便自動在構建時向某些 CSS 屬性增加前輟詞。自動增加前輟詞可讓我們每次編寫 CSS 時，無需採用第三版中用的那些 Sass mixins，這樣可以節省我們的時間。
 
-我們在 GitHub 版本庫中的一份獨立檔案中保存了通過 Autoprefixer 支援的瀏覽器清單。預知明細，請參見 [`/build/postcss.config.js`](https://github.com/twbs/bootstrap/blob/v4-dev/build/postcss.config.js)。
+我們在 GitHub 版本庫中的一份獨立檔案中保存了通過 Autoprefixer 支援的瀏覽器清單。預知明細，請參見 [`/build/postcss.config.js`]({{ site.repo }}/blob/v{{ site.current_version }}/build/postcss.config.js)。
 
 ## 本地檔
 

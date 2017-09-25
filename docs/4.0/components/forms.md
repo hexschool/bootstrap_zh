@@ -338,7 +338,10 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
     </div>
     <div class="form-group col-md-4">
       <label for="inputState" class="col-form-label">State</label>
-      <select id="inputState" class="form-control">Choose</select>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip" class="col-form-label">Zip</label>
@@ -647,9 +650,9 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
         <option>Disabled select</option>
       </select>
     </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox"> Can't check this
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox"> Can't check this
       </label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
@@ -660,7 +663,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 {% callout warning %}
 #### 附加說明和錨
 
-預設情況下，瀏覽器會將 `<fieldset disabled>` 中的所有本地表單控制項（`<input>`、`<select>` 和 `<button>` 元素）視為禁用，防止鍵盤和滑鼠和他們之間的交互。但是，如果您的表單還包含 `<a ... class="btn btn-*">` 元素，則只會給出一種 `pointer-events: none` 的樣式。關於 [按鈕禁用狀態]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#disabled-state)（特別是在錨元素的子部分），此 CSS 屬性尚未標準化，Opera 18 及更低版本或 Internet Explorer 11 中不完全支援，並且不會阻止鍵盤使用者 focus 或啟動這些連結。 為了安全起見，請使用自訂 JavaScript 來禁用此類連結。
+預設情況下，瀏覽器會將 `<fieldset disabled>` 中的所有本地表單控制項（`<input>`、`<select>` 和 `<button>` 元素）視為禁用，防止鍵盤和滑鼠和他們之間的交互。但是，如果您的表單還包含 `<a ... class="btn btn-*">` 元素，則只會給出一種 `pointer-events: none` 的樣式。關於 [按鈕禁用狀態]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#disabled-state)（特別是在錨元素的子部分），此 CSS 屬性尚未標準化，Opera 18 及更低版本或 Internet Explorer 10 中不完全支援，並且不會阻止鍵盤使用者 focus 或啟動這些連結。 為了安全起見，請使用自訂 JavaScript 來禁用此類連結。
 {% endcallout %}
 
 {% callout danger %}
@@ -1009,8 +1012,8 @@ $('.your-checkbox').prop('indeterminate', true)
 
 - 我們將 `<input>`包裝在 `<label>` 中，所以自訂控制元件正確觸發檔案瀏覽。
 - 我們透過 `opacity` 隱藏預設 `<input>`。
-- 我們使用 `:after` 生成一個自訂的背景和文字（**Choose file...**）。
-- 我們使用 `:before` 來生成和定位 *瀏覽* 按鈕。
+- 我們使用 `::after` 生成一個自訂的背景和文字（**Choose file...**）。
+- 我們使用 `::before` 來生成和定位 *瀏覽* 按鈕。
 - 我們在 `<input>` 上使用 `height`，用於周圍內容的適當間距。
 
 換句話說，它是一個完全自定義的元素，都是透過 CSS 生成的。

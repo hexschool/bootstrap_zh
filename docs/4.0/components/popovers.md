@@ -10,7 +10,7 @@ toc: true
 
 使用彈出提示框插件時應瞭解的事情如下：
 
-- 彈出提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 彈出提示框工作之前，您必須包含 [popper.min.js]({{ site.cdn.popper }})
+- 彈出提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 彈出提示框工作之前，您必須包含 [popper.min.js]({{ site.cdn.popper }})，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`，這已經包含 Popper.js 可以直接運作。
 - 彈出提示框需要 [工具提示插件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/tooltips/) 作為依賴。
 - 如果你自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)。
 - 彈出提示框因為校能原因所以是選擇加入，所以 **您必須自己將他們初始化**。

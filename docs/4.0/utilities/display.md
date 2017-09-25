@@ -47,6 +47,30 @@ toc: true
 - `.d{{ bp.abbr }}-flex`
 - `.d{{ bp.abbr }}-inline-flex`{% endfor %}
 
+
+## 隱藏元素
+
+為了更快速且友善的移動設備開發，請使用響應式 display Class 來顯示和隱藏元件。避免創建完全不同版本的同一個網站，而不是按照每個螢幕尺寸隱藏元素。
+
+隱藏元素只需使用 `.d-none` 或 `.d-{sm,md,lg,xl}-none` 的任何響應式的變化。
+
+要在給定的螢幕上顯示一個元素，您可以將一個  `.d-*-none` 與 `.d-*-*` 結合起來，例如  `.d-none.d-md-block.d-xl-none` 將隱藏所有螢幕尺寸的元素，除了中型和大型設備。
+
+| Screen Size        | Class |
+| ---                | --- |
+| Hidden on all      | `d-none` |
+| Hidden only on xs  | `d-none d-sm-block` |
+| Hidden only on sm  | `d-sm-none d-md-block` |
+| Hidden only on md  | `d-md-none d-lg-block` |
+| Hidden only on lg  | `d-lg-none d-xl-block` |
+| Hidden only on xl  | `d-xl-none` |
+| Visible on all     | `d-block` |
+| Visible only on xs | `d-block d-sm-none` |
+| Visible only on sm | `d-none d-sm-block d-md-none` |
+| Visible only on md | `d-none d-md-block d-lg-none` |
+| Visible only on lg | `d-none d-lg-block d-xl-none` |
+| Visible only on xl | `d-none d-xl-block` |
+
 ## Display 運用在列印
 
 可以在列印時透過 display 通用類別改變 `display` 的值。

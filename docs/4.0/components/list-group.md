@@ -252,7 +252,7 @@ toc: true
 通過 JavaScript 啟用可選個列表項目（每個列表項目需要單獨啟動）：
 
 {% highlight js %}
-$('#myList a').click(function (e) {
+$('#myList a').on('click', function (e) {
   e.preventDefault()
   $(this).tab('show')
 })

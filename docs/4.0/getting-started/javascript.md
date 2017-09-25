@@ -12,7 +12,7 @@ toc: true
 
 ## 相依外掛程式
 
-某些外掛程式和 CSS 元件依賴於其他的插件。若你將外掛程式獨立加入，確保檢查文件中是否有上述的相依關係。同時請注意，所有的外掛程式都依賴 jQuery（這意味著 jQuery 必須在插件檔案 **之前**）。[查詢我們的 `bower.json`]({{ site.repo }}/blob/v{{ site.current_version }}/bower.json) ，以查看支援的 jQuery 版本。
+某些外掛程式和 CSS 元件依賴於其他的插件。若你將外掛程式獨立加入，確保檢查文件中是否有上述的相依關係。同時請注意，所有的外掛程式都依賴 jQuery（這意味著 jQuery 必須在插件檔案 **之前**）。[查詢我們的 `package.json`]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) ，以查看支援的 jQuery 版本。
 
 工具提示及彈出提示框也相依於 [Popper.js](https://github.com/FezVrasta/popper.js)。
 

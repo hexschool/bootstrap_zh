@@ -71,7 +71,7 @@ toc: true
 
 <!-- As a heading -->
 <nav class="navbar navbar-light bg-light">
-  <span class="h1" class="navbar-brand mb-0">Navbar</span>
+  <span class="navbar-brand mb-0 h1">Navbar</span>
 </nav>
 {% endexample %}
 
@@ -170,7 +170,7 @@ toc: true
         <a class="nav-link" href="#">Pricing</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown link
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

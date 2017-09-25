@@ -46,11 +46,11 @@ Bootstrap 4中提供的所有顏色，都可以透過 `scss/_variables.scss` 的
 
 <div class="row">
   {% for color in site.data.colors %}
+    {% unless color.name == "white" or color.name == "gray" or color.name == "gray-dark" %}
     <div class="col-md-4">
-      {% unless color.name == "white" or color.name == "gray" or color.name == "gray-dark" %}
         <div class="p-3 mb-3 swatch-{{ color.name }}">{{ color.name | capitalize }}</div>
-      {% endunless %}
     </div>
+    {% endunless %}
   {% endfor %}
 </div>
 

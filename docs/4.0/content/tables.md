@@ -16,10 +16,10 @@ toc: true
 <table class="table">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -51,10 +51,10 @@ toc: true
 <table class="table table-dark">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -88,10 +88,10 @@ toc: true
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -119,10 +119,10 @@ toc: true
 <table class="table">
   <thead class="thead-light">
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -156,10 +156,10 @@ toc: true
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -189,10 +189,10 @@ toc: true
 <table class="table table-striped table-dark">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -226,10 +226,10 @@ toc: true
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -264,10 +264,10 @@ toc: true
 <table class="table table-bordered table-dark">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -306,10 +306,10 @@ toc: true
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -338,10 +338,10 @@ toc: true
 <table class="table table-hover table-dark">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -374,10 +374,10 @@ toc: true
 <table class="table table-sm">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -406,10 +406,10 @@ toc: true
 <table class="table table-sm table-dark">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -450,10 +450,10 @@ toc: true
   <table class="table">
     <thead>
       <tr>
-        <th>Type</th>
-        <th>Column heading</th>
-        <th>Column heading</th>
-        <th>Column heading</th>
+        <th scope="col">Type</th>
+        <th scope="col">Column heading</th>
+        <th scope="col">Column heading</th>
+        <th scope="col">Column heading</th>
       </tr>
     </thead>
     <tbody>
@@ -501,10 +501,10 @@ toc: true
   <table class="table table-dark">
     <thead>
       <tr>
-        <th>#</th>
-        <th>Column heading</th>
-        <th>Column heading</th>
-        <th>Column heading</th>
+        <th scope="col">#</th>
+        <th scope="col">Column heading</th>
+        <th scope="col">Column heading</th>
+        <th scope="col">Column heading</th>
       </tr>
     </thead>
     <tbody>
@@ -589,7 +589,9 @@ toc: true
 
 ## 響應式表格
 
-任何 `.table` 中添加 `.table-responsive` 創建響應式的表格，讓表格在（小於768px）小設備上水平滾動。當在寬度大於 768px 的任何設備上觀看時，不會看見任何差異。
+任何 `.table` 中添加 `.table-responsive{-sm|-md|-lg|-xl}` 創建響應式的表格，讓 `.table`  在分別於 `max-width` 在 (575px、767px、991px 及 1199px) 設備上水平滾動。
+
+當表格想要始終呈現水平滾動，可在 `.table` 上加入 `.table-responsive`。
 
 {% callout warning %}
 #### 垂直剪裁/縮減
@@ -602,18 +604,24 @@ toc: true
   <table class="table table-responsive">
     <thead>
       <tr>
-        <th>#</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
+        <th scope="col">#</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th scope="row">1</th>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
@@ -629,9 +637,15 @@ toc: true
         <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
       </tr>
       <tr>
         <th scope="row">3</th>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
@@ -642,16 +656,16 @@ toc: true
     </tbody>
   </table>
 
-  <table class="table table-bordered table-responsive">
+  <table class="table table-bordered table-responsive-lg">
     <thead>
       <tr>
-        <th>#</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
+        <th scope="col">#</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
       </tr>
     </thead>
     <tbody>
@@ -691,3 +705,42 @@ toc: true
   ...
 </table>
 {% endhighlight %}
+
+
+## 表格標題
+
+`<caption>` 功能像是一個表格的標題。他可以幫助螢幕閱讀器的用戶找到這個表格，並且決定是否要閱讀它。
+
+{% example html %}
+<table class="table">
+  <caption>List of users</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+{% endexample %}

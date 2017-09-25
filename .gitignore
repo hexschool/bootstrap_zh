@@ -50,7 +50,6 @@ docs/.jekyll-metadata
 twbsconfig.yml
 
 # Folders to ignore
-bower_components
 node_modules
 .publish
 yarn.lock

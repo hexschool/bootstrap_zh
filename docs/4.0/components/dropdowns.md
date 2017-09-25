@@ -10,7 +10,7 @@ toc: true
 
 下拉選單是可切換的，內文框用於顯示連結列表或其他。這些交互功能於 Bootstrap JavaScript 下拉選單插件提供。透過點擊切換，而不是滑入的方式，這是一個策劃好了的 [設計決定](http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/)。
 
-下拉選單是透過第三方插件 [Popper.js](https://popper.js.org) 所建構的，這提供了動態位置及 viewport 的監控。使用前請確認 [popper.min.js]({{ site.cdn.popper }}) 在 Bootstrap's JavaScript 之前。
+下拉選單是透過第三方插件 [Popper.js](https://popper.js.org) 所建構的，這提供了動態位置及 viewport 的監控。使用前請確認 [popper.min.js]({{ site.cdn.popper }}) 在 Bootstrap's JavaScript 之前，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 這已經包含 Popper.js。
 
 如果你要自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)。
 
@@ -433,7 +433,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 預設情況下，下拉選單自動位於其父級的上方的 100% 及貼齊左邊緣。將 `.dropdown-menu-right` 加到 `.dropdown-menu` 中可對齊右方邊緣。
 
 {% callout info %}
-**小心！** 下拉列表僅定位在 CSS 中，可能需要一些額外的樣式才能精確對齊。
+**小心！** 讚嘆 Popper.js 下拉選單會自動定位 (包含在導覽列的狀況除外)
 {% endcallout %}
 
 {% example html %}
@@ -575,7 +575,7 @@ $('.dropdown-toggle').dropdown()
 
 ### 選項
 
-可以透過資料屬性或 JavaScript 插件傳遞選項。對於資料屬性，將選項名稱加到 `data-` 上，如 `data-placement=""`。
+可以透過資料屬性或 JavaScript 插件傳遞選項。對於資料屬性，將選項名稱加到 `data-` 上，如 `data-offset=""`。
 
 <table class="table table-bordered table-striped table-responsive">
   <thead>
@@ -587,14 +587,6 @@ $('.dropdown-toggle').dropdown()
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>placement</td>
-      <td>string</td>
-      <td>'bottom'</td>
-      <td>
-        <p>改變彈出的定位置在上方或下方。</p>
-      </td>
-    </tr>
     <tr>
       <td>offset</td>
       <td>number | string</td>

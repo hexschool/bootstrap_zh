@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: 下載 (Download)
-description: 下載 Boostrap 以獲得編譯好的 CSS 和 JavaScript、原始程式碼或將其加入到您喜好的 npm、bower、RubyGems 軟體套件管理系統中。
+description: 下載 Boostrap 以獲得編譯好的 CSS 和 JavaScript、原始程式碼或將其加入到您喜好的 npm、RubyGems 軟體套件管理系統中。
 group: getting-started
 toc: true
 ---
@@ -86,14 +86,6 @@ gem install bootstrap -v 4.0.0.beta
 
 {% highlight bash %}
 composer require twbs/bootstrap:{{ site.current_version }}
-{% endhighlight %}
-
-### Bower
-
-使用 [Bower](https://bower.io) 安裝和管理 Bootstrap 的 Sass 和 JavaScrpit。
-
-{% highlight bash %}
-bower install bootstrap#v{{ site.current_version }}
 {% endhighlight %}
 
 ### NuGet

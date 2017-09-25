@@ -10,7 +10,7 @@ toc: true
 
 使用工具提示框插件時應瞭解的事情如下：
 
-- 工具提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 工具提示框工作之前，您必須包含 [popper.min.js]({{ site.cdn.popper }})
+- 工具提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 工具提示框工作之前，您必須包含 [popper.min.js]({{ site.cdn.popper }})，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`，這已經包含 Popper.js 可以直接運作。
 - 如果自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/getting-started/javascript/#util)
 - 工具提示框因為校能原因所以是選擇加入，所以 **您必須自己將他們初始化**。
 - 零長度 `title` 和 `content` 值將永遠不會顯示一個工具提示框。

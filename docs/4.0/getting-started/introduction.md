@@ -38,6 +38,7 @@ toc: true
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Hello, world!</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -96,7 +97,7 @@ Bootstrap 的開發以 *行動優先* 為策略，按照這個策略，我們優
 }
 {% endhighlight %}
 
-透過以上程式碼片段，巢狀元素（包括 `：before` 和 `：after`）生成的內容都將繼承 `.selector-for-some-widget` 的指定 `box-sizing`。
+透過以上程式碼片段，巢狀元素（包括 `::before` 和 `::after`）生成的內容都將繼承 `.selector-for-some-widget` 的指定 `box-sizing`。
 
 瞭解有關 [盒模型及尺寸在 CSS Tricks](https://css-tricks.com/box-sizing/).
 

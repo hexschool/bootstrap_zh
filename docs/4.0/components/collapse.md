@@ -41,7 +41,7 @@ toc: true
 {% example html %}
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle second element</button>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
 </p>
 <div class="row">
@@ -208,8 +208,6 @@ $('.collapse').collapse()
 
 #### `.collapse(options)`
 
-Activates your content as a collapsible element. Accepts an optional options `object`.
-
 啟用你的可折疊元素的內容，透過包含選項的 `object`。
 
 {% highlight js %}
@@ -221,6 +219,7 @@ $('#myCollapsible').collapse({
 #### `.collapse('toggle')`
 
 將可折疊元素切換為顯示或隱藏。 **在可折疊元素實際顯示或隱藏之前**（即發生 `shown.bs.collapse` 或 `hidden.bs.collapse` 事件之前）返回到調用者。
+
 #### `.collapse('show')`
 
 顯示可折疊的元素。 **在可折疊元素實際顯示之前**（即在 `shown.bs.collapse` 事件發生之前）返回到調用者。

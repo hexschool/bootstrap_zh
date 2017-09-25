@@ -20,7 +20,7 @@ toc: true
 
 {% highlight js %}
 $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
+  $('#myInput').trigger('focus')
 })
 {% endhighlight %}
 
@@ -31,7 +31,7 @@ $('#myModal').on('shown.bs.modal', function () {
 下面是一個 _static_ 動態視窗範例（意思是它的 `position` 和 `display` 已被重寫）。 包括動態視窗標題、動態視窗體（`padding` 必要）和動態視窗頁腳（可選）。盡可能地包含動態視窗標題與移除按鈕，或提供另一個明確的移除操作。
 
 <div class="bd-example bd-example-modal">
-  <div class="modal">
+  <div class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -53,7 +53,7 @@ $('#myModal').on('shown.bs.modal', function () {
 </div>
 
 {% highlight html %}
-<div class="modal">
+<div class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">

@@ -33,14 +33,14 @@ toc: true
 
 卡支援各種內容，包括圖像、文本、清單組、連結等。以下是支援的範例。
 
-### 塊狀
+### 主要區塊
 
-卡的塊狀構建是 `.card-block`。當你需要在一個卡片內含 padding 部分就可以使用它。
+卡的塊狀構建是 `.card-body`。當你需要在一個卡片內含 padding 部分就可以使用它。
 
 {% example html %}
 <div class="card">
   <div class="card-body">
-    This is some text within a card block.
+    This is some text within a card body.
   </div>
 </div>
 {% endexample %}
@@ -597,7 +597,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
-  <div class="card bg-primary p-3 text-center">
+  <div class="card bg-primary text-white text-center p-3">
     <blockquote class="blockquote mb-0">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
       <footer class="blockquote-footer">

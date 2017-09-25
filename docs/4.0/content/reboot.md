@@ -22,7 +22,7 @@ toc: true
 
 為了提供最佳的頁面預設值而更新`<html>` 和 `<body>` 元素。具體而言：
 
-- 在每個元素上設定全域性的 `box-sizing`，包括 `*:before` 和 `*:after` 以及 `border-box`。這確保元素物件 padding 或 border 不會超過宣告的寬度數值。
+- 在每個元素上設定全域性的 `box-sizing`，包括 `*::before` 和 `*::after` 以及 `border-box`。這確保元素物件 padding 或 border 不會超過宣告的寬度數值。
   - 不在 `<html>` 上宣告基礎 `font-size`，但假設字體尺寸為 16px (瀏覽器預設)。`font-size:` 在 `<body>` 上應用 1rem 以便於透過 media queries 時採用使用者的喜好與設定輕易設定響應式縮放。
 - `<body>` 同時設定一個全域的 `font-family` 和 `line-height` 及 `text-align`，隨後某些元素形式會繼承這個設定以防止字體不一致。
 - 安全起見在 `<body>` 宣告 `background-color` 預設值為 `#fff`。
@@ -339,7 +339,7 @@ HTML 添加了 [一個名為 `[hidden]` 的新全域屬性](https://developer.mo
 {% callout warning %}
 #### jQuery 的不相容性
 
-`[hidden]` 不相容 jQuery's `$(...).hide()` 和 `$(...).show()` 的方式。這可能會在 jQuery 3 中修改，但我們不能坐視不理。因此，當前並不是特別將 `[hidden]` 優先於 `display` 的其他方法。
+`[hidden]` 不相容 jQuery's `$(...).hide()` 和 `$(...).show()` 的方式。然而，我們目前並沒有接受 `[hidden]` 的其他技術來管理元素的 `display`。
 {% endcallout %}
 
 若僅僅要切換某個元素的可視度，切換可視度的含義是不修改 `display`，且元素仍可影響文件排版，可使用[the `.invisible` class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/visibility/) 來取代。
