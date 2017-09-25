@@ -20,7 +20,7 @@ toc: true
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 {% endhighlight %}
 
-在接近頁面的結尾處，就在 `</body>` 結尾標籤前，加入我們的 JavaScript 外掛程式、jQuery 以及 Popper.js。請務必將 jQuery 和 Popper.js 至於前方，因為我們的插件依賴於這兩個外掛程式。雖然我們使用了 [jQuery 的精簡版）](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/)，但是同時支援完整版。
+在接近頁面的結尾處，就在 `</body>` 結尾標籤前，加入我們的 JavaScript 外掛程式、jQuery 以及 Popper.js。請務必將 jQuery 和 Popper.js 至於前方，因為我們的插件依賴於這兩個外掛程式。雖然我們使用了 [jQuery 的精簡版](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/)，但是同時支援完整版。
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
