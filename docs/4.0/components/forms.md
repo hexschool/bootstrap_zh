@@ -587,7 +587,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 {% callout warning %}
 #### 隱藏標籤的替代品
 
-如果您沒有為每個 input 添加標籤，螢幕閱讀器等輔助技術將對您的表單感到困擾。對於這些行內表單，您可以使用 `.sr-only` 來隱藏標籤。還提供了輔助技術標籤的另外的替代方法，例如 `aria` 標籤、`aria-labelledby` 或 `title` 屬性。如果這些都不存在，輔助技術可能會使用 `placeholder` 的屬性（如果存在），但請注意，不建議使用 `placeholder` 替代其他標籤方法。
+如果您沒有為每個 input 添加標籤，螢幕閱讀器等輔助技術將對您的表單感到困擾。對於這些行內表單，您可以使用 `.sr-only` 來隱藏標籤。還提供了輔助技術標籤的另外的替代方法，例如 `aria-label` 、`aria-labelledby` 或 `title` 屬性。如果這些都不存在，輔助技術可能會使用 `placeholder` 的屬性（如果存在），但請注意，不建議使用 `placeholder` 替代其他標籤方法。
 {% endcallout %}
 
 ## 幫助文字
@@ -674,7 +674,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 透過 HTML5 表單驗證可在我們支持的 [瀏覽器中提供](http://caniuse.com/#feat=form-validation) 為您的用戶提供可操作的反饋。從瀏覽器中選擇預設驗證反饋，或者使用我們內置的 Class 和啟動 JavaScript 實現自定義訊息。
 
 {% callout warning %}
-我們 **強烈推薦自定義** 驗證樣式，因為瀏覽器預設值沒辦法提供給與螢幕閱讀器使用者。
+我們 **強烈推薦自定義** 驗證樣式，因為瀏覽器預設值沒辦法告知螢幕閱讀器使用者。
 {% endcallout %}
 
 ### 如何運作
@@ -963,7 +963,7 @@ $('.your-checkbox').prop('indeterminate', true)
 
 #### 堆疊
 
-自訂核取方塊和單選按鈕是平行的開始。加入一個 `.custom-controls-stacked` 的父級，以確保每個表單控制元件在不同的列上。
+自訂的核取方塊和單選按鈕原本會以行內樣式排列。加入一個 `.custom-controls-stacked` 的父級，以確保每個表單控制元件在不同的列上。
 
 {% example html %}
 <div class="custom-controls-stacked">

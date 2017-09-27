@@ -42,7 +42,7 @@ toc: true
 </div>
 {% endexample %}
 
-對於更長的內容，你可以增加一個 `.text-truncate`，可以截掉多餘內容改用 `...`。**需要使用 **`display: inline-block` or `display: block`**。
+對於更長的內容，你可以增加一個 `.text-truncate`，可以截掉多餘內容改用 `...`。**需要使用 `display: inline-block` or `display: block`**。
 
 {% example html %}
 <!-- Block level -->

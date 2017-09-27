@@ -339,9 +339,9 @@ $('#myModal').on('shown.bs.modal', function () {
 
 ### 不同的動態視窗內容
 
-有一對按鈕來處發相同互動視窗，但導入不同內容？
+有一對按鈕來觸發相同互動視窗，但導入不同內容？
 
-有一對按鈕來處發相同互動視窗，但導入不同內容？ 使用 `event.relatedTarget` 和 [HTML `data-*` 屬性](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (或者 [透過 jQuery](https://api.jquery.com/data/)) 依據點擊按鈕來更改動態視窗的內容。
+有一對按鈕來觸發相同互動視窗，但導入不同內容？ 使用 `event.relatedTarget` 和 [HTML `data-*` 屬性](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (或者 [透過 jQuery](https://api.jquery.com/data/)) 依據點擊按鈕來更改動態視窗的內容。
 
 下面在 HTML 和 JavaScript 後有一個範例。 有關 `relatedTarget` 的詳細資訊，請參閱 [動態視窗的事件](#事件)。
 
