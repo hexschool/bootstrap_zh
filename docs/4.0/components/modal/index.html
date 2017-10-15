@@ -1153,7 +1153,8 @@ var google_remarketing_only = true;
           <p class="bd-lead">使用 Bootstrap JavaScript 的互動視窗插件來增加一個對話視窗、用戶提示或完整的自訂內容。</p>
           <div style="max-width: 450px; padding: 15px; overflow: hidden; background-color: rgba(0,0,0,.05); border-radius: 4px; font-size: 13px;">
   <a href="http://www.hexschool.com/" style="margin-bottom: 12px; display: block">
-    <svg width="164px" height="39px" style="display: block" viewBox="0 0 164 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="164px" height="39px" style="display: block" viewBox="0 0 164 39" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
       <title>六角學院</title>
       <desc>六角學院</desc>
       <defs>
@@ -1193,9 +1194,10 @@ var google_remarketing_only = true;
       </g>
     </svg>
   </a>
-  <p class="text-secondary">想了解更多、更深入的 Bootstrap 嗎？六角學院的 Bootstrap 課程上線囉，立即與萬人一同學習最專業、最深入的 Bootstrap 課程。</p>
-  <p class="text-danger">即日起至 2017/10/22 <strong>課程半價</strong>。</p>
-  <a href="http://www.hexschool.com/bootstrap/?utm_source=doc&utm_medium=cpc&utm_campaign=BS4DOC" style="font-size: 1rem" class="btn btn-primary btn-sm AddToWishlist" target="_blank">立即上課去</a>
+  <p class="text-secondary" style="font-size: 15px">六角學院的 Bootstrap 課程上線囉，立即與萬人一同學習最專業、最深入的 Bootstrap 課程。</p>
+  <p class="text-danger countdown-timer text-center" style="font-size: 15px"></p>
+  <a href="http://www.hexschool.com/bootstrap/?utm_source=doc&utm_medium=cpc&utm_campaign=BS4DOC" style="font-size: 1rem" class="btn btn-primary btn-sm AddToWishlist"
+    target="_blank">立即上課去</a>
   <script>
     (function () {
       var wishBtns = document.querySelectorAll('.AddToWishlist');
@@ -1204,11 +1206,35 @@ var google_remarketing_only = true;
           'item': 'Bootsrap 4'
         });
       };
-      
+
       wishBtns.forEach(function (wishBtn) {
         wishBtn.addEventListener('click', AddToWishlist)
       }, this);
     })();
+
+    window.onload = loadCountdownScript(function () {
+      $(document).ready(function () {
+        timer = '2017/10/23';
+        timer = new Date(timer);
+        d = new Date();
+        if (d < timer) {
+          $('.countdown-timer').countdown(timer, function (event) {
+            $(this).html(event.strftime('<strong>課程半價</strong>最後 倒數 %D天 %H時 %M分 %S秒'))
+          });
+        }
+      });
+    })
+    function loadCountdownScript(callback) {
+      var head = document.getElementsByTagName('head')[0];
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js';
+      head.appendChild(script);
+
+      script.onload = function () {
+        callback();
+      };
+    }
   </script>
 
 </div>
@@ -1534,9 +1560,9 @@ var google_remarketing_only = true;
 
 <h3 id="不同的動態視窗內容">不同的動態視窗內容</h3>
 
-<p>有一對按鈕來觸發相同互動視窗，但導入不同內容？</p>
+<p>有一對按鈕來處發相同互動視窗，但導入不同內容？</p>
 
-<p>有一對按鈕來觸發相同互動視窗，但導入不同內容？ 使用 <code class="highlighter-rouge">event.relatedTarget</code> 和 <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">HTML <code class="highlighter-rouge">data-*</code> 屬性</a> (或者 <a href="https://api.jquery.com/data/">透過 jQuery</a>) 依據點擊按鈕來更改動態視窗的內容。</p>
+<p>有一對按鈕來處發相同互動視窗，但導入不同內容？ 使用 <code class="highlighter-rouge">event.relatedTarget</code> 和 <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">HTML <code class="highlighter-rouge">data-*</code> 屬性</a> (或者 <a href="https://api.jquery.com/data/">透過 jQuery</a>) 依據點擊按鈕來更改動態視窗的內容。</p>
 
 <p>下面在 HTML 和 JavaScript 後有一個範例。 有關 <code class="highlighter-rouge">relatedTarget</code> 的詳細資訊，請參閱 <a href="#事件">動態視窗的事件</a>。</p>
 

@@ -182,7 +182,8 @@ var google_remarketing_only = true;
     <p class="bd-lead">Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.</p>
     <div style="max-width: 450px; padding: 15px; overflow: hidden; background-color: rgba(0,0,0,.05); border-radius: 4px; font-size: 13px;">
   <a href="http://www.hexschool.com/" style="margin-bottom: 12px; display: block">
-    <svg width="164px" height="39px" style="display: block" viewBox="0 0 164 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="164px" height="39px" style="display: block" viewBox="0 0 164 39" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
       <title>六角學院</title>
       <desc>六角學院</desc>
       <defs>
@@ -222,9 +223,10 @@ var google_remarketing_only = true;
       </g>
     </svg>
   </a>
-  <p class="text-secondary">想了解更多、更深入的 Bootstrap 嗎？六角學院的 Bootstrap 課程上線囉，立即與萬人一同學習最專業、最深入的 Bootstrap 課程。</p>
-  <p class="text-danger">即日起至 2017/10/22 <strong>課程半價</strong>。</p>
-  <a href="http://www.hexschool.com/bootstrap/?utm_source=doc&utm_medium=cpc&utm_campaign=BS4DOC" style="font-size: 1rem" class="btn btn-primary btn-sm AddToWishlist" target="_blank">立即上課去</a>
+  <p class="text-secondary" style="font-size: 15px">六角學院的 Bootstrap 課程上線囉，立即與萬人一同學習最專業、最深入的 Bootstrap 課程。</p>
+  <p class="text-danger countdown-timer text-center" style="font-size: 15px"></p>
+  <a href="http://www.hexschool.com/bootstrap/?utm_source=doc&utm_medium=cpc&utm_campaign=BS4DOC" style="font-size: 1rem" class="btn btn-primary btn-sm AddToWishlist"
+    target="_blank">立即上課去</a>
   <script>
     (function () {
       var wishBtns = document.querySelectorAll('.AddToWishlist');
@@ -233,11 +235,35 @@ var google_remarketing_only = true;
           'item': 'Bootsrap 4'
         });
       };
-      
+
       wishBtns.forEach(function (wishBtn) {
         wishBtn.addEventListener('click', AddToWishlist)
       }, this);
     })();
+
+    window.onload = loadCountdownScript(function () {
+      $(document).ready(function () {
+        timer = '2017/10/23';
+        timer = new Date(timer);
+        d = new Date();
+        if (d < timer) {
+          $('.countdown-timer').countdown(timer, function (event) {
+            $(this).html(event.strftime('<strong>課程半價</strong>最後 倒數 %D天 %H時 %M分 %S秒'))
+          });
+        }
+      });
+    })
+    function loadCountdownScript(callback) {
+      var head = document.getElementsByTagName('head')[0];
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js';
+      head.appendChild(script);
+
+      script.onload = function () {
+        callback();
+      };
+    }
   </script>
 
 </div>
