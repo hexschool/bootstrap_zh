@@ -438,17 +438,6 @@ toc: true
 
 使用語意化 class 給表格列或單獨的儲存格上色。
 
-<<<<<<< HEAD
-| Class | Description |
-| --- | --- |
-| `.table-active` | 向一個特定的行或儲存格使用 hover 色彩 |
-| `.table-success` | 提示一個成功或肯定的行動 |
-| `.table-info` | 提示一個中性的資訊變更或行動 |
-| `.table-warning` | 提示一個可能需要注意的警告 |
-| `.table-danger` | 提示一個危險或潛在的否定行動 |
-
-=======
->>>>>>> v4-dev
 <div class="bd-example">
   <table class="table">
     <thead>
