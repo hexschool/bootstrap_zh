@@ -8,7 +8,7 @@ toc: true
 
 ## 自定義變數
 
-Bootstrap 4 附帶一個 `_custom.scss` 用於覆蓋預設變數的 `/scss/_variables.scss` 檔案。將其中的相關程式碼複製貼上到 `_custom.scss` 檔案中並修改數值，重新編譯你的 Sass 以更新預設數值。**務必從覆蓋的數值中刪除 `!default`**。
+所有的 Boostrap 4 中的 SASS 變數均包含 `!default` 標籤，表示你可以在自己的 Sass 檔中覆蓋原本的預設值，甚至是在原本的變數被定義之後。複製貼上所需要使到的變數，改變這些預設值，並且移除到後面的 `default` 標籤，然後重新編譯你的 Sass 以更新預設數值。**務必從覆蓋的數值中刪除 `!default`**。
 
 比如，要更改 `background-color` 和 `<body>` 的 `color`，編寫如下的程式碼：
 
