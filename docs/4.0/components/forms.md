@@ -265,11 +265,11 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 {% example html %}
 <form>
   <div class="form-group">
-    <label class="form-control-label" for="formGroupExampleInput">Example label</label>
+    <label class="col-form-label" for="formGroupExampleInput">Example label</label>
     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
   </div>
   <div class="form-group">
-    <label class="form-control-label" for="formGroupExampleInput2">Another label</label>
+    <label class="col-form-label" for="formGroupExampleInput2">Another label</label>
     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
   </div>
 </form>
@@ -315,36 +315,36 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 <form>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4" class="col-form-label">Email</label>
+      <label for="inputEmail4">Email</label>
       <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4" class="col-form-label">Password</label>
+      <label for="inputPassword4">Password</label>
       <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress" class="col-form-label">Address</label>
+    <label for="inputAddress">Address</label>
     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
   </div>
   <div class="form-group">
-    <label for="inputAddress2" class="col-form-label">Address 2</label>
+    <label for="inputAddress2">Address 2</label>
     <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity" class="col-form-label">City</label>
+      <label for="inputCity">City</label>
       <input type="text" class="form-control" id="inputCity">
     </div>
     <div class="form-group col-md-4">
-      <label for="inputState" class="col-form-label">State</label>
+      <label for="inputState">State</label>
       <select id="inputState" class="form-control">
         <option selected>Choose...</option>
         <option>...</option>
       </select>
     </div>
     <div class="form-group col-md-2">
-      <label for="inputZip" class="col-form-label">Zip</label>
+      <label for="inputZip">Zip</label>
       <input type="text" class="form-control" id="inputZip">
     </div>
   </div>
@@ -366,62 +366,87 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 確保增加 `.col-form-label` 在你的 `<label>` 上，以便他們與相關的表單垂直居中。`<legend>` 元素可以使用 `.col-form-legend` 與常規的 `<label>` 元素相似。
 
 {% example html %}
-<div class="container">
-  <form>
-    <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-      </div>
+<form>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
     </div>
-    <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-      <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-      </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
     </div>
-    <fieldset class="form-group">
-      <div class="row">
-        <legend class="col-form-legend col-sm-2">Radios</legend>
-        <div class="col-sm-10">
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-              Option one is this and that&mdash;be sure to include why it's great
-            </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-              Option two can be something else and selecting it will deselect option one
-            </label>
-          </div>
-          <div class="form-check disabled">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-              Option three is disabled
-            </label>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-    <div class="form-group row">
-      <div class="col-sm-2">Checkbox</div>
+  </div>
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-legend col-sm-2">Radios</legend>
       <div class="col-sm-10">
         <div class="form-check">
           <label class="form-check-label">
-            <input class="form-check-input" type="checkbox"> Check me out
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            Option one is this and that&mdash;be sure to include why it's great
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            Option two can be something else and selecting it will deselect option one
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+            Option three is disabled
           </label>
         </div>
       </div>
     </div>
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+  </fieldset>
+  <div class="form-group row">
+    <div class="col-sm-2">Checkbox</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox"> Check me out
+        </label>
       </div>
     </div>
-  </form>
-</div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+</form>
+{% endexample %}
+
+##### Horizontal form label sizing
+
+Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+
+{% example html %}
+<form>
+  <div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg">
+    </div>
+  </div>
+</form>
 {% endexample %}
 
 #### 欄位尺寸
@@ -674,7 +699,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 
 ## 驗證
 
-透過 HTML5 表單驗證可在我們支持的 [瀏覽器中提供](http://caniuse.com/#feat=form-validation) 為您的用戶提供可操作的反饋。從瀏覽器中選擇預設驗證反饋，或者使用我們內置的 Class 和啟動 JavaScript 實現自定義訊息。
+透過 HTML5 表單驗證可在我們支持的 [瀏覽器中提供](https://caniuse.com/#feat=form-validation) 為您的用戶提供可操作的反饋。從瀏覽器中選擇預設驗證反饋，或者使用我們內置的 Class 和啟動 JavaScript 實現自定義訊息。
 
 {% callout warning %}
 我們 **強烈推薦自定義** 驗證樣式，因為瀏覽器預設值沒辦法提供給與螢幕閱讀器使用者。
@@ -741,18 +766,19 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
-  "use strict";
-  window.addEventListener("load", function() {
-    var form = document.getElementById("needs-validation");
-    form.addEventListener("submit", function(event) {
-      if (form.checkValidity() == false) {
+  'use strict';
+
+  window.addEventListener('load', function() {
+    var form = document.getElementById('needs-validation');
+    form.addEventListener('submit', function(event) {
+      if (form.checkValidity() === false) {
         event.preventDefault();
         event.stopPropagation();
       }
-      form.classList.add("was-validated");
+      form.classList.add('was-validated');
     }, false);
   }, false);
-}());
+})();
 </script>
 {% endexample %}
 

@@ -285,6 +285,9 @@ $('[data-spy="scroll"]').each(function () {
 })
 {% endhighlight %}
 
+### `.scrollspy('dispose')`
+
+Destroys an element's scrollspy.
 
 ### 選項
 
@@ -323,13 +326,13 @@ $('[data-spy="scroll"]').each(function () {
     <tr>
       <td>activate.bs.scrollspy</td>
       <td>
-      每當一個項目被啟用時，這個事件就會觸發。</td>
+      每當一個項目被啟用時，這個事件會在滾動元素上觸發。</td>
     </tr>
   </tbody>
 </table>
 
 {% highlight js %}
-$('#myScrollspy').on('activate.bs.scrollspy', function () {
+$('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
   // do something…
 })
 {% endhighlight %}

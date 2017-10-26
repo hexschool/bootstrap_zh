@@ -8,9 +8,12 @@ toc: true
 
 ## 如何運作
 
-Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內容。它用 flexbox 建立，並且完全符合響應式。下面是網格系統如何整合的例子及深入瞭解。
+Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內容。它用 [flexbox]((https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)) 建立，並且完全符合響應式。下面是網格系統如何整合的例子及深入瞭解。
 
-<div class="bd-example bd-example-row">
+**New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
+
+<div class="bd-example-row">
+{% example html %}
 <div class="container">
   <div class="row">
     <div class="col-sm">
@@ -24,11 +27,11 @@ Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內�
     </div>
   </div>
 </div>
+{% endexample %}
 </div>
 
 
 上面的例子使用我們的預定義網格類在小型、中型、大型、和超大型設備上建立了三個等寬度欄。通過父類 `.container` 使這些欄位於頁面中心。
-
 
 步驟說明它如何工作：
 
@@ -39,10 +42,12 @@ Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內�
 - 欄的 Class 表示你希望使用的欄的數量（可能每行12欄）。所以如果你希望三個等寬度欄，你可以使用`.col-sm-4`。
 - 欄寬度 `width` 以百分比設置，所以它們總是不固定的，並且大小與它們的母元素相關。
 - 欄包含水平的 `padding`，以產生單個欄之間的溝槽，但是你可以通過 `.row` 上的 `.no-gutters` 從行中移除邊緣 `margin`，從欄中移除填充 `padding`。
-- 共有五個網格等級，每個一個[responsive breakpoint]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/#responsive-breakpoints): 所有中斷點（極小）、小、中、大、和極大。
+- 共有五個網格等級，每個一個[responsive breakpoint]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/#responsive-breakpoints): 所有中斷點（極小）、小、中、大、和極大 （(extra small), small, medium, large, and extra large）。
 - 網格等級基於最小寬度，意味著它們適用於一個等級和所有高於它的等級（例如，`.col-sm-4` 適用於小型、中型、大型、和超大型設備）。
 - 你可以對更多的語義標記使用預定義網格 class 或 Sass mixins。
-- 瞭解限制和（flexbox 的 Bug）[bugs around flexbox](https://github.com/philipwalton/flexbugs)，像是（不能使用某些 HTML 元素作為 flex 容器）[inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
+
+瞭解限制和（flexbox 的 Bug）[bugs around flexbox](https://github.com/philipwalton/flexbugs)，像是（不能使
+用某些 HTML 元素作為 flex 容器）[inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
 
 覺得如何呢？很好，我們繼續在範例中全面瞭解。
 
@@ -150,9 +155,10 @@ Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內�
 {% endexample %}
 </div>
 
-等寬度欄可以分為多個行，但是有一個[Safari flexbox bug](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items) 它在沒有明確的`flex-basis` 或 `border`的情況下運行。由於設置了`border` 我們的例子才能運行；你可以通過`.col { border: 1px solid transparent; }`完成相同的工作。不過，你也可以將 flex-basis 設置為欄的寬度(e.g., `.col { flex: 1 0 50%; }`).
+等寬度欄可以分為多個行，但是有一個[Safari flexbox bug](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items) 它在沒有明確的`flex-basis` 或 `border`的情況下運行。
 
-這些修復已經記錄在[reduced test case outside Bootstrap](https://output.jsbin.com/micohor)中.
+這些修復已經記錄在[reduced test case outside Bootstrap](https://output.jsbin.com/micohor)中，如果瀏覽器是最新的，這就不是必須的。
+
 
 <div class="bd-example-row">
 {% example html %}
@@ -479,10 +485,9 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 {% endexample %}
 </div>
 
-### 欄重置
+### Column breaks
 
-通過一些可用的網格層，你將會遇到一些問題，在某些中斷點，你的欄與比它高的欄明顯有差異。為了修復這一問題，使用 `.clearfix` 和 [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) 的組合。
-
+在 Flexbox 中將列拆分成新行需要一個小hack：當你想中斷你的欄到新的一行，可增加一個元素為 `width: 100%`。正常來說，通常這是通過多個`.row` 完成的，但此方法也是可行的。
 
 <div class="bd-example-row">
 {% example html %}
@@ -490,8 +495,8 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
 
-  <!-- Add the extra clearfix for only the required viewport -->
-  <div class="clearfix d-none d-sm-block"></div>
+  <!-- Force next columns to break to new line -->
+  <div class="w-100"></div>
 
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
@@ -499,25 +504,26 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 {% endexample %}
 </div>
 
-除了在響應斷點處加入斷行，您可能需要重置位移量。 在 [響應式範例]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/grid/) 中看到這一點。
+除了在響應斷點處加入斷行，您可能需要重置位移量。 在 [響應式範例]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) 中看到這一點。
 
 <div class="bd-example-row">
 {% example html %}
 <div class="row">
-  <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
-  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
-</div>
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
 
-<div class="row">
-  <div class="col-sm-6 col-md-5 col-lg-6">.col.col-sm-6.col-md-5.col-lg-6</div>
-  <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
+  <!-- Force next columns to break to new line at md breakpoint and up -->
+  <div class="w-100 d-none d-md-block"></div>
+
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
 </div>
 {% endexample %}
 </div>
 
 ## 排序
 
-使用 flexbox 工具控制你的內容的 **可見順序**。
+### Order classes
 
 使用 `.order-` class 來控制內容中 **可見的內容** 順序，這些 class 是響應式的，所以可以設定 `order` 在不同斷點上 (e.g., `.order-1.order-md-2`)，包含支援 `1` ~ `12` 及不同的中斷點。
 
@@ -539,7 +545,27 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 {% endexample %}
 </div>
 
-### 推移欄
+還有一個響應式的 `.order-first`，可以透過 `order: -1` 來快速更改一個元素的順序。 這個 Class 也可以依據需要與編號的`.order-*` 混合使用。
+
+<div class="bd-example-row">
+{% example html %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      First, but unordered
+    </div>
+    <div class="col">
+      Second, but unordered
+    </div>
+    <div class="col order-first">
+      Third, but first
+    </div>
+  </div>
+</div>
+{% endexample %}
+</div>
+
+### 欄的推移
 
 您可以通過兩種方式來位移欄 `.offset-` Class 和 [margin 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)。網格位移的空間與欄間格相符合，這種推移對於快速佈局可增加更多變化。
 
@@ -559,6 +585,22 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 </div>
 <div class="row">
   <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+</div>
+{% endexample %}
+</div>
+
+除了增加在欄的位移，您也可以透過中斷點重置位移量。在 [網格範例]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/grid/) 中查看此操作。
+
+<div class="bd-example-row">
+{% example html %}
+<div class="row">
+  <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-5 col-lg-6">.col.col-sm-6.col-md-5.col-lg-6</div>
+  <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
 </div>
 {% endexample %}
 </div>

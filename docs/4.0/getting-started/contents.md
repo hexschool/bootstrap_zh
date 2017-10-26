@@ -18,13 +18,69 @@ bootstrap/
 │   ├── bootstrap.css
 │   ├── bootstrap.css.map
 │   ├── bootstrap.min.css
-│   └── bootstrap.min.css.map
+│   ├── bootstrap.min.css.map
+│   ├── bootstrap-grid.css
+│   ├── bootstrap-grid.css.map
+│   ├── bootstrap-grid.min.css
+│   ├── bootstrap-grid.min.css.map
+│   ├── bootstrap-reboot.css
+│   ├── bootstrap-reboot.css.map
+│   ├── bootstrap-reboot.min.css
+│   └── bootstrap-reboot.min.css.map
 └── js/
+    ├── bootstrap.bundle.js
+    ├── bootstrap.bundle.min.js
     ├── bootstrap.js
     └── bootstrap.min.js
 {% endhighlight %}
 
 這是用於快速加入幾乎任何網頁專案中的 Bootstrap (預先編譯好的基本形式)。我們提供了編譯好的 CSS 和 JS (`bootstrap.*`)，以及最小化的 CSS 和 JS(`bootstrap.min.*`)。提供結合特定的瀏覽器開發者工具使用的 CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`)
+
+### CSS 檔案的比較
+
+<table class="table table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">CSS files</th>
+      <th scope="col" class="text-center">Layout</th>
+      <th scope="col" class="text-center">Content</th>
+      <th scope="col" class="text-center">Components</th>
+      <th scope="col" class="text-center">Utilities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <div><code class="text-nowrap">bootstrap.css</code></div>
+        <div><code class="text-nowrap">bootstrap.min.css</code></div>
+      </th>
+      <td class="table-success text-center align-middle">All</td>
+      <td class="table-success text-center align-middle">All</td>
+      <td class="table-success text-center align-middle">All</td>
+      <td class="table-success text-center align-middle">All</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <div><code class="text-nowrap">bootstrap-grid.css</code></div>
+        <div><code class="text-nowrap">bootstrap-grid.min.css</code></div>
+      </th>
+      <td class="table-warning text-center align-middle">Only <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/">grid</a> system</td>
+      <td class="table-danger text-center align-middle">No</td>
+      <td class="table-danger text-center align-middle">No</td>
+      <td class="table-warning text-center align-middle">Only <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/">flex</a> utilities</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <div><code class="text-nowrap">bootstrap-reboot.css</code></div>
+        <div><code class="text-nowrap">bootstrap-reboot.min.css</code></div>
+      </th>
+      <td class="table-danger text-center align-middle">No</td>
+      <td class="table-warning text-center align-middle">Only <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/">Reboot</a></td>
+      <td class="table-danger text-center align-middle">No</td>
+      <td class="table-danger text-center align-middle">No</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Bootstrap 原始碼
 

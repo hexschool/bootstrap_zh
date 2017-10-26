@@ -36,7 +36,7 @@ toc: true
 
 
 `<button>` 或 `<a>` 可以透過在其 `href` 或 `data-target` 屬性中使用 JQuery 選擇器引用它們來顯示和隱藏多個元素。
-如果每個引用它們 `href` 或 `data-target` 屬性，多個 `<button>` 或 `<a>` 都可以顯示和隱藏元素
+如果每個引用它們 `href` 或 `data-target` 屬性，多個 `<button>` 或 `<a>` 都可以顯示和隱藏元素。
 
 {% example html %}
 <p>
@@ -187,10 +187,10 @@ $('.collapse').collapse()
   <tbody>
     <tr>
       <td>parent</td>
-      <td>selector</td>
+      <td>selector | jQuery object | DOM element </td>
       <td>false</td>
       <td>
-      如果提供了選擇器，則當顯示此可折疊物件時，指定父項下的所有可折疊元素將被關閉。（類似于傳統的折疊控制項行為 - 這取決於 <code>card</code>）。該屬性必須在目標可折疊區域上設置。</td>
+      如果提供了父層，則當顯示此可折疊物件時，指定父項下的所有可折疊元素將被關閉。（類似于傳統的折疊控制項行為 - 這取決於 <code>card</code>）。該屬性必須在目標可折疊區域上設置。</td>
     </tr>
     <tr>
       <td>toggle</td>
@@ -227,6 +227,10 @@ $('#myCollapsible').collapse({
 #### `.collapse('hide')`
 
 隱藏可折疊的元素。 **在可折疊元素實際上被隱藏之前返回給調用者**（即在 `hidden.bs.collapse` 事件發生之前）。
+
+### `.collapse('dispose')`
+
+銷毀一個元素的折疊。
 
 ### 事件
 

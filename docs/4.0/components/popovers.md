@@ -135,6 +135,10 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 
 使用 `focus` 觸發以便用戶進行下一次點擊時移除這個彈出提示框。
 
+<<<<<<< HEAD
+=======
+Use the `focus` trigger to dismiss popovers on the user's next click of a different element than the toggle element.
+>>>>>>> v4.0.0-beta.2
 
 {% callout danger %}
 #### 下一步點擊所需的具體標記
@@ -153,10 +157,14 @@ $('.popover-dismiss').popover({
 {% endhighlight %}
 
 
+<<<<<<< HEAD
 
 ## 用法
 
 透過 JavaScript 啟用彈出提示框。
+=======
+## Usage
+>>>>>>> v4.0.0-beta.2
 
 
 {% highlight js %}$('#example').popover(options){% endhighlight %}
@@ -184,7 +192,7 @@ $('.popover-dismiss').popover({
     </tr>
     <tr>
       <td>container</td>
-      <td>string | false</td>
+      <td>string | element | false</td>
       <td>false</td>
       <td>
         <p>
@@ -228,7 +236,7 @@ $('.popover-dismiss').popover({
     </tr>
     <tr>
       <td>selector</td>
-      <td>string</td>
+      <td>string | false</td>
       <td>false</td>
       <td>
       如果提供了選擇器，彈出提示框將被委派給指定的目標。實際上，這用於動態 HTML 來擴增彈出提示框。 請參閱<a href="https://github.com/twbs/bootstrap/issues/4215"> 此 </a> 和 <a href="https://jsbin.com/zopod/1/edit">一個訊息範例</a>。</td>
@@ -319,7 +327,6 @@ $('.popover-dismiss').popover({
 #### `.popover('dispose')`
 
 隱藏和銷毀一個元素的彈出提示框。使用委託（[the `selector` option](#options)) 創建）的彈出提示框不能在後代觸發元素上被單獨銷毀。
-
 
 {% highlight js %}$('#element').popover('dispose'){% endhighlight %}
 

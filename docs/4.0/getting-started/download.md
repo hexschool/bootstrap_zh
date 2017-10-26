@@ -10,7 +10,7 @@ toc: true
 
 下載編譯完成可立即運用的 **Bootstrap 4{{ site.current_version}}** 加入到你的專案，這些包含了：
 
-- 編譯好及壓縮後的 CSS 包 (預設僅有網格及重置)
+- 編譯好及壓縮後的 CSS 包 (看看 [檔案比較]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#comparison-of-css-files))
 - 編譯好及壓縮的 JavaScript 套件
 
 這些不包含文件、原始檔案、或任何選用的 JavaScript 相依套件 (jQuery 及 Popper.js)
@@ -53,7 +53,7 @@ toc: true
 
 用 [npm](https://www.npmjs.com/package/bootstrap) 將 Bootstrap 安裝到基於 Node.js 的應用程式中
 
-{% highlight bash %}
+{% highlight sh %}
 npm install bootstrap@{{ site.current_version }}
 {% endhighlight %}
 
@@ -69,28 +69,28 @@ Bootstrap 的 `package.json` 包含了如下追加的中繼資料：
 通過向你的 [`Gemfile`](https://bundler.io/gemfile.html) 增加如下的命令列，使用 [Bundler](https://bundler.io/) （**推薦**）和 [RubyGems](https://rubygems.org/) 將 Bootstrap 安裝到你的 Ruby 應用程式中：
 
 {% highlight ruby %}
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'bootstrap', '~> {{ site.current_ruby_version }}'
 {% endhighlight %}
 
 另外，若您沒有使用 Bundler，你可以通過如下的命令：
 
-{% highlight bash %}
-gem install bootstrap -v 4.0.0.beta
+{% highlight sh %}
+gem install bootstrap -v {{ site.current_ruby_version }}
 {% endhighlight %}
 
 [參見 gem 的 README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md)，以瞭解進一步的細節。
 
 ### Composer
 
-你還可以使用 [Composer](https://getcomposer.org) 安裝和管理 Bootstrap 的 Sass 和 JavaScript：
+你還可以使用 [Composer](https://getcomposer.org/) 安裝和管理 Bootstrap 的 Sass 和 JavaScript：
 
-{% highlight bash %}
+{% highlight sh %}
 composer require twbs/bootstrap:{{ site.current_version }}
 {% endhighlight %}
 
 ### NuGet
 
-若你在 .NET 中進行開發，你還可以使用 [NuGet](https://www.nuget.org) 安裝和管理 Bootstrap 的
+若你在 .NET 中進行開發，你還可以使用 [NuGet](https://www.nuget.org/) 安裝和管理 Bootstrap 的
 [CSS](https://www.nuget.org/packages/bootstrap/) 或 [Sass](https://www.nuget.org/packages/bootstrap.sass/) 和 JavaScript：
 
 {% highlight powershell %}

@@ -136,7 +136,7 @@ input 群組中的按鈕必須包裝在 `.input-group-btn`中，以便正確對�
 </div>
 <br>
 <div class="row">
-  <div class="col-lg-offset-3 col-lg-6">
+  <div class="col-lg-6 offset-lg-3">
     <div class="input-group">
       <span class="input-group-btn">
         <button class="btn btn-secondary" type="button">Hate it</button>

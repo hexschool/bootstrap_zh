@@ -16,7 +16,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 - `$link-color` 設定全域連結顏色並僅在 `:hover` 加上連結底線。
 - 使用 `$body-bg` 以在 `<body>` 上設定一個`$body-bg`（默認為 `#fff`）。
 
-可以在 `_reboot.scss` 中找到上述格式，且在 `_variables.scss` 定義了全域變數。
+可以在 `_reboot.scss` 中找到上述格式，且在 `_variables.scss` 定義了全域變數。確保在 `rem` 中設置 `$font-size-base`。
 
 ## 標題
 
@@ -288,24 +288,24 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 
 {% highlight scss %}
 html {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 @include media-breakpoint-up(sm) {
   html {
-    font-size: 16px;
+    font-size: 1.2rem;
   }
 }
 
 @include media-breakpoint-up(md) {
   html {
-    font-size: 20px;
+    font-size: 1.4rem;
   }
 }
 
 @include media-breakpoint-up(lg) {
   html {
-    font-size: 28px;
+    font-size: 1.6rem;
   }
 }
 {% endhighlight %}

@@ -15,6 +15,8 @@
       url: Options
     - title: 構建工具
       url: Build Tools
+    - title: 主題化
+      url: Theming
     # - title: Best practices
     #   url: Best practices
     - title: Webpack

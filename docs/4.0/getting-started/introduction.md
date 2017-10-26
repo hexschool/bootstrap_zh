@@ -14,13 +14,17 @@ toc: true
 
 想要快速地將 Bootstrap 添加到你的專案中！使用 MaxCDN 公司的免費提供的 Bootstrap CDN。如需用套件管理工具或需要下載原始檔可 [前往下載頁面]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)。
 
+## CSS
+
 將樣式表 `<link>` 複製-貼上到網頁中在所有其他樣式表之前的 `<head>` 中，以便載入 Bootstrap 的CSS。
 
 {% highlight html %}
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 {% endhighlight %}
 
-在接近頁面的結尾處，就在 `</body>` 結尾標籤前，加入我們的 JavaScript 外掛程式、jQuery 以及 Popper.js。請務必將 jQuery 和 Popper.js 至於前方，因為我們的插件依賴於這兩個外掛程式。雖然我們使用了 [jQuery 的精簡版](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/)，但是同時支援完整版。
+我們的許多組件需要使用 JavaScript 才能運行。具體來說，他們需要 [jQuery](https://jquery.com)、[Popper.js](https://popper.js.org/) 和我們自己的 JavaScript 插件。 就在 `</body>` 結尾標籤前，在頁面末尾放置以下 `<script>` 以啟用它們。首先是 jQuery，然後是 Popper.js，最後是我們的 JavaScript 插件。
+
+我們使用 [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/)，也同時支持完整版本。
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
@@ -28,14 +32,29 @@ toc: true
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-就是這麼簡單！你現在就要完成一個完全由 Bootstrap 建設的網站。若不確定整體的網頁結構，請繼續往下閱讀瞭解一個網頁範例。
+好奇哪些組件明確要求 jQuery、Bootstrap JS 和 Popper.js？ 點擊下面的顯示組件鏈接。如果您不確定一般頁面結構，請繼續閱讀範例頁面。
+
+<details>
+<summary class="text-primary mb-3">Show components requiring JavaScript</summary>
+{% markdown %}
+- Alerts for dismissing
+- Buttons for toggling states and checkbox/radio functionality
+- Carousel for all slide behaviors, controls, and indicators
+- Collapse for toggling visibility of content
+- Dropdowns for displaying and positioning (also requires [Popper.js](https://popper.js.org/))
+- Modals for displaying, positioning, and scroll behavior
+- Navbar for extending our Collapse plugin to implement responsive behavior
+- Tooltips and popovers for displaying and positioning (also requires [Popper.js](https://popper.js.org/))
+- Scrollspy for scroll behavior and navigation updates
+{% endmarkdown %}
+</details>
 
 ## 初學者範本
 
 務必用最新的設計和開發標準設定你的網頁。這意味著使用一個 HTML 5 的文本類型，並加入一個 viewport 標籤以正常運行響應式網頁。整合在一起後，你的頁面應該是如下這個樣子：
 
 {% highlight html %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Hello, world!</title>
@@ -69,7 +88,7 @@ toc: true
 Bootstrap 要求使用 HTML5 文件類型。沒有這個文件類型，你會看見一些奇怪的不完整格式。但加入這個文件類型應當不會導致任何錯誤。
 
 {% highlight html %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   ...
 </html>

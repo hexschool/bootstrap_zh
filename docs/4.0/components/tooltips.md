@@ -11,7 +11,7 @@ toc: true
 使用工具提示框插件時應瞭解的事情如下：
 
 - 工具提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 工具提示框工作之前，您必須包含 [popper.min.js]({{ site.cdn.popper }})，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`，這已經包含 Popper.js 可以直接運作。
-- 如果自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/getting-started/javascript/#util)
+- 如果自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)
 - 工具提示框因為校能原因所以是選擇加入，所以 **您必須自己將他們初始化**。
 - 零長度 `title` 和 `content` 值將永遠不會顯示一個工具提示框。
 - 指定 `container: 'body'` 以避免在更複雜的元件（如我們的輸入群組，按鈕群組等）中呈現問題。
@@ -204,7 +204,7 @@ $('#example').tooltip(options)
     </tr>
     <tr>
       <td>selector</td>
-      <td>string</td>
+      <td>string | false</td>
       <td>false</td>
       <td>
       如果提供了選擇器，工具提示框將被委派給指定的目標。實際上，這用於動態 HTML 來擴增工具提示物件。 請參閱<a href="https://github.com/twbs/bootstrap/issues/4215"> 此 </a> 和 <a href="https://jsbin.com/zopod/1/edit">一個訊息範例</a>。

@@ -12,6 +12,7 @@ group: getting-started
 {% endcallout %}
 
 ### General outline
+
 - Working with CSS
 - Working with Sass files
 - Building new CSS components

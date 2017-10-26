@@ -12,8 +12,9 @@ toc: true
 
 - 導覽列需要在外方使用 `.navbar`，並透過 `.navbar-expand{-sm|-md|-lg|-xl}` 給予響應式的折疊以及使用 [color scheme](#color-schemes) class。
 - 導覽列預設的內容寬度是浮動的，使用 [optional containers](#containers) 來限制水平寬度。
-- 導覽列與內容是使用 flexbox 設定的，可透過通用類別來對齊。
+- 使用 [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) 及 [flex]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 通用類別來控制物件在導覽列的間隔及對齊。
 - 導覽列預設是響應式的，在修改上也很容易。響應式行為會使用折疊的 JavaScript 插件。
+- 預設情況下，列印時 Navbar 是隱藏的，如果需要列印它可以加入 `.d-print` 在 `.navbar` 上，查看 [display]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) 的通用類別。
 - 使用 `<nav>` 元素確保親和性，或者如果使用更通用的元素，如 `<div>`，在導覽列中添加一個 `role="navigation"` ，為使用者的輔助技術明確標識為導覽區域。
 
 請閱讀範例和一些支援的子組件清單。
@@ -46,6 +47,17 @@ toc: true
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
@@ -57,6 +69,8 @@ toc: true
   </div>
 </nav>
 {% endexample %}
+
+本範例使用 [color]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) (`bg-light`) 和 [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) (`my-2`, `my-lg-0`, `mr-sm-0`, `my-sm-0`) 通用類別。
 
 ### 品牌
 
@@ -330,7 +344,7 @@ input 群組也可以：
       </ul>
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
@@ -405,10 +419,13 @@ input 群組也可以：
 
 使用定位通用類別將導覽列放置在非靜態位置。從固定在頂部、固定在底部或 黏(stickied) 在頂部中選擇。 **請注意，`position: sticky`用於`.sticky-top` [這並非在每個流覽器都完全支持](http://caniuse.com/#feat=css-sticky)**
 
+使用我們的 [定位通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/position/) 將導覽列放置在非靜態位置。選擇固定到頂部、固定到底部、或粘貼到頂部（當頁面滾動至物件位置時，會固定在頂部並停留在那裡）。 固定的導覽列使用`position：fixed'，這意味著從 DOM 的正常定位中被拉出，並且可能需要自定義CSS（例如 `<body>` 上的 `padding-top`），以防止與其他元素重疊。
+
+還要注意 **`.sticky-top` 使用 `position：sticky`，在每個瀏覽器中都[不完全支持](https://caniuse.com/#feat=css-sticky)**。
 
 {% example html %}
 <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Full width</a>
+  <a class="navbar-brand" href="#">Default</a>
 </nav>
 {% endexample %}
 

@@ -31,7 +31,7 @@ toc: true
 標籤可以作為連結或按鈕的計數器。
 
 {% example html %}
-<button class="btn btn-primary">
+<button type="button" class="btn btn-primary">
   Notifications <span class="badge badge-light">4</span>
 </button>
 {% endexample %}
@@ -42,7 +42,7 @@ toc: true
 除非內文是清楚的 (如 "通知" 範例，使用隱藏的文字內容說明用途)，請考慮將附加的文字內容在視覺上隱藏。
 
 {% example html %}
-<button class="btn btn-primary">
+<button type="button" class="btn btn-primary">
   Profile <span class="badge badge-light">9</span>
   <span class="sr-only">unread messages</span>
 </button>
@@ -71,7 +71,7 @@ toc: true
 
 ## 連結
 
-使用 `.badge` 與 `<a>` 元素提供可操作的標籤 hover 和 focus 狀態。
+使用情境色彩 `.badge-*` 在 `<a>` 元素上提供可操作的標籤 hover 和 focus 狀態。
 
 {% example html %}
 {% for color in site.data.theme-colors %}

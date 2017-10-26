@@ -218,21 +218,24 @@ toc: true
 
 ## 自動的 margins
 
-當你將 flex 對齊與 auto margin 混在一起的時候，flexbox 也能正常的運行。
+當你將 flex 對齊與 auto margin 混在一起的時候，flexbox 也能正常的運行。下面的範例是透過自動 margin 來控制 flex 物件的三個案例：預設（無 margin），向右推兩個項目（`.mr-auto`），並向左推兩個項目（`.ml-auto`）。
 
-
-### 搭配 justify-content
-
-方便的將所有 flex 項移動到一側，但是搭配 `justify-content` 與 `margin-right: auto` 或 `margin-left: auto` 混合，物件會將另一個推到另一端。
+**不幸的是，IE10 和 IE11 在父層 `justify-content` 值並沒有正確的支援自動 margin 在 flex 元件上**，[看 StackOverflow 答案](https://stackoverflow.com/a/37535548) 了解更多細節。
 
 {% example html %}
-<div class="d-flex justify-content-end bd-highlight mb-3">
+<div class="d-flex bd-highlight mb-3">
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+</div>
+
+<div class="d-flex bd-highlight mb-3">
   <div class="mr-auto p-2 bd-highlight">Flex item</div>
   <div class="p-2 bd-highlight">Flex item</div>
   <div class="p-2 bd-highlight">Flex item</div>
 </div>
 
-<div class="d-flex justify-content-start bd-highlight">
+<div class="d-flex bd-highlight mb-3">
   <div class="p-2 bd-highlight">Flex item</div>
   <div class="p-2 bd-highlight">Flex item</div>
   <div class="ml-auto p-2 bd-highlight">Flex item</div>
@@ -241,7 +244,7 @@ toc: true
 
 ### 搭配 align-items
 
-相同的道理，混合以下屬性 `align-items`, `flex-direction: column`, 和 `margin-top: auto` 或 `margin-bottom: auto`，會將一個 flex 物件移動到容器的頂部或底部。
+混合以下屬性 `align-items`, `flex-direction: column`, 和 `margin-top: auto` 或 `margin-bottom: auto`，會將一個 flex 物件移動到容器的頂部或底部。
 
 {% example html %}
 <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">

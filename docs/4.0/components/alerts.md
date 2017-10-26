@@ -50,7 +50,7 @@ toc: true
 使用警報的 JavaScript 插件，他能夠將行內的警報移除，使用如下：
 
 - 請確認你有載入警報插件，或者是編譯後的 Bootstrap JavaScript。
-- 如果你要自行編譯 JS，編譯的版本記得將 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util) 加入。
+- 如果你要自行編譯 JavaScript，編譯的版本記得將 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util) 加入。
 - 加入解除用的按鈕並賦予 `.alert-dismissible`，如果你要將按鈕放在右上角的位置可以使用 `.close`。
 - 解除用的按鈕加上 `data-dismiss="alert"` 屬性用來觸發 JavaScript 函式。請使用 `<button>` 元素，這可以在所有裝置上正常運行。
 - 要以動態方式解除它們，可以使用 `.fade` 和 `.show`。
@@ -59,10 +59,10 @@ toc: true
 
 {% example html %}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
 </div>
 {% endexample %}
 
@@ -92,6 +92,7 @@ $(".alert").alert()
 | --- | --- |
 | `$().alert()` | 發出警報，偵聽具有 `data-dismiss="alert"` 屬性的後代元素上的點擊事件。 （使用 data-api 的自動初始化時不需要）|
 | `$().alert('close')` | 從 DOM 中刪除來關閉警報。如果元素上出現 `.fade` 和 `.show`，則在刪除之前該警報將淡出。 |
+| `$().alert('dispose')` | 銷毀一個元素的警報 |
 
 {% highlight js %}$(".alert").alert('close'){% endhighlight %}
 

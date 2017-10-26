@@ -603,9 +603,11 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
 $('#someTab').tab('show')
 {% endhighlight %}
 
-### 事件
+### .tab('dispose')
 
-當顯示新分頁標籤時，事件按以下順序觸發：
+銷毀一個元素的分頁標籤。
+
+### 事件
 
 1. `hide.bs.tab` (當前活動的分頁標籤上)
 2. `show.bs.tab` (待顯示的分頁標籤上)

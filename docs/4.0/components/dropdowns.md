@@ -589,7 +589,7 @@ $('.dropdown-toggle').dropdown()
   <tbody>
     <tr>
       <td>offset</td>
-      <td>number | string</td>
+      <td>number | string | function</td>
       <td>0</td>
       <td>
       下拉選單相對於其目標的偏移參考 Popper.js 的<a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">位移文件</a>。</td>
@@ -610,6 +610,7 @@ $('.dropdown-toggle').dropdown()
 | --- | --- |
 | `$().dropdown('toggle')` | 給予導覽列或分頁導覽使用切換下拉選單功能。 |
 | `$().dropdown('update')` | 更新下拉選單元素的定位。 |
+| `$().dropdown('dispose')` | 銷毀一個元素的下拉選單。 |
 
 ### 事件
 

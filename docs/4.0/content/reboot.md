@@ -330,7 +330,7 @@ Blockquotes 的預設 `margin` 為 `1em 40px`，因此我們將其重新設定�
 
 ## HTML5 `[hidden]` 屬性
 
-HTML 添加了 [一個名為 `[hidden]` 的新全域屬性](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden)，這是屬性的預設格式是 `display: none`。借鑒了 [PureCSS](https://purecss.io) 的一個想法，我們加入 `[hidden] { display: none !important; }` 改善了預設設定，以防止該屬性的 `display` 被意外覆蓋。雖然 IE10 不支援原生 `[hidden]`，我們在 CSS 中解決了這個問題。
+HTML 添加了 [一個名為 `[hidden]` 的新全域屬性](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden)，這是屬性的預設格式是 `display: none`。借鑒了 [PureCSS](https://purecss.io/) 的一個想法，我們加入 `[hidden] { display: none !important; }` 改善了預設設定，以防止該屬性的 `display` 被意外覆蓋。雖然 IE10 不支援原生 `[hidden]`，我們在 CSS 中解決了這個問題。
 
 {% highlight html %}
 <input type="text" hidden>

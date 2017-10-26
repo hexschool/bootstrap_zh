@@ -47,7 +47,7 @@ toc: true
 
 ### 標題 文本 連結
 
-卡片標題的使用時在 `<h*>` 標籤中添加 `.card-title`。 同樣，將 `.card-link` 添加到 `<a>` 標籤中實現連結的添加。
+卡片標題的使用時在 `<h*>` 標籤中添加 `.card-title`。 同樣，將 `.card-link` 加到 `<a>` 標籤中實現連結的添加。
 
 透過在 `<h*>` 標籤中添加一個 `.card-subtitle` 來使用次標題。 如果 `.card-title` 和 `.card-subtitle` 放在 `.card-block` 中，那麼卡片標題和次標題就很好地對齊了。
 
@@ -91,7 +91,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 控制項
+### 混合樣式
 
 混合並搭配多個內容形式，用來創建你所需要的卡片。以下來說是圖像風格、塊狀、文字風格以及清單在一個固定寬度的卡片中。
 
@@ -566,7 +566,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
 
 ### 卡片欄
 
-將它們包在 `.card-columns` 中，可以將卡片像 [Masonry](http://masonry.desandro.com) 那樣的瀑布式排列。卡片是使用 CSS `column` 屬性而不是 flexbox 來構建，更便於對齊。排列是從上到下、從左到右。
+將它們包在 `.card-columns` 中，可以將卡片像 [Masonry](https://masonry.desandro.com) 那樣的瀑布式排列。卡片是使用 CSS `column` 屬性而不是 flexbox 來構建，更便於對齊。排列是從上到下、從左到右。
 
 **當心** 您的卡列的用處可能會有所不同。為了防止卡突破欄，我們必須將它們設置為 `display: inline-block` 當 `column-break-inside: avoid` 這個解決方案未生效時。
 

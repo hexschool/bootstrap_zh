@@ -42,6 +42,7 @@ Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no brea
 * `3` - (預設時) 這個 class 會設定 `margin` 或 `padding` 於 `$spacer`
 * `4` - (預設時) 這個 class 會設定 `margin` 或 `padding` 於 `$spacer * 1.5`
 * `5` - (預設時) 這個 class 會設定 `margin` 或 `padding` 於 `$spacer * 3`
+* `auto` - 這個 class 會設定 `margin` 為 auto
 
 （你也可以對 `$spacers` Sass map 調整變數。）
 

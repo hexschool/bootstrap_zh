@@ -587,18 +587,57 @@ toc: true
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
+## Captions
+
+`<caption>` 像一個表格的標題。 它可以協助螢幕閱讀器的用戶找到表格，並了解它的內容，且決定是否要閱讀它。
+
+{% example html %}
+<table class="table">
+  <caption>List of users</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+{% endexample %}
+
 ## 響應式表格
 
-任何 `.table` 中添加 `.table-responsive{-sm|-md|-lg|-xl}` 創建響應式的表格，讓 `.table`  在分別於 `max-width` 在 (575px、767px、991px 及 1199px) 設備上水平滾動。
-
-當表格想要始終呈現水平滾動，可在 `.table` 上加入 `.table-responsive`。
+當表格想要始終呈現水平滾動，可在 `.table` 上加入 `.table-responsive`，使 Viewport 符合任何表格。或者 `.table` 中加 `.table-responsive{-sm|-md|-lg|-xl}` 創建響應式的表格。
 
 {% callout warning %}
+
 #### 垂直剪裁/縮減
 
 響應式表格將超過表格底部或頂部邊緣透過 `overflow-y: hidden` 將內容剪裁掉。具體而言，這會裁掉下拉式功能表和其他第三方的外掛程式。
 
 {% endcallout %}
+
+### Always responsive
 
 <div class="bd-example">
   <table class="table table-responsive">
@@ -706,41 +745,57 @@ toc: true
 </table>
 {% endhighlight %}
 
+### 中斷點設定
 
-## 表格標題
+使用 `.table-responsive{-sm|-md|-lg|-xl}` 依據需求來一中斷點增加響應式的表格，從此中斷點以上，這個表格會正常呈現，而非水平滾動。
 
-`<caption>` 功能像是一個表格的標題。他可以幫助螢幕閱讀器的用戶找到這個表格，並且決定是否要閱讀它。
-
-{% example html %}
-<table class="table">
-  <caption>List of users</caption>
+<div class="bd-example">
+{% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
+<table class="table table-responsive{{ bp.abbr }}">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endunless %}{% endfor %}
+</div>
+
+{% highlight html %}
+{% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
+<table class="table table-responsive{{ bp.abbr }}">
+  ...
+</table>
+{% endunless %}{% endfor %}
+{% endhighlight %}

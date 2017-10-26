@@ -362,11 +362,11 @@ $('#myModal').on('shown.bs.modal', function () {
       <div class="modal-body">
         <form>
           <div class="form-group">
-            <label for="recipient-name" class="form-control-label">Recipient:</label>
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
             <input type="text" class="form-control" id="recipient-name">
           </div>
           <div class="form-group">
-            <label for="message-text" class="form-control-label">Message:</label>
+            <label for="message-text" class="col-form-label">Message:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
         </form>
@@ -426,7 +426,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
 {% highlight html %}
 <!-- Large modal -->
-<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -583,6 +583,10 @@ $('#myModal').modal({
 
 
 {% highlight js %}$('#myModal').modal('handleUpdate'){% endhighlight %}
+
+### `.modal('dispose')`
+
+銷毀一個元素的 Modal。
 
 ### 事件
 
