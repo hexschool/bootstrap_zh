@@ -1,14 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
 
-<title>
-  
-    Grid system 網格系統 &middot; Bootstrap 4 繁體中文手冊 [六角學院譯]
-  
-</title>
+<title>Grid system 網格系統 &middot; Bootstrap 4 繁體中文手冊 [六角學院譯]</title>
+
+<!-- Bootstrap core CSS -->
+
+  <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" rel="stylesheet">
+
+<link href="/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+<!-- Meta -->
+<meta name="description" content="使用世界上最受歡迎的 HTML、CSS 和 JS 前端元件庫。">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
 <!-- Twitter -->
 <meta name="twitter:site" content="@getbootstrap">
@@ -18,41 +41,22 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Grid system 網格系統">
   <meta name="twitter:description" content="透過強大的行動優先 flexbox 網格來建立符合各種尺寸的網頁排版，包含十二欄系統、五個預設的響應式斷點、Sass 變數和 mixins、以及很多預定義的 class。">
-  <meta name="twitter:image" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social-logo.png">
+  <meta name="twitter:image" content="http://localhost:9001/assets/brand/bootstrap-social-logo.png">
 
 
 <!-- Facebook -->
 
-  <meta property="og:url" content="http://bootstrap.hexschool.com/docs/4.0/layout/grid/">
+  <meta property="og:url" content="http://localhost:9001/docs/4.0/layout/grid/">
   <meta property="og:title" content="Grid system 網格系統">
   <meta property="og:description" content="透過強大的行動優先 flexbox 網格來建立符合各種尺寸的網頁排版，包含十二欄系統、五個預設的響應式斷點、Sass 變數和 mixins、以及很多預定義的 class。">
   <meta property="og:type" content="website">
 
-<meta property="og:image" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social.png">
-<meta property="og:image:secure_url" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social.png">
+<meta property="og:image" content="http://localhost:9001/assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="http://localhost:9001/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-<!-- Meta -->
-<meta name="description" content="使用世界上最受歡迎的前端元件庫。">
-<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-
-
-<!-- Bootstrap core CSS -->
-
-  <link href="/dist/css/bootstrap.css" rel="stylesheet">
-
-
-<!-- Documentation extras -->
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
-
-<link href="/assets/css/docs.min.css" rel="stylesheet">
-
-<!-- Favicons -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" href="/favicon.ico">
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -101,7 +105,7 @@ var google_remarketing_only = true;
 </style>
 
   </head>
-  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+  <body>
     <a id="skippy" class="sr-only sr-only-focusable" href="#content">
       <div class="container">
         <span class="skiplink-text">Skip to main content</span>
@@ -110,7 +114,7 @@ var google_remarketing_only = true;
 
     <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
   <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-    <svg  class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
+    <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
 
   </a>
 
@@ -120,7 +124,7 @@ var google_remarketing_only = true;
         <a class="nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">首頁</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/4.0/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">文件</a>
+        <a class="nav-link active" href="/docs/4.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">文件</a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="/docs/4.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">範例</a>
@@ -147,8 +151,13 @@ var google_remarketing_only = true;
       </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+<<<<<<< HEAD
         <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com">v4 Alpha 6</a>
         <a class="dropdown-item" href="https://getbootstrap.com/docs/3.3/">v3.3</a>
+=======
+        <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/3.3/">v3.3.7</a>
+>>>>>>> v4.0.0-beta.2
         <a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a>
       </div>
     </li>
@@ -173,7 +182,7 @@ var google_remarketing_only = true;
     </li>
   </ul>
 
-  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.zip">Download</a>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.2.zip">Download</a>
 </header>
 
 
@@ -182,883 +191,439 @@ var google_remarketing_only = true;
         <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
           <form class="bd-search d-flex align-items-center">
   <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
-  <button class="btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs avigation">
-    <svg class="" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
 
   </button>
 </form>
 
-<nav class="collapse bd-links" id="bd-docs-nav">
-  
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+<nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/getting-started/introduction/">
         快速開始
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/getting-started/introduction/">
               簡介
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/download/">
               下載
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/contents/">
               內容
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/browsers-devices/">
               瀏覽器及裝置
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/javascript/">
               JavaScript
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/options/">
               自定義選項
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/build-tools/">
               構建工具
             </a>
 
             
-          </li>
-        
-          
-          
+          </li><li>
+            <a href="/docs/4.0/getting-started/theming/">
+              主題化
+            </a>
 
-          
-
-          <li class="">
+            
+          </li><li>
             <a href="/docs/4.0/getting-started/webpack/">
               Webpack
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/accessibility/">
               網頁親和性
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item active">
+          </li></ul>
+    </div><div class="bd-toc-item active">
       <a class="bd-toc-link" href="/docs/4.0/layout/overview/">
         排版
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/layout/overview/">
               概觀
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li class="active bd-sidenav-active">
             <a href="/docs/4.0/layout/grid/">
               網格
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/layout/media-object/">
               媒體物件
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/layout/utilities-for-layout/">
               排版通用類別
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/content/reboot/">
         內容
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/content/reboot/">
               重置
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/content/typography/">
               文字排版
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/content/code/">
               程式碼
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/content/images/">
               圖片
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/content/tables/">
               表格
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/content/figures/">
               圖片區
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/components/alerts/">
         元件
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/components/alerts/">
               警報 (Alerts)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/badge/">
               標籤 (Badge)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/breadcrumb/">
               麵包屑 (Breadcrumb)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/buttons/">
               按鈕 (Buttons)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/button-group/">
               按鈕群組 (Button group)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/card/">
               卡片 (Card)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/carousel/">
               輪播 (Carousel)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/collapse/">
               折疊 (Collapse)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/dropdowns/">
               下拉選單 (Dropdowns)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/forms/">
               表單 (Forms)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/input-group/">
               Input 群組 (Input group)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/jumbotron/">
               廣告大屏幕 (Jumbotron)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/list-group/">
               列表群組 (List group)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/modal/">
               互動視窗 (Modal)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/navs/">
               導覽 (Navs)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/navbar/">
               導覽列 (Navbar)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/pagination/">
               分頁 (Pagination)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/popovers/">
               彈出提示框 (Popovers)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/progress/">
               進度條 (Progress)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/scrollspy/">
               滑動監控 (Scrollspy)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/tooltips/">
               工具提示 (Tooltips)
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/utilities/borders/">
         通用類別
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/utilities/borders/">
               邊框 (Borders)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/clearfix/">
               清除浮動 (Clearfix)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/close-icon/">
               關閉圖示 (Close icon)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/colors/">
               顏色 (Colors)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/display/">
               Display
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/embed/">
               內嵌 (Embed)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/flex/">
               Flex
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/float/">
               浮動 (Float)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/image-replacement/">
               圖片取代 (Image replacement)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/position/">
               位置 (Position)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/screenreaders/">
               螢幕閱讀器 (Screenreaders)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/sizing/">
               尺寸 (Sizing)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/spacing/">
               間隔 (Spacing)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/text/">
               文字 (Text)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/vertical-align/">
               垂直對齊 (Vertical align)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/visibility/">
               可視性 (Visibility)
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/extend/icons/">
         擴增
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/extend/icons/">
               圖示
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/migration/">
         更版紀錄
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-      </ul>
-    </div>
-  
-</nav>
+      <ul class="nav bd-sidenav"></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.0/about/history/">
+        關於
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.0/about/history/">
+              History
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/team/">
+              Team
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/brand/">
+              Brand
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/license/">
+              License
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/translations/">
+              Translations
+            </a>
+
+            
+          </li></ul>
+    </div></nav>
 
         </div>
 
@@ -1088,12 +653,18 @@ var google_remarketing_only = true;
 <li class="toc-entry toc-h3"><a href="#水平對齊">水平對齊</a></li>
 <li class="toc-entry toc-h3"><a href="#no-gutters">No gutters</a></li>
 <li class="toc-entry toc-h3"><a href="#欄的外圍">欄的外圍</a></li>
-<li class="toc-entry toc-h3"><a href="#欄重置">欄重置</a></li>
+<li class="toc-entry toc-h3"><a href="#column-breaks">Column breaks</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#排序">排序</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#推移欄">推移欄</a></li>
+<li class="toc-entry toc-h3"><a href="#order-classes">Order classes</a></li>
+<li class="toc-entry toc-h3"><a href="#欄的推移">欄的推移</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#位移類別">位移類別</a></li>
+<li class="toc-entry toc-h4"><a href="#margin-通用類別">Margin 通用類別</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#巢狀">巢狀</a></li>
@@ -1204,11 +775,16 @@ var google_remarketing_only = true;
   </script>
 
 </div>
+
           <h2 id="如何運作">如何運作</h2>
 
-<p>Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內容。它用 flexbox 建立，並且完全符合響應式。下面是網格系統如何整合的例子及深入瞭解。</p>
+<p>Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內容。它用 <a href="(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)">flexbox</a> 建立，並且完全符合響應式。下面是網格系統如何整合的例子及深入瞭解。</p>
 
-<div class="bd-example bd-example-row">
+<p><strong>New to or unfamiliar with flexbox?</strong> <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">Read this CSS Tricks flexbox guide</a> for background, terminology, guidelines, and code snippets.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
 <div class="container">
   <div class="row">
     <div class="col-sm">
@@ -1222,6 +798,20 @@ var google_remarketing_only = true;
     </div>
   </div>
 </div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      One of three columns
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      One of three columns
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      One of three columns
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
 </div>
 
 <p>上面的例子使用我們的預定義網格類在小型、中型、大型、和超大型設備上建立了三個等寬度欄。通過父類 <code class="highlighter-rouge">.container</code> 使這些欄位於頁面中心。</p>
@@ -1236,11 +826,13 @@ var google_remarketing_only = true;
   <li>欄的 Class 表示你希望使用的欄的數量（可能每行12欄）。所以如果你希望三個等寬度欄，你可以使用<code class="highlighter-rouge">.col-sm-4</code>。</li>
   <li>欄寬度 <code class="highlighter-rouge">width</code> 以百分比設置，所以它們總是不固定的，並且大小與它們的母元素相關。</li>
   <li>欄包含水平的 <code class="highlighter-rouge">padding</code>，以產生單個欄之間的溝槽，但是你可以通過 <code class="highlighter-rouge">.row</code> 上的 <code class="highlighter-rouge">.no-gutters</code> 從行中移除邊緣 <code class="highlighter-rouge">margin</code>，從欄中移除填充 <code class="highlighter-rouge">padding</code>。</li>
-  <li>共有五個網格等級，每個一個<a href="/docs/4.0/layout/overview/#responsive-breakpoints">responsive breakpoint</a>: 所有中斷點（極小）、小、中、大、和極大。</li>
+  <li>共有五個網格等級，每個一個<a href="/docs/4.0/layout/overview/#responsive-breakpoints">responsive breakpoint</a>: 所有中斷點（極小）、小、中、大、和極大 （(extra small), small, medium, large, and extra large）。</li>
   <li>網格等級基於最小寬度，意味著它們適用於一個等級和所有高於它的等級（例如，<code class="highlighter-rouge">.col-sm-4</code> 適用於小型、中型、大型、和超大型設備）。</li>
   <li>你可以對更多的語義標記使用預定義網格 class 或 Sass mixins。</li>
-  <li>瞭解限制和（flexbox 的 Bug）<a href="https://github.com/philipwalton/flexbugs">bugs around flexbox</a>，像是（不能使用某些 HTML 元素作為 flex 容器）<a href="https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers">inability to use some HTML elements as flex containers</a>.</li>
 </ul>
+
+<p>瞭解限制和（flexbox 的 Bug）<a href="https://github.com/philipwalton/flexbugs">bugs around flexbox</a>，像是（不能使
+用某些 HTML 元素作為 flex 容器）<a href="https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers">inability to use some HTML elements as flex containers</a>.</p>
 
 <p>覺得如何呢？很好，我們繼續在範例中全面瞭解。</p>
 
@@ -1322,7 +914,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="container">
   <div class="row">
     <div class="col">
@@ -1368,13 +960,13 @@ var google_remarketing_only = true;
 
 </div>
 
-<p>等寬度欄可以分為多個行，但是有一個<a href="https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items">Safari flexbox bug</a> 它在沒有明確的<code class="highlighter-rouge">flex-basis</code> 或 <code class="highlighter-rouge">border</code>的情況下運行。由於設置了<code class="highlighter-rouge">border</code> 我們的例子才能運行；你可以通過<code class="highlighter-rouge">.col { border: 1px solid transparent; }</code>完成相同的工作。不過，你也可以將 flex-basis 設置為欄的寬度(e.g., <code class="highlighter-rouge">.col { flex: 1 0 50%; }</code>).</p>
+<p>等寬度欄可以分為多個行，但是有一個<a href="https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items">Safari flexbox bug</a> 它在沒有明確的<code class="highlighter-rouge">flex-basis</code> 或 <code class="highlighter-rouge">border</code>的情況下運行。</p>
 
-<p>這些修復已經記錄在<a href="https://output.jsbin.com/micohor">reduced test case outside Bootstrap</a>中.</p>
+<p>這些修復已經記錄在<a href="https://output.jsbin.com/micohor">reduced test case outside Bootstrap</a>中，如果瀏覽器是最新的，這就不是必須的。</p>
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="container">
   <div class="row">
     <div class="col">Column</div>
@@ -1402,7 +994,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="container">
   <div class="row">
     <div class="col">
@@ -1460,7 +1052,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col col-lg-2">
@@ -1518,7 +1110,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="row">
   <div class="col">col</div>
   <div class="col">col</div>
@@ -1546,7 +1138,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="row">
   <div class="col">col</div>
   <div class="col">col</div>
@@ -1576,7 +1168,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="row">
   <div class="col-sm-8">col-sm-8</div>
   <div class="col-sm-4">col-sm-4</div>
@@ -1604,7 +1196,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 <div class="row">
   <div class="col-12 col-md-8">.col-12 .col-md-8</div>
@@ -1652,7 +1244,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row bd-example-row-flex-cols">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="container">
   <div class="row align-items-start">
     <div class="col">
@@ -1728,7 +1320,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row bd-example-row-flex-cols">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="container">
   <div class="row">
     <div class="col align-self-start">
@@ -1762,7 +1354,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="container">
   <div class="row justify-content-start">
     <div class="col-4">
@@ -1856,7 +1448,7 @@ var google_remarketing_only = true;
 
 <p>這是建立這些樣式的原始程式碼。請注意，欄覆蓋僅限於第一層子欄，並且通過（屬性選擇器）<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">attribute selector</a> 確定目標。雖然這產生了更具體的選擇器，通過（調整間隔工具）<a href="/docs/4.0/utilities/spacing/">spacing utilities</a>可以進一步定制欄的 padding。</p>
 
-<p><strong>Need an edge-to-edge design?</strong> Drop the parent <code class="highlighter-rouge">.container</code> or <code class="highlighter-rouge">.container-fluid</code>.</p>
+<p>** 需要一個邊到邊的設計嗎？** 移除掉父層的 <code class="highlighter-rouge">.container</code> 或 <code class="highlighter-rouge">.container-fluid</code>。</p>
 
 <figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nc">.no-gutters</span> <span class="err">{</span>
   <span class="nl">margin-right</span><span class="p">:</span> <span class="m">0</span><span class="err">;</span>
@@ -1874,7 +1466,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="row no-gutters">
   <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
   <div class="col-6 col-md-4">.col-6 .col-md-4</div>
@@ -1892,7 +1484,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="row">
   <div class="col-9">.col-9</div>
   <div class="col-4">.col-4<br />Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
@@ -1906,19 +1498,19 @@ var google_remarketing_only = true;
 
 </div>
 
-<h3 id="欄重置">欄重置</h3>
+<h3 id="column-breaks">Column breaks</h3>
 
-<p>通過一些可用的網格層，你將會遇到一些問題，在某些中斷點，你的欄與比它高的欄明顯有差異。為了修復這一問題，使用 <code class="highlighter-rouge">.clearfix</code> 和 <a href="/docs/4.0/utilities/display/">responsive display utilities</a> 的組合。</p>
+<p>在 Flexbox 中將列拆分成新行需要一個小hack：當你想中斷你的欄到新的一行，可增加一個元素為 <code class="highlighter-rouge">width: 100%</code>。正常來說，通常這是通過多個<code class="highlighter-rouge">.row</code> 完成的，但此方法也是可行的。</p>
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="row">
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
 
-  <!-- Add the extra clearfix for only the required viewport -->
-  <div class="clearfix d-none d-sm-block"></div>
+  <!-- Force next columns to break to new line -->
+  <div class="w-100"></div>
 
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
@@ -1927,8 +1519,8 @@ var google_remarketing_only = true;
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
 
-  <span class="c">&lt;!-- Add the extra clearfix for only the required viewport --&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix d-none d-sm-block"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="c">&lt;!-- Force next columns to break to new line --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"w-100"</span><span class="nt">&gt;&lt;/div&gt;</span>
 
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
@@ -1936,15 +1528,43 @@ var google_remarketing_only = true;
 
 </div>
 
+<p>除了在響應斷點處加入斷行，您可能需要重置位移量。 在 <a href="/docs/4.0/utilities/display/">響應式範例</a> 中看到這一點。</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+
+  <!-- Force next columns to break to new line at md breakpoint and up -->
+  <div class="w-100 d-none d-md-block"></div>
+
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- Force next columns to break to new line at md breakpoint and up --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"w-100 d-none d-md-block"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
 <h2 id="排序">排序</h2>
 
-<p>使用 flexbox 工具控制你的內容的 <strong>可見順序</strong>。</p>
+<h3 id="order-classes">Order classes</h3>
 
 <p>使用 <code class="highlighter-rouge">.order-</code> class 來控制內容中 <strong>可見的內容</strong> 順序，這些 class 是響應式的，所以可以設定 <code class="highlighter-rouge">order</code> 在不同斷點上 (e.g., <code class="highlighter-rouge">.order-1.order-md-2</code>)，包含支援 <code class="highlighter-rouge">1</code> ~ <code class="highlighter-rouge">12</code> 及不同的中斷點。</p>
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="container">
   <div class="row">
     <div class="col">
@@ -1974,13 +1594,109 @@ var google_remarketing_only = true;
 
 </div>
 
-<h3 id="推移欄">推移欄</h3>
-
-<p>透過 v4 的 flexbox，我們不在使用 v3 的推移樣式 class，取而代之的是間隔通用類別，像是 <code class="highlighter-rouge">.mr-auto</code> 來使元件左右物件遠離。</p>
+<p>還有一個響應式的 <code class="highlighter-rouge">.order-first</code>，可以透過 <code class="highlighter-rouge">order: -1</code> 來快速更改一個元素的順序。 這個 Class 也可以依據需要與編號的<code class="highlighter-rouge">.order-*</code> 混合使用。</p>
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      First, but unordered
+    </div>
+    <div class="col">
+      Second, but unordered
+    </div>
+    <div class="col order-first">
+      Third, but first
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      First, but unordered
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Second, but unordered
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col order-first"</span><span class="nt">&gt;</span>
+      Third, but first
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="欄的推移">欄的推移</h3>
+
+<p>您可以通過兩種方式來位移欄 <code class="highlighter-rouge">.offset-</code> Class 和 <a href="/docs/4.0/utilities/spacing/">margin 通用類別</a>。網格位移的空間與欄間格相符合，這種推移對於快速佈局可增加更多變化。</p>
+
+<h4 id="位移類別">位移類別</h4>
+
+<p>使用 <code class="highlighter-rouge">.offset-md-*</code> 向右移動列。 透過 <code class="highlighter-rouge">*</code> 增加欄的左邊距。 例如 <code class="highlighter-rouge">.offset-md-4</code> 增加四欄位移 <code class="highlighter-rouge">.col-md-4</code>。</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+  <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+</div>
+<div class="row">
+  <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4 offset-md-4"</span><span class="nt">&gt;</span>.col-md-4 .offset-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 offset-md-3"</span><span class="nt">&gt;</span>.col-md-3 .offset-md-3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 offset-md-3"</span><span class="nt">&gt;</span>.col-md-3 .offset-md-3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6 offset-md-3"</span><span class="nt">&gt;</span>.col-md-6 .offset-md-3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<p>除了增加在欄的位移，您也可以透過中斷點重置位移量。在 <a href="/docs/4.0/examples/grid/">網格範例</a> 中查看此操作。</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-5 col-lg-6">.col.col-sm-6.col-md-5.col-lg-6</div>
+  <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-5 col-md-6"</span><span class="nt">&gt;</span>.col-sm-5 .col-md-6<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-5 offset-sm-2 col-md-6 offset-md-0"</span><span class="nt">&gt;</span>.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6 col-md-5 col-lg-6"</span><span class="nt">&gt;</span>.col.col-sm-6.col-md-5.col-lg-6<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0"</span><span class="nt">&gt;</span>.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h4 id="margin-通用類別">Margin 通用類別</h4>
+
+<p>隨著第四版改用 flexbox，你可以透過 margin 的通用類別，像是 <code class="highlighter-rouge">.mr-auto</code> 將相鄰的欄位分離到另一邊。</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
 <div class="row">
   <div class="col-md-4">.col-md-4</div>
   <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
@@ -2014,7 +1730,7 @@ var google_remarketing_only = true;
 
 <div class="bd-example-row">
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="row">
   <div class="col-sm-9">
     Level 1: .col-sm-9
@@ -2084,7 +1800,10 @@ var google_remarketing_only = true;
 
 <span class="c1">// Make the element grid-ready (applying everything but the width)
 </span><span class="k">@include</span> <span class="nd">make-col-ready</span><span class="p">();</span>
-<span class="k">@include</span> <span class="nd">make-col</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span></code></pre></figure>
+<span class="k">@include</span> <span class="nd">make-col</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span>
+
+<span class="c1">// Get fancy by offsetting, or changing the sort order
+</span><span class="k">@include</span> <span class="nd">make-col-offset</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span></code></pre></figure>
 
 <h3 id="範例使用">範例使用</h3>
 
@@ -2121,7 +1840,7 @@ var google_remarketing_only = true;
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div class="example-container">
   <div class="example-row">
     <div class="example-content-main">Main content</div>
@@ -2164,7 +1883,7 @@ var google_remarketing_only = true;
   <span class="n">lg</span><span class="o">:</span> <span class="m">960px</span>
 <span class="p">);</span></code></pre></figure>
 
-<p>當對 Sass 變數或 sass map 做出任何改動時，你必須保存你的改動並重新編譯。這樣做將對欄寬度、排序及輸出新的一組網格 class。還將更新響應式元件及中斷點。</p>
+<p>當對 Sass 變數或 sass map 做出任何改動時，你必須保存你的改動並重新編譯。這樣做將對欄寬度、排序、位移、及輸出新的一組網格 class。還將更新響應式元件及中斷點。確保在 <code class="highlighter-rouge">px</code>（不是 <code class="highlighter-rouge">rem</code>、<code class="highlighter-rouge">em</code> 或 <code class="highlighter-rouge">%</code>）中設置格線數值。</p>
 
         </main>
       </div>
@@ -2184,16 +1903,15 @@ var google_remarketing_only = true;
   <script src="/assets/js/vendor/clipboard.min.js"></script>
   <script src="/assets/js/vendor/holder.min.js"></script>
   <script src="/assets/js/src/application.js"></script>
+  <script src="/assets/js/src/pwa.js"></script>
 
 
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="/assets/js/ie-emulation-modes-warning.js"></script>
 
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script type="text/javascript">
-  var docsearch = docsearch({
+<script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script>
+  docsearch({
     apiKey: 'ef316997b6983b7e641cb5ed2a6683d1',
     indexName: 'hexschool',
     inputSelector: '#search-input',
@@ -2215,12 +1933,12 @@ var google_remarketing_only = true;
 
 
 <script>
-Holder.addTheme('gray', {
-  bg: '#777',
-  fg: 'rgba(255,255,255,.75)',
-  font: 'Helvetica',
-  fontweight: 'normal'
-})
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
 </script>
 
   </body>

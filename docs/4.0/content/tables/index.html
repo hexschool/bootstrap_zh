@@ -1,14 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
 
-<title>
-  
-    表格 (Tables) &middot; Bootstrap 4 繁體中文手冊 [六角學院譯]
-  
-</title>
+<title>表格 (Tables) &middot; Bootstrap 4 繁體中文手冊 [六角學院譯]</title>
+
+<!-- Bootstrap core CSS -->
+
+  <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" rel="stylesheet">
+
+<link href="/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+<!-- Meta -->
+<meta name="description" content="使用世界上最受歡迎的 HTML、CSS 和 JS 前端元件庫。">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
 <!-- Twitter -->
 <meta name="twitter:site" content="@getbootstrap">
@@ -18,41 +41,22 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="表格 (Tables)">
   <meta name="twitter:description" content="Bootstrap 設置選擇性加入樣式的表格文件和範例 (鑒於表格在 JavaScript 外掛程式中的廣泛用途)">
-  <meta name="twitter:image" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social-logo.png">
+  <meta name="twitter:image" content="http://localhost:9001/assets/brand/bootstrap-social-logo.png">
 
 
 <!-- Facebook -->
 
-  <meta property="og:url" content="http://bootstrap.hexschool.com/docs/4.0/content/tables/">
+  <meta property="og:url" content="http://localhost:9001/docs/4.0/content/tables/">
   <meta property="og:title" content="表格 (Tables)">
   <meta property="og:description" content="Bootstrap 設置選擇性加入樣式的表格文件和範例 (鑒於表格在 JavaScript 外掛程式中的廣泛用途)">
   <meta property="og:type" content="website">
 
-<meta property="og:image" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social.png">
-<meta property="og:image:secure_url" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social.png">
+<meta property="og:image" content="http://localhost:9001/assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="http://localhost:9001/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-<!-- Meta -->
-<meta name="description" content="使用世界上最受歡迎的前端元件庫。">
-<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-
-
-<!-- Bootstrap core CSS -->
-
-  <link href="/dist/css/bootstrap.css" rel="stylesheet">
-
-
-<!-- Documentation extras -->
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
-
-<link href="/assets/css/docs.min.css" rel="stylesheet">
-
-<!-- Favicons -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" href="/favicon.ico">
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -101,7 +105,7 @@ var google_remarketing_only = true;
 </style>
 
   </head>
-  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+  <body>
     <a id="skippy" class="sr-only sr-only-focusable" href="#content">
       <div class="container">
         <span class="skiplink-text">Skip to main content</span>
@@ -110,7 +114,7 @@ var google_remarketing_only = true;
 
     <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
   <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-    <svg  class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
+    <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
 
   </a>
 
@@ -120,7 +124,7 @@ var google_remarketing_only = true;
         <a class="nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">首頁</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/4.0/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">文件</a>
+        <a class="nav-link active" href="/docs/4.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">文件</a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="/docs/4.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">範例</a>
@@ -147,8 +151,13 @@ var google_remarketing_only = true;
       </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+<<<<<<< HEAD
         <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com">v4 Alpha 6</a>
         <a class="dropdown-item" href="https://getbootstrap.com/docs/3.3/">v3.3</a>
+=======
+        <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/3.3/">v3.3.7</a>
+>>>>>>> v4.0.0-beta.2
         <a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a>
       </div>
     </li>
@@ -173,7 +182,7 @@ var google_remarketing_only = true;
     </li>
   </ul>
 
-  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.zip">Download</a>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.2.zip">Download</a>
 </header>
 
 
@@ -182,883 +191,439 @@ var google_remarketing_only = true;
         <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
           <form class="bd-search d-flex align-items-center">
   <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
-  <button class="btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs avigation">
-    <svg class="" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
 
   </button>
 </form>
 
-<nav class="collapse bd-links" id="bd-docs-nav">
-  
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+<nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/getting-started/introduction/">
         快速開始
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/getting-started/introduction/">
               簡介
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/download/">
               下載
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/contents/">
               內容
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/browsers-devices/">
               瀏覽器及裝置
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/javascript/">
               JavaScript
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/options/">
               自定義選項
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/build-tools/">
               構建工具
             </a>
 
             
-          </li>
-        
-          
-          
+          </li><li>
+            <a href="/docs/4.0/getting-started/theming/">
+              主題化
+            </a>
 
-          
-
-          <li class="">
+            
+          </li><li>
             <a href="/docs/4.0/getting-started/webpack/">
               Webpack
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/accessibility/">
               網頁親和性
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/layout/overview/">
         排版
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/layout/overview/">
               概觀
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/layout/grid/">
               網格
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/layout/media-object/">
               媒體物件
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/layout/utilities-for-layout/">
               排版通用類別
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item active">
+          </li></ul>
+    </div><div class="bd-toc-item active">
       <a class="bd-toc-link" href="/docs/4.0/content/reboot/">
         內容
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/content/reboot/">
               重置
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/content/typography/">
               文字排版
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/content/code/">
               程式碼
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/content/images/">
               圖片
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li class="active bd-sidenav-active">
             <a href="/docs/4.0/content/tables/">
               表格
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/content/figures/">
               圖片區
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/components/alerts/">
         元件
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/components/alerts/">
               警報 (Alerts)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/badge/">
               標籤 (Badge)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/breadcrumb/">
               麵包屑 (Breadcrumb)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/buttons/">
               按鈕 (Buttons)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/button-group/">
               按鈕群組 (Button group)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/card/">
               卡片 (Card)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/carousel/">
               輪播 (Carousel)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/collapse/">
               折疊 (Collapse)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/dropdowns/">
               下拉選單 (Dropdowns)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/forms/">
               表單 (Forms)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/input-group/">
               Input 群組 (Input group)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/jumbotron/">
               廣告大屏幕 (Jumbotron)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/list-group/">
               列表群組 (List group)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/modal/">
               互動視窗 (Modal)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/navs/">
               導覽 (Navs)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/navbar/">
               導覽列 (Navbar)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/pagination/">
               分頁 (Pagination)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/popovers/">
               彈出提示框 (Popovers)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/progress/">
               進度條 (Progress)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/scrollspy/">
               滑動監控 (Scrollspy)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/components/tooltips/">
               工具提示 (Tooltips)
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/utilities/borders/">
         通用類別
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/utilities/borders/">
               邊框 (Borders)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/clearfix/">
               清除浮動 (Clearfix)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/close-icon/">
               關閉圖示 (Close icon)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/colors/">
               顏色 (Colors)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/display/">
               Display
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/embed/">
               內嵌 (Embed)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/flex/">
               Flex
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/float/">
               浮動 (Float)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/image-replacement/">
               圖片取代 (Image replacement)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/position/">
               位置 (Position)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/screenreaders/">
               螢幕閱讀器 (Screenreaders)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/sizing/">
               尺寸 (Sizing)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/spacing/">
               間隔 (Spacing)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/text/">
               文字 (Text)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/vertical-align/">
               垂直對齊 (Vertical align)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/visibility/">
               可視性 (Visibility)
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/extend/icons/">
         擴增
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/extend/icons/">
               圖示
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/migration/">
         更版紀錄
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-      </ul>
-    </div>
-  
-</nav>
+      <ul class="nav bd-sidenav"></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.0/about/history/">
+        關於
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.0/about/history/">
+              History
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/team/">
+              Team
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/brand/">
+              Brand
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/license/">
+              License
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/translations/">
+              Translations
+            </a>
+
+            
+          </li></ul>
+    </div></nav>
 
         </div>
 
@@ -1073,16 +638,15 @@ var google_remarketing_only = true;
 <li class="toc-entry toc-h2"><a href="#小表格">小表格</a></li>
 <li class="toc-entry toc-h2"><a href="#語意化-class">語意化 class</a>
 <ul>
-<ul>
 <li class="toc-entry toc-h4"><a href="#conveying-meaning-to-assistive-technologies">Conveying meaning to assistive technologies</a></li>
 </ul>
-</ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#captions">Captions</a></li>
 <li class="toc-entry toc-h2"><a href="#響應式表格">響應式表格</a>
 <ul>
-<ul>
 <li class="toc-entry toc-h4"><a href="#垂直剪裁縮減">垂直剪裁/縮減</a></li>
-</ul>
+<li class="toc-entry toc-h3"><a href="#always-responsive">Always responsive</a></li>
+<li class="toc-entry toc-h3"><a href="#中斷點設定">中斷點設定</a></li>
 </ul>
 </li>
 </ul>
@@ -1179,20 +743,21 @@ var google_remarketing_only = true;
   </script>
 
 </div>
+
           <h2 id="範例">範例</h2>
 
 <p>由於在日曆和日期選擇器等外掛程式中表格使用相當廣泛，已經將表格設計為 <strong>選擇性加入</strong>。只要添加 <code class="highlighter-rouge">.table</code> 到任何 <code class="highlighter-rouge">&lt;table&gt;</code> 中，然後透過自定義樣式或是我們提供的 class 作套用。</p>
 
 <p>使用最基本的表格標記，以下是 Bootstrap 中 <code class="highlighter-rouge">.table</code> 的表格的樣式。<strong>Bootstrap 4.0 中繼承了全部的表格樣式</strong>，這就意味至為任何巢狀表格添加樣式的方式和外層表格相同。</p>
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <table class="table">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1220,10 +785,10 @@ var google_remarketing_only = true;
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1248,16 +813,16 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></div>
 
-<p>也可以作反轉色彩，使用 <code class="highlighter-rouge">.table-inverse</code> 在深色背景下放上淺色文本。</p>
+<p>也可以作反轉色彩，使用 <code class="highlighter-rouge">.table-dark</code> 在深色背景下放上淺色文本。</p>
 
-<div class="bd-example" data-example-id="">
-<table class="table table-inverse">
+<div class="bd-example">
+<table class="table table-dark">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1282,13 +847,13 @@ var google_remarketing_only = true;
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-inverse"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-dark"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1315,16 +880,16 @@ var google_remarketing_only = true;
 
 <h2 id="表格-head-選項">表格 head 選項</h2>
 
-<p>與預設和反轉樣式相似，使用如下兩個 class 中的一個將 <code class="highlighter-rouge">&lt;thead&gt;</code> 顯示淺灰或深灰。</p>
+<p>與預設和反轉樣式相似，使用如下兩個 <code class="highlighter-rouge">.thead-light</code> 或 <code class="highlighter-rouge">.thead-dark</code> 中的一個將 <code class="highlighter-rouge">&lt;thead&gt;</code> 顯示淺灰或深灰。</p>
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <table class="table">
-  <thead class="thead-inverse">
+  <thead class="thead-dark">
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1350,12 +915,12 @@ var google_remarketing_only = true;
 </table>
 
 <table class="table">
-  <thead class="thead-default">
+  <thead class="thead-light">
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1381,12 +946,12 @@ var google_remarketing_only = true;
 </table>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"thead-inverse"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"thead-dark"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1412,12 +977,12 @@ var google_remarketing_only = true;
 <span class="nt">&lt;/table&gt;</span>
 
 <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"thead-default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"thead-light"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1446,14 +1011,14 @@ var google_remarketing_only = true;
 
 <p>使用 <code class="highlighter-rouge">.table-striped</code> 在 <code class="highlighter-rouge">&lt;tbody&gt;</code>中的任何表格行添加斑馬紋</p>
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1481,10 +1046,10 @@ var google_remarketing_only = true;
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1509,14 +1074,14 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></div>
 
-<div class="bd-example" data-example-id="">
-<table class="table table-striped table-inverse">
+<div class="bd-example">
+<table class="table table-striped table-dark">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1541,13 +1106,13 @@ var google_remarketing_only = true;
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped table-inverse"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped table-dark"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1576,14 +1141,14 @@ var google_remarketing_only = true;
 
 <p>加入 <code class="highlighter-rouge">.table-bordered</code> 在表格和儲存格的四邊上添加邊框。</p>
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1616,10 +1181,10 @@ var google_remarketing_only = true;
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1649,14 +1214,14 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></div>
 
-<div class="bd-example" data-example-id="">
-<table class="table table-bordered table-inverse">
+<div class="bd-example">
+<table class="table table-bordered table-dark">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1686,13 +1251,13 @@ var google_remarketing_only = true;
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered table-inverse"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered table-dark"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1726,14 +1291,14 @@ var google_remarketing_only = true;
 
 <p>添加 <code class="highlighter-rouge">.table-hover</code> 以便在一個 <code class="highlighter-rouge">&lt;tbody&gt;</code> 中的表格行上啟用一個 hover 狀態。</p>
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1760,10 +1325,10 @@ var google_remarketing_only = true;
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1787,14 +1352,14 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></div>
 
-<div class="bd-example" data-example-id="">
-<table class="table table-hover table-inverse">
+<div class="bd-example">
+<table class="table table-hover table-dark">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1818,13 +1383,13 @@ var google_remarketing_only = true;
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover table-inverse"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover table-dark"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1852,14 +1417,14 @@ var google_remarketing_only = true;
 
 <p>添加 <code class="highlighter-rouge">.table-sm</code> 將儲存格 padding 縮減一半的方式讓表格更加精簡。</p>
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <table class="table table-sm">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1886,10 +1451,10 @@ var google_remarketing_only = true;
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-sm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1913,14 +1478,14 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></div>
 
-<div class="bd-example" data-example-id="">
-<table class="table table-sm table-inverse">
+<div class="bd-example">
+<table class="table table-sm table-dark">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
@@ -1944,13 +1509,13 @@ var google_remarketing_only = true;
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-sm table-inverse"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-sm table-dark"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
@@ -1978,39 +1543,45 @@ var google_remarketing_only = true;
 
 <p>使用語意化 class 給表格列或單獨的儲存格上色。</p>
 
-<p>«««&lt; HEAD
-| Class | Description |
-| — | — |
-| <code class="highlighter-rouge">.table-active</code> | 向一個特定的行或儲存格使用 hover 色彩 |
-| <code class="highlighter-rouge">.table-success</code> | 提示一個成功或肯定的行動 |
-| <code class="highlighter-rouge">.table-info</code> | 提示一個中性的資訊變更或行動 |
-| <code class="highlighter-rouge">.table-warning</code> | 提示一個可能需要注意的警告 |
-| <code class="highlighter-rouge">.table-danger</code> | 提示一個危險或潛在的否定行動 |</p>
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">.table-active</code></td>
+      <td>向一個特定的行或儲存格使用 hover 色彩</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.table-success</code></td>
+      <td>提示一個成功或肯定的行動</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.table-info</code></td>
+      <td>提示一個中性的資訊變更或行動</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.table-warning</code></td>
+      <td>提示一個可能需要注意的警告</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">.table-danger</code></td>
+      <td>提示一個危險或潛在的否定行動</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>=======</p>
-<blockquote>
-  <blockquote>
-    <blockquote>
-      <blockquote>
-        <blockquote>
-          <blockquote>
-            <blockquote>
-              <p>v4-dev</p>
-            </blockquote>
-          </blockquote>
-        </blockquote>
-      </blockquote>
-    </blockquote>
-  </blockquote>
-</blockquote>
 <div class="bd-example">
   <table class="table">
     <thead>
       <tr>
-        <th>Type</th>
-        <th>Column heading</th>
-        <th>Column heading</th>
-        <th>Column heading</th>
+        <th scope="col">Type</th>
+        <th scope="col">Column heading</th>
+        <th scope="col">Column heading</th>
+        <th scope="col">Column heading</th>
       </tr>
     </thead>
     <tbody>
@@ -2106,16 +1677,16 @@ var google_remarketing_only = true;
   <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-dark"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
 <span class="nt">&lt;/tr&gt;</span></code></pre></figure>
 
-<p>反轉樣式的表格上沒有固定的背景變數，然而，你可以使用 <a href="/docs/4.0/utilities/colors/">文本或背景工具</a> 獲得類似的樣式。</p>
+<p>深色表格上沒有固定的背景變數，然而，你可以使用 <a href="/docs/4.0/utilities/colors/">文本或背景工具</a> 獲得類似的樣式。</p>
 
 <div class="bd-example">
-  <table class="table table-inverse">
+  <table class="table table-dark">
     <thead>
       <tr>
-        <th>#</th>
-        <th>Column heading</th>
-        <th>Column heading</th>
-        <th>Column heading</th>
+        <th scope="col">#</th>
+        <th scope="col">Column heading</th>
+        <th scope="col">Column heading</th>
+        <th scope="col">Column heading</th>
       </tr>
     </thead>
     <tbody>
@@ -2199,9 +1770,78 @@ var google_remarketing_only = true;
 <p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code class="highlighter-rouge">.sr-only</code> class.</p>
 </div>
 
+<h2 id="captions">Captions</h2>
+
+<p><code class="highlighter-rouge">&lt;caption&gt;</code> 像一個表格的標題。 它可以協助螢幕閱讀器的用戶找到表格，並了解它的內容，且決定是否要閱讀它。</p>
+
+<div class="bd-example">
+<table class="table">
+  <caption>List of users</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>List of users<span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
 <h2 id="響應式表格">響應式表格</h2>
 
-<p>任何 <code class="highlighter-rouge">.table</code> 中添加 <code class="highlighter-rouge">.table-responsive</code> 創建響應式的表格，讓表格在（小於768px）小設備上水平滾動。當在寬度大於 768px 的任何設備上觀看時，不會看見任何差異。</p>
+<p>當表格想要始終呈現水平滾動，可在 <code class="highlighter-rouge">.table</code> 上加入 <code class="highlighter-rouge">.table-responsive</code>，使 Viewport 符合任何表格。或者 <code class="highlighter-rouge">.table</code> 中加 <code class="highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl}</code> 創建響應式的表格。</p>
 
 <div class="bd-callout bd-callout-warning">
 <h4 id="垂直剪裁縮減">垂直剪裁/縮減</h4>
@@ -2210,22 +1850,30 @@ var google_remarketing_only = true;
 
 </div>
 
+<h3 id="always-responsive">Always responsive</h3>
+
 <div class="bd-example">
   <table class="table table-responsive">
     <thead>
       <tr>
-        <th>#</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
+        <th scope="col">#</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th scope="row">1</th>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
@@ -2241,9 +1889,15 @@ var google_remarketing_only = true;
         <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
       </tr>
       <tr>
         <th scope="row">3</th>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
         <td>Table cell</td>
@@ -2254,16 +1908,16 @@ var google_remarketing_only = true;
     </tbody>
   </table>
 
-  <table class="table table-bordered table-responsive">
+  <table class="table table-bordered table-responsive-lg">
     <thead>
       <tr>
-        <th>#</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
+        <th scope="col">#</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
+        <th scope="col">Table heading</th>
       </tr>
     </thead>
     <tbody>
@@ -2302,6 +1956,186 @@ var google_remarketing_only = true;
   ...
 <span class="nt">&lt;/table&gt;</span></code></pre></figure>
 
+<h3 id="中斷點設定">中斷點設定</h3>
+
+<p>使用 <code class="highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl}</code> 依據需求來一中斷點增加響應式的表格，從此中斷點以上，這個表格會正常呈現，而非水平滾動。</p>
+
+<div class="bd-example">
+
+<table class="table table-responsive-sm">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-responsive-md">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-responsive-lg">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-responsive-xl">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+      <th scope="col">Table heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-responsive-sm"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span>
+
+<span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-responsive-md"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span>
+
+<span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-responsive-lg"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span>
+
+<span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-responsive-xl"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
 
         </main>
       </div>
@@ -2321,16 +2155,15 @@ var google_remarketing_only = true;
   <script src="/assets/js/vendor/clipboard.min.js"></script>
   <script src="/assets/js/vendor/holder.min.js"></script>
   <script src="/assets/js/src/application.js"></script>
+  <script src="/assets/js/src/pwa.js"></script>
 
 
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="/assets/js/ie-emulation-modes-warning.js"></script>
 
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script type="text/javascript">
-  var docsearch = docsearch({
+<script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script>
+  docsearch({
     apiKey: 'ef316997b6983b7e641cb5ed2a6683d1',
     indexName: 'hexschool',
     inputSelector: '#search-input',
@@ -2352,12 +2185,12 @@ var google_remarketing_only = true;
 
 
 <script>
-Holder.addTheme('gray', {
-  bg: '#777',
-  fg: 'rgba(255,255,255,.75)',
-  font: 'Helvetica',
-  fontweight: 'normal'
-})
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
 </script>
 
   </body>

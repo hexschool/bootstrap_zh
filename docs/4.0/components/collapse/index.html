@@ -1,14 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
 
-<title>
-  
-    折疊 (Collapse) &middot; Bootstrap 4 繁體中文手冊 [六角學院譯]
-  
-</title>
+<title>折疊 (Collapse) &middot; Bootstrap 4 繁體中文手冊 [六角學院譯]</title>
+
+<!-- Bootstrap core CSS -->
+
+  <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" rel="stylesheet">
+
+<link href="/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+<!-- Meta -->
+<meta name="description" content="使用世界上最受歡迎的 HTML、CSS 和 JS 前端元件庫。">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
 <!-- Twitter -->
 <meta name="twitter:site" content="@getbootstrap">
@@ -18,41 +41,22 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="折疊 (Collapse)">
   <meta name="twitter:description" content="透過 Class 及 JavaScript 插件切換內容的顯示與否。">
-  <meta name="twitter:image" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social-logo.png">
+  <meta name="twitter:image" content="http://localhost:9001/assets/brand/bootstrap-social-logo.png">
 
 
 <!-- Facebook -->
 
-  <meta property="og:url" content="http://bootstrap.hexschool.com/docs/4.0/components/collapse/">
+  <meta property="og:url" content="http://localhost:9001/docs/4.0/components/collapse/">
   <meta property="og:title" content="折疊 (Collapse)">
   <meta property="og:description" content="透過 Class 及 JavaScript 插件切換內容的顯示與否。">
   <meta property="og:type" content="website">
 
-<meta property="og:image" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social.png">
-<meta property="og:image:secure_url" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social.png">
+<meta property="og:image" content="http://localhost:9001/assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="http://localhost:9001/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-<!-- Meta -->
-<meta name="description" content="使用世界上最受歡迎的前端元件庫。">
-<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-
-
-<!-- Bootstrap core CSS -->
-
-  <link href="/dist/css/bootstrap.css" rel="stylesheet">
-
-
-<!-- Documentation extras -->
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
-
-<link href="/assets/css/docs.min.css" rel="stylesheet">
-
-<!-- Favicons -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" href="/favicon.ico">
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -101,7 +105,7 @@ var google_remarketing_only = true;
 </style>
 
   </head>
-  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+  <body>
     <a id="skippy" class="sr-only sr-only-focusable" href="#content">
       <div class="container">
         <span class="skiplink-text">Skip to main content</span>
@@ -110,7 +114,7 @@ var google_remarketing_only = true;
 
     <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
   <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-    <svg  class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
+    <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
 
   </a>
 
@@ -120,7 +124,7 @@ var google_remarketing_only = true;
         <a class="nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">首頁</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/4.0/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">文件</a>
+        <a class="nav-link active" href="/docs/4.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">文件</a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="/docs/4.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">範例</a>
@@ -147,8 +151,13 @@ var google_remarketing_only = true;
       </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+<<<<<<< HEAD
         <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com">v4 Alpha 6</a>
         <a class="dropdown-item" href="https://getbootstrap.com/docs/3.3/">v3.3</a>
+=======
+        <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/3.3/">v3.3.7</a>
+>>>>>>> v4.0.0-beta.2
         <a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a>
       </div>
     </li>
@@ -173,7 +182,7 @@ var google_remarketing_only = true;
     </li>
   </ul>
 
-  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.zip">Download</a>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.2.zip">Download</a>
 </header>
 
 
@@ -182,883 +191,439 @@ var google_remarketing_only = true;
         <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
           <form class="bd-search d-flex align-items-center">
   <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
-  <button class="btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs avigation">
-    <svg class="" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
 
   </button>
 </form>
 
-<nav class="collapse bd-links" id="bd-docs-nav">
-  
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+<nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/getting-started/introduction/">
         快速開始
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/getting-started/introduction/">
               簡介
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/download/">
               下載
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/contents/">
               內容
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/browsers-devices/">
               瀏覽器及裝置
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/javascript/">
               JavaScript
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/options/">
               自定義選項
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/build-tools/">
               構建工具
             </a>
 
             
-          </li>
-        
-          
-          
+          </li><li>
+            <a href="/docs/4.0/getting-started/theming/">
+              主題化
+            </a>
 
-          
-
-          <li class="">
+            
+          </li><li>
             <a href="/docs/4.0/getting-started/webpack/">
               Webpack
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/getting-started/accessibility/">
               網頁親和性
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/layout/overview/">
         排版
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/layout/overview/">
               概觀
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/layout/grid/">
               網格
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/layout/media-object/">
               媒體物件
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/layout/utilities-for-layout/">
               排版通用類別
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/content/reboot/">
         內容
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/content/reboot/">
               重置
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/content/typography/">
               文字排版
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/content/code/">
               程式碼
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/content/images/">
               圖片
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/content/tables/">
               表格
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/content/figures/">
               圖片區
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item active">
+          </li></ul>
+    </div><div class="bd-toc-item active">
       <a class="bd-toc-link" href="/docs/4.0/components/alerts/">
         元件
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/components/alerts/">
               警報 (Alerts)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/badge/">
               標籤 (Badge)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/breadcrumb/">
               麵包屑 (Breadcrumb)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/buttons/">
               按鈕 (Buttons)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/button-group/">
               按鈕群組 (Button group)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/card/">
               卡片 (Card)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/carousel/">
               輪播 (Carousel)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li class="active bd-sidenav-active">
             <a href="/docs/4.0/components/collapse/">
               折疊 (Collapse)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/dropdowns/">
               下拉選單 (Dropdowns)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/forms/">
               表單 (Forms)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/input-group/">
               Input 群組 (Input group)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/jumbotron/">
               廣告大屏幕 (Jumbotron)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/list-group/">
               列表群組 (List group)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/modal/">
               互動視窗 (Modal)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/navs/">
               導覽 (Navs)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/navbar/">
               導覽列 (Navbar)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/pagination/">
               分頁 (Pagination)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/popovers/">
               彈出提示框 (Popovers)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/progress/">
               進度條 (Progress)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/scrollspy/">
               滑動監控 (Scrollspy)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="active bd-sidenav-active">
+          </li><li>
             <a href="/docs/4.0/components/tooltips/">
               工具提示 (Tooltips)
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/utilities/borders/">
         通用類別
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/utilities/borders/">
               邊框 (Borders)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/clearfix/">
               清除浮動 (Clearfix)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/close-icon/">
               關閉圖示 (Close icon)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/colors/">
               顏色 (Colors)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/display/">
               Display
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/embed/">
               內嵌 (Embed)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/flex/">
               Flex
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/float/">
               浮動 (Float)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/image-replacement/">
               圖片取代 (Image replacement)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/position/">
               位置 (Position)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/screenreaders/">
               螢幕閱讀器 (Screenreaders)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/sizing/">
               尺寸 (Sizing)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/spacing/">
               間隔 (Spacing)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/text/">
               文字 (Text)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/vertical-align/">
               垂直對齊 (Vertical align)
             </a>
 
             
-          </li>
-        
-          
-          
-
-          
-
-          <li class="">
+          </li><li>
             <a href="/docs/4.0/utilities/visibility/">
               可視性 (Visibility)
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/extend/icons/">
         擴增
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          <li class="">
+      <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/extend/icons/">
               圖示
             </a>
 
             
-          </li>
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
+          </li></ul>
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/migration/">
         更版紀錄
       </a>
 
-      <ul class="nav bd-sidenav">
-        
-      </ul>
-    </div>
-  
-</nav>
+      <ul class="nav bd-sidenav"></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.0/about/history/">
+        關於
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.0/about/history/">
+              History
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/team/">
+              Team
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/brand/">
+              Brand
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/license/">
+              License
+            </a>
+
+            
+          </li><li>
+            <a href="/docs/4.0/about/translations/">
+              Translations
+            </a>
+
+            
+          </li></ul>
+    </div></nav>
 
         </div>
 
@@ -1068,8 +633,6 @@ var google_remarketing_only = true;
 <li class="toc-entry toc-h2"><a href="#範例">範例</a></li>
 <li class="toc-entry toc-h2"><a href="#多個目標">多個目標</a></li>
 <li class="toc-entry toc-h2"><a href="#折疊範例">折疊範例</a>
-<ul>
-<ul>
 <ul>
 <li class="toc-entry toc-h5"><a href="#------------------collapsible-group-item-1--------------">
         
@@ -1087,8 +650,6 @@ var google_remarketing_only = true;
         
       </a></li>
 </ul>
-</ul>
-</ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#親和性">親和性</a></li>
 <li class="toc-entry toc-h2"><a href="#用法">用法</a>
@@ -1105,6 +666,7 @@ var google_remarketing_only = true;
 <li class="toc-entry toc-h4"><a href="#collapsehide">.collapse('hide')</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h3"><a href="#collapsedispose">.collapse('dispose')</a></li>
 <li class="toc-entry toc-h3"><a href="#事件">事件</a></li>
 </ul>
 </li>
@@ -1202,6 +764,7 @@ var google_remarketing_only = true;
   </script>
 
 </div>
+
           <h2 id="範例">範例</h2>
 
 <p>點擊按鈕透過 Class 更改來顯示及隱藏另一個元素：</p>
@@ -1214,7 +777,7 @@ var google_remarketing_only = true;
 
 <p>您可以使用帶有 <code class="highlighter-rouge">href</code> 屬性的連結或帶 <code class="highlighter-rouge">data-target</code> 屬性的按鈕。在這兩種情況下，都需要 <code class="highlighter-rouge">data-toggle="collapse"</code>。</p>
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Link with href
@@ -1246,12 +809,12 @@ var google_remarketing_only = true;
 <h2 id="多個目標">多個目標</h2>
 
 <p><code class="highlighter-rouge">&lt;button&gt;</code> 或 <code class="highlighter-rouge">&lt;a&gt;</code> 可以透過在其 <code class="highlighter-rouge">href</code> 或 <code class="highlighter-rouge">data-target</code> 屬性中使用 JQuery 選擇器引用它們來顯示和隱藏多個元素。
-如果每個引用它們 <code class="highlighter-rouge">href</code> 或 <code class="highlighter-rouge">data-target</code> 屬性，多個 <code class="highlighter-rouge">&lt;button&gt;</code> 或 <code class="highlighter-rouge">&lt;a&gt;</code> 都可以顯示和隱藏元素</p>
+如果每個引用它們 <code class="highlighter-rouge">href</code> 或 <code class="highlighter-rouge">data-target</code> 屬性，多個 <code class="highlighter-rouge">&lt;button&gt;</code> 或 <code class="highlighter-rouge">&lt;a&gt;</code> 都可以顯示和隱藏元素。</p>
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle second element</button>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
 </p>
 <div class="row">
@@ -1273,7 +836,7 @@ var google_remarketing_only = true;
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">href=</span><span class="s">"#multiCollapseExample1"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"multiCollapseExample1"</span><span class="nt">&gt;</span>Toggle first element<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#multiCollapseExample2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"multiCollapseExample1"</span><span class="nt">&gt;</span>Toggle second element<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#multiCollapseExample2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"multiCollapseExample2"</span><span class="nt">&gt;</span>Toggle second element<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">".multi-collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"multiCollapseExample1 multiCollapseExample2"</span><span class="nt">&gt;</span>Toggle both elements<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
@@ -1297,7 +860,7 @@ var google_remarketing_only = true;
 
 <p>使用 <a href="/docs/4.0/components/card/">卡片</a> 元件，您可以展開預設的折疊行為以創建折疊功能。</p>
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div id="accordion" role="tablist">
   <div class="card">
     <div class="card-header" role="tab" id="headingOne">
@@ -1392,7 +955,7 @@ var google_remarketing_only = true;
 
 <p>您還可以使用自定義創建手風琴樣式。加入 <code class="highlighter-rouge">data-children</code> 屬性並指定一組相鄰元素來切換（例如<code class="highlighter-rouge">.item</code>）。然後，使用與上述相同的屬性和 Class，來切換到其關聯的內容。</p>
 
-<div class="bd-example" data-example-id="">
+<div class="bd-example">
 <div id="exampleAccordion" data-children=".item">
   <div class="item">
     <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1">
@@ -1485,10 +1048,10 @@ var google_remarketing_only = true;
   <tbody>
     <tr>
       <td>parent</td>
-      <td>selector</td>
+      <td>selector | jQuery object | DOM element </td>
       <td>false</td>
       <td>
-      如果提供了選擇器，則當顯示此可折疊物件時，指定父項下的所有可折疊元素將被關閉。（類似于傳統的折疊控制項行為 - 這取決於 <code>card</code>）。該屬性必須在目標可折疊區域上設置。</td>
+      如果提供了父層，則當顯示此可折疊物件時，指定父項下的所有可折疊元素將被關閉。（類似于傳統的折疊控制項行為 - 這取決於 <code>card</code>）。該屬性必須在目標可折疊區域上設置。</td>
     </tr>
     <tr>
       <td>toggle</td>
@@ -1504,14 +1067,12 @@ var google_remarketing_only = true;
 <div class="bd-callout bd-callout-danger">
 <h4 id="asynchronous-methods-and-transitions">Asynchronous methods and transitions</h4>
 
-<p>All API methods are <strong>asynchronous</strong> and start a <strong>transition</strong>. They returns to the caller as soon as the transition is started but <strong>before it ends</strong>. In addition, a method call on a <strong>transitioning component will be ignored</strong>.</p>
+<p>All API methods are <strong>asynchronous</strong> and start a <strong>transition</strong>. They return to the caller as soon as the transition is started but <strong>before it ends</strong>. In addition, a method call on a <strong>transitioning component will be ignored</strong>.</p>
 
-<p><a href="/getting-started/javascript/">See our Javascript documentation for more informations.</a></p>
+<p><a href="/docs/4.0/getting-started/javascript/">See our JavaScript documentation for more information.</a></p>
 </div>
 
 <h4 id="collapseoptions"><code class="highlighter-rouge">.collapse(options)</code></h4>
-
-<p>Activates your content as a collapsible element. Accepts an optional options <code class="highlighter-rouge">object</code>.</p>
 
 <p>啟用你的可折疊元素的內容，透過包含選項的 <code class="highlighter-rouge">object</code>。</p>
 
@@ -1522,6 +1083,7 @@ var google_remarketing_only = true;
 <h4 id="collapsetoggle"><code class="highlighter-rouge">.collapse('toggle')</code></h4>
 
 <p>將可折疊元素切換為顯示或隱藏。 <strong>在可折疊元素實際顯示或隱藏之前</strong>（即發生 <code class="highlighter-rouge">shown.bs.collapse</code> 或 <code class="highlighter-rouge">hidden.bs.collapse</code> 事件之前）返回到調用者。</p>
+
 <h4 id="collapseshow"><code class="highlighter-rouge">.collapse('show')</code></h4>
 
 <p>顯示可折疊的元素。 <strong>在可折疊元素實際顯示之前</strong>（即在 <code class="highlighter-rouge">shown.bs.collapse</code> 事件發生之前）返回到調用者。</p>
@@ -1529,6 +1091,10 @@ var google_remarketing_only = true;
 <h4 id="collapsehide"><code class="highlighter-rouge">.collapse('hide')</code></h4>
 
 <p>隱藏可折疊的元素。 <strong>在可折疊元素實際上被隱藏之前返回給調用者</strong>（即在 <code class="highlighter-rouge">hidden.bs.collapse</code> 事件發生之前）。</p>
+
+<h3 id="collapsedispose"><code class="highlighter-rouge">.collapse('dispose')</code></h3>
+
+<p>銷毀一個元素的折疊。</p>
 
 <h3 id="事件">事件</h3>
 
@@ -1584,16 +1150,15 @@ var google_remarketing_only = true;
   <script src="/assets/js/vendor/clipboard.min.js"></script>
   <script src="/assets/js/vendor/holder.min.js"></script>
   <script src="/assets/js/src/application.js"></script>
+  <script src="/assets/js/src/pwa.js"></script>
 
 
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="/assets/js/ie-emulation-modes-warning.js"></script>
 
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script type="text/javascript">
-  var docsearch = docsearch({
+<script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script>
+  docsearch({
     apiKey: 'ef316997b6983b7e641cb5ed2a6683d1',
     indexName: 'hexschool',
     inputSelector: '#search-input',
@@ -1615,12 +1180,12 @@ var google_remarketing_only = true;
 
 
 <script>
-Holder.addTheme('gray', {
-  bg: '#777',
-  fg: 'rgba(255,255,255,.75)',
-  font: 'Helvetica',
-  fontweight: 'normal'
-})
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
 </script>
 
   </body>
