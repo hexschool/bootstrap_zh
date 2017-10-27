@@ -12,9 +12,6 @@ group: components
 
 
 {% example html %}
-
-類似導覽元件，麵包屑呈現不需要透過 `<li>` 也能運作。
-
 <nav aria-label="breadcrumb" role="navigation">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
