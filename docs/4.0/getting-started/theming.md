@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: Theming Bootstrap
-description: Customize Bootstrap 4 with our new built-in Sass variables for global style preferences for easy theming and component changes.
+title: 主題化 Bootstrap
+description: 使用內建的 Sass 變數客製化 Bootstrap 4，套用全域的樣式風格及主題、元件的調整。
 group: getting-started
 toc: true
 redirect_from: "/docs/4.0/getting-started/options/"
 ---
 
-## Introduction
+## 簡介
 
-In Bootstrap 3, theming was largely driven by variable overrides in LESS, custom CSS, and a separate theme stylesheet that we included in our `dist` files. With some effort, one could completely redesign the look of Bootstrap 3 without touching the core files. Bootstrap 4 provides a familiar, but slightly different approach.
+在 Bootstrap 3 中主題更動是由 LESS 的變數覆寫、自訂 CSS 及分離的主題樣式表，這些包含在我們的 Dist 文件中，通過一些加強，現在可以完全重新設計 Bootstrap 3 的外觀無需修改核心文件，Bootstrap 提供一種熟悉但略有不同的作法。
 
-Now, theming is accomplished by Sass variables, Sass maps, and custom CSS. There's no more dedicated theme stylesheet; instead, you can enable the built-in theme to add gradients, shadows, and more.
+現在主題由 Sass 變數、Sass Map 和自定義 CSS 完成，沒有專門的主題樣式表；但你也可以啟用內置主題來增加漸層、陰影等。
 
 ## Sass
 
-Utilize our source Sass files to take advantage of variables, maps, mixins, and more.
+利用我們的 Sass 原始檔來調整變數、Sass maps、mixins 還有其它等等。
 
-### File structure
+### 檔案結構
 
-Whenever possible, avoid modifying Bootstrap's core files. For Sass, that means creating your own stylesheet that imports Bootstrap so you can modify and extend it. Assuming you've downloaded our source files or are using a package manager, you'll have a file structure that looks like this:
+盡可能避免修改 Bootstrap 核心文件。對於 Sass 來說，這是創建你的樣式表並導入 Bootstrap 核心，這便於你修改並擴增它。假設你下載了原始檔案或使用套件管理工具，那麼文件結構應該如下所示：
 
 {% highlight plaintext %}
 your-project/
@@ -31,7 +31,7 @@ your-project/
         └── scss
 {% endhighlight %}
 
-In your `custom.scss`, you'll import Bootstrap's source Sass files. You have two options: include all of Bootstrap, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.
+在您的 `custom.scss` 中，您將導入 Bootstrap 的 Sass 原始檔案。您有兩個選擇：包括所有 Bootstrap 或 選擇您需要的部分。我們鼓勵後者，但請注意，我們的組件有一些要求和相依性。您還需要為我們的插件加入一些 JavaScript。
 
 {% highlight scss %}
 // Custom.scss
@@ -57,15 +57,15 @@ In your `custom.scss`, you'll import Bootstrap's source Sass files. You have two
 @import "node_modules/bootstrap/scss/grid";
 {% endhighlight %}
 
-With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Bootstrap under the `// Optional` section as needed.
+使用該設置，您可以開始修改 `custom.scss` 中的任何 Sass 變數和 Sass maps。您還可以依據需求開始在 `// Optional` 部分下增加 Bootstrap 的部分元件。
 
-### Variable defaults
+### 預設變數
 
-Every Sass variable in Bootstrap 4 includes the `!default` flag allowing you to override the variable's default value in your own Sass without modifying Bootstrap's source code. Copy and paste variables as needed, modify their values, and remove the `!default` flag. If a variable has already been assigned, then it won't be re-assigned by the default values in Bootstrap.
+Bootstrap 4 中的每個 Sass變數都包含 `!default`，允許您在自己的 Sass 中覆蓋變數的預設值，而無需修改 Bootstrap 的原始碼。 根據需要複製和貼上變數，修改它們的值並刪除 `!default`。如果你給予一個變數值，那麼它將不會被 Bootstrap 中的預設值重複定義。
 
-Variable overrides within the same Sass file can come before or after the default variables. However, when overriding across Sass files, your overrides must come before you import Bootstrap's Sass files.
+相同 Sass 文件中的變數覆蓋可以在預設變數之前或之後。但是當覆寫 Sass 文件時，您的新變數必須在導入 Bootstrap 的 Sass 文件之前。
 
-Here's an example that changes the `background-color` and `color` for the `<body>` when importing and compiling Bootstrap via npm:
+這是一個例子，通過 npm 導入和編譯 Bootstrap 時，可以更改 `<body>` 的 `background-color` 和 `color`。
 
 {% highlight scss %}
 // Your variable overrides
@@ -76,13 +76,13 @@ $body-color: #111;
 @import "node_modules/bootstrap/scss/bootstrap";
 {% endhighlight %}
 
-Repeat as necessary for any variable in Bootstrap, including the global options below.
+重複任何需要的變數在 Bootstrap 中，包含在下方的全域選項。
 
-### Maps and loops
+### Sass Maps 與循環
 
-Bootstrap 4 includes a handful of Sass maps, key value pairs that make it easier to generate families of related CSS. We use Sass maps for our colors, grid breakpoints, and more. Just like Sass variables, all Sass maps include the `!default` flag and can be overridden and extended.
+Bootstrap 4 包含一些 Sass maps、對應值，這使它更容易產生一連貫的 CSS。我們使用 Sass map 做為我們的顏色、中斷點還有更多，就像是 Sass 變數，所有 Sass map 都包含 `!default` 他更能夠覆蓋及擴增。
 
-For example, to modify an existing color in our `$theme-colors` map, add the following to your custom Sass file:
+例如，要修改 `$theme-colors` mps 的現有顏色，請將以下內容加到您的自定義 Sass 文件中：
 
 {% highlight scss %}
 $theme-colors: (
@@ -91,7 +91,7 @@ $theme-colors: (
 );
 {% endhighlight %}
 
-To add a new color to `$theme-colors`, add the new key and value:
+增加一個新色彩到 `$theme-colors`，並增加一個新的 key 及 值。
 
 {% highlight scss %}
 $theme-colors: (
@@ -101,7 +101,7 @@ $theme-colors: (
 
 ### Functions
 
-Bootstrap utilizes several Sass functions, but only a subset are applicable to general theming. We've included three functions for getting values from the color maps:
+Bootstrap 使用多個 Sass 函式，但只有一個子集適用於一般主題。我們提供三個功能來獲取顏色 maps 的值：
 
 {% highlight scss %}
 @function color($key: "blue") {
@@ -117,7 +117,7 @@ Bootstrap utilizes several Sass functions, but only a subset are applicable to g
 }
 {% endhighlight %}
 
-These allow you to pick one color from a Sass map much like how you'd use a color variable from v3.
+這些允許您從 Sass maps 中選擇一種顏色，就像您如何使用 v3 中的顏色變數。
 
 {% highlight scss %}
 .custom-element {
@@ -126,7 +126,7 @@ These allow you to pick one color from a Sass map much like how you'd use a colo
 }
 {% endhighlight %}
 
-We also have another function for getting a particular _level_ of color from the `$theme-colors` map. Negative level values will lighten the color, while higher levels will darken.
+我們還有另一個功能，從 `$theme-colors` map 獲取一個特定 _級別_ 顏色。負值會比較亮、更高的值則會變暗。
 
 {% highlight scss %}
 @function theme-color-level($color-name: "primary", $level: 0) {
@@ -138,7 +138,7 @@ We also have another function for getting a particular _level_ of color from the
 }
 {% endhighlight %}
 
-In practice, you'd call the function and pass in two parameters: the name of the color from `$theme-colors` (e.g., primary or danger) and a numeric level.
+實際上你能使用這個函式並帶入兩個參數，從 `$theme-colors` 顏色名稱 (e.g., primary or danger) 及一個數值。
 
 {% highlight scss %}
 .custom-element {
@@ -146,13 +146,13 @@ In practice, you'd call the function and pass in two parameters: the name of the
 }
 {% endhighlight %}
 
-Additional functions could be added in the future or your own custom Sass to create level functions for additional Sass maps, or even a generic one if you wanted to be more verbose.
+未來還可以增加其他功能，或你可以用自定義的 Sass 創建附加 Sass maps 的級別函式。
 
-### Color contrast
+### 顏色對比
 
-One additional function we include in Bootstrap is the color contrast function, `color-yiq`. It utilizes the [YIQ color space](https://en.wikipedia.org/wiki/YIQ) to automatically return a light (`#fff`) or dark (`#111`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
+Bootstrap 中另外一個函式是色彩對比功能 `color-yiq`。 它使用 [YIQ 色彩空間](https://en.wikipedia.org/wiki/YIQ) 根據指定的基色自動回傳白色 (`#fff`) 或深色 (`#111`) 的對比度顏色。 此功能對於要生成多個 Class 的 mixins 或 循環 特別有用。
 
-For example, to generate color swatches from our `$theme-colors` map:
+例如，從我們的 `$theme-colors` 生成顏色樣本：
 
 {% highlight scss %}
 @each $color, $value in $theme-colors {
@@ -162,7 +162,7 @@ For example, to generate color swatches from our `$theme-colors` map:
 }
 {% endhighlight %}
 
-It can also be used for one-off contrast needs:
+它也可以用於一次性對比度需求：
 
 {% highlight scss %}
 .custom-element {
@@ -170,7 +170,7 @@ It can also be used for one-off contrast needs:
 }
 {% endhighlight %}
 
-You can also specify a base color with our color map functions:
+您也可使用我們的 `$theme-colors` 功能指定基色：
 
 {% highlight scss %}
 .custom-element {
@@ -178,31 +178,31 @@ You can also specify a base color with our color map functions:
 }
 {% endhighlight %}
 
-## Sass options
+## Sass 選項
 
-Customize Bootstrap 4 with our built-in custom variables file and easily toggle global CSS preferences with new `$enable-*` Sass variables. Override a variable's value and recompile with `npm run test` as needed.
+使用我們內置的自定義變數文件自定義 Bootstrap 4，並使用新的 `$enable-*` Sass 變數切換全局 CSS 選項。覆寫變數的值，並依據需要重新編譯 `npm run test`。
 
-You can find and customize these variables for key global options in our `_variables.scss` file.
+你可以從 `_variables.scss` 檔案中的全域選項中找到這些自定義變數。
 
-| Variable                    | Values                             | Description                                                                            |
+| 變數                    | 值                             | 描述                                                                            |
 | --------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------- |
-| `$spacer`                   | `1rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our [spacer utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). |
-| `$enable-rounded`           | `true` (default) or `false`        | Enables predefined `border-radius` styles on various components.                       |
-| `$enable-shadows`           | `true` or `false` (default)        | Enables predefined `box-shadow` styles on various components.                          |
-| `$enable-gradients`         | `true` or `false` (default)        | Enables predefined gradients via `background-image` styles on various components.      |
-| `$enable-transitions`       | `true` (default) or `false`        | Enables predefined `transition`s on various components.                                |
+| `$spacer`                   | `1rem` (default), or any value > 0 | 指定一個預設的空間值，用來產生我們的 [spacer 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)。 |
+| `$enable-rounded`           | `true` (default) or `false`        | 啟用各元件上的 `border-radius` 樣式。                      |
+| `$enable-shadows`           | `true` or `false` (default)        | 啟用各元件上的 `box-shadow` 樣式。                          |
+| `$enable-gradients`         | `true` or `false` (default)        | 啟用各元件上的漸層 `background-image` 樣式。      |
+| `$enable-transitions`       | `true` (default) or `false`        | E啟用各元件上的 `transition` 。 
 | `$enable-hover-media-query` | `true` or `false` (default)        | ...                                                                                    |
-| `$enable-grid-classes`      | `true` (default) or `false`        | Enables the generation of CSS classes for the grid system (e.g., `.container`, `.row`, `.col-md-1`, etc.).     |
-| `$enable-caret`             | `true` (default) or `false`        | Enables pseudo element caret on `.dropdown-toggle`.                                    |
-| `$enable-print-styles`      | `true` (default) or `false`        | Enables styles for optimizing printing.                                |
+| `$enable-grid-classes`      | `true` (default) or `false`        | 啟用並產生 Grid System CSS Class (如 `.container`, `.row`, `.col-md-1`, 等)    |
+| `$enable-caret`             | `true` (default) or `false`        | 啟用偽元素圖示在 `.dropdown-toggle` 。                                    |
+| `$enable-print-styles`      | `true` (default) or `false`        | 啟用列印優化的樣式。                         |
 
-## Color
+## 色彩
 
-Many of Bootstrap's various components and utilities are built through a series of colors defined in a Sass map. This map can be looped over in Sass to quickly generate a series of rulesets.
+Bootstrap 的許多元件和通用類別都是透過 Sass map 中定義的一系列顏色建構的。該 maps 可以在 Sass 中循環，以快速生成一系列規則集。
 
-### All colors
+### 全部色彩
 
-All colors available in Bootstrap 4, are available as Sass variables and a Sass map in our `scss/_variables.scss` file. This will be expanded upon in subsequent minor releases to add additional shades, much like the [grayscale palette](#grays) we already include.
+Bootstrap 4 中提供的顏色都可用作我們的 `scss/_variables.scss` 文件中的 Sass 變數和 Sass maps。這將在下一個次要版本增加額外的陰影，樣式像[grayscale palette](#grays)。）
 
 <div class="row">
   {% for color in site.data.colors %}
@@ -214,7 +214,7 @@ All colors available in Bootstrap 4, are available as Sass variables and a Sass 
   {% endfor %}
 </div>
 
-Here's how you can use these in your Sass:
+以下是您可以在 Sass 中使用的方法：
 
 {% highlight scss %}
 // With variable
@@ -224,15 +224,15 @@ Here's how you can use these in your Sass:
 .beta { color: color("purple"); }
 {% endhighlight %}
 
-[Color utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) are also available for setting `color` and `background-color`.
+[色彩通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) 也可設置 `color` 和`background-color`。
 
 {% callout info %}
-In the future, we'll aim to provide Sass maps and variables for shades of each color as we've done with the grayscale colors below.
+將來，我們的目標是為每種顏色的色調提供 Sass maps 和變數，就像下面的灰階色彩一樣。
 {% endcallout %}
 
-### Theme colors
+### 主題色彩
 
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in our `scss/_variables.scss` file.
+我們使用所有色彩的子集來創建一個小的色表，用來產生色彩主題，也同時能透過 `scss/_variables.scss` 使用 Sass 變數、Sass map。
 
 <div class="row">
   {% for color in site.data.theme-colors %}
@@ -242,9 +242,9 @@ We use a subset of all colors to create a smaller color palette for generating c
   {% endfor %}
 </div>
 
-### Grays
+### 灰階
 
-An expansive set of gray variables and a Sass map in `scss/_variables.scss` for consistent shades of gray across your project.
+`scss/_variables.scss` 中設置了一組廣泛的灰色變數和一個 Sass maps，整個專案將有一致的灰色陰影。
 
 <div class="row mb-3">
   <div class="col-md-4">
@@ -253,8 +253,8 @@ An expansive set of gray variables and a Sass map in `scss/_variables.scss` for 
     {% endfor %}
   </div>
 </div>
-
-Within `_variables.scss`, you'll find our color variables and Sass map. Here's an example of the `$colors` Sass map:
+
+在 `_variables.scss` 中，你會發現我們的顏色變數和 Sass maps。以下是 `$colors` Sass maps 的範例：
 
 {% highlight scss %}
 $colors: (
@@ -274,17 +274,17 @@ $colors: (
 ) !default;
 {% endhighlight %}
 
-Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
+增加、刪除或修改 Sass maps 中的值，來更新在其他元件的顯示方式，可惜的是，並非所有組件都能使用 Sass maps，未來更新時將會改善這一點，在此之前計劃使用 `${color}` 變數和這個 Sass map。
 
-## Components
+## 元件
 
-Many of Bootstrap's components and utilities are built with `@each` loops that iterate over a Sass map. This is especially helpful for generating variants of a component by our `$theme-colors` and creating responsive variants for each breakpoint. As you customize these Sass maps and recompile, you'll automatically see your changes reflected in these loops.
+Bootstrap 的許多元件和通用類別都是用 `@each` 迴圈構建的，它們遍歷 Sass maps。 這對於透過我們的 `$theme-colors` 生成元件的變體特別有用，並為每個中斷點創建響應式元件。當您自定義這些 Sass maps 並重新編譯時，您將自動看到您在這些迴圈中反映更改。
 
-### Modifiers
+### 修飾
 
-Many of Bootstrap's components are built with a base-modifier class approach. This means the bulk of the styling is contained to a base class (e.g., `.btn`) while style variations are confined to modifier classes (e.g., `.btn-danger`). These modifier classes are built from the `$theme-colors` map to make customizing the number and name of our modifier classes.
+Bootstrap 許多元件都使用基類修飾符 Class 的方法構建。這代表大部分樣式都包含基礎類別（例如`.btn`），而樣式變數則限制於修飾 Class（例如 `.btn-danger`）。這些修飾的 Class 是從 `$theme-colors` sass map 建構，可自定義修飾 Class 名稱及數量。 
 
-Here are two examples of how we loop over the `$theme-colors` map to generate modifiers to the `.alert` component and all our `.bg-*` background utilities.
+這裡舉兩個例子介紹我們如何透過 `$theme-colors` map 來產生包含修飾 Class 在 `.alert` 元件上，並且包含全部 `.bg-*` 背景通用類別。
 
 {% highlight scss %}
 // Generate alert modifier classes
@@ -300,9 +300,9 @@ Here are two examples of how we loop over the `$theme-colors` map to generate mo
 }
 {% endhighlight %}
 
-### Responsive
+### 響應式
 
-These Sass loops aren't limited to color maps, either. You can also generate responsive variations of your components or utilities. Take for example our responsive text alignment utilities where we mix an `@each` loop for the `$grid-breakpoints` Sass map with a media query include.
+這些 Sass 迴圈也不限於色彩 map。你也可以生成不同的響應式元件及通用類別，夏霏的範例是文字對齊通用類別的響應式。我們將包含 media query 的 `$grid-breakpoints` Sass map 透過 `@each` 來循環生成。
 
 {% highlight scss %}
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -316,4 +316,4 @@ These Sass loops aren't limited to color maps, either. You can also generate res
 }
 {% endhighlight %}
 
-Should you need to modify your `$grid-breakpoints`, your changes will apply to all the loops iterating over that map.
+如果你修改你的 `$grid-breakpoints`，你將會套用 maps 中的所有迴圈。
