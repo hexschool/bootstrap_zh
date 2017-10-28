@@ -10,7 +10,7 @@
 6 silly lifecycle bootstrap@4.0.0-beta.2~predocs: no script for predocs, continuing
 7 info lifecycle bootstrap@4.0.0-beta.2~docs: bootstrap@4.0.0-beta.2
 8 verbose lifecycle bootstrap@4.0.0-beta.2~docs: unsafe-perm in lifecycle true
-9 verbose lifecycle bootstrap@4.0.0-beta.2~docs: PATH: /Users/casper/.nvm/versions/node/v6.9.4/lib/node_modules/npm/bin/node-gyp-bin:/Users/casper/Github/bootstrap/node_modules/.bin:/Users/casper/.rvm/gems/ruby-2.3.3/bin:/Users/casper/.rvm/gems/ruby-2.3.3@global/bin:/Users/casper/.rvm/rubies/ruby-2.3.3/bin:/Users/casper/.nvm/versions/node/v6.9.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/casper/.rvm/bin
+9 verbose lifecycle bootstrap@4.0.0-beta.2~docs: PATH: /Users/casper/.nvm/versions/node/v6.9.4/lib/node_modules/npm/bin/node-gyp-bin:/Users/casper/Github/bootstrap/node_modules/.bin:/Users/casper/.rvm/gems/ruby-2.3.3/bin:/Users/casper/.rvm/gems/ruby-2.3.3@global/bin:/Users/casper/.rvm/rubies/ruby-2.3.3/bin:/Users/casper/.nvm/versions/node/v6.9.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/casper/.rvm/gems/ruby-2.3.3/bin:/Users/casper/.rvm/gems/ruby-2.3.3@global/bin:/Users/casper/.rvm/rubies/ruby-2.3.3/bin:/Users/casper/.rvm/bin:/Users/casper/.rvm/bin
 10 verbose lifecycle bootstrap@4.0.0-beta.2~docs: CWD: /Users/casper/Github/bootstrap
 11 silly lifecycle bootstrap@4.0.0-beta.2~docs: Args: [ '-c',
 11 silly lifecycle   'npm-run-all --parallel css-docs js-docs --sequential docs-compile docs-lint' ]

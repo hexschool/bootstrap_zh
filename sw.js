@@ -188,7 +188,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/components/breadcrumb/index.html",
-    "revision": "735f3abe838d805efb2db1703e203463"
+    "revision": "572987973e9b60a210ea75d327b33372"
   },
   {
     "url": "docs/4.0/components/button-group/index.html",
@@ -200,7 +200,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/components/card/index.html",
-    "revision": "f7de1d83a9514c893c931f16848ce616"
+    "revision": "61ea59a5ae7754d7c97a82543132e216"
   },
   {
     "url": "docs/4.0/components/carousel/index.html",
@@ -216,7 +216,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/components/forms/index.html",
-    "revision": "e4ac936d1f705756b8a255b994a2d4dc"
+    "revision": "aad322d62c6f83750491e9fb7566f5f7"
   },
   {
     "url": "docs/4.0/components/index.html",
@@ -236,7 +236,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/components/modal/index.html",
-    "revision": "0629baf2308bc86eef7f5414eea11c4d"
+    "revision": "b3891f56cb4ea5e08c687fa6466dcd3a"
   },
   {
     "url": "docs/4.0/components/navbar/index.html",
@@ -288,7 +288,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/content/tables/index.html",
-    "revision": "5dad1d250d9a0572a1e43d4345ea2d04"
+    "revision": "3633377422a14775c94909f73053df2c"
   },
   {
     "url": "docs/4.0/content/typography/index.html",
@@ -540,7 +540,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/getting-started/accessibility/index.html",
-    "revision": "59e93bfb94d7be1523f8ccb8b17875a2"
+    "revision": "776cc7cda50ade66f7ef7450898c8821"
   },
   {
     "url": "docs/4.0/getting-started/best-practices/index.html",
@@ -580,7 +580,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/getting-started/theming/index.html",
-    "revision": "7452963c14d1a7021c82238cb4fd3c90"
+    "revision": "ab9fdb3e85698d1d18628ea07cdaed9b"
   },
   {
     "url": "docs/4.0/getting-started/webpack/index.html",
@@ -672,7 +672,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/utilities/text/index.html",
-    "revision": "67f8b21199d7493b2633692b23c4e0fa"
+    "revision": "018d497b5558448ee7525a3ba07d8a35"
   },
   {
     "url": "docs/4.0/utilities/vertical-align/index.html",

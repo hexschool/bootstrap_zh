@@ -1842,7 +1842,7 @@ var google_remarketing_only = true;
 <div class="bd-callout bd-callout-warning">
 <h4 id="隱藏標籤的替代品">隱藏標籤的替代品</h4>
 
-<p>如果您沒有為每個 input 添加標籤，螢幕閱讀器等輔助技術將對您的表單感到困擾。對於這些行內表單，您可以使用 <code class="highlighter-rouge">.sr-only</code> 來隱藏標籤。還提供了輔助技術標籤的另外的替代方法，例如 <code class="highlighter-rouge">aria</code> 標籤、<code class="highlighter-rouge">aria-labelledby</code> 或 <code class="highlighter-rouge">title</code> 屬性。如果這些都不存在，輔助技術可能會使用 <code class="highlighter-rouge">placeholder</code> 的屬性（如果存在），但請注意，不建議使用 <code class="highlighter-rouge">placeholder</code> 替代其他標籤方法。</p>
+<p>如果您沒有為每個 input 添加標籤，螢幕閱讀器等輔助技術將對您的表單感到困擾。對於這些行內表單，您可以使用 <code class="highlighter-rouge">.sr-only</code> 來隱藏標籤。還提供了輔助技術標籤的另外的替代方法，例如 <code class="highlighter-rouge">aria-label</code> 、<code class="highlighter-rouge">aria-labelledby</code> 或 <code class="highlighter-rouge">title</code> 屬性。如果這些都不存在，輔助技術可能會使用 <code class="highlighter-rouge">placeholder</code> 的屬性（如果存在），但請注意，不建議使用 <code class="highlighter-rouge">placeholder</code> 替代其他標籤方法。</p>
 </div>
 
 <h2 id="幫助文字">幫助文字</h2>
@@ -1961,7 +1961,7 @@ var google_remarketing_only = true;
 <p>透過 HTML5 表單驗證可在我們支持的 <a href="https://caniuse.com/#feat=form-validation">瀏覽器中提供</a> 為您的用戶提供可操作的反饋。從瀏覽器中選擇預設驗證反饋，或者使用我們內置的 Class 和啟動 JavaScript 實現自定義訊息。</p>
 
 <div class="bd-callout bd-callout-warning">
-<p>我們 <strong>強烈推薦自定義</strong> 驗證樣式，因為瀏覽器預設值沒辦法提供給與螢幕閱讀器使用者。</p>
+<p>我們 <strong>強烈推薦自定義</strong> 驗證樣式，因為瀏覽器預設值沒辦法告知螢幕閱讀器使用者。</p>
 </div>
 
 <h3 id="如何運作">如何運作</h3>
@@ -2437,7 +2437,7 @@ var google_remarketing_only = true;
 
 <h4 id="堆疊">堆疊</h4>
 
-<p>自訂核取方塊和單選按鈕是平行的開始。加入一個 <code class="highlighter-rouge">.custom-controls-stacked</code> 的父級，以確保每個表單控制元件在不同的列上。</p>
+<p>自訂的核取方塊和單選按鈕原本會以行內樣式排列。加入一個 <code class="highlighter-rouge">.custom-controls-stacked</code> 的父級，以確保每個表單控制元件在不同的列上。</p>
 
 <div class="bd-example">
 <div class="custom-controls-stacked">
