@@ -207,7 +207,7 @@ toc: true
 
 ### 使用通用類別
 
-使用我們的幾個 [可調整大小的通用類別][available sizing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) 來設置卡片的寬度。
+使用我們的幾個 [可調整大小的通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) 來設置卡片的寬度。
 
 {% example html %}
 <div class="card w-75">
