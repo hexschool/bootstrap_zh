@@ -41,18 +41,18 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="瀏覽器和裝置 (Browsers & devices)">
   <meta name="twitter:description" content="瞭解 Bootstrap 支援的各種現代和過去的瀏覽器和裝置，包括每個瀏覽器和裝置已知的故障和錯誤。">
-  <meta name="twitter:image" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social-logo.png">
+  <meta name="twitter:image" content="http://localhost:9001/assets/brand/bootstrap-social-logo.png">
 
 
 <!-- Facebook -->
 
-  <meta property="og:url" content="http://bootstrap.hexschool.com/docs/4.0/getting-started/browsers-devices/">
+  <meta property="og:url" content="http://localhost:9001/docs/4.0/getting-started/browsers-devices/">
   <meta property="og:title" content="瀏覽器和裝置 (Browsers & devices)">
   <meta property="og:description" content="瞭解 Bootstrap 支援的各種現代和過去的瀏覽器和裝置，包括每個瀏覽器和裝置已知的故障和錯誤。">
   <meta property="og:type" content="website">
 
-<meta property="og:image" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social.png">
-<meta property="og:image:secure_url" content="http://bootstrap.hexschool.com/assets/brand/bootstrap-social.png">
+<meta property="og:image" content="http://localhost:9001/assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="http://localhost:9001/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -145,6 +145,12 @@ var google_remarketing_only = true;
   </div>
 
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://www.facebook.com/hexschool" target="_blank" rel="noopener" aria-label="GitHub">
+        六角學院譯
+      </a>
+    </li>
+
     <li class="nav-item dropdown">
       <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         v4.0
@@ -740,6 +746,37 @@ var google_remarketing_only = true;
 
 </div>
 
+<div class="fab-fixed-wrap with-navbar-bottom" style="bottom: 4.6875rem;position: fixed;z-index: 1035;right: .9375rem;bottom: .9375rem;">
+  <a href="http://m.me/hexschool" target="_blank" class="fab fab-facebook mp-click" data-toggle="tooltip" data-placement="left" title="Facebook 客服">
+    <svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="32" height="32" fill="none" stroke="currentcolor" stroke-width="2" class="text-primary" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><title>Lightning icon</title><path d="M18 13l8-11L8 13l6 6-8 11 18-11z"/></svg>
+
+  </a>
+</div>
+
+<style>
+  .fab-fixed-wrap .fab {
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    color: white;
+    background-color: #0c9;
+    text-align: center;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16);
+    text-decoration: none;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+    justify-content: center;
+  }
+  .fab-fixed-wrap .fab.fab-facebook {
+    /* background-color: #4080ff; */
+    background-color: white;
+  }
+  .fab-fixed-wrap .fab.fab-line {
+    background-color: #0b0;
+  }
+</style>
           <h2 id="支援的瀏覽器">支援的瀏覽器</h2>
 
 <p>Bootstrap 支援各大瀏覽器和平台最新和最穩定的版本。在 Windows 上，<strong>我們支援 Internet Explorer 10-11 / Microsoft Edge</strong>。</p>
