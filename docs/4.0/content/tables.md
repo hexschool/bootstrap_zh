@@ -1,12 +1,7 @@
 ---
 layout: docs
-<<<<<<< HEAD
 title: 表格 (Tables)
-description: Bootstrap 設置選擇性加入樣式的表格文件和範例 (鑒於表格在 JavaScript 外掛程式中的廣泛用途)
-=======
-title: Tables
-description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.
->>>>>>> v4.0.0-beta.3
+description: Bootstrap 設置表格文件和範例 (提供表格在 JavaScript 外掛程式中的用途)
 group: content
 toc: true
 ---
