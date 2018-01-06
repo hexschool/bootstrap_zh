@@ -21,7 +21,7 @@ toc: true
 
 {% callout warning %}
 
-#### SVG 圖片與 IE 10
+##### SVG 圖片與 IE 10
 
 在 `Internet Explorer 10` 中， 加入 `.img-fluid` 設定的可縮放向量圖形有比例不正確的問題。 要解決這個問題，請在必要時另加 `width：100％\ 9;` 的設定。 此設定對於其他圖檔格式並不適用，因此 `Bootstrap` 不會自動加入此設定。
 

@@ -16,7 +16,7 @@ Bootstrap 支援各大瀏覽器和平台最新和最穩定的版本。在 Window
 
 一般而言，Bootstrap 支援每種主要平台預設瀏覽器的最新版本。請注意，不支援代理瀏覽器（比如Opera Mini、Opera Mobile Turbo 模式、UC Browser Mini、Amazon Silk）。
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <td></td>
@@ -34,7 +34,7 @@ Bootstrap 支援各大瀏覽器和平台最新和最穩定的版本。在 Window
       <td class="text-success">Supported</td>
       <td class="text-muted">N/A</td>
       <td class="text-success">Android v5.0+ supported</td>
-      <td class="text-muted">N/A</td>
+      <td class="text-success">Supported</td>
     </tr>
     <tr>
       <th scope="row">iOS</th>
@@ -42,7 +42,7 @@ Bootstrap 支援各大瀏覽器和平台最新和最穩定的版本。在 Window
       <td class="text-success">Supported</td>
       <td class="text-success">Supported</td>
       <td class="text-muted">N/A</td>
-      <td class="text-muted">N/A</td>
+      <td class="text-success">Supported</td>
     </tr>
     <tr>
       <th scope="row">Windows 10 Mobile</th>
@@ -59,7 +59,7 @@ Bootstrap 支援各大瀏覽器和平台最新和最穩定的版本。在 Window
 
 同理，支援大多數桌面瀏覽器的最新版本。
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <td></td>
@@ -104,10 +104,6 @@ Bootstrap 支援各大瀏覽器和平台最新和最穩定的版本。在 Window
 作為一種提示，我們將此檔作為演示加入到 Bootstrap 的各種文件和範例中。
 
 ## 行動瀏覽器上的 互動視窗 和 下拉式功能表
-
-### 溢出和滾動
-
-對溢出(`overflow: hidden;`) `<body>` 在 iOS 和 Android 的支援是非常有限的。因此，當在上述任一裝置的瀏覽器的一種模式中滾動超過頂部和底部時，`<body>` 內容會開始滾動。參見[Chrome bug #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502) (Chrome v40 中已解決) 以及 [WebKit bug #153852](https://bugs.webkit.org/show_bug.cgi?id=153852)。
 
 ### iOS 文字方塊和滾動
 

@@ -18,7 +18,7 @@ toc: true
 
 {% example html %}
 <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Link with href
   </a>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -40,7 +40,7 @@ toc: true
 
 {% example html %}
 <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
 </p>
@@ -71,7 +71,7 @@ toc: true
   <div class="card">
     <div class="card-header" role="tab" id="headingOne">
       <h5 class="mb-0">
-        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <a data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
           Collapsible Group Item #1
         </a>
       </h5>
@@ -86,7 +86,7 @@ toc: true
   <div class="card">
     <div class="card-header" role="tab" id="headingTwo">
       <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
           Collapsible Group Item #2
         </a>
       </h5>
@@ -100,7 +100,7 @@ toc: true
   <div class="card">
     <div class="card-header" role="tab" id="headingThree">
       <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <a class="collapsed" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
           Collapsible Group Item #3
         </a>
       </h5>
@@ -119,7 +119,7 @@ toc: true
 {% example html %}
 <div id="exampleAccordion" data-children=".item">
   <div class="item">
-    <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1">
+    <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" role="button" aria-expanded="true" aria-controls="exampleAccordion1">
       Toggle item
     </a>
     <div id="exampleAccordion1" class="collapse show" role="tabpanel">
@@ -129,7 +129,7 @@ toc: true
     </div>
   </div>
   <div class="item">
-    <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2">
+    <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" role="button" aria-expanded="false" aria-controls="exampleAccordion2">
       Toggle item 2
     </a>
     <div id="exampleAccordion2" class="collapse" role="tabpanel">
@@ -143,7 +143,7 @@ toc: true
 
 ## 親和性
 
-確保在控制元素中添加 `aria-expanded`。 該屬性傳達與螢幕閱讀器和類似輔助技術相關的可控元件的當前狀態。如果可折疊元素預設關閉，則控制項元素上的屬性值應為 `aria-expanded="false"`。 如果您使用 `show` 將可折疊元素設置為預設打開，在控制項上設置 `aria-expanded="true"`。插件將根據是否打開或關閉可折疊元素自動切換控制項上的此屬性（透過 JavaScript，當使用者觸發的另一個控制項元素也綁定到同一個折疊元素）。
+確保在控制元素中添加 `aria-expanded`。 該屬性傳達與螢幕閱讀器和類似輔助技術相關的可控元件的當前狀態。如果可折疊元素預設關閉，則控制項元素上的屬性值應為 `aria-expanded="false"`。 如果您使用 `show` 將可折疊元素設置為預設打開，在控制項上設置 `aria-expanded="true"`。插件將根據是否打開或關閉可折疊元素自動切換控制項上的此屬性（透過 JavaScript，當使用者觸發的另一個控制項元素也綁定到同一個折疊元素）。如果控制的 HTML 元素不是按鈕 (例如`<a>`或`<div>`)，那麼屬性 `role="button"` 應該加到元素中。
 
 另外，如果您的控制項元素定位到單個可折疊元素 - 即 `data-target` 屬性指向 `id` 選擇器，則可以向控制項元素添加一個附加的 `aria-controls` 屬性，其中包含 `id` 可折疊的元素。 現代螢幕閱讀器和類似的輔助技術利用此屬性為使用者提供額外的快捷方式，直接導航到可折疊元素本身。
 
@@ -175,7 +175,7 @@ $('.collapse').collapse()
 
 可透過資料屬性或 JavaScript 加入選項。對於資料屬性，將選項名稱附加到 `data-`，如 `data-parent=""`。
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 100px;">名稱</th>
@@ -228,7 +228,7 @@ $('#myCollapsible').collapse({
 
 隱藏可折疊的元素。 **在可折疊元素實際上被隱藏之前返回給調用者**（即在 `hidden.bs.collapse` 事件發生之前）。
 
-### `.collapse('dispose')`
+#### `.collapse('dispose')`
 
 銷毀一個元素的折疊。
 
@@ -236,7 +236,7 @@ $('#myCollapsible').collapse({
 
 Bootstrap 提供一些事件給予折疊使用。
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 150px;">事件類別</th>

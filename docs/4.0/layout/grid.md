@@ -58,7 +58,7 @@ Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內�
 
 透過以下表格看 Bootstrap 如何在不同的裝置上運作。
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th></th>
@@ -155,9 +155,7 @@ Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內�
 {% endexample %}
 </div>
 
-等寬度欄可以分為多個行，但是有一個[Safari flexbox bug](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items) 它在沒有明確的`flex-basis` 或 `border`的情況下運行。
-
-這些修復已經記錄在[reduced test case outside Bootstrap](https://output.jsbin.com/micohor)中，如果瀏覽器是最新的，這就不是必須的。
+等寬度欄可以分為多個行，但是有一個[Safari flexbox bug](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items) 它在沒有明確的`flex-basis` 或 `border`的情況下運行。這解決是針對舊的瀏覽器，但如果是最新版本，則不需要理會這些解決方案。
 
 
 <div class="bd-example-row">
@@ -487,7 +485,7 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 
 ### Column breaks
 
-在 Flexbox 中將列拆分成新行需要一個小hack：當你想中斷你的欄到新的一行，可增加一個元素為 `width: 100%`。正常來說，通常這是通過多個`.row` 完成的，但此方法也是可行的。
+在 Flexbox 中將列拆分成新行需要一個小 hack: 當你想中斷你的欄到新的一行，可增加一個元素為 `width: 100%`。正常來說，通常這是通過多個`.row` 完成的，但此方法也是可行的。
 
 <div class="bd-example-row">
 {% example html %}
@@ -599,7 +597,7 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 </div>
 
 <div class="row">
-  <div class="col-sm-6 col-md-5 col-lg-6">.col.col-sm-6.col-md-5.col-lg-6</div>
+  <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
   <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
 </div>
 {% endexample %}

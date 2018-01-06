@@ -249,7 +249,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 
 ## 關於親和性
 
-請注意，導覽列即使視覺樣式為 `.nav-tabs` 的分頁標籤，應該 **不會** 被賦予 `role="tablist"`，`role="tab"` 或 `role="tabpanel"` 屬性。 這些僅適用於動態分頁標籤介面，如 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 中描述。 有關範例，請參閱本節中的 [為動態分頁操作的 JavaScript](#javascript-behavior-for-dynamic-tabbed-interfaces)。
+請注意，導覽列即使視覺樣式為 `.nav-tabs` 的分頁標籤，應該 **不會** 被賦予 `role="tablist"`，`role="tab"` 或 `role="tabpanel"` 屬性。 這些僅適用於動態分頁標籤介面，如 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 中描述。 有關範例，請參閱本節中的  [JavaScript behavior](#javascript-behavior)。
 
 ## 使用下拉選單
 
@@ -312,8 +312,6 @@ As always, vertical navigation is possible without `<ul>`s, too.
 
 使用 JavaScript 分頁標籤插件 - 單獨或透過編譯的 `bootstrap.js` 檔 - 擴展我們的導覽分頁標籤和片狀的，以創建可選的分頁標籤、甚至是下拉選單。
 
-動態分頁標籤介面，如 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 中所描述，需要 `role="tablist"`、`role="tab"`、`role="tabpanel"` 和額外的 `aria-` 屬性向輔助技術（如螢幕閱讀器）的使用者提供他們的結構、功能和當前狀態。
-
 如果你要自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)。
 
 動態頁籤介面，如 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel)，需要 `role="tablist"`、`role="tab"`，`role="tabpanel"` 和附加的 `aria-` 屬性，向用戶提供輔助技術（如螢幕閱讀器）的結構、功能和當前狀態。
@@ -364,13 +362,15 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </div>
 {% endhighlight %}
 
-如上所示，這不僅可以使用於 `<ul>` 的標記。也可以於 `<nav>` 的標記如下所示。
+如上所示，這不僅可以使用於 `<ul>` 的標記。也可以於 `<nav>` 的標記如下所示。或者隨隨著你自己需求的標示，如果你使用 `<nav>` 則不需要加入 `role="tablist"`，因為這會覆蓋該元素作為一個導覽地標。相反，使用一個替代元素(以下範例是使用 `<div>`)可用 `<nav>` 包覆它。
 
 <div class="bd-example bd-example-tabs">
-  <nav class="nav nav-tabs" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+      <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+    </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -386,10 +386,12 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </div>
 
 {% highlight html %}
-<nav class="nav nav-tabs" id="myTab" role="tablist">
-  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+  </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
@@ -536,9 +538,9 @@ $('#myTab a').on('click', function (e) {
 
 {% highlight js %}
 $('#myTab a[href="#profile"]').tab('show') // Select tab by name
-$('#myTab a:first').tab('show') // Select first tab
-$('#myTab a:last').tab('show') // Select last tab
-$('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
+$('#myTab li:first-child a').tab('show') // Select first tab
+$('#myTab li:last-child a').tab('show') // Select last tab
+$('#myTab li:nth-child(3) a').tab('show') // Select third tab
 {% endhighlight %}
 
 ### 淡入淡出
@@ -590,7 +592,7 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
 
 <script>
   $(function () {
-    $('#myTab a:last').tab('show')
+    $('#myTab li:last-child a').tab('show')
   })
 </script>
 {% endhighlight %}
@@ -603,7 +605,7 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
 $('#someTab').tab('show')
 {% endhighlight %}
 
-### .tab('dispose')
+#### .tab('dispose')
 
 銷毀一個元素的分頁標籤。
 
@@ -617,7 +619,7 @@ $('#someTab').tab('show')
 如果沒有分頁標籤已經被啟動，那麼 `hide.bs.tab`和  `hidden.bs.tab` 事件不會被觸發。
 
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 150px;">事件類型</th>

@@ -8,7 +8,7 @@ toc: true
 
 ## 改變顯示`display`
 
-使用我們的 `display` 工具可控的觸發 `display` 特性的一般值。將它與我們的網格系統、內容、或元件混合，以顯示或隱藏它們（透過特定的 viewport）。
+使用我們的 [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) 工具可控的觸發 `display` 特性的一般值。將它與我們的網格系統、內容、或元件混合，以顯示或隱藏它們（透過特定的 viewport）。
 
 ## Flexbox 選項
 

@@ -73,7 +73,7 @@ toc: true
 通過 JavaScript 插件啟用解除警報。
 
 {% highlight js %}
-$(".alert").alert()
+$('.alert').alert()
 {% endhighlight %}
 
 或者用 **警報內** 按鈕上的 `data` 屬性，如上所示：

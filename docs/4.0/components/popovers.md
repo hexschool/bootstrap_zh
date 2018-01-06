@@ -10,7 +10,7 @@ toc: true
 
 使用彈出提示框插件時應瞭解的事情如下：
 
-- 彈出提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 彈出提示框工作之前，您必須包含 [popper.min.js]({{ site.cdn.popper }})，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`，這已經包含 Popper.js 可以直接運作。
+- 彈出提示框依靠第三方函式庫 [Popper.js](https://popper.js.org/) 進行定位。 在 Bootstrap 彈出提示框工作之前，您必須包含 [popper.min.js]({{ site.cdn.popper }})，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`，這已經包含 Popper.js 可以直接運作。
 - 彈出提示框需要 [工具提示插件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/tooltips/) 作為依賴。
 - 如果你自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)。
 - 彈出提示框因為校能原因所以是選擇加入，所以 **您必須自己將他們初始化**。
@@ -46,54 +46,15 @@ $(function () {
 })
 {% endhighlight %}
 
-## 靜態彈出提示框
-
-有四個選項可供選擇：頂部、右側、底部和左側對齊。
-
-
-<div class="bd-example bd-example-popover-static">
-  <div class="popover bs-popover-top bs-popover-top-docs">
-    <div class="arrow"></div>
-    <h3 class="popover-header">Popover top</h3>
-    <div class="popover-body">
-      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-    </div>
-  </div>
-
-  <div class="popover bs-popover-right bs-popover-right-docs">
-    <div class="arrow"></div>
-    <h3 class="popover-header">Popover right</h3>
-    <div class="popover-body">
-      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-    </div>
-  </div>
-
-  <div class="popover bs-popover-bottom bs-popover-bottom-docs">
-    <div class="arrow"></div>
-    <h3 class="popover-header">Popover bottom</h3>
-    <div class="popover-body">
-      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-    </div>
-  </div>
-
-  <div class="popover bs-popover-left bs-popover-left-docs">
-    <div class="arrow"></div>
-    <h3 class="popover-header">Popover left</h3>
-    <div class="popover-body">
-      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-    </div>
-  </div>
-
-  <div class="clearfix"></div>
-</div>
-
-## 現場演示
+## 範例
 
 {% example html %}
 <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 {% endexample %}
 
 ### 四個方向
+
+Four options are available: top, right, bottom, and left aligned.
 
 <div class="bd-example popover-demo">
   <div class="bd-example-popovers">
@@ -135,11 +96,6 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 
 使用 `focus` 觸發以便用戶進行下一次點擊時移除這個彈出提示框。
 
-<<<<<<< HEAD
-=======
-Use the `focus` trigger to dismiss popovers on the user's next click of a different element than the toggle element.
->>>>>>> v4.0.0-beta.2
-
 {% callout danger %}
 #### 下一步點擊所需的具體標記
 
@@ -157,14 +113,7 @@ $('.popover-dismiss').popover({
 {% endhighlight %}
 
 
-<<<<<<< HEAD
-
 ## 用法
-
-透過 JavaScript 啟用彈出提示框。
-=======
-## Usage
->>>>>>> v4.0.0-beta.2
 
 
 {% highlight js %}$('#example').popover(options){% endhighlight %}
@@ -174,7 +123,7 @@ $('.popover-dismiss').popover({
 可以透過資料屬性或 JavaScript 傳遞選項。 對於資料屬性，將選項名稱附加到 `data-` 上，如 `data-animation=""`。
 
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 100px;">名稱</th>
@@ -283,6 +232,12 @@ $('.popover-dismiss').popover({
       <td>
       指定動態提示框將在調回時使用哪個位置。 有關更多信息，請參閱 Popper.js 的 <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.behavior">行為文檔</a></td>
     </tr>
+    <tr>
+      <td>boundary</td>
+      <td>string | element</td>
+      <td>'scrollParent'</td>
+      <td>Overflow constraint boundary of the popover. Accepts the values of <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript only). For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a>.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -360,7 +315,7 @@ $('.popover-dismiss').popover({
 
 ### 事件
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 150px;">事件類型</th>

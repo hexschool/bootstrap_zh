@@ -285,7 +285,7 @@ $('[data-spy="scroll"]').each(function () {
 })
 {% endhighlight %}
 
-### `.scrollspy('dispose')`
+#### `.scrollspy('dispose')`
 
 Destroys an element's scrollspy.
 
@@ -293,7 +293,7 @@ Destroys an element's scrollspy.
 
 可以透過資料屬性或 JavaScript 傳遞選項。對於資料屬性，將選項名稱附加到 `data-`，如 `data-offset=""`。
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 100px;">名稱</th>
@@ -315,7 +315,7 @@ Destroys an element's scrollspy.
 
 ### 事件
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 150px;">事件類型</th>

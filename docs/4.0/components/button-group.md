@@ -21,7 +21,7 @@ toc: true
 {% endexample %}
 
 {% callout warning %}
-#### 確保正確的 role 並提供標籤
+##### 確保正確的 role 並提供標籤
 
 為了輔助性技術（如螢幕閱讀器）傳達一系列按鈕的分組訊息，需要提供一個適當的 role 屬性。對於按鈕群組，這將是 `role="group"`，而工具欄應該有一個 `role="toolbar"`。
 
@@ -62,7 +62,9 @@ toc: true
     <button type="button" class="btn btn-secondary">4</button>
   </div>
   <div class="input-group">
-    <span class="input-group-addon" id="btnGroupAddon">@</span>
+    <div class="input-group-prepend">
+      <div class="input-group-text" id="btnGroupAddon">@</div>
+    </div>
     <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
   </div>
 </div>
@@ -75,7 +77,9 @@ toc: true
     <button type="button" class="btn btn-secondary">4</button>
   </div>
   <div class="input-group">
-    <span class="input-group-addon" id="btnGroupAddon2">@</span>
+    <div class="input-group-prepend">
+      <div class="input-group-text" id="btnGroupAddon2">@</div>
+    </div>
     <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon2">
   </div>
 </div>

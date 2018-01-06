@@ -19,7 +19,7 @@ redirect_from: "/docs/4.0/getting-started/options/"
 
 ### 檔案結構
 
-盡可能避免修改 Bootstrap 核心文件。對於 Sass 來說，這是創建你的樣式表並導入 Bootstrap 核心，這便於你修改並擴增它。假設你下載了原始檔案或使用套件管理工具，那麼文件結構應該如下所示：
+盡可能避免修改 Bootstrap 核心文件。對於 Sass 來說，這是創建你的樣式表並導入 Bootstrap 核心，這便於你修改並擴增它。假設你使用套件管理工具像是 npm，那麼文件結構應該如下所示：
 
 {% highlight plaintext %}
 your-project/
@@ -29,6 +29,17 @@ your-project/
     └── bootstrap
         ├── js
         └── scss
+{% endhighlight %}
+
+如果已經下載了原始檔案，並且沒有使用套件管理工具，那麼將需要手動設置類似於該結構的東西，使 Bootstrap 的原始碼與你自己的文件分開。
+
+{% highlight plaintext %}
+your-project/
+├── scss
+│   └── custom.scss
+└── bootstrap/
+    ├── js
+    └── scss
 {% endhighlight %}
 
 在您的 `custom.scss` 中，您將導入 Bootstrap 的 Sass 原始檔案。您有兩個選擇：包括所有 Bootstrap 或 選擇您需要的部分。我們鼓勵後者，但請注意，我們的組件有一些要求和相依性。您還需要為我們的插件加入一些 JavaScript。

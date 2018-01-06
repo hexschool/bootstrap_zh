@@ -10,16 +10,21 @@ group: components
 分隔符號在CSS中是透過以下方法自動添加的，[`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) 和
  [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content)。
 
-
 {% example html %}
-<nav aria-label="breadcrumb" role="navigation">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Home</li>
+  </ol>
+</nav>
+
+<nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page">Library</li>
   </ol>
 </nav>
 
-<nav aria-label="breadcrumb" role="navigation">
+<nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item"><a href="#">Library</a></li>

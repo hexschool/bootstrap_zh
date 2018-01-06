@@ -26,10 +26,8 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
   <div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input">
-      Check me out
-    </label>
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
@@ -138,15 +136,15 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 {% example html %}
 <form class="form-inline">
-  <div class="form-group">
+  <div class="form-group mb-2">
     <label for="staticEmail2" class="sr-only">Email</label>
     <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
   </div>
-  <div class="form-group mx-sm-3">
+  <div class="form-group mx-sm-3 mb-2">
     <label for="inputPassword2" class="sr-only">Password</label>
     <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-primary">Confirm identity</button>
+  <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
 </form>
 {% endexample %}
 
@@ -155,7 +153,9 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 透過 `.form-check` 預設核取方塊和選項按鈕得到改進，這兩種輸入類型的 class 都改進了 HTML 元素的佈局和行為。核取方塊用於在列表中選擇一個或多個選項，而選項按鈕是用於從許多選項中選擇一個選項。
 
-支持 `not-allowed` 核取方塊和選項按鈕，並在父標籤 `<label>` 滑入時顯示不允許的游標，則需要將 `.disabled` 加到父級 `.form-check`。這也將淡化文字顏色以提示 input 的狀態。
+支持 `not-allowed` 核取方塊和選項按鈕，並在父標籤 `<label>` 滑入時顯示不允許的游標，則需要將 `.disabled` 加到父級 `.form-check-input`。這也將淡化文字顏色以提示 input 的狀態。
+
+使用 核取方塊和選項按鈕是基於 HTML 的驗證標準，並提供簡潔易讀的標籤，因此 `<input>` 和 `<label>` 是兄弟元素，而不是 `<label>` 內的 `<input>`，這是比較冗長的，因為必須指定 `id` 和 `for` 適性來關聯 `<input>` 和 `<label>`。
 
 ### 預設 (堆疊)
 
@@ -163,36 +163,36 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 {% example html %}
 <div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" value="">
-    Option one is this and that&mdash;be sure to include why it's great
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Default checkbox
   </label>
 </div>
-<div class="form-check disabled">
-  <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" value="" disabled>
-    Option two is disabled
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+  <label class="form-check-label" for="defaultCheck2">
+    Disabled checkbox
   </label>
 </div>
 {% endexample %}
 
 {% example html %}
 <div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-    Option one is this and that&mdash;be sure to include why it's great
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Default radio
   </label>
 </div>
 <div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-    Option two can be something else and selecting it will deselect option one
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Second default radio
   </label>
 </div>
 <div class="form-check disabled">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-    Option three is disabled
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+  <label class="form-check-label" for="exampleRadios3">
+    Disabled radio
   </label>
 </div>
 {% endexample %}
@@ -203,37 +203,31 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 {% example html %}
 <div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 1
-  </label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">1</label>
 </div>
 <div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 2
-  </label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">2</label>
 </div>
-<div class="form-check form-check-inline disabled">
-  <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled> 3
-  </label>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+  <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
 </div>
 {% endexample %}
 
 {% example html %}
 <div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-  </label>
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  <label class="form-check-label" for="inlineRadio1">1</label>
 </div>
 <div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-  </label>
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  <label class="form-check-label" for="inlineRadio2">2</label>
 </div>
-<div class="form-check form-check-inline disabled">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled> 3
-  </label>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+  <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
 </div>
 {% endexample %}
 
@@ -243,14 +237,10 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 {% example html %}
 <div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-  </label>
+  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
 </div>
 <div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-  </label>
+  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
 </div>
 {% endexample %}
 
@@ -260,16 +250,16 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 ### 表單群組
 
-`.form-group` 是向表單加一些結構的方法。其唯一的目的是提供標籤的配對及  `margin-bottom`。由於它是一個 class ，您可以使用它在 `<fieldset>`、`<div>` 或任何其他元素。
+`.form-group` 是向表單加一些結構的方法。其唯一的目的是提供標籤的配對及  `margin-bottom`，預設情況下他只會套用 `margin-bottom`，但他會在 `.form-inline` 中選擇其他樣式。由於它是一個 class，您可以使用它在 `<fieldset>`、`<div>` 或任何其他元素。
 
 {% example html %}
 <form>
   <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput">Example label</label>
+    <label for="formGroupExampleInput">Example label</label>
     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
   </div>
   <div class="form-group">
-    <label class="col-form-label" for="formGroupExampleInput2">Another label</label>
+    <label for="formGroupExampleInput2">Another label</label>
     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
   </div>
 </form>
@@ -350,8 +340,9 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
   </div>
   <div class="form-group">
     <div class="form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox"> Check me out
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
       </label>
     </div>
   </div>
@@ -361,9 +352,9 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 #### 水平表單
 
-建立水平表單，需透過增加 `.row` 在表單群組上及使用 `.col-*-*` 來指定標籤及控制項。
+建立水平表單，需透過增加 `.row` 在表單群組上及使用 `.col-*-*` 來指定標籤及控制項。一定要將 `.col-form-label` 加到你的 `<label>` 中，這樣就可以垂直居中對應的表單元件。
 
-確保增加 `.col-form-label` 在你的 `<label>` 上，以便他們與相關的表單垂直居中。`<legend>` 元素可以使用 `.col-form-legend` 與常規的 `<label>` 元素相似。
+有時，可以依據需求使用 margin 或 padding 的通用類別來調整良好的對齊。舉例來說，我們移除 `padding-top` 在堆疊的核取選項，讓他更好的對齊文字基準線。
 
 {% example html %}
 <form>
@@ -381,24 +372,24 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
   </div>
   <fieldset class="form-group">
     <div class="row">
-      <legend class="col-form-legend col-sm-2">Radios</legend>
+      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
       <div class="col-sm-10">
         <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-            Option one is this and that&mdash;be sure to include why it's great
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <label class="form-check-label" for="gridRadios1">
+            First radio
           </label>
         </div>
         <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-            Option two can be something else and selecting it will deselect option one
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2">
+            Second radio
           </label>
         </div>
         <div class="form-check disabled">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-            Option three is disabled
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+          <label class="form-check-label" for="gridRadios3">
+            Third disabled radio
           </label>
         </div>
       </div>
@@ -408,8 +399,9 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
     <div class="col-sm-2">Checkbox</div>
     <div class="col-sm-10">
       <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox"> Check me out
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+          Example checkbox
         </label>
       </div>
     </div>
@@ -424,7 +416,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 ##### Horizontal form label sizing
 
-Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
 
 {% example html %}
 <form>
@@ -478,24 +470,27 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s t
   <div class="form-row align-items-center">
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInput">Name</label>
-      <input type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInput" placeholder="Jane Doe">
+      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
     </div>
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInputGroup">Username</label>
-      <div class="input-group mb-2 mb-sm-0">
-        <div class="input-group-addon">@</div>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+        </div>
         <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
       </div>
     </div>
     <div class="col-auto">
-      <div class="form-check mb-2 mb-sm-0">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox"> Remember me
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+        <label class="form-check-label" for="autoSizingCheck">
+          Remember me
         </label>
       </div>
     </div>
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary mb-2">Submit</button>
     </div>
   </div>
 </form>
@@ -506,25 +501,28 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s t
 {% example html %}
 <form>
   <div class="form-row align-items-center">
-    <div class="col-sm-3">
+    <div class="col-sm-3 my-1">
       <label class="sr-only" for="inlineFormInputName">Name</label>
-      <input type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="Jane Doe">
+      <input type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe">
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-3 my-1">
       <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
-      <div class="input-group mb-2 mb-sm-0">
-        <div class="input-group-addon">@</div>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+        </div>
         <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
       </div>
     </div>
-    <div class="col-auto">
-      <div class="form-check mb-2 mb-sm-0">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox"> Remember me
+    <div class="col-auto my-1">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+        <label class="form-check-label" for="autoSizingCheck2">
+          Remember me
         </label>
       </div>
     </div>
-    <div class="col-auto">
+    <div class="col-auto my-1">
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </div>
@@ -536,23 +534,22 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s t
 {% example html %}
 <form>
   <div class="form-row align-items-center">
-    <div class="col-auto">
+    <div class="col-auto my-1">
       <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
-      <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
         <option selected>Choose...</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
     </div>
-    <div class="col-auto">
-      <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-        <input type="checkbox" class="custom-control-input">
-        <span class="custom-control-indicator"></span>
-        <span class="custom-control-description">Remember my preference</span>
-      </label>
+    <div class="col-auto my-1">
+      <div class="custom-control custom-checkbox mr-sm-2">
+        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+        <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+      </div>
     </div>
-    <div class="col-auto">
+    <div class="col-auto my-1">
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </div>
@@ -572,21 +569,24 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s t
 {% example html %}
 <form class="form-inline">
   <label class="sr-only" for="inlineFormInputName2">Name</label>
-  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" placeholder="Jane Doe">
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
 
   <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-    <div class="input-group-addon">@</div>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">@</div>
+    </div>
     <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
   </div>
 
-  <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-    <label class="form-check-label">
-      <input class="form-check-input" type="checkbox"> Remember me
+  <div class="form-check mb-2 mr-sm-2">
+    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+    <label class="form-check-label" for="inlineFormCheck">
+      Remember me
     </label>
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
 </form>
 {% endexample %}
 
@@ -594,26 +594,25 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s t
 
 {% example html %}
 <form class="form-inline">
-  <label class="mr-sm-2" for="inlineFormCustomSelectPref">Preference</label>
-  <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelectPref">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
     <option selected>Choose...</option>
     <option value="1">One</option>
     <option value="2">Two</option>
     <option value="3">Three</option>
   </select>
 
-  <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-    <input type="checkbox" class="custom-control-input">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Remember my preference</span>
-  </label>
+  <div class="custom-control custom-checkbox my-1 mr-sm-2">
+    <input type="checkbox" class="custom-control-input" id="customControlInline">
+    <label class="custom-control-label" for="customControlInline">Remember my preference</label>
+  </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary my-1">Submit</button>
 </form>
 {% endexample %}
 
 {% callout warning %}
-#### 隱藏標籤的替代品
+##### 隱藏標籤的替代品
 
 如果您沒有為每個 input 添加標籤，螢幕閱讀器等輔助技術將對您的表單感到困擾。對於這些行內表單，您可以使用 `.sr-only` 來隱藏標籤。還提供了輔助技術標籤的另外的替代方法，例如 `aria` 標籤、`aria-labelledby` 或 `title` 屬性。如果這些都不存在，輔助技術可能會使用 `placeholder` 的屬性（如果存在），但請注意，不建議使用 `placeholder` 替代其他標籤方法。
 {% endcallout %}
@@ -676,8 +675,9 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
       </select>
     </div>
     <div class="form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox"> Can't check this
+      <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+      <label class="form-check-label" for="disabledFieldsetCheck">
+        Can't check this
       </label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
@@ -686,7 +686,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 {% endexample %}
 
 {% callout warning %}
-#### 附加說明和錨
+##### 附加說明和錨
 
 預設情況下，瀏覽器會將 `<fieldset disabled>` 中的所有本地表單控制項（`<input>`、`<select>` 和 `<button>` 元素）視為禁用，防止鍵盤和滑鼠和他們之間的交互。但是，如果您的表單還包含 `<a ... class="btn btn-*">` 元素，則只會給出一種 `pointer-events: none` 的樣式。關於 [按鈕禁用狀態]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#disabled-state)（特別是在錨元素的子部分），此 CSS 屬性尚未標準化，Opera 18 及更低版本或 Internet Explorer 10 中不完全支援，並且不會阻止鍵盤使用者 focus 或啟動這些連結。 為了安全起見，請使用自訂 JavaScript 來禁用此類連結。
 {% endcallout %}
@@ -726,18 +726,30 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 嘗試提交時，您會看到 `:invalid` 和 `:valid` 的樣式應用於您的表單控制元件。
 
 {% example html %}
-<form class="container" id="needs-validation" novalidate>
-  <div class="row">
-    <div class="col-md-6 mb-3">
+<form id="needs-validation" novalidate>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
       <label for="validationCustom01">First name</label>
       <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
     </div>
-    <div class="col-md-6 mb-3">
+    <div class="col-md-4 mb-3">
       <label for="validationCustom02">Last name</label>
       <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
     </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustomUsername">Username</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+        </div>
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="row">
+  <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationCustom03">City</label>
       <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
@@ -790,40 +802,39 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 
 {% example html %}
 <form>
-  <div class="row">
-    <div class="col-md-6 mb-3">
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
       <label for="validationDefault01">First name</label>
       <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
     </div>
-    <div class="col-md-6 mb-3">
+    <div class="col-md-4 mb-3">
       <label for="validationDefault02">Last name</label>
       <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
     </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefaultUsername">Username</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        </div>
+        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
+      </div>
+    </div>
   </div>
-  <div class="row">
+  <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationDefault03">City</label>
       <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
-      <div class="invalid-feedback">
-        Please provide a valid city.
-      </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationDefault04">State</label>
       <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
-      <div class="invalid-feedback">
-        Please provide a valid state.
-      </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationDefault05">Zip</label>
       <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
-      <div class="invalid-feedback">
-        Please provide a valid zip.
-      </div>
     </div>
   </div>
-
   <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
 {% endexample %}
@@ -834,17 +845,29 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 
 {% example html %}
 <form>
-  <div class="row">
-    <div class="col-md-6 mb-3">
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
       <label for="validationServer01">First name</label>
       <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark" required>
     </div>
-    <div class="col-md-6 mb-3">
+    <div class="col-md-4 mb-3">
       <label for="validationServer02">Last name</label>
       <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="Otto" required>
     </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationServerUsername">Username</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend3">@</span>
+        </div>
+        <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3" required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="row">
+  <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationServer03">City</label>
       <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City" required>
@@ -878,36 +901,37 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 
 {% example html %}
 <form class="was-validated">
-  <label class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" required>
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Check this custom checkbox</span>
-  </label>
-
-  <div class="custom-controls-stacked d-block my-3">
-    <label class="custom-control custom-radio">
-      <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input" required>
-      <span class="custom-control-indicator"></span>
-      <span class="custom-control-description">Toggle this custom radio</span>
-    </label>
-    <label class="custom-control custom-radio">
-      <input id="radioStacked2" name="radio-stacked" type="radio" class="custom-control-input" required>
-      <span class="custom-control-indicator"></span>
-      <span class="custom-control-description">Or toggle this other custom radio</span>
-    </label>
+  <div class="custom-control custom-checkbox mb-3">
+    <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+    <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
+    <div class="invalid-feedback">Example invalid feedback text</div>
   </div>
 
-  <select class="custom-select d-block my-3" required>
-    <option value="">Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
+  <div class="custom-control custom-radio">
+    <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+    <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+  </div>
+  <div class="custom-control custom-radio mb-3">
+    <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+    <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
+    <div class="invalid-feedback">More example invalid feedback text</div>
+  </div>
 
-  <label class="custom-file">
-    <input type="file" id="file" class="custom-file-input" required>
-    <span class="custom-file-control"></span>
-  </label>
+  <div class="form-group">
+    <select class="custom-select" required>
+      <option value="">Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <div class="invalid-feedback">Example invalid custom select feedback</div>
+  </div>
+
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+    <div class="invalid-feedback">Example invalid custom file feedback</div>  
+  </div>
 </form>
 {% endexample %}
 
@@ -918,14 +942,11 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 
 ### 核取方塊和單選
 
+每一個 checkbox 和 radio 與一個鄰近的 `<span>` 被包覆在 `<div>` 中，用來創建自定義元件的文字內容。就結構上來說，這與 `.form-check` 是一樣的。
 
-每個核取方塊和選項按鈕被包裝在一個 `<label>` 中有三個原因
+我們為所有我們的 `<input>` 使用選擇器 (`~`) 確認 `：checked` 狀態？正確地設置我們的自訂表單指示器。 當與 `.custom-control-label` 結合使用時，我們也可以根據 `<input>` 的狀態對每個物件進行樣式調整。
 
-- 它提供了更大的點擊區域。
-- 它提供了一個有用的和語義的包裝器，以幫助我們替換預設的 `<input>` 。
-- 它會自動觸發 `<input>` 的狀態，這意味著不需要 JavaScript 插件。
-
-我們用 `opacity` 隱藏預設 `<input>` 並使用 `.custom-control-indicator` 在它的位置上構建一個新的自訂表單指示器。不幸的是，由於 CSS 的 `content` 對該元素不起作用，所以我們不能僅僅使用 `<input>` 構建一個客製的。
+我們使用 `opacity` 來隱藏 `<input>`，並用 `.custom-control-label` 建立新的自訂義表單指示在 `::before` 和 `::after`。不幸的是，我們不能從 `<input>` 建立一個自定義的，因為CSS的 `content`不能在這個元素上運作。
 
 我們為所有我們的 `<input>` 使用選擇器 (`~`) 確認 `：checked` 狀態？正確地設置我們的自訂表單指示器。 當與 `.custom-control-description` 結合使用時，我們也可以根據 `<input>` 的狀態對每個物件進行樣式調整。
 
@@ -934,21 +955,19 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 #### 核取方塊
 
 {% example html %}
-<label class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input">
-  <span class="custom-control-indicator"></span>
-  <span class="custom-control-description">Check this custom checkbox</span>
-</label>
+<div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheck1">
+  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+</div>
 {% endexample %}
 
 透過 JavaScript（當沒有可用的 HTML 屬性來指定它）手動設置時，自訂核取方塊還可以使用 `：indeterminate` 偽類。
 
 <div class="bd-example bd-example-indeterminate">
-  <label class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Check this custom checkbox</span>
-  </label>
+  <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="customCheck2">
+    <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+  </div>
 </div>
 
 如果你正使用 jQuery，可以用下面這些：
@@ -960,16 +979,27 @@ $('.your-checkbox').prop('indeterminate', true)
 #### 單選
 
 {% example html %}
-<label class="custom-control custom-radio">
-  <input id="radio1" name="radio" type="radio" class="custom-control-input">
-  <span class="custom-control-indicator"></span>
-  <span class="custom-control-description">Toggle this custom radio</span>
-</label>
-<label class="custom-control custom-radio">
-  <input id="radio2" name="radio" type="radio" class="custom-control-input">
-  <span class="custom-control-indicator"></span>
-  <span class="custom-control-description">Or toggle this other custom radio</span>
-</label>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+</div>
+{% endexample %}
+
+#### 行內
+
+{% example html %}
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+</div>
 {% endexample %}
 
 #### 禁用
@@ -977,35 +1007,14 @@ $('.your-checkbox').prop('indeterminate', true)
 自訂核取方塊和選項按鈕也可以禁用。 將 `disabled` 布林屬性加到 `<input>`，自訂指示符和標籤樣式都會自動加入。
 
 {% example html %}
-<label class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" disabled>
-  <span class="custom-control-indicator"></span>
-  <span class="custom-control-description">Check this custom checkbox</span>
-</label>
+<div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+  <label class="custom-control-label" for="customCheckDisabled">Check this custom checkbox</label>
+</div>
 
-<label class="custom-control custom-radio">
-  <input id="radio3" name="radioDisabled" type="radio" class="custom-control-input" disabled>
-  <span class="custom-control-indicator"></span>
-  <span class="custom-control-description">Toggle this custom radio</span>
-</label>
-{% endexample %}
-
-#### 堆疊
-
-自訂核取方塊和單選按鈕是平行的開始。加入一個 `.custom-controls-stacked` 的父級，以確保每個表單控制元件在不同的列上。
-
-{% example html %}
-<div class="custom-controls-stacked">
-  <label class="custom-control custom-radio">
-    <input id="radioStacked3" name="radio-stacked" type="radio" class="custom-control-input">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Toggle this custom radio</span>
-  </label>
-  <label class="custom-control custom-radio">
-    <input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Or toggle this other custom radio</span>
-  </label>
+<div class="custom-control custom-radio">
+  <input type="radio" id="radio3" name="radioDisabled" id="customRadioDisabled" class="custom-control-input" disabled>
+  <label class="custom-control-label" for="customRadioDisabled">Toggle this custom radio</label>
 </div>
 {% endexample %}
 
@@ -1023,30 +1032,62 @@ $('.your-checkbox').prop('indeterminate', true)
 </select>
 {% endexample %}
 
-### 檔案瀏覽
-
-檔輸入是最粗糙的，需要額外的 JavaScript，如果你想將 *Choose file...* 和所選的檔案名稱連接。
+也可以選擇小或大的自定義選單來符合相似的文字 input。
 
 {% example html %}
-<label class="custom-file">
-  <input type="file" id="file2" class="custom-file-input">
-  <span class="custom-file-control"></span>
-</label>
+<select class="custom-select custom-select-lg mb-3">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+
+<select class="custom-select custom-select-sm">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
 {% endexample %}
 
-這是它的工作原理：
+多選 `multiple` 屬性也是被支持的。
 
-- 我們將 `<input>`包裝在 `<label>` 中，所以自訂控制元件正確觸發檔案瀏覽。
-- 我們透過 `opacity` 隱藏預設 `<input>`。
-- 我們使用 `::after` 生成一個自訂的背景和文字（**Choose file...**）。
-- 我們使用 `::before` 來生成和定位 *瀏覽* 按鈕。
-- 我們在 `<input>` 上使用 `height`，用於周圍內容的適當間距。
+{% example html %}
+<select class="custom-select" multiple>
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+{% endexample %}
 
-換句話說，它是一個完全自定義的元素，都是透過 CSS 生成的。
+As is the `size` attribute:
+
+{% example html %}
+<select class="custom-select" size="3">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+{% endexample %}
+
+### 檔案瀏覽
+
+如果你想要修正 *Choose file...* 並與它產生功能，檔案的 input 是最麻煩的且需要額外的 JavaScript。
+
+{% example html %}
+<div class="custom-file">
+  <input type="file" class="custom-file-input" id="customFile">
+  <label class="custom-file-label" for="customFile">Choose file</label>
+</div>
+{% endexample %}
+
+透過 `opacity` 隱藏檔案的 `<input>` 以及透過樣式取代 `<label>`。透過 `::after` 定位及產生按鈕，最後，我們為了 `<input>` 宣告了 `width` 和 `height` 為周圍保留空間。
 
 #### 翻譯或自定義字符串
 
- [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) 用於輕鬆將 "Browse" 和 "Choose file..." 文本翻譯到其他語言。 只需用相關的 [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) 和當地語系化的字串覆蓋或加到 `$custom-file-text` SCSS 變數。英文字串可以以相同的方式進行定制。範例，如何添加西班牙語翻譯（西班牙語的語言代碼是 `es`）：
+[`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) 用於輕鬆將 "Browse" 和 "Choose file..." 文本翻譯到其他語言。 只需用相關的 [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) 和當地語系化的字串覆蓋或加到 `$custom-file-text` SCSS 變數。英文字串可以以相同的方式進行定制。範例，如何添加西班牙語翻譯（西班牙語的語言代碼是 `es`）：
 
 
 {% highlight scss %}

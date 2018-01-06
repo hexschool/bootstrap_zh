@@ -266,8 +266,13 @@ $font-family-sans-serif:
     </p>
 
     <p>
-      <label for="time">Example temporal</label>
-      <input type="datetime-local" id="time">
+      <label for="date">Example date</label>
+      <input type="date" id="date">
+    </p>
+
+    <p>
+      <label for="time">Example time</label>
+      <input type="time" id="time">
     </p>
 
     <p>
@@ -328,6 +333,22 @@ Blockquotes 的預設 `margin` 為 `1em 40px`，因此我們將其重新設定�
   Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue.
 </div>
 
+### 摘要
+
+預設游標在摘要上是 `text`，所以我們將其重置為 `pointer`，在界面上了解元素可以點擊產生互動。
+
+<div class="bd-example">
+  <details>
+    <summary>Some details</summary>
+    <p>More info about the details.</p>
+  </details>
+
+  <details open>
+    <summary>Even more details</summary>
+    <p>Here are even more details about the details.</p>
+  </details>
+</div>
+
 ## HTML5 `[hidden]` 屬性
 
 HTML 添加了 [一個名為 `[hidden]` 的新全域屬性](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden)，這是屬性的預設格式是 `display: none`。借鑒了 [PureCSS](https://purecss.io/) 的一個想法，我們加入 `[hidden] { display: none !important; }` 改善了預設設定，以防止該屬性的 `display` 被意外覆蓋。雖然 IE10 不支援原生 `[hidden]`，我們在 CSS 中解決了這個問題。
@@ -337,7 +358,7 @@ HTML 添加了 [一個名為 `[hidden]` 的新全域屬性](https://developer.mo
 {% endhighlight %}
 
 {% callout warning %}
-#### jQuery 的不相容性
+##### jQuery 的不相容性
 
 `[hidden]` 不相容 jQuery's `$(...).hide()` 和 `$(...).show()` 的方式。然而，我們目前並沒有接受 `[hidden]` 的其他技術來管理元素的 `display`。
 {% endcallout %}

@@ -1,7 +1,12 @@
 ---
 layout: docs
+<<<<<<< HEAD
 title: 表格 (Tables)
 description: Bootstrap 設置選擇性加入樣式的表格文件和範例 (鑒於表格在 JavaScript 外掛程式中的廣泛用途)
+=======
+title: Tables
+description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.
+>>>>>>> v4.0.0-beta.3
 group: content
 toc: true
 ---
@@ -17,9 +22,9 @@ toc: true
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -52,9 +57,9 @@ toc: true
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -89,9 +94,9 @@ toc: true
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -120,9 +125,9 @@ toc: true
   <thead class="thead-light">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -157,9 +162,9 @@ toc: true
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -190,9 +195,9 @@ toc: true
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -227,9 +232,9 @@ toc: true
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -241,18 +246,12 @@ toc: true
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@TwBootstrap</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
       <td>Jacob</td>
       <td>Thornton</td>
       <td>@fat</td>
     </tr>
     <tr>
-      <th scope="row">4</th>
+      <th scope="row">3</th>
       <td colspan="2">Larry the Bird</td>
       <td>@twitter</td>
     </tr>
@@ -265,9 +264,9 @@ toc: true
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -279,18 +278,12 @@ toc: true
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@TwBootstrap</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
       <td>Jacob</td>
       <td>Thornton</td>
       <td>@fat</td>
     </tr>
     <tr>
-      <th scope="row">4</th>
+      <th scope="row">3</th>
       <td colspan="2">Larry the Bird</td>
       <td>@twitter</td>
     </tr>
@@ -307,9 +300,9 @@ toc: true
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -339,9 +332,9 @@ toc: true
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -375,9 +368,9 @@ toc: true
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -407,9 +400,9 @@ toc: true
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -450,32 +443,28 @@ toc: true
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Type</th>
-        <th scope="col">Column heading</th>
-        <th scope="col">Column heading</th>
-        <th scope="col">Column heading</th>
+        <th scope="col">Class</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
       </tr>
     </thead>
     <tbody>
       <tr class="table-active">
         <th scope="row">Active</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr>
         <th scope="row">Default</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
 
       {% for color in site.data.theme-colors %}
       <tr class="table-{{ color.name }}">
         <th scope="row">{{ color.name | capitalize }}</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>{% endfor %}
     </tbody>
   </table>
@@ -502,65 +491,55 @@ toc: true
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Column heading</th>
-        <th scope="col">Column heading</th>
-        <th scope="col">Column heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
       </tr>
     </thead>
     <tbody>
       <tr class="bg-primary">
         <th scope="row">1</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr class="bg-success">
         <th scope="row">3</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr>
         <th scope="row">4</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr class="bg-info">
         <th scope="row">5</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr>
         <th scope="row">6</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr class="bg-warning">
         <th scope="row">7</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr>
         <th scope="row">8</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr class="bg-danger">
         <th scope="row">9</th>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
     </tbody>
   </table>
@@ -587,6 +566,11 @@ toc: true
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
+透過用 `.table-responsive{-sm|-md|-lg|-xl}` 加在 `.table` 上來創建響應式表格，使表格在 575.99px, 767.99px, 991.99px, 和 1119.99px 中斷點上能夠水平的滾動。
+
+{% capture callout-include %}{% include callout-info-mediaqueries-breakpoints.md %}{% endcapture %}
+{{ callout-include | markdownify }}
+
 ## Captions
 
 `<caption>` 像一個表格的標題。 它可以協助螢幕閱讀器的用戶找到表格，並了解它的內容，且決定是否要閱讀它。
@@ -597,9 +581,9 @@ toc: true
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -627,7 +611,7 @@ toc: true
 
 ## 響應式表格
 
-當表格想要始終呈現水平滾動，可在 `.table` 上加入 `.table-responsive`，使 Viewport 符合任何表格。或者 `.table` 中加 `.table-responsive{-sm|-md|-lg|-xl}` 創建響應式的表格。
+當表格想要始終呈現水平滾動，可在 `.table` 上加入 `.table-responsive`，使 Viewport 符合任何表格。或者 `.table` 中加 `.table-responsive{-sm|-md|-lg|-xl}` 創建響應式表格的最大斷點。
 
 {% callout warning %}
 
@@ -639,163 +623,130 @@ toc: true
 
 ### Always responsive
 
-<div class="bd-example">
-  <table class="table table-responsive">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-      </tr>
-    </tbody>
-  </table>
+Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
-  <table class="table table-bordered table-responsive-lg">
+<div class="bd-example">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% highlight html %}
+<div class="table-responsive">
+  <table class="table">
+    ...
+  </table>
+</div>
+{% endhighlight %}
+
+### Breakpoint specific
+
+Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+
+<div class="bd-example">
+{% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
+<div class="table-responsive{{ bp.abbr }}">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
-        <th scope="col">Table heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
       </tr>
     </tbody>
   </table>
 </div>
-
-{% highlight html %}
-<table class="table table-responsive">
-  ...
-</table>
-{% endhighlight %}
-
-### 中斷點設定
-
-使用 `.table-responsive{-sm|-md|-lg|-xl}` 依據需求來一中斷點增加響應式的表格，從此中斷點以上，這個表格會正常呈現，而非水平滾動。
-
-<div class="bd-example">
-{% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
-<table class="table table-responsive{{ bp.abbr }}">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Table heading</th>
-      <th scope="col">Table heading</th>
-      <th scope="col">Table heading</th>
-      <th scope="col">Table heading</th>
-      <th scope="col">Table heading</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-    </tr>
-  </tbody>
-</table>
 {% endunless %}{% endfor %}
 </div>
 
 {% highlight html %}
 {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
-<table class="table table-responsive{{ bp.abbr }}">
-  ...
-</table>
+<div class="table-responsive{{ bp.abbr }}">
+  <table class="table">
+    ...
+  </table>
+</div>
 {% endunless %}{% endfor %}
 {% endhighlight %}

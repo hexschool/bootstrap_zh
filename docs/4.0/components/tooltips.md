@@ -10,7 +10,7 @@ toc: true
 
 使用工具提示框插件時應瞭解的事情如下：
 
-- 工具提示框依靠第三方函式庫 [Popper.js](https://popper.js.org) 進行定位。 在 Bootstrap 工具提示框工作之前，您必須包含 [popper.min.js]({{ site.cdn.popper }})，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`，這已經包含 Popper.js 可以直接運作。
+- 工具提示框依靠第三方函式庫 [Popper.js](https://popper.js.org/) 進行定位。 在 Bootstrap 工具提示框工作之前，您必須包含 [popper.min.js]({{ site.cdn.popper }})，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`，這已經包含 Popper.js 可以直接運作。
 - 如果自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)
 - 工具提示框因為校能原因所以是選擇加入，所以 **您必須自己將他們初始化**。
 - 零長度 `title` 和 `content` 值將永遠不會顯示一個工具提示框。
@@ -41,40 +41,7 @@ $(function () {
   </p>
 </div>
 
-### 靜態演示
-
-有四個選項可供選擇：頂部、右側、底部和左側對齊。
-
-<div class="bd-example bd-example-tooltip-static">
-  <div class="tooltip bs-tooltip-top bs-tooltip-top-docs" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-      Tooltip on the top
-    </div>
-  </div>
-  <div class="tooltip bs-tooltip-right bs-tooltip-right-docs" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-      Tooltip on the right
-    </div>
-  </div>
-  <div class="tooltip bs-tooltip-bottom bs-tooltip-bottom-docs" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-      Tooltip on the bottom
-    </div>
-  </div>
-  <div class="tooltip bs-tooltip-left bs-tooltip-left-docs" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-      Tooltip on the left
-    </div>
-  </div>
-</div>
-
-### 互動演示
-
-將滑鼠 hover 以下按鈕上以查看他們的工具提示框。
+將滑鼠 hover 以下按鈕上以查看他們的工具提示框有四個方向：頂部、右側、底部和左側對齊。。
 
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">
@@ -126,7 +93,7 @@ $('#example').tooltip(options)
 工具提示框所需的標記只是一個 `data` 屬性，和您希望擁有一個工具提示框 HTML 元素上的 `title`。 生成工具提示框的標記是相當簡單的，儘管它需要一個位置（預設情況下，他的位置是 `top`）。
 
 {% callout warning %}
-#### 使工具提示框適用於鍵盤和輔助技術使用者
+##### 使工具提示框適用於鍵盤和輔助技術使用者
 
 您只應為傳統上鍵盤 focus 和互動式（如連結或表單控制元件）的 HTML 元素添加工具提示框。 雖然任意的 HTML 元素（如`<span>`）可以透過添加 `tabindex="0"` 屬性來調整 focus ，但這會為鍵盤使用者的非互動式元素增加可能造成困惑的定位點。 此外，大多數輔助技術目前還沒有加入這種情況下的工具提示框。
 {% endcallout %}
@@ -149,7 +116,7 @@ $('#example').tooltip(options)
 可以透過資料屬性或 JavaScript 傳遞選項。對於資料屬性，將選項名稱附加到 `data-`，如 `data-animation=""`。
 
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 100px;">名稱</th>
@@ -250,6 +217,12 @@ $('#example').tooltip(options)
       <td>'flip'</td>
       <td>指定工具提示框將在調回時使用哪個位置。 有關更多信息，請參閱 Popper.js 的 <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.behavior">行為文檔</a></td>
     </tr>
+    <tr>
+      <td>boundary</td>
+      <td>string | element</td>
+      <td>'scrollParent'</td>
+      <td>Overflow constraint boundary of the tooltip. Accepts the values of <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript only). For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a>.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -328,7 +301,7 @@ Toggles the ability for an element's tooltip to be shown or hidden.
 
 ### Events
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 150px;">事件類型/th>

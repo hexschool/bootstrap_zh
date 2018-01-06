@@ -168,7 +168,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 
 ## 文本通用類別
 
-改變文字對齊、變換、樣式、字重和顏色透過 [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/#text-alignment).
+改變文字對齊、變換、樣式、字重和顏色透過 [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/) 及 [color utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/).
 
 ## 縮寫
 
