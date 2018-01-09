@@ -204,7 +204,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/4.0/components/buttons/index.html",
-    "revision": "0b8621a329846d2eb49a4ea62c62c25a"
+    "revision": "6158f18a980a2560984662a7b08764af"
   },
   {
     "url": "docs/4.0/components/card/index.html",
