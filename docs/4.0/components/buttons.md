@@ -119,8 +119,6 @@ Bootstrap 包括多個預先定義的按鈕樣式，每個都有自己的語義�
 
 Bootstrap的 `.button` 樣式可以應用於其他元素，例如 `<label>` 以提供核取方塊或選項按鈕樣式進行按鈕切換。 將 `data-toggle="buttons"` 加到包含這些按鈕的 `.btn-group` 中，並透過 JavaScript 來啟用它們的切換行為，並增加 `.btn-group-toggle` 來設置 `<input>` 按鈕。
 
-Bootstrap的`.button`風格可以應用於其他元素，比如`<label>`s，以提供複選框或者無線樣式按鈕的切換。 將`data-toggle =“按鈕”`添加到包含這些修改按鈕的`.btn-group`中，以通過JavaScript啟用它們的切換行為，並添加`.btn-group-toggle`來設置您的<input> 鈕扣。
-
 這些按鈕的檢查狀態 **只能透過按鈕上的 `click` 事件** 進行更新。如果您使用其他方法來更新輸入 - 例如，使用 `<input type="reset">` 或手動應用輸入的 `checked` 屬性，您需要手動在 `<label>` 上切換 `.active`。
 
 {% example html %}
