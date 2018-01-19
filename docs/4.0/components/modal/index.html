@@ -136,6 +136,12 @@ var google_remarketing_only = true;
   </div>
 
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://www.facebook.com/hexschool" target="_blank" rel="noopener" aria-label="GitHub">
+        六角學院譯
+      </a>
+    </li>
+
     <li class="nav-item dropdown">
       <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         v4.0
@@ -194,9 +200,6 @@ var google_remarketing_only = true;
             </a></li><li>
             <a href="/docs/4.0/getting-started/javascript/">
               JavaScript
-            </a></li><li>
-            <a href="/docs/4.0/getting-started/options/">
-              自定義選項
             </a></li><li>
             <a href="/docs/4.0/getting-started/build-tools/">
               構建工具
@@ -548,6 +551,37 @@ var google_remarketing_only = true;
 
 </div>
 
+<div class="fab-fixed-wrap with-navbar-bottom" style="bottom: 4.6875rem;position: fixed;z-index: 1035;right: .9375rem;bottom: .9375rem;">
+  <a href="http://m.me/hexschool" target="_blank" class="fab fab-facebook mp-click" data-toggle="tooltip" data-placement="left" title="Facebook 客服">
+    <svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="32" height="32" fill="none" stroke="currentcolor" stroke-width="2" class="text-primary" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><title>Lightning icon</title><path d="M18 13l8-11L8 13l6 6-8 11 18-11z"/></svg>
+
+  </a>
+</div>
+
+<style>
+  .fab-fixed-wrap .fab {
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    color: white;
+    background-color: #0c9;
+    text-align: center;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16);
+    text-decoration: none;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+    justify-content: center;
+  }
+  .fab-fixed-wrap .fab.fab-facebook {
+    /* background-color: #4080ff; */
+    background-color: white;
+  }
+  .fab-fixed-wrap .fab.fab-line {
+    background-color: #0b0;
+  }
+</style>
           <h2 id="如何運作">如何運作</h2>
 
 <p>在開始使用 Bootstrap 動態視窗之前，請務必閱讀以下內容，因位選單項目在近期內有修改。</p>
@@ -926,9 +960,9 @@ var google_remarketing_only = true;
 
 <h3 id="不同的動態視窗內容">不同的動態視窗內容</h3>
 
-<p>有一對按鈕來處發相同互動視窗，但導入不同內容？</p>
+<p>有一對按鈕來觸發相同互動視窗，但導入不同內容？</p>
 
-<p>有一對按鈕來處發相同互動視窗，但導入不同內容？ 使用 <code class="highlighter-rouge">event.relatedTarget</code> 和 <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">HTML <code class="highlighter-rouge">data-*</code> 屬性</a> (或者 <a href="https://api.jquery.com/data/">透過 jQuery</a>) 依據點擊按鈕來更改動態視窗的內容。</p>
+<p>有一對按鈕來觸發相同互動視窗，但導入不同內容？ 使用 <code class="highlighter-rouge">event.relatedTarget</code> 和 <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">HTML <code class="highlighter-rouge">data-*</code> 屬性</a> (或者 <a href="https://api.jquery.com/data/">透過 jQuery</a>) 依據點擊按鈕來更改動態視窗的內容。</p>
 
 <p>下面在 HTML 和 JavaScript 後有一個範例。 有關 <code class="highlighter-rouge">relatedTarget</code> 的詳細資訊，請參閱 <a href="#事件">動態視窗的事件</a>。</p>
 
