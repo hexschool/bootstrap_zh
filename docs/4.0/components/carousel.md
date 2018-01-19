@@ -104,7 +104,7 @@ toc: true
 {% endexample %}
 
 {% callout warning %}
-#### 需要將元素初始化
+##### 需要將元素初始化
 
 需要將 `.active` 加入到一個幻燈片內，否則輪播將看不見。
 {% endcallout %}
@@ -125,21 +125,21 @@ toc: true
       <div class="carousel-item active">
         <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
         <div class="carousel-caption d-none d-md-block">
-          <h3>First slide label</h3>
+          <h5>First slide label</h5>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </div>
       </div>
       <div class="carousel-item">
         <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
         <div class="carousel-caption d-none d-md-block">
-          <h3>Second slide label</h3>
+          <h5>Second slide label</h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
       <div class="carousel-item">
         <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
         <div class="carousel-caption d-none d-md-block">
-          <h3>Third slide label</h3>
+          <h5>Third slide label</h5>
           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
         </div>
       </div>
@@ -159,7 +159,7 @@ toc: true
 <div class="carousel-item">
   <img src="..." alt="...">
   <div class="carousel-caption d-none d-md-block">
-    <h3>...</h3>
+    <h5>...</h5>
     <p>...</p>
   </div>
 </div>
@@ -184,7 +184,7 @@ $('.carousel').carousel()
 可以透過資料屬性或 JavaScript 調整選項。對於資料屬性，將選項名稱附加到 `data-`，如 `data-interval=""`。
 
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 100px;">名稱</th>
@@ -269,7 +269,7 @@ $('.carousel').carousel({
 
 將輪播指向下一個物件。**在前一個物件顯示前回傳給調用者** （在發生 `slid.bs.carousel` 事件之前）
 
-### `.carousel('dispose')`
+#### `.carousel('dispose')`
 
 銷毀一個元素的輪播
 
@@ -284,7 +284,7 @@ Bootstrap 提供了兩個事件給予輪播使用。 兩個事件都具有以下
 
 所有輪播事件都在輪播本身（即 `<div class="carousel">`）下被觸發。
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 150px;">事件類型</th>

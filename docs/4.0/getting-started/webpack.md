@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Webpack
-description: 瞭解如何使用 Webpack 2 將 Bootstrap 加入到你的專案中。
+description: 瞭解如何使用 Webpack 3 將 Bootstrap 加入到你的專案中。
 group: getting-started
 toc: true
 ---
@@ -27,24 +27,8 @@ import 'bootstrap/js/dist/dropdown';
 ...
 {% endhighlight %}
 
-Bootstrap 取決於[jQuery](https://jquery.com/) 和 [Popper](https://popper.js.org/)，因此 npm 會在必要時為你安裝這些檔案。但這些檔案必須由 webpack 提供。將如下的程式碼加到你的 webpack 配置檔案中的 `plugins` 部分中：
+Bootstrap 取決於[jQuery](https://jquery.com/) 和 [Popper](https://popper.js.org/)，這些被定義為 `peerDependencies`，這意味著你將一定要記得加入到 `package.json` 使用 `npm install --save jquery popper.js`。
 
-{% highlight js %}
-  plugins: [
-    ...
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-        Popper: ['popper.js', 'default'],
-        // In case you imported plugins individually, you must also require them here:
-        Util: "exports-loader?Util!bootstrap/js/dist/util",
-        Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
-        ...
-      })
-    ...
-  ]
-{% endhighlight %}
 
 {% callout warning %}
 
@@ -57,7 +41,7 @@ Bootstrap 取決於[jQuery](https://jquery.com/) 和 [Popper](https://popper.js.
 
 啟用 Bootstrap 的全部潛力並按你的需求客製化 Bootstrap，使用原始檔案作為你編譯的部分內容。
 
-首先，新增你自己的 `_custom.scss` 並將其用於覆蓋 [內建的自訂變數]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/options/)。然後使用你主要的 sass 檔案以導入你的自訂變數，然後在導入 Bootstrap:
+首先，創建您自己的 `_custom.scss` 並使用它來覆蓋 [自訂義變數]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/options/)。 然後，使用你的主要sass 文件導入你的自定義變數，接下來再載入 Bootstrap：
 
 {% highlight scss %}
 @import "custom";
@@ -86,7 +70,7 @@ Bootstrap 取決於[jQuery](https://jquery.com/) 和 [Popper](https://popper.js.
         }
       }
     }, {
-      loader: 'sass-loader' // compiles SASS to CSS
+      loader: 'sass-loader' // compiles Sass to CSS
     }]
   },
   ...
@@ -100,4 +84,17 @@ Bootstrap 取決於[jQuery](https://jquery.com/) 和 [Popper](https://popper.js.
 import 'bootstrap/dist/css/bootstrap.min.css';
 {% endhighlight %}
 
-在此情形中，你可以使用 `css` 現有的規則而無需對 webpack 配置做任何的修改。
+如果你不需要額外客制樣式，這種情況下不需要 `sass-loader` 只需要 [style-loader](https://github.com/webpack-contrib/style-loader) 和 [css-loader](https://github.com/webpack-contrib/css-loader
+
+{% highlight js %}
+  ...
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  }
+  ...
+{% endhighlight %}

@@ -262,9 +262,9 @@ $('#myList a').on('click', function (e) {
 
 {% highlight js %}
 $('#myList a[href="#profile"]').tab('show') // Select tab by name
-$('#myList a:first').tab('show') // Select first tab
-$('#myList a:last').tab('show') // Select last tab
-$('#myList li:eq(2) a').tab('show') // Select third tab (0-indexed)
+$('#myList a:first-child').tab('show') // Select first tab
+$('#myList a:last-child').tab('show') // Select last tab
+$('#myList a:nth-child(3)').tab('show') // Select third tab
 {% endhighlight %}
 
 ### 淡出效果
@@ -305,7 +305,7 @@ $('#myList li:eq(2) a').tab('show') // Select third tab (0-indexed)
 
 <script>
   $(function () {
-    $('#myList a:last').tab('show')
+    $('#myList a:last-child').tab('show')
   })
 </script>
 {% endhighlight %}
@@ -331,7 +331,7 @@ $('#someListItem').tab('show')
 如果沒有選項啟用，則 `hide.bs.tab` 和 `hidden.bs.tab` 事件將不被觸發。
 
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 150px;">事件類型</th>

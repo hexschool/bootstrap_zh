@@ -15,7 +15,7 @@ toc: true
 
 這些不包含文件、原始檔案、或任何選用的 JavaScript 相依套件 (jQuery 及 Popper.js)
 
-<a href="{{ site.download.dist }}" class="btn btn-bd-purple" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">下載 Bootstrap</a>
+<a href="{{ site.download.dist }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">下載 Bootstrap</a>
 
 ## 原始檔案
 
@@ -27,11 +27,11 @@ toc: true
 如果您需要 [編譯工具]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup)，那麼它們被用於開發 Bootstrap 及文檔， 但可能不適合您自己的目的。
 
 
-<a href="{{ site.download.source }}" class="btn btn-bd-purple" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download 原始碼</a>
+<a href="{{ site.download.source }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download 原始碼</a>
 
-## Bootstrap CDN
+## BootstrapCDN
 
-跳過下載並使用 Bootstrap CDN 將 Boostrap 的 CSS 和 JS 加到你的專案中。
+跳過下載並使用 [BootstrapCDN](https://www.bootstrapcdn.com/) 將 Boostrap 的 CSS 和 JS 加到你的專案中。
 
 {% highlight html %}
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">

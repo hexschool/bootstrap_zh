@@ -144,12 +144,8 @@
 - title: 關於
   url: About
   pages:
-    - title: History
-      url: History
-    - title: Team
-      url: Team
-    - title: Brand
-      url: Brand
+    - title: Overview
+      url: Overview
     - title: License
       url: License
     - title: Translations

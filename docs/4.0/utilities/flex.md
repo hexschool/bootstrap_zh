@@ -265,17 +265,7 @@ toc: true
 改變 flex 物件在 flex 容器中的 Wrap。可設置 `.flex-nowrap`、`.flex-wrap`、`.flex-wrap-reverse` 這些屬性。
 
 <div class="bd-example">
-  <div class="d-flex flex-nowrap bd-highlight">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+  <div class="d-flex flex-nowrap bd-highlight" style="width: 8rem;">
     <div class="p-2 bd-highlight">Flex item</div>
     <div class="p-2 bd-highlight">Flex item</div>
     <div class="p-2 bd-highlight">Flex item</div>
@@ -283,6 +273,7 @@ toc: true
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
 </div>
+
 {% highlight html %}
 <div class="d-flex flex-nowrap">
   ...
@@ -308,6 +299,7 @@ toc: true
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
 </div>
+
 {% highlight html %}
 <div class="d-flex flex-wrap">
   ...
@@ -333,15 +325,12 @@ toc: true
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
 </div>
+
 {% highlight html %}
 <div class="d-flex flex-wrap-reverse">
   ...
 </div>
 {% endhighlight %}
-
-
-{% example html %}
-{% endexample %}
 
 `flex-wrap` 也包含響應式屬性。
 
@@ -393,6 +382,7 @@ toc: true
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
 </div>
+
 {% highlight html %}
 <div class="d-flex align-content-start flex-wrap">
   ...
@@ -418,6 +408,7 @@ toc: true
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
 </div>
+
 {% highlight html %}
 <div class="d-flex align-content-end flex-wrap">...</div>
 {% endhighlight %}
@@ -441,6 +432,7 @@ toc: true
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
 </div>
+
 {% highlight html %}
 <div class="d-flex align-content-center flex-wrap">...</div>
 {% endhighlight %}
@@ -464,6 +456,7 @@ toc: true
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
 </div>
+
 {% highlight html %}
 <div class="d-flex align-content-between flex-wrap">...</div>
 {% endhighlight %}
@@ -487,6 +480,7 @@ toc: true
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
 </div>
+
 {% highlight html %}
 <div class="d-flex align-content-around flex-wrap">...</div>
 {% endhighlight %}
@@ -510,6 +504,7 @@ toc: true
     <div class="p-2 bd-highlight">Flex item</div>
   </div>
 </div>
+
 {% highlight html %}
 <div class="d-flex align-content-stretch flex-wrap">...</div>
 {% endhighlight %}

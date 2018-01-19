@@ -69,6 +69,8 @@ $('#myModal').modal('show')                // initializes and invokes show immed
 
 為了在執行一個動作時，您可監聽該事件。
 
+為了在轉換完成後執行動作，你可以監聽相應的事件。
+
 {% highlight js %}
 $('#myCollapse').on('shown.bs.collapse', function (e) {
   // Action to execute once the collapsible area is expanded
@@ -116,13 +118,13 @@ $.fn.tooltip.Constructor.VERSION // => "{{ site.current_version }}"
 當禁用 JavaScript 時，Bootstrap 的插件不會有特別回饋。若你擔心此等情況中的使用者體驗，使用 [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) 以向你的用戶解釋此情形（以及重啟JavaScript的方式）和/或添加你自己定義的回饋。
 
 {% callout warning %}
-#### 第三方函式庫
+##### 第三方函式庫
 
 ** Bootstrap 不支持第三方 JavaScript 函式庫，如 Prototype 或 jQuery UI。 儘管有 `.noConflict` 和命名空間的事件，還是可能會出現兼容性的問題，您需要自己修復。
 {% endcallout %}
 
 ## Util
 
-全部的 Bootstrap Javascript 相依於 `util.js` 並必須和其他 JS 檔案一同加入。若你使用編譯（或壓縮的）`bootstrap.js`，無需添加這個檔案，因為他已經包含在內＼。
+全部的 Bootstrap Javascript 相依於 `util.js` 並必須和其他 JS 檔案一同加入。若你使用編譯（或壓縮的）`bootstrap.js`，無需添加這個檔案，因為他已經包含在內。
 
 `util.js` 包括了若許多實用函式和一個適用於 `transitionEnd` 的事件，幫助文件以及一個 CSS 轉換工具。其他插件使用這個去確認 CSS 轉換是否支持，並且去擷取轉換的狀態。

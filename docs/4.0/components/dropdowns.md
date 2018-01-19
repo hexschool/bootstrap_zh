@@ -10,7 +10,7 @@ toc: true
 
 下拉選單是可切換的，內文框用於顯示連結列表或其他。這些交互功能於 Bootstrap JavaScript 下拉選單插件提供。透過點擊切換，而不是滑入的方式，這是一個策劃好了的 [設計決定](http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/)。
 
-下拉選單是透過第三方插件 [Popper.js](https://popper.js.org) 所建構的，這提供了動態位置及 viewport 的監控。使用前請確認 [popper.min.js]({{ site.cdn.popper }}) 在 Bootstrap's JavaScript 之前，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 這已經包含 Popper.js。
+下拉選單是透過第三方插件 [Popper.js](https://popper.js.org) 所建構的，這提供了動態位置及 viewport 的監控。使用前請確認 [popper.min.js]({{ site.cdn.popper }}) 在 Bootstrap's JavaScript 之前，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 這已經包含 Popper.js。Popper.js 沒有使用在導覽列的下拉選單，所以該動態位置並不適用。
 
 如果你要自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)。
 
@@ -388,9 +388,8 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 {% highlight html %}
 <!-- Default dropup button -->
 <div class="btn-group dropup">
-  <button type="button" class="btn btn-secondary">Dropup</button>
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
+    Dropup
   </button>
   <div class="dropdown-menu">
     <!-- Dropdown menu links -->
@@ -411,7 +410,133 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endhighlight %}
 
-## 選單物件
+## 向右選單的變化
+
+加入 `.dropright` 到父元素上來切換向右側的選單。
+
+<div class="bd-example">
+  <div class="btn-group dropright">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropright
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+
+  <div class="btn-group dropright">
+    <button type="button" class="btn btn-secondary">
+      Split dropright
+    </button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdright</span>
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+</div>
+
+{% highlight html %}
+<!-- Default dropright button -->
+<div class="btn-group dropright">
+  <button type="button" class="btn btn-secondary">Dropright</button>
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropright</span>
+  </button>
+  <div class="dropdown-menu">
+    <!-- Dropdown menu links -->
+  </div>
+</div>
+
+<!-- Split dropright button -->
+<div class="btn-group dropright">
+  <button type="button" class="btn btn-secondary">
+    Split dropright
+  </button>
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropright</span>
+  </button>
+  <div class="dropdown-menu">
+    <!-- Dropdown menu links -->
+  </div>
+</div>
+{% endhighlight %}
+
+## 向左選單的變化
+
+加入 `.dropleft` 到父元素上來切換向左側的選單。
+
+<div class="bd-example">
+  <div class="btn-group dropleft">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropleft
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <div class="btn-group dropleft" role="group">
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropleft</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+      </div>
+    </div>
+    <button type="button" class="btn btn-secondary">
+      Split dropleft
+    </button>
+  </div>
+</div>
+
+{% highlight html %}
+<!-- Default dropleft button -->
+<div class="btn-group dropleft">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropleft
+  </button>
+  <div class="dropdown-menu">
+    <!-- Dropdown menu links -->
+  </div>
+</div>
+
+<!-- Split dropleft button -->
+<div class="btn-group">
+  <div class="btn-group dropleft" role="group">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropleft</span>
+    </button>
+    <div class="dropdown-menu">
+      <!-- Dropdown menu links -->
+    </div>
+  </div>
+  <button type="button" class="btn btn-secondary">
+    Split dropleft
+  </button>
+</div>
+{% endhighlight %}
+
+
+## Menu items
 
 在過去下拉選單內容必須是個連接，但 v4 不再是這樣。現在您可以選擇在下拉選單中使用 `<button>` 元素，而不是僅使用 `<a>`。
 
@@ -439,7 +564,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 {% example html %}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    This dropdown's menu is right-aligned
+    Right-aligned menu
   </button>
   <div class="dropdown-menu dropdown-menu-right">
     <button class="dropdown-item" type="button">Action</button>
@@ -491,8 +616,8 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
       <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
     </div>
     <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input">
+      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+      <label class="form-check-label" for="dropdownCheck">
         Remember me
       </label>
     </div>
@@ -515,8 +640,8 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
     <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
   </div>
   <div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input">
+    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+    <label class="form-check-label" for="dropdownCheck2">
       Remember me
     </label>
   </div>
@@ -577,7 +702,7 @@ $('.dropdown-toggle').dropdown()
 
 可以透過資料屬性或 JavaScript 插件傳遞選項。對於資料屬性，將選項名稱加到 `data-` 上，如 `data-offset=""`。
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 100px;">名稱</th>
@@ -601,10 +726,18 @@ $('.dropdown-toggle').dropdown()
       <td>
       允許下拉選單重疊到其相關的元素上，更多資訊可參考 Popper.js 的<a href="https://popper.js.org/popper-documentation.html#modifiers..flip.enabled">觸發文件</a>.</td>
     </tr>
+    <tr>
+      <td>boundary</td>
+      <td>string | element</td>
+      <td>'scrollParent'</td>
+      <td>Overflow constraint boundary of the dropdown menu. Accepts the values of <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript only). For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a>.</td>
+    </tr>
   </tbody>
 </table>
 
-### 方法
+#### 方法
+
+請注意，當 `boundary` 被設置為 `'scrollParent'` 之外的任何值時，`position: static` 樣式套用於 `.dropdown` 的容器。
 
 | 方法 | 描述 |
 | --- | --- |

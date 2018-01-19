@@ -8,21 +8,19 @@ toc: true
 
 ## 關於
 
-**卡片** 是一個靈活可擴展的內容容器。包含頁眉和頁腳的選項、各種彈性內容、情境顏色和強大的顯示選項。
-
-如果你熟悉 Bootstrap 3，卡片取代了舊的 panels、wells、thumbnails(以上為原文名稱)，類似的功能已經都整合到卡片內了。
+**卡片** 是一個靈活可擴展的內容容器。包含頁眉和頁腳的選項、各種彈性內容、情境顏色和強大的顯示選項。如果你熟悉 Bootstrap 3，卡片取代了舊的 panels、wells、thumbnails(以上為原文名稱)，類似的功能已經都整合到卡片內了。
 
 ## 範例
 
-卡片構建時盡可能少一些標記和樣式，但仍然可以提供許多的控制項和自定義。使用 flexbox 構建，它們可以使對齊更方便並且與其它 Bootstrap 元件良好混合。
+卡片構建時盡可能少一些標記和樣式，但仍然可以提供許多的控制項和自定義。使用 flexbox 構建，它們可以使對齊更方便並且與其它 Bootstrap 元件良好混合。預設中他並沒有 `margin`，所以可以依需求加入 [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)。
 
 以下是具有混合內容和固定寬度的基本卡的範例。卡片如果沒有固定的寬度，那麼他們將自然填充其父元素的全部寬度。 這可以透過我們的各種[尺寸選項](#sizing) 輕鬆調整。
 
 {% example html %}
-<div class="card" style="width: 20rem;">
+<div class="card" style="width: 18rem;">
   <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
   <div class="card-body">
-    <h4 class="card-title">Card title</h4>
+    <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -52,9 +50,9 @@ toc: true
 透過在 `<h*>` 標籤中添加一個 `.card-subtitle` 來使用次標題。 如果 `.card-title` 和 `.card-subtitle` 放在 `.card-block` 中，那麼卡片標題和次標題就很好地對齊了。
 
 {% example html %}
-<div class="card" style="width: 20rem;">
+<div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h4 class="card-title">Card title</h4>
+    <h5 class="card-title">Card title</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="card-link">Card link</a>
@@ -69,7 +67,7 @@ toc: true
 
 
 {% example html %}
-<div class="card" style="width: 20rem;">
+<div class="card" style="width: 18rem;">
   <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Card image cap">
   <div class="card-body">
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -82,7 +80,20 @@ toc: true
 建立一個包含內容的清單卡片。
 
 {% example html %}
-<div class="card" style="width: 20rem;">
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+</div>
+{% endexample %}
+
+{% example html %}
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Cras justo odio</li>
     <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -96,10 +107,10 @@ toc: true
 混合並搭配多個內容形式，用來創建你所需要的卡片。以下來說是圖像風格、塊狀、文字風格以及清單在一個固定寬度的卡片中。
 
 {% example html %}
-<div class="card" style="width: 20rem;">
+<div class="card" style="width: 18rem;">
   <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Card image cap">
   <div class="card-body">
-    <h4 class="card-title">Card title</h4>
+    <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
   <ul class="list-group list-group-flush">
@@ -124,7 +135,7 @@ toc: true
     Featured
   </div>
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
+    <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -135,9 +146,9 @@ toc: true
 
 {% example html %}
 <div class="card">
-  <h4 class="card-header">Featured</h4>
+  <h5 class="card-header">Featured</h5>
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
+    <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -164,7 +175,7 @@ toc: true
     Featured
   </div>
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
+    <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -187,7 +198,7 @@ toc: true
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Special title treatment</h4>
+        <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
@@ -196,7 +207,7 @@ toc: true
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Special title treatment</h4>
+        <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
@@ -212,7 +223,7 @@ toc: true
 {% example html %}
 <div class="card w-75">
   <div class="card-body">
-    <h4 class="card-title">Card title</h4>
+    <h5 class="card-title">Card title</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Button</a>
   </div>
@@ -220,7 +231,7 @@ toc: true
 
 <div class="card w-50">
   <div class="card-body">
-    <h4 class="card-title">Card title</h4>
+    <h5 class="card-title">Card title</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Button</a>
   </div>
@@ -232,9 +243,9 @@ toc: true
 在樣式表中使用自訂 CSS 或使用行內樣式設置寬度。
 
 {% example html %}
-<div class="card" style="width: 20rem;">
+<div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
+    <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -247,25 +258,25 @@ toc: true
 
 
 {% example html %}
-<div class="card" style="width: 20rem;">
+<div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
+    <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
 
-<div class="card text-center" style="width: 20rem;">
+<div class="card text-center" style="width: 18rem;">
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
+    <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
 
-<div class="card text-right" style="width: 20rem;">
+<div class="card text-right" style="width: 18rem;">
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
+    <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -292,7 +303,7 @@ toc: true
     </ul>
   </div>
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
+    <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -315,7 +326,7 @@ toc: true
     </ul>
   </div>
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
+    <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -334,14 +345,14 @@ toc: true
 <div class="card mb-3">
   <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
   <div class="card-body">
-    <h4 class="card-title">Card title</h4>
+    <h5 class="card-title">Card title</h5>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
 </div>
 <div class="card">
   <div class="card-body">
-    <h4 class="card-title">Card title</h4>
+    <h5 class="card-title">Card title</h5>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
@@ -358,7 +369,7 @@ toc: true
 <div class="card bg-dark text-white">
   <img class="card-img" data-src="holder.js/100px270/#55595c:#373a3c/text:Card image" alt="Card image">
   <div class="card-img-overlay">
-    <h4 class="card-title">Card title</h4>
+    <h5 class="card-title">Card title</h5>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     <p class="card-text">Last updated 3 mins ago</p>
   </div>
@@ -375,10 +386,10 @@ toc: true
 
 {% example html %}
 {% for color in site.data.theme-colors %}
-<div class="card{% unless color.name == "light" %} text-white{% endunless %} bg-{{ color.name }} mb-3" style="max-width: 20rem;">
+<div class="card{% unless color.name == "light" %} text-white{% endunless %} bg-{{ color.name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
-    <h4 class="card-title">{{ color.name | capitalize }} card title</h4>
+    <h5 class="card-title">{{ color.name | capitalize }} card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>{% endfor %}
@@ -393,10 +404,10 @@ toc: true
 
 {% example html %}
 {% for color in site.data.theme-colors %}
-<div class="card border-{{ color.name }} mb-3" style="max-width: 20rem;">
+<div class="card border-{{ color.name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body{% unless color.name == "light" %} text-{{ color.name }}{% endunless %}">
-    <h4 class="card-title">{{ color.name | capitalize }} card title</h4>
+    <h5 class="card-title">{{ color.name | capitalize }} card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>{% endfor %}
@@ -407,10 +418,10 @@ toc: true
 也能夠改卡片頁首及頁腳的框線，也能使用 `.bg-transparent` 移除背景顏色。
 
 {% example html %}
-<div class="card border-success mb-3" style="max-width: 20rem;">
+<div class="card border-success mb-3" style="max-width: 18rem;">
   <div class="card-header bg-transparent border-success">Header</div>
   <div class="card-body text-success">
-    <h4 class="card-title">Success card title</h4>
+    <h5 class="card-title">Success card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
   <div class="card-footer bg-transparent border-success">Footer</div>
@@ -431,7 +442,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
@@ -439,7 +450,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
@@ -447,7 +458,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
@@ -462,7 +473,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
     <div class="card-footer">
@@ -472,7 +483,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
     </div>
     <div class="card-footer">
@@ -482,7 +493,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
     </div>
     <div class="card-footer">
@@ -502,7 +513,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px200/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
@@ -510,7 +521,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px200/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
@@ -518,7 +529,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px200/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
@@ -534,7 +545,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
     <div class="card-footer">
@@ -544,7 +555,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
     </div>
     <div class="card-footer">
@@ -554,7 +565,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
     </div>
     <div class="card-footer">
@@ -575,7 +586,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px160/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title that wraps to a new line</h4>
+      <h5 class="card-title">Card title that wraps to a new line</h5>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
   </div>
@@ -592,7 +603,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px160/" alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
@@ -609,7 +620,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   </div>
   <div class="card text-center">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
@@ -629,7 +640,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
   </div>
   <div class="card">
     <div class="card-body">
-      <h4 class="card-title">Card title</h4>
+      <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>

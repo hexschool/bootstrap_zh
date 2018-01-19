@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Input 群組 (Input group)
-description: 輕鬆擴展表單控制元件加入文字內容、按鈕、按鈕群組或是其他周圍的文字。
+description: 輕鬆擴展表單控制元件加入文字內容、按鈕、按鈕群組、其他周圍的文字、自訂選單、自訂檔案欄位等。
 group: components
 toc: true
 ---
@@ -12,32 +12,36 @@ toc: true
 
 
 {% example html %}
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon1">@</span>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">@</span>
+  </div>
   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
 </div>
-<br>
-<div class="input-group">
+
+<div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-  <span class="input-group-addon" id="basic-addon2">@example.com</span>
+  <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2">@example.com</span>
+  </div>
 </div>
-<br>
+
 <label for="basic-url">Your vanity URL</label>
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+  </div>
   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
 </div>
-<br>
-<div class="input-group">
-  <span class="input-group-addon">$</span>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">$</span>
+  </div>
   <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-  <span class="input-group-addon">.00</span>
-</div>
-<br>
-<div class="input-group">
-  <span class="input-group-addon">$</span>
-  <span class="input-group-addon">0.00</span>
-  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <span class="input-group-text">.00</span>
+  </div>
 </div>
 {% endexample %}
 
@@ -46,15 +50,28 @@ toc: true
 將相對表單大小 Class 加到 `.input-group` 中，其中的內容將自動調整大小 - 不需要在每個元素上重複表單控制元件大小 Class。
 
 
+**Sizing on the individual input group elements isn't supported.**
+
 {% example html %}
-<div class="input-group input-group-lg">
-  <span class="input-group-addon" id="sizing-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="sizing-addon1">
+<div class="input-group input-group-sm mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
 </div>
-<br>
-<div class="input-group input-group-sm">
-  <span class="input-group-addon" id="sizing-addon2">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="sizing-addon2">
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group input-group-lg">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
 </div>
 {% endexample %}
 
@@ -64,23 +81,36 @@ toc: true
 
 
 {% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">
-        <input type="checkbox" aria-label="Checkbox for following text input">
-      </span>
-      <input type="text" class="form-control" aria-label="Text input with checkbox">
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Checkbox for following text input">
     </div>
   </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">
-        <input type="radio" aria-label="Radio button for following text input">
-      </span>
-      <input type="text" class="form-control" aria-label="Text input with radio button">
+  <input type="text" class="form-control" aria-label="Text input with checkbox">
+</div>
+
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <input type="radio" aria-label="Radio button for following text input">
     </div>
   </div>
+  <input type="text" class="form-control" aria-label="Text input with radio button">
+</div>
+{% endexample %}
+
+## Multiple inputs
+
+While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`.
+
+{% example html %}
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="">First and last name</span>
+  </div>
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
 </div>
 {% endexample %}
 
@@ -89,22 +119,19 @@ toc: true
 支援多個附加元件，可以與核取方塊和單選按鈕 input 混合使用。
 
 {% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">
-        <input type="checkbox" aria-label="Checkbox for following text input">
-      </span>
-      <span class="input-group-addon">$</span>
-      <input type="text" class="form-control" aria-label="Text input with checkbox">
-    </div>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">$</span>
+    <span class="input-group-text">0.00</span>
   </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">$</span>
-      <span class="input-group-addon">0.00</span>
-      <input type="text" class="form-control" aria-label="Text input with radio button">
-    </div>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <span class="input-group-text">$</span>
+    <span class="input-group-text">0.00</span>
   </div>
 </div>
 {% endexample %}
@@ -112,40 +139,34 @@ toc: true
 
 ## 按鈕附加元件
 
-input 群組中的按鈕必須包裝在 `.input-group-btn`中，以便正確對齊和調整大小。這是必需的，因為預設的流覽器樣式不能被覆蓋。
-
-
 {% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
-      </span>
-      <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
-    </div>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
   </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
-      </span>
-    </div>
+  <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
   </div>
 </div>
-<br>
-<div class="row">
-  <div class="col-lg-6 offset-lg-3">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Hate it</button>
-      </span>
-      <input type="text" class="form-control" placeholder="Product name" aria-label="Product name">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Love it</button>
-      </span>
-    </div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
+    <button class="btn btn-outline-secondary" type="button">Button</button>
+  </div>
+  <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
+    <button class="btn btn-outline-secondary" type="button">Button</button>
   </div>
 </div>
 {% endexample %}
@@ -153,39 +174,30 @@ input 群組中的按鈕必須包裝在 `.input-group-btn`中，以便正確對�
 ## 帶下拉式選單的按鈕
 
 {% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Action
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div role="separator" class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </div>
-      </div>
-      <input type="text" class="form-control" aria-label="Text input with dropdown button">
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div role="separator" class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
     </div>
   </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" aria-label="Text input with dropdown button">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Action
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div role="separator" class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </div>
-      </div>
+  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div role="separator" class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
     </div>
   </div>
 </div>
@@ -194,42 +206,137 @@ input 群組中的按鈕必須包裝在 `.input-group-btn`中，以便正確對�
 ## 分段按鈕
 
 {% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-secondary">Action</button>
-        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div role="separator" class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </div>
-      </div>
-      <input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button type="button" class="btn btn-outline-secondary">Action</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div role="separator" class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
     </div>
   </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-secondary">Action</button>
-        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div role="separator" class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </div>
-      </div>
+  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+  <div class="input-group-append">
+    <button type="button" class="btn btn-outline-secondary">Action</button>
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div role="separator" class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
     </div>
+  </div>
+</div>
+{% endexample %}
+
+## 自訂表單
+
+input 群組包含自訂的 select 及自訂的檔案 input，瀏覽器預設版本將不支援。
+
+### 自訂選單樣式
+
+{% example html %}
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+
+<div class="input-group mb-3">
+  <select class="custom-select" id="inputGroupSelect02">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <div class="input-group-append">
+    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+  </div>
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
+  </div>
+  <select class="custom-select" id="inputGroupSelect03">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+
+<div class="input-group">
+  <select class="custom-select" id="inputGroupSelect04">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
+  </div>
+</div>
+{% endexample %}
+
+### 自訂檔案 input
+
+{% example html %}
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Upload</span>
+  </div>
+  <label class="custom-file">
+    <input type="file" id="inputGroupFile01" class="custom-file-input" required>
+    <span class="custom-file-control"></span>
+  </label>
+</div>
+
+<div class="input-group mb-3">
+  <label class="custom-file">
+    <input type="file" id="inputGroupFile02" class="custom-file-input" required>
+    <span class="custom-file-control"></span>
+  </label>
+  <div class="input-group-append">
+    <span class="input-group-text" id="">Upload</span>
+  </div>
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
+  </div>
+  <label class="custom-file">
+    <input type="file" id="inputGroupFile03" class="custom-file-input" required>
+    <span class="custom-file-control"></span>
+  </label>
+</div>
+
+<div class="input-group">
+  <label class="custom-file">
+    <input type="file" id="inputGroupFile04" class="custom-file-input" required>
+    <span class="custom-file-control"></span>
+  </label>
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
   </div>
 </div>
 {% endexample %}

@@ -89,20 +89,23 @@ Bootstrap 主要使用以下 media queries 或中斷點針對我們的佈局、�
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575px) { ... }
+@media (max-width: 575.99px) { ... }
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767px) { ... }
+@media (max-width: 767.99px) { ... }
 
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991px) { ... }
+@media (max-width: 991.99px) { ... }
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199px) { ... }
+@media (max-width: 1199.99px) { ... }
 
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width
 {% endhighlight %}
+
+{% capture callout-include %}{% include callout-info-mediaqueries-breakpoints.md %}{% endcapture %}
+{{ callout-include | markdownify }}
 
 重聲一次，通過 Sass mixins 也可以使用這些 media queries：
 
@@ -117,16 +120,16 @@ Bootstrap 主要使用以下 media queries 或中斷點針對我們的佈局、�
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575px) { ... }
+@media (max-width: 575.99px) { ... }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767px) { ... }
+@media (min-width: 576px) and (max-width: 767.99px) { ... }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991px) { ... }
+@media (min-width: 768px) and (max-width: 991.99px) { ... }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199px) { ... }
+@media (min-width: 992px) and (max-width: 1199.99px) { ... }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
@@ -147,7 +150,7 @@ Bootstrap 主要使用以下 media queries 或中斷點針對我們的佈局、�
 {% highlight scss %}
 // Example
 // Apply styles starting from medium devices and up to extra large devices
-@media (min-width: 768px) and (max-width: 1199px) { ... }
+@media (min-width: 768px) and (max-width: 1199.99px) { ... }
 {% endhighlight %}
 
 用於特定螢幕尺寸範圍的 Sass mixins 是：
@@ -159,6 +162,10 @@ Bootstrap 主要使用以下 media queries 或中斷點針對我們的佈局、�
 ## Z-index
 
 一些 Bootstrap 元件使用 `z-index`，它是提供排版內容第三個軸的 CSS 屬性。我們使用 Bootstrap 中的預設 z-index ，其目的是正確圖層導引、工具提示和 popover、modals 等等。
+
+這些偏高的數值，具體的目的是為了避免衝突，需要再不同的分層組建區分層級，如 工具提示、導覽列、下拉選單、互動視窗的行為正確，沒有理由不使用 `100`+ 或 `500`+。
+
+這些更高的價值開始在任意數量，高度和具體到足以理想地避免衝突。 我們需要在我們的分層組件 - 工具提示，彈出窗口，導航欄，下拉列表，模態 - 中使用這些標準集合，這樣我們可以在行為中合理地保持一致。 沒有理由我們不能使用`100` +或`500` +。
 
 我們並不鼓勵自定義這些值；如果你改變了一個，你可能需要全部改變。
 
@@ -173,3 +180,7 @@ $zindex-tooltip:           1070 !default;
 ```
 
 背景元素（例如允許按一下解除的背景）傾向於停留在較低的 `z-index`，而導航元件和 popovers 使用更高的 `z-index` 確保它們的內容覆蓋。
+
+為了處理組建之間的 border (如：input-group 的 button 與 input)，我們較低的數值設置 `z-index` 於 `1`, `2`, 和 `3` 做為預設，在 hover, focus, active 時，我們將使用更高的 `z-index` 來顯示這些的 border。
+=======
+To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit `z-index` values of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements.

@@ -1,18 +1,19 @@
 ---
 layout: docs
 title: 簡介 (Introduction)
-description: Bootstrap 世界上最受歡迎的框架用於建立響應式、行動優先的網站，透過 Bootstrap CDN 和範本初學頁面開始吧。
+description: Bootstrap 世界上最受歡迎的框架用於建立響應式、行動優先的網站，透過 BootstrapCDN 和範本初學頁面開始吧。
 group: getting-started
 redirect_from:
-  - /docs/4.0/getting-started/
-  - /docs/4.0/
   - /docs/
+  - /docs/4.0/
+  - /docs/4.0/getting-started/
+  - /docs/getting-started/
 toc: true
 ---
 
 ## 快速開始
 
-想要快速地將 Bootstrap 添加到你的專案中！使用 MaxCDN 公司的免費提供的 Bootstrap CDN。如需用套件管理工具或需要下載原始檔可 [前往下載頁面]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)。
+想要快速地將 Bootstrap 添加到你的專案中！使用 MaxCDN 公司的免費提供的 BootstrapCDN。如需用套件管理工具或需要下載原始檔可 [前往下載頁面]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)。
 
 ## CSS
 
@@ -57,13 +58,14 @@ toc: true
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
   </head>
   <body>
     <h1>Hello, world!</h1>
@@ -110,7 +112,7 @@ Bootstrap 的開發以 *行動優先* 為策略，按照這個策略，我們優
 
 在極少的情形中，你需要使用類似於如下的設置：
 
-{% highlight scss %}
+{% highlight css %}
 .selector-for-some-widget {
   box-sizing: content-box;
 }

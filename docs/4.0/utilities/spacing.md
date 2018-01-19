@@ -70,7 +70,7 @@ Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no brea
 }
 {% endhighlight %}
 
-### 水平中心
+### 水平置中
 
 此外，Bootstrap 也包括一個 `.mx-auto`，用於固定寬度盒模型的水平置中，是具有 `display: block` 和 `width` 集合的內容，並將水平 margin 設置為`auto`。
 

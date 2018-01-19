@@ -34,50 +34,84 @@ bootstrap/
     └── bootstrap.min.js
 {% endhighlight %}
 
-這是用於快速加入幾乎任何網頁專案中的 Bootstrap (預先編譯好的基本形式)。我們提供了編譯好的 CSS 和 JS (`bootstrap.*`)，以及最小化的 CSS 和 JS(`bootstrap.min.*`)。提供結合特定的瀏覽器開發者工具使用的 CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`)
+這是用於快速加入幾乎任何網頁專案中的 Bootstrap (預先編譯好的基本形式)。我們提供了編譯好的 CSS 和 JS (`bootstrap.*`)，以及最小化的 CSS 和 JS(`bootstrap.min.*`)。提供結合特定的瀏覽器開發者工具使用的 CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`)，包含 Js 檔案的版本 (`bootstrap.bundle.js` 和壓縮的 `bootstrap.bundle.min.js`) 內包含了 [Popper](https://popper.js.org/)，但不包含 [jQuery](https://jquery.com/)
 
 ### CSS 檔案的比較
 
-<table class="table table-bordered table-responsive">
+Bootstrap includes a handful of options for including some or all of our compiled CSS.
+
+<table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">CSS files</th>
-      <th scope="col" class="text-center">Layout</th>
-      <th scope="col" class="text-center">Content</th>
-      <th scope="col" class="text-center">Components</th>
-      <th scope="col" class="text-center">Utilities</th>
+      <th scope="col">Layout</th>
+      <th scope="col">Content</th>
+      <th scope="col">Components</th>
+      <th scope="col">Utilities</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">
-        <div><code class="text-nowrap">bootstrap.css</code></div>
-        <div><code class="text-nowrap">bootstrap.min.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap.min.css</code></div>
       </th>
-      <td class="table-success text-center align-middle">All</td>
-      <td class="table-success text-center align-middle">All</td>
-      <td class="table-success text-center align-middle">All</td>
-      <td class="table-success text-center align-middle">All</td>
+      <td class="text-success">Included</td>
+      <td class="text-success">Included</td>
+      <td class="text-success">Included</td>
+      <td class="text-success">Included</td>
     </tr>
     <tr>
       <th scope="row">
-        <div><code class="text-nowrap">bootstrap-grid.css</code></div>
-        <div><code class="text-nowrap">bootstrap-grid.min.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap-grid.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap-grid.min.css</code></div>
       </th>
-      <td class="table-warning text-center align-middle">Only <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/">grid</a> system</td>
-      <td class="table-danger text-center align-middle">No</td>
-      <td class="table-danger text-center align-middle">No</td>
-      <td class="table-warning text-center align-middle">Only <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/">flex</a> utilities</td>
+      <td><a class="text-warning" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/">Only grid system</a></td>
+      <td class="bg-light text-muted">Not included</td>
+      <td class="bg-light text-muted">Not included</td>
+      <td><a class="text-warning" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/">Only flex utilities</a></td>
     </tr>
     <tr>
       <th scope="row">
-        <div><code class="text-nowrap">bootstrap-reboot.css</code></div>
-        <div><code class="text-nowrap">bootstrap-reboot.min.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap-reboot.css</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap-reboot.min.css</code></div>
       </th>
-      <td class="table-danger text-center align-middle">No</td>
-      <td class="table-warning text-center align-middle">Only <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/">Reboot</a></td>
-      <td class="table-danger text-center align-middle">No</td>
-      <td class="table-danger text-center align-middle">No</td>
+      <td class="bg-light text-muted">Not included</td>
+      <td><a class="text-warning" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/">Only Reboot</a></td>
+      <td class="bg-light text-muted">Not included</td>
+      <td class="bg-light text-muted">Not included</td>
+    </tr>
+  </tbody>
+</table>
+
+## JS files
+
+Similarly, we have options for including some or all of our compiled JavaScript.
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">JS files</th>
+      <th scope="col">Popper</th>
+      <th scope="col">jQuery</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <div><code class="font-weight-normal text-nowrap">bootstrap.bundle.js</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap.bundle.min.js</code></div>
+      </th>
+      <td class="text-success">Included</td>
+      <td class="bg-light text-muted">Not included</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <div><code class="font-weight-normal text-nowrap">bootstrap.js</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap.min.js</code></div>
+      </th>
+      <td class="bg-light text-muted">Not included</td>
+      <td class="bg-light text-muted">Not included</td>
     </tr>
   </tbody>
 </table>

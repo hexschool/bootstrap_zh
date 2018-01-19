@@ -208,6 +208,64 @@ $('#myModal').on('shown.bs.modal', function () {
 </div>
 {% endhighlight %}
 
+### 垂直置中
+
+加入 `.modal-dialog-centered` 到 `.modal-dialog` 來使互動視窗垂直置中。
+
+<div id="exampleModalCenter" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>
+</div>
+
+{% highlight html %}
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
 ### 工具提示和彈出提示框
 
 [Tooltips]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/tooltips/) 和 [popovers]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/popovers/) 可以根據需要放置在動態視窗。 當動態視窗關閉時，其中的任何工具提示和插件也將自動關閉。
@@ -405,7 +463,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
 ### 動態高度
 
-如果一個動態視窗的高度在打開時改變，你應該調用 `$('#myModal').data('bs.modal').handleUpdate()` 或 `$('#myModal').modal('handleUpdate')` 來重新調整動態視窗的位置，以防止捲軸出現。
+如果一個動態視窗的高度在打開時改變，你應該調用 `$('#myModal').modal('handleUpdate')` 來重新調整動態視窗的位置，以防止捲軸出現。
 
 ### 親和性
 
@@ -504,7 +562,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 可以透過資料屬性或 JavaScript 傳遞選項。對於資料屬性，將選項名稱附加到 ` data-`，如 `data-backdrop=""` 那樣。
 
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 100px;">名稱</th>
@@ -584,7 +642,7 @@ $('#myModal').modal({
 
 {% highlight js %}$('#myModal').modal('handleUpdate'){% endhighlight %}
 
-### `.modal('dispose')`
+#### `.modal('dispose')`
 
 銷毀一個元素的 Modal。
 
@@ -593,7 +651,7 @@ $('#myModal').modal({
 Bootstrap 動態視窗提供了一下事件，所有相關事件都被觸發在他本身的狀態中(在 `<div class="modal">`)。
 
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th style="width: 150px;">事件類型</th>
