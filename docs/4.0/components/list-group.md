@@ -83,6 +83,20 @@ toc: true
 </div>
 {% endexample %}
 
+## 緊貼
+
+加入 `.list-group-flush` 來移除部分邊框及圓角，用來產生邊緣貼齊的列表群組，這可用在一個容器內(如：卡片)。
+
+{% example html %}
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+{% endexample %}
+
 ## 情境 Class
 
 使用情境式 Class 來設計具有狀態被境和顏色的列表項目。

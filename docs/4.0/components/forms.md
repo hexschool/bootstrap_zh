@@ -713,7 +713,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 - Bootstrap `:invalid` 和 `:valid` 樣式在 `.was-validated`，通常會運用在 `<form>`。否則，必填的內容在載入的過程中會顯示無效。這個方法你可以選擇在任何時候啟用他 (通常在嘗試提交表單後)。
 - 作為回饋，可以使用 `.is-invalid` 和 `.is-valid` 替代 [伺服器端的驗證](#server-side) 偽類，他們不需要 `.was-validated` 在父層。
 - 由於 CSS 的工作原理，我們無法（現在）將樣式應用於 DOM 中的表單控制元件之前的 `<label>`，而不透過自定義 JavaScript 的幫助。
-- 所有現代瀏覽器都支持 [約束驗證 API](https://www.w3.org/TR/html5/forms.html#the-constraint-validation-api) ，一系列用於驗證表單控制元件的 JavaScript 方法。
+- 所有現代瀏覽器都支持 [約束驗證 API](https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api) ，一系列用於驗證表單控制元件的 JavaScript 方法。
 - 回饋訊息會使用 [瀏覽器預設值](#browser-default)（每個瀏覽器不同，unstylable via CSS）或其他 HTML 和 CSS 的自定義反饋樣式。
 - 您可以在 JavaScript 中提供帶有 `setCustomValidity` 的自定義驗證訊息。
 
@@ -726,15 +726,21 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 嘗試提交時，您會看到 `:invalid` 和 `:valid` 的樣式應用於您的表單控制元件。
 
 {% example html %}
-<form id="needs-validation" novalidate>
+<form class="needs-validation" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">First name</label>
       <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustom02">Last name</label>
       <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustomUsername">Username</label>
@@ -772,6 +778,17 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
       </div>
     </div>
   </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
   <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
 
@@ -779,16 +796,19 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
-
   window.addEventListener('load', function() {
-    var form = document.getElementById('needs-validation');
-    form.addEventListener('submit', function(event) {
-      if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    }, false);
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
   }, false);
 })();
 </script>
@@ -835,6 +855,14 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
       <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
     </div>
   </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Agree to terms and conditions
+      </label>
+    </div>
+  </div>
   <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
 {% endexample %}
@@ -849,10 +877,16 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
     <div class="col-md-4 mb-3">
       <label for="validationServer01">First name</label>
       <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationServer02">Last name</label>
       <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="Otto" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationServerUsername">Username</label>
@@ -890,7 +924,17 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
       </div>
     </div>
   </div>
-
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+      <label class="form-check-label" for="invalidCheck3">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
   <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
 {% endexample %}
@@ -930,8 +974,69 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="validatedCustomFile" required>
     <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-    <div class="invalid-feedback">Example invalid custom file feedback</div>  
+    <div class="invalid-feedback">Example invalid custom file feedback</div>
   </div>
+</form>
+{% endexample %}
+
+### 提示
+
+如果你的排版允許，可以使用 `.{valid|invalid}-tooltip` 來替換 `.{valid|invalid}-feedback`，在樣式，使用風格化的提示來顯示表單的錯誤回饋，確保父元素有一個 `position: relative` 作為題式的定位，在以下的範例中 `col` 已經包含 relative，在你的專案上也需要做類似的設。定。
+
+{% example html %}
+<form class="needs-validation" novalidate>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltip01">First name</label>
+      <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+      <div class="valid-tooltip">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltip02">Last name</label>
+      <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+      <div class="valid-tooltip">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltipUsername">Username</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+        </div>
+        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+        <div class="invalid-tooltip">
+          Please choose a unique and valid username.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationTooltip03">City</label>
+      <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+      <div class="invalid-tooltip">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationTooltip04">State</label>
+      <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+      <div class="invalid-tooltip">
+        Please provide a valid state.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationTooltip05">Zip</label>
+      <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+      <div class="invalid-tooltip">
+        Please provide a valid zip.
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
 {% endexample %}
 
@@ -1087,20 +1192,22 @@ As is the `size` attribute:
 
 #### 翻譯或自定義字符串
 
-[`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) 用於輕鬆將 "Browse" 和 "Choose file..." 文本翻譯到其他語言。 只需用相關的 [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) 和當地語系化的字串覆蓋或加到 `$custom-file-text` SCSS 變數。英文字串可以以相同的方式進行定制。範例，如何添加西班牙語翻譯（西班牙語的語言代碼是 `es`）：
-
+[`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) 用於輕鬆將 "Browse" 文本翻譯到其他語言。 只需用相關的 [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) 和當地語系化的字串覆蓋或加到 `$custom-file-text` SCSS 變數。英文字串可以以相同的方式進行定制。範例，如何添加西班牙語翻譯（西班牙語的語言代碼是 `es`）：
 
 {% highlight scss %}
 $custom-file-text: (
-  placeholder: (
-    en: "Choose file...",
-    es: "Seleccionar archivo..."
-  ),
-  button-label: (
-    en: "Browse",
-    es: "Navegar"
-  )
+  en: "Browse",
+  es: "Elegir"
 );
 {% endhighlight %}
+
+這裡的檔案自訂套用 `lang(es)` 的西班牙語係。
+
+{% example html %}
+<div class="custom-file">
+  <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+  <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+</div>
+{% endexample %}
 
 您需要正確設置文件的語言才能顯示正確的文本。 這可以使用[`lang` 屬性](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) 或 [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12) 以及其他方法。

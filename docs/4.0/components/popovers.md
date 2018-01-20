@@ -112,6 +112,17 @@ $('.popover-dismiss').popover({
 })
 {% endhighlight %}
 
+### 禁用的元素
+
+具有 `disabled` 的元素是不能產生互動的，這意味用戶不能使用 hover 及點擊觸發彈出(或工具提示)，如果想要啟用，你使用 `<div>` 或 `<span>` 包覆並覆蓋 `pointer-events` 在禁用的屬性上。
+
+對於禁用的彈出提示框，你也許傾向使用 `data-trigger="hover"` 來直接為用戶提供視覺回饋，因為用戶不會去點擊禁用的元素。
+
+{% example html %}
+<span class="d-inline-block" data-toggle="popover" data-content="Disabled popover">
+  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Disabled button</button>
+</span>
+{% endexample %}
 
 ## 用法
 

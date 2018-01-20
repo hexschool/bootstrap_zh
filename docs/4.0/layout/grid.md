@@ -279,7 +279,11 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 
 ### 水平堆疊
 
+<<<<<<< HEAD
 通過使用 `.col-sm-*`，你可以在桌面（中型）設備上變得水平排版之前，建立堆疊在極小裝置上的網格排版。
+=======
+Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked before becoming horizontal with at the small breakpoint (`sm`).
+>>>>>>> v4.0.0
 
 <div class="bd-example-row">
 {% example html %}
@@ -543,14 +547,14 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 {% endexample %}
 </div>
 
-還有一個響應式的 `.order-first`，可以透過 `order: -1` 來快速更改一個元素的順序。 這個 Class 也可以依據需要與編號的`.order-*` 混合使用。
+還有一個響應式的 `.order-first` 和 `.order-first`，可以透過 `order: -1` 和 `order: 13`(`order: $columns + 1`) 來快速更改一個元素的順序。 這個 Class 也可以依據需要與編號的`.order-*` 混合使用。
 
 <div class="bd-example-row">
 {% example html %}
 <div class="container">
   <div class="row">
-    <div class="col">
-      First, but unordered
+    <div class="col order-last">
+      First, but last
     </div>
     <div class="col">
       Second, but unordered

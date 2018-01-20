@@ -317,7 +317,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 <div class="btn-group">
   <button class="btn btn-secondary btn-lg" type="button">
-    Large button
+    Large split button
   </button>
   <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
@@ -338,7 +338,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 <div class="btn-group">
   <button class="btn btn-secondary btn-sm" type="button">
-    Small button
+    Small split button
   </button>
   <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
@@ -401,7 +401,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
   <button type="button" class="btn btn-secondary">
     Split dropup
   </button>
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
   </button>
   <div class="dropdown-menu">
@@ -448,9 +448,8 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 {% highlight html %}
 <!-- Default dropright button -->
 <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary">Dropright</button>
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropright</span>
+    Dropright
   </button>
   <div class="dropdown-menu">
     <!-- Dropdown menu links -->
@@ -462,7 +461,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
   <button type="button" class="btn btn-secondary">
     Split dropright
   </button>
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropright</span>
   </button>
   <div class="dropdown-menu">
@@ -647,6 +646,18 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
   </div>
   <button type="submit" class="btn btn-primary">Sign in</button>
 </form>
+{% endexample %}
+
+## 啟用的項目
+
+加入 `.active` 到下拉選單的項目上使 **樣式呈現啟用狀態**。
+
+{% example html %}
+<div class="dropdown-menu">
+  <a class="dropdown-item" href="#">Regular link</a>
+  <a class="dropdown-item active" href="#">Active link</a>
+  <a class="dropdown-item" href="#">Another link</a>
+</div>
 {% endexample %}
 
 ## 選單中的禁用選項

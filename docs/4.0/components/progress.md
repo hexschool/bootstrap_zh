@@ -126,8 +126,6 @@ Bootstrap 提供了一些 [寬度設定通用類別]({{ site.baseurl }}/docs/{{ 
 
 條紋漸變也可以製成動畫。 將 `.progress-bar-animated` 加到 `.progress-bar` 中，透過 CSS3 繪製從右到左的動態效果。
 
-**動畫進度條不適用於 Opera 12** 因為它們不支持 CSS3 動畫。
-
 <div class="bd-example">
   <div class="progress">
     <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>

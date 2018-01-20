@@ -118,13 +118,11 @@ Bootstrap 支援各大瀏覽器和平台最新和最穩定的版本。在 Window
 
 頁面縮放必然在 Boostrap 和網頁其他部分的某些元件中造成渲染錯誤。根據問題，我們可能可以解決它。 然而，我們傾向於忽略這些，因為除了暴力的解決方法之外，它們往往沒有直接的解決方案。
 
-## 行動瀏覽器上的 `:hover`/`:focus`
+## iOS 上的 `:hover`/`:focus`
 
-即使在大多數螢幕上 Hover 都不太可能實現，但大多數瀏覽器都能支援 Hover，並使 `:hover` "sticky"。 換句話說，`:hover` 樣式在點擊一個元素後開始套用，只有在用戶點擊某個其他元素後才停止應用。 在移動優先的站點上，這種行為通常是不合需要的。
+即使在大多數觸控設備上 Hover 都不太可能實現，但 iOS 則會模擬這樣的行為，導致點擊一個元素仍存在一個 "sticky" 的 Hover 樣式。當用戶點擊另一個元素時，這些 Hover 樣式才被移除，這種行為不太受到歡迎，但是 Android 或 Windows 似乎沒這樣的問題。
 
-即使在大部分觸控螢幕上不可能有真正的 hover，大部分行動瀏覽器在做出類似 `:hover` 效果。換言之，`:hover` 樣式在輕擊某個元素後開始應用，並在用戶輕擊其它元素後停止應用。在行動瀏覽器優先的網站上，這種行為是不適當的。
-
-Bootstrap 使用一個方案繞開這個問題，雖然預設是不啟用這個方案。在從 Sass 編譯時將 `$enable-hover-media-query` 設定為 `true`，Boostrap 會使用 [mq4-hover-shim](https://github.com/twbs/mq4-hover-shim) 來禁用瀏覽器中模擬 `:hover` 樣式。但這個解決方案存在一些注意事項：參見 Shim 的文件瞭解明細。
+在 v4 Aplha 和 Beta 版本中，我們包含了不完整的註解程式碼，用於 media query 來決定是否禁用觸控裝置的 Hover 效果。這段工作從來沒有完成或正式啟用，但為了避免完全中斷，我們選擇放棄 [this shim](https://github.com/twbs/mq4-hover-shim)，並保留 mixins 對於快捷的偽元素。
 
 ## 列印
 

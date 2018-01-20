@@ -354,7 +354,7 @@ toc: true
 
 `order` 也包含的響應式屬性。
 
-{% for bp in site.data.breakpoints %}{% for i in (1..12) %}
+{% for bp in site.data.breakpoints %}{% for i in (0..12) %}
 - `.order{{ bp.abbr }}-{{ i }}`{% endfor %}{% endfor %}
 
 ## 對齊內容

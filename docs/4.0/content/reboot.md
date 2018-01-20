@@ -363,18 +363,4 @@ HTML 添加了 [一個名為 `[hidden]` 的新全域屬性](https://developer.mo
 `[hidden]` 不相容 jQuery's `$(...).hide()` 和 `$(...).show()` 的方式。然而，我們目前並沒有接受 `[hidden]` 的其他技術來管理元素的 `display`。
 {% endcallout %}
 
-若僅僅要切換某個元素的可視度，切換可視度的含義是不修改 `display`，且元素仍可影響文件排版，可使用[the `.invisible` class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/visibility/) 來取代。
-
-## 為優化觸擊的點擊延遲
-
-傳統觸控式螢幕設備上的瀏覽器在 "輕擊" 結束之間的延遲約300ms。延遲是 手指/手寫筆 從螢幕上提起和 [點擊事件](https://developer.mozilla.org/en-US/docs/Web/Events/click) 被觸發之間的時間。延遲是瀏覽器在在第一次 "輕擊" 後不提前觸發事件或連結為前提下正確處理，這是 "按兩下縮放" 手勢所必需，但延遲可能讓你的網站有遲緩和回應不迅速的感覺。
-
-大部分行動瀏覽器自動為使用 `width=device-width` 屬性作為[responsive meta tag]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/#responsive-meta-tag) 組成部分的網站優化 300ms 的延遲時間（同時也會為通過 `user-scalable=no` 等方式禁用縮放的網站優化延遲，雖然由於可訪問性和易用性等原因強烈不推薦這種做法）。最顯著的例外是 Windows Phone 8.1 上的 IE11 以及 [iOS 9.3之前的](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/) iOS Safari（以及任何其他基於 iOS 網頁的瀏覽器）。
-
-在啟動觸擊的 筆記本/桌面 設備上，IE11 和 Microsoft Edge 是當前唯一具有 "按兩下縮放" 功能的瀏覽器。由於全部的桌面瀏覽器忽略 [responsive meta tag](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)，因此使用 `width=device-width` 不會對 300 秒的延遲產生任何影響。
-
-為了在桌面的 IE11 和 Microsoft Edge 以及在 Windows Phone 8.1 上解決這個問題，Bootstrap 在各種互動元素上（比如按鍵和連結上）使用了 [`touch-action:manipulation` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action) 。此屬性基本在上述元素上禁用了按兩下功能，因此消除了 300ms 的延遲。
-
-對於舊版的 iOS 版本(9.3以前版本)，建議的方式是使用[FastClick](https://github.com/ftlabs/fastclick) 等追加的語法消除延遲。
-
-欲知進一步的明細，參見相容性表瞭解 [為觸控式螢幕而減少 300ms 的延遲時間](https://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay)。
+為了切換一個元素的可視性但它的 `display` 沒有被修改，元素依然會影響文件的排版。可以使用 [`.invisible`]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/visibility/) 取代。

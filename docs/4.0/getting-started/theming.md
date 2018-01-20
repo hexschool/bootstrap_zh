@@ -42,6 +42,8 @@ your-project/
     └── scss
 {% endhighlight %}
 
+### 匯入
+
 在您的 `custom.scss` 中，您將導入 Bootstrap 的 Sass 原始檔案。您有兩個選擇：包括所有 Bootstrap 或 選擇您需要的部分。我們鼓勵後者，但請注意，我們的組件有一些要求和相依性。您還需要為我們的插件加入一些 JavaScript。
 
 {% highlight scss %}
@@ -68,7 +70,7 @@ your-project/
 @import "node_modules/bootstrap/scss/grid";
 {% endhighlight %}
 
-使用該設置，您可以開始修改 `custom.scss` 中的任何 Sass 變數和 Sass maps。您還可以依據需求開始在 `// Optional` 部分下增加 Bootstrap 的部分元件。
+使用該設置，您可以開始修改 `custom.scss` 中的任何 Sass 變數和 Sass maps。您還可以依據需求開始在 `// Optional` 部分下增加 Bootstrap 的部分元件。我們建議使用 `bootstrap.scss` 作為你文件的起始。
 
 ### 預設變數
 
@@ -93,6 +95,10 @@ $body-color: #111;
 
 Bootstrap 4 包含一些 Sass maps、對應值，這使它更容易產生一連貫的 CSS。我們使用 Sass map 做為我們的顏色、中斷點還有更多，就像是 Sass 變數，所有 Sass map 都包含 `!default` 他更能夠覆蓋及擴增。
 
+我們的一些 Sass Map 預設合併為空白的，這樣做是為了使 Sass Map 更容易擴增，但如果從 Sass 地圖移除項目會稍微困難一些。
+
+#### 修改 map
+
 例如，要修改 `$theme-colors` mps 的現有顏色，請將以下內容加到您的自定義 Sass 文件中：
 
 {% highlight scss %}
@@ -102,6 +108,8 @@ $theme-colors: (
 );
 {% endhighlight %}
 
+#### 加入到 map
+
 增加一個新色彩到 `$theme-colors`，並增加一個新的 key 及 值。
 
 {% highlight scss %}
@@ -109,6 +117,20 @@ $theme-colors: (
   "custom-color": #900
 );
 {% endhighlight %}
+
+#### 從 Map 中移除變數
+
+移除色彩從 `$theme-colors`，或其他的 map 可用 `map-remove`。
+
+{% highlight scss %}
+$theme-colors: map-remove($theme-colors, "success", "info", "danger");
+{% endhighlight %}
+
+#### Required keys
+
+Bootstrap assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map's key is being used.
+
+For example, we use the `primary`, `success`, and `danger` keys from `$theme-colors` for links, buttons, and form states. Replacing the values of these keys should present no issues, but removing them may cause Sass compilation issues. In these instances, you'll need to modify the Sass code that makes use of those values.
 
 ### Functions
 
@@ -201,8 +223,8 @@ Bootstrap 中另外一個函式是色彩對比功能 `color-yiq`。 它使用 [Y
 | `$enable-rounded`           | `true` (default) or `false`        | 啟用各元件上的 `border-radius` 樣式。                      |
 | `$enable-shadows`           | `true` or `false` (default)        | 啟用各元件上的 `box-shadow` 樣式。                          |
 | `$enable-gradients`         | `true` or `false` (default)        | 啟用各元件上的漸層 `background-image` 樣式。      |
-| `$enable-transitions`       | `true` (default) or `false`        | E啟用各元件上的 `transition` 。 
-| `$enable-hover-media-query` | `true` or `false` (default)        | ...                                                                                    |
+| `$enable-transitions`       | `true` (default) or `false`        | 啟用各元件上的 `transition` 。 
+| `$enable-hover-media-query` | `true` or `false` (default)        | **棄用**                                                                                   |
 | `$enable-grid-classes`      | `true` (default) or `false`        | 啟用並產生 Grid System CSS Class (如 `.container`, `.row`, `.col-md-1`, 等)    |
 | `$enable-caret`             | `true` (default) or `false`        | 啟用偽元素圖示在 `.dropdown-toggle` 。                                    |
 | `$enable-print-styles`      | `true` (default) or `false`        | 啟用列印優化的樣式。                         |
@@ -328,3 +350,71 @@ Bootstrap 許多元件都使用基類修飾符 Class 的方法構建。這代表
 {% endhighlight %}
 
 如果你修改你的 `$grid-breakpoints`，你將會套用 maps 中的所有迴圈。
+
+## CSS 變數
+
+Bootstrap 4 編譯時包含約 20 個 [CSS 自定義屬性 (變數)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)，這提供了像是主題色彩、中斷點，以及原型設計、沙盒、瀏覽器檢查中的主要的字體堆疊。
+
+### 可用變數
+
+這裡包含的變數(注意 `:root` 是必須的)，他在 `_root.scss` 文件中。
+
+{% highlight css %}
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+{% endhighlight %}
+
+### 範例
+
+CSS 變數為 Sass 變數提供類似的靈活性，但在執行時不需要編譯。例如我們使用 CSS 變數重置頁面字體和連結樣式。
+
+{% highlight css %}
+body {
+  font: 1rem/1.5 var(--font-family-sans-serif);
+}
+a {
+  color: var(--blue);
+}
+{% endhighlight %}
+
+你也可以使用中斷點變數在 media queries。
+
+{% highlight css %}
+.content-secondary {
+  display: none;
+}
+
+@media (min-width(var(--breakpoint-sm))) {
+  .content-secondary {
+    display: block;
+  }
+}
+{% endhighlight %}

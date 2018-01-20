@@ -96,6 +96,8 @@ $('#example').tooltip(options)
 ##### 使工具提示框適用於鍵盤和輔助技術使用者
 
 您只應為傳統上鍵盤 focus 和互動式（如連結或表單控制元件）的 HTML 元素添加工具提示框。 雖然任意的 HTML 元素（如`<span>`）可以透過添加 `tabindex="0"` 屬性來調整 focus ，但這會為鍵盤使用者的非互動式元素增加可能造成困惑的定位點。 此外，大多數輔助技術目前還沒有加入這種情況下的工具提示框。
+
+此外，不要單純依賴 `hover` 作為工具提示框作為觸發器，因為這將使用你的工具提示框無法被鍵盤觸發。
 {% endcallout %}
 
 {% highlight html %}
@@ -110,6 +112,18 @@ $('#example').tooltip(options)
   </div>
 </div>
 {% endhighlight %}
+
+### 禁用的元素
+
+具有 `disabled` 的元素是不能產生互動的，這意味用戶不能使用 hover 及點擊觸發彈出(或工具提示)，如果想要啟用，可使用 `<div>` 或 `<span>` 包覆，且調整 `tabindex="0"` 讓鍵盤能夠切換，並覆蓋 `pointer-events` 在禁用的屬性上。
+
+<div class="tooltip-demo">
+{% example html %}
+<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip">
+  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Disabled button</button>
+</span>
+{% endexample %}
+</div>
 
 ### 選項
 
@@ -185,7 +199,7 @@ $('#example').tooltip(options)
         <p>創建工具提示框時使用的基本 HTML </p>
         <p>工具提示框的 <code>title</code> 將被注入到 <code>.tooltip-inner</code> 中。</p>
         <p> <code>.arrow</code> 將成為工具提示框的箭頭。</p>
-        <p>最外層的包裝元素應該有 <code>.tooltip</code>。</p>
+        <p>最外層的包裝元素應該有 <code>.tooltip</code> 及 <code>role="tooltip"</code>。</p>
       </td>
     </tr>
     <tr>
@@ -202,7 +216,10 @@ $('#example').tooltip(options)
       <td>string</td>
       <td>'hover focus'</td>
       <td>
-      如何觸發工具提示框 - click | hover | focus | manual。 您可以傳遞多個觸發器；將它們與空格分開。`manual` 不能與任何其他觸發器組合。
+        <p>如何觸發工具提示框 - click | hover | focus | manual。 您可以傳遞多個觸發器；將它們與空格分開。`manual` 不能與任何其他觸發器組合。</p>
+        <p><code>'manual'</code> 表示工具提示框將透過 <code>.tooltip('show')</code>、<code>.tooltip('hide')</code> 及 <code>.tooltip('toggle')</code> 
+        的方法觸發，這個值不能與其它的觸發器做組合。</p>
+        <p><code>'hover'</code> 將導致鍵盤無法觸發工具提示框，只能做為使用鍵盤用戶傳遞訊息的替代方法。
       </td>
     </tr>
     <tr>

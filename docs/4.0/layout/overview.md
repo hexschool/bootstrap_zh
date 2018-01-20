@@ -89,16 +89,16 @@ Bootstrap 主要使用以下 media queries 或中斷點針對我們的佈局、�
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.99px) { ... }
+@media (max-width: 575.98px) { ... }
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767.99px) { ... }
+@media (max-width: 767.98px) { ... }
 
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991.99px) { ... }
+@media (max-width: 991.98px) { ... }
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199.99px) { ... }
+@media (max-width: 1199.98px) { ... }
 
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width
@@ -120,16 +120,16 @@ Bootstrap 主要使用以下 media queries 或中斷點針對我們的佈局、�
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.99px) { ... }
+@media (max-width: 575.98px) { ... }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.99px) { ... }
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.99px) { ... }
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.99px) { ... }
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
@@ -150,7 +150,7 @@ Bootstrap 主要使用以下 media queries 或中斷點針對我們的佈局、�
 {% highlight scss %}
 // Example
 // Apply styles starting from medium devices and up to extra large devices
-@media (min-width: 768px) and (max-width: 1199.99px) { ... }
+@media (min-width: 768px) and (max-width: 1199.98px) { ... }
 {% endhighlight %}
 
 用於特定螢幕尺寸範圍的 Sass mixins 是：
@@ -169,7 +169,7 @@ Bootstrap 主要使用以下 media queries 或中斷點針對我們的佈局、�
 
 我們並不鼓勵自定義這些值；如果你改變了一個，你可能需要全部改變。
 
-```scss
+{% highlight scss %}
 $zindex-dropdown:          1000 !default;
 $zindex-sticky:            1020 !default;
 $zindex-fixed:             1030 !default;
@@ -177,7 +177,7 @@ $zindex-modal-backdrop:    1040 !default;
 $zindex-modal:             1050 !default;
 $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
-```
+{% endhighlight %}
 
 背景元素（例如允許按一下解除的背景）傾向於停留在較低的 `z-index`，而導航元件和 popovers 使用更高的 `z-index` 確保它們的內容覆蓋。
 

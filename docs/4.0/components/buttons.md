@@ -115,22 +115,18 @@ Bootstrap 包括多個預先定義的按鈕樣式，每個都有自己的語義�
 </button>
 {% endexample %}
 
-#### 核取方塊和選項按鈕
+### 核取方塊和選項按鈕
 
-Bootstrap的 `.button` 樣式可以應用於其他元素，例如 `<label>` 以提供核取方塊或選項按鈕樣式進行按鈕切換。 將 `data-toggle="buttons"` 加到包含這些按鈕的 `.btn-group` 中，並透過 JavaScript 來啟用它們的切換行為，並增加 `.btn-group-toggle` 來設置 `<input>` 按鈕。
+Bootstrap 的 `.button` 樣式可以應用於其他元素，例如 `<label>` 以提供核取方塊或選項按鈕樣式進行按鈕切換。 將 `data-toggle="buttons"` 加到包含這些按鈕的 `.btn-group` 中，並透過 JavaScript 來啟用它們的切換行為，並增加 `.btn-group-toggle` 來設置 `<input>` 按鈕。 **請注意，您可以創建單個，或是群組的這些**。
+
+Bootstrap 的 `.button` 樣式可以應用於其他元素，例如 `<label>` 以提供核取方塊或選項按鈕樣式進行按鈕切換。 將 `data-toggle="buttons"` 加到包含這些按鈕的 `.btn-group` 中，並透過 JavaScript 來啟用它們的切換行為，並增加 `.btn-group-toggle` 來設置 `<input>` 按鈕。
 
 這些按鈕的檢查狀態 **只能透過按鈕上的 `click` 事件** 進行更新。如果您使用其他方法來更新輸入 - 例如，使用 `<input type="reset">` 或手動應用輸入的 `checked` 屬性，您需要手動在 `<label>` 上切換 `.active`。
 
 {% example html %}
-<div class="btn-group btn-group-toggle" data-toggle="buttons">
+<div class="btn-group-toggle" data-toggle="buttons">
   <label class="btn btn-secondary active">
-    <input type="checkbox" checked autocomplete="off"> Active
-  </label>
-  <label class="btn btn-secondary">
-    <input type="checkbox" autocomplete="off"> Check
-  </label>
-  <label class="btn btn-secondary">
-    <input type="checkbox" autocomplete="off"> Check
+    <input type="checkbox" checked autocomplete="off"> Checked
   </label>
 </div>
 {% endexample %}

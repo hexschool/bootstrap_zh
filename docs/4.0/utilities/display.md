@@ -19,7 +19,7 @@ Display 通用類別可以套用在所有[中斷點]({{ site.baseurl }}/docs/{{ 
 * `.d-{value}` for `xs`
 * `.d-{breakpoint}-{value}` for `sm`, `md`, `lg`, and `xl`.
 
-`{value}` 使用以下替換 *display*:
+*value* 可以替換成以下：
 
 * `none`
 * `inline`
@@ -74,14 +74,17 @@ Display 通用類別可以套用在所有[中斷點]({{ site.baseurl }}/docs/{{ 
 
 ## Display 運用在列印
 
-可以在列印時透過 `display` 通用類別改變 `display` 的值。
+可以在列印時透過 `display` 通用類別改變 `display` 的值。一樣包含 `display` 的各種 `.d-*` 通用類別。
 
-| Class | Print style |
-| --- | --- |
-| `.d-print-block` | Applies `display: block;` to the element when printing |
-| `.d-print-inline` | Applies `display: inline;` to the element when printing |
-| `.d-print-inline-block` | Applies `display: inline-block;` to the element when printing |
-| `.d-print-none` | Applies `display: none;` to the element when printing |
+- `.d-print-none`
+- `.d-print-inline`
+- `.d-print-inline-block`
+- `.d-print-block`
+- `.d-print-table`
+- `.d-print-table-row`
+- `.d-print-table-cell`
+- `.d-print-flex`
+- `.d-print-inline-flex`
 
 The print and display classes can be combined.
 

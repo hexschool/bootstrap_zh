@@ -553,7 +553,7 @@ toc: true
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-透過用 `.table-responsive{-sm|-md|-lg|-xl}` 加在 `.table` 上來創建響應式表格，使表格在 575.99px, 767.99px, 991.99px, 和 1119.99px 中斷點上能夠水平的滾動。
+透過用 `.table-responsive{-sm|-md|-lg|-xl}` 加在 `.table` 上來創建響應式表格，使表格在 576px, 768px, 992px, 和 1120px 中斷點(`max-width`)內能夠水平的滾動。
 
 {% capture callout-include %}{% include callout-info-mediaqueries-breakpoints.md %}{% endcapture %}
 {{ callout-include | markdownify }}

@@ -38,7 +38,7 @@ Po將一個元素置於可視區的底部，從邊到邊。請確認固定在底
 
 將一個元素置於可視區的頂部，從邊緣到邊緣，但僅在你滾動視窗經過它之後。`.sticky-top` 通用類別使用 CSS 的 `position: sticky`，它並沒有支援所有的瀏覽器。
 
-**Microsoft Edge 與 IE11 呈現 `position: sticky` 是使用 `position: relative`**。我們在這個樣式上增加 `@supports`，限制這個屬性只能在能夠執行的瀏覽器上運行。
+**IE11 與 IE10 呈現 `position: sticky` 是使用 `position: relative`**。我們在這個樣式上增加 `@supports`，限制這個屬性只能在能夠執行的瀏覽器上運行。
 
 {% highlight html %}
 <div class="sticky-top">...</div>

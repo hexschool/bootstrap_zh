@@ -137,6 +137,8 @@
   pages:
     - title: 圖示
       url: Icons
+    - title: Approach
+      url: Approach
 
 - title: 更版紀錄
   url: Migration

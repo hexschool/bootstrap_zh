@@ -67,75 +67,48 @@ toc: true
 使用 [卡片]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card/) 元件，您可以展開預設的折疊行為以創建折疊功能。
 
 {% example html %}
-<div id="accordion" role="tablist">
+<div id="accordion">
   <div class="card">
-    <div class="card-header" role="tab" id="headingOne">
+    <div class="card-header" id="headingOne">
       <h5 class="mb-0">
-        <a data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Collapsible Group Item #1
-        </a>
+        </button>
       </h5>
     </div>
 
-    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
     </div>
   </div>
   <div class="card">
-    <div class="card-header" role="tab" id="headingTwo">
+    <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           Collapsible Group Item #2
-        </a>
+        </button>
       </h5>
     </div>
-    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
     </div>
   </div>
   <div class="card">
-    <div class="card-header" role="tab" id="headingThree">
+    <div class="card-header" id="headingThree">
       <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           Collapsible Group Item #3
-        </a>
+        </button>
       </h5>
     </div>
-    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
-    </div>
-  </div>
-</div>
-{% endexample %}
-
-您還可以使用自定義創建手風琴樣式。加入 `data-children` 屬性並指定一組相鄰元素來切換（例如`.item`）。然後，使用與上述相同的屬性和 Class，來切換到其關聯的內容。
-
-{% example html %}
-<div id="exampleAccordion" data-children=".item">
-  <div class="item">
-    <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" role="button" aria-expanded="true" aria-controls="exampleAccordion1">
-      Toggle item
-    </a>
-    <div id="exampleAccordion1" class="collapse show" role="tabpanel">
-      <p class="mb-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium lorem non vestibulum scelerisque. Proin a vestibulum sem, eget tristique massa. Aliquam lacinia rhoncus nibh quis ornare.
-      </p>
-    </div>
-  </div>
-  <div class="item">
-    <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" role="button" aria-expanded="false" aria-controls="exampleAccordion2">
-      Toggle item 2
-    </a>
-    <div id="exampleAccordion2" class="collapse" role="tabpanel">
-      <p class="mb-3">
-        Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      </p>
     </div>
   </div>
 </div>
@@ -145,7 +118,7 @@ toc: true
 
 確保在控制元素中添加 `aria-expanded`。 該屬性傳達與螢幕閱讀器和類似輔助技術相關的可控元件的當前狀態。如果可折疊元素預設關閉，則控制項元素上的屬性值應為 `aria-expanded="false"`。 如果您使用 `show` 將可折疊元素設置為預設打開，在控制項上設置 `aria-expanded="true"`。插件將根據是否打開或關閉可折疊元素自動切換控制項上的此屬性（透過 JavaScript，當使用者觸發的另一個控制項元素也綁定到同一個折疊元素）。如果控制的 HTML 元素不是按鈕 (例如`<a>`或`<div>`)，那麼屬性 `role="button"` 應該加到元素中。
 
-另外，如果您的控制項元素定位到單個可折疊元素 - 即 `data-target` 屬性指向 `id` 選擇器，則可以向控制項元素添加一個附加的 `aria-controls` 屬性，其中包含 `id` 可折疊的元素。 現代螢幕閱讀器和類似的輔助技術利用此屬性為使用者提供額外的快捷方式，直接導航到可折疊元素本身。
+請注意，Bootstrap 當前的折疊不包含 [WAI-ARIA Authoring Practices 1.1 accordion pattern (折疊模式的實踐)](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) 描述的鍵盤操作，你需要自訂 JavaScript 來實現這些內容。
 
 ## 用法
 

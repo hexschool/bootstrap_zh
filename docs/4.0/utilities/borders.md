@@ -11,9 +11,22 @@ toc: true
 
 對一個元素增加 class，以移除所有 border 或部分 border。
 
+### 增加
+
 <div class="bd-example-border-utils">
 {% example html %}
 <span class="border"></span>
+<span class="border-top"></span>
+<span class="border-right"></span>
+<span class="border-bottom"></span>
+<span class="border-left"></span>
+{% endexample %}
+</div>
+
+### 減少
+
+<div class="bd-example-border-utils bd-example-border-utils-0">
+{% example html %}
 <span class="border-0"></span>
 <span class="border-top-0"></span>
 <span class="border-right-0"></span>
@@ -22,9 +35,9 @@ toc: true
 {% endexample %}
 </div>
 
-## Border color
+## 邊框色彩
 
-Change the border color using utilities built on our theme colors.
+透過通用類別套用邊框的主題色彩。
 
 <div class="bd-example-border-utils">
 {% example html %}

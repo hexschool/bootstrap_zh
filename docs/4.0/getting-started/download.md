@@ -54,7 +54,7 @@ toc: true
 用 [npm](https://www.npmjs.com/package/bootstrap) 將 Bootstrap 安裝到基於 Node.js 的應用程式中
 
 {% highlight sh %}
-npm install bootstrap@{{ site.current_version }}
+npm install bootstrap
 {% endhighlight %}
 
 `require('bootstrap')` 會將全部的 Bootstrap jQuery 外掛程式載入到 jQuery 物件。Bootstrap 模組本身匯出任何資訊。你可以透過頂層目錄下的 `/js/*.js` 檔案，手動將 Boostrap 的 jQuery 外掛程式獨立載入。
@@ -94,11 +94,9 @@ composer require twbs/bootstrap:{{ site.current_version }}
 [CSS](https://www.nuget.org/packages/bootstrap/) 或 [Sass](https://www.nuget.org/packages/bootstrap.sass/) 和 JavaScript：
 
 {% highlight powershell %}
-Install-Package bootstrap -Pre
+Install-Package bootstrap
 {% endhighlight %}
 
 {% highlight powershell %}
-Install-Package bootstrap.sass -Pre
+Install-Package bootstrap.sass
 {% endhighlight %}
-
-在 Bootstrap V4 有一個穩定版本前，需要 `-Pre`。
