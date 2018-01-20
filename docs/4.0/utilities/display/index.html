@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Display 通用類別可快速且包含響應式的切換元件的顯示與否，我們的 Display 通用類別包含許多常用的值，另外在列印時也能使用。">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.6.2">
+<meta name="generator" content="Jekyll v3.7.0">
 
 <title>Display 屬性 · Bootstrap 4 繁體中文手冊 [六角學院譯]</title>
 
@@ -167,7 +167,7 @@ var google_remarketing_only = true;
     </li>
   </ul>
 
-  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.3.zip">Download</a>
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0.zip">Download</a>
 </header>
 
 
@@ -386,6 +386,9 @@ var google_remarketing_only = true;
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/extend/icons/">
               圖示
+            </a></li><li>
+            <a href="/docs/4.0/extend/approach/">
+              Approach
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/migration/">
@@ -561,7 +564,7 @@ var google_remarketing_only = true;
   <li><code class="highlighter-rouge">.d-{breakpoint}-{value}</code> for <code class="highlighter-rouge">sm</code>, <code class="highlighter-rouge">md</code>, <code class="highlighter-rouge">lg</code>, and <code class="highlighter-rouge">xl</code>.</li>
 </ul>
 
-<p><code class="highlighter-rouge">{value}</code> 使用以下替換 <em>display</em>:</p>
+<p><em>value</em> 可以替換成以下：</p>
 
 <ul>
   <li><code class="highlighter-rouge">none</code></li>
@@ -667,34 +670,19 @@ var google_remarketing_only = true;
 
 <h2 id="display-運用在列印">Display 運用在列印</h2>
 
-<p>可以在列印時透過 <code class="highlighter-rouge">display</code> 通用類別改變 <code class="highlighter-rouge">display</code> 的值。</p>
+<p>可以在列印時透過 <code class="highlighter-rouge">display</code> 通用類別改變 <code class="highlighter-rouge">display</code> 的值。一樣包含 <code class="highlighter-rouge">display</code> 的各種 <code class="highlighter-rouge">.d-*</code> 通用類別。</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Class</th>
-      <th>Print style</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">.d-print-block</code></td>
-      <td>Applies <code class="highlighter-rouge">display: block;</code> to the element when printing</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">.d-print-inline</code></td>
-      <td>Applies <code class="highlighter-rouge">display: inline;</code> to the element when printing</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">.d-print-inline-block</code></td>
-      <td>Applies <code class="highlighter-rouge">display: inline-block;</code> to the element when printing</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">.d-print-none</code></td>
-      <td>Applies <code class="highlighter-rouge">display: none;</code> to the element when printing</td>
-    </tr>
-  </tbody>
-</table>
+<ul>
+  <li><code class="highlighter-rouge">.d-print-none</code></li>
+  <li><code class="highlighter-rouge">.d-print-inline</code></li>
+  <li><code class="highlighter-rouge">.d-print-inline-block</code></li>
+  <li><code class="highlighter-rouge">.d-print-block</code></li>
+  <li><code class="highlighter-rouge">.d-print-table</code></li>
+  <li><code class="highlighter-rouge">.d-print-table-row</code></li>
+  <li><code class="highlighter-rouge">.d-print-table-cell</code></li>
+  <li><code class="highlighter-rouge">.d-print-flex</code></li>
+  <li><code class="highlighter-rouge">.d-print-inline-flex</code></li>
+</ul>
 
 <p>The print and display classes can be combined.</p>
 
@@ -715,7 +703,7 @@ var google_remarketing_only = true;
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/bootstrap.js"></script><script src="/assets/js/vendor/anchor.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/bootstrap.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/vendor/anchor.min.js"></script>
   <script src="/assets/js/vendor/clipboard.min.js"></script>
   <script src="/assets/js/vendor/holder.min.js"></script>
   <script src="/assets/js/src/application.js"></script>

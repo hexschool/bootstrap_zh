@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="瞭解 Bootstrap 支援的各種現代和過去的瀏覽器和裝置，包括每個瀏覽器和裝置已知的故障和錯誤。">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.6.2">
+<meta name="generator" content="Jekyll v3.7.0">
 
 <title>瀏覽器和裝置 (Browsers &amp; devices) · Bootstrap 4 繁體中文手冊 [六角學院譯]</title>
 
@@ -167,7 +167,7 @@ var google_remarketing_only = true;
     </li>
   </ul>
 
-  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.3.zip">Download</a>
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0.zip">Download</a>
 </header>
 
 
@@ -386,6 +386,9 @@ var google_remarketing_only = true;
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/extend/icons/">
               圖示
+            </a></li><li>
+            <a href="/docs/4.0/extend/approach/">
+              Approach
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/migration/">
@@ -429,7 +432,7 @@ var google_remarketing_only = true;
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#瀏覽器縮放">瀏覽器縮放</a></li>
-<li class="toc-entry toc-h2"><a href="#行動瀏覽器上的-hoverfocus">行動瀏覽器上的 :hover/:focus</a></li>
+<li class="toc-entry toc-h2"><a href="#ios-上的-hoverfocus">iOS 上的 :hover/:focus</a></li>
 <li class="toc-entry toc-h2"><a href="#列印">列印</a></li>
 <li class="toc-entry toc-h2"><a href="#android-內建瀏覽器">Android 內建瀏覽器</a>
 <ul>
@@ -672,13 +675,11 @@ var google_remarketing_only = true;
 
 <p>頁面縮放必然在 Boostrap 和網頁其他部分的某些元件中造成渲染錯誤。根據問題，我們可能可以解決它。 然而，我們傾向於忽略這些，因為除了暴力的解決方法之外，它們往往沒有直接的解決方案。</p>
 
-<h2 id="行動瀏覽器上的-hoverfocus">行動瀏覽器上的 <code class="highlighter-rouge">:hover</code>/<code class="highlighter-rouge">:focus</code></h2>
+<h2 id="ios-上的-hoverfocus">iOS 上的 <code class="highlighter-rouge">:hover</code>/<code class="highlighter-rouge">:focus</code></h2>
 
-<p>即使在大多數螢幕上 Hover 都不太可能實現，但大多數瀏覽器都能支援 Hover，並使 <code class="highlighter-rouge">:hover</code> “sticky”。 換句話說，<code class="highlighter-rouge">:hover</code> 樣式在點擊一個元素後開始套用，只有在用戶點擊某個其他元素後才停止應用。 在移動優先的站點上，這種行為通常是不合需要的。</p>
+<p>即使在大多數觸控設備上 Hover 都不太可能實現，但 iOS 則會模擬這樣的行為，導致點擊一個元素仍存在一個 “sticky” 的 Hover 樣式。當用戶點擊另一個元素時，這些 Hover 樣式才被移除，這種行為不太受到歡迎，但是 Android 或 Windows 似乎沒這樣的問題。</p>
 
-<p>即使在大部分觸控螢幕上不可能有真正的 hover，大部分行動瀏覽器在做出類似 <code class="highlighter-rouge">:hover</code> 效果。換言之，<code class="highlighter-rouge">:hover</code> 樣式在輕擊某個元素後開始應用，並在用戶輕擊其它元素後停止應用。在行動瀏覽器優先的網站上，這種行為是不適當的。</p>
-
-<p>Bootstrap 使用一個方案繞開這個問題，雖然預設是不啟用這個方案。在從 Sass 編譯時將 <code class="highlighter-rouge">$enable-hover-media-query</code> 設定為 <code class="highlighter-rouge">true</code>，Boostrap 會使用 <a href="https://github.com/twbs/mq4-hover-shim">mq4-hover-shim</a> 來禁用瀏覽器中模擬 <code class="highlighter-rouge">:hover</code> 樣式。但這個解決方案存在一些注意事項：參見 Shim 的文件瞭解明細。</p>
+<p>在 v4 Aplha 和 Beta 版本中，我們包含了不完整的註解程式碼，用於 media query 來決定是否禁用觸控裝置的 Hover 效果。這段工作從來沒有完成或正式啟用，但為了避免完全中斷，我們選擇放棄 <a href="https://github.com/twbs/mq4-hover-shim">this shim</a>，並保留 mixins 對於快捷的偽元素。</p>
 
 <h2 id="列印">列印</h2>
 
@@ -725,7 +726,7 @@ var google_remarketing_only = true;
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/bootstrap.js"></script><script src="/assets/js/vendor/anchor.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/bootstrap.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/vendor/anchor.min.js"></script>
   <script src="/assets/js/vendor/clipboard.min.js"></script>
   <script src="/assets/js/vendor/holder.min.js"></script>
   <script src="/assets/js/src/application.js"></script>

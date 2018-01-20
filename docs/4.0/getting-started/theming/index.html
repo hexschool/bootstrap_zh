@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="使用內建的 Sass 變數客製化 Bootstrap 4，套用全域的樣式風格及主題、元件的調整。">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.6.2">
+<meta name="generator" content="Jekyll v3.7.0">
 
 <title>主題化 Bootstrap · Bootstrap 4 繁體中文手冊 [六角學院譯]</title>
 
@@ -167,7 +167,7 @@ var google_remarketing_only = true;
     </li>
   </ul>
 
-  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.3.zip">Download</a>
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0.zip">Download</a>
 </header>
 
 
@@ -386,6 +386,9 @@ var google_remarketing_only = true;
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/extend/icons/">
               圖示
+            </a></li><li>
+            <a href="/docs/4.0/extend/approach/">
+              Approach
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/migration/">
@@ -419,8 +422,16 @@ var google_remarketing_only = true;
 <li class="toc-entry toc-h2"><a href="#sass">Sass</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#檔案結構">檔案結構</a></li>
+<li class="toc-entry toc-h3"><a href="#匯入">匯入</a></li>
 <li class="toc-entry toc-h3"><a href="#預設變數">預設變數</a></li>
-<li class="toc-entry toc-h3"><a href="#sass-maps-與循環">Sass Maps 與循環</a></li>
+<li class="toc-entry toc-h3"><a href="#sass-maps-與循環">Sass Maps 與循環</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#修改-map">修改 map</a></li>
+<li class="toc-entry toc-h4"><a href="#加入到-map">加入到 map</a></li>
+<li class="toc-entry toc-h4"><a href="#從-map-中移除變數">從 Map 中移除變數</a></li>
+<li class="toc-entry toc-h4"><a href="#required-keys">Required keys</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h3"><a href="#functions">Functions</a></li>
 <li class="toc-entry toc-h3"><a href="#顏色對比">顏色對比</a></li>
 </ul>
@@ -437,6 +448,12 @@ var google_remarketing_only = true;
 <ul>
 <li class="toc-entry toc-h3"><a href="#修飾">修飾</a></li>
 <li class="toc-entry toc-h3"><a href="#響應式">響應式</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#css-變數">CSS 變數</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#可用變數">可用變數</a></li>
+<li class="toc-entry toc-h3"><a href="#範例">範例</a></li>
 </ul>
 </li>
 </ul>
@@ -596,29 +613,31 @@ var google_remarketing_only = true;
     ├── js
     └── scss</code></pre></figure>
 
+<h3 id="匯入">匯入</h3>
+
 <p>在您的 <code class="highlighter-rouge">custom.scss</code> 中，您將導入 Bootstrap 的 Sass 原始檔案。您有兩個選擇：包括所有 Bootstrap 或 選擇您需要的部分。我們鼓勵後者，但請注意，我們的組件有一些要求和相依性。您還需要為我們的插件加入一些 JavaScript。</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
-// Option A: Include all of Bootstrap
-</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss</span>
+<span class="c1">// Option A: Include all of Bootstrap</span>
+
 <span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
-// Option B: Include parts of Bootstrap
-</span>
-<span class="c1">// Required
-</span><span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss</span>
+<span class="c1">// Option B: Include parts of Bootstrap</span>
+
+<span class="c1">// Required</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/variables"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/mixins"</span><span class="p">;</span>
 
-<span class="c1">// Optional
-</span><span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
+<span class="c1">// Optional</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/type"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/images"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/code"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/grid"</span><span class="p">;</span></code></pre></figure>
 
-<p>使用該設置，您可以開始修改 <code class="highlighter-rouge">custom.scss</code> 中的任何 Sass 變數和 Sass maps。您還可以依據需求開始在 <code class="highlighter-rouge">// Optional</code> 部分下增加 Bootstrap 的部分元件。</p>
+<p>使用該設置，您可以開始修改 <code class="highlighter-rouge">custom.scss</code> 中的任何 Sass 變數和 Sass maps。您還可以依據需求開始在 <code class="highlighter-rouge">// Optional</code> 部分下增加 Bootstrap 的部分元件。我們建議使用 <code class="highlighter-rouge">bootstrap.scss</code> 作為你文件的起始。</p>
 
 <h3 id="預設變數">預設變數</h3>
 
@@ -628,18 +647,22 @@ var google_remarketing_only = true;
 
 <p>這是一個例子，通過 npm 導入和編譯 Bootstrap 時，可以更改 <code class="highlighter-rouge">&lt;body&gt;</code> 的 <code class="highlighter-rouge">background-color</code> 和 <code class="highlighter-rouge">color</code>。</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Your variable overrides
-</span><span class="nv">$body-bg</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Your variable overrides</span>
+<span class="nv">$body-bg</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
 <span class="nv">$body-color</span><span class="p">:</span> <span class="mh">#111</span><span class="p">;</span>
 
-<span class="c1">// Bootstrap and its default variables
-</span><span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span></code></pre></figure>
+<span class="c1">// Bootstrap and its default variables</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span></code></pre></figure>
 
 <p>重複任何需要的變數在 Bootstrap 中，包含在下方的全域選項。</p>
 
 <h3 id="sass-maps-與循環">Sass Maps 與循環</h3>
 
 <p>Bootstrap 4 包含一些 Sass maps、對應值，這使它更容易產生一連貫的 CSS。我們使用 Sass map 做為我們的顏色、中斷點還有更多，就像是 Sass 變數，所有 Sass map 都包含 <code class="highlighter-rouge">!default</code> 他更能夠覆蓋及擴增。</p>
+
+<p>我們的一些 Sass Map 預設合併為空白的，這樣做是為了使 Sass Map 更容易擴增，但如果從 Sass 地圖移除項目會稍微困難一些。</p>
+
+<h4 id="修改-map">修改 map</h4>
 
 <p>例如，要修改 <code class="highlighter-rouge">$theme-colors</code> mps 的現有顏色，請將以下內容加到您的自定義 Sass 文件中：</p>
 
@@ -648,11 +671,25 @@ var google_remarketing_only = true;
   <span class="s2">"danger"</span><span class="o">:</span> <span class="mh">#ff4136</span>
 <span class="p">);</span></code></pre></figure>
 
+<h4 id="加入到-map">加入到 map</h4>
+
 <p>增加一個新色彩到 <code class="highlighter-rouge">$theme-colors</code>，並增加一個新的 key 及 值。</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="p">(</span>
   <span class="s2">"custom-color"</span><span class="o">:</span> <span class="mh">#900</span>
 <span class="p">);</span></code></pre></figure>
+
+<h4 id="從-map-中移除變數">從 Map 中移除變數</h4>
+
+<p>移除色彩從 <code class="highlighter-rouge">$theme-colors</code>，或其他的 map 可用 <code class="highlighter-rouge">map-remove</code>。</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">"success"</span><span class="o">,</span> <span class="s2">"info"</span><span class="o">,</span> <span class="s2">"danger"</span><span class="p">);</span></code></pre></figure>
+
+<h4 id="required-keys">Required keys</h4>
+
+<p>Bootstrap assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map’s key is being used.</p>
+
+<p>For example, we use the <code class="highlighter-rouge">primary</code>, <code class="highlighter-rouge">success</code>, and <code class="highlighter-rouge">danger</code> keys from <code class="highlighter-rouge">$theme-colors</code> for links, buttons, and form states. Replacing the values of these keys should present no issues, but removing them may cause Sass compilation issues. In these instances, you’ll need to modify the Sass code that makes use of those values.</p>
 
 <h3 id="functions">Functions</h3>
 
@@ -710,14 +747,14 @@ var google_remarketing_only = true;
 <p>它也可以用於一次性對比度需求：</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// returns `color: #fff`
-</span><span class="p">}</span></code></pre></figure>
+  <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// returns `color: #fff`</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>您也可使用我們的 <code class="highlighter-rouge">$theme-colors</code> 功能指定基色：</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nf">theme-color</span><span class="p">(</span><span class="s2">"dark"</span><span class="p">));</span> <span class="c1">// returns `color: #fff`
-</span><span class="p">}</span></code></pre></figure>
+  <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nf">theme-color</span><span class="p">(</span><span class="s2">"dark"</span><span class="p">));</span> <span class="c1">// returns `color: #fff`</span>
+<span class="p">}</span></code></pre></figure>
 
 <h2 id="sass-選項">Sass 選項</h2>
 
@@ -757,12 +794,12 @@ var google_remarketing_only = true;
     <tr>
       <td><code class="highlighter-rouge">$enable-transitions</code></td>
       <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
-      <td>E啟用各元件上的 <code class="highlighter-rouge">transition</code> 。</td>
+      <td>啟用各元件上的 <code class="highlighter-rouge">transition</code> 。</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">$enable-hover-media-query</code></td>
       <td><code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> (default)</td>
-      <td>…</td>
+      <td><strong>棄用</strong></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">$enable-grid-classes</code></td>
@@ -862,11 +899,11 @@ var google_remarketing_only = true;
 
 <p>以下是您可以在 Sass 中使用的方法：</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// With variable
-</span><span class="nc">.alpha</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nv">$purple</span><span class="p">;</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// With variable</span>
+<span class="nc">.alpha</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nv">$purple</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="c1">// From the Sass map with our `color()` function
-</span><span class="nc">.beta</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nf">color</span><span class="p">(</span><span class="s2">"purple"</span><span class="p">);</span> <span class="p">}</span></code></pre></figure>
+<span class="c1">// From the Sass map with our `color()` function</span>
+<span class="nc">.beta</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nf">color</span><span class="p">(</span><span class="s2">"purple"</span><span class="p">);</span> <span class="p">}</span></code></pre></figure>
 
 <p><a href="/docs/4.0/utilities/colors/">色彩通用類別</a> 也可設置 <code class="highlighter-rouge">color</code> 和<code class="highlighter-rouge">background-color</code>。</p>
 
@@ -972,15 +1009,15 @@ var google_remarketing_only = true;
 
 <p>這裡舉兩個例子介紹我們如何透過 <code class="highlighter-rouge">$theme-colors</code> map 來產生包含修飾 Class 在 <code class="highlighter-rouge">.alert</code> 元件上，並且包含全部 <code class="highlighter-rouge">.bg-*</code> 背景通用類別。</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Generate alert modifier classes
-</span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="n">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Generate alert modifier classes</span>
+<span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="n">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
   <span class="nc">.alert-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
     <span class="k">@include</span> <span class="nd">alert-variant</span><span class="p">(</span><span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="m">-10</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="m">-9</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="m">6</span><span class="p">));</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="c1">// Generate `.bg-*` color utilities
-</span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="n">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+<span class="c1">// Generate `.bg-*` color utilities</span>
+<span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="n">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
   <span class="k">@include</span> <span class="nd">bg-variant</span><span class="p">(</span><span class="s1">'.bg-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span><span class="s1">'</span><span class="o">,</span> <span class="nv">$value</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
@@ -1000,6 +1037,69 @@ var google_remarketing_only = true;
 
 <p>如果你修改你的 <code class="highlighter-rouge">$grid-breakpoints</code>，你將會套用 maps 中的所有迴圈。</p>
 
+<h2 id="css-變數">CSS 變數</h2>
+
+<p>Bootstrap 4 編譯時包含約 20 個 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">CSS 自定義屬性 (變數)</a>，這提供了像是主題色彩、中斷點，以及原型設計、沙盒、瀏覽器檢查中的主要的字體堆疊。</p>
+
+<h3 id="可用變數">可用變數</h3>
+
+<p>這裡包含的變數(注意 <code class="highlighter-rouge">:root</code> 是必須的)，他在 <code class="highlighter-rouge">_root.scss</code> 文件中。</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:root</span> <span class="p">{</span>
+  <span class="py">--blue</span><span class="p">:</span> <span class="m">#007bff</span><span class="p">;</span>
+  <span class="py">--indigo</span><span class="p">:</span> <span class="m">#6610f2</span><span class="p">;</span>
+  <span class="py">--purple</span><span class="p">:</span> <span class="m">#6f42c1</span><span class="p">;</span>
+  <span class="py">--pink</span><span class="p">:</span> <span class="m">#e83e8c</span><span class="p">;</span>
+  <span class="py">--red</span><span class="p">:</span> <span class="m">#dc3545</span><span class="p">;</span>
+  <span class="py">--orange</span><span class="p">:</span> <span class="m">#fd7e14</span><span class="p">;</span>
+  <span class="py">--yellow</span><span class="p">:</span> <span class="m">#ffc107</span><span class="p">;</span>
+  <span class="py">--green</span><span class="p">:</span> <span class="m">#28a745</span><span class="p">;</span>
+  <span class="py">--teal</span><span class="p">:</span> <span class="m">#20c997</span><span class="p">;</span>
+  <span class="py">--cyan</span><span class="p">:</span> <span class="m">#17a2b8</span><span class="p">;</span>
+  <span class="py">--white</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="py">--gray</span><span class="p">:</span> <span class="m">#6c757d</span><span class="p">;</span>
+  <span class="py">--gray-dark</span><span class="p">:</span> <span class="m">#343a40</span><span class="p">;</span>
+  <span class="py">--primary</span><span class="p">:</span> <span class="m">#007bff</span><span class="p">;</span>
+  <span class="py">--secondary</span><span class="p">:</span> <span class="m">#6c757d</span><span class="p">;</span>
+  <span class="py">--success</span><span class="p">:</span> <span class="m">#28a745</span><span class="p">;</span>
+  <span class="py">--info</span><span class="p">:</span> <span class="m">#17a2b8</span><span class="p">;</span>
+  <span class="py">--warning</span><span class="p">:</span> <span class="m">#ffc107</span><span class="p">;</span>
+  <span class="py">--danger</span><span class="p">:</span> <span class="m">#dc3545</span><span class="p">;</span>
+  <span class="py">--light</span><span class="p">:</span> <span class="m">#f8f9fa</span><span class="p">;</span>
+  <span class="py">--dark</span><span class="p">:</span> <span class="m">#343a40</span><span class="p">;</span>
+  <span class="py">--breakpoint-xs</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="py">--breakpoint-sm</span><span class="p">:</span> <span class="m">576px</span><span class="p">;</span>
+  <span class="py">--breakpoint-md</span><span class="p">:</span> <span class="m">768px</span><span class="p">;</span>
+  <span class="py">--breakpoint-lg</span><span class="p">:</span> <span class="m">992px</span><span class="p">;</span>
+  <span class="py">--breakpoint-xl</span><span class="p">:</span> <span class="m">1200px</span><span class="p">;</span>
+  <span class="py">--font-family-sans-serif</span><span class="p">:</span> <span class="n">-apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span> <span class="s1">"Segoe UI"</span><span class="p">,</span> <span class="n">Roboto</span><span class="p">,</span> <span class="s1">"Helvetica Neue"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">,</span> <span class="s1">"Apple Color Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Symbol"</span><span class="p">;</span>
+  <span class="py">--font-family-monospace</span><span class="p">:</span> <span class="n">SFMono-Regular</span><span class="p">,</span> <span class="n">Menlo</span><span class="p">,</span> <span class="n">Monaco</span><span class="p">,</span> <span class="n">Consolas</span><span class="p">,</span> <span class="s1">"Liberation Mono"</span><span class="p">,</span> <span class="s1">"Courier New"</span><span class="p">,</span> <span class="nb">monospace</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="範例">範例</h3>
+
+<p>CSS 變數為 Sass 變數提供類似的靈活性，但在執行時不需要編譯。例如我們使用 CSS 變數重置頁面字體和連結樣式。</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="m">1rem</span><span class="p">/</span><span class="m">1.5</span> <span class="n">var</span><span class="p">(</span><span class="n">--font-family-sans-serif</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--blue</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>你也可以使用中斷點變數在 media queries。</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.content-secondary</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">(</span><span class="n">var</span><span class="p">(</span><span class="n">--breakpoint-sm</span><span class="p">)))</span> <span class="p">{</span>
+  <span class="nc">.content-secondary</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+
         </main>
       </div>
     </div>
@@ -1007,7 +1107,7 @@ var google_remarketing_only = true;
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/bootstrap.js"></script><script src="/assets/js/vendor/anchor.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/bootstrap.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/vendor/anchor.min.js"></script>
   <script src="/assets/js/vendor/clipboard.min.js"></script>
   <script src="/assets/js/vendor/holder.min.js"></script>
   <script src="/assets/js/src/application.js"></script>

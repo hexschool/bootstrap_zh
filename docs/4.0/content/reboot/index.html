@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="針對單一檔案內 CSS 的特定元素重置樣式，重置以便 Bootstrap 準確且一致的建立樣式。">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.6.2">
+<meta name="generator" content="Jekyll v3.7.0">
 
 <title>重置 (Reboot) · Bootstrap 4 繁體中文手冊 [六角學院譯]</title>
 
@@ -167,7 +167,7 @@ var google_remarketing_only = true;
     </li>
   </ul>
 
-  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.3.zip">Download</a>
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0.zip">Download</a>
 </header>
 
 
@@ -386,6 +386,9 @@ var google_remarketing_only = true;
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/extend/icons/">
               圖示
+            </a></li><li>
+            <a href="/docs/4.0/extend/approach/">
+              Approach
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/migration/">
@@ -432,7 +435,6 @@ var google_remarketing_only = true;
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#html5-hidden-屬性">HTML5 [hidden] 屬性</a></li>
-<li class="toc-entry toc-h2"><a href="#為優化觸擊的點擊延遲">為優化觸擊的點擊延遲</a></li>
 </ul>
           </div>
         
@@ -591,18 +593,18 @@ var google_remarketing_only = true;
 <p>Bootstrap 4.0 已經放棄了預設網頁字體（Helvetica Neue, Helvetica, 和 Arial）並用 “native font stack” 取代了預設字體以在每個設備和作業系統上獲得最佳的閱讀呈現。閱讀更多的資訊 <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">原生字體堆疊 <em>Smashing Magazine</em> 文章中</a>。</p>
 
 <figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$font-family-sans-serif</span><span class="p">:</span>
-  <span class="c1">// Safari for OS X and iOS (San Francisco)
-</span>  <span class="nt">-apple-system</span><span class="o">,</span>
-  <span class="c1">// Chrome &lt; 56 for OS X (San Francisco)
-</span>  <span class="nt">BlinkMacSystemFont</span><span class="o">,</span>
-  <span class="c1">// Windows
-</span>  <span class="s2">"Segoe UI"</span><span class="o">,</span>
-  <span class="c1">// Android
-</span>  <span class="s2">"Roboto"</span><span class="o">,</span>
-  <span class="c1">// Basic web fallback
-</span>  <span class="s2">"Helvetica Neue"</span><span class="o">,</span> <span class="nt">Arial</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">,</span>
-  <span class="c1">// Emoji fonts
-</span>  <span class="s2">"Apple Color Emoji"</span><span class="o">,</span> <span class="s2">"Segoe UI Emoji"</span><span class="o">,</span> <span class="s2">"Segoe UI Symbol"</span> <span class="o">!</span><span class="nt">default</span><span class="o">;</span></code></pre></figure>
+  <span class="c1">// Safari for OS X and iOS (San Francisco)</span>
+  <span class="nt">-apple-system</span><span class="o">,</span>
+  <span class="c1">// Chrome &lt; 56 for OS X (San Francisco)</span>
+  <span class="nt">BlinkMacSystemFont</span><span class="o">,</span>
+  <span class="c1">// Windows</span>
+  <span class="s2">"Segoe UI"</span><span class="o">,</span>
+  <span class="c1">// Android</span>
+  <span class="s2">"Roboto"</span><span class="o">,</span>
+  <span class="c1">// Basic web fallback</span>
+  <span class="s2">"Helvetica Neue"</span><span class="o">,</span> <span class="nt">Arial</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">,</span>
+  <span class="c1">// Emoji fonts</span>
+  <span class="s2">"Apple Color Emoji"</span><span class="o">,</span> <span class="s2">"Segoe UI Emoji"</span><span class="o">,</span> <span class="s2">"Segoe UI Symbol"</span> <span class="o">!</span><span class="nt">default</span><span class="o">;</span></code></pre></figure>
 
 <p><code class="highlighter-rouge">&lt;body&gt;</code> 應用 <code class="highlighter-rouge">font-family</code> 並在整個 Bootstrap 內自動繼承這個全域設定。要切換全域的 <code class="highlighter-rouge">font-family</code>，更新 <code class="highlighter-rouge">$font-family-base</code> 並重新編譯 Bootstrap。</p>
 
@@ -933,21 +935,7 @@ var google_remarketing_only = true;
 <p><code class="highlighter-rouge">[hidden]</code> 不相容 jQuery’s <code class="highlighter-rouge">$(...).hide()</code> 和 <code class="highlighter-rouge">$(...).show()</code> 的方式。然而，我們目前並沒有接受 <code class="highlighter-rouge">[hidden]</code> 的其他技術來管理元素的 <code class="highlighter-rouge">display</code>。</p>
 </div>
 
-<p>若僅僅要切換某個元素的可視度，切換可視度的含義是不修改 <code class="highlighter-rouge">display</code>，且元素仍可影響文件排版，可使用<a href="/docs/4.0/utilities/visibility/">the <code class="highlighter-rouge">.invisible</code> class</a> 來取代。</p>
-
-<h2 id="為優化觸擊的點擊延遲">為優化觸擊的點擊延遲</h2>
-
-<p>傳統觸控式螢幕設備上的瀏覽器在 “輕擊” 結束之間的延遲約300ms。延遲是 手指/手寫筆 從螢幕上提起和 <a href="https://developer.mozilla.org/en-US/docs/Web/Events/click">點擊事件</a> 被觸發之間的時間。延遲是瀏覽器在在第一次 “輕擊” 後不提前觸發事件或連結為前提下正確處理，這是 “按兩下縮放” 手勢所必需，但延遲可能讓你的網站有遲緩和回應不迅速的感覺。</p>
-
-<p>大部分行動瀏覽器自動為使用 <code class="highlighter-rouge">width=device-width</code> 屬性作為<a href="/docs/4.0/getting-started/introduction/#responsive-meta-tag">responsive meta tag</a> 組成部分的網站優化 300ms 的延遲時間（同時也會為通過 <code class="highlighter-rouge">user-scalable=no</code> 等方式禁用縮放的網站優化延遲，雖然由於可訪問性和易用性等原因強烈不推薦這種做法）。最顯著的例外是 Windows Phone 8.1 上的 IE11 以及 <a href="https://webkit.org/blog/5610/more-responsive-tapping-on-ios/">iOS 9.3之前的</a> iOS Safari（以及任何其他基於 iOS 網頁的瀏覽器）。</p>
-
-<p>在啟動觸擊的 筆記本/桌面 設備上，IE11 和 Microsoft Edge 是當前唯一具有 “按兩下縮放” 功能的瀏覽器。由於全部的桌面瀏覽器忽略 <a href="https://webkit.org/blog/5610/more-responsive-tapping-on-ios/">responsive meta tag</a>，因此使用 <code class="highlighter-rouge">width=device-width</code> 不會對 300 秒的延遲產生任何影響。</p>
-
-<p>為了在桌面的 IE11 和 Microsoft Edge 以及在 Windows Phone 8.1 上解決這個問題，Bootstrap 在各種互動元素上（比如按鍵和連結上）使用了 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action"><code class="highlighter-rouge">touch-action:manipulation</code> CSS property</a> 。此屬性基本在上述元素上禁用了按兩下功能，因此消除了 300ms 的延遲。</p>
-
-<p>對於舊版的 iOS 版本(9.3以前版本)，建議的方式是使用<a href="https://github.com/ftlabs/fastclick">FastClick</a> 等追加的語法消除延遲。</p>
-
-<p>欲知進一步的明細，參見相容性表瞭解 <a href="https://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay">為觸控式螢幕而減少 300ms 的延遲時間</a>。</p>
+<p>為了切換一個元素的可視性但它的 <code class="highlighter-rouge">display</code> 沒有被修改，元素依然會影響文件的排版。可以使用 <a href="/docs/4.0/utilities/visibility/"><code class="highlighter-rouge">.invisible</code></a> 取代。</p>
 
         </main>
       </div>
@@ -956,7 +944,7 @@ var google_remarketing_only = true;
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/bootstrap.js"></script><script src="/assets/js/vendor/anchor.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/bootstrap.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/vendor/anchor.min.js"></script>
   <script src="/assets/js/vendor/clipboard.min.js"></script>
   <script src="/assets/js/vendor/holder.min.js"></script>
   <script src="/assets/js/src/application.js"></script>

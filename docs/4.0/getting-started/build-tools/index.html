@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="學習如何使用 Bootstrap 內建的 npm 腳本建立我們的文件、編譯原始程式碼、運行測試和更多。">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.6.2">
+<meta name="generator" content="Jekyll v3.7.0">
 
 <title>構建工具 (Build Tools) · Bootstrap 4 繁體中文手冊 [六角學院譯]</title>
 
@@ -167,7 +167,7 @@ var google_remarketing_only = true;
     </li>
   </ul>
 
-  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0-beta.3.zip">Download</a>
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0.zip">Download</a>
 </header>
 
 
@@ -386,6 +386,9 @@ var google_remarketing_only = true;
       <ul class="nav bd-sidenav"><li>
             <a href="/docs/4.0/extend/icons/">
               圖示
+            </a></li><li>
+            <a href="/docs/4.0/extend/approach/">
+              Approach
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/docs/4.0/migration/">
@@ -548,13 +551,13 @@ var google_remarketing_only = true;
 </style>
           <h2 id="工具設定">工具設定</h2>
 
-<p>Boostrap 的構建系統採用 <a href="https://docs.npmjs.com/misc/scripts">NPM 腳本</a> 。我們的 <a href="https://github.com/twbs/bootstrap/blob/v4.0.0-beta.3/package.json">package.json</a> 包含了方便框架工作的方法，包括編譯程式碼、運行測試和更多工作。</p>
+<p>Boostrap 的構建系統採用 <a href="https://docs.npmjs.com/misc/scripts">NPM 腳本</a> 。我們的 <a href="https://github.com/twbs/bootstrap/blob/v4.0.0/package.json">package.json</a> 包含了方便框架工作的方法，包括編譯程式碼、運行測試和更多工作。</p>
 
 <p>要使用我們的構建系統並在本地運行我們的文件，你需要一份 Boostrap 原始檔案的副本和 Node.js。遵循以下步驟，然後準備開始：</p>
 
 <ol>
   <li><a href="https://nodejs.org/download/">下載和安裝 Node.js</a>，我們採用 Node.js 管理我們的從屬附件。</li>
-  <li>進入至 <code class="highlighter-rouge">/bootstrap</code> 目錄然後運行 <code class="highlighter-rouge">npm install</code> 安裝我們在 <a href="https://github.com/twbs/bootstrap/blob/v4.0.0-beta.3/package.json">package.json</a> 中列出的相依套件。</li>
+  <li>進入至 <code class="highlighter-rouge">/bootstrap</code> 目錄然後運行 <code class="highlighter-rouge">npm install</code> 安裝我們在 <a href="https://github.com/twbs/bootstrap/blob/v4.0.0/package.json">package.json</a> 中列出的相依套件。</li>
   <li><a href="https://www.ruby-lang.org/en/documentation/installation/">安裝 Ruby</a>，用 <code class="highlighter-rouge">gem install bundler</code> 安裝 <a href="https://bundler.io/">Bundler</a>，最後運行 <code class="highlighter-rouge">bundle install</code>。這回安裝全部的 Ruby 相依套件，比如 Jekyll 和外掛程式。
   -<strong>Windows 用戶。</strong> 閱讀 <a href="https://jekyllrb.com/docs/windows/">此指南</a>以讓 Jekyll 無問題的運行。</li>
 </ol>
@@ -563,7 +566,7 @@ var google_remarketing_only = true;
 
 <h2 id="使用npm腳本">使用NPM腳本</h2>
 
-<p>我們的 <a href="https://github.com/twbs/bootstrap/blob/v4.0.0-beta.3/package.json">package.json</a> 包含了以下的命令和任務：</p>
+<p>我們的 <a href="https://github.com/twbs/bootstrap/blob/v4.0.0/package.json">package.json</a> 包含了以下的命令和任務：</p>
 
 <table>
   <thead>
@@ -594,7 +597,7 @@ var google_remarketing_only = true;
 
 <p>Bootstrap 採用（我們的構建過程中內含的）<a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> 以便自動在構建時向某些 CSS 屬性增加前輟詞。自動增加前輟詞可讓我們每次編寫 CSS 時，無需採用第三版中用的那些 Sass mixins，這樣可以節省我們的時間。</p>
 
-<p>我們在 GitHub 版本庫中的一份獨立檔案中保存了通過 Autoprefixer 支援的瀏覽器清單。預知明細，請參見 <a href="https://github.com/twbs/bootstrap/blob/v4.0.0-beta.3/package.json">/package.json</a>。</p>
+<p>我們在 GitHub 版本庫中的一份獨立檔案中保存了通過 Autoprefixer 支援的瀏覽器清單。預知明細，請參見 <a href="https://github.com/twbs/bootstrap/blob/v4.0.0/package.json">/package.json</a>。</p>
 
 <h2 id="本地檔">本地檔</h2>
 
@@ -620,7 +623,7 @@ var google_remarketing_only = true;
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/bootstrap.js"></script><script src="/assets/js/vendor/anchor.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js"></script><script src="/dist/js/bootstrap.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/vendor/anchor.min.js"></script>
   <script src="/assets/js/vendor/clipboard.min.js"></script>
   <script src="/assets/js/vendor/holder.min.js"></script>
   <script src="/assets/js/src/application.js"></script>
