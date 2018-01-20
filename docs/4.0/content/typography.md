@@ -8,7 +8,7 @@ toc: true
 
 ## 全域設定
 
-Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要更多的控制時，查看 [文本工具類型]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/)。
+Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要更多的控制時，查看 [文本工具類型]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/typography/)。
 
 - 為每個作業系統和設備選定最佳 `font-family` 的 [原生字體堆疊]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#native-font-stack)。
 - 為了獲得一個包容和易用的類型縮放，我們使用瀏覽器預設啟動 `font-size`（一般為16px）因此可在必要時自訂瀏覽器預設值。
@@ -168,7 +168,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 
 ## 文本通用類別
 
-改變文字對齊、變換、樣式、字重和顏色透過 [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/) 及 [color utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/).
+改變文字對齊、變換、樣式、字重和顏色透過 [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/typography/) 及 [color utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/).
 
 ## 縮寫
 

@@ -13,7 +13,7 @@ toc: true
 - 彈出提示框依靠第三方函式庫 [Popper.js](https://popper.js.org/) 進行定位。 在 Bootstrap 彈出提示框工作之前，您必須包含 [popper.min.js]({{ site.cdn.popper }})，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`，這已經包含 Popper.js 可以直接運作。
 - 彈出提示框需要 [工具提示插件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/tooltips/) 作為依賴。
 - 如果你自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)。
-- 彈出提示框因為校能原因所以是選擇加入，所以 **您必須自己將他們初始化**。
+- 彈出提示框因為效能原因所以是選擇加入，所以 **您必須自己將他們初始化**。
 - 零長度 `title` 和 `content` 值將永遠不會顯示一個彈出提示框。
 - 指定 `container: 'body'` 以避免在更複雜的元件（如我們的輸入群組，按鈕群組等）中呈現問題。
 - 隱藏元素的彈出提示框是不會成功的。
