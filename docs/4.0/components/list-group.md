@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 基礎範例
+## 基礎範例 {#basic-example}
 
 最基本的列表群組是具有列表項目和適當 Class 的無序列表。根據以下的選項或根據您自己需要調整 CSS。
 
@@ -21,7 +21,7 @@ toc: true
 </ul>
 {% endexample %}
 
-## 啟用物件
+## 啟用物件 {#active-items}
 
 將 `.active` 加到 `.list-group-item` 指示當前的活動狀態。
 
@@ -35,7 +35,7 @@ toc: true
 </ul>
 {% endexample %}
 
-## 禁用選項
+## 禁用選項 {#disabled-items}
 
 將 `.disabled` 加到 `.list-group-item` 使其呈現禁用。請注意，一些帶有 `.disabled` 的元素還需要自訂 JavaScript 才能完全禁用其點擊事件（例如連結）。
 
@@ -50,7 +50,7 @@ toc: true
 </ul>
 {% endexample %}
 
-## 連結和按鈕
+## 連結和按鈕 {#links-and-buttons}
 
 使用 `<a>` 或 `<button>` 加入 `.list-group-item-action` 來創建具有 hover、禁用和活動狀態的動態清單項目。我們分離這些 Class，以確保由非交互元素組成的列表群組（如 `<li>` 或 `<div>` ）不提供可點點擊或觸擊。
 
@@ -83,7 +83,7 @@ toc: true
 </div>
 {% endexample %}
 
-## 緊貼
+## 緊貼 {#flush}
 
 加入 `.list-group-flush` 來移除部分邊框及圓角，用來產生邊緣貼齊的列表群組，這可用在一個容器內(如：卡片)。
 
@@ -97,7 +97,7 @@ toc: true
 </ul>
 {% endexample %}
 
-## 情境 Class
+## 情境 Class {#contextual-classes}
 
 使用情境式 Class 來設計具有狀態被境和顏色的列表項目。
 
@@ -127,7 +127,7 @@ toc: true
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-## 帶標籤
+## 帶標籤 {#with-badges}
 
 在某些 [通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 的幫助下，向任何列表項目添加標籤以顯示未讀計數、活動等。
 
@@ -148,7 +148,7 @@ toc: true
 </ul>
 {% endexample %}
 
-## 自定義內容
+## 自定義內容 {#custom-content}
 
 在 [flexbox 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 的幫助下，添加幾乎任何的 HTML 或內容、連結等，都能加入到一個項目內。
 
@@ -181,7 +181,7 @@ toc: true
 </div>
 {% endexample %}
 
-## JavaScript 行為
+## JavaScript 行為 {#javascript-behavior}
 
 使用列表群組的 JavaScript 插件 - 單獨或通過編譯的 `bootstrap.js` 檔擴展我們的列表群組，以創建可選擇的內容表單。
 
@@ -236,7 +236,7 @@ toc: true
 </div>
 {% endhighlight %}
 
-### 使用資料屬性
+### 使用資料屬性 {#using-data-attributes}
 
 在 `.list-group-item` 上使用這些資料屬性，可以指定 `data-toggle="list"` 或元素來啟動列表群組的導航，而無需編寫任何 JavaScript。
 
@@ -261,7 +261,7 @@ toc: true
 {% endhighlight %}
 </div>
 
-### 透過 JavaScript
+### 透過 JavaScript {#via-javascript}
 
 通過 JavaScript 啟用可選個列表項目（每個列表項目需要單獨啟動）：
 
@@ -281,7 +281,7 @@ $('#myList a:last-child').tab('show') // Select last tab
 $('#myList a:nth-child(3)').tab('show') // Select third tab
 {% endhighlight %}
 
-### 淡出效果
+### 淡出效果 {#fade-effect}
 
 要使定位字元淡入淡出，請將 `.fade` 添加到每個 `.tab-pane` 中。 第一個列表項目還必須具有 `.show` 使初始內容可見。
 
@@ -295,9 +295,9 @@ $('#myList a:nth-child(3)').tab('show') // Select third tab
 </div>
 {% endhighlight %}
 
-### 方法
+### 方法 {#methods}
 
-#### $().tab
+#### $().tab {#tab}
 
 啟動列表項目元素和內容容器。選項卡應該有一個 `data-target` 或 `href` 定位在 DOM 中的一個容器節點。
 
@@ -324,7 +324,7 @@ $('#myList a:nth-child(3)').tab('show') // Select third tab
 </script>
 {% endhighlight %}
 
-#### .tab('show')
+#### .tab('show') {#tabshow}
 
 選擇給定的列表項目顯示其關聯的分頁。而先前選擇的任何其他列表項目將被取消，並使其關聯的表單隱藏。 **在 Tab 顯示之前回傳給調用者**（例如，在 `shown.bs.tab` 事件發生之前）。
 
@@ -332,7 +332,7 @@ $('#myList a:nth-child(3)').tab('show') // Select third tab
 $('#someListItem').tab('show')
 {% endhighlight %}
 
-### 事件
+### 事件 {#events}
 
 當顯示新分頁時，事件按以下順序觸發：
 

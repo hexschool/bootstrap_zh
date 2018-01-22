@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 如何運作
+## 如何運作 {#how-it-works}
 
 在開始使用導覽列需要知道的事。
 
@@ -19,7 +19,7 @@ toc: true
 
 請閱讀範例和一些支援的子組件清單。
 
-## 支援內容
+## 支援內容 {#supported-content}
 
 導覽列支援一些組件，可從下列作選擇。
 
@@ -72,7 +72,7 @@ toc: true
 
 本範例使用 [color]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) (`bg-light`) 和 [spacing]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) (`my-2`, `my-lg-0`, `mr-sm-0`, `my-sm-0`) 通用類別。
 
-### 品牌
+### 品牌 {#brand}
 
 `.navbar-brand` 可以應用於大多數元素，但對錨最有效，因為某些元素可能需要通用類別 Class 或自訂樣式。
 
@@ -112,7 +112,7 @@ toc: true
 </nav>
 {% endexample %}
 
-### 導覽
+### 導覽 {#nav}
 
 導覽的連結建立在我們的 `.nav` 選項上，並使用專屬的 Class 並且需要使用 [toggler classes](#toggler) 在響應示中作切換。 **在導覽列中的導覽元件，也將佔用更多的水平空間**，以保持您的導覽列內容安全對齊。
 
@@ -198,7 +198,7 @@ toc: true
 </nav>
 {% endexample %}
 
-### 表單
+### 表單 {#forms}
 
 在導覽列中放置各種表單控制元件，這是透過 `.form-inline` 水平放置的表單。
 
@@ -251,7 +251,7 @@ input 群組也可以：
 </nav>
 {% endexample %}
 
-### 文字
+### 文字 {#text}
 
 導覽列可以在 `.navbar-text` 包含一些文本。 該 class 調整著文本字串的垂直對齊和水平間距。
 
@@ -290,7 +290,7 @@ input 群組也可以：
 </nav>
 {% endexample %}
 
-## 顏色方案
+## 顏色方案 {#color-schemes}
 
 由於主題 class 和 `background-color` 通用類別 class 的結合，主題化導覽列從未如此簡單。 從 `.navbar-light` 選用淺色背景顏色，或者 `.navbar-dark` 用於深色背景顏色。 然後，使用 `.bg-*` 通用類別自訂。
 
@@ -394,7 +394,7 @@ input 群組也可以：
 </nav>
 {% endhighlight %}
 
-## Containers
+## 容器 {#containers}
 
 雖然不是必需的，但您可以將導覽列包裹在 `.container` 中，將其放置在頁面中央或內容的中間 [固定或靜態於頂的導覽列](#定位) 位置。
 
@@ -417,7 +417,7 @@ input 群組也可以：
 </nav>
 {% endexample %}
 
-## 定位
+## 定位 {#placement}
 
 使用定位通用類別將導覽列放置在非靜態位置。從固定在頂部、固定在底部或 黏(stickied) 在頂部中選擇。 **請注意，`position: sticky`用於`.sticky-top` [這並非在每個流覽器都完全支持](http://caniuse.com/#feat=css-sticky)**
 
@@ -449,17 +449,13 @@ input 群組也可以：
 </nav>
 {% endexample %}
 
-## 響應式行為
-
-Navbars can utilize `.navbar-toggler`, `.navbar-collapse`, and `.navbar-expand{-sm|-md|-lg|-xl}` classes to change when their content collapses behind a button. In combination with other utilities, you can easily choose when to show or hide particular elements.
-
-For navbars that never collapse, add the `.navbar-expand` class on the navbar. For navbars that always collapse, don't add any `.navbar-expand` class.
+## 響應式行為 {#responsive-behaviors}
 
 按鈕後面的內容折疊時，導覽列可以使用 `.navbar-toggler`、`.navbar-collapse` 和 `.navbar-expand{-sm|-md|-lg|-xl}` 的 class 來改變。 結合其他通用類別，您可以選擇顯示或隱藏特定元素。
 
 對於不需要折疊的導覽列，在導覽列中加入 `.navbar-expand`。對於總是折疊的導覽列，不要加任何 `.navbar-expand` class。
 
-### 切換元素
+### 切換元素 {#toggler}
 
 導覽列切換元素預設情況下對齊左邊，但如果它們遵循像導覽列 `.navbar-brand` 這樣的同層級元素，它們將自動和最右邊對齊。 反轉您的品牌標記將對調切換元素的位置。以下是不同切換元素樣式的範例。
 
@@ -550,7 +546,7 @@ For navbars that never collapse, add the `.navbar-expand` class on the navbar. F
 </nav>
 {% endexample %}
 
-### 外部內容
+### 外部內容 {#external-content}
 
 想使用折疊插件來觸發頁面上某個地方的隱藏內容。 因為插件當 `id` 和 `data-target` 匹配時有效，這將很容易完成！
 

@@ -7,11 +7,11 @@ redirect_from: "/docs/4.0/utilities/"
 toc: true
 ---
 
-## Border
+## Border {#border}
 
 對一個元素增加 class，以移除所有 border 或部分 border。
 
-### 增加
+### 增加 {#additive}
 
 <div class="bd-example-border-utils">
 {% example html %}
@@ -23,7 +23,7 @@ toc: true
 {% endexample %}
 </div>
 
-### 減少
+### 減少 {#subtractive}
 
 <div class="bd-example-border-utils bd-example-border-utils-0">
 {% example html %}
@@ -35,7 +35,7 @@ toc: true
 {% endexample %}
 </div>
 
-## 邊框色彩
+## 邊框色彩 {#border-color}
 
 透過通用類別套用邊框的主題色彩。
 
@@ -47,7 +47,7 @@ toc: true
 {% endexample %}
 </div>
 
-## Border-radius
+## Border-radius {#border-radius}
 
 對一個元素增加 class 以方便的使其角部變圓。
 

@@ -6,7 +6,7 @@ group: utilities
 toc: true
 ---
 
-## 文字對齊
+## 文字對齊 {#text-alignment}
 
 通過文本對齊類方便的將文本與元件對齊。
 
@@ -27,7 +27,7 @@ toc: true
 <p class="text-xl-left">Left aligned text on viewports sized XL (extra-large) or wider.</p>
 {% endexample %}
 
-## text-wrap 和 Overflow
+## text-wrap 和 Overflow {#text-wrapping-and-overflow}
 
 防止換行可搭配 `.text-nowrap`。
 
@@ -53,7 +53,7 @@ toc: true
 </span>
 {% endexample %}
 
-## 文字變換
+## 文字變換 {#text-transform}
 
 使用 Class 將元件中的文字內容轉大寫。
 
@@ -65,7 +65,7 @@ toc: true
 
 注意 `text-capitalize` 僅改變每一個詞的第一個字母，而其它字母的大小寫不受影響
 
-## 字體粗細和斜體
+## 字體粗細和斜體 {#font-weight-and-italics}
 
 改變文字內容的粗細或斜體。
 

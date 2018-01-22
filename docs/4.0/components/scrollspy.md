@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 如何運作
+## 如何運作 {#how-it-works}
 
 滾動監控正常運行的幾個要求：
 
@@ -18,7 +18,7 @@ toc: true
 
 成功後，您的導覽或列表群組將相應更新，根據相關目標將 `.active`從一個項目移動到下一個項目。
 
-## 導覽列範例
+## 導覽列範例 {#example-in-navbar}
 
 滾動導覽列下方的區域，並觀察活動變化。下拉式選單項目也將被突出顯示。
 
@@ -95,7 +95,7 @@ toc: true
 </div>
 {% endhighlight %}
 
-## 巢狀導覽的範例
+## 巢狀導覽的範例 {#example-with-nested-nav}
 
 滾動監控也適用於巢狀的 `.nav`。 如果一個巢狀的 `.nav`是 `.active`，它的父級也會是 `.active`。 滾動導覽列旁邊的區域，並觀察活動變化。
 
@@ -177,7 +177,7 @@ toc: true
 </div>
 {% endhighlight %}
 
-## 列表組範例
+## 列表組範例 {#example-with-list-group}
 
 滾動監控對 `.list-group` 有效。滾動列表群組旁邊的區域，並觀察活動變化
 
@@ -226,9 +226,9 @@ toc: true
 {% endhighlight %}
 
 
-## 用法
+## 用法 {#usage}
 
-### 透過資料屬性
+### 透過資料屬性 {#via-data-attributes}
 
 將滾動監控行為加到您的導覽中，將 `data-spy="scroll"` 加到要偵聽的元素（通常這將是 `<body>`）。 然後將 `data-target` 屬性加到任何 Bootstrap `.nav` 元件的父元素的 ID 或 Class。
 
@@ -250,7 +250,7 @@ body {
 </body>
 {% endhighlight %}
 
-### 透過 JavaScript
+### 透過 JavaScript {#via-javascript}
 
 在你的 CSS 中加 `position: relative;` 後，透過 JavaScript 調用滾動監控。
 
@@ -272,7 +272,7 @@ $('body').scrollspy({ target: '#navbar-example' })
 目標元素如果是 [非 `:visible` 在 jQuery](https://api.jquery.com/visible-selector/) 將被忽略，其他相對應的導覽元件將永遠不會被 highlight。
 {% endcallout %}
 
-### 方法
+### 方法 {#methods}
 
 #### `.scrollspy('refresh')`
 
@@ -289,7 +289,7 @@ $('[data-spy="scroll"]').each(function () {
 
 Destroys an element's scrollspy.
 
-### 選項
+### 選項 {#options}
 
 可以透過資料屬性或 JavaScript 傳遞選項。對於資料屬性，將選項名稱附加到 `data-`，如 `data-offset=""`。
 
@@ -313,7 +313,7 @@ Destroys an element's scrollspy.
   </tbody>
 </table>
 
-### 事件
+### 事件 {#events}
 
 <table class="table table-bordered table-striped">
   <thead>

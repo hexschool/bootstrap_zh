@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 如何運作
+## 如何運作 {#how-it-works}
 
 進度元件使用兩個 HTML 元素構建、一些CSS設置寬度、以及一些屬性。我們不使用 [HTML5 `<progress>` 元素](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress) 確保您可以堆疊進度條、加上動態效果，並在其上放置文本標籤。
 
@@ -44,7 +44,7 @@ Bootstrap 提供了一些 [寬度設定通用類別]({{ site.baseurl }}/docs/{{ 
 </div>
 {% endexample %}
 
-## 標籤
+## 標籤 {#labels}
 
 在 `.progress-bar` 中放置文字內容，將標籤添加到進度條。
 
@@ -55,7 +55,7 @@ Bootstrap 提供了一些 [寬度設定通用類別]({{ site.baseurl }}/docs/{{ 
 </div>
 {% endexample %}
 
-## 高度
+## 高度 {#height}
 
 我們在 `.progress` 上設置一個 `height` 值，如果改變這個值，那麼內部的 `.progress-bar` 就會自動調整大小。
 
@@ -68,7 +68,7 @@ Bootstrap 提供了一些 [寬度設定通用類別]({{ site.baseurl }}/docs/{{ 
 </div>
 {% endexample %}
 
-## 背景
+## 背景 {#backgrounds}
 
 使用背景通用類別 Class 更改各個進度條的外觀。
 
@@ -88,7 +88,7 @@ Bootstrap 提供了一些 [寬度設定通用類別]({{ site.baseurl }}/docs/{{ 
 </div>
 {% endexample %}
 
-## 多進度條
+## 多進度條 {#multiple-bars}
 
 如果需要，在進度元件中包含多個進度條。
 
@@ -100,7 +100,7 @@ Bootstrap 提供了一些 [寬度設定通用類別]({{ site.baseurl }}/docs/{{ 
 </div>
 {% endexample %}
 
-##  帶條紋的
+##  帶條紋的 {#striped}
 
 將 `.progress-bar-striped` 加到任何 `.progress-bar` 中，透過 CSS 漸變對進度條的背景顏色加上條紋。
 
@@ -122,7 +122,7 @@ Bootstrap 提供了一些 [寬度設定通用類別]({{ site.baseurl }}/docs/{{ 
 </div>
 {% endexample %}
 
-## 動態條紋
+## 動態條紋 {#animated-stripes}
 
 條紋漸變也可以製成動畫。 將 `.progress-bar-animated` 加到 `.progress-bar` 中，透過 CSS3 繪製從右到左的動態效果。
 

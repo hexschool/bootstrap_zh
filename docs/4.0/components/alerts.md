@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 範例
+## 範例 {#examples}
 
 警報可用於任何長度的內文，以及選擇性加入的關閉按鈕。正確的樣式，使用 8 個內文樣式 Class 的其中之一（例如`.alert-success`）。 對於行內的移除，請使用[警報 jQuery 插件](#dismissing)。
 
@@ -20,7 +20,7 @@ toc: true
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-### 連結顏色
+### 連結顏色 {#link-color}
 
 使用 `.alert-link` 來快速為警報中的連結增添合適的色彩。
 
@@ -31,7 +31,7 @@ toc: true
 </div>{% endfor %}
 {% endexample %}
 
-### 額外的內容
+### 額外的內容 {#additional-content}
 
 警報可以增加額外的 HTML 元素，像是標題、段落以及分隔線。
 
@@ -45,7 +45,7 @@ toc: true
 {% endexample %}
 
 
-### 解除
+### 解除 {#dismissing}
 
 使用警報的 JavaScript 插件，他能夠將行內的警報移除，使用如下：
 
@@ -66,9 +66,9 @@ toc: true
 </div>
 {% endexample %}
 
-## JavaScript 行為
+## JavaScript 行為 {#javascript-behavior}
 
-### 觸發
+### 觸發 {#triggers}
 
 通過 JavaScript 插件啟用解除警報。
 
@@ -86,7 +86,7 @@ $('.alert').alert()
 
 請注意，關閉警報會將其從 DOM 中刪除。
 
-### 方法
+### 方法 {#methods}
 
 | 方法 | 描述 |
 | --- | --- |
@@ -96,7 +96,7 @@ $('.alert').alert()
 
 {% highlight js %}$(".alert").alert('close'){% endhighlight %}
 
-### 事件
+### 事件 {#events}
 
 Bootstrap 警報插件提供額外的事件，可以直接取用警報函式。
 

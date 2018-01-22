@@ -28,7 +28,7 @@ toc: true
 此外，群組和工具欄應該給予明確的標籤，因為儘管存在正確的 role 屬性，大多數輔助性技術不會明確呈現他們。 在這裡提供的例子中，我們使用 `aria-label`，但也可以使用如 `aria-labelledby` 等。
 {% endcallout %}
 
-## 按鈕工具列
+## 按鈕工具列 {#button-toolbar}
 
 將整組的按鈕組加入到按鈕工具列中，用於更複雜的組件。依據需要的工具類別將群組、按鈕等間隔開來。
 
@@ -85,7 +85,7 @@ toc: true
 </div>
 {% endexample %}
 
-## 縮放
+## 縮放 {#sizing}
 
 不是將按鈕大小 Class 應用於群組中的每個按鈕，只需在每個 `.btn-group` 中增加 `.btn-group-*`，就能套用在多個群組中的每一個。
 
@@ -115,7 +115,7 @@ toc: true
 <div class="btn-group btn-group-sm" role="group" aria-label="...">...</div>
 {% endhighlight %}
 
-## 巢狀
+## 巢狀 {#nesting}
 
 當您想要下拉式功能表與群組按鈕混合時，只需要將 `.btn-group` 放在另一個 `.btn-group` 中。
 
@@ -136,7 +136,7 @@ toc: true
 </div>
 {% endexample %}
 
-## 垂直變化
+## 垂直變化 {#vertical-variation}
 
 將一組按鈕垂直堆疊而不是水平呈現。 **此處不支援分割下拉式功能表。**
 

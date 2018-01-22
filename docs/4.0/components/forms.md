@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 概觀
+## 概觀 {#overview}
 
 Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#forms) 上作延伸。使用這些 Class 來選擇自訂顯示，以便在瀏覽器和設備之間進行更一致的呈現。
 
@@ -33,7 +33,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 </form>
 {% endexample %}
 
-## 表單控制
+## 表單控制 {#form-controls}
 
 文本形式控制元件（如 `<input>`、`<select>` 和 `<textarea>`）使用 `.form-control` 進行樣式化。包括一般外觀、focus 狀態、尺寸等等的樣式。
 
@@ -83,7 +83,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 </form>
 {% endexample %}
 
-### 尺寸
+### 尺寸 {#sizing}
 
 使用 `.form-control-lg` 和 `.form-control-sm` 設置高度。
 
@@ -105,7 +105,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 </select>
 {% endexample %}
 
-### 僅能閱讀
+### 僅能閱讀 {#readonly}
 
 在輸入上添加 `readonly` (布林)屬性，以防止修改 input 的值。僅能閱讀的 input 顯示較淡（就像禁用的輸入），但保留標準游標。
 
@@ -113,7 +113,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
 {% endexample %}
 
-### 僅能閱讀的文本
+### 僅能閱讀的文本 {#readonly-plain-text}
 
 如果您希望將 `<input readonly>` 元素設置為純文本，請使用 `.form-control-plaintext` 來刪除預設表單純文字樣式，並保留適當的邊距和填充。
 
@@ -148,7 +148,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 </form>
 {% endexample %}
 
-## 核取方塊和選項按鈕 (Checkboxes and radios)
+## 核取方塊和選項按鈕 (Checkboxes and radios) {#checkboxes-and-radios}
 
 
 透過 `.form-check` 預設核取方塊和選項按鈕得到改進，這兩種輸入類型的 class 都改進了 HTML 元素的佈局和行為。核取方塊用於在列表中選擇一個或多個選項，而選項按鈕是用於從許多選項中選擇一個選項。
@@ -157,7 +157,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 使用 核取方塊和選項按鈕是基於 HTML 的驗證標準，並提供簡潔易讀的標籤，因此 `<input>` 和 `<label>` 是兄弟元素，而不是 `<label>` 內的 `<input>`，這是比較冗長的，因為必須指定 `id` 和 `for` 適性來關聯 `<input>` 和 `<label>`。
 
-### 預設 (堆疊)
+### 預設 (堆疊) {#default-stacked}
 
 預設情況下，同級任意數量的核取方塊和選項按鈕將被垂直堆疊，並與 `.form-check` 適當間隔。
 
@@ -197,7 +197,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 </div>
 {% endexample %}
 
-### 行內
+### 行內 {#inline}
 
 透過 `.form-check-inline` 加到任何 `.form-check` 來將核取方塊或選項按鈕組合放到同一水平行上。
 
@@ -231,7 +231,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 </div>
 {% endexample %}
 
-### 沒有標籤
+### 沒有標籤 {#without-labels}
 
 將 `.form-check` 沒有任何文字內容的 input 加上 `.position-static`。 請記住，仍然需要為輔助技術提供某種形式的標籤（例如使用 `aria-label`）。
 
@@ -244,11 +244,11 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 </div>
 {% endexample %}
 
-## 佈局
+## 佈局 {#layout}
 
 自從 Bootstrap 使用 `display: block` 和 `width: 100%` 在全部的 input 控制上後，表單都是採垂直堆疊排列。可以透過增加 Class 來改變表單的佈局方式。
 
-### 表單群組
+### 表單群組 {#form-groups}
 
 `.form-group` 是向表單加一些結構的方法。其唯一的目的是提供標籤的配對及  `margin-bottom`，預設情況下他只會套用 `margin-bottom`，但他會在 `.form-inline` 中選擇其他樣式。由於它是一個 class，您可以使用它在 `<fieldset>`、`<div>` 或任何其他元素。
 
@@ -265,7 +265,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 </form>
 {% endexample %}
 
-### 表單格線
+### 表單格線 {#form-grid}
 
 可以使用網格 Class 構建更複雜的表單。請使用這些對於需要多列、多種寬度和其他對齊選項的表單佈局。
 
@@ -282,7 +282,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 </form>
 {% endexample %}
 
-#### 表單列
+#### 表單列 {#form-row}
 
 可以使用 `form-row` 取代 `.row`，這個變體可以相對於原本的網格 row 來說，他提供更小的 gutter 及緊湊的佈局。
 
@@ -350,7 +350,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 </form>
 {% endexample %}
 
-#### 水平表單
+#### 水平表單 {#horizontal-form}
 
 建立水平表單，需透過增加 `.row` 在表單群組上及使用 `.col-*-*` 來指定標籤及控制項。一定要將 `.col-form-label` 加到你的 `<label>` 中，這樣就可以垂直居中對應的表單元件。
 
@@ -414,7 +414,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 </form>
 {% endexample %}
 
-##### Horizontal form label sizing
+##### Horizontal form label sizing {#horizontal-form-label-sizing}
 
 Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
 
@@ -441,7 +441,7 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s o
 </form>
 {% endexample %}
 
-#### 欄位尺寸
+#### 欄位尺寸 {#column-sizing}
 
 如前面的示例所示，我們的網格系統允許您將任意數量的 `.col` 放置在 `.row` 或 `.form-row` 中。會在它們之間平均分割可用的寬度。您也可以選擇列的一部分來佔用更多或更少的空間，而剩餘的 `.col` 將分配給其他欄，例如 `.col-7`。
 
@@ -461,7 +461,7 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s o
 </form>
 {% endexample html %}
 
-#### 自動尺寸
+#### 自動尺寸 {#auto-sizing}
 
 下面的示例使用一個 flexbox 通用類別垂直居中的內容，並將 `.col` 更改為 `.col-auto`，這樣您的欄只佔用了所需的空間。換句話說，欄的大小本身就是基於內容。
 
@@ -556,7 +556,7 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s o
 </form>
 {% endexample %}
 
-### 行內表單
+### 行內表單 {#inline-forms}
 
 使用 `.form-inline` 在單個水平列上顯示一系列標籤、表單控制項、按鈕，行內表單的控制元件與預設的狀態略有不同。
 
@@ -617,7 +617,7 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s o
 如果您沒有為每個 input 添加標籤，螢幕閱讀器等輔助技術將對您的表單感到困擾。對於這些行內表單，您可以使用 `.sr-only` 來隱藏標籤。還提供了輔助技術標籤的另外的替代方法，例如 `aria-label` 、`aria-labelledby` 或 `title` 屬性。如果這些都不存在，輔助技術可能會使用 `placeholder` 的屬性（如果存在），但請注意，不建議使用 `placeholder` 替代其他標籤方法。
 {% endcallout %}
 
-## 幫助文字
+## 幫助文字 {#help-text}
 
 可以使用 `.form-text`（v3 中稱為 `.help-block`）創建表單中的塊級幫助文字。可以使用任何行內 HTML 元素和通用類別（如 `.text-muted`）靈活地實現行內幫助文字。
 
@@ -651,7 +651,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 </form>
 {% endexample %}
 
-## 禁用表單
+## 禁用表單 {#disabled-forms}
 
 加上 `disabled` 的布林屬性在 input 上，讓防止使用者操作並使它看起來更淡。
 
@@ -697,7 +697,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 雖然 Bootstrap 將在所有瀏覽器中應用這些樣式，但 Internet Explorer 11 及更低版本不完全支援 `<fieldset>` 上的 `disabled` 屬性。 使用自訂 JavaScript 來禁用這些瀏覽器中的標籤。
 {% endcallout %}
 
-## 驗證
+## 驗證 {#validation}
 
 透過 HTML5 表單驗證可在我們支持的 [瀏覽器中提供](https://caniuse.com/#feat=form-validation) 為您的用戶提供可操作的反饋。從瀏覽器中選擇預設驗證反饋，或者使用我們內置的 Class 和啟動 JavaScript 實現自定義訊息。
 
@@ -705,7 +705,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 我們 **強烈推薦自定義** 驗證樣式，因為瀏覽器預設值沒辦法告知螢幕閱讀器使用者。
 {% endcallout %}
 
-### 如何運作
+### 如何運作 {#how-it-works}
 
 這裡描述 Bootstrap 中的驗證是如何運作的。
 
@@ -719,7 +719,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 
 請參考以下的自定義表單驗證樣式、服務器端驗證 Class 和瀏覽器預設值。
 
-### 自訂樣式
+### 自訂樣式 {#custom-styles}
 
 對於自定義 Bootstrap 表單驗證訊息，您需要將 `novalidate` 屬性添加到您的 `<form>`。這將禁用瀏覽器預設的回饋提示，但仍提供 JavaScript 中表單驗證 API 有效。嘗試提交以下表格；我們的 JavaScript 將攔截提交按鈕並向您提供回饋。
 
@@ -814,7 +814,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 </script>
 {% endexample %}
 
-### 瀏覽器預設
+### 瀏覽器預設 {#browser-defaults}
 
 對自定義驗證回饋或編寫 JavaScript 以更改表單行為沒興趣？您也可以使用瀏覽器的預設值。嘗試提交以下表格。根據您的瀏覽器和操作系統，您會看到一種略有不同的回饋樣式。
 
@@ -867,7 +867,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 </form>
 {% endexample %}
 
-### 伺服器端
+### 伺服器端 {#server-side}
 
 我們建議使用客戶端驗證，但是如果您需要伺服器端，則可以使用 `.is-invalid`”和 `.is-valid` 表示無效且有效的表單。 請注意，這些 Class 也支持 `.invalid-feedback` 。
 
@@ -939,7 +939,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 </form>
 {% endexample %}
 
-### 支援元素
+### 支援元素 {#supported-elements}
 
 範例表單顯示了上面的原生文本 `<input>`，但也可以為自定義表單控制元件提供表單驗證樣式。
 
@@ -979,7 +979,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 </form>
 {% endexample %}
 
-### 提示
+### 提示 {#tooltips}
 
 如果你的排版允許，可以使用 `.{valid|invalid}-tooltip` 來替換 `.{valid|invalid}-feedback`，在樣式，使用風格化的提示來顯示表單的錯誤回饋，確保父元素有一個 `position: relative` 作為題式的定位，在以下的範例中 `col` 已經包含 relative，在你的專案上也需要做類似的設。定。
 
@@ -1040,12 +1040,12 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 </form>
 {% endexample %}
 
-## 自定義表單
+## 自定義表單 {#custom-forms}
 
 為了自訂和跨瀏覽器更為一致性，請使用自訂的表單元素來替換瀏覽器預設值。它們建立在語義和具親和力標記之上，因此它們是可以替代任何預設表單控制元件的。
 
 
-### 核取方塊和單選
+### 核取方塊和單選 {#checkboxes-and-radios-1}
 
 每一個 checkbox 和 radio 與一個鄰近的 `<span>` 被包覆在 `<div>` 中，用來創建自定義元件的文字內容。就結構上來說，這與 `.form-check` 是一樣的。
 
@@ -1057,7 +1057,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 
 在檢查狀態下，我們使用 [Open Iconic](https://useiconic.com/open) 中的  **base64 embedded SVG icons**。 這為我們提供了跨瀏覽器和裝置樣式的定位做最佳控制。
 
-#### 核取方塊
+#### 核取方塊 {#checkboxes}
 
 {% example html %}
 <div class="custom-control custom-checkbox">
@@ -1081,7 +1081,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 $('.your-checkbox').prop('indeterminate', true)
 {% endhighlight %}
 
-#### 單選
+#### 單選 {#radios}
 
 {% example html %}
 <div class="custom-control custom-radio">
@@ -1094,7 +1094,7 @@ $('.your-checkbox').prop('indeterminate', true)
 </div>
 {% endexample %}
 
-#### 行內
+#### 行內 {#inline-1}
 
 {% example html %}
 <div class="custom-control custom-radio custom-control-inline">
@@ -1107,7 +1107,7 @@ $('.your-checkbox').prop('indeterminate', true)
 </div>
 {% endexample %}
 
-#### 禁用
+#### 禁用 {#disabled}
 
 自訂核取方塊和選項按鈕也可以禁用。 將 `disabled` 布林屬性加到 `<input>`，自訂指示符和標籤樣式都會自動加入。
 
@@ -1123,7 +1123,7 @@ $('.your-checkbox').prop('indeterminate', true)
 </div>
 {% endexample %}
 
-### 選擇功能表
+### 選擇功能表 {#select-menu}
 
 自訂 `<select>` 只需要一個 `.custom-select` 來觸發自訂樣式。
 
@@ -1177,7 +1177,7 @@ As is the `size` attribute:
 </select>
 {% endexample %}
 
-### 檔案瀏覽
+### 檔案瀏覽 {#file-browser}
 
 如果你想要修正 *Choose file...* 並與它產生功能，檔案的 input 是最麻煩的且需要額外的 JavaScript。
 
@@ -1190,7 +1190,7 @@ As is the `size` attribute:
 
 透過 `opacity` 隱藏檔案的 `<input>` 以及透過樣式取代 `<label>`。透過 `::after` 定位及產生按鈕，最後，我們為了 `<input>` 宣告了 `width` 和 `height` 為周圍保留空間。
 
-#### 翻譯或自定義字符串
+#### 翻譯或自定義字符串 {#translating-or-customizing-the-strings}
 
 [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) 用於輕鬆將 "Browse" 文本翻譯到其他語言。 只需用相關的 [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) 和當地語系化的字串覆蓋或加到 `$custom-file-text` SCSS 變數。英文字串可以以相同的方式進行定制。範例，如何添加西班牙語翻譯（西班牙語的語言代碼是 `es`）：
 

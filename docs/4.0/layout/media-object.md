@@ -6,7 +6,7 @@ group: layout
 toc: true
 ---
 
-## 範例
+## 範例 {#example}
 
 媒體物件 [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) 有助於建立複雜和可重複元件，其中一些媒體可以不需要包覆在另一個上。此外，通過flexbox，只需要兩個 class 就可以完成這些工作。
 
@@ -31,7 +31,7 @@ Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如�
 **來源:** [Flexbugs on GitHub](https://github.com/philipwalton/flexbugs#12-inline-elements-are-not-treated-as-flex-items)
 {% endcallout %}
 
-## 巢狀
+## 巢狀 {#nesting}
 
 媒體物件可以無限做巢狀，但是我們建議你別作過頭。將巢狀的媒體`.media`放在父媒體對象的`.media-body`內。
 
@@ -55,7 +55,7 @@ Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如�
 </div>
 {% endexample %}
 
-## 對齊
+## 對齊 {#alignment}
 
 媒體物件中的媒體可以在你的 `.media-body` 內容的上部（預設）、中部、或下部與 flexbox 工具對齊。
 
@@ -92,7 +92,7 @@ Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如�
 </div>
 {% endexample %}
 
-## 排序
+## 排序 {#order}
 
 通過修改 HTML 本身，或者通過增加某些定制 flexbox CSS 改變媒體物件中的內容順序，以設置 `order` 屬性（請使用一個整數）。
 
@@ -106,7 +106,7 @@ Internet Explorer 10-11 不會將行內元素作為 flex 進行渲染，例如�
 </div>
 {% endexample %}
 
-## 媒體列表
+## 媒體列表 {#media-list}
 
 由於媒體物件具有較少的結構要求，你也可以在清單 HTML 元素上使用這些 class。在你的 `<ul>` 或 `<ol>` 上，增加 `.list-unstyled`，以移除任何瀏覽器預設清單樣式，然後對你的 `<li>` 應用 `.media`。當然，你也可以使用間隔調整工具。
 

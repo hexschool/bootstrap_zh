@@ -6,11 +6,11 @@ group: getting-started
 toc: true
 ---
 
-## 安裝 Bootstrap
+## 安裝 Bootstrap {#installing-bootstrap}
 
 使用 Node.js npm [安裝 bootstrap]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/#npm) 。
 
-## 匯入 JavaScript
+## 匯入 JavaScript {#importing-javascript}
 
 匯入 [Bootstrap's JavaScript]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/)
 加入下面這行在你的 entry point (通常是 `index.js` 或 `app.js`)：
@@ -35,9 +35,9 @@ Bootstrap 取決於[jQuery](https://jquery.com/) 和 [Popper](https://popper.js.
 請注意，如果您是 **單獨匯入插件**，還必須安裝  [exports-loader](https://github.com/webpack-contrib/exports-loader)
 {% endcallout %}
 
-## 匯入樣式
+## 匯入樣式 {#importing-styles}
 
-### 匯入未編譯的 SASS
+### 匯入未編譯的 SASS {#importing-precompiled-sass}
 
 啟用 Bootstrap 的全部潛力並按你的需求客製化 Bootstrap，使用原始檔案作為你編譯的部分內容。
 
@@ -76,7 +76,7 @@ Bootstrap 取決於[jQuery](https://jquery.com/) 和 [Popper](https://popper.js.
   ...
 {% endhighlight %}
 
-### 導入編譯好的 CSS
+### 導入編譯好的 CSS {#importing-compiled-css}
 
 另外，你可以將此程式碼加到你專案的 entry point，以使用 Bootstrap 現成的 CSS：
 

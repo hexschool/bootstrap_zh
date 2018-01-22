@@ -6,7 +6,7 @@ group: content
 toc: true
 ---
 
-## 全域設定
+## 全域設定 {#global-settings}
 
 Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要更多的控制時，查看 [文本工具類型]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/typography/)。
 
@@ -18,7 +18,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 
 可以在 `_reboot.scss` 中找到上述格式，且在 `_variables.scss` 定義了全域變數。確保在 `rem` 中設置 `$font-size-base`。
 
-## 標題
+## 標題 {#headings}
 
 全部的 HTML 標題從 `<h1>` 到 `<h6>` 均可用。
 
@@ -89,7 +89,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 <p class="h6">h6. Bootstrap heading</p>
 {% endexample %}
 
-### 自定義標題
+### 自定義標題 {#customizing-headings}
 
 使用隨附的通用類別 Class 重現 Bootstrap 3.0 中的小二級標題文本。
 
@@ -107,7 +107,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 </h3>
 {% endhighlight %}
 
-## 顯示標題
+## 顯示標題 {#display-headings}
 
 一般的標題元素設計在頁面內容繁多時發揮最佳作用。當你需要突出一個標題時，請考慮使用 **display heading** 以獲得更大、稍具有風格化的標題樣式。
 
@@ -137,7 +137,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 <h1 class="display-4">Display 4</h1>
 {% endhighlight %}
 
-## 前導主題
+## 前導主題 {#lead}
 
 添加一個 `.lead`，讓一個段落突出。
 
@@ -147,7 +147,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 </p>
 {% endexample %}
 
-## 行內文本元素
+## 行內文本元素 {#inline-text-elements}
 
 使用行內 HTML5 元素的格式。
 
@@ -166,11 +166,11 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 
 當以上未顯示時，請自行使用 HTML5 中的 `<b>` 和 `<i>`。`<b>` 旨在突出顯示單詞或短語，而不會增加重要性，而 `<i>` 主要用於語音，技術術語等。
 
-## 文本通用類別
+## 文本通用類別 {#text-utilities}
 
 改變文字對齊、變換、樣式、字重和顏色透過 [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/typography/) 及 [color utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/).
 
-## 縮寫
+## 縮寫 {#abbreviations}
 
 對縮寫和字母字首縮寫使用 HTML `<abbr>` 元素以 Hover 方式顯示縮寫的擴增內容。縮寫具有一個預設的底線並有一個説明游標，以便 Hover 和輔助性技術的用途提供額外的內容。
 
@@ -181,7 +181,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
 {% endexample %}
 
-## 引用
+## 引用 {#blockquotes}
 
 用於在你的文件中引用來自于另一個來源的內容。使用 `<blockquote class="blockquote">` 包括在 <abbr title="HyperText Markup Language">HTML</abbr> 周圍。
 
@@ -191,7 +191,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 </blockquote>
 {% endexample %}
 
-### 引用來源
+### 引用來源 {#naming-a-source}
 
 添加一個 `<footer class="blockquote-footer">` 以便識別來源。將來源的名稱包在 `<cite>` 中。
 
@@ -202,7 +202,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 </blockquote>
 {% endexample %}
 
-### 反轉排版
+### 反轉排版 {#alignment}
 
 右對齊內容的引用添加 `.blockquote-reverse`。
 
@@ -213,9 +213,9 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 </blockquote>
 {% endexample %}
 
-## 列表
+## 列表 {#lists}
 
-### 無樣式
+### 無樣式 {#unstyled}
 
 刪除預設的 `list-style` 和列表專案上的左 margin（僅限直接子項）。**僅適用於直接子項列表**，這意味著你需要為任何巢狀的列表添加 Class。
 
@@ -239,7 +239,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 </ul>
 {% endexample %}
 
-### 行內
+### 行內 {#inline}
 
 移除了列表編號並增加些許 margin，使用 `.list-inline` 和 `.list-inline-item`
 
@@ -251,7 +251,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 </ul>
 {% endexample %}
 
-### 描述型列表對齊
+### 描述型列表對齊 {#description-list-alignment}
 
 通過使用我們網格系統定義的 Class 將項目和說明水平對齊。對於較長的術語，你可選擇性加一個 `.text-truncate` 來用 `...` 取代多餘內容。
 
@@ -280,7 +280,7 @@ Bootstrap 設定基本的全域顯示、文字排版和連結格式。當需要�
 </dl>
 {% endexample %}
 
-## 響應式文字排版
+## 響應式文字排版 {#responsive-typography}
 
 *響應式文字排版* 指在一系列的 media query 中調整根項目的 `font-size` 縮放文本和元件。Bootstrap 不會自動採用這個選項，但若你需要，可輕易的加入這個選項。
 

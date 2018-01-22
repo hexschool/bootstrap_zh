@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 基礎導覽
+## 基礎導覽 {#base-nav}
 
 Bootstrap 中提供的導覽共用通用標記和樣式，從基礎 `.nav` 到啟用與禁用的狀態。 交換 class 在每種樣式之間切換。
 
@@ -49,11 +49,11 @@ class 可以使用在很多地方，因此您的標記可以超級靈活。 使�
 </nav>
 {% endexample %}
 
-## 可用樣式
+## 可用樣式 {#available-styles}
 
 使用通用類別更改 `.nav` 元件的樣式。依據需要混合搭配或自行建立。
 
-### 水平對齊
+### 水平對齊 {#horizontal-alignment}
 
 使用 [flexbox 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/#horizontal-alignment) 更改導覽的水平對齊方式。預設情況下導覽左對齊，但您可以輕鬆地將其更改為中心或右對齊。
 
@@ -96,7 +96,7 @@ class 可以使用在很多地方，因此您的標記可以超級靈活。 使�
 </ul>
 {% endexample %}
 
-### 垂直
+### 垂直 {#vertical}
 
 通過使用 `.flex-column` 通用類別更改 flex 項目的軸項。如果在特定 viewports 需要堆疊，可使用響應式版本（例如 `.flex-sm-column`）。
 
@@ -118,8 +118,6 @@ class 可以使用在很多地方，因此您的標記可以超級靈活。 使�
 </ul>
 {% endexample %}
 
-As always, vertical navigation is possible without `<ul>`s, too.
-
 和往常一樣，垂直導覽也是可以沒有 `<ul>`。
 
 
@@ -132,7 +130,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </nav>
 {% endexample %}
 
-### 分頁標籤
+### 分頁標籤 {#tabs}
 
 從上面了解基本導覽，並加入 `.nav-tabs` 以生成具有分頁標籤的介面。 使用我們的 [分頁 JavaScript 插件](#javascript-behavior)。
 
@@ -154,7 +152,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </ul>
 {% endexample %}
 
-### 片狀
+### 片狀 {#pills}
 
 使用相同的 HTML，但使用 `.nav-pills` 取代：
 
@@ -175,7 +173,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </ul>
 {% endexample %}
 
-### 填充和對齊
+### 填充和對齊 {#fill-and-justify}
 
 `.nav` 內容有兩種寬度擴展用的 Class，使用 `.nav-fill` 會將 `.nav-item` 內容按照比例分配空間。注意，這會佔用所有的水平空間，但並不是每個導覽項目都具有相同寬度。
 
@@ -234,7 +232,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </nav>
 
 {% endexample %}
-## 使用 flex 通用類別
+## 使用 flex 通用類別 {#working-with-flex-utilities}
 
 如果需要響應式的導覽變化，請使用一系列 [flexbox 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/)。 這些通用類別在中斷點之間提供更多的設定。 在下面的範例中，我們的導覽將堆疊在最小的中斷點上，從小中斷點開始填充完整寬度的水平佈局。
 
@@ -247,16 +245,16 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </nav>
 {% endexample %}
 
-## 關於親和性
+## 關於親和性 {#regarding-accessibility}
 
 請注意，導覽列即使視覺樣式為 `.nav-tabs` 的分頁標籤，應該 **不會** 被賦予 `role="tablist"`，`role="tab"` 或 `role="tabpanel"` 屬性。 這些僅適用於動態分頁標籤介面，如 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 中描述。 有關範例，請參閱本節中的  [JavaScript behavior](#javascript-behavior)。
 
-## 使用下拉選單
+## 使用下拉選單 {#using-dropdowns}
 
 加入額外的 HTML 和[下拉選單 JavaScript 插件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/dropdowns/#usage).
 
 
-### 帶下拉選單的分頁標籤
+### 帶下拉選單的分頁標籤 {#tabs-with-dropdowns}
 
 {% example html %}
 <ul class="nav nav-tabs">
@@ -282,7 +280,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </ul>
 {% endexample %}
 
-### 片狀的下拉選單
+### 片狀的下拉選單 {#pills-with-dropdowns}
 
 {% example html %}
 <ul class="nav nav-pills">
@@ -308,7 +306,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </ul>
 {% endexample %}
 
-## JavaScript 行為
+## JavaScript 行為 {#javascript-behavior}
 
 使用 JavaScript 分頁標籤插件 - 單獨或透過編譯的 `bootstrap.js` 檔 - 擴展我們的導覽分頁標籤和片狀的，以創建可選的分頁標籤、甚至是下拉選單。
 
@@ -492,7 +490,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </div>
 {% endhighlight %}
 
-### 使用資料屬性
+### 使用資料屬性 {#using-data-attributes}
 
 只需在元素上指定 `data-toggle="tab"` 或 `data-toggle="pill"` 即可啟動標籤或片狀導覽，而無需編寫任何 JavaScript。可在 `.nav-tabs` 或 `.nav-pills` 上使用這些資料屬性
 
@@ -523,7 +521,7 @@ As always, vertical navigation is possible without `<ul>`s, too.
 </div>
 {% endhighlight %}
 
-### 透過 JavaScript
+### 透過 JavaScript {#via-javascript}
 
 透過 JavaScript 啟用分頁標籤(每一個分頁標籤需要分別啟動)：
 
@@ -543,7 +541,7 @@ $('#myTab li:last-child a').tab('show') // Select last tab
 $('#myTab li:nth-child(3) a').tab('show') // Select third tab
 {% endhighlight %}
 
-### 淡入淡出
+### 淡入淡出 {#fade-effect}
 
 要使分頁標籤淡入淡出，請將  `.fade` 加到每個 `.tab-pane` 中。 第一個分頁內容還必須具有 `.show` 以使初始內容可見。
 
@@ -557,12 +555,12 @@ $('#myTab li:nth-child(3) a').tab('show') // Select third tab
 </div>
 {% endhighlight %}
 
-### 方法
+### 方法 {#methods}
 
 {% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-#### $().tab
+#### $().tab {#tab}
 
 
 啟動分頁標籤元素和內容容器。 標籤應該有一個 `data-target`或 `href` 定位在 DOM 中的一個容器節點。
@@ -609,7 +607,7 @@ $('#someTab').tab('show')
 
 銷毀一個元素的分頁標籤。
 
-### 事件
+### 事件 {#events}
 
 1. `hide.bs.tab` (當前活動的分頁標籤上)
 2. `show.bs.tab` (待顯示的分頁標籤上)

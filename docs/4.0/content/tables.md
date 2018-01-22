@@ -6,7 +6,7 @@ group: content
 toc: true
 ---
 
-## 範例
+## 範例 {#examples}
 
 由於在日曆和日期選擇器等外掛程式中表格使用相當廣泛，已經將表格設計為 **選擇性加入**。只要添加 `.table` 到任何 `<table>` 中，然後透過自定義樣式或是我們提供的 class 作套用。
 
@@ -80,7 +80,7 @@ toc: true
 </table>
 {% endexample %}
 
-## 表格 head 選項
+## 表格 head 選項 {#table-head-options}
 
 與預設和反轉樣式相似，使用如下兩個 `.thead-light` 或 `.thead-dark` 中的一個將 `<thead>` 顯示淺灰或深灰。
 
@@ -148,7 +148,7 @@ toc: true
 </table>
 {% endexample %}
 
-## 條紋行
+## 條紋行 {#striped-rows}
 
 使用 `.table-striped` 在 `<tbody>`中的任何表格行添加斑馬紋
 
@@ -218,7 +218,7 @@ toc: true
 </table>
 {% endexample %}
 
-## 帶框的表格
+## 帶框的表格 {#bordered-table}
 
 加入 `.table-bordered` 在表格和儲存格的四邊上添加邊框。
 
@@ -286,7 +286,7 @@ toc: true
 </table>
 {% endexample %}
 
-## 可滑入行
+## 可滑入行 {#hoverable-rows}
 
 添加 `.table-hover` 以便在一個 `<tbody>` 中的表格行上啟用一個 hover 狀態。
 
@@ -354,7 +354,7 @@ toc: true
 </table>
 {% endexample %}
 
-## 小表格
+## 小表格 {#small-table}
 
 添加 `.table-sm` 將儲存格 padding 縮減一半的方式讓表格更加精簡。
 
@@ -422,7 +422,7 @@ toc: true
 </table>
 {% endexample %}
 
-## 語意化 class
+## 語意化 class {#contextual-classes}
 
 使用語意化 class 給表格列或單獨的儲存格上色。
 
@@ -558,7 +558,7 @@ toc: true
 {% capture callout-include %}{% include callout-info-mediaqueries-breakpoints.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-## Captions
+## Captions {#captions}
 
 `<caption>` 像一個表格的標題。 它可以協助螢幕閱讀器的用戶找到表格，並了解它的內容，且決定是否要閱讀它。
 
@@ -596,7 +596,7 @@ toc: true
 </table>
 {% endexample %}
 
-## 響應式表格
+## 響應式表格 {#responsive-tables}
 
 當表格想要始終呈現水平滾動，可在 `.table` 上加入 `.table-responsive`，使 Viewport 符合任何表格。或者 `.table` 中加 `.table-responsive{-sm|-md|-lg|-xl}` 創建響應式表格的最大斷點。
 
@@ -608,7 +608,7 @@ toc: true
 
 {% endcallout %}
 
-### Always responsive
+### Always responsive {#always-responsive}
 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
@@ -679,7 +679,7 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 </div>
 {% endhighlight %}
 
-### Breakpoint specific
+### Breakpoint specific {#breakpoint-specific}
 
 Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
 

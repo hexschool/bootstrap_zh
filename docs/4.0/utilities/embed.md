@@ -6,13 +6,13 @@ group: utilities
 toc: true
 ---
 
-## 關於
+## 關於 {#about}
 
 將這些規則直接應用到 `<iframe>`, `<embed>`, `<video>`, 和 `<object>`元素；當需要這些樣式對應屬性時可加入 `.embed-responsive-item`。
 
 **小技巧** 你不需要將 `frameborder="0"` 加在你的`<iframe>`中，因為我們已經為你覆蓋了該屬性。
 
-## Example
+## Example {#example}
 
 Wrap any embed like an `<iframe>` in a parent element with `.embed-responsive` and an aspect ratio. The `.embed-responsive-item` isn't strictly required, but we encourage it.
 
@@ -22,7 +22,7 @@ Wrap any embed like an `<iframe>` in a parent element with `.embed-responsive` a
 </div>
 {% endexample %}
 
-## 長寬比
+## 長寬比 {#aspect-ratios}
 
 通過修改 Class 可以自訂高寬比。
 

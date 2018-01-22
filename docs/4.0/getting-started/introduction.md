@@ -11,7 +11,7 @@ redirect_from:
 toc: true
 ---
 
-## 快速開始
+## 快速開始 {#quick-start}
 
 想要快速地將 Bootstrap 添加到你的專案中！使用 MaxCDN 公司的免費提供的 BootstrapCDN。如需用套件管理工具或需要下載原始檔可 [前往下載頁面]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)。
 
@@ -50,7 +50,7 @@ toc: true
 {% endmarkdown %}
 </details>
 
-## 初學者範本
+## 初學者範本 {#starter-template}
 
 務必用最新的設計和開發標準設定你的網頁。這意味著使用一個 HTML 5 的文本類型，並加入一個 viewport 標籤以正常運行響應式網頁。整合在一起後，你的頁面應該是如下這個樣子：
 
@@ -81,11 +81,11 @@ toc: true
 
 以上就是構建網頁所需的全部元件。訪問 [Layout 文件]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/) 或 [我們的官方範例]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/) 開始將網站的內容和元件進行佈置。
 
-## 重要的整體樣式
+## 重要的整體樣式 {#important-globals}
 
 你在使用 Bootstrap 時需要知道整體樣式和設置，這些樣式和設置幾乎全部以跨瀏覽器格式的 *標準化* 為目標。讓我們瞭解這些樣式和設置。
 
-### HTML5 文件類型
+### HTML5 文件類型 {#html5-doctype}
 
 Bootstrap 要求使用 HTML5 文件類型。沒有這個文件類型，你會看見一些奇怪的不完整格式。但加入這個文件類型應當不會導致任何錯誤。
 
@@ -96,7 +96,7 @@ Bootstrap 要求使用 HTML5 文件類型。沒有這個文件類型，你會看
 </html>
 {% endhighlight %}
 
-### 響應式中繼標籤
+### 響應式中繼標籤 {#responsive-meta-tag}
 
 Bootstrap 的開發以 *行動優先* 為策略，按照這個策略，我們優先為行動裝置優化程式碼，然後使用 CSS media queries 在必要時放大元件。為了確保全部裝置上有正確渲染和和觸控縮放，**將響應式中繼標籤記** 添加到你的`<head>`中。
 
@@ -106,7 +106,7 @@ Bootstrap 的開發以 *行動優先* 為策略，按照這個策略，我們優
 
 您可在 [starter template](#starter-template) 中查看一個實際應用的範例。
 
-### Box-sizing
+### Box-sizing {#box-sizing}
 
 為了在 CSS 中能夠更加直接的調整尺寸，我們將整體的 `box-sizing` 數值從 `content-box` 切換為 `border-box`。這就確保了 `padding` 不會影響元素最終的計算寬度，但這可能導致在 Google 地圖和 Google 自訂搜尋引擎等某些第三方元件出現問題。
 
@@ -122,11 +122,11 @@ Bootstrap 的開發以 *行動優先* 為策略，按照這個策略，我們優
 
 瞭解有關 [盒模型及尺寸在 CSS Tricks](https://css-tricks.com/box-sizing/).
 
-### 重置
+### 重置 {#reboot}
 
 為了改善跨流覽器的渲染，我們使用了 [重置]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/) 以修正跨瀏覽器和裝置之間的不一致性，同時對通用的 HTML 元素達到一致性的效果。
 
-## 社群
+## 社群 {#community}
 
 通過如下有幫助的資源，瞭解 Bootstrap 開發的最新進展並接觸社群。
 

@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 如何運作
+## 如何運作 {#how-it-works}
 
 在開始使用 Bootstrap 動態視窗之前，請務必閱讀以下內容，因為選單項目在近期內有修改。
 
@@ -24,9 +24,9 @@ $('#myModal').on('shown.bs.modal', function () {
 })
 {% endhighlight %}
 
-## 範例
+## 範例 {#examples}
 
-### 動態視窗元件
+### 動態視窗元件 {#modal-components}
 
 下面是一個 _static_ 動態視窗範例（意思是它的 `position` 和 `display` 已被重寫）。 包括動態視窗標題、動態視窗體（`padding` 必要）和動態視窗頁腳（可選）。盡可能地包含動態視窗標題與移除按鈕，或提供另一個明確的移除操作。
 
@@ -74,7 +74,7 @@ $('#myModal').on('shown.bs.modal', function () {
 </div>
 {% endhighlight %}
 
-### 完整範例
+### 完整範例 {#live-demo}
 
 通過點擊下面的按鈕切換動態視窗呈現。它將從頁面頂部向下滑動並淡入。
 
@@ -133,7 +133,7 @@ $('#myModal').on('shown.bs.modal', function () {
 </div>
 {% endhighlight %}
 
-### 滾動長內容
+### 滾動長內容 {#scrolling-long-content}
 
 當使用者的動態視窗變得太長時，它們的滾動不依賴於頁面本身。嘗試下面的範例演示，看看我們的意思。
 
@@ -208,7 +208,7 @@ $('#myModal').on('shown.bs.modal', function () {
 </div>
 {% endhighlight %}
 
-### 垂直置中
+### 垂直置中 {#vertically-centered}
 
 加入 `.modal-dialog-centered` 到 `.modal-dialog` 來使互動視窗垂直置中。
 
@@ -266,7 +266,7 @@ $('#myModal').on('shown.bs.modal', function () {
 </div>
 {% endhighlight %}
 
-### 工具提示和彈出提示框
+### 工具提示和彈出提示框 {#tooltips-and-popovers}
 
 [Tooltips]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/tooltips/) 和 [popovers]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/popovers/) 可以根據需要放置在動態視窗。 當動態視窗關閉時，其中的任何工具提示和插件也將自動關閉。
 
@@ -310,7 +310,7 @@ $('#myModal').on('shown.bs.modal', function () {
 </div>
 {% endhighlight %}
 
-### 使用網格
+### 使用網格 {#using-the-grid}
 
 通過 `.modal-body` 中加入 `.container-fluid` 在動態視窗中使用 Bootstrap 網格系統。然後，像其他任何地方一樣使用正常的網格系統 class。
 
@@ -395,7 +395,7 @@ $('#myModal').on('shown.bs.modal', function () {
 </div>
 {% endhighlight %}
 
-### 不同的動態視窗內容
+### 不同的動態視窗內容 {#varying-modal-content}
 
 有一對按鈕來觸發相同互動視窗，但導入不同內容？
 
@@ -450,7 +450,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 })
 {% endhighlight %}
 
-### 移除動畫
+### 移除動畫 {#remove-animation}
 
 對於只要出現而不需要淡入淡出的動態視窗，請從你的動態視窗標記中刪除 `.fade`。
 
@@ -461,19 +461,19 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 </div>
 {% endhighlight %}
 
-### 動態高度
+### 動態高度 {#dynamic-heights}
 
 如果一個動態視窗的高度在打開時改變，你應該調用 `$('#myModal').modal('handleUpdate')` 來重新調整動態視窗的位置，以防止捲軸出現。
 
-### 親和性
+### 親和性 {#accessibility}
 
 請務必在`.modal`和 `role="document"` 動態視窗標題的 `.modal-dialog` 中添加 `.modal-dialog` 和 `aria-labelledby="..."`。另外，您可以使用 `.modal` 上的 `aria-descriptby` 來描述你的動態視窗。
 
-### 嵌入YouTube影片
+### 嵌入 YouTube 影片 {#embedding-youtube-videos}
 
 在動態視窗上嵌入 YouTube 影片需要額外的 JavaScript 不在 Bootstrap 自動停止重播和更多。有關詳細資訊，請參閱 [Stack Overflow 的文章](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal)。
 
-## 大小選項
+## 大小選項 {#optional-sizes}
 
 動態視窗有兩個可選的大小，可以通過 Class 放在 `.modal-dialog` 上。 這些尺寸會在某些中斷點調整，以避免在較窄的 viewport 上出現水平捲軸。
 
@@ -539,11 +539,11 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   </div>
 </div>
 
-## 用法
+## 用法 {#usage}
 
 動態視窗插件透過資料屬性或 JavaScript 切換您隱藏的內容。它將 `.modal-open` 加到 `<body>` 以覆蓋預設的滾動行為，並生成一個 `.modal-backdrop` 來提供點擊區域，以便在點擊動態視窗外面時移除顯示的動態視窗。
 
-### 透過資料屬性
+### 透過資料屬性 {#via-data-attributes}
 
 啟動一個動態視窗而無需編寫 JavaScript。在控制元素上設置 `data-toggle="modal"` (如按鈕)，以及一個 `data-target="#foo"` 或 `href="#foo"` 來指定特定的動態視窗進行切換。
 
@@ -551,13 +551,13 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 <button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
 {% endhighlight %}
 
-### 透過 JavaScript
+### 透過 JavaScript {#via-javascript}
 
 使用單行 JavaScript 調用 id 為 `myModal` 的動態視窗。
 
 {% highlight js %}$('#myModal').modal(options){% endhighlight %}
 
-### 選項
+### 選項 {#options}
 
 可以透過資料屬性或 JavaScript 傳遞選項。對於資料屬性，將選項名稱附加到 ` data-`，如 `data-backdrop=""` 那樣。
 
@@ -600,7 +600,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   </tbody>
 </table>
 
-### 方法
+### 方法 {#methods}
 
 {% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
 {{ callout-include | markdownify }}
@@ -646,7 +646,7 @@ $('#myModal').modal({
 
 銷毀一個元素的 Modal。
 
-### 事件
+### 事件 {#events}
 
 Bootstrap 動態視窗提供了一下事件，所有相關事件都被觸發在他本身的狀態中(在 `<div class="modal">`)。
 
@@ -669,7 +669,6 @@ Bootstrap 動態視窗提供了一下事件，所有相關事件都被觸發在�
       <td>shown.bs.modal</td>
       <td>
       當動態視窗顯示時會觸發此事件（等待 CSS 轉換完成）。如果是因點擊導致，點擊的元素作為事件的 <code>relatedTarget</code> 屬性可用。
-
       </td>
     </tr>
     <tr>

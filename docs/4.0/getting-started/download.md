@@ -6,7 +6,7 @@ group: getting-started
 toc: true
 ---
 
-## Bootstrap CSS 和 JS
+## Bootstrap CSS 和 JS {#compiled-css-and-js}
 
 下載編譯完成可立即運用的 **Bootstrap 4{{ site.current_version}}** 加入到你的專案，這些包含了：
 
@@ -17,7 +17,7 @@ toc: true
 
 <a href="{{ site.download.dist }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">下載 Bootstrap</a>
 
-## 原始檔案
+## 原始檔案 {#source-files}
 
 透過下載我們的 Sass、JavaScript 原始碼及文檔文件，使用自訂的方式編譯 Bootstrap，這些需要一些額外的工具：
 
@@ -29,7 +29,7 @@ toc: true
 
 <a href="{{ site.download.source }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download 原始碼</a>
 
-## BootstrapCDN
+## BootstrapCDN {#bootstrapcdn}
 
 跳過下載並使用 [BootstrapCDN](https://www.bootstrapcdn.com/) 將 Boostrap 的 CSS 和 JS 加到你的專案中。
 
@@ -45,7 +45,7 @@ toc: true
 <script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-## 套件管理工具
+## 套件管理工具 {#package-managers}
 
 用受歡迎的套件管理工具將 Bootstrap 的 **原始檔** 拉入幾乎任何專案中。不論用的套件管理工具為何，Bootstrap 將需要一個 Sass 編譯器[Autoprefixer](https://github.com/postcss/autoprefixer)、以及[postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes) **以便獲得與我們的官方編譯版本一致的設置**。
 
@@ -64,7 +64,7 @@ Bootstrap 的 `package.json` 包含了如下追加的中繼資料：
 - `sass` - 前往 Bootstrap [Sass](http://sass-lang.com/) 原始檔案的路徑。
 - `style` - 前往使用預設設置預先編譯的 Bootstrap 未壓縮 CSS 的路徑。
 
-### RubyGems
+### RubyGems {#rubygems}
 
 通過向你的 [`Gemfile`](https://bundler.io/gemfile.html) 增加如下的命令列，使用 [Bundler](https://bundler.io/) （**推薦**）和 [RubyGems](https://rubygems.org/) 將 Bootstrap 安裝到你的 Ruby 應用程式中：
 
@@ -80,7 +80,7 @@ gem install bootstrap -v {{ site.current_ruby_version }}
 
 [參見 gem 的 README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md)，以瞭解進一步的細節。
 
-### Composer
+### Composer {#composer}
 
 你還可以使用 [Composer](https://getcomposer.org/) 安裝和管理 Bootstrap 的 Sass 和 JavaScript：
 
@@ -88,7 +88,7 @@ gem install bootstrap -v {{ site.current_ruby_version }}
 composer require twbs/bootstrap:{{ site.current_version }}
 {% endhighlight %}
 
-### NuGet
+### NuGet {#nuget}
 
 若你在 .NET 中進行開發，你還可以使用 [NuGet](https://www.nuget.org/) 安裝和管理 Bootstrap 的
 [CSS](https://www.nuget.org/packages/bootstrap/) 或 [Sass](https://www.nuget.org/packages/bootstrap.sass/) 和 JavaScript：

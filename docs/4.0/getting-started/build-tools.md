@@ -6,7 +6,7 @@ group: getting-started
 toc: true
 ---
 
-## 工具設定
+## 工具設定 {#tooling-setup}
 
 Boostrap 的構建系統採用 [NPM 腳本](https://docs.npmjs.com/misc/scripts) 。我們的 [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) 包含了方便框架工作的方法，包括編譯程式碼、運行測試和更多工作。
 
@@ -22,7 +22,7 @@ Boostrap 的構建系統採用 [NPM 腳本](https://docs.npmjs.com/misc/scripts)
 [install-ruby]: https://www.ruby-lang.org/en/documentation/installation/
 [gembundler]: https://bundler.io/
 
-## 使用NPM腳本
+## 使用 NPM 腳本 {#using-npm-scripts}
 
 我們的 [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) 包含了以下的命令和任務：
 
@@ -34,13 +34,13 @@ Boostrap 的構建系統採用 [NPM 腳本](https://docs.npmjs.com/misc/scripts)
 
 執行 `npm run` 來使用全部的 npm scripts.
 
-## 自動增加前輟詞
+## 自動增加前輟詞 {#autoprefixer}
 
 Bootstrap 採用（我們的構建過程中內含的）[Autoprefixer][autoprefixer] 以便自動在構建時向某些 CSS 屬性增加前輟詞。自動增加前輟詞可讓我們每次編寫 CSS 時，無需採用第三版中用的那些 Sass mixins，這樣可以節省我們的時間。
 
 我們在 GitHub 版本庫中的一份獨立檔案中保存了通過 Autoprefixer 支援的瀏覽器清單。預知明細，請參見 [/package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json)。
 
-## 本地檔
+## 本地檔 {#local-documentation}
 
 在本地運行我們的檔需要採用 Jekyll，一份具有適當靈活性的、提供如下工作的靜態網頁伺服器：基本工作包括  Markdown-based 編輯器的檔案、模版和更多。以下是如何啟動 Jekyll 的方法
 
@@ -50,7 +50,7 @@ Bootstrap 採用（我們的構建過程中內含的）[Autoprefixer][autoprefix
 
 閱讀 Jekyll 的 [文件](https://jekyllrb.com/docs/home/) 瞭解有關使用 Jekyll 的更多訊息。
 
-## 故障排解
+## 故障排解 {#troubleshooting}
 
 若安裝附件遇到問題，先解除安裝所有先前的版本（包含全域及區域）。然後，再次運行 `npm install`。
 

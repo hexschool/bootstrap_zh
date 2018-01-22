@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 概述
+## 概述 {#overview}
 
 我們使用大塊連接的連結進行分頁，使連結不易遺漏、輕鬆擴展、同時提供更大的點擊區域。分頁是使用列表 HTML 元素構建的，因此螢幕閱讀器可以列出可用連結的數量。使用包裝 `<nav>` 元素將其標識導覽給予螢幕閱讀器和其他輔助技術。
 
@@ -24,7 +24,7 @@ toc: true
 </nav>
 {% endexample %}
 
-## 使用圖示
+## 使用圖示 {#working-with-icons}
 
 想要使用圖示或符號代替某些分頁連結的文字？使用 `aria` 屬性和 `.sr-only` 通用類別提供螢幕閱讀器的支援。
 
@@ -51,7 +51,7 @@ toc: true
 </nav>
 {% endexample %}
 
-## 禁用和活動狀態
+## 禁用和活動狀態 {#disabled-and-active-states}
 
 分頁連結可根據不同情況進行客製。對於顯示為不可點擊的連結，使用 `.disabled` 和使用 `.active` 來指示當前頁面。
 
@@ -98,7 +98,7 @@ toc: true
 </nav>
 {% endexample %}
 
-## 尺寸
+## 尺寸 {#sizing}
 
 加入 `.pagination-lg` 或 `.pagination-sm` 套用其他尺寸。
 
@@ -127,7 +127,7 @@ toc: true
 </nav>
 {% endexample %}
 
-## 對齊
+## 對齊 {#alignment}
 
 使用 [flexbox 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) 更改分頁元件的對齊方式。
 

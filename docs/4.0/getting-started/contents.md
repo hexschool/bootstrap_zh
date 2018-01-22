@@ -6,7 +6,7 @@ group: getting-started
 toc: true
 ---
 
-## 預先編譯的 Bootstrap
+## 預先編譯的 Bootstrap {#precompiled-bootstrap}
 
 一旦被下載，將壓縮的檔案解壓，然後會看見類似於如下的訊息：
 
@@ -36,9 +36,9 @@ bootstrap/
 
 這是用於快速加入幾乎任何網頁專案中的 Bootstrap (預先編譯好的基本形式)。我們提供了編譯好的 CSS 和 JS (`bootstrap.*`)，以及最小化的 CSS 和 JS(`bootstrap.min.*`)。提供結合特定的瀏覽器開發者工具使用的 CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`)，包含 Js 檔案的版本 (`bootstrap.bundle.js` 和壓縮的 `bootstrap.bundle.min.js`) 內包含了 [Popper](https://popper.js.org/)，但不包含 [jQuery](https://jquery.com/)
 
-### CSS 檔案的比較
+### CSS 檔案 {#css-files}
 
-Bootstrap includes a handful of options for including some or all of our compiled CSS.
+Bootstrap 包含一些有用的選項用來編譯 CSS。
 
 <table class="table table-bordered">
   <thead>
@@ -84,9 +84,9 @@ Bootstrap includes a handful of options for including some or all of our compile
   </tbody>
 </table>
 
-## JS files
+## JS 檔案 {#js-files}
 
-Similarly, we have options for including some or all of our compiled JavaScript.
+同樣的，我們提供一些選項來編譯 JavaScript。
 
 <table class="table table-bordered">
   <thead>
@@ -116,7 +116,7 @@ Similarly, we have options for including some or all of our compiled JavaScript.
   </tbody>
 </table>
 
-## Bootstrap 原始碼
+## Bootstrap 原始碼 {#bootstrap-source-code}
 
 Bootstrap 原始程式碼下載包括預先編譯的 CSS 和 JavaScript，以及原始 Sass、JavaScript。以下目錄則是這些內容：
 

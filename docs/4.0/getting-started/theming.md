@@ -7,7 +7,7 @@ toc: true
 redirect_from: "/docs/4.0/getting-started/options/"
 ---
 
-## 簡介
+## 簡介 {#introduction}
 
 在 Bootstrap 3 中主題更動是由 LESS 的變數覆寫、自訂 CSS 及分離的主題樣式表，這些包含在我們的 Dist 文件中，通過一些加強，現在可以完全重新設計 Bootstrap 3 的外觀無需修改核心文件，Bootstrap 提供一種熟悉但略有不同的作法。
 
@@ -17,7 +17,7 @@ redirect_from: "/docs/4.0/getting-started/options/"
 
 利用我們的 Sass 原始檔來調整變數、Sass maps、mixins 還有其它等等。
 
-### 檔案結構
+### 檔案結構 {#file-structure}
 
 盡可能避免修改 Bootstrap 核心文件。對於 Sass 來說，這是創建你的樣式表並導入 Bootstrap 核心，這便於你修改並擴增它。假設你使用套件管理工具像是 npm，那麼文件結構應該如下所示：
 
@@ -42,7 +42,7 @@ your-project/
     └── scss
 {% endhighlight %}
 
-### 匯入
+### 匯入 {#importing}
 
 在您的 `custom.scss` 中，您將導入 Bootstrap 的 Sass 原始檔案。您有兩個選擇：包括所有 Bootstrap 或 選擇您需要的部分。我們鼓勵後者，但請注意，我們的組件有一些要求和相依性。您還需要為我們的插件加入一些 JavaScript。
 
@@ -72,7 +72,7 @@ your-project/
 
 使用該設置，您可以開始修改 `custom.scss` 中的任何 Sass 變數和 Sass maps。您還可以依據需求開始在 `// Optional` 部分下增加 Bootstrap 的部分元件。我們建議使用 `bootstrap.scss` 作為你文件的起始。
 
-### 預設變數
+### 預設變數 {#variable-defaults}
 
 Bootstrap 4 中的每個 Sass變數都包含 `!default`，允許您在自己的 Sass 中覆蓋變數的預設值，而無需修改 Bootstrap 的原始碼。 根據需要複製和貼上變數，修改它們的值並刪除 `!default`。如果你給予一個變數值，那麼它將不會被 Bootstrap 中的預設值重複定義。
 
@@ -91,13 +91,13 @@ $body-color: #111;
 
 重複任何需要的變數在 Bootstrap 中，包含在下方的全域選項。
 
-### Sass Maps 與循環
+### Sass Maps 與循環 {#maps-and-loops}
 
 Bootstrap 4 包含一些 Sass maps、對應值，這使它更容易產生一連貫的 CSS。我們使用 Sass map 做為我們的顏色、中斷點還有更多，就像是 Sass 變數，所有 Sass map 都包含 `!default` 他更能夠覆蓋及擴增。
 
 我們的一些 Sass Map 預設合併為空白的，這樣做是為了使 Sass Map 更容易擴增，但如果從 Sass 地圖移除項目會稍微困難一些。
 
-#### 修改 map
+#### 修改 map {#modify-map}
 
 例如，要修改 `$theme-colors` mps 的現有顏色，請將以下內容加到您的自定義 Sass 文件中：
 
@@ -108,7 +108,7 @@ $theme-colors: (
 );
 {% endhighlight %}
 
-#### 加入到 map
+#### 加入到 map {#add-to-map}
 
 增加一個新色彩到 `$theme-colors`，並增加一個新的 key 及 值。
 
@@ -118,7 +118,7 @@ $theme-colors: (
 );
 {% endhighlight %}
 
-#### 從 Map 中移除變數
+#### 從 Map 中移除變數 {#remove-from-map}
 
 移除色彩從 `$theme-colors`，或其他的 map 可用 `map-remove`。
 
@@ -126,13 +126,13 @@ $theme-colors: (
 $theme-colors: map-remove($theme-colors, "success", "info", "danger");
 {% endhighlight %}
 
-#### Required keys
+#### Required keys {#required-keys}
 
 Bootstrap assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map's key is being used.
 
 For example, we use the `primary`, `success`, and `danger` keys from `$theme-colors` for links, buttons, and form states. Replacing the values of these keys should present no issues, but removing them may cause Sass compilation issues. In these instances, you'll need to modify the Sass code that makes use of those values.
 
-### Functions
+### Functions {#functions}
 
 Bootstrap 使用多個 Sass 函式，但只有一個子集適用於一般主題。我們提供三個功能來獲取顏色 maps 的值：
 
@@ -181,7 +181,7 @@ Bootstrap 使用多個 Sass 函式，但只有一個子集適用於一般主題�
 
 未來還可以增加其他功能，或你可以用自定義的 Sass 創建附加 Sass maps 的級別函式。
 
-### 顏色對比
+### 顏色對比 {#color-contrast}
 
 Bootstrap 中另外一個函式是色彩對比功能 `color-yiq`。 它使用 [YIQ 色彩空間](https://en.wikipedia.org/wiki/YIQ) 根據指定的基色自動回傳白色 (`#fff`) 或深色 (`#111`) 的對比度顏色。 此功能對於要生成多個 Class 的 mixins 或 循環 特別有用。
 
@@ -211,7 +211,7 @@ Bootstrap 中另外一個函式是色彩對比功能 `color-yiq`。 它使用 [Y
 }
 {% endhighlight %}
 
-## Sass 選項
+## Sass 選項 {#sass-options}
 
 使用我們內置的自定義變數文件自定義 Bootstrap 4，並使用新的 `$enable-*` Sass 變數切換全局 CSS 選項。覆寫變數的值，並依據需要重新編譯 `npm run test`。
 
@@ -229,11 +229,11 @@ Bootstrap 中另外一個函式是色彩對比功能 `color-yiq`。 它使用 [Y
 | `$enable-caret`             | `true` (default) or `false`        | 啟用偽元素圖示在 `.dropdown-toggle` 。                                    |
 | `$enable-print-styles`      | `true` (default) or `false`        | 啟用列印優化的樣式。                         |
 
-## 色彩
+## 色彩 {#color}
 
 Bootstrap 的許多元件和通用類別都是透過 Sass map 中定義的一系列顏色建構的。該 maps 可以在 Sass 中循環，以快速生成一系列規則集。
 
-### 全部色彩
+### 全部色彩 {#all-colors}
 
 Bootstrap 4 中提供的顏色都可用作我們的 `scss/_variables.scss` 文件中的 Sass 變數和 Sass maps。這將在下一個次要版本增加額外的陰影，樣式像[grayscale palette](#grays)。）
 
@@ -263,7 +263,7 @@ Bootstrap 4 中提供的顏色都可用作我們的 `scss/_variables.scss` 文�
 將來，我們的目標是為每種顏色的色調提供 Sass maps 和變數，就像下面的灰階色彩一樣。
 {% endcallout %}
 
-### 主題色彩
+### 主題色彩 {#theme-colors}
 
 我們使用所有色彩的子集來創建一個小的色表，用來產生色彩主題，也同時能透過 `scss/_variables.scss` 使用 Sass 變數、Sass map。
 

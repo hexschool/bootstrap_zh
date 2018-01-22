@@ -6,7 +6,7 @@ group: utilities
 toc: true
 ---
 
-## 啟用 flex
+## 啟用 flex {#enable-flex-behaviors}
 
 使用 `display` 通用類別來創建一個 flexbox 容器，並將 **直屬內元素** 轉換為 flex 屬性。增加額外的 flex 屬性，也能夠進一步修改 flex 容器和屬性。
 
@@ -24,7 +24,7 @@ toc: true
 - `.d{{ bp.abbr }}-flex`
 - `.d{{ bp.abbr }}-inline-flex`{% endfor %}
 
-## 方向性
+## 方向性 {#direction}
 
 透過通用類別來設定 flex 容器與內層 flex 的方向，在大多的情況下你可以忽略水平的 class，因為瀏覽器預設值是 `row`，不過有些特定情境下需要設定這個值(像是響應式情境)。
 
@@ -67,7 +67,7 @@ toc: true
 - `.flex{{ bp.abbr }}-column`
 - `.flex{{ bp.abbr }}-column-reverse`{% endfor %}
 
-## 調整內容
+## 調整內容 {#justify-content}
 
 使用 flexbox 容器上的 `justify-content` 通用類別改變 flex 物件在主軸上的對齊（x軸開始，如果 `flex-direction: column`，則為 y 軸）。從 `start`（瀏覽器預設）、 `end`、`center`、`between`、或 `around` 中選擇。
 
@@ -116,7 +116,7 @@ toc: true
 - `.justify-content{{ bp.abbr }}-between`
 - `.justify-content{{ bp.abbr }}-around`{% endfor %}
 
-## 對齊物件
+## 對齊物件 {#align-items}
 
 在 flexbox 容器上使用 `align-items` 工具改變橫軸上 flex 物件的對齊（y 軸開始，如果 `flex-direction: column`，則為 x 軸）。從`start`、 `end`、 `center`、 `baseline`、 或 `stretch` (瀏覽器預設) 中選擇。
 
@@ -166,7 +166,7 @@ toc: true
 - `.align-items{{ bp.abbr }}-baseline`
 - `.align-items{{ bp.abbr }}-stretch`{% endfor %}
 
-## 自身對齊
+## 自身對齊 {#align-self}
 
 使用 flexbox 物件上的 `align-self` 通用類別單獨改變在橫軸上的對齊（y 軸開始，如果 `flex-direction: column`，則為 x 軸）。與 `align-items` 相同的選項中選擇：`start`、 `end`、 `center`、 `baseline`、 或 `stretch` (瀏覽器預設)。
 
@@ -216,7 +216,7 @@ toc: true
 - `.align-self{{ bp.abbr }}-baseline`
 - `.align-self{{ bp.abbr }}-stretch`{% endfor %}
 
-## 自動的 margins
+## 自動的 margins {#auto-margins}
 
 當你將 flex 對齊與 auto margin 混在一起的時候，flexbox 也能正常的運行。下面的範例是透過自動 margin 來控制 flex 物件的三個案例：預設（無 margin），向右推兩個項目（`.mr-auto`），並向左推兩個項目（`.ml-auto`）。
 
@@ -242,7 +242,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 搭配 align-items
+### 搭配 align-items {#with-align-items}
 
 混合以下屬性 `align-items`, `flex-direction: column`, 和 `margin-top: auto` 或 `margin-bottom: auto`，會將一個 flex 物件移動到容器的頂部或底部。
 
@@ -260,7 +260,7 @@ toc: true
 </div>
 {% endexample %}
 
-## Wrap (Flex 的 Wrap 屬性)
+## Wrap (Flex 的 Wrap 屬性) {#wrap}
 
 改變 flex 物件在 flex 容器中的 Wrap。可設置 `.flex-nowrap`、`.flex-wrap`、`.flex-wrap-reverse` 這些屬性。
 
@@ -339,7 +339,7 @@ toc: true
 - `.flex{{ bp.abbr }}-wrap`
 - `.flex{{ bp.abbr }}-wrap-reverse`{% endfor %}
 
-## 排序
+## 排序 {#order}
 
 使用 `order` 通用類別改變特定 flex 物件的 _顯示_ 排序。我們僅提供將一個物件排在第一個或最後一個，以及重置使用 DOM 次序。由於 `order` 只能使用整數值（例如，5），對需要的任何額外值需要自定義 CSS。
 
@@ -357,7 +357,7 @@ toc: true
 {% for bp in site.data.breakpoints %}{% for i in (0..12) %}
 - `.order{{ bp.abbr }}-{{ i }}`{% endfor %}{% endfor %}
 
-## 對齊內容
+## 對齊內容 {#align-content}
 
 使用 flexbox 容器上的 `align-content` 工具將 flex 物件於橫軸上 *一起* 對齊。從`start` (瀏覽器預設), `end`, `center`, `between`, `around`, 或 `stretch`中選擇。為了呈現這通用類別的效果，我們加入了 `flex-wrap: wrap`，及增加了flex項的數量。
 

@@ -7,7 +7,7 @@ redirect_from: "/docs/4.0/layout/"
 toc: true
 ---
 
-## 容器
+## 容器 {#containers}
 
 容器是 Bootstrap 最基本的排版元素，且 **當使用我們的網格系統時** 是必須的。從響應式、固定寬度容器（表示其最大寬度限制在每一個中斷點）或可變寬度（顯示為 100% 寬）中選擇。
 
@@ -44,7 +44,7 @@ toc: true
 {% endhighlight %}
 
 
-## 響應式斷點
+## 響應式斷點 {#responsive-breakpoints}
 
 由於 Bootstrap 是被開發來作行動優先，我們使用許多 [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) 建立靈敏的中斷點用於我們的排版和介面。這些中斷點大部分基於最小 viewport，並且允許我們隨著 viewport 的變化放大組件。
 
@@ -159,7 +159,7 @@ Bootstrap 主要使用以下 media queries 或中斷點針對我們的佈局、�
 @include media-breakpoint-between(md, xl) { ... }
 {% endhighlight %}
 
-## Z-index
+## Z-index {#z-index}
 
 一些 Bootstrap 元件使用 `z-index`，它是提供排版內容第三個軸的 CSS 屬性。我們使用 Bootstrap 中的預設 z-index ，其目的是正確圖層導引、工具提示和 popover、modals 等等。
 
@@ -182,5 +182,4 @@ $zindex-tooltip:           1070 !default;
 背景元素（例如允許按一下解除的背景）傾向於停留在較低的 `z-index`，而導航元件和 popovers 使用更高的 `z-index` 確保它們的內容覆蓋。
 
 為了處理組建之間的 border (如：input-group 的 button 與 input)，我們較低的數值設置 `z-index` 於 `1`, `2`, 和 `3` 做為預設，在 hover, focus, active 時，我們將使用更高的 `z-index` 來顯示這些的 border。
-=======
-To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit `z-index` values of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements.
+

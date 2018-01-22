@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 如何運作
+## 如何運作 {#how-it-works}
 
 輪播是一個幻燈片，是使用 CSS 3D 的變形轉換和一些 JavaScript 構建一系列內容產生的迴圈播放。它適用於一系列圖像、文本或自訂標記。它還包括對上一個 / 下一個控制項和指示器的支援。
 
@@ -16,13 +16,13 @@ toc: true
 
 最後，如果你要自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)。
 
-## 範例
+## 範例 {#example}
 
 輪播不會自動使幻燈片尺寸標準化。因此，您可能需要使用其它通用類別或自訂樣式來調整成適當內容大小。雖然輪播支援上一個/下一個控制項和指示器，但是它們不是必備項目。可根據您的需要添加和自訂。
 
 確保在 `.carousel` 上為可選控制項設置唯一的 ID，特別是您在單個頁面上使用多個輪播。
 
-### 僅有幻燈片
+### 僅有幻燈片 {#slides-only}
 
 這是一個只有幻燈片的輪播。 請注意在輪播圖像上存在 `.d-block` 和 `.img-fluid`，以修正瀏覽器預設的圖像對齊。
 
@@ -42,7 +42,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 包含控制項
+### 包含控制項 {#with-controls}
 
 加入向前及向後的控制項：
 
@@ -70,7 +70,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 包含指示器
+### 包含指示器 {#with-indicators}
 
 您還可以將指示器與控制項一起添加到輪播中。
 
@@ -104,13 +104,13 @@ toc: true
 {% endexample %}
 
 {% callout warning %}
-##### 需要將元素初始化
+##### 需要將元素初始化 
 
 需要將 `.active` 加入到一個幻燈片內，否則輪播將看不見。
 {% endcallout %}
 
 
-### 包含字幕
+### 包含字幕 {#with-captions}
 
 在 `.carousel-item` 中使用 `.carousel-caption` 添加字幕到您的幻燈片。它們會隱藏在較小的 viewport 上，如下所示，可用的 [顯示通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/)。 我們最初用 `.d-none` 隱藏它們，並將它們顯示在中型的設備上(使用 `.d-md-block`)。
 
@@ -165,13 +165,13 @@ toc: true
 </div>
 {% endhighlight %}
 
-## 用法
+## 用法 {#usage}
 
-### 透過資料屬性
+### 透過資料屬性 {#via-data-attributes}
 
 使用資料屬性可以輕鬆控制輪播的位置。`data-slide` 接受 `prev`或 `next` 的關鍵字，它們相對於當前位置進而改變幻燈片位置。或者，使用 `data-slide-to` 將原始幻燈片索引轉換到 `data-slide-to="2"`，將幻燈片位置移動到以 0 開頭的特定索引。
 
-### 透過 JavaScript
+### 透過 JavaScript {#via-javascript}
 
 透過以下方法使用輪播：
 
@@ -179,7 +179,7 @@ toc: true
 $('.carousel').carousel()
 {% endhighlight %}
 
-### 選項
+### 選項 {#options}
 
 可以透過資料屬性或 JavaScript 調整選項。對於資料屬性，將選項名稱附加到 `data-`，如 `data-interval=""`。
 
@@ -234,7 +234,7 @@ $('.carousel').carousel()
   </tbody>
 </table>
 
-### 方法
+### 方法 {#methods}
 
 {% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
 {{ callout-include | markdownify }}
@@ -273,7 +273,7 @@ $('.carousel').carousel({
 
 銷毀一個元素的輪播
 
-### 事件
+### 事件 {#events}
 
 Bootstrap 提供了兩個事件給予輪播使用。 兩個事件都具有以下附加屬性：
 

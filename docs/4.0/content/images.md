@@ -6,7 +6,7 @@ group: content
 toc: true
 ---
 
-## 響應式圖片
+## 響應式圖片 {#responsive-images}
 
 `Bootstrap` 中的圖片可利用 `.img-fluid` 設定為響應式。 `max-width：100％;` 和 `height：auto;` 也需一併使用，讓圖片可依父元素屬性進行縮放。
 
@@ -28,7 +28,7 @@ toc: true
 
 {% endcallout %}
 
-## 圖片縮略圖
+## 圖片縮略圖 {#image-thumbnails}
 
 除了 [邊框-圓角 公用程式]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/) 之外，你可以使用 `.img-thumbnail` 讓圖片有1px邊框的顯示。
 
@@ -41,7 +41,7 @@ toc: true
 <img src="..." alt="..." class="img-thumbnail">
 {% endhighlight %}
 
-## 對齊圖片
+## 對齊圖片 {#aligning-images}
 
 用 [helper float classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/float) 或 [text alignment classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment) 讓圖片對齊。
  `block`-level 的圖片可以使用 [the `.mx-auto` margin utility class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/#horizontal-centering) 置中。
@@ -77,7 +77,7 @@ toc: true
 {% endhighlight %}
 
 
-## Picture
+## Picture {#picture}
 
 If you are using the `<picture>` element to specify multiple `<source>` elements for a specific `<img>`, make sure to add the `.img-*` classes to the `<img>` and not to the `<picture>` tag.
 

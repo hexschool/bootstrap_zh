@@ -33,7 +33,7 @@ group: components
 </nav>
 {% endexample %}
 
-## 網頁親和性
+## 網頁親和性 {#accessibility}
 
 由於麵包屑提供了導航功能，所以增加一個有意義的標籤，`aria-label="breadcrumb"` 來描述 '<nav>' 元素的導航說明，以及應用 `aria-current="page"` 到此群組的最後一個項目，表示這是當前頁面。
 

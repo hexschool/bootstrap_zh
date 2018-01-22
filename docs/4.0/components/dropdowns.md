@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 概述
+## 概述 {#overview}
 
 下拉選單是可切換的，內文框用於顯示連結列表或其他。這些交互功能於 Bootstrap JavaScript 下拉選單插件提供。透過點擊切換，而不是滑入的方式，這是一個策劃好了的 [設計決定](http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/)。
 
@@ -14,7 +14,7 @@ toc: true
 
 如果你要自行編譯 JS，記得 [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util)。
 
-## 親和性
+## 親和性 {#accessibility}
 
 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) 該標準定義了 [`role="menu"` widget](https://www.w3.org/TR/wai-aria/roles#menu)，但這是專門用於應用程式的功能表，它們觸發動作或功能。 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 選單只能包含功能表項目，核取方塊功能表項目，選項按鈕功能表項目，選項按鈕組和子功能表。
 
@@ -22,11 +22,11 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 
 然而，Bootstrap 為大多數標準鍵盤功能表操作加入內置支援，例如使用游標鍵移動單個 `.dropdown-item` 元素並使用 <kbd>ESC</kbd> 鍵關閉功能表的功能。
 
-## 範例
+## 範例 {#examples}
 
 在 `.dropdown` 中包含下拉選單的切換（你的按鈕或連結）和下拉式功能表，或者另外一個聲明 `position：relative;` 的元素。 可以從 `<a>` 或 `<button>` 元素裡觸發下拉選單，以適應您的潛在需求。
 
-### 單一按鈕的下拉選單
+### 單一按鈕的下拉選單 {#single-button-dropdowns}
 
 任何單個 `.btn` 可以變成帶有一些標記的下拉式切換。以下是您如何使用 `<button>` 元素：
 
@@ -140,7 +140,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endhighlight %}
 
-### 分離按鈕的下拉選單
+### 分離按鈕的下拉選單 {#split-button-dropdowns}
 
 同樣的，用與單個按鈕下拉選單幾乎相同的標記創建分割按鈕下拉選單，但是添加了 `.dropdown-toggle-split` 以在下拉插入符號做適當間隔。
 
@@ -244,7 +244,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endhighlight %}
 
-## 尺寸
+## 尺寸 {#sizing}
 
 按鈕下拉選單可以使用所有尺寸的按鈕，包括預設及分割下拉按鈕。
 
@@ -349,7 +349,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endhighlight %}
 
-## 下拉變化型
+## 下拉變化型 {#dropup-variation}
 
 透過向父元素添加 `.dropup`，使下拉選單在觸發元素的上方。
 
@@ -410,7 +410,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endhighlight %}
 
-## 向右選單的變化
+## 向右選單的變化 {#dropright-variation}
 
 加入 `.dropright` 到父元素上來切換向右側的選單。
 
@@ -470,7 +470,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endhighlight %}
 
-## 向左選單的變化
+## 向左選單的變化 {#dropleft-variation}
 
 加入 `.dropleft` 到父元素上來切換向左側的選單。
 
@@ -535,7 +535,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 {% endhighlight %}
 
 
-## Menu items
+## Menu items {#menu-items}
 
 在過去下拉選單內容必須是個連接，但 v4 不再是這樣。現在您可以選擇在下拉選單中使用 `<button>` 元素，而不是僅使用 `<a>`。
 
@@ -552,7 +552,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endexample %}
 
-## 選單對齊
+## 選單對齊 {#menu-alignment}
 
 預設情況下，下拉選單自動位於其父級的上方的 100% 及貼齊左邊緣。將 `.dropdown-menu-right` 加到 `.dropdown-menu` 中可對齊右方邊緣。
 
@@ -573,7 +573,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endexample %}
 
-## 選單標題
+## 選單標題 {#menu-headers}
 
 添加標題來標記下拉選單中的操作部分。
 
@@ -585,7 +585,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endexample %}
 
-## 選單分隔線
+## 選單分隔線 {#menu-dividers}
 
 使用分隔符號來分隔選單中的群組。
 
@@ -599,7 +599,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endexample %}
 
-## 選單式表單
+## 選單式表單 {#menu-forms}
 
 在下拉式選單中加入表單，並且使用 [margin 或 padding 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) 調整所需要的空間。
 
@@ -648,7 +648,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </form>
 {% endexample %}
 
-## 啟用的項目
+## 啟用的項目 {#active-menu-items}
 
 加入 `.active` 到下拉選單的項目上使 **樣式呈現啟用狀態**。
 
@@ -660,7 +660,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endexample %}
 
-## 選單中的禁用選項
+## 選單中的禁用選項 {#disabled-menu-items}
 
 將 `.disabled` 加到下拉選單中的項目，將其設為禁用。
 
@@ -672,7 +672,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endexample %}
 
-## 用法
+## 用法 {#usage}
 
 通過資料屬性或 JavaScript，下拉選單插件透過切換父級按鈕上 `.show` 來切換隱藏內容（下拉選單）。 `data-toggle="dropdown"` 屬性相依於應用程式級別關閉下拉式功能表，因此始終使用它是一個好方法。
 
@@ -680,7 +680,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 在觸控功能的裝置上，打開一個下拉選單會加入 (`$.noop`) `mouseover`）給 `<body>` 元素的直接子元素。這肯定是怪異的手法來 [快速解決 iOS ](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html) 的問題，否則在下拉選單之外的任何地方點擊會無法觸發關閉下拉選單的事件。一旦下拉關閉，這些額外的事件就會被移除。
 {% endcallout %}
 
-### 透過資料屬性
+### 透過資料屬性 {#via-data-attributes}
 
 加入 `data-toggle="drown"` 至連結或按鈕來啟用切換下拉選單。
 
@@ -695,7 +695,7 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 </div>
 {% endhighlight %}
 
-### 透過 JavaScript
+### 透過 JavaScript {#via-javascript}
 
 透過 JavaScript 來調用下拉選單：
 
@@ -709,7 +709,7 @@ $('.dropdown-toggle').dropdown()
 無論是透過 JavaScript 調用您的下拉清單或使用 data-api， `data-toggle="dropdown"` 都需要在下拉選單的觸發器元素中顯示。
 {% endcallout %}
 
-### 選項
+### 選項 {#options}
 
 可以透過資料屬性或 JavaScript 插件傳遞選項。對於資料屬性，將選項名稱加到 `data-` 上，如 `data-offset=""`。
 
@@ -746,7 +746,7 @@ $('.dropdown-toggle').dropdown()
   </tbody>
 </table>
 
-#### 方法
+#### 方法 {#methods}
 
 請注意，當 `boundary` 被設置為 `'scrollParent'` 之外的任何值時，`position: static` 樣式套用於 `.dropdown` 的容器。
 
@@ -756,7 +756,7 @@ $('.dropdown-toggle').dropdown()
 | `$().dropdown('update')` | 更新下拉選單元素的定位。 |
 | `$().dropdown('dispose')` | 銷毀一個元素的下拉選單。 |
 
-### 事件
+### 事件 {#events}
 
 所有下拉選單事件在 `.dropdown-menu` 的父元素下觸發，並具有一個 `relatedTarget` 屬性，其值是切換的錨元素。
 

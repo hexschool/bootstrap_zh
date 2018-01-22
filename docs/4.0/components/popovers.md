@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 概觀
+## 概觀 {#overview}
 
 使用彈出提示框插件時應瞭解的事情如下：
 
@@ -23,7 +23,7 @@ toc: true
 
 都明白了？太好了，讓我們透過一些例子看他們是如何運作的。
 
-## 範例：在任何地方啟用彈出提示框
+## 範例：在任何地方啟用彈出提示框 {#example-enable-popovers-everywhere}
 
 在頁面上初始化所有彈出提示框的一種方法是透過它們的 `data-toggle` 屬性來選擇它們：
 
@@ -33,7 +33,7 @@ $(function () {
 })
 {% endhighlight %}
 
-## 範例：使用 `container` 選項
+## 範例：使用 `container` 選項 {#example-using-the-container-option}
 
 當您在父元素上有一些干擾彈出提示框的樣式時，您將需要指定一個自訂的 `container` ，以便彈出提示框的 HTML 顯示在該元素中。
 
@@ -46,13 +46,13 @@ $(function () {
 })
 {% endhighlight %}
 
-## 範例
+## 範例 {#example}
 
 {% example html %}
 <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 {% endexample %}
 
-### 四個方向
+### 四個方向 {#four-directions}
 
 Four options are available: top, right, bottom, and left aligned.
 
@@ -92,7 +92,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 </button>
 {% endhighlight %}
 
-### 下次點擊移除
+### 下次點擊移除 {#dismiss-on-next-click}
 
 使用 `focus` 觸發以便用戶進行下一次點擊時移除這個彈出提示框。
 
@@ -112,7 +112,7 @@ $('.popover-dismiss').popover({
 })
 {% endhighlight %}
 
-### 禁用的元素
+### 禁用的元素 {#disabled-elements}
 
 具有 `disabled` 的元素是不能產生互動的，這意味用戶不能使用 hover 及點擊觸發彈出(或工具提示)，如果想要啟用，你使用 `<div>` 或 `<span>` 包覆並覆蓋 `pointer-events` 在禁用的屬性上。
 
@@ -124,12 +124,12 @@ $('.popover-dismiss').popover({
 </span>
 {% endexample %}
 
-## 用法
+## 用法 {#usage}
 
 
 {% highlight js %}$('#example').popover(options){% endhighlight %}
 
-### 選項
+### 選項 {#options}
 
 可以透過資料屬性或 JavaScript 傳遞選項。 對於資料屬性，將選項名稱附加到 `data-` 上，如 `data-animation=""`。
 

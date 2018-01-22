@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 概觀
+## 概觀 {#overview}
 
 使用工具提示框插件時應瞭解的事情如下：
 
@@ -22,7 +22,7 @@ toc: true
 
 都明白了？太好了，讓我們透過一些例子看他們是如何運作的。
 
-## 範例：在任何地方啟用工具提示框
+## 範例：在任何地方啟用工具提示框 {#example-enable-tooltips-everywhere}
 
 在頁面上初始化所有工具提示框的一種方法是透過它們的 `data-toggle` 屬性來選擇它們：
 
@@ -32,7 +32,7 @@ $(function () {
 })
 {% endhighlight %}
 
-## 範例
+## 範例 {#examples}
 
 滑鼠 hover 以下連結上以查看工具提示框
 
@@ -77,7 +77,7 @@ $(function () {
 </button>
 {% endhighlight %}
 
-## 用法
+## 用法 {#usage}
 
 工具提示框插件根據需要生成內容和標記，預設情況下它們在觸發元素之後放置工具提示框。
 
@@ -88,7 +88,7 @@ $(function () {
 $('#example').tooltip(options)
 {% endhighlight %}
 
-### 標記
+### 標記 {#markup}
 
 工具提示框所需的標記只是一個 `data` 屬性，和您希望擁有一個工具提示框 HTML 元素上的 `title`。 生成工具提示框的標記是相當簡單的，儘管它需要一個位置（預設情況下，他的位置是 `top`）。
 
@@ -113,7 +113,7 @@ $('#example').tooltip(options)
 </div>
 {% endhighlight %}
 
-### 禁用的元素
+### 禁用的元素 {#disabled-elements}
 
 具有 `disabled` 的元素是不能產生互動的，這意味用戶不能使用 hover 及點擊觸發彈出(或工具提示)，如果想要啟用，可使用 `<div>` 或 `<span>` 包覆，且調整 `tabindex="0"` 讓鍵盤能夠切換，並覆蓋 `pointer-events` 在禁用的屬性上。
 
@@ -125,7 +125,7 @@ $('#example').tooltip(options)
 {% endexample %}
 </div>
 
-### 選項
+### 選項 {#options}
 
 可以透過資料屬性或 JavaScript 傳遞選項。對於資料屬性，將選項名稱附加到 `data-`，如 `data-animation=""`。
 
@@ -249,7 +249,7 @@ $('#example').tooltip(options)
 可以通過使用資料屬性來指定單個工具提示框的選項，如上所述。
 {% endcallout %}
 
-### 方法
+### 方法 {#methods}
 
 {% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
 {{ callout-include | markdownify }}
@@ -316,7 +316,7 @@ Toggles the ability for an element's tooltip to be shown or hidden.
 
 {% highlight js %}$('#element').tooltip('update'){% endhighlight %}
 
-### Events
+### Events {#events}
 
 <table class="table table-bordered table-striped">
   <thead>

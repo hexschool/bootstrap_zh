@@ -6,11 +6,11 @@ group: layout
 toc: true
 ---
 
-## 如何運作
+## 如何運作 {#how-it-works}
 
 Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內容。它用 [flexbox]((https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)) 建立，並且完全符合響應式。下面是網格系統如何整合的例子及深入瞭解。
 
-**New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
+**還不熟悉 Flex 嗎？** [閱讀此份 Flex 指引](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) 對於背景、術語、指引、程式碼片段。
 
 <div class="bd-example-row">
 {% example html %}
@@ -52,7 +52,7 @@ Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內�
 覺得如何呢？很好，我們繼續在範例中全面瞭解。
 
 
-## 網格選項
+## 網格選項 {#grid-options}
 
 當 Bootstrap 使用`em` 或 `rem` 定義更多尺寸時，`px`用於網格中斷點和容器寬度。這是因為 viewport 寬度按 pixel 計算，並且不會隨（字體大小）[font size](https://drafts.csswg.org/mediaqueries-3/#units) 改變。
 
@@ -120,11 +120,11 @@ Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內�
   </tbody>
 </table>
 
-## 自動佈局的欄
+## 自動佈局的欄 {#auto-layout-columns}
 
 使用特定中斷點欄類方便的確定欄的大小，而不是明確的寬度 class，例如`.col-sm-6`。
 
-### 等寬
+### 等寬 {#equal-width}
 
 例如，有兩個網格佈局適用於每個裝置和 viewport，從 `xs` 到 `xl`。對每一個你需要的中斷點增加無單位的 class，每一欄將具有相同的寬度。
 
@@ -172,7 +172,7 @@ Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內�
 {% endexample %}
 </div>
 
-### 設置一欄寬度
+### 設置一欄寬度 {#setting-one-column-width}
 
 flexbox 網格欄的自動佈局中你可以設置欄的寬度，並且其左右欄將在其周圍自動調整大小。你也可以使用預定義的網格 Class (如下所示)、Grid mixins、或行內寬度。請注意，無論中間欄的寬度，其它欄都將重新調整大小。
 
@@ -205,7 +205,7 @@ flexbox 網格欄的自動佈局中你可以設置欄的寬度，並且其左右
 {% endexample %}
 </div>
 
-### 可變寬度內容
+### 可變寬度內容 {#variable-width-content}
 
 基於欄內容的自然寬度，可使用 `col-{breakpoint}-auto` 調整欄的大小
 
@@ -238,7 +238,7 @@ flexbox 網格欄的自動佈局中你可以設置欄的寬度，並且其左右
 {% endexample %}
 </div>
 
-### 等寬度多行
+### 等寬度多行 {#equal-width-multi-row}
 
 如果你希望欄另外分隔另一行，可在中間加入`.w-100` 建立等寬度欄。通過將`.w-100` 與一些（響應式顯示工具）[responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) 進行分隔。
 
@@ -254,11 +254,11 @@ flexbox 網格欄的自動佈局中你可以設置欄的寬度，並且其左右
 {% endexample %}
 </div>
 
-## 響應式 classes
+## 響應式 Classes {#responsive-classes}
 
 Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極小、小、中、大、或極大設備上定制欄的大小來建立符合你需求的尺寸。
 
-### 所有中斷點
+### 所有中斷點 {#all-breakpoints}
 
 對於從最小的設備到最大的設備都相同的網格，使用`.col` 和 `.col-*`。當你需要特定尺寸的欄時就需要指定特定規格；不然 `.col` 是可以隨意使用的。
 
@@ -277,13 +277,9 @@ Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極�
 {% endexample %}
 </div>
 
-### 水平堆疊
+### 水平堆疊 {#stacked-to-horizontal}
 
-<<<<<<< HEAD
 通過使用 `.col-sm-*`，你可以在桌面（中型）設備上變得水平排版之前，建立堆疊在極小裝置上的網格排版。
-=======
-Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked before becoming horizontal with at the small breakpoint (`sm`).
->>>>>>> v4.0.0
 
 <div class="bd-example-row">
 {% example html %}
@@ -299,7 +295,7 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-### 混合和匹配
+### 混合和匹配 {#mix-and-match}
 
 不想讓你的欄堆疊在某些網格階層上？依需求使用每一層不同的 class 組合。對於它如何運作，請見下面的例子。
 
@@ -326,11 +322,11 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-## 對齊
+## 對齊 {#alignment}
 
 使用 flexbox 對齊垂直和水平。
 
-### 垂直對齊
+### 垂直對齊 {#vertical-alignment}
 
 <div class="bd-example-row bd-example-row-flex-cols">
 {% example html %}
@@ -390,7 +386,7 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-### 水平對齊
+### 水平對齊 {#horizontal-alignment}
 
 <div class="bd-example-row">
 {% example html %}
@@ -439,7 +435,7 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-### No gutters
+### No gutters {#no-gutters}
 
 通過`.no-gutters`，可以移除我們的預設網格 class 中欄位之間的 gutter。這將 `.row` 移除了負 `margin`，從所有子欄中移除了水平 `padding`。
 
@@ -472,7 +468,7 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-### 欄的外圍
+### 欄的外圍 {#column-wrapping}
 
 如果 12 個以上的欄位於單獨一行內，每一組額外欄（作為一個單元）將換新的一行。
 
@@ -487,7 +483,7 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-### Column breaks
+### Column breaks {#column-breaks}
 
 在 Flexbox 中將列拆分成新行需要一個小 hack: 當你想中斷你的欄到新的一行，可增加一個元素為 `width: 100%`。正常來說，通常這是通過多個`.row` 完成的，但此方法也是可行的。
 
@@ -523,9 +519,9 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-## 排序
+## 排序 {#reordering}
 
-### Order classes
+### Order classes {#order-classes}
 
 使用 `.order-` class 來控制內容中 **可見的內容** 順序，這些 class 是響應式的，所以可以設定 `order` 在不同斷點上 (e.g., `.order-1.order-md-2`)，包含支援 `1` ~ `12` 及不同的中斷點。
 
@@ -567,11 +563,11 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-### 欄的推移
+### 欄的推移 {#offsetting-columns}
 
 您可以通過兩種方式來位移欄 `.offset-` Class 和 [margin 通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)。網格位移的空間與欄間格相符合，這種推移對於快速佈局可增加更多變化。
 
-#### 位移類別
+#### 位移類別 {#offset-classes}
 
 使用 `.offset-md-*` 向右移動列。 透過 `*` 增加欄的左邊距。 例如 `.offset-md-4` 增加四欄位移 `.col-md-4`。
 
@@ -607,7 +603,7 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-#### Margin 通用類別
+#### Margin 通用類別 {#margin-utilities}
 
 隨著第四版改用 flexbox，你可以透過 margin 的通用類別，像是 `.mr-auto` 將相鄰的欄位分離到另一邊。
 
@@ -628,7 +624,7 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-## 巢狀
+## 巢狀 {#nesting}
 
 為了將你的內容加入巢狀網格，在現有的 `.col-sm-*` 內增加新的 `.row` 和 `.col-sm-*`欄。巢狀列包括增加到 12 或更少的欄位（你不一定要使用所有 12 個可用的欄）。
 
@@ -650,12 +646,12 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% endexample %}
 </div>
 
-## Sass mixins
+## Sass mixins {#sass-mixins}
 
 當使用 Bootstrap Sass 檔時，你可以選擇使用 Sass 變數和 mixins 客製化、語義、和控制頁面配置。我們的預定義網格類使用這些相同的變數和 mixins 提供整套隨時可用的 class 用於響應式排版。
 
 
-### 變數
+### 變數 {#variables}
 
 變數和 sass map 決定了欄的數量、gutter 的寬度、和開始浮動欄的中斷點。我們使用它們產生上文記錄的定義網格 class ，以及用於下列的客製 mixins 類型。
 
@@ -684,7 +680,7 @@ $container-max-widths: (
 );
 {% endhighlight %}
 
-### Mixins
+### Mixins {#mixins}
 
 Mixins 與網格變數結合使用，可以對單個網格欄產生語意的 CSS。
 
@@ -700,7 +696,7 @@ Mixins 與網格變數結合使用，可以對單個網格欄產生語意的 CSS
 @include make-col-offset($size, $columns: $grid-columns);
 {% endhighlight %}
 
-### 範例使用
+### 範例使用 {#example-usage}
 
 你可以將變數修改你自己的自訂值，或者僅用預設值使用混合類型。下面是使用預設設置創建兩欄佈局的例子。
 
@@ -746,12 +742,12 @@ Mixins 與網格變數結合使用，可以對單個網格欄產生語意的 CSS
 </div>
 {% endexample %}
 
-## 客製化網格
+## 客製化網格 {#customizing-the-grid}
 
 使用我們的內置網格 Sass 變數和 sass maps，可以完全的客製網格的 class。改變層的數量，media query 的參數，和容器寬度然後重新編譯。
 
 
-### 欄與 gutters
+### 欄與 gutters {#columns-and-gutters}
 
 通過 Sass 變數可以修改欄位數和它們的水平 padding 的數量（又稱為 gutters）。`$grid-columns` 用於產生每一個單獨欄的寬度（百分比），而 `$grid-gutter-width` 允許在該欄 gutterr 的 `padding-left`和`padding-right`上均勻分開的特定中斷點寬度。
 
@@ -760,7 +756,7 @@ $grid-columns: 12 !default;
 $grid-gutter-width: 30px !default;
 {% endhighlight %}
 
-### Grid 階層
+### Grid 階層 {#grid-tiers}
 
 欄本身之外，你也可以自定義網格層的數量。如果你只想要四個網格層，你應當按照下文更新`$grid-breakpoints` 和 `$container-max-widths`。
 

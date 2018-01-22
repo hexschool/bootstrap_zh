@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 範例
+## 範例 {#example}
 
 套用相應的字體大小和 `em` 單位使標籤繼承父元素的尺寸。
 
@@ -48,7 +48,7 @@ toc: true
 </button>
 {% endexample %}
 
-## 情境變化
+## 情境變化 {#contextual-variations}
 
 加入以下的 Class 來修改標籤的外觀。
 
@@ -60,7 +60,7 @@ toc: true
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-## 膠囊標籤
+## 膠囊標籤 {#pill-badges}
 
 使用 `.badge-pill` 可以使標籤更圓潤（具有較大的邊框半徑和附加的水平 padding）。 如果你錯過了 v3 的標籤，這是有用的。
 
@@ -69,7 +69,7 @@ toc: true
 <span class="badge badge-pill badge-{{ color.name }}">{{ color.name | capitalize }}</span>{% endfor %}
 {% endexample %}
 
-## 連結
+## 連結 {#links}
 
 使用情境色彩 `.badge-*` 在 `<a>` 元素上提供可操作的標籤 hover 和 focus 狀態。
 

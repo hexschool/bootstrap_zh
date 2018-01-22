@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 基礎範例
+## 基礎範例 {#basic-example
 
 在 input 的任一側放置一個附加元件或按鈕。 您也可以在 input 的兩面都放置一個。 **我們不支持單個輸入組中多個表單控制項。**，另外 `<label>` 必須於表單群組之外。
 
@@ -52,7 +52,7 @@ toc: true
 </div>
 {% endexample %}
 
-## 尺寸
+## 尺寸 {#sizing}
 
 將相對表單大小 Class 加到 `.input-group` 中，其中的內容將自動調整大小 - 不需要在每個元素上重複表單控制元件大小 Class。
 
@@ -82,7 +82,7 @@ toc: true
 </div>
 {% endexample %}
 
-## 核取方塊和選項按鈕附加組件
+## 核取方塊和選項按鈕附加組件 {#checkboxes-and-radios}
 
 放置核取方塊或單選按鈕在 input 群組內取代文字。
 
@@ -121,7 +121,7 @@ While multiple `<input>`s are supported visually, validation styles are only ava
 </div>
 {% endexample %}
 
-## 多附加組件
+## 多附加組件 {#multiple-addons}
 
 支援多個附加元件，可以與核取方塊和單選按鈕 input 混合使用。
 
@@ -144,7 +144,7 @@ While multiple `<input>`s are supported visually, validation styles are only ava
 {% endexample %}
 
 
-## 按鈕附加元件
+## 按鈕附加元件 {#button-addons}
 
 {% example html %}
 <div class="input-group mb-3">
@@ -178,7 +178,7 @@ While multiple `<input>`s are supported visually, validation styles are only ava
 </div>
 {% endexample %}
 
-## 帶下拉式選單的按鈕
+## 帶下拉式選單的按鈕 {#buttons-with-dropdowns}
 
 {% example html %}
 <div class="input-group mb-3">
@@ -210,7 +210,7 @@ While multiple `<input>`s are supported visually, validation styles are only ava
 </div>
 {% endexample %}
 
-## 分段按鈕
+## 分段按鈕 {#segmented-buttons}
 
 {% example html %}
 <div class="input-group mb-3">
@@ -248,11 +248,11 @@ While multiple `<input>`s are supported visually, validation styles are only ava
 </div>
 {% endexample %}
 
-## 自訂表單
+## 自訂表單 {#custom-forms}
 
 input 群組包含自訂的 select 及自訂的檔案 input，瀏覽器預設版本將不支援。
 
-### 自訂選單樣式
+### 自訂選單樣式 {#custom-select}
 
 {% example html %}
 <div class="input-group mb-3">
@@ -304,7 +304,7 @@ input 群組包含自訂的 select 及自訂的檔案 input，瀏覽器預設版
 </div>
 {% endexample %}
 
-### 自訂檔案 input
+### 自訂檔案 input {#custom-file-input}
 
 {% example html %}
 <div class="input-group mb-3">
@@ -348,7 +348,7 @@ input 群組包含自訂的 select 及自訂的檔案 input，瀏覽器預設版
 </div>
 {% endexample %}
 
-## 親和性
+## 親和性 {#accessibility}
 
 如果您沒有為每個 input 添加 label，螢幕閱讀器會無法正確接收你表單訊息。對於這些 input 群組，請確保有任何 label 或功能傳達到輔助技術。
 

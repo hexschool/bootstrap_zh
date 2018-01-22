@@ -6,11 +6,11 @@ group: components
 toc: true
 ---
 
-## 關於
+## 關於 {#about}
 
 **卡片** 是一個靈活可擴展的內容容器。包含頁眉和頁腳的選項、各種彈性內容、情境顏色和強大的顯示選項。如果你熟悉 Bootstrap 3，卡片取代了舊的 panels、wells、thumbnails(以上為原文名稱)，類似的功能已經都整合到卡片內了。
 
-## 範例
+## 範例 {#example}
 
 卡片構建時盡可能少一些標記和樣式，但仍然可以提供許多的控制項和自定義。使用 flexbox 構建，它們可以使對齊更方便並且與其它 Bootstrap 元件良好混合。預設中他並沒有 `margin`，所以可以依需求加入 [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)。
 
@@ -27,11 +27,11 @@ toc: true
 </div>
 {% endexample %}
 
-## 內容設計
+## 內容設計 {#content-types}
 
 卡支援各種內容，包括圖像、文本、清單組、連結等。以下是支援的範例。
 
-### 主要區塊
+### 主要區塊 {#body}
 
 卡的塊狀構建是 `.card-body`。當你需要在一個卡片內含 padding 部分就可以使用它。
 
@@ -43,7 +43,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 標題 文本 連結
+### 標題 文本 連結 {#titles-text-and-links}
 
 卡片標題的使用時在 `<h*>` 標籤中添加 `.card-title`。 同樣，將 `.card-link` 加到 `<a>` 標籤中實現連結的添加。
 
@@ -61,7 +61,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 圖片
+### 圖片 {#images}
 
 `.card-img-top` 將圖像放在卡片頂部。 使用 `.card-text` 可以將文字內容可以添加到卡片中。 `.card-text` 中的文本也可以用標準的 HTML 標籤設計樣式。
 
@@ -75,7 +75,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 列表群組
+### 列表群組 {#list-groups}
 
 建立一個包含內容的清單卡片。
 
@@ -102,7 +102,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 混合樣式
+### 混合樣式 {#kitchen-sink}
 
 混合並搭配多個內容形式，用來創建你所需要的卡片。以下來說是圖像風格、塊狀、文字風格以及清單在一個固定寬度的卡片中。
 
@@ -125,7 +125,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 頁眉和頁腳
+### 頁眉和頁腳 {#header-and-footer}
 
 在卡片內加入選擇性的頁眉或頁腳。
 
@@ -185,11 +185,11 @@ toc: true
 </div>
 {% endexample %}
 
-## 縮放
+## 縮放 {#sizing}
 
 卡片假設沒有特定的 `width`，那麼除非另有聲明，否則它們的寬度將是100％。您可以根據需求自訂 CSS、網格系統、Sass mixins grid 或通用類別來調整。
 
-### 使用網格標記
+### 使用網格標記 {#using-grid-markup}
 
 使用網格，根據需求按行與列包裝卡片。
 
@@ -216,7 +216,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 使用通用類別
+### 使用通用類別 {#using-utilities}
 
 使用我們的幾個 [可調整大小的通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) 來設置卡片的寬度。
 
@@ -238,7 +238,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 使用客製化 CSS
+### 使用客製化 CSS {#using-custom-css}
 
 在樣式表中使用自訂 CSS 或使用行內樣式設置寬度。
 
@@ -252,7 +252,7 @@ toc: true
 </div>
 {% endexample %}
 
-## 文字對齊
+## 文字對齊 {#text-alignment}
 
 您可以透過我們的 [文本對齊 Class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/typography/#text-alignment) 更改任何卡片的整體或特定部分的文本對齊方式）。
 
@@ -283,7 +283,7 @@ toc: true
 </div>
 {% endexample %}
 
-## 導覽
+## 導覽 {#navigation}
 
 使用 Bootstrap [導覽元件]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/) 向卡片的標題（或塊）添加一些導覽。
 
@@ -333,11 +333,11 @@ toc: true
 </div>
 {% endexample %}
 
-## 圖像
+## 圖像 {#images-1}
 
 卡片包含一些選項用來搭配圖像。選擇在卡片的任一端附加 "image caps"，用卡片內容覆蓋圖像 (像是背景)，或者只是將圖像嵌入到卡中。
 
-### Image caps
+### Image caps {#image-caps}
 
 像是頁眉或是頁腳，卡片可以使用 Image caps 在卡片頂部或是底部。
 
@@ -360,7 +360,7 @@ toc: true
 </div>
 {% endexample %}
 
-### 圖像覆蓋
+### 圖像覆蓋 {#image-overlays}
 
 將圖像轉換為卡片背景，並疊加卡片的文字。 根據圖像，你可以選擇是否需要額外的樣式或通用類別。
 
@@ -376,11 +376,11 @@ toc: true
 </div>
 {% endexample %}
 
-## 卡片樣式
+## 卡片樣式 {#card-styles}
 
 包括用於客制其背景、邊框和顏色的各種選項。
 
-### 背景與顏色
+### 背景與顏色 {#background-and-color}
 
 使用 [文字與背景通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/)來改變卡片的顯示顏色。
 
@@ -398,7 +398,7 @@ toc: true
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-### 框線
+### 框線 {#border}
 
 使用 [框線通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/) 來改變卡片的 `border-color`。也能設置 `.text-{color}` class 在父層的 `.card`，或者是卡片的顯示內容上。
 
@@ -413,7 +413,7 @@ toc: true
 </div>{% endfor %}
 {% endexample %}
 
-### Mixins 通用類別
+### Mixins 通用類別 {#mixins-utilities}
 
 也能夠改卡片頁首及頁腳的框線，也能使用 `.bg-transparent` 移除背景顏色。
 
@@ -428,11 +428,11 @@ toc: true
 </div>
 {% endexample %}
 
-## 卡片排版
+## 卡片排版 {#card-layout}
 
-Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈置的選項。目前 **這些排版還沒包含響應式**。
+Bootstrap 除了對卡片內的內容進行設計外，還包括一些卡片佈置的選項。目前 **這些排版還沒包含響應式**。
 
-### 卡片群組
+### 卡片群組 {#card-groups}
 
 將多個卡片和成為一個群組，他們具有相同寬度和高度的列。卡片群組使用 `display: flex;` 來實現他們一致的尺寸。
 
@@ -503,7 +503,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
 </div>
 {% endexample %}
 
-### 卡片疊
+### 卡片疊 {#card-decks}
 
 需要一套互不相連但寬度和高度相同的卡片？使用卡片疊。
 
@@ -575,7 +575,7 @@ Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈�
 </div>
 {% endexample %}
 
-### 卡片欄
+### 卡片欄 {#card-columns}
 
 將它們包在 `.card-columns` 中，可以將卡片像 [Masonry](https://masonry.desandro.com) 那樣的瀑布式排列。卡片是使用 CSS `column` 屬性而不是 flexbox 來構建，更便於對齊。排列是從上到下、從左到右。
 

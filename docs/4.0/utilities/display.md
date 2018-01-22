@@ -6,11 +6,11 @@ group: utilities
 toc: true
 ---
 
-## 如何運作
+## 如何運作 {#how-it-works}
 
 使用 display 的通用類別 Class 來改變 [`display` 屬性](https://developer.mozilla.org/en-US/docs/Web/CSS/display)，我們故意只支援 `display` 所有可能的一個子集，可以依據需求將這些 Class 調整出各種效果。
 
-## 符號
+## 符號 {#notation}
 
 Display 通用類別可以套用在所有[中斷點]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/#responsive-breakpoints)，從 `xs` 到 `xl` 都在其中，而這些是從最小寬度 `min-width: 0;` 開始運用，因此預設不受 media query 限制，然而其餘的斷點都包含縮寫。
 
@@ -33,7 +33,7 @@ Display 通用類別可以套用在所有[中斷點]({{ site.baseurl }}/docs/{{ 
 
 這些 media queries 會設置大於中斷點，舉例來說： `.d-lg-none` 在 `lg` 和 `xl` 屏幕上設置 `display：none;`。
 
-## 範例
+## 範例 {#examples}
 
 {% example html %}
 <div class="d-inline p-2 bg-primary text-white">d-inline</div>
@@ -45,7 +45,7 @@ Display 通用類別可以套用在所有[中斷點]({{ site.baseurl }}/docs/{{ 
 <span class="d-block p-2 bg-dark text-white">d-block</span>
 {% endexample %}
 
-## 隱藏元素
+## 隱藏元素 {#hiding-elements}
 
 為了更快速且友善的移動設備開發，請使用響應式 display Class 來顯示和隱藏元件。避免創建完全不同版本的同一個網站，而不是按照每個螢幕尺寸隱藏元素。
 
@@ -72,7 +72,7 @@ Display 通用類別可以套用在所有[中斷點]({{ site.baseurl }}/docs/{{ 
 <div class="d-none d-lg-block">hide on screens smaller than lg</div>
 {% endexample %}
 
-## Display 運用在列印
+## Display 運用在列印 {#display-in-print}
 
 可以在列印時透過 `display` 通用類別改變 `display` 的值。一樣包含 `display` 的各種 `.d-*` 通用類別。
 

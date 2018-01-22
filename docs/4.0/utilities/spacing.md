@@ -6,11 +6,11 @@ group: utilities
 toc: true
 ---
 
-## 如何運作
+## 如何運作 {#how-it-works}
 
 賦予一個縮寫 class 使 `margin` 或 `padding` 值在一個元素上或其中一個邊緣上 (包含響應式)。包含支援單一個邊緣屬性或全部邊緣、垂直邊緣、水平邊緣上。Class 來自於 Sass map，範圍從`.25rem` 到 `3rem`。
 
-## 符號
+## 符號 {#notation}
 
 Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
 
@@ -47,7 +47,7 @@ Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no brea
 （你也可以對 `$spacers` Sass map 調整變數。）
 
 
-## 範例
+## 範例 {#examples}
 
 以下是這些 class 的一些代表性範例：
 
@@ -70,7 +70,7 @@ Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no brea
 }
 {% endhighlight %}
 
-### 水平置中
+### 水平置中 {#horizontal-centering}
 
 此外，Bootstrap 也包括一個 `.mx-auto`，用於固定寬度盒模型的水平置中，是具有 `display: block` 和 `width` 集合的內容，並將水平 margin 設置為`auto`。
 

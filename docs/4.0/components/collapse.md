@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 範例
+## 範例 {#example}
 
 點擊按鈕透過 Class 更改來顯示及隱藏另一個元素：
 

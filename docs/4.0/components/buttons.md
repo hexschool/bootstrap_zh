@@ -7,7 +7,7 @@ redirect_from: "/docs/4.0/components/"
 toc: true
 ---
 
-## 範例
+## 範例 {#examples}
 
 Bootstrap 包括多個預先定義的按鈕樣式，每個都有自己的語義目的及更多的控制。
 
@@ -21,7 +21,7 @@ Bootstrap 包括多個預先定義的按鈕樣式，每個都有自己的語義�
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-## 按鈕標籤
+## 按鈕標籤 {#button-tags}
 
 `.btn` 是設計為 `<button>` 元素一起使用。 但是，您也可以在 `<a>` 或 `<input>` 元素上使用這些 Class（儘管有些瀏覽器可能會使用稍微不同的渲染）。
 
@@ -35,7 +35,7 @@ Bootstrap 包括多個預先定義的按鈕樣式，每個都有自己的語義�
 <input class="btn btn-primary" type="reset" value="Reset">
 {% endexample %}
 
-## 外框按鈕
+## 外框按鈕 {#outline-buttons}
 
 需要一個按鈕，但不是用填滿的背景顏色？用 `.btn-outline-*` 替換預設修飾用的 Class，以移除任何按鈕上的所有背景色及背景圖。
 
@@ -44,7 +44,7 @@ Bootstrap 包括多個預先定義的按鈕樣式，每個都有自己的語義�
 <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
 {% endexample %}
 
-## 大小
+## 大小 {#sizes}
 
 想要較大或較小的按鈕？加入 `.btn-lg` 或 `.btn-sm` 來套用尺寸。
 
@@ -65,7 +65,7 @@ Bootstrap 包括多個預先定義的按鈕樣式，每個都有自己的語義�
 <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
 {% endexample %}
 
-## 啟用狀態
+## 啟用狀態 {#active-state}
 
 當啟用時，按鈕將出現按壓（背景較暗、邊框較暗、內陰影）。 **沒有必要在 `<button>` 添加一個 Class，因為它們使用偽類**。但是，如果您需要以動態方式改變狀態，則可以使用 `.active`（並包括 <code>aria-pressed="true"</code> 屬性）套用相同的啟用外觀。
 
@@ -74,7 +74,7 @@ Bootstrap 包括多個預先定義的按鈕樣式，每個都有自己的語義�
 <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
 {% endexample %}
 
-## 停用狀態
+## 停用狀態 {#disabled-state}
 
 透過將 `disabled` 布林屬性添加到任何 `<button>` 元素，使按鈕看起來處於停用狀態。
 
@@ -101,11 +101,11 @@ Bootstrap 包括多個預先定義的按鈕樣式，每個都有自己的語義�
 `.disabled` 使用 `pointer-events: none` 來禁用 `<a>` 的連結功能，但該 CSS 屬性尚未標準化。此外，即使在支持 `pointer-events: none` 的瀏覽器中，鍵盤導覽仍然不受影響，這意味著鍵盤使用者和輔助性技術的使用者仍然可以啟動這些連結。為了安全起見，在這些連結上添加一個 `tabindex="-1"` 屬性防止他們套用 focus，並使用自訂的 JavaScript 來禁用它們的功能。
 {% endcallout %}
 
-## 按鈕插件
+## 按鈕插件 {#button-plugin}
 
 讓按鈕可以做更多，控制按鈕狀態或群組按鈕等相關的元件。
 
-### 切換狀態
+### 切換狀態 {#toggle-states}
 
 增加 `data-toggle="button"` 來切換按鈕 `active` 狀態。 如果您預先需要切換按鈕，則必須手動將 `.active` class **和** `aria-pressed="true"` 添加到 `<button>` 中。
 
@@ -115,7 +115,7 @@ Bootstrap 包括多個預先定義的按鈕樣式，每個都有自己的語義�
 </button>
 {% endexample %}
 
-### 核取方塊和選項按鈕
+### 核取方塊和選項按鈕 {#checkbox-and-radio-buttons}
 
 Bootstrap 的 `.button` 樣式可以應用於其他元素，例如 `<label>` 以提供核取方塊或選項按鈕樣式進行按鈕切換。 將 `data-toggle="buttons"` 加到包含這些按鈕的 `.btn-group` 中，並透過 JavaScript 來啟用它們的切換行為，並增加 `.btn-group-toggle` 來設置 `<input>` 按鈕。 **請注意，您可以創建單個，或是群組的這些**。
 
@@ -145,7 +145,7 @@ Bootstrap 的 `.button` 樣式可以應用於其他元素，例如 `<label>` 以
 </div>
 {% endexample %}
 
-### Methods
+### Methods {#methods}
 
 | 方法 | 描述 |
 | --- | --- |
