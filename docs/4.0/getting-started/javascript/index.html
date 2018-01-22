@@ -558,17 +558,17 @@ var google_remarketing_only = true;
     background-color: #0b0;
   }
 </style>
-          <h2 id="單獨或編譯">單獨或編譯</h2>
+          <h2 id="individual-or-compiled">單獨或編譯</h2>
 
 <p>可以（使用 Bootstrap 的獨立 <code class="highlighter-rouge">*.js</code> 檔案）使用 <code class="highlighter-rouge">bootstrap.js</code> 或壓縮的 <code class="highlighter-rouge">bootstrap.min.js</code>（切勿同時插入這兩個檔案）將所有外掛程式一次性全部加入。</p>
 
-<h2 id="相依外掛程式">相依外掛程式</h2>
+<h2 id="dependencies">相依外掛程式</h2>
 
 <p>某些外掛程式和 CSS 元件依賴於其他的插件。若你將外掛程式獨立加入，確保檢查文件中是否有上述的相依關係。同時請注意，所有的外掛程式都依賴 jQuery（這意味著 jQuery 必須在插件檔案 <strong>之前</strong>）。<a href="https://github.com/twbs/bootstrap/blob/v4.0.0/package.json">查詢我們的 <code class="highlighter-rouge">package.json</code></a> ，以查看支援的 jQuery 版本。</p>
 
 <p>工具提示及彈出提示框也相依於 <a href="https://popper.js.org/">Popper.js</a>。</p>
 
-<h2 id="資料屬性-html-data-attributes">資料屬性 (HTML data attributes)</h2>
+<h2 id="data-attributes">資料屬性 (HTML data attributes)</h2>
 
 <p>幾乎可單獨透過 HTML 採用資料屬性（我們偏好於用此方式使用 JavaScript 函式）啟用和配置所有的 Bootstrap 插件。務必 <strong>在一個獨立的元素僅使用一套資料屬性</strong>（比如，你無法從同一個按鍵同時觸發一個工具提示和互動視窗）。</p>
 
@@ -580,7 +580,7 @@ var google_remarketing_only = true;
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">'.alert.data-api'</span><span class="p">)</span></code></pre></figure>
 
-<h2 id="事件">事件</h2>
+<h2 id="events">事件</h2>
 
 <p>Bootstrap 為大多數插件行為提供了自定義的事件。一般而言，事件都具有不定式和過去分詞的形式 - 其中不定式（比如 <code class="highlighter-rouge">Show</code>）在事件開始時被觸發，其過去分詞形式（比如 <code class="highlighter-rouge">shown</code>）在某一動作完成時被觸發。</p>
 
@@ -590,7 +590,7 @@ var google_remarketing_only = true;
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown</span>
 <span class="p">})</span></code></pre></figure>
 
-<h2 id="程式化-api">程式化 API</h2>
+<h2 id="programmatic-api">程式化 API</h2>
 
 <p>我們相信你會需要透過 JavaScript API 使用其它插件。所有的公開 APIs 均為單一、可串接的的方法，並且有回傳的行為。</p>
 
@@ -604,7 +604,7 @@ var google_remarketing_only = true;
 
 <p>每個插件同時使用 <code class="highlighter-rouge">Constructor</code> 屬性上的建構式屬性：<code class="highlighter-rouge">$.fn.popover.Constructor</code>。若你想獲得一個特定的插件，直接從一個元素取用：<code class="highlighter-rouge">$('[rel="popover"]').data('popover')</code>。</p>
 
-<h3 id="非同步函式及轉換">非同步函式及轉換</h3>
+<h3 id="asynchronous-functions-and-transitions">非同步函式及轉換</h3>
 
 <p>所有程式的 API 行為都是 <strong>非同步</strong> 的，且在一開始調換並在 <strong>結束之前</strong> 回傳。</p>
 
@@ -625,26 +625,26 @@ var google_remarketing_only = true;
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#myCarousel'</span><span class="p">).</span><span class="nx">carousel</span><span class="p">(</span><span class="s1">'1'</span><span class="p">)</span> <span class="c1">// Will start sliding to the slide 1 and returns to the caller</span>
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#myCarousel'</span><span class="p">).</span><span class="nx">carousel</span><span class="p">(</span><span class="s1">'2'</span><span class="p">)</span> <span class="c1">// !! Will be ignored, as the transition to the slide 1 is not finished !!</span></code></pre></figure>
 
-<h3 id="預設設定">預設設定</h3>
+<h3 id="default-settings">預設設定</h3>
 
 <p>你可以通過修改插件 <code class="highlighter-rouge">Constructor.Default</code> 物件，更改插件的預設設置。</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span> <span class="c1">// changes default for the modal plugin's `keyboard` option to false</span></code></pre></figure>
 
-<h2 id="無衝突">無衝突</h2>
+<h2 id="no-conflict">無衝突</h2>
 
 <p>有時必須和其他 UI 框架一起使用 Bootstrap 插件。在此情形中，有時會出現命名空間的衝突。若出現此情況，你可以在意圖恢復其數值的插件上調用 <code class="highlighter-rouge">.noConflict</code>。</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value</span>
 <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span>            <span class="c1">// give $().bootstrapBtn the Bootstrap functionality</span></code></pre></figure>
 
-<h2 id="版本號">版本號</h2>
+<h2 id="version-numbers">版本號</h2>
 
 <p>可以通過插件建構函式的 <code class="highlighter-rouge">VERSION</code> 屬性訪問每個 Bootstrap 的 jQuery 插件版本。比如，對工具提示插件：</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; "4.0.0"</span></code></pre></figure>
 
-<h2 id="當-javascript-禁用時無特殊回饋">當 JavaScript 禁用時無特殊回饋</h2>
+<h2 id="no-special-fallbacks-when-javascript-is-disabled">當 JavaScript 禁用時無特殊回饋</h2>
 
 <p>當禁用 JavaScript 時，Bootstrap 的插件不會有特別回饋。若你擔心此等情況中的使用者體驗，使用 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code class="highlighter-rouge">&lt;noscript&gt;</code></a> 以向你的用戶解釋此情形（以及重啟JavaScript的方式）和/或添加你自己定義的回饋。</p>
 

@@ -573,7 +573,7 @@ var google_remarketing_only = true;
     background-color: #0b0;
   }
 </style>
-          <h2 id="如何運作">如何運作</h2>
+          <h2 id="how-it-works">如何運作</h2>
 
 <p>輪播是一個幻燈片，是使用 CSS 3D 的變形轉換和一些 JavaScript 構建一系列內容產生的迴圈播放。它適用於一系列圖像、文本或自訂標記。它還包括對上一個 / 下一個控制項和指示器的支援。</p>
 
@@ -583,13 +583,13 @@ var google_remarketing_only = true;
 
 <p>最後，如果你要自行編譯 JS，記得 <a href="/docs/4.0/getting-started/javascript/#util">requires <code class="highlighter-rouge">util.js</code></a>。</p>
 
-<h2 id="範例">範例</h2>
+<h2 id="example">範例</h2>
 
 <p>輪播不會自動使幻燈片尺寸標準化。因此，您可能需要使用其它通用類別或自訂樣式來調整成適當內容大小。雖然輪播支援上一個/下一個控制項和指示器，但是它們不是必備項目。可根據您的需要添加和自訂。</p>
 
 <p>確保在 <code class="highlighter-rouge">.carousel</code> 上為可選控制項設置唯一的 ID，特別是您在單個頁面上使用多個輪播。</p>
 
-<h3 id="僅有幻燈片">僅有幻燈片</h3>
+<h3 id="slides-only">僅有幻燈片</h3>
 
 <p>這是一個只有幻燈片的輪播。 請注意在輪播圖像上存在 <code class="highlighter-rouge">.d-block</code> 和 <code class="highlighter-rouge">.img-fluid</code>，以修正瀏覽器預設的圖像對齊。</p>
 
@@ -622,7 +622,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="包含控制項">包含控制項</h3>
+<h3 id="with-controls">包含控制項</h3>
 
 <p>加入向前及向後的控制項：</p>
 
@@ -671,7 +671,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="包含指示器">包含指示器</h3>
+<h3 id="with-indicators">包含指示器</h3>
 
 <p>您還可以將指示器與控制項一起添加到輪播中。</p>
 
@@ -736,7 +736,7 @@ var google_remarketing_only = true;
 <p>需要將 <code class="highlighter-rouge">.active</code> 加入到一個幻燈片內，否則輪播將看不見。</p>
 </div>
 
-<h3 id="包含字幕">包含字幕</h3>
+<h3 id="with-captions">包含字幕</h3>
 
 <p>在 <code class="highlighter-rouge">.carousel-item</code> 中使用 <code class="highlighter-rouge">.carousel-caption</code> 添加字幕到您的幻燈片。它們會隱藏在較小的 viewport 上，如下所示，可用的 <a href="/docs/4.0/utilities/display/">顯示通用類別</a>。 我們最初用 <code class="highlighter-rouge">.d-none</code> 隱藏它們，並將它們顯示在中型的設備上(使用 <code class="highlighter-rouge">.d-md-block</code>)。</p>
 
@@ -789,19 +789,19 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="用法">用法</h2>
+<h2 id="usage">用法</h2>
 
-<h3 id="透過資料屬性">透過資料屬性</h3>
+<h3 id="via-data-attributes">透過資料屬性</h3>
 
 <p>使用資料屬性可以輕鬆控制輪播的位置。<code class="highlighter-rouge">data-slide</code> 接受 <code class="highlighter-rouge">prev</code>或 <code class="highlighter-rouge">next</code> 的關鍵字，它們相對於當前位置進而改變幻燈片位置。或者，使用 <code class="highlighter-rouge">data-slide-to</code> 將原始幻燈片索引轉換到 <code class="highlighter-rouge">data-slide-to="2"</code>，將幻燈片位置移動到以 0 開頭的特定索引。</p>
 
-<h3 id="透過-javascript">透過 JavaScript</h3>
+<h3 id="via-javascript">透過 JavaScript</h3>
 
 <p>透過以下方法使用輪播：</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.carousel'</span><span class="p">).</span><span class="nx">carousel</span><span class="p">()</span></code></pre></figure>
 
-<h3 id="選項">選項</h3>
+<h3 id="options">選項</h3>
 
 <p>可以透過資料屬性或 JavaScript 調整選項。對於資料屬性，將選項名稱附加到 <code class="highlighter-rouge">data-</code>，如 <code class="highlighter-rouge">data-interval=""</code>。</p>
 
@@ -855,7 +855,7 @@ var google_remarketing_only = true;
   </tbody>
 </table>
 
-<h3 id="方法">方法</h3>
+<h3 id="methods">方法</h3>
 
 <div class="bd-callout bd-callout-danger">
 <h4 id="asynchronous-methods-and-transitions">Asynchronous methods and transitions</h4>
@@ -897,7 +897,7 @@ var google_remarketing_only = true;
 
 <p>銷毀一個元素的輪播</p>
 
-<h3 id="事件">事件</h3>
+<h3 id="events">事件</h3>
 
 <p>Bootstrap 提供了兩個事件給予輪播使用。 兩個事件都具有以下附加屬性：</p>
 

@@ -582,7 +582,7 @@ var google_remarketing_only = true;
     background-color: #0b0;
   }
 </style>
-          <h2 id="簡介">簡介</h2>
+          <h2 id="introduction">簡介</h2>
 
 <p>在 Bootstrap 3 中主題更動是由 LESS 的變數覆寫、自訂 CSS 及分離的主題樣式表，這些包含在我們的 Dist 文件中，通過一些加強，現在可以完全重新設計 Bootstrap 3 的外觀無需修改核心文件，Bootstrap 提供一種熟悉但略有不同的作法。</p>
 
@@ -592,7 +592,7 @@ var google_remarketing_only = true;
 
 <p>利用我們的 Sass 原始檔來調整變數、Sass maps、mixins 還有其它等等。</p>
 
-<h3 id="檔案結構">檔案結構</h3>
+<h3 id="file-structure">檔案結構</h3>
 
 <p>盡可能避免修改 Bootstrap 核心文件。對於 Sass 來說，這是創建你的樣式表並導入 Bootstrap 核心，這便於你修改並擴增它。假設你使用套件管理工具像是 npm，那麼文件結構應該如下所示：</p>
 
@@ -613,7 +613,7 @@ var google_remarketing_only = true;
     ├── js
     └── scss</code></pre></figure>
 
-<h3 id="匯入">匯入</h3>
+<h3 id="importing">匯入</h3>
 
 <p>在您的 <code class="highlighter-rouge">custom.scss</code> 中，您將導入 Bootstrap 的 Sass 原始檔案。您有兩個選擇：包括所有 Bootstrap 或 選擇您需要的部分。我們鼓勵後者，但請注意，我們的組件有一些要求和相依性。您還需要為我們的插件加入一些 JavaScript。</p>
 
@@ -639,7 +639,7 @@ var google_remarketing_only = true;
 
 <p>使用該設置，您可以開始修改 <code class="highlighter-rouge">custom.scss</code> 中的任何 Sass 變數和 Sass maps。您還可以依據需求開始在 <code class="highlighter-rouge">// Optional</code> 部分下增加 Bootstrap 的部分元件。我們建議使用 <code class="highlighter-rouge">bootstrap.scss</code> 作為你文件的起始。</p>
 
-<h3 id="預設變數">預設變數</h3>
+<h3 id="variable-defaults">預設變數</h3>
 
 <p>Bootstrap 4 中的每個 Sass變數都包含 <code class="highlighter-rouge">!default</code>，允許您在自己的 Sass 中覆蓋變數的預設值，而無需修改 Bootstrap 的原始碼。 根據需要複製和貼上變數，修改它們的值並刪除 <code class="highlighter-rouge">!default</code>。如果你給予一個變數值，那麼它將不會被 Bootstrap 中的預設值重複定義。</p>
 
@@ -656,13 +656,13 @@ var google_remarketing_only = true;
 
 <p>重複任何需要的變數在 Bootstrap 中，包含在下方的全域選項。</p>
 
-<h3 id="sass-maps-與循環">Sass Maps 與循環</h3>
+<h3 id="maps-and-loops">Sass Maps 與循環</h3>
 
 <p>Bootstrap 4 包含一些 Sass maps、對應值，這使它更容易產生一連貫的 CSS。我們使用 Sass map 做為我們的顏色、中斷點還有更多，就像是 Sass 變數，所有 Sass map 都包含 <code class="highlighter-rouge">!default</code> 他更能夠覆蓋及擴增。</p>
 
 <p>我們的一些 Sass Map 預設合併為空白的，這樣做是為了使 Sass Map 更容易擴增，但如果從 Sass 地圖移除項目會稍微困難一些。</p>
 
-<h4 id="修改-map">修改 map</h4>
+<h4 id="modify-map">修改 map</h4>
 
 <p>例如，要修改 <code class="highlighter-rouge">$theme-colors</code> mps 的現有顏色，請將以下內容加到您的自定義 Sass 文件中：</p>
 
@@ -671,7 +671,7 @@ var google_remarketing_only = true;
   <span class="s2">"danger"</span><span class="o">:</span> <span class="mh">#ff4136</span>
 <span class="p">);</span></code></pre></figure>
 
-<h4 id="加入到-map">加入到 map</h4>
+<h4 id="add-to-map">加入到 map</h4>
 
 <p>增加一個新色彩到 <code class="highlighter-rouge">$theme-colors</code>，並增加一個新的 key 及 值。</p>
 
@@ -679,7 +679,7 @@ var google_remarketing_only = true;
   <span class="s2">"custom-color"</span><span class="o">:</span> <span class="mh">#900</span>
 <span class="p">);</span></code></pre></figure>
 
-<h4 id="從-map-中移除變數">從 Map 中移除變數</h4>
+<h4 id="remove-from-map">從 Map 中移除變數</h4>
 
 <p>移除色彩從 <code class="highlighter-rouge">$theme-colors</code>，或其他的 map 可用 <code class="highlighter-rouge">map-remove</code>。</p>
 
@@ -732,7 +732,7 @@ var google_remarketing_only = true;
 
 <p>未來還可以增加其他功能，或你可以用自定義的 Sass 創建附加 Sass maps 的級別函式。</p>
 
-<h3 id="顏色對比">顏色對比</h3>
+<h3 id="color-contrast">顏色對比</h3>
 
 <p>Bootstrap 中另外一個函式是色彩對比功能 <code class="highlighter-rouge">color-yiq</code>。 它使用 <a href="https://en.wikipedia.org/wiki/YIQ">YIQ 色彩空間</a> 根據指定的基色自動回傳白色 (<code class="highlighter-rouge">#fff</code>) 或深色 (<code class="highlighter-rouge">#111</code>) 的對比度顏色。 此功能對於要生成多個 Class 的 mixins 或 循環 特別有用。</p>
 
@@ -756,7 +756,7 @@ var google_remarketing_only = true;
   <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nf">theme-color</span><span class="p">(</span><span class="s2">"dark"</span><span class="p">));</span> <span class="c1">// returns `color: #fff`</span>
 <span class="p">}</span></code></pre></figure>
 
-<h2 id="sass-選項">Sass 選項</h2>
+<h2 id="sass-options">Sass 選項</h2>
 
 <p>使用我們內置的自定義變數文件自定義 Bootstrap 4，並使用新的 <code class="highlighter-rouge">$enable-*</code> Sass 變數切換全局 CSS 選項。覆寫變數的值，並依據需要重新編譯 <code class="highlighter-rouge">npm run test</code>。</p>
 
@@ -819,11 +819,11 @@ var google_remarketing_only = true;
   </tbody>
 </table>
 
-<h2 id="色彩">色彩</h2>
+<h2 id="color">色彩</h2>
 
 <p>Bootstrap 的許多元件和通用類別都是透過 Sass map 中定義的一系列顏色建構的。該 maps 可以在 Sass 中循環，以快速生成一系列規則集。</p>
 
-<h3 id="全部色彩">全部色彩</h3>
+<h3 id="all-colors">全部色彩</h3>
 
 <p>Bootstrap 4 中提供的顏色都可用作我們的 <code class="highlighter-rouge">scss/_variables.scss</code> 文件中的 Sass 變數和 Sass maps。這將在下一個次要版本增加額外的陰影，樣式像<a href="#grays">grayscale palette</a>。）</p>
 
@@ -911,7 +911,7 @@ var google_remarketing_only = true;
 <p>將來，我們的目標是為每種顏色的色調提供 Sass maps 和變數，就像下面的灰階色彩一樣。</p>
 </div>
 
-<h3 id="主題色彩">主題色彩</h3>
+<h3 id="theme-colors">主題色彩</h3>
 
 <p>我們使用所有色彩的子集來創建一個小的色表，用來產生色彩主題，也同時能透過 <code class="highlighter-rouge">scss/_variables.scss</code> 使用 Sass 變數、Sass map。</p>
 

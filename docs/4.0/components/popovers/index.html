@@ -582,7 +582,7 @@ var google_remarketing_only = true;
     background-color: #0b0;
   }
 </style>
-          <h2 id="概觀">概觀</h2>
+          <h2 id="overview">概觀</h2>
 
 <p>使用彈出提示框插件時應瞭解的事情如下：</p>
 
@@ -601,7 +601,7 @@ var google_remarketing_only = true;
 
 <p>都明白了？太好了，讓我們透過一些例子看他們是如何運作的。</p>
 
-<h2 id="範例在任何地方啟用彈出提示框">範例：在任何地方啟用彈出提示框</h2>
+<h2 id="example-enable-popovers-everywhere">範例：在任何地方啟用彈出提示框</h2>
 
 <p>在頁面上初始化所有彈出提示框的一種方法是透過它們的 <code class="highlighter-rouge">data-toggle</code> 屬性來選擇它們：</p>
 
@@ -609,7 +609,7 @@ var google_remarketing_only = true;
   <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-toggle="popover"]'</span><span class="p">).</span><span class="nx">popover</span><span class="p">()</span>
 <span class="p">})</span></code></pre></figure>
 
-<h2 id="範例使用-container-選項">範例：使用 <code class="highlighter-rouge">container</code> 選項</h2>
+<h2 id="example-using-the-container-option">範例：使用 <code class="highlighter-rouge">container</code> 選項</h2>
 
 <p>當您在父元素上有一些干擾彈出提示框的樣式時，您將需要指定一個自訂的 <code class="highlighter-rouge">container</code> ，以便彈出提示框的 HTML 顯示在該元素中。</p>
 
@@ -619,14 +619,14 @@ var google_remarketing_only = true;
   <span class="p">})</span>
 <span class="p">})</span></code></pre></figure>
 
-<h2 id="範例">範例</h2>
+<h2 id="example">範例</h2>
 
 <div class="bd-example">
 <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Popover title"</span> <span class="na">data-content=</span><span class="s">"And here's some amazing content. It's very engaging. Right?"</span><span class="nt">&gt;</span>Click to toggle popover<span class="nt">&lt;/button&gt;</span></code></pre></div>
 
-<h3 id="四個方向">四個方向</h3>
+<h3 id="four-directions">四個方向</h3>
 
 <p>Four options are available: top, right, bottom, and left aligned.</p>
 
@@ -664,7 +664,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
   Popover on left
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
-<h3 id="下次點擊移除">下次點擊移除</h3>
+<h3 id="dismiss-on-next-click">下次點擊移除</h3>
 
 <p>使用 <code class="highlighter-rouge">focus</code> 觸發以便用戶進行下一次點擊時移除這個彈出提示框。</p>
 
@@ -683,7 +683,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
   <span class="na">trigger</span><span class="p">:</span> <span class="s1">'focus'</span>
 <span class="p">})</span></code></pre></figure>
 
-<h3 id="禁用的元素">禁用的元素</h3>
+<h3 id="disabled-elements">禁用的元素</h3>
 
 <p>具有 <code class="highlighter-rouge">disabled</code> 的元素是不能產生互動的，這意味用戶不能使用 hover 及點擊觸發彈出(或工具提示)，如果想要啟用，你使用 <code class="highlighter-rouge">&lt;div&gt;</code> 或 <code class="highlighter-rouge">&lt;span&gt;</code> 包覆並覆蓋 <code class="highlighter-rouge">pointer-events</code> 在禁用的屬性上。</p>
 
@@ -698,11 +698,11 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">style=</span><span class="s">"pointer-events: none;"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/span&gt;</span></code></pre></div>
 
-<h2 id="用法">用法</h2>
+<h2 id="usage">用法</h2>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span></code></pre></figure>
 
-<h3 id="選項">選項</h3>
+<h3 id="options">選項</h3>
 
 <p>可以透過資料屬性或 JavaScript 傳遞選項。 對於資料屬性，將選項名稱附加到 <code class="highlighter-rouge">data-</code> 上，如 <code class="highlighter-rouge">data-animation=""</code>。</p>
 

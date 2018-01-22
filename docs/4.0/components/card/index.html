@@ -585,11 +585,11 @@ var google_remarketing_only = true;
     background-color: #0b0;
   }
 </style>
-          <h2 id="關於">關於</h2>
+          <h2 id="about">關於</h2>
 
 <p><strong>卡片</strong> 是一個靈活可擴展的內容容器。包含頁眉和頁腳的選項、各種彈性內容、情境顏色和強大的顯示選項。如果你熟悉 Bootstrap 3，卡片取代了舊的 panels、wells、thumbnails(以上為原文名稱)，類似的功能已經都整合到卡片內了。</p>
 
-<h2 id="範例">範例</h2>
+<h2 id="example">範例</h2>
 
 <p>卡片構建時盡可能少一些標記和樣式，但仍然可以提供許多的控制項和自定義。使用 flexbox 構建，它們可以使對齊更方便並且與其它 Bootstrap 元件良好混合。預設中他並沒有 <code class="highlighter-rouge">margin</code>，所以可以依需求加入 <a href="/docs/4.0/utilities/spacing/">spacing utilities</a>。</p>
 
@@ -614,11 +614,11 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="內容設計">內容設計</h2>
+<h2 id="content-types">內容設計</h2>
 
 <p>卡支援各種內容，包括圖像、文本、清單組、連結等。以下是支援的範例。</p>
 
-<h3 id="主要區塊">主要區塊</h3>
+<h3 id="body">主要區塊</h3>
 
 <p>卡的塊狀構建是 <code class="highlighter-rouge">.card-body</code>。當你需要在一個卡片內含 padding 部分就可以使用它。</p>
 
@@ -635,7 +635,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="標題-文本-連結">標題 文本 連結</h3>
+<h3 id="titles-text-and-links">標題 文本 連結</h3>
 
 <p>卡片標題的使用時在 <code class="highlighter-rouge">&lt;h*&gt;</code> 標籤中添加 <code class="highlighter-rouge">.card-title</code>。 同樣，將 <code class="highlighter-rouge">.card-link</code> 加到 <code class="highlighter-rouge">&lt;a&gt;</code> 標籤中實現連結的添加。</p>
 
@@ -662,7 +662,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="圖片">圖片</h3>
+<h3 id="images">圖片</h3>
 
 <p><code class="highlighter-rouge">.card-img-top</code> 將圖像放在卡片頂部。 使用 <code class="highlighter-rouge">.card-text</code> 可以將文字內容可以添加到卡片中。 <code class="highlighter-rouge">.card-text</code> 中的文本也可以用標準的 HTML 標籤設計樣式。</p>
 
@@ -681,7 +681,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="列表群組">列表群組</h3>
+<h3 id="list-groups">列表群組</h3>
 
 <p>建立一個包含內容的清單卡片。</p>
 
@@ -725,7 +725,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="混合樣式">混合樣式</h3>
+<h3 id="kitchen-sink">混合樣式</h3>
 
 <p>混合並搭配多個內容形式，用來創建你所需要的卡片。以下來說是圖像風格、塊狀、文字風格以及清單在一個固定寬度的卡片中。</p>
 
@@ -764,7 +764,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="頁眉和頁腳">頁眉和頁腳</h3>
+<h3 id="header-and-footer">頁眉和頁腳</h3>
 
 <p>在卡片內加入選擇性的頁眉或頁腳。</p>
 
@@ -866,11 +866,11 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="縮放">縮放</h2>
+<h2 id="sizing">縮放</h2>
 
 <p>卡片假設沒有特定的 <code class="highlighter-rouge">width</code>，那麼除非另有聲明，否則它們的寬度將是100％。您可以根據需求自訂 CSS、網格系統、Sass mixins grid 或通用類別來調整。</p>
 
-<h3 id="使用網格標記">使用網格標記</h3>
+<h3 id="using-grid-markup">使用網格標記</h3>
 
 <p>使用網格，根據需求按行與列包裝卡片。</p>
 
@@ -917,7 +917,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="使用通用類別">使用通用類別</h3>
+<h3 id="using-utilities">使用通用類別</h3>
 
 <p>使用我們的幾個 <a href="/docs/4.0/utilities/sizing/">可調整大小的通用類別</a> 來設置卡片的寬度。</p>
 
@@ -954,7 +954,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="使用客製化-css">使用客製化 CSS</h3>
+<h3 id="using-custom-css">使用客製化 CSS</h3>
 
 <p>在樣式表中使用自訂 CSS 或使用行內樣式設置寬度。</p>
 
@@ -975,7 +975,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="文字對齊">文字對齊</h2>
+<h2 id="text-alignment">文字對齊</h2>
 
 <p>您可以透過我們的 <a href="/docs/4.0/utilities/typography/#text-alignment">文本對齊 Class</a> 更改任何卡片的整體或特定部分的文本對齊方式）。</p>
 
@@ -1028,7 +1028,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="導覽">導覽</h2>
+<h2 id="navigation">導覽</h2>
 
 <p>使用 Bootstrap <a href="/docs/4.0/components/navs/">導覽元件</a> 向卡片的標題（或塊）添加一些導覽。</p>
 
@@ -1118,7 +1118,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="圖像">圖像</h2>
+<h2 id="images-1">圖像</h2>
 
 <p>卡片包含一些選項用來搭配圖像。選擇在卡片的任一端附加 “image caps”，用卡片內容覆蓋圖像 (像是背景)，或者只是將圖像嵌入到卡中。</p>
 
@@ -1161,7 +1161,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-bottom"</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"Card image cap"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="圖像覆蓋">圖像覆蓋</h3>
+<h3 id="image-overlays">圖像覆蓋</h3>
 
 <p>將圖像轉換為卡片背景，並疊加卡片的文字。 根據圖像，你可以選擇是否需要額外的樣式或通用類別。</p>
 
@@ -1184,11 +1184,11 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="卡片樣式">卡片樣式</h2>
+<h2 id="card-styles">卡片樣式</h2>
 
 <p>包括用於客制其背景、邊框和顏色的各種選項。</p>
 
-<h3 id="背景與顏色">背景與顏色</h3>
+<h3 id="background-and-color">背景與顏色</h3>
 
 <p>使用 <a href="/docs/4.0/utilities/colors/">文字與背景通用類別</a>來改變卡片的顯示顏色。</p>
 
@@ -1313,7 +1313,7 @@ var google_remarketing_only = true;
 <p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code class="highlighter-rouge">.sr-only</code> class.</p>
 </div>
 
-<h3 id="框線">框線</h3>
+<h3 id="border">框線</h3>
 
 <p>使用 <a href="/docs/4.0/utilities/borders/">框線通用類別</a> 來改變卡片的 <code class="highlighter-rouge">border-color</code>。也能設置 <code class="highlighter-rouge">.text-{color}</code> class 在父層的 <code class="highlighter-rouge">.card</code>，或者是卡片的顯示內容上。</p>
 
@@ -1432,7 +1432,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="mixins-通用類別">Mixins 通用類別</h3>
+<h3 id="mixins-utilities">Mixins 通用類別</h3>
 
 <p>也能夠改卡片頁首及頁腳的框線，也能使用 <code class="highlighter-rouge">.bg-transparent</code> 移除背景顏色。</p>
 
@@ -1455,11 +1455,11 @@ var google_remarketing_only = true;
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer bg-transparent border-success"</span><span class="nt">&gt;</span>Footer<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="卡片排版">卡片排版</h2>
+<h2 id="card-layout">卡片排版</h2>
 
-<p>Bootstrap除了對卡片內的內容進行設計外，還包括一些卡片佈置的選項。目前 <strong>這些排版還沒包含響應式</strong>。</p>
+<p>Bootstrap 除了對卡片內的內容進行設計外，還包括一些卡片佈置的選項。目前 <strong>這些排版還沒包含響應式</strong>。</p>
 
-<h3 id="卡片群組">卡片群組</h3>
+<h3 id="card-groups">卡片群組</h3>
 
 <p>將多個卡片和成為一個群組，他們具有相同寬度和高度的列。卡片群組使用 <code class="highlighter-rouge">display: flex;</code> 來實現他們一致的尺寸。</p>
 
@@ -1587,7 +1587,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="卡片疊">卡片疊</h3>
+<h3 id="card-decks">卡片疊</h3>
 
 <p>需要一套互不相連但寬度和高度相同的卡片？使用卡片疊。</p>
 
@@ -1715,7 +1715,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="卡片欄">卡片欄</h3>
+<h3 id="card-columns">卡片欄</h3>
 
 <p>將它們包在 <code class="highlighter-rouge">.card-columns</code> 中，可以將卡片像 <a href="https://masonry.desandro.com">Masonry</a> 那樣的瀑布式排列。卡片是使用 CSS <code class="highlighter-rouge">column</code> 屬性而不是 flexbox 來構建，更便於對齊。排列是從上到下、從左到右。</p>
 

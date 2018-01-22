@@ -418,7 +418,7 @@ var google_remarketing_only = true;
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#概觀">概觀</a></li>
+<li class="toc-entry toc-h2"><a href="#概觀-overview">概觀 {#overview}</a></li>
 <li class="toc-entry toc-h2"><a href="#範例在任何地方啟用工具提示框">範例：在任何地方啟用工具提示框</a></li>
 <li class="toc-entry toc-h2"><a href="#範例">範例</a></li>
 <li class="toc-entry toc-h2"><a href="#用法">用法</a>
@@ -559,7 +559,7 @@ var google_remarketing_only = true;
     background-color: #0b0;
   }
 </style>
-          <h2 id="概觀">概觀</h2>
+          <h2 id="概觀-overview">概觀 {#overview}</h2>
 
 <p>使用工具提示框插件時應瞭解的事情如下：</p>
 
@@ -577,7 +577,7 @@ var google_remarketing_only = true;
 
 <p>都明白了？太好了，讓我們透過一些例子看他們是如何運作的。</p>
 
-<h2 id="範例在任何地方啟用工具提示框">範例：在任何地方啟用工具提示框</h2>
+<h2 id="example-enable-tooltips-everywhere">範例：在任何地方啟用工具提示框</h2>
 
 <p>在頁面上初始化所有工具提示框的一種方法是透過它們的 <code class="highlighter-rouge">data-toggle</code> 屬性來選擇它們：</p>
 
@@ -585,7 +585,7 @@ var google_remarketing_only = true;
   <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-toggle="tooltip"]'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">()</span>
 <span class="p">})</span></code></pre></figure>
 
-<h2 id="範例">範例</h2>
+<h2 id="examples">範例</h2>
 
 <p>滑鼠 hover 以下連結上以查看工具提示框</p>
 
@@ -625,7 +625,7 @@ var google_remarketing_only = true;
   Tooltip with HTML
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
-<h2 id="用法">用法</h2>
+<h2 id="usage">用法</h2>
 
 <p>工具提示框插件根據需要生成內容和標記，預設情況下它們在觸發元素之後放置工具提示框。</p>
 
@@ -633,7 +633,7 @@ var google_remarketing_only = true;
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span></code></pre></figure>
 
-<h3 id="標記">標記</h3>
+<h3 id="markup">標記</h3>
 
 <p>工具提示框所需的標記只是一個 <code class="highlighter-rouge">data</code> 屬性，和您希望擁有一個工具提示框 HTML 元素上的 <code class="highlighter-rouge">title</code>。 生成工具提示框的標記是相當簡單的，儘管它需要一個位置（預設情況下，他的位置是 <code class="highlighter-rouge">top</code>）。</p>
 
@@ -656,7 +656,7 @@ var google_remarketing_only = true;
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="禁用的元素">禁用的元素</h3>
+<h3 id="disabled-elements">禁用的元素</h3>
 
 <p>具有 <code class="highlighter-rouge">disabled</code> 的元素是不能產生互動的，這意味用戶不能使用 hover 及點擊觸發彈出(或工具提示)，如果想要啟用，可使用 <code class="highlighter-rouge">&lt;div&gt;</code> 或 <code class="highlighter-rouge">&lt;span&gt;</code> 包覆，且調整 <code class="highlighter-rouge">tabindex="0"</code> 讓鍵盤能夠切換，並覆蓋 <code class="highlighter-rouge">pointer-events</code> 在禁用的屬性上。</p>
 
@@ -672,7 +672,7 @@ var google_remarketing_only = true;
 
 </div>
 
-<h3 id="選項">選項</h3>
+<h3 id="options">選項</h3>
 
 <p>可以透過資料屬性或 JavaScript 傳遞選項。對於資料屬性，將選項名稱附加到 <code class="highlighter-rouge">data-</code>，如 <code class="highlighter-rouge">data-animation=""</code>。</p>
 
@@ -795,7 +795,7 @@ var google_remarketing_only = true;
 <p>可以通過使用資料屬性來指定單個工具提示框的選項，如上所述。</p>
 </div>
 
-### 方法
+### 方法 {#methods}
 
 
 <div class="bd-callout bd-callout-danger">
@@ -885,7 +885,7 @@ Toggles the ability for an element's tooltip to be shown or hidden.
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'update'</span><span class="p">)</span></code></pre></figure>
 
 
-### Events
+### Events {#events}
 
 <table class="table table-bordered table-striped">
   <thead>

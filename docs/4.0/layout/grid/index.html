@@ -428,7 +428,7 @@ var google_remarketing_only = true;
 <li class="toc-entry toc-h3"><a href="#等寬度多行">等寬度多行</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#響應式-classes">響應式 classes</a>
+<li class="toc-entry toc-h2"><a href="#響應式-classes">響應式 Classes</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#所有中斷點">所有中斷點</a></li>
 <li class="toc-entry toc-h3"><a href="#水平堆疊">水平堆疊</a></li>
@@ -595,11 +595,11 @@ var google_remarketing_only = true;
     background-color: #0b0;
   }
 </style>
-          <h2 id="如何運作">如何運作</h2>
+          <h2 id="how-it-works">如何運作</h2>
 
 <p>Bootstrap 的網格系統使用一系列容器、行、和欄佈局和對齊內容。它用 <a href="(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)">flexbox</a> 建立，並且完全符合響應式。下面是網格系統如何整合的例子及深入瞭解。</p>
 
-<p><strong>New to or unfamiliar with flexbox?</strong> <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">Read this CSS Tricks flexbox guide</a> for background, terminology, guidelines, and code snippets.</p>
+<p><strong>還不熟悉 Flex 嗎？</strong> <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">閱讀此份 Flex 指引</a> 對於背景、術語、指引、程式碼片段。</p>
 
 <div class="bd-example-row">
 
@@ -655,7 +655,7 @@ var google_remarketing_only = true;
 
 <p>覺得如何呢？很好，我們繼續在範例中全面瞭解。</p>
 
-<h2 id="網格選項">網格選項</h2>
+<h2 id="grid-options">網格選項</h2>
 
 <p>當 Bootstrap 使用<code class="highlighter-rouge">em</code> 或 <code class="highlighter-rouge">rem</code> 定義更多尺寸時，<code class="highlighter-rouge">px</code>用於網格中斷點和容器寬度。這是因為 viewport 寬度按 pixel 計算，並且不會隨（字體大小）<a href="https://drafts.csswg.org/mediaqueries-3/#units">font size</a> 改變。</p>
 
@@ -723,11 +723,11 @@ var google_remarketing_only = true;
   </tbody>
 </table>
 
-<h2 id="自動佈局的欄">自動佈局的欄</h2>
+<h2 id="auto-layout-columns">自動佈局的欄</h2>
 
 <p>使用特定中斷點欄類方便的確定欄的大小，而不是明確的寬度 class，例如<code class="highlighter-rouge">.col-sm-6</code>。</p>
 
-<h3 id="等寬">等寬</h3>
+<h3 id="equal-width">等寬</h3>
 
 <p>例如，有兩個網格佈局適用於每個裝置和 viewport，從 <code class="highlighter-rouge">xs</code> 到 <code class="highlighter-rouge">xl</code>。對每一個你需要的中斷點增加無單位的 class，每一欄將具有相同的寬度。</p>
 
@@ -805,7 +805,7 @@ var google_remarketing_only = true;
 
 </div>
 
-<h3 id="設置一欄寬度">設置一欄寬度</h3>
+<h3 id="setting-one-column-width">設置一欄寬度</h3>
 
 <p>flexbox 網格欄的自動佈局中你可以設置欄的寬度，並且其左右欄將在其周圍自動調整大小。你也可以使用預定義的網格 Class (如下所示)、Grid mixins、或行內寬度。請注意，無論中間欄的寬度，其它欄都將重新調整大小。</p>
 
@@ -863,7 +863,7 @@ var google_remarketing_only = true;
 
 </div>
 
-<h3 id="可變寬度內容">可變寬度內容</h3>
+<h3 id="variable-width-content">可變寬度內容</h3>
 
 <p>基於欄內容的自然寬度，可使用 <code class="highlighter-rouge">col-{breakpoint}-auto</code> 調整欄的大小</p>
 
@@ -921,7 +921,7 @@ var google_remarketing_only = true;
 
 </div>
 
-<h3 id="等寬度多行">等寬度多行</h3>
+<h3 id="equal-width-multi-row">等寬度多行</h3>
 
 <p>如果你希望欄另外分隔另一行，可在中間加入<code class="highlighter-rouge">.w-100</code> 建立等寬度欄。通過將<code class="highlighter-rouge">.w-100</code> 與一些（響應式顯示工具）<a href="/docs/4.0/utilities/display/">responsive display utilities</a> 進行分隔。</p>
 
@@ -945,11 +945,11 @@ var google_remarketing_only = true;
 
 </div>
 
-<h2 id="響應式-classes">響應式 classes</h2>
+<h2 id="responsive-classes">響應式 Classes</h2>
 
 <p>Bootstrap 的網格包含五個等級來建立不同的響應式排版。在極小、小、中、大、或極大設備上定制欄的大小來建立符合你需求的尺寸。</p>
 
-<h3 id="所有中斷點">所有中斷點</h3>
+<h3 id="all-breakpoints">所有中斷點</h3>
 
 <p>對於從最小的設備到最大的設備都相同的網格，使用<code class="highlighter-rouge">.col</code> 和 <code class="highlighter-rouge">.col-*</code>。當你需要特定尺寸的欄時就需要指定特定規格；不然 <code class="highlighter-rouge">.col</code> 是可以隨意使用的。</p>
 
@@ -979,27 +979,9 @@ var google_remarketing_only = true;
 
 </div>
 
-<h3 id="水平堆疊">水平堆疊</h3>
+<h3 id="stacked-to-horizontal">水平堆疊</h3>
 
-<p>«««&lt; HEAD
-通過使用 <code class="highlighter-rouge">.col-sm-*</code>，你可以在桌面（中型）設備上變得水平排版之前，建立堆疊在極小裝置上的網格排版。
-=======
-Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, you can create a basic grid system that starts out stacked before becoming horizontal with at the small breakpoint (<code class="highlighter-rouge">sm</code>).</p>
-<blockquote>
-  <blockquote>
-    <blockquote>
-      <blockquote>
-        <blockquote>
-          <blockquote>
-            <blockquote>
-              <p>v4.0.0</p>
-            </blockquote>
-          </blockquote>
-        </blockquote>
-      </blockquote>
-    </blockquote>
-  </blockquote>
-</blockquote>
+<p>通過使用 <code class="highlighter-rouge">.col-sm-*</code>，你可以在桌面（中型）設備上變得水平排版之前，建立堆疊在極小裝置上的網格排版。</p>
 
 <div class="bd-example-row">
 
@@ -1025,7 +1007,7 @@ Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, 
 
 </div>
 
-<h3 id="混合和匹配">混合和匹配</h3>
+<h3 id="mix-and-match">混合和匹配</h3>
 
 <p>不想讓你的欄堆疊在某些網格階層上？依需求使用每一層不同的 class 組合。對於它如何運作，請見下面的例子。</p>
 
@@ -1071,11 +1053,11 @@ Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, 
 
 </div>
 
-<h2 id="對齊">對齊</h2>
+<h2 id="alignment">對齊</h2>
 
 <p>使用 flexbox 對齊垂直和水平。</p>
 
-<h3 id="垂直對齊">垂直對齊</h3>
+<h3 id="vertical-alignment">垂直對齊</h3>
 
 <div class="bd-example-row bd-example-row-flex-cols">
 
@@ -1185,7 +1167,7 @@ Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, 
 
 </div>
 
-<h3 id="水平對齊">水平對齊</h3>
+<h3 id="horizontal-alignment">水平對齊</h3>
 
 <div class="bd-example-row">
 
@@ -1313,7 +1295,7 @@ Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, 
 
 </div>
 
-<h3 id="欄的外圍">欄的外圍</h3>
+<h3 id="column-wrapping">欄的外圍</h3>
 
 <p>如果 12 個以上的欄位於單獨一行內，每一組額外欄（作為一個單元）將換新的一行。</p>
 
@@ -1391,7 +1373,7 @@ Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, 
 
 </div>
 
-<h2 id="排序">排序</h2>
+<h2 id="reordering">排序</h2>
 
 <h3 id="order-classes">Order classes</h3>
 
@@ -1463,11 +1445,11 @@ Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, 
 
 </div>
 
-<h3 id="欄的推移">欄的推移</h3>
+<h3 id="offsetting-columns">欄的推移</h3>
 
 <p>您可以通過兩種方式來位移欄 <code class="highlighter-rouge">.offset-</code> Class 和 <a href="/docs/4.0/utilities/spacing/">margin 通用類別</a>。網格位移的空間與欄間格相符合，這種推移對於快速佈局可增加更多變化。</p>
 
-<h4 id="位移類別">位移類別</h4>
+<h4 id="offset-classes">位移類別</h4>
 
 <p>使用 <code class="highlighter-rouge">.offset-md-*</code> 向右移動列。 透過 <code class="highlighter-rouge">*</code> 增加欄的左邊距。 例如 <code class="highlighter-rouge">.offset-md-4</code> 增加四欄位移 <code class="highlighter-rouge">.col-md-4</code>。</p>
 
@@ -1525,7 +1507,7 @@ Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, 
 
 </div>
 
-<h4 id="margin-通用類別">Margin 通用類別</h4>
+<h4 id="margin-utilities">Margin 通用類別</h4>
 
 <p>隨著第四版改用 flexbox，你可以透過 margin 的通用類別，像是 <code class="highlighter-rouge">.mr-auto</code> 將相鄰的欄位分離到另一邊。</p>
 
@@ -1559,7 +1541,7 @@ Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, 
 
 </div>
 
-<h2 id="巢狀">巢狀</h2>
+<h2 id="nesting">巢狀</h2>
 
 <p>為了將你的內容加入巢狀網格，在現有的 <code class="highlighter-rouge">.col-sm-*</code> 內增加新的 <code class="highlighter-rouge">.row</code> 和 <code class="highlighter-rouge">.col-sm-*</code>欄。巢狀列包括增加到 12 或更少的欄位（你不一定要使用所有 12 個可用的欄）。</p>
 
@@ -1599,7 +1581,7 @@ Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, 
 
 <p>當使用 Bootstrap Sass 檔時，你可以選擇使用 Sass 變數和 mixins 客製化、語義、和控制頁面配置。我們的預定義網格類使用這些相同的變數和 mixins 提供整套隨時可用的 class 用於響應式排版。</p>
 
-<h3 id="變數">變數</h3>
+<h3 id="variables">變數</h3>
 
 <p>變數和 sass map 決定了欄的數量、gutter 的寬度、和開始浮動欄的中斷點。我們使用它們產生上文記錄的定義網格 class ，以及用於下列的客製 mixins 類型。</p>
 
@@ -1640,7 +1622,7 @@ Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, 
 <span class="c1">// Get fancy by offsetting, or changing the sort order</span>
 <span class="k">@include</span> <span class="nd">make-col-offset</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span></code></pre></figure>
 
-<h3 id="範例使用">範例使用</h3>
+<h3 id="example-usage">範例使用</h3>
 
 <p>你可以將變數修改你自己的自訂值，或者僅用預設值使用混合類型。下面是使用預設設置創建兩欄佈局的例子。</p>
 
@@ -1690,18 +1672,18 @@ Using a single set of <code class="highlighter-rouge">.col-sm-*</code> classes, 
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="客製化網格">客製化網格</h2>
+<h2 id="customizing-the-grid">客製化網格</h2>
 
 <p>使用我們的內置網格 Sass 變數和 sass maps，可以完全的客製網格的 class。改變層的數量，media query 的參數，和容器寬度然後重新編譯。</p>
 
-<h3 id="欄與-gutters">欄與 gutters</h3>
+<h3 id="columns-and-gutters">欄與 gutters</h3>
 
 <p>通過 Sass 變數可以修改欄位數和它們的水平 padding 的數量（又稱為 gutters）。<code class="highlighter-rouge">$grid-columns</code> 用於產生每一個單獨欄的寬度（百分比），而 <code class="highlighter-rouge">$grid-gutter-width</code> 允許在該欄 gutterr 的 <code class="highlighter-rouge">padding-left</code>和<code class="highlighter-rouge">padding-right</code>上均勻分開的特定中斷點寬度。</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$grid-columns</span><span class="p">:</span> <span class="m">12</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
 <span class="nv">$grid-gutter-width</span><span class="p">:</span> <span class="m">30px</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span></code></pre></figure>
 
-<h3 id="grid-階層">Grid 階層</h3>
+<h3 id="grid-tiers">Grid 階層</h3>
 
 <p>欄本身之外，你也可以自定義網格層的數量。如果你只想要四個網格層，你應當按照下文更新<code class="highlighter-rouge">$grid-breakpoints</code> 和 <code class="highlighter-rouge">$container-max-widths</code>。</p>
 

@@ -561,7 +561,7 @@ var google_remarketing_only = true;
     background-color: #0b0;
   }
 </style>
-          <h2 id="方式">方式</h2>
+          <h2 id="approach">方式</h2>
 
 <p>僅針對 HTML 語法與元素語法重置並建立規範。附加樣式僅能利用 class 建立。例如，我們利用重置部分 <code class="highlighter-rouge">&lt;table&gt;</code> 基礎樣式以利套用後續的 <code class="highlighter-rouge">.table</code>、<code class="highlighter-rouge">.table-bordered</code> 及其他選項。</p>
 
@@ -574,7 +574,7 @@ var google_remarketing_only = true;
   <li>盡可能使用 <code class="highlighter-rouge">inherit</code> 將字體的屬性宣告保持在最小化。</li>
 </ul>
 
-<h2 id="頁面預設">頁面預設</h2>
+<h2 id="page-defaults">頁面預設</h2>
 
 <p>為了提供最佳的頁面預設值而更新<code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> 和 <code class="highlighter-rouge">&lt;body&gt;</code> 元素。具體而言：</p>
 
@@ -588,7 +588,7 @@ var google_remarketing_only = true;
   <li>安全起見在 <code class="highlighter-rouge">&lt;body&gt;</code> 宣告 <code class="highlighter-rouge">background-color</code> 預設值為 <code class="highlighter-rouge">#fff</code>。</li>
 </ul>
 
-<h2 id="原生字體堆疊">原生字體堆疊</h2>
+<h2 id="native-font-stack">原生字體堆疊</h2>
 
 <p>Bootstrap 4.0 已經放棄了預設網頁字體（Helvetica Neue, Helvetica, 和 Arial）並用 “native font stack” 取代了預設字體以在每個設備和作業系統上獲得最佳的閱讀呈現。閱讀更多的資訊 <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">原生字體堆疊 <em>Smashing Magazine</em> 文章中</a>。</p>
 
@@ -608,7 +608,7 @@ var google_remarketing_only = true;
 
 <p><code class="highlighter-rouge">&lt;body&gt;</code> 應用 <code class="highlighter-rouge">font-family</code> 並在整個 Bootstrap 內自動繼承這個全域設定。要切換全域的 <code class="highlighter-rouge">font-family</code>，更新 <code class="highlighter-rouge">$font-family-base</code> 並重新編譯 Bootstrap。</p>
 
-<h2 id="標題和段落">標題和段落</h2>
+<h2 id="headings-and-paragraphs">標題和段落</h2>
 
 <p>所有標題元素像是 <code class="highlighter-rouge">&lt;h1&gt;</code> 及 <code class="highlighter-rouge">&lt;p&gt;</code> 已經刪除它們的 <code class="highlighter-rouge">margin-top</code>。標題元素具有 <code class="highlighter-rouge">margin-bottom: .5rem</code>，段落元素則是 <code class="highlighter-rouge">margin-bottom: 1rem</code> 使其具有更單純的間隔。</p>
 
@@ -665,7 +665,7 @@ var google_remarketing_only = true;
   </tbody>
 </table>
 
-<h2 id="列表">列表</h2>
+<h2 id="lists">列表</h2>
 
 <p>刪除全部列表 <code class="highlighter-rouge">&lt;ul&gt;</code>、<code class="highlighter-rouge">&lt;ol&gt;</code> 和 <code class="highlighter-rouge">&lt;dl&gt;</code> 中的 <code class="highlighter-rouge">margin-top</code>，並設定為 <code class="highlighter-rouge">margin-bottom: 1rem</code>。巢狀列表沒有 <code class="highlighter-rouge">margin-bottom</code>。</p>
 
@@ -718,7 +718,7 @@ var google_remarketing_only = true;
 
 </div>
 
-<h2 id="程式碼文字">程式碼文字</h2>
+<h2 id="preformatted-text">程式碼文字</h2>
 
 <p><code class="highlighter-rouge">&lt;pre&gt;</code> 元素被重設以刪除其 <code class="highlighter-rouge">margin-top</code> 並在 <code class="highlighter-rouge">margin-bottom</code> 上使用 <code class="highlighter-rouge">rem</code>。</p>
 
@@ -732,7 +732,7 @@ var google_remarketing_only = true;
 
 </div>
 
-<h2 id="表格">表格</h2>
+<h2 id="tables">表格</h2>
 
 <p>表格經過輕微調整以將並 <code class="highlighter-rouge">&lt;caption&gt;</code> 風格化、合併邊框並確保整體的 <code class="highlighter-rouge">text-align</code>。在<a href="/docs/4.0/content/tables/">the <code class="highlighter-rouge">.table</code> class</a> 中有針對 borders、padding 和更多的額外變化。</p>
 
@@ -772,7 +772,7 @@ var google_remarketing_only = true;
   </table>
 </div>
 
-<h2 id="表單">表單</h2>
+<h2 id="forms">表單</h2>
 
 <p>已經將若干形式元素重置，以獲得更簡單的基礎樣式。如下是部分最顯著的變化：</p>
 
@@ -868,9 +868,9 @@ var google_remarketing_only = true;
   </fieldset>
 </form>
 
-<h2 id="其他元素">其他元素</h2>
+<h2 id="misc-elements">其他元素</h2>
 
-<h3 id="地址">地址</h3>
+<h3 id="address">地址</h3>
 
 <p>更新了 <code class="highlighter-rouge">&lt;address&gt;</code> 元素以便將瀏覽器的預設 <code class="highlighter-rouge">font-style</code> 由<code class="highlighter-rouge"> italic</code> 重置為 <code class="highlighter-rouge">normal</code>。同時現在繼承了 <code class="highlighter-rouge">line-height</code> 並添加了 <code class="highlighter-rouge">margin-bottom: 1rem</code>。<code class="highlighter-rouge">&lt;address&gt;</code> 用於提供聯繫資訊。透過 <code class="highlighter-rouge">&lt;br&gt;</code> 來換一行。</p>
 
@@ -899,7 +899,7 @@ var google_remarketing_only = true;
   </blockquote>
 </div>
 
-<h3 id="行內元素">行內元素</h3>
+<h3 id="inline-elements">行內元素</h3>
 
 <p><code class="highlighter-rouge">&lt;abbr&gt;</code> 元素接受基本樣式以便在段落文字之間突出顯示。</p>
 
@@ -907,7 +907,7 @@ var google_remarketing_only = true;
   Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue.
 </div>
 
-<h3 id="摘要">摘要</h3>
+<h3 id="summary">摘要</h3>
 
 <p>預設游標在摘要上是 <code class="highlighter-rouge">text</code>，所以我們將其重置為 <code class="highlighter-rouge">pointer</code>，在界面上了解元素可以點擊產生互動。</p>
 
@@ -923,7 +923,7 @@ var google_remarketing_only = true;
   </details>
 </div>
 
-<h2 id="html5-hidden-屬性">HTML5 <code class="highlighter-rouge">[hidden]</code> 屬性</h2>
+<h2 id="html5-hidden-attribute">HTML5 <code class="highlighter-rouge">[hidden]</code> 屬性</h2>
 
 <p>HTML 添加了 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden">一個名為 <code class="highlighter-rouge">[hidden]</code> 的新全域屬性</a>，這是屬性的預設格式是 <code class="highlighter-rouge">display: none</code>。借鑒了 <a href="https://purecss.io/">PureCSS</a> 的一個想法，我們加入 <code class="highlighter-rouge">[hidden] { display: none !important; }</code> 改善了預設設定，以防止該屬性的 <code class="highlighter-rouge">display</code> 被意外覆蓋。雖然 IE10 不支援原生 <code class="highlighter-rouge">[hidden]</code>，我們在 CSS 中解決了這個問題。</p>
 
