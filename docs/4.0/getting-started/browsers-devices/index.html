@@ -417,7 +417,7 @@ var google_remarketing_only = true;
 
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
+            <!-- <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#支援的瀏覽器">支援的瀏覽器</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#行動裝置">行動裝置</a></li>
@@ -440,7 +440,7 @@ var google_remarketing_only = true;
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#驗證器">驗證器</a></li>
-</ul>
+</ul> -->
           </div>
         
 
@@ -761,5 +761,41 @@ var google_remarketing_only = true;
   });
 </script>
 
+<script>
+  (function () {
+    var allTitle = document.querySelectorAll('.bd-content h2, .bd-content h3');
+    var arrayTitle = Array.from(allTitle);
+    var bdToc = document.querySelector('.bd-toc');
+
+    var sideNav = `
+      <ul class="section-nav">
+        ${arrayTitle.map((item, i) => {
+        var string = '';
+        if (item.tagName === 'H2') {
+          string = `<li class="toc-entry toc-h2">
+            <a href="#${item.id}">${item.textContent}</a>
+          </li>`
+        } else if (item.tagName === 'H3') {
+          string = `<li class="toc-entry toc-h3">
+            <a href="#${item.id}">${item.textContent}</a>
+          </li>`
+        }
+
+        if (item.tagName === 'H3') {
+          if (i >= 1 && arrayTitle[i - 1].tagName === 'H2') {
+            string = `<ul>${string}`;
+          }
+          if ((i + 1) < arrayTitle.length && arrayTitle[i + 1].tagName === 'H2') {
+            string = `${string}</ul>`;
+          }
+          if ((i + 1) === arrayTitle.length) {
+            string = `${string}</ul>`;
+          }
+        }
+        return string;
+      }).join('')}`;
+    bdToc.innerHTML = sideNav;
+  })();
+</script>
   </body>
 </html>

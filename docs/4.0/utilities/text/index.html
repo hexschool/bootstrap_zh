@@ -417,12 +417,12 @@ var google_remarketing_only = true;
 
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
+            <!-- <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#文字對齊">文字對齊</a></li>
 <li class="toc-entry toc-h2"><a href="#text-wrap-和-overflow">text-wrap 和 Overflow</a></li>
 <li class="toc-entry toc-h2"><a href="#文字變換">文字變換</a></li>
 <li class="toc-entry toc-h2"><a href="#字體粗細和斜體">字體粗細和斜體</a></li>
-</ul>
+</ul> -->
           </div>
         
 
@@ -690,5 +690,41 @@ var google_remarketing_only = true;
   });
 </script>
 
+<script>
+  (function () {
+    var allTitle = document.querySelectorAll('.bd-content h2, .bd-content h3');
+    var arrayTitle = Array.from(allTitle);
+    var bdToc = document.querySelector('.bd-toc');
+
+    var sideNav = `
+      <ul class="section-nav">
+        ${arrayTitle.map((item, i) => {
+        var string = '';
+        if (item.tagName === 'H2') {
+          string = `<li class="toc-entry toc-h2">
+            <a href="#${item.id}">${item.textContent}</a>
+          </li>`
+        } else if (item.tagName === 'H3') {
+          string = `<li class="toc-entry toc-h3">
+            <a href="#${item.id}">${item.textContent}</a>
+          </li>`
+        }
+
+        if (item.tagName === 'H3') {
+          if (i >= 1 && arrayTitle[i - 1].tagName === 'H2') {
+            string = `<ul>${string}`;
+          }
+          if ((i + 1) < arrayTitle.length && arrayTitle[i + 1].tagName === 'H2') {
+            string = `${string}</ul>`;
+          }
+          if ((i + 1) === arrayTitle.length) {
+            string = `${string}</ul>`;
+          }
+        }
+        return string;
+      }).join('')}`;
+    bdToc.innerHTML = sideNav;
+  })();
+</script>
   </body>
 </html>
