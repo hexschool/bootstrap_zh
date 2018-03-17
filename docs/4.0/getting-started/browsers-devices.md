@@ -100,7 +100,7 @@ Bootstrap 支援各大瀏覽器和平台最新和最穩定的版本。在 Window
 ## Internet Explorer {#internet-explorer}
 
 支援IE 10+；不支援 IE9 和更低的版本。請知悉部分 CSS3 屬性和 HTML5 要素並不被 IE10 完全支援或其全部功能需要前輟屬性。參考[Can I use...](http://caniuse.com/)瞭解有關瀏覽器支援 CSS3 和 HTML5 特性的細節。
-=======
+
 作為一種提示，我們將此檔作為演示加入到 Bootstrap 的各種文件和範例中。
 
 ## 行動瀏覽器上的 互動視窗 和 下拉式功能表 {#modals-and-dropdowns-on-mobile}

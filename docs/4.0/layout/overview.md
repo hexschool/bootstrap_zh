@@ -181,5 +181,5 @@ $zindex-tooltip:           1070 !default;
 
 背景元素（例如允許按一下解除的背景）傾向於停留在較低的 `z-index`，而導航元件和 popovers 使用更高的 `z-index` 確保它們的內容覆蓋。
 
-為了處理組建之間的 border (如：input-group 的 button 與 input)，我們較低的數值設置 `z-index` 於 `1`, `2`, 和 `3` 做為預設，在 hover, focus, active 時，我們將使用更高的 `z-index` 來顯示這些的 border。
+為了處理組件之間的 border (如：input-group 的 button 與 input)，我們較低的數值設置 `z-index` 於 `1`, `2`, 和 `3` 做為預設，在 hover, focus, active 時，我們將使用更高的 `z-index` 來顯示這些的 border。
 
