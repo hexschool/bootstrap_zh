@@ -19,9 +19,9 @@
   <script src="{{ site.baseurl }}/assets/js/vendor/anchor.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/vendor/clipboard.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/vendor/holder.min.js"></script>
-  <script src="{{ site.baseurl }}/assets/js/src/application.js"></script>
-  <script src="{{ site.baseurl }}/assets/js/src/ie-emulation-modes-warning.js"></script>
-  <script src="{{ site.baseurl }}/assets/js/src/pwa.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/src/application.js?{{ site.time | date_to_xmlschema }}"></script>
+  <script src="{{ site.baseurl }}/assets/js/src/ie-emulation-modes-warning.js?{{ site.time | date_to_xmlschema }}"></script>
+  <script src="{{ site.baseurl }}/assets/js/src/pwa.js?{{ site.time | date_to_xmlschema }}"></script>
 {%- endif -%}
 
 {%- if page.layout == "docs" -%}
