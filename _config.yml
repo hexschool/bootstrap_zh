@@ -54,7 +54,7 @@ social_logo_path:   /assets/brand/bootstrap-social-logo.png
 current_version:      4.0.0
 current_ruby_version: 4.0.0
 docs_version:         4.0
-repo:                 "https://github.com/twbs/bootstrap"
+repo:                 "https://github.com/hexschool/bootstrap_zh" # "https://github.com/twbs/bootstrap"
 slack:                "https://bootstrap-slack.herokuapp.com"
 blog:                 "https://blog.getbootstrap.com"
 expo:                 "https://expo.getbootstrap.com"
