@@ -84,7 +84,7 @@ Bootstrap 取決於[jQuery](https://jquery.com/) 和 [Popper](https://popper.js.
 import 'bootstrap/dist/css/bootstrap.min.css';
 {% endhighlight %}
 
-如果你不需要額外客制樣式，這種情況下不需要 `sass-loader` 只需要 [style-loader](https://github.com/webpack-contrib/style-loader) 和 [css-loader](https://github.com/webpack-contrib/css-loader
+如果你不需要額外客制樣式，這種情況下不需要 `sass-loader` 只需要 [style-loader](https://github.com/webpack-contrib/style-loader) 和 [css-loader](https://github.com/webpack-contrib/css-loader)
 
 {% highlight js %}
   ...
