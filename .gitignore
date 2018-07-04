@@ -47,3 +47,4 @@ twbsconfig.yml
 node_modules
 .publish
 yarn.lock
+js/coverage
