@@ -749,6 +749,7 @@ input 下方的幫助文字可以用 `.form-text`。包括 `display: block` 並�
 
 {% capture callout %}
 我們目前建議使用自定義驗證樣式，因為瀏覽器預設驗證訊息並未完全確認（最值得注意的是，桌面和移動設備上的 Chrome）。
+{% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
 ### 如何運作 {#how-it-works}
@@ -1292,7 +1293,7 @@ $custom-file-text: (
 {% capture example %}
 <div class="custom-file">
   <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-  <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+  <label class="custom-file-label" for="customFileLang">Selectional Archive</label>
 </div>
 {% endcapture %}
 {% include example.html content=example %}
