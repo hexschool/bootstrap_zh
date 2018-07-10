@@ -109,9 +109,9 @@ toc: true
 {% endcapture %}
 {% include example.html content=example %}
 
-## Multiple inputs
+## 多個 inputs {#multiple-inputs}
 
-While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`.
+雖然支持多個 `<input>` 顯示，但驗證樣式僅適用於單個 `<input>` 的 input 群組。
 
 {% capture example %}
 <div class="input-group">

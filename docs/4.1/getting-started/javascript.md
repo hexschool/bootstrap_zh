@@ -60,7 +60,7 @@ $('#myModal').on('show.bs.modal', function (e) {
 $('.btn.danger').button('toggle').addClass('fat')
 {% endhighlight %}
 
-全部方法接受一個可選則性的物件，如指定特定的方法，或沒有任何內容 (採用預設行為)：
+全部方法接受一個可選擇性的物件，如指定特定的方法，或沒有任何內容 (採用預設行為)：
 
 {% highlight js %}
 $('#myModal').modal()                      // initialized with defaults

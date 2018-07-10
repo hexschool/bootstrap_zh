@@ -77,7 +77,8 @@ toc: true
 
 ## Picture {#picture}
 
-If you are using the `<picture>` element to specify multiple `<source>` elements for a specific `<img>`, make sure to add the `.img-*` classes to the `<img>` and not to the `<picture>` tag.
+
+如果你使用 `<picture>` 元素為特定的 `<img>` 指定多個 `<source>` 元素，請確保將 `.img-*` 加到 `<img>` 而不是 `<picture>` 標籤。
 
 {% highlight html %}
 ​<picture>

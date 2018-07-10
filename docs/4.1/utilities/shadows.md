@@ -6,9 +6,9 @@ group: utilities
 toc: false
 ---
 
-## Examples
+## 範例 {#examples}
 
-While shadows on components are disabled by default in Bootstrap and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match).
+雖然 Bootstrap 預設關閉陰影在元件上，但可以透過 `$enable-shadows` 來啟用元件的陰影，同時也可以使用通用類別中的 `box-shadow` 來快速增加或移除陰影效果。包含 `.shadow-none` 等三種不同預設的陰影效果(可透過變數調整)。
 
 {% capture example %}
 <div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>

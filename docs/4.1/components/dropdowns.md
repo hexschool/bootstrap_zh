@@ -557,6 +557,8 @@ Bootstrap 的下拉選單是設計為通用的，適用於各種情況和標記�
 
 You can also create non-interactive dropdown items with `.dropdown-item-text`. Feel free to style further with custom CSS or text utilities.
 
+您還可以使用 `.dropdown-item-text` 創建非交互式下拉選單。您可以使用自定義 CSS 或通用類別調整。
+
 {% capture example %}
 <div class="dropdown-menu">
   <span class="dropdown-item-text">Dropdown item text</span>
@@ -567,9 +569,9 @@ You can also create non-interactive dropdown items with `.dropdown-item-text`. F
 {% endcapture %}
 {% include example.html content=example %}
 
-### Active
+### 啟用 {#active}
 
-Add `.active` to items in the dropdown to **style them as active**.
+增加 `.active` 到項目上使**樣式如同啟用**。
 
 {% capture example %}
 <div class="dropdown-menu">

@@ -338,6 +338,6 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 })
 {% endhighlight %}
 
-### Change transition duration
+### 改變轉換速率 {#change-transition-duration}
 
-The transition duration of `.carousel-item` can be changed with the `$carousel-transition` Sass variable before compiling or custom styles if you're using the compiled CSS. If multiple transitions are applied, make sure the transform transition is defined first (eg. `transition: transform 2s ease, opacity .5s ease-out`).
+如果你使用自行編譯的 CSS，則可以調整 `$carousel-transition` Sass 變數來改變轉換的速率。如果使用多個轉換效果，請確保 transform 的效果是優先定義的 (例如： `transition: transform 2s ease, opacity .5s ease-out`)。

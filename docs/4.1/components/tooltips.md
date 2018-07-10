@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 概觀 {#overview}
+## 概觀 {#overview}
 
 使用工具提示框插件時應瞭解的事情如下：
 

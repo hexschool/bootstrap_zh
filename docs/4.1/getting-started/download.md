@@ -8,7 +8,7 @@ toc: true
 
 ## Bootstrap CSS 和 JS {#compiled-css-and-js}
 
-下載編譯完成可立即運用的 **Bootstrap 4{{ site.current_version}}** 加入到你的專案，這些包含了：
+下載編譯完成可立即運用的 **Bootstrap {{ site.current_version}}** 加入到你的專案，這些包含了：
 
 - 編譯好及壓縮後的 CSS 包 (看看 [檔案比較]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#css-files))
 - 編譯好及壓縮的 JavaScript 套件

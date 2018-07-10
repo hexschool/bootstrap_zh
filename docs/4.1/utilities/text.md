@@ -84,7 +84,7 @@ toc: true
 
 ## Monospace
 
-Change a selection to our monospace font stack with `.text-monospace`.
+`.text-monospace` 將選擇區域改為等寬字體。
 
 {% capture example %}
 <p class="text-monospace">This is in monospace</p>
