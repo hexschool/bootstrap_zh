@@ -2,6 +2,7 @@
 _gh_pages
 _site
 .publish
+docs/4.0
 
 # Ignore ruby files
 .ruby-version

@@ -112,7 +112,7 @@ Bootstrap 的表單控制與 Class 一起在 [我們重置表單樣式]({{ site.
 
 ## Range Inputs
 
-Set horizontally scrollable range inputs using `.form-control-range`.
+使用 `.form-control-range` 設置水平可滾動的 range input。
 
 {% capture example %}
 <form>
