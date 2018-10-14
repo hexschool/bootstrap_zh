@@ -12,21 +12,22 @@ Bootstrap 支援各大瀏覽器和平台最新和最穩定的版本。在 Window
 
 如果瀏覽器是使用最新測試中的版本，像是 WebKit、Blink 或 Gecko 或透過平台的 web view API 是不完全支援的。然而，Bootstrap應當（在多數情形中）同樣在上述瀏覽器中正常顯示和工作。如下提供了更多的具體支援訊息。
 
-你可以找到支援的瀏覽器及其版本在我們的 [`package.json`]({{ site.repo }}/blob/v4-dev/package.json)：
+你可以找到支援的瀏覽器及其版本在我們的 [`.browserslistrc`]({{ site.repo }}/blob/v4-dev/.browserslistrc)：
 
-```json
-"browserslist": [
-  "last 1 major version",
-  ">= 1%",
-  "Chrome >= 45",
-  "Firefox >= 38",
-  "Edge >= 12",
-  "Explorer >= 10",
-  "iOS >= 9",
-  "Safari >= 9",
-  "Android >= 4.4",
-  "Opera >= 30"
-]
+```
+# https://github.com/browserslist/browserslist#readme
+
+>= 1%
+last 1 major version
+not dead
+Chrome >= 45
+Firefox >= 38
+Edge >= 12
+Explorer >= 10
+iOS >= 9
+Safari >= 9
+Android >= 4.4
+Opera >= 30
 ```
 
 我們使用 [Autoprefixer](https://github.com/postcss/autoprefixer) 加入 CSS 前綴詞對於瀏覽器的支援，搭配使用[瀏覽器列表](https://github.com/browserslist/browserslist) 來管理這些瀏覽器版本。 有關如何將這些工具集成到項目中的相關資訊，請參閱其文檔。
