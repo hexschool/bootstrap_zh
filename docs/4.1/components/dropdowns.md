@@ -8,7 +8,7 @@ toc: true
 
 ## 概述 {#overview}
 
-下拉選單是可切換的，內文框用於顯示連結列表或其他。這些交互功能於 Bootstrap JavaScript 下拉選單插件提供。透過點擊切換，而不是滑入的方式，這是一個策劃好了的 [設計決定](http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/)。
+下拉選單是可切換的，內文框用於顯示連結列表或其他。這些交互功能於 Bootstrap JavaScript 下拉選單插件提供。透過點擊切換，而不是滑入的方式，這是一個策劃好了的 [設計決定](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/)。
 
 下拉選單是透過第三方插件 [Popper.js](https://popper.js.org) 所建構的，這提供了動態位置及 viewport 的監控。使用前請確認 [popper.min.js]({{ site.cdn.popper }}) 在 Bootstrap's JavaScript 之前，或者使用 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 這已經包含 Popper.js。Popper.js 沒有使用在導覽列的下拉選單，所以該動態位置並不適用。
 

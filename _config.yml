@@ -14,7 +14,7 @@ destination:      ./_gh_pages
 host:             0.0.0.0
 port:             9001
 baseurl:          ""
-url:              http://bootstrap.hexschool.com
+url:              https://bootstrap.hexschool.com
 encoding:         UTF-8
 exclude:
   - .git/

@@ -8,7 +8,7 @@ toc: true
 
 ## 範例 {#example}
 
-媒體物件 [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) 有助於建立複雜和可重複元件，其中一些媒體可以不需要包覆在另一個上。此外，通過flexbox，只需要兩個 class 就可以完成這些工作。
+媒體物件 [media object](https://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) 有助於建立複雜和可重複元件，其中一些媒體可以不需要包覆在另一個上。此外，通過flexbox，只需要兩個 class 就可以完成這些工作。
 
 下面是單個媒體對象的例子。只需要兩個 class – 使 `.media` 和 `.media-body` 圍繞你的內容。通過（間隔調整工具）[spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) 可以控制可調整 padding 和 margin。
 

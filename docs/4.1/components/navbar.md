@@ -433,7 +433,7 @@ input 群組也可以：
 
 ## 定位 {#placement}
 
-使用定位通用類別將導覽列放置在非靜態位置。從固定在頂部、固定在底部或 黏(stickied) 在頂部中選擇。 **請注意，`position: sticky`用於`.sticky-top` [這並非在每個流覽器都完全支持](http://caniuse.com/#feat=css-sticky)**
+使用定位通用類別將導覽列放置在非靜態位置。從固定在頂部、固定在底部或 黏(stickied) 在頂部中選擇。 **請注意，`position: sticky`用於`.sticky-top` [這並非在每個流覽器都完全支持](https://caniuse.com/#feat=css-sticky)**
 
 使用我們的 [定位通用類別]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/position/) 將導覽列放置在非靜態位置。選擇固定到頂部、固定到底部、或粘貼到頂部（當頁面滾動至物件位置時，會固定在頂部並停留在那裡）。 固定的導覽列使用`position：fixed'，這意味著從 DOM 的正常定位中被拉出，並且可能需要自定義CSS（例如 `<body>` 上的 `padding-top`），以防止與其他元素重疊。
 

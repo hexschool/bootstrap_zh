@@ -46,7 +46,7 @@ Bootstrap 採用（我們的構建過程中內含的）[Autoprefixer][autoprefix
 
 1. 執行上述 [工具設定](#tooling-setup) 步驟以安裝 Jekyll（網站構建器）和用 `bundle install` 安裝其他 Ruby 相依套件。
 2. 在 `/bootstrap` 目錄中，在命令列中執行 `npm run docs-serve`。
-3. 在流覽器中打開 <http://localhost:9001>，然後大功告成。
+3. 在流覽器中打開 <https://localhost:9001>，然後大功告成。
 
 閱讀 Jekyll 的 [文件](https://jekyllrb.com/docs/home/) 瞭解有關使用 Jekyll 的更多訊息。
 

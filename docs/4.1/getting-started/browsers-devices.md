@@ -118,7 +118,7 @@ Bootstrap 支援各大瀏覽器和平台最新和最穩定的版本。在 Window
 
 ## Internet Explorer {#internet-explorer}
 
-支援IE 10+；不支援 IE9 和更低的版本。請知悉部分 CSS3 屬性和 HTML5 要素並不被 IE10 完全支援或其全部功能需要前輟屬性。參考[Can I use...](http://caniuse.com/)瞭解有關瀏覽器支援 CSS3 和 HTML5 特性的細節。
+支援IE 10+；不支援 IE9 和更低的版本。請知悉部分 CSS3 屬性和 HTML5 要素並不被 IE10 完全支援或其全部功能需要前輟屬性。參考[Can I use...](https://caniuse.com/)瞭解有關瀏覽器支援 CSS3 和 HTML5 特性的細節。
 
 作為一種提示，我們將此檔作為演示加入到 Bootstrap 的各種文件和範例中。
 
@@ -177,10 +177,10 @@ $(function () {
 </script>
 {% endhighlight %}
 
-想看一個案例嗎？ [查看 JS Bin demo](http://jsbin.com/OyaqoDO/2)
+想看一個案例嗎？ [查看 JS Bin demo](https://jsbin.com/OyaqoDO/2)
 
 ## 驗證器 {#validators}
 
-為了讓老舊的瀏覽器提供最好的體驗，Bootstrap 在幾個地方使用 [CSS browser hacks](http://browserhacks.com/) 將特定的 CSS 套用到某些瀏覽器版本，以解決在瀏覽器本身的問題。這些 hacks 會使 CSS 驗證時讓它們無效。有幾個地方，我們還使用尚未完全標準化的 CSS 功能，但這些功能純粹用於漸進式增強。
+為了讓老舊的瀏覽器提供最好的體驗，Bootstrap 在幾個地方使用 [CSS browser hacks](https://browserhacks.com/) 將特定的 CSS 套用到某些瀏覽器版本，以解決在瀏覽器本身的問題。這些 hacks 會使 CSS 驗證時讓它們無效。有幾個地方，我們還使用尚未完全標準化的 CSS 功能，但這些功能純粹用於漸進式增強。
 
 這些驗證警告在實踐中並不重要，因為我們的 CSS 的非 hacks 部分完全驗證並且 hacks 部分不會干擾非 hacks 部分的正常運行，這也是為什麼我們故意忽略這些特定的警告。
