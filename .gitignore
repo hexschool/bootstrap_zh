@@ -2,6 +2,7 @@
 _gh_pages
 _site
 .publish
+site/docs/**/dist/
 
 # Ignore ruby files
 .ruby-version
@@ -39,9 +40,8 @@ Thumbs.db
 .komodotools
 *.komodoproject
 
-# Jekyll metadata and extra config file for `github` script
+# Jekyll metadata
 docs/.jekyll-metadata
-twbsconfig.yml
 
 # Folders to ignore
 node_modules
