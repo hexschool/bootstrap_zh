@@ -24,7 +24,7 @@
 
     return origin
   }
-  console.log('aaa')
+
   window.docsearch({
     apiKey: 'ef316997b6983b7e641cb5ed2a6683d1',
     indexName: 'hexschool',
@@ -46,7 +46,6 @@
           hit.url = hit.url.replace(/#content$/, '')
           hit.anchor = null
         }
-        console.log(hit);
 
         return hit
       })
@@ -54,16 +53,3 @@
     debug: false // Set debug to true if you want to inspect the dropdown
   })
 }())
-// docsearch({
-//   apiKey: 'ef316997b6983b7e641cb5ed2a6683d1',
-//   indexName: 'hexschool',
-//   inputSelector: '#search-input',
-//   handleSelected: function (input, event, suggestion) {
-//     var url = suggestion.url
-//     url = suggestion.isLvl1 ? url.split('#')[0] : url
-//     // If it's a title we remove the anchor so it does not jump.
-//     window.location.href = url
-//   },
-
-//   debug: false // Set debug to true if you want to inspect the dropdown
-// })
