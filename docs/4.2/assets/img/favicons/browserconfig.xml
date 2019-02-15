@@ -2,7 +2,7 @@
 <browserconfig>
   <msapplication>
     <tile>
-      <square150x150logo src="https://bootstrap.hexschool.com/docs/4.2/assets/img/favicons/mstile-150x150.png"/>
+      <square150x150logo src="/docs/4.2/assets/img/favicons/mstile-150x150.png"/>
       <TileColor>#563d7c</TileColor>
     </tile>
   </msapplication>
