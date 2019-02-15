@@ -13,7 +13,7 @@ source:         "site"
 destination:    ./_gh_pages
 host:           "localhost"
 port:           9001
-baseurl:        "https://bootstrap.hexschool.com"
+baseurl:        ""
 url:            "https://bootstrap.hexschool.com"
 encoding:       UTF-8
 exclude:
