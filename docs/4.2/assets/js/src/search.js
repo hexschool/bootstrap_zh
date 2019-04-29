@@ -24,7 +24,7 @@
 
     return origin
   }
-
+  console.log('siteDocsVersion', siteDocsVersion)
   window.docsearch({
     apiKey: 'ef316997b6983b7e641cb5ed2a6683d1',
     indexName: 'hexschool',
@@ -32,24 +32,24 @@
     algoliaOptions: {
       facetFilters: ['version:' + siteDocsVersion]
     },
-    transformData: function (hits) {
-      return hits.map(function (hit) {
-        var siteurl = getOrigin()
-        var urlRE = /^https?:\/\/bootstrap\.hexschool\.com/
+    // transformData: function (hits) {
+    //   return hits.map(function (hit) {
+    //     var siteurl = getOrigin()
+    //     var urlRE = /^https?:\/\/bootstrap\.hexschool\.com/
 
-        // When in production, return the result as is,
-        // otherwise remove our url from it.
-        hit.url = siteurl.match(urlRE) ? hit.url : hit.url.replace(urlRE, '')
+    //     // When in production, return the result as is,
+    //     // otherwise remove our url from it.
+    //     hit.url = siteurl.match(urlRE) ? hit.url : hit.url.replace(urlRE, '')
 
-        // Prevent jumping to first header
-        if (hit.anchor === 'content') {
-          hit.url = hit.url.replace(/#content$/, '')
-          hit.anchor = null
-        }
+    //     // Prevent jumping to first header
+    //     if (hit.anchor === 'content') {
+    //       hit.url = hit.url.replace(/#content$/, '')
+    //       hit.anchor = null
+    //     }
 
-        return hit
-      })
-    },
+    //     return hit
+    //   })
+    // },
     debug: false // Set debug to true if you want to inspect the dropdown
   })
 }())
