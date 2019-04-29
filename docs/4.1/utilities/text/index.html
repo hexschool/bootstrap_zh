@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="一般文字通用類別來控制對齊、圍繞、字體粗細、和其它屬性的文檔範例。">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Jekyll v3.8.0">
+
+<title>文字 (Text) · Bootstrap 4 繁體中文手冊 [六角學院譯]</title>
+
+<!-- Bootstrap core CSS -->
+
+<link href="/docs/4.1/dist/css/bootstrap.css" rel="stylesheet">
+
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/docs/4.1/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.1/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.1/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:title" content="文字 (Text)">
+<meta name="twitter:description" content="一般文字通用類別來控制對齊、圍繞、字體粗細、和其它屬性的文檔範例。">
+<meta name="twitter:image" content="https://bootstrap.hexschool.com/assets/brand/bootstrap-social-logo.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://bootstrap.hexschool.com/docs/4.1/utilities/text/">
+<meta property="og:title" content="文字 (Text)">
+<meta property="og:description" content="一般文字通用類別來控制對齊、圍繞、字體粗細、和其它屬性的文檔範例。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://bootstrap.hexschool.com/assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="https://bootstrap.hexschool.com/assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-75631525-12', 'getbootstrap.com');
+  ga('send', 'pageview');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '518325078292779');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=518325078292779&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+<!-- Google 再营销代码的内容 -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 926147017;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/926147017/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<style>
+  [name="google_conversion_frame"] {
+    display: none;
+  }
+</style>
+
+  </head>
+  <body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+  <div class="container">
+    <span class="skiplink-text">Skip to main content</span>
+  </div>
+</a>
+
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap"><svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
+</a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">首頁</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/4.1/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">文件</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/docs/4.1/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">範例</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://themes.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Themes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://jobs.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Jobs');" target="_blank" rel="noopener">Jobs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');" target="_blank" rel="noopener">Expo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://www.facebook.com/hexschool" target="_blank" rel="noopener" aria-label="GitHub">
+        六角學院譯
+      </a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        v4.1
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+        <a class="dropdown-item active" href="/docs/4.1/">Latest (4.1.x)</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/4.0/">v4.0.0</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/3.3/">v3.3</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://github.com/hexschool/bootstrap_zh" target="_blank" rel="noopener" aria-label="GitHub"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/></svg>
+</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener" aria-label="Twitter"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false"><title>Twitter</title><path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor"/></svg>
+</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://bootstrap-slack.herokuapp.com" target="_blank" rel="noopener" aria-label="Slack"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" focusable="false"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"/><path d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z" fill="currentColor"/></svg>
+</a>
+    </li>
+  </ul>
+
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.1.1.zip">Download</a>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <form class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-siteurl="https://bootstrap.hexschool.com" data-docs-version="4.1">
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+</button>
+</form>
+
+<nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.1/getting-started/introduction/">
+        快速開始
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.1/getting-started/introduction/">
+              簡介
+            </a></li><li>
+            <a href="/docs/4.1/getting-started/download/">
+              下載
+            </a></li><li>
+            <a href="/docs/4.1/getting-started/contents/">
+              內容
+            </a></li><li>
+            <a href="/docs/4.1/getting-started/browsers-devices/">
+              瀏覽器及裝置
+            </a></li><li>
+            <a href="/docs/4.1/getting-started/javascript/">
+              JavaScript
+            </a></li><li>
+            <a href="/docs/4.1/getting-started/build-tools/">
+              構建工具
+            </a></li><li>
+            <a href="/docs/4.1/getting-started/theming/">
+              主題化
+            </a></li><li>
+            <a href="/docs/4.1/getting-started/webpack/">
+              Webpack
+            </a></li><li>
+            <a href="/docs/4.1/getting-started/accessibility/">
+              網頁親和性
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.1/layout/overview/">
+        排版
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.1/layout/overview/">
+              概觀
+            </a></li><li>
+            <a href="/docs/4.1/layout/grid/">
+              網格
+            </a></li><li>
+            <a href="/docs/4.1/layout/media-object/">
+              媒體物件
+            </a></li><li>
+            <a href="/docs/4.1/layout/utilities-for-layout/">
+              排版通用類別
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.1/content/reboot/">
+        內容
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.1/content/reboot/">
+              重置
+            </a></li><li>
+            <a href="/docs/4.1/content/typography/">
+              文字排版
+            </a></li><li>
+            <a href="/docs/4.1/content/code/">
+              程式碼
+            </a></li><li>
+            <a href="/docs/4.1/content/images/">
+              圖片
+            </a></li><li>
+            <a href="/docs/4.1/content/tables/">
+              表格
+            </a></li><li>
+            <a href="/docs/4.1/content/figures/">
+              圖片區
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.1/components/alerts/">
+        元件
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.1/components/alerts/">
+              警報 (Alerts)
+            </a></li><li>
+            <a href="/docs/4.1/components/badge/">
+              標籤 (Badge)
+            </a></li><li>
+            <a href="/docs/4.1/components/breadcrumb/">
+              麵包屑 (Breadcrumb)
+            </a></li><li>
+            <a href="/docs/4.1/components/buttons/">
+              按鈕 (Buttons)
+            </a></li><li>
+            <a href="/docs/4.1/components/button-group/">
+              按鈕群組 (Button group)
+            </a></li><li>
+            <a href="/docs/4.1/components/card/">
+              卡片 (Card)
+            </a></li><li>
+            <a href="/docs/4.1/components/carousel/">
+              輪播 (Carousel)
+            </a></li><li>
+            <a href="/docs/4.1/components/collapse/">
+              折疊 (Collapse)
+            </a></li><li>
+            <a href="/docs/4.1/components/dropdowns/">
+              下拉選單 (Dropdowns)
+            </a></li><li>
+            <a href="/docs/4.1/components/forms/">
+              表單 (Forms)
+            </a></li><li>
+            <a href="/docs/4.1/components/input-group/">
+              Input 群組 (Input group)
+            </a></li><li>
+            <a href="/docs/4.1/components/jumbotron/">
+              廣告大屏幕 (Jumbotron)
+            </a></li><li>
+            <a href="/docs/4.1/components/list-group/">
+              列表群組 (List group)
+            </a></li><li>
+            <a href="/docs/4.1/components/modal/">
+              互動視窗 (Modal)
+            </a></li><li>
+            <a href="/docs/4.1/components/navs/">
+              導覽 (Navs)
+            </a></li><li>
+            <a href="/docs/4.1/components/navbar/">
+              導覽列 (Navbar)
+            </a></li><li>
+            <a href="/docs/4.1/components/pagination/">
+              分頁 (Pagination)
+            </a></li><li>
+            <a href="/docs/4.1/components/popovers/">
+              彈出提示框 (Popovers)
+            </a></li><li>
+            <a href="/docs/4.1/components/progress/">
+              進度條 (Progress)
+            </a></li><li>
+            <a href="/docs/4.1/components/scrollspy/">
+              滑動監控 (Scrollspy)
+            </a></li><li>
+            <a href="/docs/4.1/components/tooltips/">
+              工具提示 (Tooltips)
+            </a></li></ul>
+    </div><div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/docs/4.1/utilities/borders/">
+        通用類別
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.1/utilities/borders/">
+              邊框 (Borders)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/clearfix/">
+              清除浮動 (Clearfix)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/close-icon/">
+              關閉圖示 (Close icon)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/colors/">
+              顏色 (Colors)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/display/">
+              Display
+            </a></li><li>
+            <a href="/docs/4.1/utilities/embed/">
+              內嵌 (Embed)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/flex/">
+              Flex
+            </a></li><li>
+            <a href="/docs/4.1/utilities/float/">
+              浮動 (Float)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/image-replacement/">
+              圖片取代 (Image replacement)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/position/">
+              位置 (Position)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/screenreaders/">
+              螢幕閱讀器 (Screenreaders)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/shadows/">
+              陰影 (Shadows)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/sizing/">
+              尺寸 (Sizing)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/spacing/">
+              間隔 (Spacing)
+            </a></li><li class="active bd-sidenav-active">
+            <a href="/docs/4.1/utilities/text/">
+              文字 (Text)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/vertical-align/">
+              垂直對齊 (Vertical align)
+            </a></li><li>
+            <a href="/docs/4.1/utilities/visibility/">
+              可視性 (Visibility)
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.1/extend/icons/">
+        擴增
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.1/extend/icons/">
+              圖示
+            </a></li><li>
+            <a href="/docs/4.1/extend/approach/">
+              Approach
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.1/migration/">
+        更版紀錄
+      </a>
+
+      <ul class="nav bd-sidenav"></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/docs/4.1/about/overview/">
+        關於
+      </a>
+
+      <ul class="nav bd-sidenav"><li>
+            <a href="/docs/4.1/about/overview/">
+              Overview
+            </a></li><li>
+            <a href="/docs/4.1/about/license/">
+              License
+            </a></li><li>
+            <a href="/docs/4.1/about/translations/">
+              Translations
+            </a></li></ul>
+    </div></nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#文字對齊">文字對齊</a></li>
+<li class="toc-entry toc-h2"><a href="#text-wrap-和-overflow">text-wrap 和 Overflow</a></li>
+<li class="toc-entry toc-h2"><a href="#文字變換">文字變換</a></li>
+<li class="toc-entry toc-h2"><a href="#字體粗細和斜體">字體粗細和斜體</a></li>
+<li class="toc-entry toc-h2"><a href="#monospace">Monospace</a></li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">文字 (Text)</h1>
+          <p class="bd-lead">一般文字通用類別來控制對齊、圍繞、字體粗細、和其它屬性的文檔範例。</p>
+          <div style="max-width: 450px; padding: 15px; overflow: hidden; background-color: rgba(0,0,0,.05); border-radius: 4px; font-size: 13px;">
+  <a href="https://www.hexschool.com/" style="margin-bottom: 12px; display: block">
+    <svg width="164px" height="39px" style="display: block" viewBox="0 0 164 39" version="1.1" xmlns="https://www.w3.org/2000/svg"
+      xmlns:xlink="https://www.w3.org/1999/xlink">
+      <title>六角學院</title>
+      <desc>六角學院</desc>
+      <defs>
+        <polyline id="path-1" points="0 0.136333333 163.993313 0.136333333 163.993313 39 0 39"></polyline>
+        <polygon id="path-3" points="0 0.136333333 163.993313 0.136333333 163.993313 39 0 39"></polygon>
+      </defs>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-430.000000, -17.000000)">
+          <g id="Header" transform="translate(0.000000, -75.000000)">
+            <g id="Logo" transform="translate(430.000000, 92.000000)">
+              <g id="Group-3">
+                <mask id="mask-2" fill="white">
+                  <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M39.5095392,20.3112 L31.2851315,34.5130333 C31.1002345,34.8323667 30.364157,35.2558667 29.9941957,35.2558667 L13.5453802,35.2558667 C13.175419,35.2558667 12.4395087,34.8323667 12.2546116,34.5130333 L4.0300367,20.3112 C3.84513965,19.9917 3.84513965,19.1447 4.03020387,18.8252 L12.2546116,4.62336667 C12.4395087,4.30403333 13.175419,3.88053333 13.5453802,3.88053333 L29.9941957,3.88053333 C30.364157,3.88053333 31.1002345,4.30403333 31.2851315,4.62336667 L39.5095392,18.8252 C39.6946035,19.1447 39.6946035,19.9917 39.5095392,20.3112 M43.0224159,17.4032 L34.2769195,2.30136667 C33.587317,1.1107 31.8946565,0.136366667 30.5154516,0.136366667 L13.0242915,0.136366667 C11.6450866,0.136366667 9.9524261,1.1107 9.26282365,2.30136667 L0.517160041,17.4032 C-0.172442406,18.5938667 -0.172442406,20.5425333 0.517160041,21.7332 L9.26282365,36.8350333 C9.9524261,38.0257 11.6450866,39.0000333 13.0242915,39.0000333 L30.5154516,39.0000333 C31.8946565,39.0000333 33.587317,38.0257 34.2769195,36.8350333 L43.0224159,21.7332 C43.7120183,20.5425333 43.7120183,18.5938667 43.0224159,17.4032"
+                  id="Fill-1" fill="#00CC99" mask="url(#mask-2)"></path>
+              </g>
+              <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+              </mask>
+              <g id="Clip-5"></g>
+              <polygon id="Fill-4" fill="#00CC99" mask="url(#mask-4)" points="21.7698716 22.5715 8.77324771 22.5715 8.77324771 19.8215 21.7698716 19.8215"></polygon>
+              <polygon id="Fill-6" fill="#00CC99" mask="url(#mask-4)" points="21.7698716 27.5035 11.3215168 27.5035 11.3215168 24.7535 21.7698716 24.7535"></polygon>
+              <polygon id="Fill-7" fill="#00CC99" mask="url(#mask-4)" points="21.7698716 32.4355 13.8697859 32.4355 13.8697859 29.6855 21.7698716 29.6855"></polygon>
+              <path d="M68.1424848,18.3174833 C70.2256693,21.90265 72.036022,25.38865 73.4993166,28.7758167 C73.6728457,29.1714833 73.548968,29.4929833 73.1520913,29.6659833 L72.1600669,30.08615 C71.7631902,30.2593167 71.4656163,30.1109833 71.2920873,29.7154833 C69.7296571,26.0068167 67.9935307,22.5453167 66.2080873,19.38065 C65.9849068,18.98515 66.0840424,18.66365 66.4560098,18.4659833 L67.2495959,18.0454833 C67.6217305,17.8478167 67.9193044,17.94665 68.1424848,18.3174833 M60.3801525,19.28165 C59.214599,22.9903167 57.5777753,26.4269833 55.3208946,29.74015 C55.0729721,30.08615 54.775231,30.13565 54.4032636,29.9379833 L53.6345867,29.51765 C53.2377101,29.29515 53.1631494,28.9738167 53.4114063,28.6028167 C55.2959853,25.7099833 56.8584155,22.3228167 58.0241362,18.5153167 C58.148181,18.0949833 58.4455878,17.94665 58.8673737,18.0949833 L59.9585337,18.4659833 C60.3554104,18.5894833 60.5041973,18.88615 60.3801525,19.28165 M73.9207682,14.2379833 L73.9207682,14.2873167 C73.9207682,14.7324833 73.6975878,14.9549833 73.2513941,14.9549833 L53.4114063,14.9549833 C52.9650455,14.9549833 52.7416979,14.7324833 52.7416979,14.2873167 L52.7416979,14.2379833 C52.7416979,13.7929833 52.9650455,13.5704833 53.4114063,13.5704833 L62.0664603,13.5704833 L62.0664603,9.63931667 C62.0664603,9.19431667 62.2896408,8.97181667 62.7360016,8.97181667 L63.9264644,8.97181667 C64.3728253,8.97181667 64.5961729,9.19431667 64.5961729,9.63931667 L64.5961729,13.5704833 L73.2513941,13.5704833 C73.6975878,13.5704833 73.9207682,13.7929833 73.9207682,14.2379833"
+                id="Fill-8" fill="#00CC99" mask="url(#mask-4)"></path>
+              <path d="M100.38221,19.9988333 L94.5788502,19.9988333 L94.5788502,23.6828333 L100.38221,23.6828333 L100.38221,19.9988333 Z M100.38221,15.3011667 L94.5788502,15.3011667 L94.5788502,18.8118333 L100.38221,18.8118333 L100.38221,15.3011667 Z M87.2133945,14.0401667 L92.8925423,14.0401667 C93.6861284,13.3231667 94.5788502,12.4085 95.5957839,11.2463333 L89.2221855,11.2463333 C88.7510826,12.0375 88.1061162,12.9523333 87.2133945,14.0401667 L87.2133945,14.0401667 Z M92.1486075,15.3011667 L87.0893496,15.3011667 L87.0893496,18.8118333 L92.1486075,18.8118333 L92.1486075,15.3011667 Z M86.8414271,23.6826667 L92.1486075,23.6826667 L92.1486075,19.9988333 L87.0893496,19.9988333 C87.0646075,21.334 86.9902141,22.5206667 86.8414271,23.6826667 L86.8414271,23.6826667 Z M90.2638614,9.293 C90.1645586,9.491 90.065423,9.73816667 89.9164689,10.035 L97.4061366,10.035 C97.8524975,10.035 98.0756779,10.2575 98.0756779,10.7025 L98.0756779,10.7518333 C98.0756779,11.098 98.0014516,11.3205 97.8028461,11.5925 C97.2573496,12.26 96.4637635,13.076 95.4469969,14.0401667 L102.167821,14.0401667 C102.614181,14.0401667 102.837362,14.2626667 102.837362,14.7078333 L102.837362,27.6633333 C102.837362,30.2841667 102.514879,30.6301667 99.5638818,30.6301667 C99.2661407,30.6301667 98.2493741,30.5808333 96.5628991,30.5313333 C96.1165382,30.5066667 95.8686157,30.2841667 95.8686157,29.8636667 C95.8438736,29.4435 96.0917961,29.221 96.5628991,29.2456667 C98.1500714,29.2951667 99.0429602,29.3691667 99.2910499,29.3691667 C100.357468,29.3691667 100.38221,29.3445 100.38221,27.7373333 L100.38221,24.8941667 L86.6428216,24.8941667 C86.2957635,26.9215 85.576738,28.7758333 84.361366,30.5561667 C84.1134434,30.9268333 83.766051,30.9763333 83.4189929,30.7043333 L82.6998002,30.111 C82.3774842,29.839 82.3278328,29.5425 82.526104,29.1961667 C84.0388828,26.7236667 84.6341978,23.7815 84.6341978,18.6885 L84.6341978,16.6856667 L83.5925219,17.5263333 C83.2205545,17.823 82.8734964,17.7488333 82.6750581,17.3285 L82.4269684,16.8341667 C82.2534393,16.4631667 82.3029235,16.1911667 82.6254067,15.9191667 C84.9317717,13.9908333 86.7421244,11.5678333 88.056632,8.69983333 C88.2301611,8.32883333 88.5028257,8.20516667 88.8997023,8.27933333 L89.8173333,8.4525 C90.2886035,8.55133333 90.4621325,8.87283333 90.2638614,9.293 L90.2638614,9.293 Z"
+                id="Fill-9" fill="#00CC99" mask="url(#mask-4)"></path>
+              <path d="M120.395209,13.1254333 C121.53602,13.6446 122.428909,14.1391 123.073541,14.5101 C123.544811,14.1391 124.090475,13.6199333 124.710365,12.9029333 C124.264171,12.6062667 123.768159,12.2352667 123.148102,11.8151 C122.453651,12.2352667 121.53602,12.6802667 120.395209,13.1254333 M125.801692,9.73826667 C125.429557,10.1089333 124.983196,10.5046 124.412791,10.9496 L125.75204,11.8646 C126.124175,12.1364333 126.173659,12.4577667 125.876085,12.8039333 L125.578511,13.1749333 L125.603253,13.1996 C126.074524,13.3726 126.173659,13.7434333 125.826434,14.0896 C125.454466,14.4852667 124.983196,14.8807667 124.412791,15.3257667 L125.75204,16.2406 C126.124175,16.5126 126.148917,16.8094333 125.876085,17.1801 L125.801692,17.2791 C125.52886,17.6252667 125.206377,17.6499333 124.834577,17.3781 C124.090475,16.8341 123.520069,16.4384333 123.148102,16.1664333 C122.47856,16.5621 121.610581,17.0071 120.593647,17.4027667 C120.22168,17.5511 119.948848,17.4767667 119.676016,17.2296 C119.3537,16.9329333 119.452835,16.6116 119.924106,16.4136 C120.519253,16.1417667 121.16422,15.7956 121.858503,15.3752667 C121.13931,14.9551 120.544163,14.6087667 120.072893,14.3862667 C119.651274,14.1637667 119.552138,13.8424333 119.849545,13.4716 L120.04815,13.2242667 L119.750577,12.9522667 C119.378442,12.6062667 119.452835,12.2352667 119.924106,12.0376 C120.519253,11.7902667 121.16422,11.4441 121.858503,10.9991 C121.13931,10.5787667 120.544163,10.2327667 120.072893,10.0102667 C119.651274,9.7876 119.57688,9.46626667 119.849545,9.09526667 C120.04815,8.82343333 120.320982,8.77393333 120.692782,8.9471 C121.709549,9.3921 122.47856,9.7876 123.073541,10.1337667 C123.470585,9.81226667 123.892036,9.44143333 124.363139,8.9471 C124.611229,8.65026667 124.908803,8.5761 125.280937,8.7246 L125.578511,8.8481 C126.049614,9.04576667 126.148917,9.3921 125.801692,9.73826667 M113.500856,10.2821 C114.914499,10.1337667 116.576065,9.8371 118.48572,9.46626667 C118.932081,9.36726667 119.204913,9.5651 119.279306,9.96076667 C119.3537,10.3562667 119.180004,10.6282667 118.73381,10.7024333 C117.617741,10.9249333 116.476929,11.0979333 115.385602,11.2711 L115.435253,12.6062667 L118.535204,12.6062667 C118.981733,12.6062667 119.204913,12.8287667 119.204913,13.2737667 C119.204913,13.4716 118.981733,13.5704333 118.535204,13.5704333 L115.484905,13.5704333 L115.559298,15.3752667 L118.535204,15.3752667 C118.981733,15.3752667 119.204913,15.5977667 119.204913,16.0429333 C119.204913,16.2406 118.981733,16.3644333 118.535204,16.3644333 L115.608782,16.3644333 L115.683176,18.2432667 L130.017712,18.2432667 L130.067196,16.3644333 L127.165684,16.3644333 C126.719156,16.3644333 126.495975,16.1417667 126.495975,15.6967667 C126.495975,15.4989333 126.719156,15.3752667 127.165684,15.3752667 L130.116848,15.3752667 L130.166332,13.5704333 L127.165684,13.5704333 C126.719156,13.5704333 126.495975,13.3479333 126.495975,12.9029333 C126.495975,12.7051 126.719156,12.6062667 127.165684,12.6062667 L130.215983,12.6062667 L130.290377,10.8754333 L127.016729,10.8754333 C126.570369,10.8754333 126.347355,10.6529333 126.347355,10.2079333 C126.347355,9.88643333 126.570369,9.71343333 127.016729,9.71343333 L132.150381,9.71343333 C132.596742,9.71343333 132.844831,9.96076667 132.819922,10.4057667 L132.472864,18.2432667 L133.26645,18.2432667 C133.712811,18.2432667 133.935991,18.4659333 133.935991,18.9109333 L133.935991,21.6306 C133.935991,22.0756 133.712811,22.2981 133.26645,22.2981 L132.150381,22.2981 C131.70402,22.2981 131.48084,22.0756 131.48084,21.6306 L131.48084,19.3806 L114.220049,19.3806 L114.220049,21.6306 C114.220049,22.0756 113.997035,22.2981 113.550507,22.2981 L112.434438,22.2981 C111.988077,22.2981 111.764897,22.0756 111.764897,21.6306 L111.764897,18.9109333 C111.764897,18.4659333 111.988077,18.2432667 112.434438,18.2432667 L113.203282,18.2432667 L112.880966,10.9991 C112.856057,10.5787667 113.079237,10.3314333 113.500856,10.2821 M130.141757,21.7047667 C130.141757,22.0756 130.017712,22.2981 129.695229,22.4959333 C128.058405,23.5096 126.074524,24.4986 123.768159,25.4381 L133.390328,25.4381 C133.836856,25.4381 134.060036,25.6606 134.060036,26.1057667 C134.060036,26.4764333 133.836856,26.6742667 133.390328,26.6742667 L124.487351,26.6742667 L124.487351,29.1962667 C124.487351,30.6301 124.115217,30.8776 121.238446,30.8776 C120.246422,30.8776 119.10561,30.8527667 117.79127,30.7786 C117.39456,30.7539333 117.146471,30.5314333 117.121728,30.1109333 C117.096986,29.6907667 117.344909,29.4682667 117.816012,29.4929333 C119.428093,29.5424333 120.469602,29.6164333 120.965614,29.6164333 C122.056774,29.6164333 121.932897,29.7401 121.932897,28.6027667 L121.932897,26.6742667 L112.31056,26.6742667 C111.864199,26.6742667 111.641019,26.4517667 111.641019,26.0067667 C111.641019,25.6359333 111.864199,25.4381 112.31056,25.4381 L121.932897,25.4381 L121.932897,24.9684333 C121.932897,24.5234333 122.156077,24.3007667 122.602438,24.3007667 L123.296721,24.3007667 C124.512093,23.8062667 125.851343,23.1636 127.488167,22.2981 L116.22884,22.2981 C115.782479,22.2981 115.559298,22.0756 115.559298,21.6306 C115.559298,21.3339333 115.782479,21.1607667 116.22884,21.1607667 L129.472049,21.1607667 C129.918409,21.1607667 130.141757,21.3586 130.141757,21.7047667"
+                id="Fill-10" fill="#00CC99" mask="url(#mask-4)"></path>
+              <path d="M160.570929,15.845 C160.570929,16.2653333 160.347748,16.4878333 159.901388,16.4878333 L153.031777,16.4878333 C152.585249,16.4878333 152.362069,16.2653333 152.362069,15.8205 C152.362069,15.4248333 152.585249,15.227 153.031777,15.227 L159.901388,15.227 C160.347748,15.227 160.570929,15.4495 160.570929,15.845 M163.472442,12.1365 L163.472442,15.4495 C163.472442,15.8945 163.249261,16.117 162.803067,16.117 L161.662089,16.117 C161.215728,16.117 160.99238,15.8945 160.99238,15.4495 L160.99238,12.7298333 L151.890966,12.7298333 L151.890966,15.4495 C151.890966,15.8945 151.667785,16.117 151.221257,16.117 L150.154839,16.117 C149.708478,16.117 149.485298,15.8945 149.485298,15.4495 L149.485298,12.1365 C149.485298,11.6913333 149.708478,11.4688333 150.154839,11.4688333 L154.941265,11.4688333 L154.941265,9.392 C154.941265,8.947 155.164446,8.7245 155.610974,8.7245 L156.801269,8.7245 C157.247797,8.7245 157.470978,8.947 157.470978,9.392 L157.470978,11.4688333 L162.803067,11.4688333 C163.249261,11.4688333 163.472442,11.6913333 163.472442,12.1365 M163.125216,20.3943333 C163.125216,20.8395 162.902036,21.062 162.455675,21.062 L159.05815,21.062 L159.05815,27.96 C159.05815,29.0973333 158.884454,29.0725 160.273355,29.0725 C161.066941,29.0725 161.190986,29.0725 161.438908,28.405 C161.538044,28.1331667 161.637347,27.0451667 161.686998,25.2651667 C161.71174,24.7953333 161.95983,24.5726667 162.406191,24.6221667 L163.373306,24.7211667 C163.794925,24.7706667 163.993363,24.9931667 163.993363,25.4381667 C163.968454,26.1798333 163.968454,26.625 163.89406,27.3666667 C163.819834,28.3308333 163.819834,29.3198333 163.001339,29.9626667 C162.703765,30.2098333 162.207752,30.2346667 161.885269,30.3088333 C161.662089,30.3581667 160.570929,30.383 160.198794,30.383 C157.098843,30.383 156.602998,30.0861667 156.602998,28.578 L156.602998,21.062 L155.164446,21.062 C155.114961,26.2293333 153.503047,28.6275 148.419047,30.5561667 C148.046913,30.7043333 147.749506,30.6055 147.526158,30.2593333 L147.451765,30.111 C147.203842,29.7155 147.32772,29.394 147.749506,29.221 C151.394953,27.7621667 152.65981,25.6853333 152.758945,21.062 L150.45258,21.062 C150.006219,21.062 149.783039,20.8395 149.783039,20.3943333 C149.783039,19.974 150.006219,19.7515 150.45258,19.7515 L162.455675,19.7515 C162.902036,19.7515 163.125216,19.974 163.125216,20.3943333 M149.138073,11.5925 C147.823732,14.9303333 147.228417,16.117 146.757314,17.3038333 C148.567667,19.5043333 148.989453,20.8395 148.989453,22.7926667 C148.989453,24.8693333 147.997428,25.9325 145.517367,25.9325 C145.1454,25.9325 144.922219,25.7348333 144.847659,25.3391667 C144.773432,24.9436667 144.996613,24.6963333 145.467716,24.6963333 L145.269445,24.6963333 C146.335863,24.6963333 146.757314,24.2513333 146.757314,22.4218333 C146.757314,20.6663333 146.261302,19.4796667 144.946961,17.7488333 C144.699039,17.4521667 144.67413,17.1801667 144.823084,16.8341667 C145.61667,15.0291667 146.484482,13.0511667 147.079797,10.9743333 L144.128466,10.9743333 L144.128466,30.0368333 C144.128466,30.4818333 143.905453,30.7043333 143.459092,30.7043333 L142.615854,30.7043333 C142.169494,30.7043333 141.946146,30.4818333 141.946146,30.0368333 L141.946146,10.4551667 C141.946146,10.0101667 142.169494,9.7875 142.615854,9.7875 L148.642228,9.7875 C149.088421,9.7875 149.311769,10.0101667 149.311769,10.4551667 L149.311769,10.7518333 C149.311769,11.0486667 149.262117,11.2711667 149.138073,11.5925"
+                id="Fill-11" fill="#00CC99" mask="url(#mask-4)"></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </a>
+  <p class="text-secondary" style="font-size: 15px">六角學院的 Bootstrap 課程上線囉，立即與萬人一同學習最專業、最深入的 Bootstrap 課程。</p>
+  <p class="text-danger countdown-timer text-center" style="font-size: 15px"></p>
+  <div>
+    <a href="https://www.hexschool.com/bootstrap/?utm_source=doc&utm_medium=cpc&utm_campaign=BS4DOC" style="font-size: 1rem"
+      class="btn btn-danger btn-sm AddToWishlist mb-1" target="_blank">立即上課去</a>
+    <a href="https://www.hexschool.com/tags/interview/?utm_source=doc&utm_medium=cpc&utm_campaign=BS4DOC" style="font-size: 1rem"
+      class="btn btn-outline-dark btn-sm px-2 mb-1" target="_blank">前端轉職經歷分享</a>
+  </div>
+  
+  <script>
+    (function () {
+      var wishBtns = document.querySelectorAll('.AddToWishlist');
+      var AddToWishlist = function () {
+        fbq('track', 'AddToWishlist', {
+          'item': 'Bootsrap 4'
+        });
+      };
+
+      wishBtns.forEach(function (wishBtn) {
+        wishBtn.addEventListener('click', AddToWishlist)
+      }, this);
+    })();
+
+    window.onload = loadCountdownScript(function () {
+      $(document).ready(function () {
+        timer = '2017/10/23';
+        timer = new Date(timer);
+        d = new Date();
+        if (d < timer) {
+          $('.countdown-timer').countdown(timer, function (event) {
+            $(this).html(event.strftime('<strong>課程半價</strong>最後 倒數 %D天 %H時 %M分 %S秒'))
+          });
+        }
+      });
+    })
+    function loadCountdownScript(callback) {
+      var head = document.getElementsByTagName('head')[0];
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js';
+      head.appendChild(script);
+
+      script.onload = function () {
+        callback();
+      };
+    }
+  </script>
+
+</div>
+
+<div class="fab-fixed-wrap with-navbar-bottom" style="bottom: 4.6875rem;position: fixed;z-index: 1035;right: .9375rem;bottom: .9375rem;">
+  <a href="https://m.me/hexschool" target="_blank" class="fab fab-facebook mp-click" data-toggle="tooltip" data-placement="left" title="Facebook 客服">
+    <svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="32" height="32" fill="none" stroke="currentcolor" stroke-width="2" class="text-primary" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><title>Lightning icon</title><path d="M18 13l8-11L8 13l6 6-8 11 18-11z"/></svg>
+
+  </a>
+</div>
+
+<style>
+  .fab-fixed-wrap .fab {
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    color: white;
+    background-color: #0c9;
+    text-align: center;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16);
+    text-decoration: none;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+    justify-content: center;
+  }
+  .fab-fixed-wrap .fab.fab-facebook {
+    /* background-color: #4080ff; */
+    background-color: white;
+  }
+  .fab-fixed-wrap .fab.fab-line {
+    background-color: #0b0;
+  }
+</style>
+          <h2 id="text-alignment">文字對齊</h2>
+
+<p>通過文本對齊類方便的將文本與元件對齊。</p>
+
+<div class="bd-example">
+<p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-justify"</span><span class="nt">&gt;</span>Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<p>對於左、右、和置中對齊，可以使用響應式的 Class，使用與網格系統相同的 viewport 與中斷點。</p>
+
+<div class="bd-example">
+<p class="text-left">Left aligned text on all viewport sizes.</p>
+<p class="text-center">Center aligned text on all viewport sizes.</p>
+<p class="text-right">Right aligned text on all viewport sizes.</p>
+
+<p class="text-sm-left">Left aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-md-left">Left aligned text on viewports sized MD (medium) or wider.</p>
+<p class="text-lg-left">Left aligned text on viewports sized LG (large) or wider.</p>
+<p class="text-xl-left">Left aligned text on viewports sized XL (extra-large) or wider.</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-left"</span><span class="nt">&gt;</span>Left aligned text on all viewport sizes.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>Center aligned text on all viewport sizes.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-right"</span><span class="nt">&gt;</span>Right aligned text on all viewport sizes.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm-left"</span><span class="nt">&gt;</span>Left aligned text on viewports sized SM (small) or wider.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-md-left"</span><span class="nt">&gt;</span>Left aligned text on viewports sized MD (medium) or wider.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-lg-left"</span><span class="nt">&gt;</span>Left aligned text on viewports sized LG (large) or wider.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl-left"</span><span class="nt">&gt;</span>Left aligned text on viewports sized XL (extra-large) or wider.<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<h2 id="text-wrapping-and-overflow">text-wrap 和 Overflow</h2>
+
+<p>防止換行可搭配 <code class="highlighter-rouge">.text-nowrap</code>。</p>
+
+<div class="bd-example">
+<div class="text-nowrap bd-highlight" style="width: 8rem;">
+  This text should overflow the parent.
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-nowrap bd-highlight"</span> <span class="na">style=</span><span class="s">"width: 8rem;"</span><span class="nt">&gt;</span>
+  This text should overflow the parent.
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>對於更長的內容，你可以增加一個 <code class="highlighter-rouge">.text-truncate</code>，可以截掉多餘內容改用 <code class="highlighter-rouge">...</code>。<strong>需要使用 <code class="highlighter-rouge">display: inline-block</code> or <code class="highlighter-rouge">display: block</code></strong>。</p>
+
+<div class="bd-example">
+<!-- Block level -->
+<div class="row">
+  <div class="col-2 text-truncate">
+    Praeterea iter est quasdam res quas ex communi.
+  </div>
+</div>
+
+<!-- Inline level -->
+<span class="d-inline-block text-truncate" style="max-width: 150px;">
+  Praeterea iter est quasdam res quas ex communi.
+</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Block level --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-2 text-truncate"</span><span class="nt">&gt;</span>
+    Praeterea iter est quasdam res quas ex communi.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Inline level --&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-inline-block text-truncate"</span> <span class="na">style=</span><span class="s">"max-width: 150px;"</span><span class="nt">&gt;</span>
+  Praeterea iter est quasdam res quas ex communi.
+<span class="nt">&lt;/span&gt;</span></code></pre></figure>
+
+<h2 id="text-transform">文字變換</h2>
+
+<p>使用 Class 將元件中的文字內容轉大寫。</p>
+
+<div class="bd-example">
+<p class="text-lowercase">Lowercased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
+<p class="text-capitalize">CapiTaliZed text.</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-lowercase"</span><span class="nt">&gt;</span>Lowercased text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-uppercase"</span><span class="nt">&gt;</span>Uppercased text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-capitalize"</span><span class="nt">&gt;</span>CapiTaliZed text.<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<p>注意 <code class="highlighter-rouge">text-capitalize</code> 僅改變每一個詞的第一個字母，而其它字母的大小寫不受影響</p>
+
+<h2 id="font-weight-and-italics">字體粗細和斜體</h2>
+
+<p>改變文字內容的粗細或斜體。</p>
+
+<div class="bd-example">
+<p class="font-weight-bold">Bold text.</p>
+<p class="font-weight-normal">Normal weight text.</p>
+<p class="font-weight-light">Light weight text.</p>
+<p class="font-italic">Italic text.</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"font-weight-bold"</span><span class="nt">&gt;</span>Bold text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"font-weight-normal"</span><span class="nt">&gt;</span>Normal weight text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"font-weight-light"</span><span class="nt">&gt;</span>Light weight text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"font-italic"</span><span class="nt">&gt;</span>Italic text.<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<h2 id="monospace">Monospace</h2>
+
+<p><code class="highlighter-rouge">.text-monospace</code> 將選擇區域改為等寬字體。</p>
+
+<div class="bd-example">
+<p class="text-monospace">This is in monospace</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-monospace"</span><span class="nt">&gt;</span>This is in monospace<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+
+        </main>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+<script src="/docs/4.1/assets/js/vendor/popper.min.js"></script><script src="/docs/4.1/dist/js/bootstrap.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/docs/4.1/assets/js/vendor/anchor.min.js"></script>
+  <script src="/docs/4.1/assets/js/vendor/clipboard.min.js"></script>
+  <script src="/docs/4.1/assets/js/vendor/holder.min.js"></script>
+  <script src="/docs/4.1/assets/js/src/application.js?2018-07-27T11:52:38+08:00"></script>
+  <!-- <script src="/docs/4.1/assets/js/src/search.js?2018-07-27T11:52:38+08:00"></script> -->
+  <script src="/docs/4.1/assets/js/src/ie-emulation-modes-warning.js?2018-07-27T11:52:38+08:00"></script>
+  <script src="/docs/4.1/assets/js/src/pwa.js?2018-07-27T11:52:38+08:00"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    apiKey: 'ef316997b6983b7e641cb5ed2a6683d1',
+    indexName: 'hexschool',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    // transformData: function (hits) {
+    //   return hits.map(function (hit) {
+    //     hit.url = hit.url.replace('https://bootstrap.hexschool.com/', '/docs/4.0');
+    //     return hit;
+    //   });
+    // },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script><script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+
+<script>
+  (function () {
+    var allTitle = document.querySelectorAll('.bd-content h2, .bd-content h3');
+    var arrayTitle = Array.from(allTitle);
+    var bdToc = document.querySelector('.bd-toc');
+
+    var sideNav = `
+      <ul class="section-nav">
+        ${arrayTitle.map((item, i) => {
+        var string = '';
+        if (item.tagName === 'H2') {
+          string = `<li class="toc-entry toc-h2">
+            <a href="#${item.id}">${item.textContent}</a>
+          </li>`
+        } else if (item.tagName === 'H3') {
+          string = `<li class="toc-entry toc-h3">
+            <a href="#${item.id}">${item.textContent}</a>
+          </li>`
+        }
+
+        if (item.tagName === 'H3') {
+          if (i >= 1 && arrayTitle[i - 1].tagName === 'H2') {
+            string = `<ul>${string}`;
+          }
+          if ((i + 1) < arrayTitle.length && arrayTitle[i + 1].tagName === 'H2') {
+            string = `${string}</ul>`;
+          }
+          if ((i + 1) === arrayTitle.length) {
+            string = `${string}</ul>`;
+          }
+        }
+        return string;
+      }).join('')}`;
+    bdToc.innerHTML = sideNav;
+  })();
+</script>
+  </body>
+</html>
