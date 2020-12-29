@@ -49,3 +49,5 @@ node_modules
 .publish
 yarn.lock
 js/coverage
+site/docs/4.0
+site/docs/4.1
